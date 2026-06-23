@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Argentina 2027 — Political Forecast Monitor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F5F2; --panel:#FFFFFF; --ink:#191B20; --muted:#666C75;
+    --line:#E4E5E0; --line-2:#EEEFEA;
+    --celeste:#3F86CF; --milei:#7C3AED; --kicillof:#2E93D8;
+    --pos:#2E7D54; --neg:#C0473E; --amber:#C2872A; --slate:#33506B;
+    --shadow:0 1px 2px rgba(20,22,28,.04), 0 8px 24px rgba(20,22,28,.05);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:Inter,system-ui,sans-serif; font-size:15px; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--slate)}
+  .mono{font-family:"IBM Plex Mono",monospace}
+
+  /* Masthead */
+  header.mast{
+    background:var(--ink); color:#F3F2EE; border-bottom:3px solid var(--celeste);
+  }
+  .mast-inner{max-width:1060px; margin:0 auto; padding:22px 24px 20px;}
+  .kicker{font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.18em;
+    text-transform:uppercase; color:#9FB6CE;}
+  .mast h1{font-family:Newsreader,serif; font-weight:500; font-size:30px; line-height:1.08;
+    margin:6px 0 0; letter-spacing:-.01em;}
+  .mast h1 span{color:#A9C6E6;}
+  .dateline{display:flex; flex-wrap:wrap; gap:6px 18px; margin-top:12px;
+    font-size:12.5px; color:#C7CBD2;}
+  .dateline .mono{color:#EDEFF2}
+
+  /* Nav */
+  nav.tabs{position:sticky; top:0; z-index:20; background:rgba(244,245,242,.92);
+    backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
+  .tabs-inner{max-width:1060px; margin:0 auto; padding:0 16px; display:flex; gap:2px; overflow-x:auto;}
+  .tabs a{flex:0 0 auto; padding:13px 14px; font-size:13px; font-weight:500; color:var(--muted);
+    text-decoration:none; border-bottom:2px solid transparent; white-space:nowrap;}
+  .tabs a:hover{color:var(--ink)}
+  .tabs a.active{color:var(--ink); border-bottom-color:var(--celeste)}
+
+  main{max-width:1060px; margin:0 auto; padding:26px 16px 60px;}
+
+  section{margin-bottom:30px; scroll-margin-top:60px;}
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:12px;
+    box-shadow:var(--shadow); overflow:hidden;}
+  .card-head{padding:18px 22px 14px; border-bottom:1px solid var(--line-2);}
+  .eyebrow{font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--celeste); font-weight:600;}
+  .card h2{font-family:Newsreader,serif; font-weight:500; font-size:22px; margin:5px 0 6px;
+    letter-spacing:-.01em;}
+  .card .sub{font-size:13.5px; color:var(--muted); margin:0; max-width:74ch;}
+  .chart{padding:8px 10px 6px;}
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:0;}
+  .grid2 > div{padding:8px 10px 6px;}
+  .grid2 > div:first-child{border-right:1px solid var(--line-2);}
+  @media (max-width:760px){
+    .grid2{grid-template-columns:1fr}
+    .grid2 > div:first-child{border-right:0; border-bottom:1px solid var(--line-2)}
+  }
+
+  /* source ledger */
+  .ledger{display:flex; flex-wrap:wrap; gap:8px; align-items:center;
+    padding:12px 22px 16px; border-top:1px solid var(--line-2);}
+  .chip{font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--slate);
+    background:#F1F4F7; border:1px solid #DFE6ED; border-radius:999px; padding:3px 10px;}
+  .chip b{color:var(--ink); font-weight:600}
+  .note{font-size:12px; color:var(--muted); padding:0 22px 16px; margin-top:-4px;}
+
+  .legend-inline{display:flex; flex-wrap:wrap; gap:14px; padding:2px 22px 0; font-size:12.5px; color:var(--muted)}
+  .swatch{display:inline-block; width:10px; height:10px; border-radius:3px; margin-right:6px; vertical-align:middle}
+
+  footer{max-width:1060px; margin:0 auto; padding:8px 16px 50px; color:var(--muted); font-size:12.5px}
+  footer h3{font-family:Newsreader,serif; font-weight:500; color:var(--ink); font-size:16px; margin:18px 0 8px}
+  footer code{font-family:"IBM Plex Mono",monospace; background:#ECEEE9; padding:1px 6px; border-radius:5px; font-size:11.5px}
+  footer ul{margin:6px 0 0; padding-left:18px}
+  footer li{margin:3px 0}
+  .disclaim{border-left:3px solid var(--amber); background:#FBF6EC; padding:10px 14px; border-radius:0 8px 8px 0; margin-top:10px}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="mast-inner">
+    <div class="kicker">Independent political risk monitor &nbsp;·&nbsp; Argentina 2027</div>
+    <h1>Argentina 2027 &mdash; <span>Presidential Forecast Monitor</span></h1>
+    <div class="dateline">
+      <span>Updated <span class="mono" id="updated">—</span></span>
+      <span>Election: <span class="mono">24 Oct 2027</span></span>
+      <span>Incumbent: <span class="mono">J. Milei (LLA)</span></span>
+      <span>Sources: <span class="mono">ESPOP · UTDT-ICG · pollster releases</span></span>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs">
+  <div class="tabs-inner" id="tabs">
+    <a href="#approval">Milei approval &amp; image</a>
+    <a href="#h2h">Milei vs Kicillof</a>
+    <a href="#snapshot">Voting intention</a>
+    <a href="#icg">Confidence index (ICG)</a>
+    <a href="#sources">Sources &amp; updating</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- 1. APPROVAL & IMAGE -->
+  <section id="approval">
+    <div class="card">
+      <div class="card-head">
+        <div class="eyebrow">Chart 01 · Executive standing</div>
+        <h2>Javier Milei — government approval &amp; personal image</h2>
+        <p class="sub">Government-management approval and personal positive-image readings over time. Every point is sourced to its polling firm; hover any marker for the firm, date and value. ESPOP is the designated series and the architecture accepts additional firms.</p>
+      </div>
+      <div class="legend-inline">
+        <span><span class="swatch" style="background:var(--pos)"></span>Approval (gestión)</span>
+        <span><span class="swatch" style="background:var(--milei)"></span>Positive image</span>
+        <span><span class="swatch" style="background:var(--neg)"></span>Disapproval</span>
+      </div>
+      <div class="chart"><div id="chart-approval" style="height:420px"></div></div>
+      <div class="ledger" id="ledger-approval"></div>
+    </div>
+  </section>
+
+  <!-- 2. HEAD TO HEAD -->
+  <section id="h2h">
+    <div class="card">
+      <div class="card-head">
+        <div class="eyebrow">Chart 02 · Head-to-head</div>
+        <h2>Milei vs. the leading Peronist (Kicillof) — voting intention</h2>
+        <p class="sub">First-round voting intention from 2026 head-to-head polls. Each faint dot is one pollster&rsquo;s reading; the bold line is a LOESS poll-average that keeps any single house effect from dominating (note the lone Delfos dot putting Kicillof ahead). Hover any dot for its firm, date and value.</p>
+      </div>
+      <div class="legend-inline">
+        <span><span class="swatch" style="background:var(--milei)"></span>Milei (LLA)</span>
+        <span><span class="swatch" style="background:var(--kicillof)"></span>Kicillof (Fuerza Patria)</span>
+        <span style="color:#9097A0">faint dots = individual pollsters · bold line = average</span>
+      </div>
+      <div class="chart"><div id="chart-h2h" style="height:420px"></div></div>
+      <div class="ledger" id="ledger-h2h"></div>
+    </div>
+  </section>
+
+  <!-- 3. VOTING SNAPSHOT -->
+  <section id="snapshot">
+    <div class="card">
+      <div class="card-head">
+        <div class="eyebrow">Chart 03 · Latest field</div>
+        <h2>Voting intention &amp; leaders’ image — latest snapshot</h2>
+        <p class="sub">Left: first-round voting intention by candidate from the most recent comprehensive 2026 poll (Consultora Tendencias, fieldwork 22–27 May 2026). Right: positive-image standing of leading national figures from the latest ESPOP wave — the only sourced read available for Bullrich, who is not offered as a presidential option in the voting-intention poll.</p>
+      </div>
+      <div class="grid2">
+        <div><div id="chart-snapshot" style="height:360px"></div></div>
+        <div><div id="chart-leaders" style="height:360px"></div></div>
+      </div>
+      <div class="note" id="snapshot-note"></div>
+      <div class="ledger" id="ledger-snapshot"></div>
+    </div>
+  </section>
+
+  <!-- 4. ICG -->
+  <section id="icg">
+    <div class="card">
+      <div class="card-head">
+        <div class="eyebrow">Chart 04 · UTDT confidence index</div>
+        <h2>Índice de Confianza en el Gobierno (ICG)</h2>
+        <p class="sub">The monthly government-confidence index from Universidad Torcuato Di Tella, on a 0–5 scale. The report carries two dimensions, both shown below: the headline index over time, and the five sub-indices that compose it. June 2026 broke a six-month decline.</p>
+      </div>
+      <div class="legend-inline"><span class="mono" style="font-size:11px;color:var(--muted)">Dimension I — headline index, monthly</span></div>
+      <div class="chart"><div id="chart-icg" style="height:400px"></div></div>
+      <div class="legend-inline" style="padding-top:10px;border-top:1px solid var(--line-2);margin-top:4px"><span class="mono" style="font-size:11px;color:var(--muted)">Dimension II — the five sub-indices</span></div>
+      <div class="chart"><div id="chart-icg-comp" style="height:400px"></div></div>
+      <div class="ledger" id="ledger-icg"></div>
+    </div>
+  </section>
+
+  <!-- SOURCES -->
+  <footer id="sources">
+    <h3>Sources &amp; methodology</h3>
+    <ul>
+      <li><b>ESPOP / LOOP — Universidad de San Andrés (UdeSA).</b> Bimonthly-to-monthly satisfaction and opinion survey; supplies Milei approval, personal image and leaders’ image. <a href="https://www.udesa.edu.ar/departamento-de-ciencias-sociales/espop" target="_blank" rel="noopener">espop page</a></li>
+      <li><b>Polling firms (Empresa Encuestadora).</b> Head-to-head and first-round voting-intention figures are attributed to the pollster that published each poll: <b>CB Consultora</b> (9–13 Dec 2025), <b>Isasi-Burdman</b> (19–27 Nov 2025) and <b>Opina Argentina</b> (30 Jun–2 Jul 2025).</li>
+      <li><b>ICG — Universidad Torcuato Di Tella.</b> Monthly Índice de Confianza en el Gobierno (0–5), fieldwork by Poliarquía. <a href="https://www.utdt.edu//ver_contenido.php?id_contenido=1439&id_item_menu=2964" target="_blank" rel="noopener">monthly reports</a></li>
+    </ul>
+    <div class="disclaim">
+      <b>Read-with-care notes.</b> ESPOP measures government-management approval and a separate personal positive-image score — they are related but not identical, and are plotted as distinct lines. The head-to-head series is sparse and mixes firms with very different house effects. Bullrich, Massa and Grabois were not offered as options in the latest voting-intention poll, so they appear only where a sourced figure exists (Bullrich via the ESPOP image panel). No values are interpolated or invented; gaps are left as gaps.
+    </div>
+    <h3>Updating monthly</h3>
+    <p>Two ways to refresh, both in the package:</p>
+    <ul>
+      <li>Run <code>python update_data.py</code>. It re-fetches the Di Tella ICG page and the published-poll table automatically, lets you paste the new ESPOP figures, rewrites <code>data.json</code>, and re-embeds the data block in this HTML between the <code>DATA_START / DATA_END</code> markers.</li>
+      <li>Or edit the <code>data.json</code> arrays by hand and re-run the embed step. Each new point only needs a date, value and firm.</li>
+    </ul>
+    <p style="margin-top:18px;color:#9097A0">Built as a single-page monitor · charts by Plotly · figures are point estimates with sampling error; treat moves inside a few points as noise.</p>
+  </footer>
+
+</main>
+
+<script id="appdata" type="application/json">
+/* DATA_START */
+{
+  "meta": {
+    "updated": "2026-06-23",
+    "title": "Argentina 2027 — Political Forecast Monitor",
+    "sources": [
+      "ESPOP / LOOP – Universidad de San Andrés (UdeSA)",
+      "Published polls by CB Consultora, Isasi-Burdman and Opina Argentina (Empresa Encuestadora)",
+      "ICG – Índice de Confianza en el Gobierno, Universidad Torcuato Di Tella"
+    ]
+  },
+  "espop": {
+    "approval": [
+      {
+        "date": "2024-11-01",
+        "value": 54,
+        "disapproval": null,
+        "firm": "ESPOP (UdeSA)"
+      },
+      {
+        "date": "2025-03-01",
+        "value": 43,
+        "disapproval": 51,
+        "firm": "ESPOP (UdeSA)"
+      },
+      {
+        "date": "2025-05-01",
+        "value": 49,
+        "disapproval": null,
+        "firm": "ESPOP (UdeSA)"
+      },
+      {
+        "date": "2025-07-01",
+        "value": 42,
+        "disapproval": 55,
+        "firm": "ESPOP (UdeSA)"
+      },
+      {
+        "date": "2025-11-01",
+        "value": 45,
+        "disapproval": null,
+        "firm": "ESPOP (UdeSA)"
+      },
+      {
+        "date": "2026-03-01",
+        "value": 38,
+        "disapproval": 59,
+        "firm": "ESPOP (UdeSA)"
+      },
+      {
+        "date": "2026-06-01",
+        "value": 35,
+        "disapproval": 61,
+        "firm": "ESPOP (UdeSA)"
+      }
+    ],
+    "image": [
+      {
+        "date": "2023-12-01",
+        "value": 54,
+        "firm": "ESPOP (UdeSA)"
+      },
+      {
+        "date": "2024-03-01",
+        "value": 51,
+        "firm": "ESPOP (UdeSA)"
+      },
+      {
+        "date": "2024-11-01",
+        "value": 49,
+        "firm": "ESPOP (UdeSA)"
+      },
+      {
+        "date": "2025-07-01",
+        "value": 39,
+        "firm": "ESPOP (UdeSA)"
+      },
+      {
+        "date": "2026-06-01",
+        "value": 33,
+        "firm": "ESPOP (UdeSA)"
+      }
+    ]
+  },
+  "votingSnapshot": {
+    "firm": "Consultora Tendencias",
+    "date": "2026-05-27",
+    "sample": 4740,
+    "note": "Most recent comprehensive single-firm ballot (Consultora Tendencias, fieldwork 22–27 May 2026). One methodology, so bars are directly comparable. Patricia Bullrich, Sergio Massa and Cristina F. de Kirchner were not offered as options; Bullrich's standing is shown in the image panel at right.",
+    "candidates": [
+      {
+        "name": "Javier Milei",
+        "party": "LLA",
+        "value": 32.8
+      },
+      {
+        "name": "Axel Kicillof",
+        "party": "Fuerza Patria",
+        "value": 26.3
+      },
+      {
+        "name": "Mauricio Macri",
+        "party": "PRO",
+        "value": 11.5
+      },
+      {
+        "name": "Juan Grabois",
+        "party": "Fuerza Patria",
+        "value": 5.1
+      },
+      {
+        "name": "Juan Schiaretti",
+        "party": "Provincias Unidas",
+        "value": 4.0
+      },
+      {
+        "name": "Myriam Bregman",
+        "party": "FIT-U",
+        "value": 12.6
+      }
+    ],
+    "notIncluded": [
+      "Patricia Bullrich",
+      "Sergio Massa",
+      "Cristina F. de Kirchner"
+    ]
+  },
+  "leadersImage": {
+    "firm": "ESPOP (UdeSA)",
+    "date": "2026-06-01",
+    "note": "Positive-image rating of leading national figures, ESPOP June 2026.",
+    "items": [
+      {
+        "name": "Patricia Bullrich",
+        "value": 38
+      },
+      {
+        "name": "Javier Milei",
+        "value": 33
+      },
+      {
+        "name": "Cristina F. de Kirchner",
+        "value": 32
+      },
+      {
+        "name": "Axel Kicillof",
+        "value": 31
+      },
+      {
+        "name": "Myriam Bregman",
+        "value": 30
+      }
+    ]
+  },
+  "icg": {
+    "scaleMax": 5,
+    "firm": "UTDT (fieldwork: Poliarquía Consultores)",
+    "index": [
+      {
+        "date": "2023-12-01",
+        "value": 2.86
+      },
+      {
+        "date": "2024-01-01",
+        "value": 2.61
+      },
+      {
+        "date": "2024-02-01",
+        "value": 2.57
+      },
+      {
+        "date": "2024-03-01",
+        "value": 2.56
+      },
+      {
+        "date": "2024-04-01",
+        "value": 2.45
+      },
+      {
+        "date": "2024-05-01",
+        "value": 2.51
+      },
+      {
+        "date": "2024-06-01",
+        "value": 2.46
+      },
+      {
+        "date": "2024-07-01",
+        "value": 2.37
+      },
+      {
+        "date": "2024-08-01",
+        "value": 2.54
+      },
+      {
+        "date": "2024-09-01",
+        "value": 2.16
+      },
+      {
+        "date": "2024-10-01",
+        "value": 2.43
+      },
+      {
+        "date": "2024-11-01",
+        "value": 2.66
+      },
+      {
+        "date": "2024-12-01",
+        "value": 2.66
+      },
+      {
+        "date": "2025-01-01",
+        "value": 2.61
+      },
+      {
+        "date": "2025-02-01",
+        "value": 2.56
+      },
+      {
+        "date": "2025-03-01",
+        "value": 2.42
+      },
+      {
+        "date": "2025-04-01",
+        "value": 2.33
+      },
+      {
+        "date": "2025-05-01",
+        "value": 2.45
+      },
+      {
+        "date": "2025-06-01",
+        "value": 2.34
+      },
+      {
+        "date": "2025-07-01",
+        "value": 2.45
+      },
+      {
+        "date": "2025-08-01",
+        "value": 2.12
+      },
+      {
+        "date": "2025-09-01",
+        "value": 1.94
+      },
+      {
+        "date": "2025-10-01",
+        "value": 2.1
+      },
+      {
+        "date": "2025-11-01",
+        "value": 2.47
+      },
+      {
+        "date": "2025-12-01",
+        "value": 2.46
+      },
+      {
+        "date": "2026-01-01",
+        "value": 2.4
+      },
+      {
+        "date": "2026-02-01",
+        "value": 2.38
+      },
+      {
+        "date": "2026-03-01",
+        "value": 2.3
+      },
+      {
+        "date": "2026-04-01",
+        "value": 2.02
+      },
+      {
+        "date": "2026-05-01",
+        "value": 1.99
+      },
+      {
+        "date": "2026-06-01",
+        "value": 2.07
+      }
+    ],
+    "components": {
+      "months": [
+        "2025-08-01",
+        "2025-09-01",
+        "2025-11-01",
+        "2026-02-01",
+        "2026-03-01",
+        "2026-05-01",
+        "2026-06-01"
+      ],
+      "series": {
+        "General evaluation of government": [
+          1.78,
+          1.57,
+          2.26,
+          2.18,
+          1.98,
+          1.69,
+          1.68
+        ],
+        "Capacity to solve problems": [
+          2.46,
+          2.38,
+          2.93,
+          2.7,
+          2.55,
+          2.36,
+          2.46
+        ],
+        "Honesty of officials": [
+          2.54,
+          2.44,
+          2.81,
+          2.76,
+          2.73,
+          2.46,
+          2.46
+        ],
+        "Efficiency of public spending": [
+          2.1,
+          1.87,
+          2.32,
+          2.29,
+          2.38,
+          1.88,
+          2.12
+        ],
+        "Concern for the general interest": [
+          1.73,
+          1.47,
+          2.02,
+          1.99,
+          1.87,
+          1.57,
+          1.63
+        ]
+      }
+    }
+  },
+  "headToHead2026": {
+    "polls": [
+      {
+        "date": "2026-02-15",
+        "firm": "Datos globales de CB",
+        "milei": 35.7,
+        "kicillof": 22.5
+      },
+      {
+        "date": "2026-03-15",
+        "firm": "Consultora Tendencias",
+        "milei": 38.1,
+        "kicillof": 33.0
+      },
+      {
+        "date": "2026-03-28",
+        "firm": "Datos globales de CB",
+        "milei": 28.3,
+        "kicillof": 24.2
+      },
+      {
+        "date": "2026-04-14",
+        "firm": "Consultora Delfos",
+        "milei": 29.6,
+        "kicillof": 40.4
+      },
+      {
+        "date": "2026-05-15",
+        "firm": "Equipo Mide",
+        "milei": 29.0,
+        "kicillof": 22.0
+      },
+      {
+        "date": "2026-05-25",
+        "firm": "Isasi-Burdman",
+        "milei": 39.1,
+        "kicillof": 23.0
+      },
+      {
+        "date": "2026-05-27",
+        "firm": "Consultora Tendencias",
+        "milei": 32.8,
+        "kicillof": 26.3
+      },
+      {
+        "date": "2026-06-03",
+        "firm": "Explicans",
+        "milei": 38.2,
+        "kicillof": 28.0
+      }
+    ],
+    "avg": {
+      "dates": [
+        "2026-02-15",
+        "2026-02-22",
+        "2026-03-01",
+        "2026-03-08",
+        "2026-03-15",
+        "2026-03-22",
+        "2026-03-29",
+        "2026-04-05",
+        "2026-04-12",
+        "2026-04-19",
+        "2026-04-26",
+        "2026-05-03",
+        "2026-05-10",
+        "2026-05-17",
+        "2026-05-24",
+        "2026-05-31",
+        "2026-06-03"
+      ],
+      "milei": [
+        36.1,
+        35.5,
+        34.8,
+        34.1,
+        33.4,
+        32.7,
+        32.0,
+        31.1,
+        30.2,
+        29.2,
+        30.2,
+        31.3,
+        32.7,
+        33.7,
+        34.6,
+        35.5,
+        35.8
+      ],
+      "kicillof": [
+        24.6,
+        25.6,
+        26.7,
+        27.8,
+        29.0,
+        30.3,
+        31.6,
+        32.3,
+        32.0,
+        32.5,
+        31.2,
+        29.5,
+        27.9,
+        26.6,
+        25.7,
+        25.1,
+        25.0
+      ]
+    }
+  }
+}
+/* DATA_END */
+</script>
+
+<script>
+(function(){
+  "use strict";
+
+  // ---- robust Plotly loader: try CDNs in order, render only once it's defined ----
+  var CDNS = [
+    "https://cdn.plot.ly/plotly-2.35.2.min.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.35.2/plotly.min.js",
+    "https://unpkg.com/plotly.js-dist-min@2.35.2/plotly.min.js"
+  ];
+  function loadPlotly(i){
+    if (window.Plotly) return ready();
+    if (i >= CDNS.length) return failed();
+    var s = document.createElement('script');
+    s.src = CDNS[i]; s.async = true;
+    s.onload  = function(){ window.Plotly ? ready() : loadPlotly(i + 1); };
+    s.onerror = function(){ loadPlotly(i + 1); };
+    document.head.appendChild(s);
+  }
+  function ready(){
+    if (document.readyState === 'loading')
+      document.addEventListener('DOMContentLoaded', renderApp);
+    else renderApp();
+  }
+  function failed(){
+    ['chart-approval','chart-h2h','chart-snapshot','chart-leaders','chart-icg','chart-icg-comp']
+      .forEach(function(id){
+        var el = document.getElementById(id);
+        if (el) el.innerHTML =
+          '<div style="padding:26px;font:13px Inter,sans-serif;color:#C0473E;line-height:1.5">' +
+          'Charts could not load — the Plotly library was blocked or the device is offline. ' +
+          'Disable any ad/script blocker for this page and reload.</div>';
+      });
+  }
+  loadPlotly(0);
+
+  function renderApp(){
+  // ---- parse embedded data (strip the marker comments) ----
+  var raw = document.getElementById('appdata').textContent;
+  raw = raw.replace(/\/\*\s*DATA_START\s*\*\//,'').replace(/\/\*\s*DATA_END\s*\*\//,'');
+  var D = JSON.parse(raw);
+
+  var C = {milei:'#7C3AED', kicillof:'#2E93D8', pos:'#2E7D54', neg:'#C0473E',
+           celeste:'#3F86CF', amber:'#C2872A', slate:'#33506B', ink:'#191B20',
+           muted:'#666C75', line:'#E4E5E0',
+           macri:'#C49B1E', schiaretti:'#2F8F57', red:'#C9352B', gray:'#7A828C'};
+  // candidate colour code by coalition (per spec)
+  function candColor(name){
+    if(/Milei|Bullrich/.test(name))             return C.milei;       // LLA — purple
+    if(/Macri/.test(name))                       return C.macri;       // PRO — dark yellow
+    if(/Schiaretti/.test(name))                  return C.schiaretti;  // Prov. Unidas — green
+    if(/Kicillof|Cristina|Kirchner/.test(name))  return C.kicillof;    // Peronism — light blue
+    if(/Bregman/.test(name))                     return C.red;         // FIT-U — red
+    return C.gray;                                                     // others — slate grey
+  }
+  var FONT = {family:'Inter, sans-serif', size:12, color:C.ink};
+  var MONO = 'IBM Plex Mono, monospace';
+
+  var MONTHS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function fmtMonth(d){var p=d.split('-');return MONTHS[+p[1]-1]+' '+p[0];}
+  function fmtDay(d){var p=d.split('-');return p[2]+' '+MONTHS[+p[1]-1]+' '+p[0];}
+
+  var BASE_LAYOUT={
+    paper_bgcolor:'rgba(0,0,0,0)', plot_bgcolor:'rgba(0,0,0,0)',
+    font:FONT, margin:{l:48,r:18,t:14,b:40},
+    hoverlabel:{bgcolor:'#FFFFFF', bordercolor:C.line,
+      font:{family:MONO, size:12, color:C.ink}, align:'left'},
+    xaxis:{gridcolor:'#F0F1ED', linecolor:C.line, tickfont:{size:11,color:C.muted}, zeroline:false},
+    yaxis:{gridcolor:'#F0F1ED', linecolor:C.line, tickfont:{size:11,color:C.muted}, zeroline:false},
+    showlegend:false
+  };
+  var CONFIG={displayModeBar:true, displaylogo:false, responsive:true,
+    modeBarButtonsToRemove:['select2d','lasso2d','autoScale2d','toggleSpikelines'],
+    toImageButtonOptions:{format:'png', scale:2, filename:'argentina-2027'}};
+
+  function lay(extra){var o=JSON.parse(JSON.stringify(BASE_LAYOUT)); return Object.assign(o,extra||{});}
+  function ledger(id, items){
+    var el=document.getElementById(id); if(!el) return;
+    el.innerHTML = items.map(function(t){return '<span class="chip">'+t+'</span>';}).join('');
+  }
+
+  // ===== Chart 01 — Approval & image =====
+  (function(){
+    var ap=D.espop.approval, im=D.espop.image;
+    var apX=ap.map(function(d){return d.date;}), apY=ap.map(function(d){return d.value;});
+    var apC=ap.map(function(d){return [d.firm, fmtMonth(d.date)];});
+    var disX=[],disY=[],disC=[];
+    ap.forEach(function(d){ if(d.disapproval!=null){disX.push(d.date);disY.push(d.disapproval);disC.push([d.firm,fmtMonth(d.date)]);} });
+    var imX=im.map(function(d){return d.date;}), imY=im.map(function(d){return d.value;});
+    var imC=im.map(function(d){return [d.firm, fmtMonth(d.date)];});
+
+    var tApproval={x:apX,y:apY,customdata:apC,name:'Approval',mode:'lines+markers',
+      line:{color:C.pos,width:2.4}, marker:{size:8,color:C.pos,line:{color:'#fff',width:1.5}},
+      hovertemplate:'<b>Approval (gestión)</b><br>%{customdata[0]} · %{customdata[1]}<br>%{y}%<extra></extra>'};
+    var tImage={x:imX,y:imY,customdata:imC,name:'Image',mode:'lines+markers',
+      line:{color:C.milei,width:2.4}, marker:{size:8,color:C.milei,line:{color:'#fff',width:1.5}},
+      hovertemplate:'<b>Positive image</b><br>%{customdata[0]} · %{customdata[1]}<br>%{y}%<extra></extra>'};
+    var tDis={x:disX,y:disY,customdata:disC,name:'Disapproval',mode:'lines+markers',
+      line:{color:C.neg,width:1.6,dash:'dot'}, marker:{size:6,color:C.neg,symbol:'circle-open',line:{width:1.6}},
+      hovertemplate:'<b>Disapproval</b><br>%{customdata[0]} · %{customdata[1]}<br>%{y}%<extra></extra>'};
+
+    Plotly.newPlot('chart-approval',[tDis,tApproval,tImage],
+      lay({yaxis:{ticksuffix:'%',range:[20,65],gridcolor:'#F0F1ED',linecolor:C.line,tickfont:{size:11,color:C.muted}},
+           xaxis:{type:'date',gridcolor:'#F0F1ED',linecolor:C.line,tickfont:{size:11,color:C.muted}}}),CONFIG);
+    ledger('ledger-approval',['Source: <b>ESPOP / UdeSA</b>','Metric: approval of gestión &amp; personal positive image','Each marker firm-labelled on hover']);
+  })();
+
+  // ===== Chart 02 — Head to head (pollster dots + average line, 2026) =====
+  (function(){
+    var h=D.headToHead2026, polls=h.polls, avg=h.avg;
+    function dots(key,color,label){
+      return {x:polls.map(function(p){return p.date;}),
+        y:polls.map(function(p){return p[key];}),
+        customdata:polls.map(function(p){return [p.firm, fmtDay(p.date)];}),
+        mode:'markers', type:'scatter', name:label,
+        marker:{size:10,color:color,opacity:0.30,line:{color:color,width:1}},
+        hovertemplate:'<b>'+label+'</b><br>%{customdata[0]} · %{customdata[1]}<br>%{y}%<extra></extra>'};
+    }
+    function avgline(key,color,label){
+      return {x:avg.dates, y:avg[key], mode:'lines', type:'scatter', name:label+' avg',
+        line:{color:color,width:3,shape:'spline',smoothing:0.6},
+        hovertemplate:label+' poll average<br>%{y:.1f}%<extra></extra>'};
+    }
+    var data=[dots('milei',C.milei,'Milei (LLA)'),dots('kicillof',C.kicillof,'Kicillof (FP)'),
+              avgline('milei',C.milei,'Milei'),avgline('kicillof',C.kicillof,'Kicillof')];
+    var lM=avg.milei[avg.milei.length-1], lK=avg.kicillof[avg.kicillof.length-1],
+        lD=avg.dates[avg.dates.length-1];
+    Plotly.newPlot('chart-h2h',data,
+      lay({margin:{l:48,r:96,t:14,b:40},
+        yaxis:{ticksuffix:'%',range:[15,45],gridcolor:'#F0F1ED',linecolor:C.line,tickfont:{size:11,color:C.muted}},
+        xaxis:{type:'date',gridcolor:'#F0F1ED',linecolor:C.line,tickfont:{size:11,color:C.muted}},
+        annotations:[
+          {x:lD,y:lM,xanchor:'left',xshift:10,showarrow:false,text:'<b>Milei '+lM.toFixed(0)+'%</b>',font:{family:'Inter',size:12.5,color:C.milei}},
+          {x:lD,y:lK,xanchor:'left',xshift:10,showarrow:false,text:'<b>Kicillof '+lK.toFixed(0)+'%</b>',font:{family:'Inter',size:12.5,color:C.kicillof}}
+        ]}),CONFIG);
+    ledger('ledger-h2h',['Pollsters 2026: <b>Tendencias · Datos globales CB · Delfos · Equipo Mide · Isasi-Burdman · Explicans</b>','Dots = individual polls · line = LOESS average','Each dot firm-labelled on hover']);
+  })();
+
+  // ===== Chart 03 — Voting snapshot + leaders' image =====
+  (function(){
+    var vs=D.votingSnapshot, cand=vs.candidates.slice().reverse();
+    var names=cand.map(function(c){return c.name;});
+    var vals=cand.map(function(c){return c.value;});
+    var party=cand.map(function(c){return c.party;});
+    var colors=cand.map(function(c){return candColor(c.name);});
+    var tVote={type:'bar',orientation:'h',y:names,x:vals,customdata:party,
+      marker:{color:colors},text:vals.map(function(v){return v+'%';}),textposition:'outside',
+      textfont:{family:MONO,size:11,color:C.ink},cliponaxis:false,
+      hovertemplate:'<b>%{y}</b> (%{customdata})<br>%{x}% voting intention<extra></extra>'};
+    Plotly.newPlot('chart-snapshot',[tVote],
+      lay({margin:{l:120,r:42,t:8,b:34},
+        xaxis:{ticksuffix:'%',range:[0,42],gridcolor:'#F0F1ED',linecolor:C.line,tickfont:{size:11,color:C.muted}},
+        yaxis:{tickfont:{size:12,color:C.ink},automargin:true},
+        annotations:[{x:0,y:1.13,xref:'paper',yref:'paper',showarrow:false,xanchor:'left',
+          text:'<b>Voting intention</b> · '+vs.firm+' · '+fmtDay(vs.date),
+          font:{family:'Inter',size:12,color:C.muted}}]}),CONFIG);
+
+    var li=D.leadersImage, items=li.items.slice().reverse();
+    var lnames=items.map(function(c){return c.name;});
+    var lvals=items.map(function(c){return c.value;});
+    var lcolors=items.map(function(c){return candColor(c.name);});
+    var tLead={type:'bar',orientation:'h',y:lnames,x:lvals,marker:{color:lcolors},
+      text:lvals.map(function(v){return v+'%';}),textposition:'outside',
+      textfont:{family:MONO,size:11,color:C.ink},cliponaxis:false,
+      hovertemplate:'<b>%{y}</b><br>%{x}% positive image<extra></extra>'};
+    Plotly.newPlot('chart-leaders',[tLead],
+      lay({margin:{l:130,r:42,t:8,b:34},
+        xaxis:{ticksuffix:'%',range:[0,46],gridcolor:'#F0F1ED',linecolor:C.line,tickfont:{size:11,color:C.muted}},
+        yaxis:{tickfont:{size:12,color:C.ink},automargin:true},
+        annotations:[{x:0,y:1.13,xref:'paper',yref:'paper',showarrow:false,xanchor:'left',
+          text:'<b>Leaders’ positive image</b> · '+li.firm+' · '+fmtMonth(li.date),
+          font:{family:'Inter',size:12,color:C.muted}}]}),CONFIG);
+
+    document.getElementById('snapshot-note').textContent = vs.note;
+    ledger('ledger-snapshot',['Voting: <b>Consultora Tendencias</b> · May 2026','Image: <b>ESPOP (UdeSA)</b> · Jun 2026','Not in voting poll: Bullrich · Massa · CFK']);
+  })();
+
+  // ===== Chart 04 — ICG index + components =====
+  (function(){
+    var idx=D.icg.index;
+    var x=idx.map(function(d){return d.date;}), y=idx.map(function(d){return d.value;});
+    var cd=idx.map(function(d){return fmtMonth(d.date);});
+    var tIdx={x:x,y:y,customdata:cd,mode:'lines+markers',
+      line:{color:C.slate,width:2.4,shape:'linear'},
+      marker:{size:6,color:C.slate,line:{color:'#fff',width:1}},
+      fill:'tozeroy',fillcolor:'rgba(51,80,107,0.06)',
+      hovertemplate:'<b>ICG · %{customdata}</b><br>%{y:.2f} / 5<extra></extra>'};
+    Plotly.newPlot('chart-icg',[tIdx],
+      lay({margin:{l:42,r:18,t:10,b:40},
+        yaxis:{range:[1.7,3.0],gridcolor:'#F0F1ED',linecolor:C.line,tickfont:{size:11,color:C.muted},title:{text:'index (0–5)',font:{size:11,color:C.muted}}},
+        xaxis:{type:'date',gridcolor:'#F0F1ED',linecolor:C.line,tickfont:{size:11,color:C.muted}}}),CONFIG);
+    ledger('ledger-icg',['Source: <b>UTDT — ICG</b>','Scale 0–5 · monthly','Dim. I: headline index · Dim. II: 5 sub-indices']);
+
+    // components
+    var comp=D.icg.components, cmx=comp.months.map(fmtMonth);
+    var palette={'General evaluation of government':C.neg,'Capacity to solve problems':C.celeste,
+      'Honesty of officials':C.pos,'Efficiency of public spending':C.amber,
+      'Concern for the general interest':C.milei};
+    var traces=Object.keys(comp.series).map(function(k){
+      return {x:cmx,y:comp.series[k],name:k,mode:'lines+markers',
+        line:{color:palette[k],width:2},marker:{size:6,color:palette[k]},
+        hovertemplate:'<b>'+k+'</b><br>%{x}: %{y:.2f}<extra></extra>'};
+    });
+    Plotly.newPlot('chart-icg-comp',traces,
+      lay({margin:{l:42,r:18,t:10,b:64},showlegend:true,
+        legend:{orientation:'h',y:-0.22,x:0,font:{size:10.5,color:C.muted}},
+        yaxis:{range:[1.4,3.0],gridcolor:'#F0F1ED',linecolor:C.line,tickfont:{size:11,color:C.muted},title:{text:'sub-index (0–5)',font:{size:11,color:C.muted}}},
+        xaxis:{gridcolor:'#F0F1ED',linecolor:C.line,tickfont:{size:11,color:C.muted}}}),CONFIG);
+  })();
+
+  // ===== chrome: dateline + scrollspy =====
+  document.getElementById('updated').textContent = D.meta.updated;
+  var links=[].slice.call(document.querySelectorAll('.tabs a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
+  function spy(){
+    var y=window.scrollY+90, cur=0;
+    secs.forEach(function(s,i){ if(s && s.offsetTop<=y) cur=i; });
+    links.forEach(function(a,i){a.classList.toggle('active',i===cur);});
+  }
+  window.addEventListener('scroll',spy,{passive:true}); spy();
+  } // end renderApp
+})();
+</script>
+</body>
+</html>
