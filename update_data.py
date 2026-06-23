@@ -31,7 +31,9 @@ import re, json, sys, datetime, pathlib
 
 HERE = pathlib.Path(__file__).parent
 DATA_JSON = HERE / "data.json"
-HTML_FILE = HERE / "argentina-2027-monitor.html"
+HTML_FILE = HERE / "index.html"
+if not HTML_FILE.exists():
+    HTML_FILE = HERE / "argentina-2027-monitor.html"
 
 ICG_URL = "https://www.utdt.edu//ver_contenido.php?id_contenido=1439&id_item_menu=2964"
 WIKI_URL = "https://en.wikipedia.org/wiki/2027_Argentine_general_election"

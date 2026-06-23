@@ -109,6 +109,7 @@
     <a href="#h2h">Milei vs Kicillof</a>
     <a href="#snapshot">Voting intention</a>
     <a href="#icg">Confidence index (ICG)</a>
+    <a href="#by-president">ICG by president</a>
     <a href="#sources">Sources &amp; updating</a>
   </div>
 </nav>
@@ -184,6 +185,19 @@
     </div>
   </section>
 
+  <!-- 5. ICG BY PRESIDENT -->
+  <section id="by-president">
+    <div class="card">
+      <div class="card-head">
+        <div class="eyebrow">Chart 05 · Cross-administration</div>
+        <h2>Confidence in Government Index by president</h2>
+        <p class="sub">The same Di Tella ICG, re-indexed by months in office, so each president is compared at the equivalent stage of their term. The series is capped at Milei’s latest month for a like-for-like read. This chart loads from <code>Evolution_ICG.xlsx</code> in the repository, so replacing that file each month updates it automatically.</p>
+      </div>
+      <div class="chart"><div id="chart-president" style="height:460px"></div></div>
+      <div class="ledger" id="ledger-president"></div>
+    </div>
+  </section>
+
   <!-- SOURCES -->
   <footer id="sources">
     <h3>Sources &amp; methodology</h3>
@@ -191,6 +205,7 @@
       <li><b>ESPOP / LOOP — Universidad de San Andrés (UdeSA).</b> Bimonthly-to-monthly satisfaction and opinion survey; supplies Milei approval, personal image and leaders’ image. <a href="https://www.udesa.edu.ar/departamento-de-ciencias-sociales/espop" target="_blank" rel="noopener">espop page</a></li>
       <li><b>Polling firms (Empresa Encuestadora).</b> Head-to-head and first-round voting-intention figures are attributed to the pollster that published each poll: <b>CB Consultora</b> (9–13 Dec 2025), <b>Isasi-Burdman</b> (19–27 Nov 2025) and <b>Opina Argentina</b> (30 Jun–2 Jul 2025).</li>
       <li><b>ICG — Universidad Torcuato Di Tella.</b> Monthly Índice de Confianza en el Gobierno (0–5), fieldwork by Poliarquía. <a href="https://www.utdt.edu//ver_contenido.php?id_contenido=1439&id_item_menu=2964" target="_blank" rel="noopener">monthly reports</a></li>
+      <li><b>ICG by president (<code>Evolution_ICG.xlsx</code>).</b> Cross-administration ICG re-indexed by months in office, sourced from the same Di Tella series. The page reads this spreadsheet live from the repository.</li>
     </ul>
     <div class="disclaim">
       <b>Read-with-care notes.</b> ESPOP measures government-management approval and a separate personal positive-image score — they are related but not identical, and are plotted as distinct lines. The head-to-head series is sparse and mixes firms with very different house effects. Bullrich, Massa and Grabois were not offered as options in the latest voting-intention poll, so they appear only where a sourced figure exists (Bullrich via the ESPOP image panel). No values are interpolated or invented; gaps are left as gaps.
@@ -200,11 +215,18 @@
     <ul>
       <li>Run <code>python update_data.py</code>. It re-fetches the Di Tella ICG page and the published-poll table automatically, lets you paste the new ESPOP figures, rewrites <code>data.json</code>, and re-embeds the data block in this HTML between the <code>DATA_START / DATA_END</code> markers.</li>
       <li>Or edit the <code>data.json</code> arrays by hand and re-run the embed step. Each new point only needs a date, value and firm.</li>
+      <li>For the by-president chart, just drop the new <code>Evolution_ICG.xlsx</code> into the repository root each month — the page reads it on load, no rebuild needed. The embedded copy here is a fallback for offline viewing.</li>
     </ul>
     <p style="margin-top:18px;color:#9097A0">Built as a single-page monitor · charts by Plotly · figures are point estimates with sampling error; treat moves inside a few points as noise.</p>
   </footer>
 
 </main>
+
+<script id="icgpres" type="application/json">
+/* ICGPRES_START */
+{"updated": "2026-06-23", "presidents": ["Nestor Kirchner", "Cristina Fernandez de Kirchner I", "Cristina Fernandez de Kirchner II", "Mauricio Macri", "Alberto Fernandez", "Javier Milei"], "series": {"Nestor Kirchner": [[1, 1.219], [2, 3.142], [3, 3.263], [4, 3.195], [5, 2.873], [6, 2.921], [7, 2.785], [8, 2.653], [9, 2.985], [10, 3.316], [11, 3.142], [12, 2.678], [13, 2.635], [14, 2.685], [15, 2.488], [16, 2.071], [17, 2.131], [18, 2.267], [19, 2.46], [20, 2.429], [21, 2.351], [22, 2.387], [23, 2.8], [24, 2.489], [25, 2.371], [26, 2.311], [27, 2.07], [28, 2.42], [29, 2.114], [30, 2.192], [31, 2.422], [32, 2.261], [33, 2.632], [34, 2.622], [35, 2.702], [36, 2.537], [37, 2.496], [38, 2.691], [39, 2.534], [40, 2.412], [41, 2.481], [42, 2.544], [43, 2.438], [44, 2.334], [45, 2.688], [46, 2.584], [47, 2.594], [48, 2.143], [49, 2.229], [50, 2.075], [51, 1.999], [52, 1.864], [53, 1.89], [54, 1.678], [55, 1.981]], "Cristina Fernandez de Kirchner I": [[1, 2.044], [2, 2.369], [3, 1.977], [4, 1.861], [5, 1.74], [6, 1.334], [7, 1.208], [8, 1.269], [9, 1.395], [10, 1.442], [11, 1.379], [12, 1.428], [13, 1.368], [14, 1.505], [15, 1.375], [16, 1.358], [17, 1.354], [18, 1.322], [19, 1.34], [20, 1.235], [21, 1.111], [22, 1.224], [23, 1.146], [24, 1.159], [25, 1.044], [26, 1.259], [27, 1.187], [28, 1.337], [29, 1.39], [30, 1.592], [31, 1.61], [32, 1.687], [33, 1.796], [34, 1.771], [35, 1.704], [36, 2.422], [37, 2.336], [38, 2.164], [39, 2.179], [40, 2.424], [41, 2.186], [42, 2.339], [43, 2.294], [44, 2.478], [45, 2.246], [46, 2.641], [47, 2.621], [48, 2.622]], "Cristina Fernandez de Kirchner II": [[1, 2.71], [2, 2.749], [3, 2.558], [4, 2.256], [5, 1.904], [6, 2.142], [7, 1.985], [8, 1.843], [9, 1.804], [10, 1.688], [11, 1.669], [12, 1.687], [13, 1.839], [14, 1.762], [15, 1.831], [16, 1.914], [17, 1.759], [18, 1.42], [19, 1.744], [20, 1.679], [21, 1.869], [22, 1.772], [23, 1.976], [24, 1.847], [25, 1.681], [26, 1.462], [27, 1.385], [28, 1.526], [29, 1.402], [30, 1.512], [31, 1.7], [32, 1.872], [33, 1.821], [34, 1.706], [35, 1.647], [36, 1.603], [37, 1.636], [38, 1.826], [39, 1.653], [40, 1.864], [41, 1.896], [42, 2.091], [43, 1.937], [44, 2.037], [45, 1.917], [46, 1.778], [47, 1.909], [48, 1.749]], "Mauricio Macri": [[1, 1.797], [2, 3.138], [3, 2.862], [4, 3.033], [5, 2.72], [6, 2.622], [7, 2.613], [8, 2.707], [9, 2.521], [10, 2.53], [11, 2.632], [12, 2.516], [13, 2.494], [14, 2.461], [15, 2.35], [16, 2.317], [17, 2.611], [18, 2.517], [19, 2.278], [20, 2.235], [21, 2.532], [22, 2.855], [23, 2.828], [24, 2.967], [25, 2.363], [26, 2.278], [27, 2.32], [28, 2.322], [29, 2.065], [30, 1.938], [31, 2.042], [32, 2.014], [33, 1.944], [34, 1.749], [35, 1.763], [36, 1.767], [37, 1.92], [38, 1.63], [39, 1.79], [40, 1.6], [41, 1.529], [42, 1.614], [43, 1.857], [44, 1.97], [45, 2.201], [46, 1.91], [47, 2.009], [48, 1.977]], "Alberto Fernandez": [[1, 1.967], [2, 2.323], [3, 2.27], [4, 2.218], [5, 3.287], [6, 3.002], [7, 2.77], [8, 2.53], [9, 2.378], [10, 2.266], [11, 1.992], [12, 2.019], [13, 1.854], [14, 1.875], [15, 1.817], [16, 1.784], [17, 1.733], [18, 1.932], [19, 1.703], [20, 1.698], [21, 1.852], [22, 1.579], [23, 1.524], [24, 1.454], [25, 1.423], [26, 1.544], [27, 1.494], [28, 1.508], [29, 1.436], [30, 1.303], [31, 1.402], [32, 1.117], [33, 1.183], [34, 1.231], [35, 1.282], [36, 1.19], [37, 1.251], [38, 1.274], [39, 1.171], [40, 1.178], [41, 1.071], [42, 1.132], [43, 1.12], [44, 1.199], [45, 1.266], [46, 1.032], [47, 1.223], [48, 1.414]], "Javier Milei": [[1, 2.858], [2, 2.61], [3, 2.572], [4, 2.561], [5, 2.449], [6, 2.514], [7, 2.462], [8, 2.372], [9, 2.537], [10, 2.161], [11, 2.425], [12, 2.664], [13, 2.655], [14, 2.605], [15, 2.558], [16, 2.42], [17, 2.331], [18, 2.448], [19, 2.336], [20, 2.451], [21, 2.118], [22, 1.944], [23, 2.101], [24, 2.468], [25, 2.465], [26, 2.397], [27, 2.383], [28, 2.301], [29, 2.023], [30, 1.99], [31, 2.07]]}, "mileiKey": "Javier Milei"}
+/* ICGPRES_END */
+</script>
 
 <script id="appdata" type="application/json">
 /* DATA_START */
@@ -872,6 +894,97 @@
         legend:{orientation:'h',y:-0.22,x:0,font:{size:10.5,color:C.muted}},
         yaxis:{range:[1.4,3.0],gridcolor:'#F0F1ED',linecolor:C.line,tickfont:{size:11,color:C.muted},title:{text:'sub-index (0–5)',font:{size:11,color:C.muted}}},
         xaxis:{gridcolor:'#F0F1ED',linecolor:C.line,tickfont:{size:11,color:C.muted}}}),CONFIG);
+  })();
+
+  // ===== Chart 05 — ICG by president (reads Evolution_ICG.xlsx live, embedded fallback) =====
+  (function(){
+    var STYLE={
+      'Nestor Kirchner':                    {c:'#8C8C8C', dash:'solid', w:2},
+      'Cristina Fernandez de Kirchner I':   {c:'#27AAE1', dash:'solid', w:2},
+      'Cristina Fernandez de Kirchner II':  {c:'#3E78B2', dash:'dash',  w:2},
+      'Mauricio Macri':                     {c:'#F2B600', dash:'solid', w:2},
+      'Alberto Fernandez':                  {c:'#1F3C5F', dash:'solid', w:2},
+      'Javier Milei':                       {c:'#7C3AED', dash:'solid', w:3.4}
+    };
+    function styleFor(p){return STYLE[p]||{c:C.gray,dash:'solid',w:2};}
+
+    function draw(d, live){
+      var milei=d.mileiKey, mpts=d.series[milei]||[];
+      var maxm=mpts.reduce(function(a,r){return Math.max(a,r[0]);},0) || 31;
+      var traces=[], ends=[];
+      d.presidents.forEach(function(p){
+        var st=styleFor(p);
+        var pts=(d.series[p]||[]).filter(function(r){return r[0]<=maxm;});
+        traces.push({x:pts.map(function(r){return r[0];}), y:pts.map(function(r){return r[1];}),
+          mode:'lines', type:'scatter', name:p,
+          line:{color:st.c, width:st.w, dash:st.dash},
+          hovertemplate:'<b>'+p+'</b><br>Month %{x}: %{y:.2f}<extra></extra>'});
+        var last=pts.length?pts[pts.length-1]:null;
+        if(last && last[0]===maxm) ends.push({color:st.c, val:last[1], y:last[1]});
+      });
+      // declutter overlapping end labels
+      ends.sort(function(a,b){return a.y-b.y;});
+      for(var i=1;i<ends.length;i++){ if(ends[i].y-ends[i-1].y<0.085) ends[i].y=ends[i-1].y+0.085; }
+      var ann=ends.map(function(e){return {x:maxm,y:e.y,xanchor:'left',xshift:8,showarrow:false,
+        text:'<b>'+e.val.toFixed(2)+'</b>',font:{family:'Inter',size:11.5,color:e.color}};});
+
+      Plotly.newPlot('chart-president',traces,
+        lay({margin:{l:46,r:60,t:14,b:70}, showlegend:true,
+          legend:{orientation:'h', y:-0.20, x:0, font:{size:10.5,color:C.muted}},
+          yaxis:{range:[0,4], gridcolor:'#F0F1ED', linecolor:C.line, tickfont:{size:11,color:C.muted},
+                 title:{text:'ICG (0–5)', font:{size:11,color:C.muted}}},
+          xaxis:{range:[1,maxm+0.5], dtick:2, gridcolor:'#F0F1ED', linecolor:C.line, tickfont:{size:11,color:C.muted},
+                 title:{text:'Months in office', font:{size:11,color:C.muted}}}}),CONFIG);
+
+      ledger('ledger-president',[
+        (live?'Live source: <b>Evolution_ICG.xlsx</b>':'Source: <b>Evolution_ICG.xlsx</b> (embedded snapshot)'),
+        'Re-indexed by months in office · capped at month '+maxm,
+        'Underlying index: UTDT — ICG (0–5)']);
+    }
+
+    function parseWB(wb){
+      var ws=wb.Sheets[wb.SheetNames[0]];
+      var rows=XLSX.utils.sheet_to_json(ws,{header:1});
+      var series={}, order=[], cur=null;
+      for(var i=1;i<rows.length;i++){
+        var r=rows[i]||[]; var pres=r[0], mon=r[1], icg=r[2];
+        if(pres!=null && (''+pres).trim()!==''){ cur=(''+pres).trim(); if(!series[cur]){series[cur]=[];order.push(cur);} }
+        if(cur==null||mon==null||mon===''||icg==null||icg==='') continue;
+        series[cur].push([+mon, +(+icg).toFixed(3)]);
+      }
+      var mk=order.filter(function(p){return /Milei/i.test(p);})[0]||order[order.length-1];
+      return {presidents:order, series:series, mileiKey:mk};
+    }
+
+    // 1) render embedded snapshot immediately
+    var EMB;
+    try{
+      var t=document.getElementById('icgpres').textContent
+              .replace(/\/\*\s*ICGPRES_START\s*\*\//,'').replace(/\/\*\s*ICGPRES_END\s*\*\//,'');
+      EMB=JSON.parse(t); draw(EMB,false);
+    }catch(e){ /* leave empty; live load may still populate */ }
+
+    // 2) try to load SheetJS, fetch the xlsx, and upgrade to live data
+    function loadXLSX(urls,i){
+      return new Promise(function(res,rej){
+        (function go(j){
+          if(window.XLSX) return res();
+          if(j>=urls.length) return rej();
+          var s=document.createElement('script'); s.src=urls[j]; s.async=true;
+          s.onload=function(){ window.XLSX?res():go(j+1); };
+          s.onerror=function(){ go(j+1); };
+          document.head.appendChild(s);
+        })(0);
+      });
+    }
+    loadXLSX([
+      'https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js',
+      'https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js'
+    ]).then(function(){
+      return fetch('Evolution_ICG.xlsx',{cache:'no-store'});
+    }).then(function(r){ if(!r.ok) throw new Error('no file'); return r.arrayBuffer(); })
+      .then(function(buf){ draw(parseWB(XLSX.read(buf,{type:'array'})), true); })
+      .catch(function(){ /* keep embedded snapshot */ });
   })();
 
   // ===== chrome: dateline + scrollspy =====
