@@ -1,0 +1,453 @@
+{
+  "meta": {
+    "updated": "2026-06-23",
+    "title": "Argentina 2027 — Political Forecast Monitor",
+    "sources": [
+      "ESPOP / LOOP – Universidad de San Andrés (UdeSA)",
+      "Published polls by CB Consultora, Isasi-Burdman and Opina Argentina (Empresa Encuestadora)",
+      "ICG – Índice de Confianza en el Gobierno, Universidad Torcuato Di Tella"
+    ]
+  },
+  "espop": {
+    "approval": [
+      {
+        "date": "2024-11-01",
+        "value": 54,
+        "disapproval": null,
+        "firm": "ESPOP (UdeSA)"
+      },
+      {
+        "date": "2025-03-01",
+        "value": 43,
+        "disapproval": 51,
+        "firm": "ESPOP (UdeSA)"
+      },
+      {
+        "date": "2025-05-01",
+        "value": 49,
+        "disapproval": null,
+        "firm": "ESPOP (UdeSA)"
+      },
+      {
+        "date": "2025-07-01",
+        "value": 42,
+        "disapproval": 55,
+        "firm": "ESPOP (UdeSA)"
+      },
+      {
+        "date": "2025-11-01",
+        "value": 45,
+        "disapproval": null,
+        "firm": "ESPOP (UdeSA)"
+      },
+      {
+        "date": "2026-03-01",
+        "value": 38,
+        "disapproval": 59,
+        "firm": "ESPOP (UdeSA)"
+      },
+      {
+        "date": "2026-06-01",
+        "value": 35,
+        "disapproval": 61,
+        "firm": "ESPOP (UdeSA)"
+      }
+    ],
+    "image": [
+      {
+        "date": "2023-12-01",
+        "value": 54,
+        "firm": "ESPOP (UdeSA)"
+      },
+      {
+        "date": "2024-03-01",
+        "value": 51,
+        "firm": "ESPOP (UdeSA)"
+      },
+      {
+        "date": "2024-11-01",
+        "value": 49,
+        "firm": "ESPOP (UdeSA)"
+      },
+      {
+        "date": "2025-07-01",
+        "value": 39,
+        "firm": "ESPOP (UdeSA)"
+      },
+      {
+        "date": "2026-06-01",
+        "value": 33,
+        "firm": "ESPOP (UdeSA)"
+      }
+    ]
+  },
+  "votingSnapshot": {
+    "firm": "Consultora Tendencias",
+    "date": "2026-05-27",
+    "sample": 4740,
+    "note": "Most recent comprehensive single-firm ballot (Consultora Tendencias, fieldwork 22–27 May 2026). One methodology, so bars are directly comparable. Patricia Bullrich, Sergio Massa and Cristina F. de Kirchner were not offered as options; Bullrich's standing is shown in the image panel at right.",
+    "candidates": [
+      {
+        "name": "Javier Milei",
+        "party": "LLA",
+        "value": 32.8
+      },
+      {
+        "name": "Axel Kicillof",
+        "party": "Fuerza Patria",
+        "value": 26.3
+      },
+      {
+        "name": "Mauricio Macri",
+        "party": "PRO",
+        "value": 11.5
+      },
+      {
+        "name": "Juan Grabois",
+        "party": "Fuerza Patria",
+        "value": 5.1
+      },
+      {
+        "name": "Juan Schiaretti",
+        "party": "Provincias Unidas",
+        "value": 4.0
+      },
+      {
+        "name": "Myriam Bregman",
+        "party": "FIT-U",
+        "value": 12.6
+      }
+    ],
+    "notIncluded": [
+      "Patricia Bullrich",
+      "Sergio Massa",
+      "Cristina F. de Kirchner"
+    ]
+  },
+  "leadersImage": {
+    "firm": "ESPOP (UdeSA)",
+    "date": "2026-06-01",
+    "note": "Positive-image rating of leading national figures, ESPOP June 2026.",
+    "items": [
+      {
+        "name": "Patricia Bullrich",
+        "value": 38
+      },
+      {
+        "name": "Javier Milei",
+        "value": 33
+      },
+      {
+        "name": "Cristina F. de Kirchner",
+        "value": 32
+      },
+      {
+        "name": "Axel Kicillof",
+        "value": 31
+      },
+      {
+        "name": "Myriam Bregman",
+        "value": 30
+      }
+    ]
+  },
+  "icg": {
+    "scaleMax": 5,
+    "firm": "UTDT (fieldwork: Poliarquía Consultores)",
+    "index": [
+      {
+        "date": "2023-12-01",
+        "value": 2.86
+      },
+      {
+        "date": "2024-01-01",
+        "value": 2.61
+      },
+      {
+        "date": "2024-02-01",
+        "value": 2.57
+      },
+      {
+        "date": "2024-03-01",
+        "value": 2.56
+      },
+      {
+        "date": "2024-04-01",
+        "value": 2.45
+      },
+      {
+        "date": "2024-05-01",
+        "value": 2.51
+      },
+      {
+        "date": "2024-06-01",
+        "value": 2.46
+      },
+      {
+        "date": "2024-07-01",
+        "value": 2.37
+      },
+      {
+        "date": "2024-08-01",
+        "value": 2.54
+      },
+      {
+        "date": "2024-09-01",
+        "value": 2.16
+      },
+      {
+        "date": "2024-10-01",
+        "value": 2.43
+      },
+      {
+        "date": "2024-11-01",
+        "value": 2.66
+      },
+      {
+        "date": "2024-12-01",
+        "value": 2.66
+      },
+      {
+        "date": "2025-01-01",
+        "value": 2.61
+      },
+      {
+        "date": "2025-02-01",
+        "value": 2.56
+      },
+      {
+        "date": "2025-03-01",
+        "value": 2.42
+      },
+      {
+        "date": "2025-04-01",
+        "value": 2.33
+      },
+      {
+        "date": "2025-05-01",
+        "value": 2.45
+      },
+      {
+        "date": "2025-06-01",
+        "value": 2.34
+      },
+      {
+        "date": "2025-07-01",
+        "value": 2.45
+      },
+      {
+        "date": "2025-08-01",
+        "value": 2.12
+      },
+      {
+        "date": "2025-09-01",
+        "value": 1.94
+      },
+      {
+        "date": "2025-10-01",
+        "value": 2.1
+      },
+      {
+        "date": "2025-11-01",
+        "value": 2.47
+      },
+      {
+        "date": "2025-12-01",
+        "value": 2.46
+      },
+      {
+        "date": "2026-01-01",
+        "value": 2.4
+      },
+      {
+        "date": "2026-02-01",
+        "value": 2.38
+      },
+      {
+        "date": "2026-03-01",
+        "value": 2.3
+      },
+      {
+        "date": "2026-04-01",
+        "value": 2.02
+      },
+      {
+        "date": "2026-05-01",
+        "value": 1.99
+      },
+      {
+        "date": "2026-06-01",
+        "value": 2.07
+      }
+    ],
+    "components": {
+      "months": [
+        "2025-08-01",
+        "2025-09-01",
+        "2025-11-01",
+        "2026-02-01",
+        "2026-03-01",
+        "2026-05-01",
+        "2026-06-01"
+      ],
+      "series": {
+        "General evaluation of government": [
+          1.78,
+          1.57,
+          2.26,
+          2.18,
+          1.98,
+          1.69,
+          1.68
+        ],
+        "Capacity to solve problems": [
+          2.46,
+          2.38,
+          2.93,
+          2.7,
+          2.55,
+          2.36,
+          2.46
+        ],
+        "Honesty of officials": [
+          2.54,
+          2.44,
+          2.81,
+          2.76,
+          2.73,
+          2.46,
+          2.46
+        ],
+        "Efficiency of public spending": [
+          2.1,
+          1.87,
+          2.32,
+          2.29,
+          2.38,
+          1.88,
+          2.12
+        ],
+        "Concern for the general interest": [
+          1.73,
+          1.47,
+          2.02,
+          1.99,
+          1.87,
+          1.57,
+          1.63
+        ]
+      }
+    }
+  },
+  "headToHead2026": {
+    "polls": [
+      {
+        "date": "2026-02-15",
+        "firm": "Datos globales de CB",
+        "milei": 35.7,
+        "kicillof": 22.5
+      },
+      {
+        "date": "2026-03-15",
+        "firm": "Consultora Tendencias",
+        "milei": 38.1,
+        "kicillof": 33.0
+      },
+      {
+        "date": "2026-03-28",
+        "firm": "Datos globales de CB",
+        "milei": 28.3,
+        "kicillof": 24.2
+      },
+      {
+        "date": "2026-04-14",
+        "firm": "Consultora Delfos",
+        "milei": 29.6,
+        "kicillof": 40.4
+      },
+      {
+        "date": "2026-05-15",
+        "firm": "Equipo Mide",
+        "milei": 29.0,
+        "kicillof": 22.0
+      },
+      {
+        "date": "2026-05-25",
+        "firm": "Isasi-Burdman",
+        "milei": 39.1,
+        "kicillof": 23.0
+      },
+      {
+        "date": "2026-05-27",
+        "firm": "Consultora Tendencias",
+        "milei": 32.8,
+        "kicillof": 26.3
+      },
+      {
+        "date": "2026-06-03",
+        "firm": "Explicans",
+        "milei": 38.2,
+        "kicillof": 28.0
+      }
+    ],
+    "avg": {
+      "dates": [
+        "2026-02-15",
+        "2026-02-22",
+        "2026-03-01",
+        "2026-03-08",
+        "2026-03-15",
+        "2026-03-22",
+        "2026-03-29",
+        "2026-04-05",
+        "2026-04-12",
+        "2026-04-19",
+        "2026-04-26",
+        "2026-05-03",
+        "2026-05-10",
+        "2026-05-17",
+        "2026-05-24",
+        "2026-05-31",
+        "2026-06-03"
+      ],
+      "milei": [
+        36.1,
+        35.5,
+        34.8,
+        34.1,
+        33.4,
+        32.7,
+        32.0,
+        31.1,
+        30.2,
+        29.2,
+        30.2,
+        31.3,
+        32.7,
+        33.7,
+        34.6,
+        35.5,
+        35.8
+      ],
+      "kicillof": [
+        24.6,
+        25.6,
+        26.7,
+        27.8,
+        29.0,
+        30.3,
+        31.6,
+        32.3,
+        32.0,
+        32.5,
+        31.2,
+        29.5,
+        27.9,
+        26.6,
+        25.7,
+        25.1,
+        25.0
+      ]
+    }
+  }
+}
