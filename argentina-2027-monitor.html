@@ -205,7 +205,7 @@
       <div class="card-head">
         <div class="eyebrow">Chart 06 · Prediction market</div>
         <h2>Polymarket — election winner odds</h2>
-        <p class="sub">Live implied probability that each candidate wins the 2027 presidential election, from the Polymarket “Argentina Presidential Election Winner” market. Each price is read as a probability (a 48¢ share = a 48% implied chance). This loads directly from Polymarket on every visit, so it is always the latest read; the embedded snapshot is a fallback if the live feed is unreachable.</p>
+        <p class="sub">How the market-implied probability of winning the 2027 presidential election has evolved for the leading candidates, from the Polymarket “Argentina Presidential Election Winner” market. Each candidate’s daily price history is read as a probability (a 48¢ share = a 48% implied chance). This loads live from Polymarket on every visit; if the history feed is unreachable it falls back to the latest snapshot.</p>
       </div>
       <div class="chart"><div id="chart-market" style="height:430px"></div></div>
       <div class="ledger" id="ledger-market"></div>
@@ -1029,73 +1029,88 @@
       .catch(function(){ /* keep embedded snapshot */ });
   })();
 
-  // ===== Chart 06 — Polymarket implied probabilities (live fetch + fallback) =====
+  // ===== Chart 06 — Polymarket implied probability over time (live time series) =====
   (function(){
     var SLUG='argentina-presidential-election-winner';
-    var API='https://gamma-api.polymarket.com/events?slug='+SLUG;
+    var GAMMA='https://gamma-api.polymarket.com/events?slug='+SLUG;
+    var HIST='https://clob.polymarket.com/prices-history';
+    var MAXN=4;  // number of leading candidates to plot
 
-    function fmtVol(v){ if(!v) return ''; if(v>=1e6) return '$'+(v/1e6).toFixed(1)+'M'; if(v>=1e3) return '$'+Math.round(v/1e3)+'K'; return '$'+Math.round(v); }
-    function fmtDate(s){ try{var d=new Date(s); return d.toLocaleDateString('en-US',{day:'numeric',month:'short',year:'numeric'});}catch(e){return s;} }
+    function cleanName(s){ return (s||'').replace(/\s*\(.*$/,'').replace(/^Will\s+/i,'').replace(/\s+win.*$/i,'').trim(); }
+    function getJSON(u){
+      return fetch(u,{cache:'no-store'}).then(function(r){ if(!r.ok) throw 0; return r.json(); })
+        .catch(function(){ return fetch('https://api.allorigins.win/raw?url='+encodeURIComponent(u),{cache:'no-store'})
+                                  .then(function(r){ if(!r.ok) throw 0; return r.json(); }); });
+    }
 
-    function draw(snap, live){
-      var items=(snap.items||[]).slice().filter(function(x){return isFinite(x.p);});
-      items.sort(function(a,b){return b.p-a.p;});
-      // collapse a long tail into "Others"
-      if(items.length>8){
-        var head=items.slice(0,7), tail=items.slice(7);
-        var rest=tail.reduce(function(s,x){return s+x.p;},0);
-        items=head.concat([{name:'Others',p:rest}]);
-      }
-      var rev=items.slice().reverse();
-      var names=rev.map(function(x){return x.name;});
-      var vals=rev.map(function(x){return +(x.p*100).toFixed(1);});
-      var cols=rev.map(function(x){return /Others/i.test(x.name)?C.gray:candColor(x.name);});
-      var cd=rev.map(function(x){return x.chg!=null? (x.chg>=0?'+':'')+(x.chg*100).toFixed(1)+' pts (24h)':'';});
-
-      var tr={type:'bar',orientation:'h',y:names,x:vals,customdata:cd,marker:{color:cols},
-        text:vals.map(function(v){return v+'%';}),textposition:'outside',cliponaxis:false,
-        textfont:{family:MONO,size:11,color:C.ink},
-        hovertemplate:'<b>%{y}</b><br>%{x}% implied probability<br>%{customdata}<extra></extra>'};
-
-      var sub=(live?'Live · ':'Snapshot · ')+'as of '+fmtDate(snap.asOf)+
-              (snap.volume?'  ·  '+fmtVol(snap.volume)+' traded':'');
-      Plotly.newPlot('chart-market',[tr],
-        lay({margin:{l:130,r:54,t:30,b:34},
-          xaxis:{ticksuffix:'%',range:[0,Math.max(55, Math.ceil((vals[vals.length-1]||50)/10)*10+8)],
-                 gridcolor:'#F0F1ED',linecolor:C.line,tickfont:{size:11,color:C.muted}},
-          yaxis:{tickfont:{size:12,color:C.ink},automargin:true},
-          annotations:[{x:0,y:1.10,xref:'paper',yref:'paper',showarrow:false,xanchor:'left',
-            text:sub,font:{family:'Inter',size:12,color:C.muted}}]}),CONFIG);
-
+    // ---- time-series renderer (preferred) ----
+    function drawSeries(series){
+      var traces=[], ann=[];
+      series.forEach(function(s){
+        var xs=s.points.map(function(p){return p[0];}), ys=s.points.map(function(p){return p[1];});
+        traces.push({x:xs,y:ys,mode:'lines',name:s.name,type:'scatter',
+          line:{color:s.color, width:(/Milei/.test(s.name)?3:2), shape:'spline', smoothing:0.4},
+          hovertemplate:'<b>'+s.name+'</b><br>%{x|%d %b %Y}: %{y:.0f}%<extra></extra>'});
+        var last=ys.length?ys[ys.length-1]:null, lastx=xs.length?xs[xs.length-1]:null;
+        if(last!=null) ann.push({x:lastx,y:last,xanchor:'left',xshift:8,showarrow:false,
+          text:'<b>'+s.name.split(' ').slice(-1)[0]+' '+Math.round(last)+'%</b>',
+          font:{family:'Inter',size:11.5,color:s.color}});
+      });
+      Plotly.newPlot('chart-market',traces,
+        lay({margin:{l:46,r:104,t:16,b:40},
+          yaxis:{ticksuffix:'%',range:[0,70],gridcolor:'#F0F1ED',linecolor:C.line,tickfont:{size:11,color:C.muted}},
+          xaxis:{type:'date',gridcolor:'#F0F1ED',linecolor:C.line,tickfont:{size:11,color:C.muted}},
+          annotations:ann}),CONFIG);
       ledger('ledger-market',[
-        (live?'Live source: <b>Polymarket</b> (Gamma API)':'Source: <b>Polymarket</b> · embedded snapshot'),
-        'Market price = implied win probability',
+        'Live source: <b>Polymarket</b> (Gamma + CLOB history)',
+        'Daily market-implied win probability',
         'Money-weighted traders, not a survey']);
     }
 
-    // embedded fallback first
-    var FB;
-    try{
-      var t=document.getElementById('polymkt').textContent
-              .replace(/\/\*\s*POLY_START\s*\*\//,'').replace(/\/\*\s*POLY_END\s*\*\//,'');
-      FB=JSON.parse(t); draw(FB,false);
-    }catch(e){}
-
-    // live fetch: direct, then a CORS proxy, then keep fallback
-    function getJSON(u){ return fetch(u,{cache:'no-store'}).then(function(r){ if(!r.ok) throw 0; return r.json(); }); }
-    function parseEvent(arr){
-      var ev=Array.isArray(arr)?arr[0]:arr; if(!ev||!ev.markets) throw 0;
-      var items=ev.markets.map(function(m){
-        var p; try{ p=parseFloat(JSON.parse(m.outcomePrices)[0]); }catch(e){ p=parseFloat(m.lastTradePrice); }
-        return {name:(m.groupItemTitle||m.question||'').replace(/\s*\(.*$/,'').trim(),
-                p:p, chg:(m.oneDayPriceChange!=null?+m.oneDayPriceChange:null)};
-      }).filter(function(x){return isFinite(x.p) && x.p>0.0005;});
-      return {asOf:ev.updatedAt||new Date().toISOString(), volume:+ev.volume||0, items:items};
+    // ---- fallback: current snapshot as bars (only if history is unreachable) ----
+    function drawSnapshotBars(){
+      var snap; try{
+        var t=document.getElementById('polymkt').textContent
+                .replace(/\/\*\s*POLY_START\s*\*\//,'').replace(/\/\*\s*POLY_END\s*\*\//,'');
+        snap=JSON.parse(t);
+      }catch(e){ return; }
+      var items=(snap.items||[]).slice().sort(function(a,b){return a.p-b.p;});
+      var names=items.map(function(x){return x.name;}), vals=items.map(function(x){return +(x.p*100).toFixed(1);});
+      var cols=items.map(function(x){return /Others/i.test(x.name)?C.gray:candColor(x.name);});
+      Plotly.newPlot('chart-market',[{type:'bar',orientation:'h',y:names,x:vals,marker:{color:cols},
+        text:vals.map(function(v){return v+'%';}),textposition:'outside',cliponaxis:false,
+        textfont:{family:MONO,size:11,color:C.ink},
+        hovertemplate:'<b>%{y}</b><br>%{x}% implied probability<extra></extra>'}],
+        lay({margin:{l:130,r:54,t:30,b:34},
+          xaxis:{ticksuffix:'%',range:[0,60],gridcolor:'#F0F1ED',linecolor:C.line,tickfont:{size:11,color:C.muted}},
+          yaxis:{tickfont:{size:12,color:C.ink},automargin:true},
+          annotations:[{x:0,y:1.10,xref:'paper',yref:'paper',showarrow:false,xanchor:'left',
+            text:'Latest snapshot (live history unavailable offline)',font:{family:'Inter',size:12,color:C.muted}}]}),CONFIG);
+      ledger('ledger-market',['Source: <b>Polymarket</b> · embedded snapshot','Open the hosted page for the full time series','Money-weighted traders, not a survey']);
     }
-    getJSON(API)
-      .catch(function(){ return getJSON('https://api.allorigins.win/raw?url='+encodeURIComponent(API)); })
-      .then(function(arr){ draw(parseEvent(arr), true); })
-      .catch(function(){ /* keep embedded snapshot */ });
+
+    // ---- live: gamma -> token ids -> per-candidate CLOB price history ----
+    getJSON(GAMMA).then(function(arr){
+      var ev=Array.isArray(arr)?arr[0]:arr; if(!ev||!ev.markets) throw 0;
+      var mk=ev.markets.map(function(m){
+        var price; try{ price=parseFloat(JSON.parse(m.outcomePrices)[0]); }catch(e){ price=parseFloat(m.lastTradePrice); }
+        var tok; try{ tok=JSON.parse(m.clobTokenIds)[0]; }catch(e){ tok=null; }
+        return {name:cleanName(m.groupItemTitle||m.question), price:price, token:tok};
+      }).filter(function(x){ return x.token && isFinite(x.price); });
+      mk.sort(function(a,b){ return b.price-a.price; });
+      var pick=mk.slice(0,MAXN);
+      return Promise.all(pick.map(function(c){
+        return getJSON(HIST+'?market='+c.token+'&interval=max&fidelity=1440')
+          .then(function(h){
+            var pts=(h.history||[]).map(function(d){ return [new Date(d.t*1000).toISOString().slice(0,10), +(d.p*100).toFixed(1)]; });
+            return {name:c.name, color:candColor(c.name), points:pts};
+          }).catch(function(){ return {name:c.name, color:candColor(c.name), points:[]}; });
+      }));
+    }).then(function(series){
+      series=series.filter(function(s){ return s.points.length>1; });
+      if(!series.length) throw 0;
+      drawSeries(series);
+    }).catch(function(){ drawSnapshotBars(); });
   })();
 
   // ===== chrome: dateline + scrollspy =====
