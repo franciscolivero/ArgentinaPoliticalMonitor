@@ -1090,28 +1090,46 @@
       ledger('ledger-market',['Source: <b>Polymarket</b> · embedded snapshot','Open the hosted page for the full time series','Money-weighted traders, not a survey']);
     }
 
-    // ---- live: gamma -> token ids -> per-candidate CLOB price history ----
-    getJSON(GAMMA).then(function(arr){
-      var ev=Array.isArray(arr)?arr[0]:arr; if(!ev||!ev.markets) throw 0;
-      var mk=ev.markets.map(function(m){
-        var price; try{ price=parseFloat(JSON.parse(m.outcomePrices)[0]); }catch(e){ price=parseFloat(m.lastTradePrice); }
-        var tok; try{ tok=JSON.parse(m.clobTokenIds)[0]; }catch(e){ tok=null; }
-        return {name:cleanName(m.groupItemTitle||m.question), price:price, token:tok};
-      }).filter(function(x){ return x.token && isFinite(x.price); });
-      mk.sort(function(a,b){ return b.price-a.price; });
-      var pick=mk.slice(0,MAXN);
-      return Promise.all(pick.map(function(c){
-        return getJSON(HIST+'?market='+c.token+'&interval=max&fidelity=1440')
-          .then(function(h){
-            var pts=(h.history||[]).map(function(d){ return [new Date(d.t*1000).toISOString().slice(0,10), +(d.p*100).toFixed(1)]; });
-            return {name:c.name, color:candColor(c.name), points:pts};
-          }).catch(function(){ return {name:c.name, color:candColor(c.name), points:[]}; });
-      }));
-    }).then(function(series){
-      series=series.filter(function(s){ return s.points.length>1; });
-      if(!series.length) throw 0;
-      drawSeries(series);
-    }).catch(function(){ drawSnapshotBars(); });
+    // ---- preferred: committed history file (written server-side by the GitHub Action, no CORS) ----
+    function fromHistoryFile(){
+      return getJSON('polymarket_history.json').then(function(j){
+        var series=(j.candidates||[]).filter(function(c){return c.points&&c.points.length>1;})
+          .map(function(c){return {name:c.name, color:candColor(c.name), points:c.points};});
+        if(!series.length) throw 0;
+        drawSeries(series); markSource('file');
+      });
+    }
+    // ---- fallback: live gamma -> token ids -> per-candidate CLOB price history (CORS-permitting) ----
+    function fromLiveAPI(){
+      return getJSON(GAMMA).then(function(arr){
+        var ev=Array.isArray(arr)?arr[0]:arr; if(!ev||!ev.markets) throw 0;
+        var mk=ev.markets.map(function(m){
+          var price; try{ price=parseFloat(JSON.parse(m.outcomePrices)[0]); }catch(e){ price=parseFloat(m.lastTradePrice); }
+          var tok; try{ tok=JSON.parse(m.clobTokenIds)[0]; }catch(e){ tok=null; }
+          return {name:cleanName(m.groupItemTitle||m.question), price:price, token:tok};
+        }).filter(function(x){ return x.token && isFinite(x.price); });
+        mk.sort(function(a,b){ return b.price-a.price; });
+        var pick=mk.slice(0,MAXN);
+        return Promise.all(pick.map(function(c){
+          return getJSON(HIST+'?market='+c.token+'&interval=max&fidelity=1440')
+            .then(function(h){
+              var pts=(h.history||[]).map(function(d){ return [new Date(d.t*1000).toISOString().slice(0,10), +(d.p*100).toFixed(1)]; });
+              return {name:c.name, color:candColor(c.name), points:pts};
+            }).catch(function(){ return {name:c.name, color:candColor(c.name), points:[]}; });
+        }));
+      }).then(function(series){
+        series=series.filter(function(s){ return s.points.length>1; });
+        if(!series.length) throw 0;
+        drawSeries(series); markSource('live');
+      });
+    }
+    function markSource(kind){
+      var el=document.getElementById('ledger-market');
+      if(el&&el.firstChild) el.firstChild.innerHTML = kind==='file'
+        ? 'Live source: <b>Polymarket</b> (auto-updated daily)'
+        : 'Live source: <b>Polymarket</b> (browser, Gamma + CLOB)';
+    }
+    fromHistoryFile().catch(fromLiveAPI).catch(function(){ drawSnapshotBars(); });
   })();
 
   // ===== chrome: dateline + scrollspy =====
