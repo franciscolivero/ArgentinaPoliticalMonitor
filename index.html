@@ -92,7 +92,7 @@
 
 <header class="mast">
   <div class="mast-inner">
-    <div class="kicker">Francisco M. Olivero  &nbsp;·&nbsp; Argentina 2027</div>
+    <div class="kicker">Independent political risk monitor &nbsp;·&nbsp; Argentina 2027</div>
     <h1>Argentina 2027 &mdash; <span>Presidential Forecast Monitor</span></h1>
     <div class="dateline">
       <span>Updated <span class="mono" id="updated">—</span></span>
@@ -124,12 +124,13 @@
       <div class="card-head">
         <div class="eyebrow">Chart 01 · Executive standing</div>
         <h2>Javier Milei — government approval &amp; personal image</h2>
-        <p class="sub">Government-management approval and personal positive-image readings over time.</p>
+        <p class="sub">Government-management approval and personal positive-image readings over time, now with two houses: ESPOP/UdeSA (circles, solid) and AtlasIntel/Latam Pulse (diamonds, dashed). Every point is sourced to its polling firm; hover any marker for the firm, date and value.</p>
       </div>
       <div class="legend-inline">
         <span><span class="swatch" style="background:var(--pos)"></span>Approval (gestión)</span>
         <span><span class="swatch" style="background:var(--milei)"></span>Positive image</span>
         <span><span class="swatch" style="background:var(--neg)"></span>Disapproval</span>
+        <span style="color:#9097A0">○ ESPOP &nbsp;·&nbsp; ◇ AtlasIntel</span>
       </div>
       <div class="chart"><div id="chart-approval" style="height:420px"></div></div>
       <div class="ledger" id="ledger-approval"></div>
@@ -142,7 +143,7 @@
       <div class="card-head">
         <div class="eyebrow">Chart 02 · Head-to-head</div>
         <h2>Milei vs. the leading Peronist (Kicillof) — voting intention</h2>
-        <p class="sub">First-round voting intention from 2026 head-to-head polls. </p>
+        <p class="sub">First-round voting intention from 2026 head-to-head polls. Each faint dot is one pollster&rsquo;s reading; the bold line is a LOESS poll-average that keeps any single house effect from dominating (note the lone Delfos dot putting Kicillof ahead). Hover any dot for its firm, date and value.</p>
       </div>
       <div class="legend-inline">
         <span><span class="swatch" style="background:var(--milei)"></span>Milei (LLA)</span>
@@ -160,7 +161,7 @@
       <div class="card-head">
         <div class="eyebrow">Chart 03 · Latest field</div>
         <h2>Voting intention &amp; leaders’ image — latest snapshot</h2>
-        <p class="sub">Left: first-round voting intention by candidate from the most recent comprehensive 2026 poll. Right: positive-image standing of leading national figures from the latest ESPOP wave.</p>
+        <p class="sub">Left: first-round voting intention by candidate from the most recent comprehensive 2026 poll (Consultora Tendencias, fieldwork 22–27 May 2026). Right: positive-image standing of leading national figures from the latest ESPOP wave — the only sourced read available for Bullrich, who is not offered as a presidential option in the voting-intention poll.</p>
       </div>
       <div class="grid2">
         <div><div id="chart-snapshot" style="height:360px"></div></div>
@@ -177,7 +178,7 @@
       <div class="card-head">
         <div class="eyebrow">Chart 04 · UTDT confidence index</div>
         <h2>Índice de Confianza en el Gobierno (ICG)</h2>
-        <p class="sub">The monthly government-confidence index from Universidad Torcuato Di Tella, on a 0–5 scale. The report carries two dimensions, both shown below: the headline index over time, and the five sub-indices that compose it. </p>
+        <p class="sub">The monthly government-confidence index from Universidad Torcuato Di Tella, on a 0–5 scale. The report carries two dimensions, both shown below: the headline index over time, and the five sub-indices that compose it. June 2026 broke a six-month decline.</p>
       </div>
       <div class="legend-inline"><span class="mono" style="font-size:11px;color:var(--muted)">Dimension I — headline index, monthly</span></div>
       <div class="chart"><div id="chart-icg" style="height:400px"></div></div>
@@ -193,7 +194,7 @@
       <div class="card-head">
         <div class="eyebrow">Chart 05 · Cross-administration</div>
         <h2>Confidence in Government Index by president</h2>
-        <p class="sub">The same Di Tella ICG, re-indexed by months in office, so each president is compared at the equivalent stage of their term. The series is capped at Milei’s latest month for a like-for-like read.</p>
+        <p class="sub">The same Di Tella ICG, re-indexed by months in office, so each president is compared at the equivalent stage of their term. The series is capped at Milei’s latest month for a like-for-like read. This chart loads from <code>Evolution_ICG.xlsx</code> in the repository, so replacing that file each month updates it automatically.</p>
       </div>
       <div class="chart"><div id="chart-president" style="height:460px"></div></div>
       <div class="ledger" id="ledger-president"></div>
@@ -206,7 +207,7 @@
       <div class="card-head">
         <div class="eyebrow">Chart 06 · Prediction market</div>
         <h2>Polymarket — election winner odds</h2>
-        <p class="sub">How the market-implied probability of winning the 2027 presidential election has evolved for the leading candidates, from the Polymarket “Argentina Presidential Election Winner” market.</p>
+        <p class="sub">How the market-implied probability of winning the 2027 presidential election has evolved for the leading candidates, from the Polymarket “Argentina Presidential Election Winner” market. Each candidate’s daily price history is read as a probability (a 48¢ share = a 48% implied chance). This loads live from Polymarket on every visit; if the history feed is unreachable it falls back to the latest snapshot.</p>
       </div>
       <div class="chart"><div id="chart-market" style="height:430px"></div></div>
       <div class="ledger" id="ledger-market"></div>
@@ -218,12 +219,23 @@
     <h3>Sources &amp; methodology</h3>
     <ul>
       <li><b>ESPOP / LOOP — Universidad de San Andrés (UdeSA).</b> Bimonthly-to-monthly satisfaction and opinion survey; supplies Milei approval, personal image and leaders’ image. <a href="https://www.udesa.edu.ar/departamento-de-ciencias-sociales/espop" target="_blank" rel="noopener">espop page</a></li>
+      <li><b>AtlasIntel — Latam Pulse (with Bloomberg).</b> Monthly online national survey; supplies a second Milei approval / disapproval / positive-image series (Chart 01). It does not field a Milei–Kicillof first-round ballot, so it is not on the head-to-head chart. <a href="https://atlasintel.org/polls/latam-pulse" target="_blank" rel="noopener">latam pulse</a></li>
       <li><b>Polling firms (Empresa Encuestadora).</b> Head-to-head and first-round voting-intention figures are attributed to the pollster that published each poll: <b>CB Consultora</b> (9–13 Dec 2025), <b>Isasi-Burdman</b> (19–27 Nov 2025) and <b>Opina Argentina</b> (30 Jun–2 Jul 2025).</li>
       <li><b>ICG — Universidad Torcuato Di Tella.</b> Monthly Índice de Confianza en el Gobierno (0–5), fieldwork by Poliarquía. <a href="https://www.utdt.edu//ver_contenido.php?id_contenido=1439&id_item_menu=2964" target="_blank" rel="noopener">monthly reports</a></li>
       <li><b>ICG by president (<code>Evolution_ICG.xlsx</code>).</b> Cross-administration ICG re-indexed by months in office, sourced from the same Di Tella series. The page reads this spreadsheet live from the repository.</li>
       <li><b>Polymarket — Argentina Presidential Election Winner.</b> Live market-implied probabilities via the public Polymarket Gamma API. Prediction-market prices are money-weighted trader expectations, not survey estimates, and this market is relatively thin (low six-figure volume), so treat moves with caution.</li>
     </ul>
-    
+    <div class="disclaim">
+      <b>Read-with-care notes.</b> ESPOP measures government-management approval and a separate personal positive-image score — they are related but not identical, and are plotted as distinct lines. The head-to-head series is sparse and mixes firms with very different house effects. Bullrich, Massa and Grabois were not offered as options in the latest voting-intention poll, so they appear only where a sourced figure exists (Bullrich via the ESPOP image panel). No values are interpolated or invented; gaps are left as gaps.
+    </div>
+    <h3>Updating monthly</h3>
+    <p>Two ways to refresh, both in the package:</p>
+    <ul>
+      <li>Run <code>python update_data.py</code>. It re-fetches the Di Tella ICG page and the published-poll table automatically, lets you paste the new ESPOP figures, rewrites <code>data.json</code>, and re-embeds the data block in this HTML between the <code>DATA_START / DATA_END</code> markers.</li>
+      <li>Or edit the <code>data.json</code> arrays by hand and re-run the embed step. Each new point only needs a date, value and firm.</li>
+      <li>For the by-president chart, just drop the new <code>Evolution_ICG.xlsx</code> into the repository root each month — the page reads it on load, no rebuild needed. The embedded copy here is a fallback for offline viewing.</li>
+    </ul>
+    <p style="margin-top:18px;color:#9097A0">Built as a single-page monitor · charts by Plotly · figures are point estimates with sampling error; treat moves inside a few points as noise.</p>
   </footer>
 
 </main>
@@ -330,6 +342,18 @@
         "value": 33,
         "firm": "ESPOP (UdeSA)"
       }
+    ]
+  },
+  "atlas": {
+    "approval": [
+      { "date": "2026-02-01", "value": 41.5, "disapproval": 55.3, "firm": "AtlasIntel (Latam Pulse)" },
+      { "date": "2026-03-01", "value": 36.4, "disapproval": 61.6, "firm": "AtlasIntel (Latam Pulse)" },
+      { "date": "2026-04-01", "value": 35.5, "disapproval": 63.0, "firm": "AtlasIntel (Latam Pulse)" },
+      { "date": "2026-05-01", "value": 39.9, "disapproval": 58.3, "firm": "AtlasIntel (Latam Pulse)" }
+    ],
+    "image": [
+      { "date": "2026-04-01", "value": 36, "firm": "AtlasIntel (Latam Pulse)" },
+      { "date": "2026-05-01", "value": 38, "firm": "AtlasIntel (Latam Pulse)" }
     ]
   },
   "votingSnapshot": {
@@ -800,7 +824,7 @@
     el.innerHTML = items.map(function(t){return '<span class="chip">'+t+'</span>';}).join('');
   }
 
-  // ===== Chart 01 — Approval & image =====
+  // ===== Chart 01 — Approval & image (ESPOP ○ + AtlasIntel ◇) =====
   (function(){
     var ap=D.espop.approval, im=D.espop.image;
     var apX=ap.map(function(d){return d.date;}), apY=ap.map(function(d){return d.value;});
@@ -820,10 +844,30 @@
       line:{color:C.neg,width:1.6,dash:'dot'}, marker:{size:6,color:C.neg,symbol:'circle-open',line:{width:1.6}},
       hovertemplate:'<b>Disapproval</b><br>%{customdata[0]} · %{customdata[1]}<br>%{y}%<extra></extra>'};
 
-    Plotly.newPlot('chart-approval',[tDis,tApproval,tImage],
+    // ---- AtlasIntel (Latam Pulse): second firm, diamond markers + dashed lines ----
+    var atlas=D.atlas||{approval:[],image:[]};
+    var aap=atlas.approval||[], aim=atlas.image||[];
+    var aapX=aap.map(function(d){return d.date;}), aapY=aap.map(function(d){return d.value;});
+    var aapC=aap.map(function(d){return [d.firm, fmtMonth(d.date)];});
+    var adisX=[],adisY=[],adisC=[];
+    aap.forEach(function(d){ if(d.disapproval!=null){adisX.push(d.date);adisY.push(d.disapproval);adisC.push([d.firm,fmtMonth(d.date)]);} });
+    var aimX=aim.map(function(d){return d.date;}), aimY=aim.map(function(d){return d.value;});
+    var aimC=aim.map(function(d){return [d.firm, fmtMonth(d.date)];});
+
+    var tA_appr={x:aapX,y:aapY,customdata:aapC,name:'Approval · AtlasIntel',mode:'lines+markers',
+      line:{color:C.pos,width:1.8,dash:'dash'}, marker:{size:9,color:C.pos,symbol:'diamond',line:{color:'#fff',width:1.2}},
+      hovertemplate:'<b>Approval (gestión)</b><br>%{customdata[0]} · %{customdata[1]}<br>%{y}%<extra></extra>'};
+    var tA_img={x:aimX,y:aimY,customdata:aimC,name:'Image · AtlasIntel',mode:'lines+markers',
+      line:{color:C.milei,width:1.8,dash:'dash'}, marker:{size:9,color:C.milei,symbol:'diamond',line:{color:'#fff',width:1.2}},
+      hovertemplate:'<b>Positive image</b><br>%{customdata[0]} · %{customdata[1]}<br>%{y}%<extra></extra>'};
+    var tA_dis={x:adisX,y:adisY,customdata:adisC,name:'Disapproval · AtlasIntel',mode:'lines+markers',
+      line:{color:C.neg,width:1.3,dash:'dash'}, marker:{size:7,color:C.neg,symbol:'diamond-open',line:{width:1.4}},
+      hovertemplate:'<b>Disapproval</b><br>%{customdata[0]} · %{customdata[1]}<br>%{y}%<extra></extra>'};
+
+    Plotly.newPlot('chart-approval',[tDis,tA_dis,tApproval,tA_appr,tImage,tA_img],
       lay({yaxis:{ticksuffix:'%',range:[20,65],gridcolor:'#F0F1ED',linecolor:C.line,tickfont:{size:11,color:C.muted}},
            xaxis:{type:'date',gridcolor:'#F0F1ED',linecolor:C.line,tickfont:{size:11,color:C.muted}}}),CONFIG);
-    ledger('ledger-approval',['Source: <b>ESPOP / UdeSA</b>','Metric: approval of gestión &amp; personal positive image','Each marker firm-labelled on hover']);
+    ledger('ledger-approval',['Sources: <b>ESPOP / UdeSA</b> (○) &amp; <b>AtlasIntel / Latam Pulse</b> (◇)','Metric: approval of gestión, disapproval &amp; positive image','Each marker firm-labelled on hover']);
   })();
 
   // ===== Chart 02 — Head to head (pollster dots + average line, 2026) =====

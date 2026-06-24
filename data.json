@@ -449,5 +449,45 @@
         25.0
       ]
     }
+  },
+  "atlas": {
+    "approval": [
+      {
+        "date": "2026-02-01",
+        "value": 41.5,
+        "disapproval": 55.3,
+        "firm": "AtlasIntel (Latam Pulse)"
+      },
+      {
+        "date": "2026-03-01",
+        "value": 36.4,
+        "disapproval": 61.6,
+        "firm": "AtlasIntel (Latam Pulse)"
+      },
+      {
+        "date": "2026-04-01",
+        "value": 35.5,
+        "disapproval": 63.0,
+        "firm": "AtlasIntel (Latam Pulse)"
+      },
+      {
+        "date": "2026-05-01",
+        "value": 39.9,
+        "disapproval": 58.3,
+        "firm": "AtlasIntel (Latam Pulse)"
+      }
+    ],
+    "image": [
+      {
+        "date": "2026-04-01",
+        "value": 36,
+        "firm": "AtlasIntel (Latam Pulse)"
+      },
+      {
+        "date": "2026-05-01",
+        "value": 38,
+        "firm": "AtlasIntel (Latam Pulse)"
+      }
+    ]
   }
 }
