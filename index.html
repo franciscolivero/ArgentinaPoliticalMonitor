@@ -92,7 +92,7 @@
 
 <header class="mast">
   <div class="mast-inner">
-    <div class="kicker">Independent political risk monitor &nbsp;·&nbsp; Argentina 2027</div>
+    <div class="kicker">Francisco M. Olivero &nbsp;·&nbsp; Argentina 2027</div>
     <h1>Argentina 2027 &mdash; <span>Presidential Forecast Monitor</span></h1>
     <div class="dateline">
       <span>Updated <span class="mono" id="updated">—</span></span>
@@ -124,7 +124,7 @@
       <div class="card-head">
         <div class="eyebrow">Chart 01 · Executive standing</div>
         <h2>Javier Milei — government approval &amp; personal image</h2>
-        <p class="sub">Government-management approval and personal positive-image readings over time. Every point is sourced to its polling firm; hover any marker for the firm, date and value. ESPOP is the designated series and the architecture accepts additional firms.</p>
+        <p class="sub">Government-management approval and personal positive-image readings over time.</p>
       </div>
       <div class="legend-inline">
         <span><span class="swatch" style="background:var(--pos)"></span>Approval (gestión)</span>
@@ -142,7 +142,7 @@
       <div class="card-head">
         <div class="eyebrow">Chart 02 · Head-to-head</div>
         <h2>Milei vs. the leading Peronist (Kicillof) — voting intention</h2>
-        <p class="sub">First-round voting intention from 2026 head-to-head polls. Each faint dot is one pollster&rsquo;s reading; the bold line is a LOESS poll-average that keeps any single house effect from dominating (note the lone Delfos dot putting Kicillof ahead). Hover any dot for its firm, date and value.</p>
+        <p class="sub">First-round voting intention from 2026 head-to-head polls. </p>
       </div>
       <div class="legend-inline">
         <span><span class="swatch" style="background:var(--milei)"></span>Milei (LLA)</span>
@@ -160,7 +160,7 @@
       <div class="card-head">
         <div class="eyebrow">Chart 03 · Latest field</div>
         <h2>Voting intention &amp; leaders’ image — latest snapshot</h2>
-        <p class="sub">Left: first-round voting intention by candidate from the most recent comprehensive 2026 poll (Consultora Tendencias, fieldwork 22–27 May 2026). Right: positive-image standing of leading national figures from the latest ESPOP wave — the only sourced read available for Bullrich, who is not offered as a presidential option in the voting-intention poll.</p>
+        <p class="sub">Left: first-round voting intention by candidate from the most recent comprehensive 2026 poll. Right: positive-image standing of leading national figures from the latest ESPOP wave.</p>
       </div>
       <div class="grid2">
         <div><div id="chart-snapshot" style="height:360px"></div></div>
@@ -177,7 +177,7 @@
       <div class="card-head">
         <div class="eyebrow">Chart 04 · UTDT confidence index</div>
         <h2>Índice de Confianza en el Gobierno (ICG)</h2>
-        <p class="sub">The monthly government-confidence index from Universidad Torcuato Di Tella, on a 0–5 scale. The report carries two dimensions, both shown below: the headline index over time, and the five sub-indices that compose it. June 2026 broke a six-month decline.</p>
+        <p class="sub">The monthly government-confidence index from Universidad Torcuato Di Tella, on a 0–5 scale. The report carries two dimensions, both shown below: the headline index over time, and the five sub-indices that compose it. </p>
       </div>
       <div class="legend-inline"><span class="mono" style="font-size:11px;color:var(--muted)">Dimension I — headline index, monthly</span></div>
       <div class="chart"><div id="chart-icg" style="height:400px"></div></div>
@@ -193,7 +193,7 @@
       <div class="card-head">
         <div class="eyebrow">Chart 05 · Cross-administration</div>
         <h2>Confidence in Government Index by president</h2>
-        <p class="sub">The same Di Tella ICG, re-indexed by months in office, so each president is compared at the equivalent stage of their term. The series is capped at Milei’s latest month for a like-for-like read. This chart loads from <code>Evolution_ICG.xlsx</code> in the repository, so replacing that file each month updates it automatically.</p>
+        <p class="sub">The same Di Tella ICG, re-indexed by months in office, so each president is compared at the equivalent stage of their term. The series is capped at Milei’s latest month for a like-for-like read.</p>
       </div>
       <div class="chart"><div id="chart-president" style="height:460px"></div></div>
       <div class="ledger" id="ledger-president"></div>
@@ -206,7 +206,7 @@
       <div class="card-head">
         <div class="eyebrow">Chart 06 · Prediction market</div>
         <h2>Polymarket — election winner odds</h2>
-        <p class="sub">How the market-implied probability of winning the 2027 presidential election has evolved for the leading candidates, from the Polymarket “Argentina Presidential Election Winner” market. Each candidate’s daily price history is read as a probability (a 48¢ share = a 48% implied chance). This loads live from Polymarket on every visit; if the history feed is unreachable it falls back to the latest snapshot.</p>
+        <p class="sub">How the market-implied probability of winning the 2027 presidential election has evolved for the leading candidates, from the Polymarket “Argentina Presidential Election Winner” market.</p>
       </div>
       <div class="chart"><div id="chart-market" style="height:430px"></div></div>
       <div class="ledger" id="ledger-market"></div>
@@ -223,17 +223,7 @@
       <li><b>ICG by president (<code>Evolution_ICG.xlsx</code>).</b> Cross-administration ICG re-indexed by months in office, sourced from the same Di Tella series. The page reads this spreadsheet live from the repository.</li>
       <li><b>Polymarket — Argentina Presidential Election Winner.</b> Live market-implied probabilities via the public Polymarket Gamma API. Prediction-market prices are money-weighted trader expectations, not survey estimates, and this market is relatively thin (low six-figure volume), so treat moves with caution.</li>
     </ul>
-    <div class="disclaim">
-      <b>Read-with-care notes.</b> ESPOP measures government-management approval and a separate personal positive-image score — they are related but not identical, and are plotted as distinct lines. The head-to-head series is sparse and mixes firms with very different house effects. Bullrich, Massa and Grabois were not offered as options in the latest voting-intention poll, so they appear only where a sourced figure exists (Bullrich via the ESPOP image panel). No values are interpolated or invented; gaps are left as gaps.
-    </div>
-    <h3>Updating monthly</h3>
-    <p>Two ways to refresh, both in the package:</p>
-    <ul>
-      <li>Run <code>python update_data.py</code>. It re-fetches the Di Tella ICG page and the published-poll table automatically, lets you paste the new ESPOP figures, rewrites <code>data.json</code>, and re-embeds the data block in this HTML between the <code>DATA_START / DATA_END</code> markers.</li>
-      <li>Or edit the <code>data.json</code> arrays by hand and re-run the embed step. Each new point only needs a date, value and firm.</li>
-      <li>For the by-president chart, just drop the new <code>Evolution_ICG.xlsx</code> into the repository root each month — the page reads it on load, no rebuild needed. The embedded copy here is a fallback for offline viewing.</li>
-    </ul>
-    <p style="margin-top:18px;color:#9097A0">Built as a single-page monitor · charts by Plotly · figures are point estimates with sampling error; treat moves inside a few points as noise.</p>
+    
   </footer>
 
 </main>
