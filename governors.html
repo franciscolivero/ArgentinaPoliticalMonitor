@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Governors’ image ranking — Argentina 2027 Monitor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F5F2; --panel:#FFFFFF; --ink:#191B20; --muted:#666C75;
+    --line:#E4E5E0; --line-2:#EEEFEA;
+    --celeste:#3F86CF; --pos:#2E7D54; --neg:#C0473E; --amber:#C2872A; --slate:#33506B;
+    --shadow:0 1px 2px rgba(20,22,28,.04), 0 8px 24px rgba(20,22,28,.05);
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:Inter,system-ui,sans-serif; font-size:15px; line-height:1.55; -webkit-font-smoothing:antialiased;}
+  a{color:var(--slate)}
+  .mono{font-family:"IBM Plex Mono",monospace}
+  header.mast{background:var(--ink); color:#F3F2EE; border-bottom:3px solid var(--celeste);}
+  .mast-inner{max-width:1060px; margin:0 auto; padding:22px 24px 20px;}
+  .kicker{font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:#9FB6CE;}
+  .mast h1{font-family:Newsreader,serif; font-weight:500; font-size:30px; line-height:1.08; margin:6px 0 0; letter-spacing:-.01em;}
+  .mast h1 span{color:#A9C6E6;}
+  .dateline{display:flex; flex-wrap:wrap; gap:6px 18px; margin-top:12px; font-size:12.5px; color:#C7CBD2;}
+  .dateline .mono{color:#EDEFF2}
+  nav.tabs{position:sticky; top:0; z-index:20; background:rgba(244,245,242,.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
+  .tabs-inner{max-width:1060px; margin:0 auto; padding:0 16px; display:flex; gap:2px; overflow-x:auto;}
+  .tabs a{flex:0 0 auto; padding:13px 14px; font-size:13px; font-weight:500; color:var(--muted); text-decoration:none; border-bottom:2px solid transparent; white-space:nowrap;}
+  .tabs a:hover{color:var(--ink)}
+  .tabs a.active{color:var(--ink); border-bottom-color:var(--celeste)}
+  .tabs a.home{color:var(--celeste)}
+  main{max-width:1060px; margin:0 auto; padding:26px 16px 40px;}
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow); overflow:hidden;}
+  .card-head{padding:18px 22px 14px; border-bottom:1px solid var(--line-2);}
+  .eyebrow{font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--celeste); font-weight:600;}
+  .card h2{font-family:Newsreader,serif; font-weight:500; font-size:22px; margin:5px 0 6px; letter-spacing:-.01em;}
+  .card .sub{font-size:13.5px; color:var(--muted); margin:0; max-width:78ch;}
+  .legend-inline{display:flex; flex-wrap:wrap; gap:14px; padding:10px 22px 0; font-size:12.5px; color:var(--muted)}
+  .swatch{display:inline-block; width:10px; height:10px; border-radius:3px; margin-right:6px; vertical-align:middle}
+  .chart{padding:8px 10px 6px;}
+  .ledger{display:flex; flex-wrap:wrap; gap:8px; align-items:center; padding:12px 22px 16px; border-top:1px solid var(--line-2);}
+  .chip{font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--slate); background:#F1F4F7; border:1px solid #DFE6ED; border-radius:999px; padding:3px 10px;}
+  .chip b{color:var(--ink); font-weight:600}
+  footer{max-width:1060px; margin:0 auto; padding:8px 16px 50px; color:var(--muted); font-size:12.5px}
+  footer h3{font-family:Newsreader,serif; font-weight:500; color:var(--ink); font-size:16px; margin:18px 0 8px}
+  footer code{font-family:"IBM Plex Mono",monospace; background:#ECEEE9; padding:1px 6px; border-radius:5px; font-size:11.5px}
+  footer ul{margin:6px 0 0; padding-left:18px} footer li{margin:3px 0}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="mast-inner">
+    <div class="kicker">Argentina 2027 monitor &nbsp;·&nbsp; provincial executives</div>
+    <h1>Governors — <span>image ranking</span></h1>
+    <div class="dateline">
+      <span>Report: <span class="mono" id="month">—</span></span>
+      <span>Source: <span class="mono">CB Global Data</span></span>
+      <span>24 governors · positive image</span>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs">
+  <div class="tabs-inner">
+    <a href="index.html" class="home">← Back to monitor</a>
+    <a href="#ranking" class="active">Image ranking</a>
+  </div>
+</nav>
+
+<main>
+  <section id="ranking">
+    <div class="card">
+      <div class="card-head">
+        <div class="eyebrow">CB Global Data · monthly</div>
+        <h2>Interprovincial ranking of governors — positive image</h2>
+        <p class="sub">The 24 provincial governors ranked by positive image, from CB Global Data’s monthly federal survey (page 8 of the report). Bars show positive / negative / don’t-know shares; the marker at right is the month-over-month change in positive image. This page reads <code>Governors_CB.xlsx</code> from the repository, so replacing that file each month updates it automatically.</p>
+      </div>
+      <div class="legend-inline">
+        <span><span class="swatch" style="background:var(--pos)"></span>Positive</span>
+        <span><span class="swatch" style="background:var(--neg)"></span>Negative</span>
+        <span><span class="swatch" style="background:#9CA1A9"></span>Don’t know / NA</span>
+        <span style="color:#9097A0">▲ / ▼ = change vs previous month</span>
+      </div>
+      <div class="chart"><div id="chart-gov" style="height:760px"></div></div>
+      <div class="ledger" id="ledger-gov"></div>
+    </div>
+  </section>
+
+  <footer>
+    <h3>Source &amp; methodology</h3>
+    <ul>
+      <li><b>CB Global Data — Ranking interprovincial de gobernadores.</b> Monthly federal survey of positive image for the 24 provincial executives (23 provinces + CABA).</li>
+      <li id="ficha"></li>
+    </ul>
+    <p style="margin-top:14px">Updating monthly: open the CB report (page 8), transcribe each governor’s positive / negative / NA shares and the previous-month value into <code>Governors_CB.xlsx</code>, keep it sorted by positive image, save it under the same name and upload it to the repository root. No rebuild needed.</p>
+    <p style="margin-top:14px;color:#9097A0">Prediction-market and polling charts live on the <a href="index.html">main monitor</a>. Image ratings are point estimates with sampling error; treat small month-to-month moves as noise.</p>
+  </footer>
+</main>
+
+<script id="govdata" type="application/json">
+/* GOV_START */
+{"month":"Junio 2026","fieldwork":"1–4 June 2026","sample":"24,620 cases (900–1,193 per province)","margin":"±2.9–3.3%","rows":[
+{"rank":1,"governor":"Gustavo Sáenz","province":"Salta","pos":54.6,"neg":42.5,"ns":2.9,"prev":54.3},
+{"rank":2,"governor":"Rolando Figueroa","province":"Neuquén","pos":54.4,"neg":42.2,"ns":3.4,"prev":56.1},
+{"rank":3,"governor":"Osvaldo Jaldo","province":"Tucumán","pos":54.0,"neg":42.3,"ns":3.7,"prev":55.1},
+{"rank":4,"governor":"Hugo Passalacqua","province":"Misiones","pos":53.7,"neg":42.5,"ns":3.8,"prev":54.6},
+{"rank":5,"governor":"Claudio Poggi","province":"San Luis","pos":53.5,"neg":43.8,"ns":2.7,"prev":55.7},
+{"rank":6,"governor":"Marcelo Orrego","province":"San Juan","pos":53.2,"neg":41.9,"ns":4.9,"prev":54.0},
+{"rank":7,"governor":"Ignacio Torres","province":"Chubut","pos":53.0,"neg":43.8,"ns":3.2,"prev":52.7},
+{"rank":8,"governor":"Martín Llaryora","province":"Córdoba","pos":51.4,"neg":47.1,"ns":1.5,"prev":53.5},
+{"rank":9,"governor":"Juan Pablo Valdés","province":"Corrientes","pos":51.0,"neg":43.4,"ns":5.6,"prev":51.7},
+{"rank":10,"governor":"Maximiliano Pullaro","province":"Santa Fe","pos":50.4,"neg":46.0,"ns":3.6,"prev":51.3},
+{"rank":11,"governor":"Sergio Ziliotto","province":"La Pampa","pos":50.2,"neg":48.2,"ns":1.6,"prev":49.7},
+{"rank":12,"governor":"Raúl Jalil","province":"Catamarca","pos":49.8,"neg":49.2,"ns":1.0,"prev":50.9},
+{"rank":13,"governor":"Claudio Vidal","province":"Santa Cruz","pos":49.5,"neg":47.8,"ns":2.7,"prev":49.0},
+{"rank":14,"governor":"Elías Suárez","province":"Santiago del Estero","pos":49.3,"neg":29.1,"ns":21.6,"prev":50.4},
+{"rank":15,"governor":"Rogelio Frigerio","province":"Entre Ríos","pos":48.9,"neg":49.2,"ns":1.9,"prev":50.8},
+{"rank":16,"governor":"Carlos Sadir","province":"Jujuy","pos":48.3,"neg":49.1,"ns":2.6,"prev":48.9},
+{"rank":17,"governor":"Alfredo Cornejo","province":"Mendoza","pos":48.1,"neg":49.9,"ns":2.0,"prev":48.5},
+{"rank":18,"governor":"Gustavo Melella","province":"Tierra del Fuego","pos":46.4,"neg":49.8,"ns":3.8,"prev":48.2},
+{"rank":19,"governor":"Jorge Macri","province":"CABA","pos":46.0,"neg":52.3,"ns":1.7,"prev":45.6},
+{"rank":20,"governor":"Leandro Zdero","province":"Chaco","pos":45.8,"neg":50.6,"ns":3.6,"prev":44.7},
+{"rank":21,"governor":"Alberto Weretilneck","province":"Río Negro","pos":45.5,"neg":50.3,"ns":4.2,"prev":41.8},
+{"rank":22,"governor":"Gildo Insfrán","province":"Formosa","pos":45.3,"neg":50.7,"ns":4.0,"prev":47.1},
+{"rank":23,"governor":"Ricardo Quintela","province":"La Rioja","pos":43.2,"neg":55.1,"ns":1.7,"prev":42.5},
+{"rank":24,"governor":"Axel Kicillof","province":"Buenos Aires","pos":42.0,"neg":54.8,"ns":3.2,"prev":43.1}
+]}
+/* GOV_END */
+</script>
+
+<script>
+(function(){
+  "use strict";
+  var CDNS=["https://cdn.plot.ly/plotly-2.35.2.min.js","https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.35.2/plotly.min.js","https://unpkg.com/plotly.js-dist-min@2.35.2/plotly.min.js"];
+  function loadPlotly(i){
+    if(window.Plotly) return ready();
+    if(i>=CDNS.length) return fail();
+    var s=document.createElement('script'); s.src=CDNS[i]; s.async=true;
+    s.onload=function(){ window.Plotly?ready():loadPlotly(i+1); };
+    s.onerror=function(){ loadPlotly(i+1); };
+    document.head.appendChild(s);
+  }
+  function ready(){ if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',renderApp); else renderApp(); }
+  function fail(){ var el=document.getElementById('chart-gov'); if(el) el.innerHTML='<div style="padding:26px;font:13px Inter,sans-serif;color:#C0473E">Charts could not load — the Plotly library was blocked or the device is offline. Disable any blocker and reload.</div>'; }
+  loadPlotly(0);
+
+  function renderApp(){
+    var C={pos:'#2E7D54', neg:'#C0473E', ns:'#9CA1A9', up:'#2E7D54', down:'#C0473E', ink:'#191B20', muted:'#666C75', line:'#E4E5E0'};
+    var MONO='IBM Plex Mono, monospace';
+    var CONFIG={displayModeBar:true,displaylogo:false,responsive:true,
+      modeBarButtonsToRemove:['select2d','lasso2d','autoScale2d','toggleSpikelines'],
+      toImageButtonOptions:{format:'png',scale:2,filename:'argentina-governors-francisco-olivero'}};
+
+    function lay(extra){
+      var o={paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',
+        font:{family:'Inter, sans-serif',size:12,color:C.ink},
+        hoverlabel:{bgcolor:'#FFFFFF',bordercolor:C.line,font:{family:MONO,size:12,color:C.ink},align:'left'},
+        showlegend:false};
+      Object.assign(o,extra||{});
+      o.margin=o.margin||{l:48,r:18,t:14,b:40}; if(o.margin.b==null)o.margin.b=40; o.margin.b+=22;
+      o.annotations=(o.annotations||[]).concat([{xref:'paper',yref:'paper',x:1,y:0,xanchor:'right',yanchor:'top',
+        yshift:-(o.margin.b-7),showarrow:false,text:'Source: Francisco Olivero',
+        font:{family:'Inter, sans-serif',size:10,color:'#9CA1A9'}}]);
+      return o;
+    }
+    function ledger(items){ document.getElementById('ledger-gov').innerHTML=items.map(function(t){return '<span class="chip">'+t+'</span>';}).join(''); }
+
+    function draw(d, live){
+      document.getElementById('month').textContent=d.month||'—';
+      document.getElementById('ficha').textContent='Fieldwork: '+(d.fieldwork||'—')+' · Sample: '+(d.sample||'—')+' · CB CAWI online · Margin '+(d.margin||'—')+'.';
+      var rows=d.rows.slice().sort(function(a,b){return a.pos-b.pos;}); // ascending -> rank 1 ends at top
+      var labels=rows.map(function(r){return r.rank+'. '+r.governor+'  ·  '+r.province;});
+      var cdpos=rows.map(function(r){var dlt=(r.prev!=null)?(r.pos-r.prev):null; return [r.neg,r.ns,(r.prev!=null?r.prev:'—'),(dlt!=null?(dlt>=0?'+':'')+dlt.toFixed(1):'—')];});
+      function trace(key,color,name){
+        return {type:'bar',orientation:'h',x:rows.map(function(r){return r[key];}),y:labels,name:name,
+          marker:{color:color},
+          hovertemplate:'<b>%{y}</b><br>Positive %{customdata[3]!==undefined?"":""}<extra></extra>'};
+      }
+      var tPos={type:'bar',orientation:'h',x:rows.map(function(r){return r.pos;}),y:labels,name:'Positive',
+        marker:{color:C.pos},customdata:cdpos,
+        text:rows.map(function(r){return r.pos.toFixed(1)+'%';}),textposition:'inside',insidetextanchor:'middle',
+        textfont:{family:MONO,size:11,color:'#fff'},
+        hovertemplate:'<b>%{y}</b><br>Positive %{x}%<br>Negative %{customdata[0]}% · NA %{customdata[1]}%<br>Prev month %{customdata[2]}%  (%{customdata[3]} pts)<extra></extra>'};
+      var tNeg={type:'bar',orientation:'h',x:rows.map(function(r){return r.neg;}),y:labels,name:'Negative',
+        marker:{color:C.neg},hovertemplate:'Negative %{x}%<extra></extra>'};
+      var tNs={type:'bar',orientation:'h',x:rows.map(function(r){return r.ns;}),y:labels,name:'NA',
+        marker:{color:C.ns},hovertemplate:'Don’t know / NA %{x}%<extra></extra>'};
+
+      // month-over-month markers at right edge
+      var ann=rows.map(function(r){
+        if(r.prev==null) return null;
+        var dlt=r.pos-r.prev, upd=dlt>=0;
+        return {x:101,y:r.rank+'. '+r.governor+'  ·  '+r.province,xanchor:'left',showarrow:false,
+          text:(upd?'▲':'▼')+' '+(dlt>=0?'+':'')+dlt.toFixed(1),
+          font:{family:MONO,size:10.5,color:upd?C.up:C.down}};
+      }).filter(Boolean);
+
+      // tier divider lines (top 8 / middle 8 / bottom 8) — labels[] is ascending, so dividers after idx 7 and 15 from top
+      var n=rows.length;
+      function dividerY(fromTopRank){ return n-fromTopRank-0.5; } // category index from bottom
+      var shapes=[
+        {type:'line',xref:'paper',x0:0,x1:1,yref:'y',y0:dividerY(8),y1:dividerY(8),line:{color:'#D7D8D3',width:1,dash:'dot'}},
+        {type:'line',xref:'paper',x0:0,x1:1,yref:'y',y0:dividerY(16),y1:dividerY(16),line:{color:'#D7D8D3',width:1,dash:'dot'}}
+      ];
+
+      Plotly.newPlot('chart-gov',[tPos,tNeg,tNs],
+        lay({barmode:'stack',margin:{l:230,r:70,t:10,b:36},bargap:0.28,
+          xaxis:{range:[0,108],ticksuffix:'%',tickvals:[0,25,50,75,100],gridcolor:'#F0F1ED',linecolor:C.line,tickfont:{size:11,color:C.muted}},
+          yaxis:{automargin:true,tickfont:{family:'Inter',size:11.5,color:C.ink}},
+          shapes:shapes, annotations:ann}),CONFIG);
+
+      ledger([(live?'Live source: <b>Governors_CB.xlsx</b>':'Source: <b>CB Global Data</b> · embedded snapshot'),
+              'Report: <b>'+(d.month||'—')+'</b>',
+              'Positive / negative / NA · 24 governors']);
+    }
+
+    // embedded fallback first
+    var FB;
+    try{
+      var t=document.getElementById('govdata').textContent.replace(/\/\*\s*GOV_START\s*\*\//,'').replace(/\/\*\s*GOV_END\s*\*\//,'');
+      FB=JSON.parse(t); draw(FB,false);
+    }catch(e){}
+
+    // live load from Governors_CB.xlsx
+    function loadXLSX(urls,i){
+      return new Promise(function(res,rej){(function go(j){
+        if(window.XLSX) return res();
+        if(j>=urls.length) return rej();
+        var s=document.createElement('script'); s.src=urls[j]; s.async=true;
+        s.onload=function(){ window.XLSX?res():go(j+1); }; s.onerror=function(){ go(j+1); };
+        document.head.appendChild(s);
+      })(0);});
+    }
+    loadXLSX(['https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js','https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js'])
+      .then(function(){ return fetch('Governors_CB.xlsx',{cache:'no-store'}); })
+      .then(function(r){ if(!r.ok) throw 0; return r.arrayBuffer(); })
+      .then(function(buf){
+        var wb=XLSX.read(buf,{type:'array'}); var ws=wb.Sheets[wb.SheetNames[0]];
+        var arr=XLSX.utils.sheet_to_json(ws,{header:1}); var rows=[], month=null;
+        for(var i=1;i<arr.length;i++){ var r=arr[i]||[]; if(r[1]==null||r[3]==null) continue;
+          rows.push({rank:+r[0]||rows.length+1, governor:(''+r[1]).trim(), province:(''+(r[2]||'')).trim(),
+                     pos:+r[3], neg:+r[4], ns:+r[5], prev:(r[6]!=null&&r[6]!==''?+r[6]:null)});
+          if(r[7]!=null&&r[7]!=='') month=(''+r[7]).trim();
+        }
+        if(!rows.length) throw 0;
+        draw({month:month||FB&&FB.month||'latest', fieldwork:FB&&FB.fieldwork, sample:FB&&FB.sample, margin:FB&&FB.margin, rows:rows}, true);
+      }).catch(function(){ /* keep embedded snapshot */ });
+  }
+})();
+</script>
+</body>
+</html>
