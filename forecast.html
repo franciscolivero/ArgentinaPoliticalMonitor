@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Own forecast — will Milei win in 2027?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F5F2; --panel:#FFFFFF; --ink:#191B20; --muted:#666C75;
+    --line:#E4E5E0; --line-2:#EEEFEA;
+    --celeste:#3F86CF; --milei:#7C3AED; --kic:#2E93D8; --pos:#2E7D54; --neg:#C0473E; --slate:#33506B;
+    --shadow:0 1px 2px rgba(20,22,28,.04), 0 8px 24px rgba(20,22,28,.05);
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:Inter,system-ui,sans-serif; font-size:15px; line-height:1.55; -webkit-font-smoothing:antialiased;}
+  a{color:var(--slate)}
+  .mono{font-family:"IBM Plex Mono",monospace}
+  header.mast{background:var(--ink); color:#F3F2EE; border-bottom:3px solid var(--milei);}
+  .mast-inner{max-width:1060px; margin:0 auto; padding:22px 24px 20px;}
+  .kicker{font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:#B7A6E8;}
+  .mast h1{font-family:Newsreader,serif; font-weight:500; font-size:30px; line-height:1.08; margin:6px 0 0; letter-spacing:-.01em;}
+  .mast h1 span{color:#C3B0F0;}
+  .dateline{display:flex; flex-wrap:wrap; gap:6px 18px; margin-top:12px; font-size:12.5px; color:#C7CBD2;}
+  .dateline .mono{color:#EDEFF2}
+  nav.tabs{position:sticky; top:0; z-index:20; background:rgba(244,245,242,.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
+  .tabs-inner{max-width:1060px; margin:0 auto; padding:0 16px; display:flex; gap:2px; overflow-x:auto;}
+  .tabs a{flex:0 0 auto; padding:13px 14px; font-size:13px; font-weight:500; color:var(--muted); text-decoration:none; border-bottom:2px solid transparent; white-space:nowrap;}
+  .tabs a:hover{color:var(--ink)} .tabs a.home{color:var(--celeste)}
+  main{max-width:1060px; margin:0 auto; padding:26px 16px 40px;}
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow); overflow:hidden; margin-bottom:20px;}
+  .card-head{padding:18px 22px 14px; border-bottom:1px solid var(--line-2);}
+  .eyebrow{font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--milei); font-weight:600;}
+  .card h2{font-family:Newsreader,serif; font-weight:500; font-size:22px; margin:5px 0 6px; letter-spacing:-.01em;}
+  .card .sub{font-size:13.5px; color:var(--muted); margin:0; max-width:80ch;}
+  /* hero */
+  .hero{display:grid; grid-template-columns:300px 1fr; gap:0;}
+  @media(max-width:760px){.hero{grid-template-columns:1fr}}
+  .hero-num{padding:26px 22px; border-right:1px solid var(--line-2); display:flex; flex-direction:column; justify-content:center;}
+  @media(max-width:760px){.hero-num{border-right:none; border-bottom:1px solid var(--line-2)}}
+  .prob{font-family:"IBM Plex Mono",monospace; font-weight:600; font-size:68px; line-height:1; color:var(--milei); letter-spacing:-.02em;}
+  .prob-label{font-size:13px; color:var(--muted); margin-top:8px; max-width:24ch}
+  .prob-sub{font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--slate); margin-top:14px}
+  .vs{margin-top:14px; padding-top:14px; border-top:1px dashed var(--line); font-size:12.5px; color:var(--muted)}
+  .vs b{color:var(--ink)}
+  .hero-chart{padding:8px 10px 4px}
+  /* controls */
+  .controls{padding:16px 22px 20px; display:grid; grid-template-columns:1fr 1fr; gap:16px 28px}
+  @media(max-width:680px){.controls{grid-template-columns:1fr}}
+  .ctrl label{display:flex; justify-content:space-between; font-size:13px; font-weight:500; margin-bottom:5px}
+  .ctrl label .val{font-family:"IBM Plex Mono",monospace; color:var(--milei)}
+  .ctrl input[type=range]{width:100%; accent-color:var(--milei)}
+  .ctrl .hint{font-size:11.5px; color:#9097A0; margin-top:3px}
+  .ctrl.full{grid-column:1 / -1}
+  .btn{font:500 13px Inter,sans-serif; color:var(--slate); background:#F1F4F7; border:1px solid #DFE6ED; border-radius:8px; padding:7px 13px; cursor:pointer}
+  .btn:hover{background:#E9EEF3}
+  .ledger{display:flex; flex-wrap:wrap; gap:8px; align-items:center; padding:12px 22px 16px; border-top:1px solid var(--line-2);}
+  .chip{font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--slate); background:#F1F4F7; border:1px solid #DFE6ED; border-radius:999px; padding:3px 10px;}
+  .chip b{color:var(--ink); font-weight:600}
+  .chart{padding:8px 10px 6px}
+  footer{max-width:1060px; margin:0 auto; padding:8px 16px 50px; color:var(--muted); font-size:12.5px}
+  footer h3{font-family:Newsreader,serif; font-weight:500; color:var(--ink); font-size:16px; margin:18px 0 8px}
+  footer code{font-family:"IBM Plex Mono",monospace; background:#ECEEE9; padding:1px 6px; border-radius:5px; font-size:11.5px}
+  footer ul{margin:6px 0 0; padding-left:18px} footer li{margin:4px 0}
+  .note{background:#FBF8F2; border:1px solid #E7D6A8; border-radius:10px; padding:13px 16px; font-size:13px; color:#7a5a32; margin:0 22px 18px}
+  .note b{color:#5e4015}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="mast-inner">
+    <div class="kicker">Argentina 2027 monitor &nbsp;·&nbsp; own forecast model</div>
+    <h1>Will Milei <span>win in 2027?</span></h1>
+    <div class="dateline">
+      <span>A transparent, assumption-driven model — not a market, not a trained classifier</span>
+      <span>Calibrated on <span class="mono">2023</span> polling error</span>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs">
+  <div class="tabs-inner">
+    <a href="index.html" class="home">← Back to monitor</a>
+    <a href="#model">Forecast</a>
+    <a href="#how">How it works</a>
+  </div>
+</nav>
+
+<main>
+  <section id="model">
+    <div class="card">
+      <div class="card-head">
+        <div class="eyebrow">Own forecast · base case</div>
+        <h2>Estimated probability Milei wins the 2027 presidency</h2>
+        <p class="sub">A Monte Carlo of the 2027 race. It takes Milei’s current standing, projects it to election day with uncertainty calibrated to how wrong the 2023 polls actually were, and counts the share of simulated elections he wins (first round outright, or the runoff). Drag any assumption to see the probability move. The result is a range, not a point.</p>
+      </div>
+
+      <div class="hero">
+        <div class="hero-num">
+          <div class="prob" id="prob">—</div>
+          <div class="prob-label">of simulated 2027 elections won by Milei</div>
+          <div class="prob-sub" id="probband">runoff share —</div>
+          <div class="vs" id="vsmarket">Polymarket (two-way): <b id="mkt">—</b></div>
+        </div>
+        <div class="hero-chart"><div id="chart-dist" style="height:300px"></div></div>
+      </div>
+
+      <div class="controls">
+        <div class="ctrl">
+          <label>Milei — first-round vote intention <span class="val" id="vm">35%</span></label>
+          <input type="range" id="m" min="22" max="50" step="0.5" value="35">
+          <div class="hint">Dashboard: head-to-head ≈ 35, Tendencias snapshot 32.8</div>
+        </div>
+        <div class="ctrl">
+          <label>Kicillof — first-round vote intention <span class="val" id="vk">26%</span></label>
+          <input type="range" id="k" min="15" max="42" step="0.5" value="26">
+          <div class="hint">Dashboard: head-to-head ≈ 25, Tendencias snapshot 26.3</div>
+        </div>
+        <div class="ctrl">
+          <label>Runoff transfer to Milei <span class="val" id="vt">42%</span></label>
+          <input type="range" id="t" min="20" max="65" step="1" value="42">
+          <div class="hint">Share of the non-Milei/non-Kicillof first-round vote that breaks to Milei in a runoff — the dominant assumption. Default set by the ICG (low ICG → incumbent penalty).</div>
+        </div>
+        <div class="ctrl">
+          <label>Polling + horizon uncertainty <span class="val" id="vs">±4.5 pts</span></label>
+          <input type="range" id="s" min="2" max="9" step="0.5" value="4.5">
+          <div class="hint">2023 final-stretch miss ≈ 3.3 pts; inflated here for the ~16-month horizon.</div>
+        </div>
+        <div class="ctrl full" style="display:flex;align-items:center;gap:12px">
+          <button class="btn" id="reset">Reset to data-driven defaults</button>
+          <span class="hint" id="frpath" style="margin-top:0"></span>
+        </div>
+      </div>
+      <div class="ledger" id="ledger-f"></div>
+    </div>
+  </section>
+
+  <section id="sens">
+    <div class="card">
+      <div class="card-head">
+        <div class="eyebrow">Where the forecast really lives</div>
+        <h2>It hinges on the runoff transfer, not on poll noise</h2>
+        <p class="sub">Win probability is almost flat in polling uncertainty but swings violently with the runoff-transfer assumption. That is the honest message: the forecast is a judgment about how the rest of the field splits in a Milei–Kicillof runoff, more than a reading of today’s polls.</p>
+      </div>
+      <div class="chart"><div id="chart-sens" style="height:340px"></div></div>
+      <div class="ledger"><span class="chip">x-axis: <b>runoff transfer to Milei</b></span><span class="chip">vertical line: <b>your current setting</b></span></div>
+    </div>
+  </section>
+
+  <div class="note" id="how">
+    <b>What this is, and what it isn’t.</b> This is a transparent structural model, not a machine-learning classifier trained on outcomes. A logistic regression that predicts a single 2027 winner from one past election (2023) has no outcome variation to learn from — it would overfit and report false precision. So 2023 is used for the one thing it can genuinely tell us: how far polls miss. The probability you see is the output of explicit, editable assumptions; treat the wide band, not the headline number, as the real finding.
+  </div>
+
+  <footer>
+    <h3>Method &amp; sources</h3>
+    <ul>
+      <li><b>Calibration — 2023 polls vs results.</b> Late first-round polls missed the actual result by ≈3.3 pts RMSE (the Peronist vote was understated ~7 pts); late runoff polls put Milei at 51.8% two-way against an actual 55.65% (≈3.8 pts). The direction of the miss flipped between rounds, so the model uses the <b>size</b> of the error as uncertainty and assumes no fixed direction.</li>
+      <li><b>Current standing.</b> Milei and Kicillof first-round vote intention from the monitor (head-to-head average and the Tendencias snapshot); approval and the UTDT ICG set the default runoff transfer.</li>
+      <li><b>Simulation.</b> Each draw perturbs the first-round shares by the calibrated uncertainty, splits the remaining vote in a runoff by the transfer rate (itself drawn with uncertainty), and records a win if Milei clears the first round (≥45%, or ≥40% with a 10-pt lead) or takes the runoff (&gt;50%). 20,000 draws per update.</li>
+      <li><b>Reference.</b> Polymarket’s implied odds, normalised to a two-way Milei–Kicillof share, shown for contrast — it is a market price, not part of the model.</li>
+    </ul>
+    <p style="margin-top:14px;color:#9097A0">Sixteen months out, this is a scenario tool, not a prediction. Its job is to make the assumptions explicit and show how much they matter. Built by Francisco Olivero; see the <a href="index.html">main monitor</a> for the underlying polling and market data.</p>
+  </footer>
+</main>
+
+<script>
+(function(){
+  "use strict";
+  var CDNS=["https://cdn.plot.ly/plotly-2.35.2.min.js","https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.35.2/plotly.min.js","https://unpkg.com/plotly.js-dist-min@2.35.2/plotly.min.js"];
+  (function load(i){ if(window.Plotly) return go(); if(i>=CDNS.length) return fail();
+    var s=document.createElement('script'); s.src=CDNS[i]; s.async=true;
+    s.onload=function(){ window.Plotly?go():load(i+1); }; s.onerror=function(){ load(i+1); }; document.head.appendChild(s);
+  })(0);
+  function fail(){ document.getElementById('chart-dist').innerHTML='<div style="padding:24px;font:13px Inter;color:#C0473E">Charts could not load — Plotly was blocked or the device is offline.</div>'; }
+  function go(){ if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',app); else app(); }
+
+  function app(){
+    var MILEI='#7C3AED', INK='#191B20', MUT='#666C75', LINE='#E4E5E0', SLATE='#33506B', MONO='IBM Plex Mono, monospace';
+    var ICG=2.07; // UTDT ICG, Jun 2026 -> default transfer
+    var DEF={m:35,k:26,t:Math.round((0.45+0.06*(ICG-2.6))*100),s:4.5};
+    var CONFIG={displayModeBar:false,responsive:true};
+
+    // ---- RNG: Box-Muller normal ----
+    function randn(){ var u=0,v=0; while(u===0)u=Math.random(); while(v===0)v=Math.random(); return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v); }
+    function clip(x,a,b){ return x<a?a:(x>b?b:x); }
+
+    // ---- Monte Carlo ----
+    function sim(m0,k0,tau0,sigma,N){
+      var win=0, fr=0, shares=new Float64Array(N), tsd=0.08;
+      for(var i=0;i<N;i++){
+        var m=clip(m0+sigma*randn(),1,75), k=clip(k0+sigma*randn(),1,75);
+        var o=Math.max(100-m-k,0);
+        var tau=clip(tau0+tsd*randn(),0.05,0.95);
+        var mro=m+tau*o; shares[i]=mro;
+        var frwin=(m>=45)||((m>=40)&&((m-k)>=10)&&(m>k));
+        var rowin=(!frwin)&&(mro>50)&&(m>=k-6);
+        if(frwin) fr++; if(frwin||rowin) win++;
+      }
+      return {p:win/N, fr:fr/N, shares:shares};
+    }
+    function pct(a,arr){ var s=Float64Array.from(arr).sort(); return s[Math.floor(a*(s.length-1))]; }
+
+    function hist(shares){
+      var lo=28, hi=72, bw=1.5, nb=Math.round((hi-lo)/bw), c=new Array(nb).fill(0), x=[];
+      for(var b=0;b<nb;b++) x.push(lo+bw*(b+0.5));
+      for(var i=0;i<shares.length;i++){ var idx=Math.floor((shares[i]-lo)/bw); if(idx>=0&&idx<nb) c[idx]++; }
+      var col=x.map(function(v){ return v>50?MILEI:'#C9BCE8'; });
+      return {x:x,y:c,col:col};
+    }
+
+    function draw(){
+      var m=+document.getElementById('m').value, k=+document.getElementById('k').value,
+          t=+document.getElementById('t').value/100, s=+document.getElementById('s').value;
+      document.getElementById('vm').textContent=m+'%';
+      document.getElementById('vk').textContent=k+'%';
+      document.getElementById('vt').textContent=Math.round(t*100)+'%';
+      document.getElementById('vs').textContent='±'+s+' pts';
+
+      var r=sim(m,k,t,s,20000);
+      document.getElementById('prob').textContent=Math.round(r.p*100)+'%';
+      var med=pct(0.5,r.shares), lo=pct(0.05,r.shares), hi=pct(0.95,r.shares);
+      document.getElementById('probband').textContent='runoff share: median '+med.toFixed(1)+'%  ·  90% range '+lo.toFixed(0)+'–'+hi.toFixed(0)+'%';
+      document.getElementById('frpath').textContent='Of those wins, an outright first-round win happens in '+Math.round(r.fr*100)+'% of simulations; the rest are runoff wins.';
+
+      var h=hist(r.shares);
+      Plotly.react('chart-dist',[{type:'bar',x:h.x,y:h.y,marker:{color:h.col},hovertemplate:'Milei runoff %{x:.0f}%<extra></extra>'}],
+        {paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',bargap:0.02,showlegend:false,
+         margin:{l:14,r:14,t:10,b:50},font:{family:'Inter',size:11,color:INK},
+         xaxis:{title:{text:'Milei share in a Milei–Kicillof runoff (%)',font:{size:11,color:MUT}},ticksuffix:'%',range:[28,72],gridcolor:'#F2F0F8',zeroline:false,linecolor:LINE},
+         yaxis:{visible:false},
+         shapes:[{type:'line',x0:50,x1:50,yref:'paper',y0:0,y1:1,line:{color:INK,width:1.5,dash:'dot'}}],
+         annotations:[{x:50,yref:'paper',y:1,yanchor:'bottom',text:'50% — runoff threshold',showarrow:false,font:{family:MONO,size:10,color:INK}},
+                      {xref:'paper',yref:'paper',x:1,y:0,xanchor:'right',yanchor:'top',yshift:-46,showarrow:false,text:'Source: Francisco Olivero',font:{size:10,color:'#9CA1A9'}}]},CONFIG);
+
+      ledger();
+      drawSens(t);
+    }
+
+    function drawSens(curT){
+      var m=+document.getElementById('m').value, k=+document.getElementById('k').value, s=+document.getElementById('s').value;
+      var xs=[], ys=[];
+      for(var tt=20; tt<=65; tt+=2.5){ var rr=sim(m,k,tt/100,s,4000); xs.push(tt); ys.push(Math.round(rr.p*100)); }
+      Plotly.react('chart-sens',[
+        {type:'scatter',mode:'lines',x:xs,y:ys,line:{color:MILEI,width:3,shape:'spline'},hovertemplate:'transfer %{x}%% → win %{y}%%<extra></extra>'}
+      ],{paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',showlegend:false,
+         margin:{l:46,r:16,t:12,b:62},font:{family:'Inter',size:11,color:INK},
+         xaxis:{title:{text:'Runoff transfer to Milei (%)',font:{size:11,color:MUT}},ticksuffix:'%',gridcolor:'#F2F0F8',linecolor:LINE},
+         yaxis:{title:{text:'P(Milei wins)',font:{size:11,color:MUT}},ticksuffix:'%',range:[0,100],gridcolor:'#F2F0F8',linecolor:LINE},
+         shapes:[{type:'line',x0:curT*100,x1:curT*100,yref:'paper',y0:0,y1:1,line:{color:SLATE,width:1.5,dash:'dot'}},
+                 {type:'line',xref:'paper',x0:0,x1:1,y0:50,y1:50,line:{color:'#D7D8D3',width:1,dash:'dot'}}],
+         annotations:[{x:curT*100,yref:'paper',y:1,yanchor:'bottom',text:'your setting',showarrow:false,font:{family:MONO,size:10,color:SLATE}},
+                      {xref:'paper',yref:'paper',x:1,y:0,xanchor:'right',yanchor:'top',yshift:-58,showarrow:false,text:'Source: Francisco Olivero',font:{size:10,color:'#9CA1A9'}}]},CONFIG);
+    }
+
+    var MKT=53; // fallback: Polymarket two-way Milei (0.48 / 0.42)
+    function ledger(){
+      document.getElementById('ledger-f').innerHTML=
+        '<span class="chip">20,000 simulations · live</span>'+
+        '<span class="chip">Uncertainty calibrated to <b>2023</b> (RMSE 3.3 / runoff 3.8 pts)</span>'+
+        '<span class="chip">Default transfer from <b>ICG '+ICG+'</b></span>';
+      document.getElementById('mkt').textContent=Math.round(MKT)+'% Milei';
+    }
+
+    ['m','k','t','s'].forEach(function(id){ document.getElementById(id).addEventListener('input',function(){ requestAnimationFrame(draw); }); });
+    document.getElementById('reset').addEventListener('click',function(){
+      document.getElementById('m').value=DEF.m; document.getElementById('k').value=DEF.k;
+      document.getElementById('t').value=DEF.t; document.getElementById('s').value=DEF.s; draw();
+    });
+
+    draw();
+
+    // optional: refresh the Polymarket reference from the committed history file
+    fetch('polymarket_history.json',{cache:'no-store'}).then(function(r){ if(!r.ok) throw 0; return r.json(); })
+      .then(function(j){
+        function last(name){ var c=(j.candidates||[]).find(function(c){return (c.name||'').toLowerCase().indexOf(name)>=0;}); return c&&c.points&&c.points.length?c.points[c.points.length-1][1]:null; }
+        var mi=last('milei'), ki=last('kicillof');
+        if(mi!=null&&ki!=null&&(mi+ki)>0){ MKT=mi/(mi+ki)*100; ledger(); }
+      }).catch(function(){});
+  }
+})();
+</script>
+</body>
+</html>
