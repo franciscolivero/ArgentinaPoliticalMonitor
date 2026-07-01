@@ -92,7 +92,7 @@
 
 <header class="mast">
   <div class="mast-inner">
-    <div class="kicker">Independent political risk monitor &nbsp;·&nbsp; Argentina 2027</div>
+    <div class="kicker">Francisco M. Olivero &nbsp;·&nbsp; Argentina 2027</div>
     <h1>Argentina 2027 &mdash; <span>Presidential Forecast Monitor</span></h1>
     <div class="dateline">
       <span>Updated <span class="mono" id="updated">—</span></span>
@@ -125,7 +125,7 @@
       <div class="card-head">
         <div class="eyebrow">Chart 01 · Executive standing</div>
         <h2>Javier Milei — government approval &amp; personal image</h2>
-        <p class="sub">Government-management approval and personal positive-image readings over time, now with two houses: ESPOP/UdeSA (circles, solid) and AtlasIntel/Latam Pulse (diamonds, dashed). Every point is sourced to its polling firm; hover any marker for the firm, date and value.</p>
+        <p class="sub">Government-management approval and personal positive-image readings over time: ESPOP/UdeSA (circles, solid) and AtlasIntel/Latam Pulse (diamonds, dashed). </p>
       </div>
       <div class="legend-inline">
         <span><span class="swatch" style="background:var(--pos)"></span>Approval (gestión)</span>
@@ -144,7 +144,7 @@
       <div class="card-head">
         <div class="eyebrow">Chart 02 · Head-to-head</div>
         <h2>Milei vs. the leading Peronist (Kicillof) — voting intention</h2>
-        <p class="sub">First-round voting intention from 2026 head-to-head polls. Each faint dot is one pollster&rsquo;s reading; the bold line is a LOESS poll-average that keeps any single house effect from dominating (note the lone Delfos dot putting Kicillof ahead). Hover any dot for its firm, date and value.</p>
+        <p class="sub">First-round voting intention from 2026 head-to-head polls. Each faint dot is one pollster&rsquo;s reading; the bold line is a LOESS poll-average.</p>
       </div>
       <div class="legend-inline">
         <span><span class="swatch" style="background:var(--milei)"></span>Milei (LLA)</span>
@@ -162,7 +162,7 @@
       <div class="card-head">
         <div class="eyebrow">Chart 03 · Latest field</div>
         <h2>Voting intention &amp; leaders’ image — latest snapshot</h2>
-        <p class="sub">Left: first-round voting intention by candidate from the most recent comprehensive 2026 poll (Consultora Tendencias, fieldwork 22–27 May 2026). Right: positive-image standing of leading national figures from the latest ESPOP wave — the only sourced read available for Bullrich, who is not offered as a presidential option in the voting-intention poll.</p>
+        <p class="sub">Left: first-round voting intention by candidate from the most recent comprehensive 2026 poll (Consultora Tendencias, fieldwork 22–27 May 2026). Right: positive-image standing of leading national figures from the latest ESPOP wave</p>
       </div>
       <div class="grid2">
         <div><div id="chart-snapshot" style="height:360px"></div></div>
@@ -179,7 +179,7 @@
       <div class="card-head">
         <div class="eyebrow">Chart 04 · UTDT confidence index</div>
         <h2>Índice de Confianza en el Gobierno (ICG)</h2>
-        <p class="sub">The monthly government-confidence index from Universidad Torcuato Di Tella, on a 0–5 scale. The report carries two dimensions, both shown below: the headline index over time, and the five sub-indices that compose it. June 2026 broke a six-month decline.</p>
+        <p class="sub">The monthly government-confidence index from Universidad Torcuato Di Tella, on a 0–5 scale. </p>
       </div>
       <div class="legend-inline"><span class="mono" style="font-size:11px;color:var(--muted)">Dimension I — headline index, monthly</span></div>
       <div class="chart"><div id="chart-icg" style="height:400px"></div></div>
@@ -195,7 +195,7 @@
       <div class="card-head">
         <div class="eyebrow">Chart 05 · Cross-administration</div>
         <h2>Confidence in Government Index by president</h2>
-        <p class="sub">The same Di Tella ICG, re-indexed by months in office, so each president is compared at the equivalent stage of their term. The series is capped at Milei’s latest month for a like-for-like read. This chart loads from <code>Evolution_ICG.xlsx</code> in the repository, so replacing that file each month updates it automatically.</p>
+        <p class="sub">The same Di Tella ICG, re-indexed by months in office, so each president is compared at the equivalent stage of their term. The series is capped at Milei’s latest month for a like-for-like read. </p>
       </div>
       <div class="chart"><div id="chart-president" style="height:460px"></div></div>
       <div class="ledger" id="ledger-president"></div>
@@ -223,7 +223,6 @@
       <li><b>AtlasIntel — Latam Pulse (with Bloomberg).</b> Monthly online national survey; supplies a second Milei approval / disapproval / positive-image series (Chart 01). It does not field a Milei–Kicillof first-round ballot, so it is not on the head-to-head chart. <a href="https://atlasintel.org/polls/latam-pulse" target="_blank" rel="noopener">latam pulse</a></li>
       <li><b>Polling firms (Empresa Encuestadora).</b> Head-to-head and first-round voting-intention figures are attributed to the pollster that published each poll: <b>CB Consultora</b> (9–13 Dec 2025), <b>Isasi-Burdman</b> (19–27 Nov 2025) and <b>Opina Argentina</b> (30 Jun–2 Jul 2025).</li>
       <li><b>ICG — Universidad Torcuato Di Tella.</b> Monthly Índice de Confianza en el Gobierno (0–5), fieldwork by Poliarquía. <a href="https://www.utdt.edu//ver_contenido.php?id_contenido=1439&id_item_menu=2964" target="_blank" rel="noopener">monthly reports</a></li>
-      <li><b>ICG by president (<code>Evolution_ICG.xlsx</code>).</b> Cross-administration ICG re-indexed by months in office, sourced from the same Di Tella series. The page reads this spreadsheet live from the repository.</li>
       <li><b>Polymarket — Argentina Presidential Election Winner.</b> Live market-implied probabilities via the public Polymarket Gamma API. Prediction-market prices are money-weighted trader expectations, not survey estimates, and this market is relatively thin (low six-figure volume), so treat moves with caution.</li>
     </ul>
     <div class="disclaim">
