@@ -1,1 +1,43 @@
+name: Update forecast history
 
+# Recomputes the default-settings forecast from the repo's current data
+# (data.json + Evolution_ICG.xlsx) and commits the new monthly point to
+# forecast_history.json, feeding the "Monthly evolution" chart.
+
+on:
+  schedule:
+    - cron: "43 7 26 * *"     # monthly, on the 26th at 07:43 UTC (~04:43 Argentina)
+  workflow_dispatch:           # also runnable manually from the Actions tab
+
+permissions:
+  contents: write              # allow the workflow to commit the JSON back
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install numpy openpyxl
+
+      - name: Recompute forecast
+        run: python update_forecast.py
+
+      - name: Commit updated history (if changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain forecast_history.json)" ]; then
+            git add forecast_history.json
+            git commit -m "Add monthly forecast point ($(date -u +%Y-%m))"
+            git push
+          else
+            echo "No change in forecast_history.json"
+          fi
