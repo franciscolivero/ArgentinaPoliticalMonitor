@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated": "2026-06-23",
+    "updated": "2026-07-28",
     "title": "Argentina 2027 — Political Forecast Monitor",
     "sources": [
       "ESPOP / LOOP – Universidad de San Andrés (UdeSA)",
@@ -51,6 +51,12 @@
         "value": 35,
         "disapproval": 61,
         "firm": "ESPOP (UdeSA)"
+      },
+      {
+        "date": "2026-07-01",
+        "value": 34,
+        "disapproval": 62,
+        "firm": "ESPOP (UdeSA)"
       }
     ],
     "image": [
@@ -76,6 +82,11 @@
       },
       {
         "date": "2026-06-01",
+        "value": 33,
+        "firm": "ESPOP (UdeSA)"
+      },
+      {
+        "date": "2026-07-01",
         "value": 33,
         "firm": "ESPOP (UdeSA)"
       }
@@ -126,28 +137,24 @@
   },
   "leadersImage": {
     "firm": "ESPOP (UdeSA)",
-    "date": "2026-06-01",
-    "note": "Positive-image rating of leading national figures, ESPOP June 2026.",
+    "date": "2026-07-01",
+    "note": "Positive-image rating of leading national figures, ESPOP July 2026.",
     "items": [
       {
         "name": "Patricia Bullrich",
-        "value": 38
+        "value": 36
+      },
+      {
+        "name": "Axel Kicillof",
+        "value": 34
       },
       {
         "name": "Javier Milei",
         "value": 33
       },
       {
-        "name": "Cristina F. de Kirchner",
-        "value": 32
-      },
-      {
-        "name": "Axel Kicillof",
-        "value": 31
-      },
-      {
         "name": "Myriam Bregman",
-        "value": 30
+        "value": 33
       }
     ]
   },
@@ -278,6 +285,10 @@
       {
         "date": "2026-06-01",
         "value": 2.07
+      },
+      {
+        "date": "2026-07-01",
+        "value": 1.94
       }
     ],
     "components": {
