@@ -107,7 +107,6 @@
   <div class="tabs-inner" id="tabs">
     <a href="#approval">Milei approval &amp; image</a>
     <a href="#h2h">Milei vs Kicillof</a>
-    <a href="#snapshot">Voting intention</a>
     <a href="#icg">Confidence index (ICG)</a>
     <a href="#by-president">ICG by president</a>
     <a href="#market">Prediction market</a>
@@ -141,41 +140,24 @@
     <div class="card">
       <div class="card-head">
         <div class="eyebrow">Chart 02 · Head-to-head</div>
-        <h2>Milei vs. the leading Peronist (Kicillof) — voting intention</h2>
-        <p class="sub">First-round voting intention from 2026 head-to-head polls. Each faint dot is one pollster&rsquo;s reading; the bold line is a LOESS poll-average that keeps any single house effect from dominating (note the lone Delfos dot putting Kicillof ahead). Hover any dot for its firm, date and value.</p>
+        <h2>Milei vs. the leading Peronist (Kicillof) — runoff voting intention</h2>
+        <p class="sub">Hypothetical Milei&ndash;Kicillof runoff (<i>ballotage</i>) voting intention from 2026 polls, refreshed daily from the <a href="https://encuestar.netlify.app/encuestas/" target="_blank" rel="noopener">EncuestAR</a> aggregator. Each faint dot is one firm&rsquo;s poll; the bold line is a kernel-smoothed poll-average. Hover any dot for its firm, date and value.</p>
       </div>
       <div class="legend-inline">
         <span><span class="swatch" style="background:var(--milei)"></span>Milei (LLA)</span>
         <span><span class="swatch" style="background:var(--kicillof)"></span>Kicillof (Fuerza Patria)</span>
-        <span style="color:#9097A0">faint dots = individual pollsters · bold line = average</span>
+        <span style="color:#9097A0">faint dots = individual polls · bold line = poll-average</span>
       </div>
       <div class="chart"><div id="chart-h2h" style="height:420px"></div></div>
       <div class="ledger" id="ledger-h2h"></div>
     </div>
   </section>
 
-  <!-- 3. VOTING SNAPSHOT -->
-  <section id="snapshot">
-    <div class="card">
-      <div class="card-head">
-        <div class="eyebrow">Chart 03 · Latest field</div>
-        <h2>Voting intention &amp; leaders’ image — latest snapshot</h2>
-        <p class="sub">Left: first-round voting intention by candidate from the most recent comprehensive 2026 poll (Consultora Tendencias, fieldwork 22–27 May 2026). Right: positive-image standing of leading national figures from the latest ESPOP wave — the only sourced read available for Bullrich, who is not offered as a presidential option in the voting-intention poll.</p>
-      </div>
-      <div class="grid2">
-        <div><div id="chart-snapshot" style="height:360px"></div></div>
-        <div><div id="chart-leaders" style="height:360px"></div></div>
-      </div>
-      <div class="note" id="snapshot-note"></div>
-      <div class="ledger" id="ledger-snapshot"></div>
-    </div>
-  </section>
-
-  <!-- 4. ICG -->
+  <!-- 3. ICG -->
   <section id="icg">
     <div class="card">
       <div class="card-head">
-        <div class="eyebrow">Chart 04 · UTDT confidence index</div>
+        <div class="eyebrow">Chart 03 · UTDT confidence index</div>
         <h2>Índice de Confianza en el Gobierno (ICG)</h2>
         <p class="sub">The monthly government-confidence index from Universidad Torcuato Di Tella, on a 0–5 scale. The report carries two dimensions, both shown below: the headline index over time, and the five sub-indices that compose it. June 2026 broke a six-month decline.</p>
       </div>
@@ -187,11 +169,11 @@
     </div>
   </section>
 
-  <!-- 5. ICG BY PRESIDENT -->
+  <!-- 4. ICG BY PRESIDENT -->
   <section id="by-president">
     <div class="card">
       <div class="card-head">
-        <div class="eyebrow">Chart 05 · Cross-administration</div>
+        <div class="eyebrow">Chart 04 · Cross-administration</div>
         <h2>Confidence in Government Index by president</h2>
         <p class="sub">The same Di Tella ICG, re-indexed by months in office, so each president is compared at the equivalent stage of their term. The series is capped at Milei’s latest month for a like-for-like read. This chart loads from <code>Evolution_ICG.xlsx</code> in the repository, so replacing that file each month updates it automatically.</p>
       </div>
@@ -200,11 +182,11 @@
     </div>
   </section>
 
-  <!-- 6. POLYMARKET -->
+  <!-- 5. POLYMARKET -->
   <section id="market">
     <div class="card">
       <div class="card-head">
-        <div class="eyebrow">Chart 06 · Prediction market</div>
+        <div class="eyebrow">Chart 05 · Prediction market</div>
         <h2>Polymarket — election winner odds</h2>
         <p class="sub">How the market-implied probability of winning the 2027 presidential election has evolved for the leading candidates, from the Polymarket “Argentina Presidential Election Winner” market. Each candidate’s daily price history is read as a probability (a 48¢ share = a 48% implied chance). This loads live from Polymarket on every visit; if the history feed is unreachable it falls back to the latest snapshot.</p>
       </div>
@@ -218,19 +200,20 @@
     <h3>Sources &amp; methodology</h3>
     <ul>
       <li><b>ESPOP / LOOP — Universidad de San Andrés (UdeSA).</b> Bimonthly-to-monthly satisfaction and opinion survey; supplies Milei approval, personal image and leaders’ image. <a href="https://www.udesa.edu.ar/departamento-de-ciencias-sociales/espop" target="_blank" rel="noopener">espop page</a></li>
-      <li><b>Polling firms (Empresa Encuestadora).</b> Head-to-head and first-round voting-intention figures are attributed to the pollster that published each poll: <b>CB Consultora</b> (9–13 Dec 2025), <b>Isasi-Burdman</b> (19–27 Nov 2025) and <b>Opina Argentina</b> (30 Jun–2 Jul 2025).</li>
+      <li><b>EncuestAR — poll aggregator.</b> The Milei–Kicillof runoff chart (Chart 02) is refreshed daily from <a href="https://encuestar.netlify.app/encuestas/" target="_blank" rel="noopener">EncuestAR</a>, which relays and dates head-to-head <i>ballotage</i> polls published by third-party firms (Tendencias, CB, Trends, Opinaia, RDT, Proyección, Isasi-Burdman, Explanans and others). Each poll belongs to the firm that ran it; the aggregation is EncuestAR's, reused with attribution. Only complete-ficha ballotage polls enter the smoothed average; polls the aggregator flags as incomplete are shown as dots but held out of the line.</li>
       <li><b>ICG — Universidad Torcuato Di Tella.</b> Monthly Índice de Confianza en el Gobierno (0–5), fieldwork by Poliarquía. <a href="https://www.utdt.edu//ver_contenido.php?id_contenido=1439&id_item_menu=2964" target="_blank" rel="noopener">monthly reports</a></li>
       <li><b>ICG by president (<code>Evolution_ICG.xlsx</code>).</b> Cross-administration ICG re-indexed by months in office, sourced from the same Di Tella series. The page reads this spreadsheet live from the repository.</li>
       <li><b>Polymarket — Argentina Presidential Election Winner.</b> Live market-implied probabilities via the public Polymarket Gamma API. Prediction-market prices are money-weighted trader expectations, not survey estimates, and this market is relatively thin (low six-figure volume), so treat moves with caution.</li>
     </ul>
     <div class="disclaim">
-      <b>Read-with-care notes.</b> ESPOP measures government-management approval and a separate personal positive-image score — they are related but not identical, and are plotted as distinct lines. The head-to-head series is sparse and mixes firms with very different house effects. Bullrich, Massa and Grabois were not offered as options in the latest voting-intention poll, so they appear only where a sourced figure exists (Bullrich via the ESPOP image panel). No values are interpolated or invented; gaps are left as gaps.
+      <b>Read-with-care notes.</b> ESPOP measures government-management approval and a separate personal positive-image score — they are related but not identical, and are plotted as distinct lines. The runoff series mixes firms with very different house effects, which is exactly why the average is kernel-smoothed rather than drawn point-to-point: a single house (e.g. an outlying Delfos or Arena Pública reading) cannot swing the line on its own. It measures a hypothetical Milei–Kicillof ballotage, not a first-round multi-candidate ballot. No values are interpolated or invented; gaps are left as gaps.
     </div>
     <h3>Updating monthly</h3>
     <p>Two ways to refresh, both in the package:</p>
     <ul>
-      <li>Run <code>python update_data.py</code>. It re-fetches the Di Tella ICG page and the published-poll table automatically, lets you paste the new ESPOP figures, rewrites <code>data.json</code>, and re-embeds the data block in this HTML between the <code>DATA_START / DATA_END</code> markers.</li>
+      <li>Run <code>python update_data.py</code>. It re-fetches the Di Tella ICG page automatically, lets you paste the new ESPOP figures, rewrites <code>data.json</code>, and re-embeds the data block in this HTML between the <code>DATA_START / DATA_END</code> markers.</li>
       <li>Or edit the <code>data.json</code> arrays by hand and re-run the embed step. Each new point only needs a date, value and firm.</li>
+      <li>The Milei–Kicillof runoff chart (Chart 02) updates on its own: <code>fetch_encuestar.py</code> runs daily via GitHub Actions, scrapes the EncuestAR ballotage rows, and commits <code>encuestas_history.json</code>, which the page reads on load. Run it by hand anytime with <code>python fetch_encuestar.py</code>. The embedded <code>headToHead2026</code> block is only an offline fallback.</li>
       <li>For the by-president chart, just drop the new <code>Evolution_ICG.xlsx</code> into the repository root each month — the page reads it on load, no rebuild needed. The embedded copy here is a fallback for offline viewing.</li>
     </ul>
     <p style="margin-top:18px;color:#9097A0">Built as a single-page monitor · charts by Plotly · figures are point estimates with sampling error; treat moves inside a few points as noise.</p>
@@ -740,7 +723,7 @@
     else renderApp();
   }
   function failed(){
-    ['chart-approval','chart-h2h','chart-snapshot','chart-leaders','chart-icg','chart-icg-comp']
+    ['chart-approval','chart-h2h','chart-icg','chart-icg-comp']
       .forEach(function(id){
         var el = document.getElementById(id);
         if (el) el.innerHTML =
@@ -836,77 +819,62 @@
     ledger('ledger-approval',['Source: <b>ESPOP / UdeSA</b>','Metric: approval of gestión &amp; personal positive image','Each marker firm-labelled on hover']);
   })();
 
-  // ===== Chart 02 — Head to head (pollster dots + average line, 2026) =====
+  // ===== Chart 02 — Milei vs Kicillof runoff (poll dots + smoothed average, 2026) =====
+  // Preferred source: encuestas_history.json, written daily by fetch_encuestar.py from the
+  // EncuestAR aggregator (same-origin, no CORS). Falls back to the embedded headToHead2026
+  // snapshot if the file is missing (e.g. opened straight off disk / offline).
   (function(){
-    var h=D.headToHead2026, polls=h.polls, avg=h.avg;
-    function dots(key,color,label){
-      return {x:polls.map(function(p){return p.date;}),
-        y:polls.map(function(p){return p[key];}),
-        customdata:polls.map(function(p){return [p.firm, fmtDay(p.date)];}),
-        mode:'markers', type:'scatter', name:label,
-        marker:{size:10,color:color,opacity:0.30,line:{color:color,width:1}},
-        hovertemplate:'<b>'+label+'</b><br>%{customdata[0]} · %{customdata[1]}<br>%{y}%<extra></extra>'};
+    function render(src, live){
+      var polls=src.polls||[], avg=src.avg||{dates:[],milei:[],kicillof:[]};
+      // dots: dim archived (incomplete-ficha) polls further so the eye tracks the average
+      function dots(key,color,label){
+        return {x:polls.map(function(p){return p.date;}),
+          y:polls.map(function(p){return p[key];}),
+          customdata:polls.map(function(p){return [p.firm, fmtDay(p.date), p.archived?' · archived':''];}),
+          mode:'markers', type:'scatter', name:label,
+          marker:{size:10,color:color,
+            opacity:polls.map(function(p){return p.archived?0.14:0.30;}),
+            line:{color:color,width:1}},
+          hovertemplate:'<b>'+label+'</b><br>%{customdata[0]} · %{customdata[1]}%{customdata[2]}<br>%{y}%<extra></extra>'};
+      }
+      function avgline(key,color,label){
+        return {x:avg.dates, y:avg[key], mode:'lines', type:'scatter', name:label+' avg',
+          line:{color:color,width:3,shape:'spline',smoothing:0.6},
+          hovertemplate:label+' poll-average<br>%{y:.1f}%<extra></extra>'};
+      }
+      var data=[dots('milei',C.milei,'Milei (LLA)'),dots('kicillof',C.kicillof,'Kicillof (FP)'),
+                avgline('milei',C.milei,'Milei'),avgline('kicillof',C.kicillof,'Kicillof')];
+      var lM=avg.milei[avg.milei.length-1], lK=avg.kicillof[avg.kicillof.length-1],
+          lD=avg.dates[avg.dates.length-1];
+      var ann=[];
+      if(lD){
+        ann.push({x:lD,y:lM,xanchor:'left',xshift:10,showarrow:false,text:'<b>Milei '+lM.toFixed(0)+'%</b>',font:{family:'Inter',size:12.5,color:C.milei}});
+        ann.push({x:lD,y:lK,xanchor:'left',xshift:10,showarrow:false,text:'<b>Kicillof '+lK.toFixed(0)+'%</b>',font:{family:'Inter',size:12.5,color:C.kicillof}});
+      }
+      Plotly.newPlot('chart-h2h',data,
+        lay({margin:{l:48,r:96,t:14,b:40},
+          yaxis:{ticksuffix:'%',range:[25,58],gridcolor:'#F0F1ED',linecolor:C.line,tickfont:{size:11,color:C.muted}},
+          xaxis:{type:'date',gridcolor:'#F0F1ED',linecolor:C.line,tickfont:{size:11,color:C.muted}},
+          annotations:ann}),CONFIG);
+      var n=polls.length;
+      ledger('ledger-h2h',[
+        (live?'Live source: <b>EncuestAR</b> (auto-updated daily)':'Source: <b>EncuestAR</b> · embedded fallback'),
+        n+' ballotage polls · dots = individual firms · line = smoothed average',
+        'Ballotage-only scenario, one methodology, so dots are comparable']);
     }
-    function avgline(key,color,label){
-      return {x:avg.dates, y:avg[key], mode:'lines', type:'scatter', name:label+' avg',
-        line:{color:color,width:3,shape:'spline',smoothing:0.6},
-        hovertemplate:label+' poll average<br>%{y:.1f}%<extra></extra>'};
+    // embedded fallback rebuilt from the curated headToHead2026 block
+    function embedded(){
+      var h=D.headToHead2026||{polls:[],avg:{dates:[],milei:[],kicillof:[]}};
+      return {polls:(h.polls||[]).map(function(p){return {date:p.date,firm:p.firm,milei:p.milei,kicillof:p.kicillof,archived:false};}),
+              avg:h.avg||{dates:[],milei:[],kicillof:[]}};
     }
-    var data=[dots('milei',C.milei,'Milei (LLA)'),dots('kicillof',C.kicillof,'Kicillof (FP)'),
-              avgline('milei',C.milei,'Milei'),avgline('kicillof',C.kicillof,'Kicillof')];
-    var lM=avg.milei[avg.milei.length-1], lK=avg.kicillof[avg.kicillof.length-1],
-        lD=avg.dates[avg.dates.length-1];
-    Plotly.newPlot('chart-h2h',data,
-      lay({margin:{l:48,r:96,t:14,b:40},
-        yaxis:{ticksuffix:'%',range:[15,45],gridcolor:'#F0F1ED',linecolor:C.line,tickfont:{size:11,color:C.muted}},
-        xaxis:{type:'date',gridcolor:'#F0F1ED',linecolor:C.line,tickfont:{size:11,color:C.muted}},
-        annotations:[
-          {x:lD,y:lM,xanchor:'left',xshift:10,showarrow:false,text:'<b>Milei '+lM.toFixed(0)+'%</b>',font:{family:'Inter',size:12.5,color:C.milei}},
-          {x:lD,y:lK,xanchor:'left',xshift:10,showarrow:false,text:'<b>Kicillof '+lK.toFixed(0)+'%</b>',font:{family:'Inter',size:12.5,color:C.kicillof}}
-        ]}),CONFIG);
-    ledger('ledger-h2h',['Pollsters 2026: <b>Tendencias · Datos globales CB · Delfos · Equipo Mide · Isasi-Burdman · Explicans</b>','Dots = individual polls · line = LOESS average','Each dot firm-labelled on hover']);
+    fetch('encuestas_history.json',{cache:'no-store'})
+      .then(function(r){ if(!r.ok) throw 0; return r.json(); })
+      .then(function(j){ if(!(j.polls&&j.polls.length)) throw 0; render(j,true); })
+      .catch(function(){ render(embedded(),false); });
   })();
 
-  // ===== Chart 03 — Voting snapshot + leaders' image =====
-  (function(){
-    var vs=D.votingSnapshot, cand=vs.candidates.slice().reverse();
-    var names=cand.map(function(c){return c.name;});
-    var vals=cand.map(function(c){return c.value;});
-    var party=cand.map(function(c){return c.party;});
-    var colors=cand.map(function(c){return candColor(c.name);});
-    var tVote={type:'bar',orientation:'h',y:names,x:vals,customdata:party,
-      marker:{color:colors},text:vals.map(function(v){return v+'%';}),textposition:'outside',
-      textfont:{family:MONO,size:11,color:C.ink},cliponaxis:false,
-      hovertemplate:'<b>%{y}</b> (%{customdata})<br>%{x}% voting intention<extra></extra>'};
-    Plotly.newPlot('chart-snapshot',[tVote],
-      lay({margin:{l:120,r:42,t:8,b:34},
-        xaxis:{ticksuffix:'%',range:[0,42],gridcolor:'#F0F1ED',linecolor:C.line,tickfont:{size:11,color:C.muted}},
-        yaxis:{tickfont:{size:12,color:C.ink},automargin:true},
-        annotations:[{x:0,y:1.13,xref:'paper',yref:'paper',showarrow:false,xanchor:'left',
-          text:'<b>Voting intention</b> · '+vs.firm+' · '+fmtDay(vs.date),
-          font:{family:'Inter',size:12,color:C.muted}}]}),CONFIG);
-
-    var li=D.leadersImage, items=li.items.slice().reverse();
-    var lnames=items.map(function(c){return c.name;});
-    var lvals=items.map(function(c){return c.value;});
-    var lcolors=items.map(function(c){return candColor(c.name);});
-    var tLead={type:'bar',orientation:'h',y:lnames,x:lvals,marker:{color:lcolors},
-      text:lvals.map(function(v){return v+'%';}),textposition:'outside',
-      textfont:{family:MONO,size:11,color:C.ink},cliponaxis:false,
-      hovertemplate:'<b>%{y}</b><br>%{x}% positive image<extra></extra>'};
-    Plotly.newPlot('chart-leaders',[tLead],
-      lay({margin:{l:130,r:42,t:8,b:34},
-        xaxis:{ticksuffix:'%',range:[0,46],gridcolor:'#F0F1ED',linecolor:C.line,tickfont:{size:11,color:C.muted}},
-        yaxis:{tickfont:{size:12,color:C.ink},automargin:true},
-        annotations:[{x:0,y:1.13,xref:'paper',yref:'paper',showarrow:false,xanchor:'left',
-          text:'<b>Leaders’ positive image</b> · '+li.firm+' · '+fmtMonth(li.date),
-          font:{family:'Inter',size:12,color:C.muted}}]}),CONFIG);
-
-    document.getElementById('snapshot-note').textContent = vs.note;
-    ledger('ledger-snapshot',['Voting: <b>Consultora Tendencias</b> · May 2026','Image: <b>ESPOP (UdeSA)</b> · Jun 2026','Not in voting poll: Bullrich · Massa · CFK']);
-  })();
-
-  // ===== Chart 04 — ICG index + components =====
+  // ===== Chart 03 — ICG index + components =====
   (function(){
     var idx=D.icg.index;
     var x=idx.map(function(d){return d.date;}), y=idx.map(function(d){return d.value;});
@@ -939,7 +907,7 @@
         xaxis:{gridcolor:'#F0F1ED',linecolor:C.line,tickfont:{size:11,color:C.muted}}}),CONFIG);
   })();
 
-  // ===== Chart 05 — ICG by president (reads Evolution_ICG.xlsx live, embedded fallback) =====
+  // ===== Chart 04 — ICG by president (reads Evolution_ICG.xlsx live, embedded fallback) =====
   (function(){
     var STYLE={
       'Nestor Kirchner':                    {c:'#8C8C8C', dash:'solid', w:2},
@@ -1030,7 +998,7 @@
       .catch(function(){ /* keep embedded snapshot */ });
   })();
 
-  // ===== Chart 06 — Polymarket implied probability over time (live time series) =====
+  // ===== Chart 05 — Polymarket implied probability over time (live time series) =====
   (function(){
     var SLUG='argentina-presidential-election-winner';
     var GAMMA='https://gamma-api.polymarket.com/events?slug='+SLUG;

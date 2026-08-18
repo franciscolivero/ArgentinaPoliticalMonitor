@@ -6,9 +6,11 @@ What it does
 ------------
 1. ICG (Di Tella)      ... fully automatic. Scrapes the monthly index list off the
                            UTDT page and rebuilds the full time series.
-2. Poll table          ... best-effort automatic parse of the consolidated head-to-head /
-                           voting-intention table; falls back to keeping existing
-                           data if the table layout changes.
+2. Head-to-head        ... NO LONGER handled here. The Milei-vs-Kicillof runoff series
+                           (Chart 02) is scraped daily by fetch_encuestar.py into
+                           encuestas_history.json. The headToHead2026 block below is kept
+                           only as the dashboard's offline fallback; this script leaves it
+                           untouched.
 3. ESPOP (UdeSA)       ... assisted. ESPOP figures live inside monthly PDFs / press
                            notes, so the script asks you to confirm/add the latest
                            approval + image points (press Enter to keep what's there).
@@ -105,20 +107,16 @@ def fetch_icg(existing):
     return series
 
 
-# ---------------------------------------------------------------- Wikipedia
+# ---------------------------------------------------------------- head-to-head (superseded)
 def fetch_wikipedia(existing):
-    """Best-effort parse of the head-to-head table via pandas.read_html."""
-    try:
-        import pandas as pd
-        tables = pd.read_html(WIKI_URL, match="Milei")
-    except Exception as e:
-        print(f"  ! poll-table parse skipped ({e}); keeping existing head-to-head data.")
-        return existing["headToHead"], existing["votingSnapshot"]
+    """No-op kept for backwards compatibility.
 
-    print(f"  · poll table returned {len(tables)} candidate table(s).")
-    print("    Auto-merge is intentionally conservative: review the published 2026 table and")
-    print("    add new polls to data.json by hand under headToHead2026.polls")
-    print("    (date, firm, milei, kicillof). Keeping existing series for now.")
+    The head-to-head runoff series now comes from fetch_encuestar.py (daily) into
+    encuestas_history.json. The embedded headToHead2026 block is only the dashboard's
+    offline fallback, so this simply preserves whatever is already in data.json.
+    """
+    print("  · head-to-head is scraped by fetch_encuestar.py now; keeping the embedded "
+          "fallback as-is.")
     return existing.get("headToHead2026", {}), existing.get("votingSnapshot", {})
 
 
