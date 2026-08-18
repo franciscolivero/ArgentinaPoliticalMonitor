@@ -1,0 +1,44 @@
+name: Update EncuestAR polls
+
+# Scrapes the Milei-vs-Kicillof ballotage rows from the EncuestAR aggregator and
+# commits encuestas_history.json, which feeds Chart 02 ("Milei vs. Kicillof — runoff
+# voting intention") on the dashboard. Runs server-side, so it is not subject to the
+# browser CORS limits that keep this off the client.
+
+on:
+  schedule:
+    - cron: "17 8 * * *"      # daily at 08:17 UTC (~05:17 Argentina)
+  workflow_dispatch:           # also runnable manually from the Actions tab
+
+permissions:
+  contents: write              # allow the workflow to commit the JSON back
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4 lxml numpy
+
+      - name: Scrape EncuestAR
+        run: python fetch_encuestar.py
+
+      - name: Commit updated history (if changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain encuestas_history.json)" ]; then
+            git add encuestas_history.json
+            git commit -m "Update EncuestAR ballotage polls ($(date -u +%Y-%m-%d))"
+            git push
+          else
+            echo "No change in encuestas_history.json"
+          fi
