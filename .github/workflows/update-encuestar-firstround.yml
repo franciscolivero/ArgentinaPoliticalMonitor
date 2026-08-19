@@ -1,0 +1,45 @@
+name: Update first-round polls (forecast input)
+
+# Scrapes EncuestAR's first-round Milei-vs-Kicillof rows and writes the smoothed average into
+# data.json -> headToHead2026, which is the polls input the forecast reads (forecast.html seeds
+# its defaults from it, and update_forecast.py reads it for the monthly committed point).
+# Runs daily, staggered a few minutes after update-encuestar.yml (the ballotage scrape) so the
+# two never race on the push.
+
+on:
+  schedule:
+    - cron: "37 8 * * *"     # daily, 08:37 UTC (~05:37 Argentina)
+  workflow_dispatch:           # also runnable manually from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4 lxml numpy
+
+      - name: Scrape first-round polls into data.json
+        run: python fetch_encuestar_firstround.py
+
+      - name: Commit data.json (if changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain data.json)" ]; then
+            git add data.json
+            git commit -m "Refresh first-round poll average ($(date -u +%Y-%m-%d))"
+            git push
+          else
+            echo "No change in data.json"
+          fi
