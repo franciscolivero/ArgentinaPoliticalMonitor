@@ -85,10 +85,6 @@
 <nav class="tabs">
   <div class="tabs-inner">
     <a href="index.html" class="home">← Back to monitor</a>
-    <a href="#model">Forecast</a>
-    <a href="#fund">Fundamentals (ICG)</a>
-    <a href="#evo">Monthly evolution</a>
-    <a href="#how">How it works</a>
   </div>
 </nav>
 
@@ -110,7 +106,6 @@
             <div class="row"><span>Fundamentals (ICG logistic)</span><b id="pf" style="color:#2E7D54">—</b></div>
             <div class="row"><span>Runoff share (median · 90%)</span><b id="probband">—</b></div>
           </div>
-          <div class="vs">Polymarket (two-way): <b id="mkt">—</b></div>
         </div>
         <div class="hero-chart"><div id="chart-dist" style="height:300px"></div></div>
       </div>
@@ -155,61 +150,6 @@
     </div>
   </section>
 
-  <section id="fund">
-    <div class="card">
-      <div class="card-head">
-        <div class="eyebrow">Fundamentals · trained 2003–2023</div>
-        <h2>Does the ICG predict incumbent survival? Five elections say: mostly</h2>
-        <p class="sub">Each dot is a presidential election where the sitting coalition ran: the government’s ICG in the election window (Aug–Oct average) against whether it kept the presidency. The curve is a ridge-penalised logistic fit to those five races; the purple line is the current government’s ICG. Note the sobering pair: 2007 won at ICG 1.92, but 2019 lost at 2.04 — the middle of the curve is genuinely uncertain, and the model says so.</p>
-      </div>
-      <div class="chart"><div id="chart-fund" style="height:340px"></div></div>
-      <div class="ledger">
-        <span class="chip">Training: <b>2007, 2011, 2015, 2019, 2023</b></span>
-        <span class="chip">P(win | ICG) = σ(−2.08 + 0.87·ICG)</span>
-        <span class="chip">ICG source: <b>UTDT</b>, election-window avg</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="sens">
-    <div class="card">
-      <div class="card-head">
-        <div class="eyebrow">Where the forecast really lives</div>
-        <h2>It hinges on the runoff transfer, not on poll noise</h2>
-        <p class="sub">The blended probability is nearly flat in polling uncertainty but swings hard with the runoff-transfer assumption. The forecast is, above all, a judgment about how the rest of the field splits in a Milei–Kicillof runoff.</p>
-      </div>
-      <div class="chart"><div id="chart-sens" style="height:320px"></div></div>
-      <div class="ledger"><span class="chip">x-axis: <b>runoff transfer to Milei</b></span><span class="chip">vertical line: <b>your current setting</b></span><span class="chip">shaded: <b>observed incumbent range 23–40%</b></span></div>
-    </div>
-  </section>
-
-  <section id="evo">
-    <div class="card">
-      <div class="card-head">
-        <div class="eyebrow">Track record · month by month</div>
-        <h2>How this forecast evolves as new data lands</h2>
-        <p class="sub">Every month, the model’s default-settings output is committed to the repository (<code style="font-family:'IBM Plex Mono',monospace;font-size:12px">forecast_history.json</code>) and a point is added here — the polls read, the fundamentals read, and the blend. The hollow marker is this month’s live provisional value (not yet committed). One point today; a track record by 2027.</p>
-      </div>
-      <div class="chart"><div id="chart-evo" style="height:330px"></div></div>
-      <div class="ledger" id="ledger-evo"></div>
-    </div>
-  </section>
-
-  <div class="note" id="how">
-    <b>What this is, and what it isn’t.</b> The fundamentals side <i>is</i> a logistic regression trained on real outcomes — but on the only five observations history provides, so it is ridge-penalised and its middle range is honestly uncertain. The polls side is a transparent simulation, not a fitted model. The blend weight is a judgment call you control. Treat the band and the disagreement between the two reads — not the headline decimal — as the finding.
-  </div>
-
-  <footer>
-    <h3>Method &amp; sources</h3>
-    <ul>
-      <li><b>Fundamentals (trained 2003–2023).</b> For each presidential election with an incumbent coalition running (2007, 2011, 2015, 2019, 2023), the government’s ICG (UTDT, election-window Aug–Oct average from the same series as the monitor’s Chart 05): 1.92, 2.50, 1.87, 2.04, 1.17 — outcomes won, won, lost, lost, lost. Ridge-penalised logistic: P(win)=σ(−2.08+0.87·ICG). At the current ICG this gives ≈43%.</li>
-      <li><b>Polls Monte Carlo.</b> First-round intentions perturbed with Student-t(5) shocks scaled to the chosen uncertainty (2023 calibration: late-poll RMSE ≈3.3 pts first round, 3.8 runoff); runoff decided by the transfer rate (drawn with ±8 pts of its own noise). Win = first round (≥45%, or ≥40% with a 10-pt lead) or runoff &gt;50%. 20,000 draws per update.</li>
-      <li><b>Runoff transfer anchor.</b> Incumbent capture of the residual vote: 22.8% in 2023, 40.3% in 2015. A two-point ICG line suggests ≈45% at today’s ICG, but that extrapolates beyond anything observed, so the default is capped at the 40% maximum.</li>
-      <li><b>Blend.</b> P = w·P(polls) + (1−w)·P(fundamentals), default w = 0.55 at ~16 months out.</li>
-      <li><b>Monthly tracking.</b> <code>update_forecast.py</code> recomputes the default-settings forecast from the repo’s current data and appends it to <code>forecast_history.json</code>; run it with the monthly update and commit both.</li>
-    </ul>
-    <p style="margin-top:14px;color:#9097A0">A scenario tool with a memory, not a prediction machine. Built by Francisco Olivero; polling and market data on the <a href="index.html">main monitor</a>.</p>
-  </footer>
 </main>
 
 <script>
@@ -264,7 +204,6 @@
               t:+document.getElementById('t').value/100, s:+document.getElementById('s').value};
     }
 
-    var PROVISIONAL=null; // default-settings blend computed once at load, for the evolution chart
 
     function draw(){
       var v=vals();
@@ -295,94 +234,15 @@
          annotations:[{x:50,yref:'paper',y:1,yanchor:'bottom',text:'50% — runoff threshold',showarrow:false,font:{family:MONO,size:10,color:INK}},
                       {xref:'paper',yref:'paper',x:1,y:0,xanchor:'right',yanchor:'top',yshift:-46,showarrow:false,text:'Source: Francisco Olivero',font:{size:10,color:'#9CA1A9'}}]},CONFIG);
 
-      drawFund(v.icg);
-      drawSens(v);
       ledger(v);
     }
 
-    function drawFund(icgNow){
-      var xs=[],ys=[];
-      for(var x=0.8;x<=3.2001;x+=0.05){xs.push(+x.toFixed(2));ys.push(+(pfund(x)*100).toFixed(1));}
-      var won=FUND.elections.filter(function(e){return e.won;}), lost=FUND.elections.filter(function(e){return !e.won;});
-      Plotly.react('chart-fund',[
-        {type:'scatter',mode:'lines',x:xs,y:ys,line:{color:GREEN,width:2.6},hovertemplate:'ICG %{x} → P(win) %{y}%<extra></extra>'},
-        {type:'scatter',mode:'markers+text',x:won.map(function(e){return e.icg;}),y:won.map(function(){return 100;}),
-         text:won.map(function(e){return e.y;}),textposition:'top center',textfont:{family:MONO,size:10,color:GREEN},
-         marker:{size:11,color:GREEN,symbol:'circle',line:{color:'#fff',width:1.5}},hovertemplate:'%{text}: incumbent won (ICG %{x})<extra></extra>'},
-        {type:'scatter',mode:'markers+text',x:lost.map(function(e){return e.icg;}),y:lost.map(function(){return 0;}),
-         text:lost.map(function(e){return e.y;}),textposition:'bottom center',textfont:{family:MONO,size:10,color:'#C0473E'},
-         marker:{size:11,color:'#C0473E',symbol:'x',line:{width:2}},hovertemplate:'%{text}: incumbent lost (ICG %{x})<extra></extra>'}
-      ],{paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',showlegend:false,
-         margin:{l:52,r:16,t:20,b:64},font:{family:'Inter',size:11,color:INK},
-         xaxis:{title:{text:'Government ICG in the election window (UTDT)',font:{size:11,color:MUT}},range:[0.7,3.3],gridcolor:'#F2F0F8',linecolor:LINE},
-         yaxis:{title:{text:'P(incumbent coalition wins)',font:{size:11,color:MUT}},ticksuffix:'%',range:[-9,109],tickvals:[0,25,50,75,100],gridcolor:'#F2F0F8',linecolor:LINE},
-         shapes:[{type:'line',x0:icgNow,x1:icgNow,yref:'paper',y0:0,y1:1,line:{color:MILEI,width:2,dash:'dot'}}],
-         annotations:[{x:icgNow,yref:'paper',y:1,yanchor:'bottom',text:'ICG now '+icgNow.toFixed(2)+' → '+Math.round(pfund(icgNow)*100)+'%',showarrow:false,font:{family:MONO,size:10.5,color:MILEI}},
-                      {xref:'paper',yref:'paper',x:1,y:0,xanchor:'right',yanchor:'top',yshift:-60,showarrow:false,text:'Source: Francisco Olivero',font:{size:10,color:'#9CA1A9'}}]},CONFIG);
-    }
-
-    function drawSens(v){
-      var xs=[],ys=[];
-      var pf=pfund(v.icg);
-      for(var tt=20;tt<=65;tt+=2.5){var rr=sim(v.m,v.k,tt/100,v.s,4000);xs.push(tt);ys.push(Math.round((v.w*rr.p+(1-v.w)*pf)*100));}
-      Plotly.react('chart-sens',[
-        {type:'scatter',mode:'lines',x:xs,y:ys,line:{color:MILEI,width:3,shape:'spline'},hovertemplate:'transfer %{x}% → blended P %{y}%<extra></extra>'}
-      ],{paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',showlegend:false,
-         margin:{l:46,r:16,t:12,b:62},font:{family:'Inter',size:11,color:INK},
-         xaxis:{title:{text:'Runoff transfer to Milei (%)',font:{size:11,color:MUT}},ticksuffix:'%',gridcolor:'#F2F0F8',linecolor:LINE},
-         yaxis:{title:{text:'Blended P(Milei wins)',font:{size:11,color:MUT}},ticksuffix:'%',range:[0,100],gridcolor:'#F2F0F8',linecolor:LINE},
-         shapes:[
-           {type:'rect',x0:23,x1:40,yref:'paper',y0:0,y1:1,fillcolor:'rgba(46,125,84,0.07)',line:{width:0}},
-           {type:'line',x0:v.t*100,x1:v.t*100,yref:'paper',y0:0,y1:1,line:{color:SLATE,width:1.5,dash:'dot'}},
-           {type:'line',xref:'paper',x0:0,x1:1,y0:50,y1:50,line:{color:'#D7D8D3',width:1,dash:'dot'}}],
-         annotations:[{x:v.t*100,yref:'paper',y:1,yanchor:'bottom',text:'your setting',showarrow:false,font:{family:MONO,size:10,color:SLATE}},
-                      {x:31.5,yref:'paper',y:0.04,text:'observed incumbent range',showarrow:false,font:{family:MONO,size:9.5,color:GREEN}},
-                      {xref:'paper',yref:'paper',x:1,y:0,xanchor:'right',yanchor:'top',yshift:-58,showarrow:false,text:'Source: Francisco Olivero',font:{size:10,color:'#9CA1A9'}}]},CONFIG);
-    }
-
-    // ---- evolution: committed history + this month's provisional default point ----
-    function drawEvo(entries){
-      var traces=[], ann=[{xref:'paper',yref:'paper',x:1,y:0,xanchor:'right',yanchor:'top',yshift:-48,showarrow:false,text:'Source: Francisco Olivero',font:{size:10,color:'#9CA1A9'}}];
-      function line(key,color,name,dashed){
-        return {type:'scatter',mode:'lines+markers',name:name,
-          x:entries.map(function(e){return e.date;}), y:entries.map(function(e){return Math.round(e[key]*100);}),
-          line:{color:color,width:key==='p'?3:1.6,dash:dashed?'dash':'solid'},
-          marker:{size:key==='p'?9:6,color:color,line:{color:'#fff',width:1.2}},
-          hovertemplate:name+' %{y}% · %{x}<extra></extra>'};
-      }
-      if(entries.length){
-        traces.push(line('p_polls',BLUE,'Polls',true));
-        traces.push(line('p_fund',GREEN,'Fundamentals',true));
-        traces.push(line('p',MILEI,'Blended forecast',false));
-      }
-      if(PROVISIONAL){
-        traces.push({type:'scatter',mode:'markers',name:'This month (provisional)',
-          x:[PROVISIONAL.date],y:[Math.round(PROVISIONAL.p*100)],
-          marker:{size:12,color:'rgba(0,0,0,0)',symbol:'diamond',line:{color:MILEI,width:2}},
-          hovertemplate:'Provisional (live) %{y}% · %{x}<extra></extra>'});
-      }
-      var el=document.getElementById('ledger-evo');
-      el.innerHTML='<span class="chip">Committed points: <b>'+entries.length+'</b></span>'+
-        '<span class="chip">Update: run <b>update_forecast.py</b> monthly, commit forecast_history.json</span>'+
-        (PROVISIONAL?'<span class="chip">◇ provisional: <b>'+Math.round(PROVISIONAL.p*100)+'%</b> (defaults, live)</span>':'');
-      Plotly.react('chart-evo',traces,
-        {paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',
-         showlegend:true,legend:{orientation:'h',y:1.14,x:0,font:{size:11}},
-         margin:{l:46,r:18,t:26,b:52},font:{family:'Inter',size:11,color:INK},
-         xaxis:{type:'date',gridcolor:'#F2F0F8',linecolor:LINE,tickformat:'%b %Y'},
-         yaxis:{title:{text:'P(Milei wins)',font:{size:11,color:MUT}},ticksuffix:'%',range:[0,100],gridcolor:'#F2F0F8',linecolor:LINE},
-         shapes:[{type:'line',xref:'paper',x0:0,x1:1,y0:50,y1:50,line:{color:'#D7D8D3',width:1,dash:'dot'}}],
-         annotations:ann},CONFIG);
-    }
-
-    var MKT=53;
     function ledger(v){
       document.getElementById('ledger-f').innerHTML=
         '<span class="chip">P = '+Math.round(v.w*100)+'%·polls + '+Math.round((1-v.w)*100)+'%·fundamentals</span>'+
         '<span class="chip">20,000 draws · Student-t(5)</span>'+
         '<span class="chip">Calibration: <b>2023</b> poll miss</span>'+
         '<span class="chip">Fundamentals trained: <b>2003–2023</b></span>';
-      document.getElementById('mkt').textContent=Math.round(MKT)+'% Milei';
     }
 
     ['m','k','icg','w','t','s'].forEach(function(id){ document.getElementById(id).addEventListener('input',function(){ requestAnimationFrame(draw); }); });
@@ -392,29 +252,57 @@
       document.getElementById('t').value=DEF.t; document.getElementById('s').value=DEF.s; draw();
     });
 
-    // provisional default point (computed once, independent of slider play)
-    (function(){
-      var r=sim(DEF.m,DEF.k,DEF.t/100,DEF.s,20000);
-      var pf=pfund(DEF.icg);
-      var now=new Date(); var dt=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-01';
-      PROVISIONAL={date:dt, p:(DEF.w/100)*r.p+(1-DEF.w/100)*pf};
-    })();
+    function seedSliders(){ ['m','k','icg','w','t','s'].forEach(function(id){ document.getElementById(id).value=DEF[id]; }); }
+    function clampTo(id,val){ var el=document.getElementById(id); return Math.min(Math.max(val,+el.min),+el.max); }
 
-    draw();
+    draw();   // first paint from defaults; refined below once live data lands
 
-    var HISTENTRIES=[];
-    fetch('forecast_history.json',{cache:'no-store'}).then(function(r){ if(!r.ok) throw 0; return r.json(); })
-      .then(function(j){ HISTENTRIES=(j.entries||[]).slice().sort(function(a,b){return a.date<b.date?-1:1;});
-        if(PROVISIONAL && HISTENTRIES.some(function(e){return e.date.slice(0,7)===PROVISIONAL.date.slice(0,7);})) PROVISIONAL=null;
-        drawEvo(HISTENTRIES);
-      }).catch(function(){ drawEvo([]); });
+    // Pull the latest Milei ICG straight from Evolution_ICG.xlsx (same logic as update_forecast.py)
+    function loadXLSX(urls){ return new Promise(function(res,rej){ (function go(j){
+      if(window.XLSX) return res();
+      if(j>=urls.length) return rej();
+      var s=document.createElement('script'); s.src=urls[j]; s.async=true;
+      s.onload=function(){ window.XLSX?res():go(j+1); }; s.onerror=function(){ go(j+1); };
+      document.head.appendChild(s);
+    })(0); }); }
+    function latestICG(){
+      return loadXLSX(['https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js','https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js'])
+        .then(function(){ return fetch('Evolution_ICG.xlsx',{cache:'no-store'}); })
+        .then(function(r){ if(!r.ok) throw 0; return r.arrayBuffer(); })
+        .then(function(buf){
+          var wb=XLSX.read(buf,{type:'array'}); var ws=wb.Sheets['Evolutivo']||wb.Sheets[wb.SheetNames[0]];
+          var arr=XLSX.utils.sheet_to_json(ws,{header:1}); var cur=null,last=null;
+          for(var i=1;i<arr.length;i++){ var row=arr[i]||[]; if(row[0]) cur=row[0];
+            if(row[2]!=null && cur && String(cur).toLowerCase().indexOf('milei')>=0) last=+row[2]; }
+          return (last!=null && !isNaN(last))?last:null;
+        }).catch(function(){ return null; });
+    }
 
-    fetch('polymarket_history.json',{cache:'no-store'}).then(function(r){ if(!r.ok) throw 0; return r.json(); })
-      .then(function(j){
-        function last(name){ var c=(j.candidates||[]).find(function(c){return (c.name||'').toLowerCase().indexOf(name)>=0;}); return c&&c.points&&c.points.length?c.points[c.points.length-1][1]:null; }
-        var mi=last('milei'), ki=last('kicillof');
-        if(mi!=null&&ki!=null&&(mi+ki)>0){ MKT=mi/(mi+ki)*100; ledger(vals()); }
-      }).catch(function(){});
+    // Seed the headline and the provisional marker from the newest inputs: first-round polls from
+    // data.json (headToHead2026.avg, written daily by fetch_encuestar_firstround.py) and the live
+    // ICG. Falls back cleanly to the last committed point, then to the hard defaults, if anything
+    // is missing or offline. reset() returns to these live values, not the old 35/26/2.07.
+    Promise.all([
+      fetch('data.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;}),
+      fetch('forecast_history.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;}),
+      latestICG()
+    ]).then(function(res){
+      var dj=res[0], hj=res[1], icgLive=res[2];
+      var hist=((hj&&hj.entries)||[]).slice().sort(function(a,b){return a.date<b.date?-1:1;});
+      var last=hist.length?hist[hist.length-1]:null;
+      var avg=dj&&dj.headToHead2026&&dj.headToHead2026.avg;
+      var mLive=(avg&&avg.milei&&avg.milei.length)?avg.milei[avg.milei.length-1]:null;
+      var kLive=(avg&&avg.kicillof&&avg.kicillof.length)?avg.kicillof[avg.kicillof.length-1]:null;
+      if(mLive!=null) DEF.m=clampTo('m',mLive);
+      else if(last&&last.m!=null) DEF.m=clampTo('m',last.m);
+      if(kLive!=null) DEF.k=clampTo('k',kLive);
+      else if(last&&last.k!=null) DEF.k=clampTo('k',last.k);
+      var icg=(icgLive!=null)?icgLive:(last&&last.icg!=null?last.icg:DEF.icg);
+      DEF.icg=clampTo('icg',icg);
+      DEF.t=Math.round(Math.min(Math.max(TAU.a+TAU.b*DEF.icg,TAU.lo),TAU.hi)*100);
+      seedSliders(); draw();
+    }).catch(function(){});
+
   }
 })();
 </script>
