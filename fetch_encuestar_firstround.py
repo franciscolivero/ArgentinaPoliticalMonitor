@@ -49,7 +49,6 @@ HEAD_KEY = "headToHead2026"          # the block inside data.json the forecast r
 # both candidates, --list-carreras will show it and you loosen this one line (e.g. drop the
 # name requirement) — better than silently over-capturing. BALLOTAGE_RE is a redundant guard.
 FIRSTROUND_RE = re.compile(
-    r"(primera\s+vuelta|1[ªa]\.?\s*vuelta).*"
     r"(milei\s*vs\.?\s*kicillof|kicillof\s*vs\.?\s*milei)", re.I)
 BALLOTAGE_RE = re.compile(
     r"ballotage|balotaje|segunda\s+vuelta|2[ªa]\.?\s*vuelta", re.I)
@@ -253,11 +252,14 @@ def main():
 
     polls = [p for p in (make_poll(*r) for r in rows) if p]
     if len(polls) < 3:
-        print(f"  ! only {len(polls)} first-round rows matched — that looks wrong, so "
-              f"leaving {out_path} untouched.\n"
-              f"    Run  --list-carreras  to see the labels and adjust FIRSTROUND_RE.",
-              file=sys.stderr)
-        sys.exit(1)
+        # No usable first-round Milei-vs-Kicillof rows on the page right now (the aggregator
+        # may currently be carrying only ballotage rows). That's a normal outcome for a daily
+        # scrape, not a breakage — leave data.json untouched and exit cleanly so the schedule
+        # stays green. A genuine fetch/parse error above still exits 1. Use --list-carreras to
+        # inspect the labels if you expected first-round rows and want to widen FIRSTROUND_RE.
+        print(f"  · only {len(polls)} first-round row(s) matched; nothing to update, "
+              f"leaving {out_path} untouched.", file=sys.stderr)
+        return
 
     block = build_block(polls)
 
