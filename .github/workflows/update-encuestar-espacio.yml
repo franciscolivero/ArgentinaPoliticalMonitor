@@ -1,0 +1,43 @@
+name: Update national vote-by-space polls
+
+# Scrapes EncuestAR's national vote-by-space race and commits espacio_history.json, which the
+# dashboard reads for Chart 02 (by space) and Chart 03 (LLA+PRO alliance). Runs daily, staggered
+# a few minutes after the other encuestar scrapes so the pushes never race.
+
+on:
+  schedule:
+    - cron: "47 8 * * *"     # daily, 08:47 UTC (~05:47 Argentina)
+  workflow_dispatch:           # also runnable manually from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4 lxml numpy
+
+      - name: Scrape vote-by-space into espacio_history.json
+        run: python fetch_encuestar_espacio.py
+
+      - name: Commit espacio_history.json (if changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain espacio_history.json)" ]; then
+            git add espacio_history.json
+            git commit -m "Refresh national vote-by-space polls ($(date -u +%Y-%m-%d))"
+            git push
+          else
+            echo "No change in espacio_history.json"
+          fi
