@@ -28,7 +28,9 @@ OUT = "encuestas_history.json"
 # Which race to keep. The row's "Carrera" cell must match this (case-insensitive).
 # Kept deliberately tight to one methodology so the dots stay comparable. Widen if needed,
 # e.g. RACE_RE = re.compile(r"milei\s*vs\.?\s*kicillof", re.I) to also pull "escenario" rows.
-RACE_RE = re.compile(r"ballotage.*milei.*kicillof|ballotage.*kicillof.*milei", re.I)
+RACE_RE = re.compile(
+    r"(?=.*(?:ballotage|balotaje|segunda\s+vuelta|2[ªaº°]?\.?\s*(?:da)?\s*vuelta))"
+    r"(?=.*milei)(?=.*kicillof)", re.I | re.S)
 
 MILEI_RE = re.compile(r"Javier\s+Milei\s+(\d+(?:[.,]\d+)?)", re.I)
 KICI_RE  = re.compile(r"Axel\s+Kicillof\s+(\d+(?:[.,]\d+)?)", re.I)
