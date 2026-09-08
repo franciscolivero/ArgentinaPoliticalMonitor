@@ -106,6 +106,7 @@
 <nav class="tabs">
   <div class="tabs-inner" id="tabs">
     <a href="#h2h">Milei vs Kicillof</a>
+    <a href="#espacio">Vote by space</a>
     <a href="#icg">Confidence index (ICG)</a>
     <a href="#by-president">ICG by president</a>
     <a href="#market">Prediction market</a>
@@ -135,11 +136,47 @@
     </div>
   </section>
 
-  <!-- 2. ICG -->
+  <!-- 2. NATIONAL VOTE BY SPACE -->
+  <section id="espacio">
+    <div class="card">
+      <div class="card-head">
+        <div class="eyebrow">Chart 02 · National vote by space</div>
+        <h2>National vote intention by political space</h2>
+        <p class="sub">First-round vote intention for the 2027 legislative race, grouped by political space rather than by candidate — the read the head-to-head above can&rsquo;t give you. Each faint dot is one firm&rsquo;s poll placed on its fieldwork-end date; the bold line is a kernel-smoothed poll-average. Undecided (&ldquo;sin definir&rdquo;) is shown for context; the residual &ldquo;resto&rdquo; is omitted.</p>
+      </div>
+      <div class="legend-inline">
+        <span><span class="swatch" style="background:var(--milei)"></span>La Libertad Avanza</span>
+        <span><span class="swatch" style="background:var(--kicillof)"></span>Peronismo</span>
+        <span><span class="swatch" style="background:var(--macri)"></span>PRO</span>
+        <span><span class="swatch" style="background:var(--red)"></span>Izquierda</span>
+        <span><span class="swatch" style="background:#9097A0"></span>Sin definir</span>
+      </div>
+      <div class="chart"><div id="chart-espacio" style="height:440px"></div></div>
+      <div class="ledger" id="ledger-espacio"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="eyebrow">Chart 03 · Right-bloc alliance</div>
+        <h2>If La Libertad Avanza and the PRO ran together</h2>
+        <p class="sub">The same series with LLA and the PRO merged into a single right-bloc line, set against Peronismo. The alliance line is a day-by-day <i>sum</i> of the two separate averages, not a measured coalition ticket: when two forces combine the vote does not transfer whole, so read it as a ceiling. Undecided shown for context.</p>
+      </div>
+      <div class="legend-inline">
+        <span><span class="swatch" style="background:var(--milei)"></span>Alianza LLA+PRO (sum)</span>
+        <span><span class="swatch" style="background:var(--kicillof)"></span>Peronismo</span>
+        <span><span class="swatch" style="background:var(--red)"></span>Izquierda</span>
+        <span><span class="swatch" style="background:#9097A0"></span>Sin definir</span>
+      </div>
+      <div class="chart"><div id="chart-alianza" style="height:440px"></div></div>
+      <div class="ledger" id="ledger-alianza"></div>
+    </div>
+  </section>
+
+  <!-- 3. ICG -->
   <section id="icg">
     <div class="card">
       <div class="card-head">
-        <div class="eyebrow">Chart 02 · UTDT confidence index</div>
+        <div class="eyebrow">Chart 04 · UTDT confidence index</div>
         <h2>Índice de Confianza en el Gobierno (ICG)</h2>
         <p class="sub">The monthly government-confidence index from Universidad Torcuato Di Tella, on a 0–5 scale. </p>
       </div>
@@ -155,7 +192,7 @@
   <section id="by-president">
     <div class="card">
       <div class="card-head">
-        <div class="eyebrow">Chart 03 · Cross-administration</div>
+        <div class="eyebrow">Chart 05 · Cross-administration</div>
         <h2>Confidence in Government Index by president</h2>
         <p class="sub">The same Di Tella ICG, re-indexed by months in office, so each president is compared at the equivalent stage of their term. The series is capped at Milei’s latest month for a like-for-like read. </p>
       </div>
@@ -165,7 +202,7 @@
 
     <div class="card">
       <div class="card-head">
-        <div class="eyebrow">Chart 04 · Vote-intention proxy</div>
+        <div class="eyebrow">Chart 06 · Vote-intention proxy</div>
         <h2>Implied vote intention by president (ICG × 20)</h2>
         <p class="sub">A back-of-the-envelope read of the same Di Tella ICG as vote intention: the 0–5 confidence score is rescaled to a 0–100 point (ICG × 20) and re-indexed by months in office, so each presidency’s implied support can be compared at the equivalent stage of its term. The dotted line marks the 50% majority threshold. This is a mechanical transformation of the confidence index, not a poll.</p>
       </div>
@@ -178,7 +215,7 @@
   <section id="market">
     <div class="card">
       <div class="card-head">
-        <div class="eyebrow">Chart 05 · Prediction market</div>
+        <div class="eyebrow">Chart 07 · Prediction market</div>
         <h2>Polymarket — election winner odds</h2>
         <p class="sub">How the market-implied probability of winning the 2027 presidential election has evolved for the leading candidates, from the Polymarket “Argentina Presidential Election Winner” market. Each candidate’s daily price history is read as a probability (a 48¢ share = a 48% implied chance). This loads live from Polymarket on every visit; if the history feed is unreachable it falls back to the latest snapshot.</p>
       </div>
@@ -192,6 +229,7 @@
     <h3>Sources &amp; methodology</h3>
     <ul>
       <li><b>EncuestAR — poll aggregator.</b> The Milei–Kicillof runoff chart (Chart 01) is refreshed daily from <a href="https://encuestar.netlify.app/encuestas/" target="_blank" rel="noopener">EncuestAR</a>, which relays and dates head-to-head <i>ballotage</i> polls published by third-party firms (Tendencias, CB, Trends, Opinaia, RDT, Proyección, Isasi-Burdman, Explanans and others). Each poll belongs to the firm that ran it; the aggregation is EncuestAR's, reused with attribution. Only complete-ficha ballotage polls enter the smoothed average; polls the aggregator flags as incomplete are shown as dots but held out of the line.</li>
+      <li><b>EncuestAR — national vote by space.</b> Charts 02–03 are refreshed daily from EncuestAR's <a href="https://encuestar.netlify.app/carrera/voto-nacional-espacio/" target="_blank" rel="noopener">vote-by-space race</a>, which normalises each firm's poll into seven political spaces. The dots are individual polls on their fieldwork-end date; the lines are our kernel-smoothed averages. The "Alianza LLA+PRO" line is EncuestAR's day-by-day sum of the LLA and PRO averages — a sum, not a measured coalition — so it reads as a ceiling.</li>
       <li><b>ICG — Universidad Torcuato Di Tella.</b> Monthly Índice de Confianza en el Gobierno (0–5), fieldwork by Poliarquía. <a href="https://www.utdt.edu//ver_contenido.php?id_contenido=1439&id_item_menu=2964" target="_blank" rel="noopener">monthly reports</a></li>
       <li><b>Polymarket — Argentina Presidential Election Winner.</b> Live market-implied probabilities via the public Polymarket Gamma API. Prediction-market prices are money-weighted trader expectations, not survey estimates, and this market is relatively thin (low six-figure volume), so treat moves with caution.</li>
     </ul>
@@ -204,6 +242,7 @@
       <li>Run <code>python update_data.py</code>. It re-fetches the Di Tella ICG page automatically, rewrites <code>data.json</code>, and re-embeds the data block in this HTML between the <code>DATA_START / DATA_END</code> markers.</li>
       <li>Or edit the <code>data.json</code> arrays by hand and re-run the embed step. Each new point only needs a date, value and firm.</li>
       <li>The Milei–Kicillof runoff chart (Chart 01) updates on its own: <code>fetch_encuestar.py</code> runs daily via GitHub Actions, scrapes the EncuestAR ballotage rows, and commits <code>encuestas_history.json</code>, which the page reads on load. Run it by hand anytime with <code>python fetch_encuestar.py</code>. The embedded <code>headToHead2026</code> block is only an offline fallback.</li>
+      <li>The vote-by-space charts (Charts 02–03) update the same way: <code>fetch_encuestar_espacio.py</code> runs daily via GitHub Actions and commits <code>espacio_history.json</code>, which the page reads on load. Run it by hand with <code>python fetch_encuestar_espacio.py</code> (or <code>--list-espacios</code> to inspect what it parsed). The embedded <code>espaciodata</code> block is only an offline fallback.</li>
       <li>For the by-president chart, just drop the new <code>Evolution_ICG.xlsx</code> into the repository root each month — the page reads it on load, no rebuild needed. The embedded copy here is a fallback for offline viewing.</li>
     </ul>
     <p style="margin-top:18px;color:#9097A0">Built as a single-page monitor · charts by Plotly · figures are point estimates with sampling error; treat moves inside a few points as noise.</p>
@@ -228,6 +267,12 @@
 /* ICGPRES_START */
 {"updated": "2026-09-08", "presidents": ["Nestor Kirchner", "Cristina Fernandez de Kirchner I", "Cristina Fernandez de Kirchner II", "Mauricio Macri", "Alberto Fernandez", "Javier Milei"], "series": {"Nestor Kirchner": [[1, 1.219], [2, 3.142], [3, 3.263], [4, 3.195], [5, 2.873], [6, 2.921], [7, 2.785], [8, 2.653], [9, 2.985], [10, 3.316], [11, 3.142], [12, 2.678], [13, 2.635], [14, 2.685], [15, 2.488], [16, 2.071], [17, 2.131], [18, 2.267], [19, 2.46], [20, 2.429], [21, 2.351], [22, 2.387], [23, 2.8], [24, 2.489], [25, 2.371], [26, 2.311], [27, 2.07], [28, 2.42], [29, 2.114], [30, 2.192], [31, 2.422], [32, 2.261], [33, 2.632], [34, 2.622], [35, 2.702], [36, 2.537], [37, 2.496], [38, 2.691], [39, 2.534], [40, 2.412], [41, 2.481], [42, 2.544], [43, 2.438], [44, 2.334], [45, 2.688], [46, 2.584], [47, 2.594], [48, 2.143], [49, 2.229], [50, 2.075], [51, 1.999], [52, 1.864], [53, 1.89], [54, 1.678], [55, 1.981]], "Cristina Fernandez de Kirchner I": [[1, 2.044], [2, 2.369], [3, 1.977], [4, 1.861], [5, 1.74], [6, 1.334], [7, 1.208], [8, 1.269], [9, 1.395], [10, 1.442], [11, 1.379], [12, 1.428], [13, 1.368], [14, 1.505], [15, 1.375], [16, 1.358], [17, 1.354], [18, 1.322], [19, 1.34], [20, 1.235], [21, 1.111], [22, 1.224], [23, 1.146], [24, 1.159], [25, 1.044], [26, 1.259], [27, 1.187], [28, 1.337], [29, 1.39], [30, 1.592], [31, 1.61], [32, 1.687], [33, 1.796], [34, 1.771], [35, 1.704], [36, 2.422], [37, 2.336], [38, 2.164], [39, 2.179], [40, 2.424], [41, 2.186], [42, 2.339], [43, 2.294], [44, 2.478], [45, 2.246], [46, 2.641], [47, 2.621], [48, 2.622]], "Cristina Fernandez de Kirchner II": [[1, 2.71], [2, 2.749], [3, 2.558], [4, 2.256], [5, 1.904], [6, 2.142], [7, 1.985], [8, 1.843], [9, 1.804], [10, 1.688], [11, 1.669], [12, 1.687], [13, 1.839], [14, 1.762], [15, 1.831], [16, 1.914], [17, 1.759], [18, 1.42], [19, 1.744], [20, 1.679], [21, 1.869], [22, 1.772], [23, 1.976], [24, 1.847], [25, 1.681], [26, 1.462], [27, 1.385], [28, 1.526], [29, 1.402], [30, 1.512], [31, 1.7], [32, 1.872], [33, 1.821], [34, 1.706], [35, 1.647], [36, 1.603], [37, 1.636], [38, 1.826], [39, 1.653], [40, 1.864], [41, 1.896], [42, 2.091], [43, 1.937], [44, 2.037], [45, 1.917], [46, 1.778], [47, 1.909], [48, 1.749]], "Mauricio Macri": [[1, 1.797], [2, 3.138], [3, 2.862], [4, 3.033], [5, 2.72], [6, 2.622], [7, 2.613], [8, 2.707], [9, 2.521], [10, 2.53], [11, 2.632], [12, 2.516], [13, 2.494], [14, 2.461], [15, 2.35], [16, 2.317], [17, 2.611], [18, 2.517], [19, 2.278], [20, 2.235], [21, 2.532], [22, 2.855], [23, 2.828], [24, 2.967], [25, 2.363], [26, 2.278], [27, 2.32], [28, 2.322], [29, 2.065], [30, 1.938], [31, 2.042], [32, 2.014], [33, 1.944], [34, 1.749], [35, 1.763], [36, 1.767], [37, 1.92], [38, 1.63], [39, 1.79], [40, 1.6], [41, 1.529], [42, 1.614], [43, 1.857], [44, 1.97], [45, 2.201], [46, 1.91], [47, 2.009], [48, 1.977]], "Alberto Fernandez": [[1, 1.967], [2, 2.323], [3, 2.27], [4, 2.218], [5, 3.287], [6, 3.002], [7, 2.77], [8, 2.53], [9, 2.378], [10, 2.266], [11, 1.992], [12, 2.019], [13, 1.854], [14, 1.875], [15, 1.817], [16, 1.784], [17, 1.733], [18, 1.932], [19, 1.703], [20, 1.698], [21, 1.852], [22, 1.579], [23, 1.524], [24, 1.454], [25, 1.423], [26, 1.544], [27, 1.494], [28, 1.508], [29, 1.436], [30, 1.303], [31, 1.402], [32, 1.117], [33, 1.183], [34, 1.231], [35, 1.282], [36, 1.19], [37, 1.251], [38, 1.274], [39, 1.171], [40, 1.178], [41, 1.071], [42, 1.132], [43, 1.12], [44, 1.199], [45, 1.266], [46, 1.032], [47, 1.223], [48, 1.414]], "Javier Milei": [[1, 2.858], [2, 2.61], [3, 2.572], [4, 2.561], [5, 2.449], [6, 2.514], [7, 2.462], [8, 2.372], [9, 2.537], [10, 2.161], [11, 2.425], [12, 2.664], [13, 2.655], [14, 2.605], [15, 2.558], [16, 2.42], [17, 2.331], [18, 2.448], [19, 2.336], [20, 2.451], [21, 2.118], [22, 1.944], [23, 2.101], [24, 2.468], [25, 2.465], [26, 2.397], [27, 2.383], [28, 2.301], [29, 2.023], [30, 1.99], [31, 2.07], [32, 1.94], [33, 2.059]]}, "mileiKey": "Javier Milei"}
 /* ICGPRES_END */
+</script>
+
+<script id="espaciodata" type="application/json">
+/* ESPACIO_START */
+{"updated":"2026-09-08T19:54:33.935135Z","source":"https://encuestar.netlify.app/carrera/voto-nacional-espacio/","race":"Intención de voto nacional por espacio","attribution":"EncuestAR — promedio de encuestas de terceros, con atribución","order":["La Libertad Avanza","Peronismo","PRO","Izquierda","Sin definir","Resto","Alianza LLA+PRO"],"headline":{"Alianza LLA+PRO":37.3,"La Libertad Avanza":32.6,"Peronismo":31.4,"Sin definir":18.4,"Resto":6.8,"Izquierda":6.2,"PRO":4.7},"spaces":{"La Libertad Avanza":{"polls":[{"date":"2026-04-30","firm":"Ventana del 30 jul 2026 al 29 ago 2026 · 30 días · mínimo 3 encuestas ## Evolución QSocial","value":28.0},{"date":"2026-05-01","firm":"Zuban Córdoba","value":22.1},{"date":"2026-05-05","firm":"Opinargentina","value":35.0},{"date":"2026-05-10","firm":"Proyección Consultores","value":32.3},{"date":"2026-05-15","firm":"Synopsis","value":30.3},{"date":"2026-05-20","firm":"Equipo Mide","value":29.0},{"date":"2026-05-25","firm":"Isasi-Burdman","value":40.0},{"date":"2026-05-28","firm":"QSocial","value":26.0},{"date":"2026-06-05","firm":"ESPOP (UdeSA)","value":24.0},{"date":"2026-06-18","firm":"Trends","value":33.0},{"date":"2026-06-25","firm":"Isasi-Burdman","value":40.0},{"date":"2026-06-26","firm":"Equipo Mide","value":31.0},{"date":"2026-06-30","firm":"D'Alessio IROL y Berensztein","value":26.0},{"date":"2026-07-08","firm":"ESPOP (UdeSA)","value":24.0},{"date":"2026-07-10","firm":"Proyección Consultores","value":34.8},{"date":"2026-07-12","firm":"Synopsis","value":33.9},{"date":"2026-07-25","firm":"Isasi-Burdman","value":35.0},{"date":"2026-07-26","firm":"DC Consultores","value":41.3},{"date":"2026-07-26","firm":"Rubikon Intel","value":29.3},{"date":"2026-07-26","firm":"Zuban Córdoba","value":28.0},{"date":"2026-07-28","firm":"Trends","value":32.0},{"date":"2026-07-31","firm":"Observatorio de Psicología Social Aplicada (UBA)","value":34.0},{"date":"2026-08-11","firm":"ESPOP (UdeSA)","value":24.0},{"date":"2026-08-12","firm":"Proyección Consultores","value":32.5},{"date":"2026-08-17","firm":"Aresco","value":29.8},{"date":"2026-08-29","firm":"Isasi-Burdman","value":40.0}],"avg":{"dates":["2026-04-30","2026-05-07","2026-05-14","2026-05-21","2026-05-28","2026-06-04","2026-06-11","2026-06-18","2026-06-25","2026-07-02","2026-07-09","2026-07-16","2026-07-23","2026-07-30","2026-08-06","2026-08-13","2026-08-20","2026-08-27","2026-08-29"],"values":[29.7,30.0,30.3,30.5,30.5,30.7,30.9,31.2,31.5,31.7,31.9,32.0,32.1,32.1,32.0,31.9,32.1,32.7,32.9]}},"Peronismo":{"polls":[{"date":"2026-04-30","firm":"QSocial","value":23.0},{"date":"2026-05-01","firm":"Zuban Córdoba","value":28.4},{"date":"2026-05-05","firm":"Opinargentina","value":34.0},{"date":"2026-05-10","firm":"Proyección Consultores","value":36.0},{"date":"2026-05-15","firm":"Synopsis","value":32.9},{"date":"2026-05-20","firm":"Equipo Mide","value":14.0},{"date":"2026-05-25","firm":"Isasi-Burdman","value":24.0},{"date":"2026-05-28","firm":"QSocial","value":23.0},{"date":"2026-06-05","firm":"ESPOP (UdeSA)","value":25.0},{"date":"2026-06-18","firm":"Trends","value":30.0},{"date":"2026-06-25","firm":"Isasi-Burdman","value":23.0},{"date":"2026-06-26","firm":"Equipo Mide","value":15.0},{"date":"2026-06-30","firm":"D'Alessio IROL y Berensztein","value":32.0},{"date":"2026-07-08","firm":"ESPOP (UdeSA)","value":25.0},{"date":"2026-07-10","firm":"Proyección Consultores","value":33.7},{"date":"2026-07-12","firm":"Synopsis","value":33.9},{"date":"2026-07-25","firm":"Isasi-Burdman","value":23.0},{"date":"2026-07-26","firm":"DC Consultores","value":24.1},{"date":"2026-07-26","firm":"Rubikon Intel","value":26.2},{"date":"2026-07-26","firm":"Zuban Córdoba","value":31.3},{"date":"2026-07-28","firm":"Trends","value":30.0},{"date":"2026-07-31","firm":"Observatorio de Psicología Social Aplicada (UBA)","value":36.0},{"date":"2026-08-11","firm":"ESPOP (UdeSA)","value":26.0},{"date":"2026-08-12","firm":"Proyección Consultores","value":36.6},{"date":"2026-08-29","firm":"Isasi-Burdman","value":27.0}],"avg":{"dates":["2026-04-30","2026-05-07","2026-05-14","2026-05-21","2026-05-28","2026-06-04","2026-06-11","2026-06-18","2026-06-25","2026-07-02","2026-07-09","2026-07-16","2026-07-23","2026-07-30","2026-08-06","2026-08-13","2026-08-20","2026-08-27","2026-08-29"],"values":[28.4,27.9,27.1,26.2,25.5,25.1,25.2,25.7,26.5,27.3,28.0,28.5,28.9,29.2,29.4,29.6,29.7,29.5,29.4]}},"PRO":{"polls":[{"date":"2026-04-30","firm":"QSocial","value":6.0},{"date":"2026-05-01","firm":"Zuban Córdoba","value":5.4},{"date":"2026-05-10","firm":"Proyección Consultores","value":6.7},{"date":"2026-05-15","firm":"Synopsis","value":7.8},{"date":"2026-05-20","firm":"Equipo Mide","value":8.0},{"date":"2026-05-28","firm":"QSocial","value":7.0},{"date":"2026-06-05","firm":"ESPOP (UdeSA)","value":5.0},{"date":"2026-06-18","firm":"Trends","value":10.0},{"date":"2026-06-26","firm":"Equipo Mide","value":4.0},{"date":"2026-06-30","firm":"D'Alessio IROL y Berensztein","value":18.0},{"date":"2026-07-08","firm":"ESPOP (UdeSA)","value":4.0},{"date":"2026-07-10","firm":"Proyección Consultores","value":7.4},{"date":"2026-07-12","firm":"Synopsis","value":10.1},{"date":"2026-07-25","firm":"Isasi-Burdman","value":10.0},{"date":"2026-07-26","firm":"Rubikon Intel","value":7.9},{"date":"2026-07-26","firm":"Zuban Córdoba","value":6.8},{"date":"2026-07-28","firm":"Trends","value":9.0},{"date":"2026-07-31","firm":"Observatorio de Psicología Social Aplicada (UBA)","value":7.0},{"date":"2026-08-11","firm":"ESPOP (UdeSA)","value":5.0},{"date":"2026-08-12","firm":"Proyección Consultores","value":6.6}],"avg":{"dates":["2026-04-30","2026-05-07","2026-05-14","2026-05-21","2026-05-28","2026-06-04","2026-06-11","2026-06-18","2026-06-25","2026-07-02","2026-07-09","2026-07-16","2026-07-23","2026-07-30","2026-08-06","2026-08-12"],"values":[6.5,6.7,6.8,7.0,7.2,7.5,7.9,8.4,8.6,8.6,8.5,8.2,8.0,7.8,7.5,7.3]}},"Izquierda":{"polls":[{"date":"2026-04-30","firm":"QSocial","value":6.0},{"date":"2026-05-01","firm":"Zuban Córdoba","value":5.1},{"date":"2026-05-05","firm":"Opinargentina","value":9.0},{"date":"2026-05-10","firm":"Proyección Consultores","value":5.6},{"date":"2026-05-15","firm":"Synopsis","value":9.6},{"date":"2026-05-20","firm":"Equipo Mide","value":11.0},{"date":"2026-05-25","firm":"Isasi-Burdman","value":9.0},{"date":"2026-05-28","firm":"QSocial","value":5.0},{"date":"2026-06-05","firm":"ESPOP (UdeSA)","value":5.0},{"date":"2026-06-18","firm":"Trends","value":9.0},{"date":"2026-06-25","firm":"Isasi-Burdman","value":9.0},{"date":"2026-06-26","firm":"Equipo Mide","value":7.0},{"date":"2026-06-30","firm":"D'Alessio IROL y Berensztein","value":5.0},{"date":"2026-07-08","firm":"ESPOP (UdeSA)","value":4.0},{"date":"2026-07-10","firm":"Proyección Consultores","value":4.3},{"date":"2026-07-12","firm":"Synopsis","value":5.9},{"date":"2026-07-25","firm":"Isasi-Burdman","value":4.0},{"date":"2026-07-26","firm":"DC Consultores","value":4.9},{"date":"2026-07-26","firm":"Rubikon Intel","value":6.8},{"date":"2026-07-26","firm":"Zuban Córdoba","value":4.4},{"date":"2026-07-28","firm":"Trends","value":10.0},{"date":"2026-07-31","firm":"Observatorio de Psicología Social Aplicada (UBA)","value":9.0},{"date":"2026-08-11","firm":"ESPOP (UdeSA)","value":5.0},{"date":"2026-08-12","firm":"Proyección Consultores","value":2.7},{"date":"2026-08-17","firm":"Aresco","value":8.0},{"date":"2026-08-29","firm":"Isasi-Burdman","value":8.0}],"avg":{"dates":["2026-04-30","2026-05-07","2026-05-14","2026-05-21","2026-05-28","2026-06-04","2026-06-11","2026-06-18","2026-06-25","2026-07-02","2026-07-09","2026-07-16","2026-07-23","2026-07-30","2026-08-06","2026-08-13","2026-08-20","2026-08-27","2026-08-29"],"values":[7.3,7.5,7.6,7.6,7.5,7.4,7.1,6.8,6.5,6.2,6.0,5.9,6.0,6.0,6.1,6.2,6.3,6.4,6.5]}},"Sin definir":{"polls":[{"date":"2026-04-30","firm":"QSocial","value":15.0},{"date":"2026-05-01","firm":"Zuban Córdoba","value":27.2},{"date":"2026-05-05","firm":"Opinargentina","value":7.0},{"date":"2026-05-10","firm":"Proyección Consultores","value":16.5},{"date":"2026-05-15","firm":"Synopsis","value":9.3},{"date":"2026-05-20","firm":"Equipo Mide","value":12.0},{"date":"2026-05-25","firm":"Isasi-Burdman","value":19.0},{"date":"2026-05-28","firm":"QSocial","value":22.0},{"date":"2026-06-05","firm":"ESPOP (UdeSA)","value":32.0},{"date":"2026-06-18","firm":"Trends","value":9.0},{"date":"2026-06-25","firm":"Isasi-Burdman","value":17.0},{"date":"2026-06-26","firm":"Equipo Mide","value":21.0},{"date":"2026-06-30","firm":"D'Alessio IROL y Berensztein","value":7.0},{"date":"2026-07-08","firm":"ESPOP (UdeSA)","value":34.0},{"date":"2026-07-10","firm":"Proyección Consultores","value":17.7},{"date":"2026-07-12","firm":"Synopsis","value":6.5},{"date":"2026-07-25","firm":"Isasi-Burdman","value":17.0},{"date":"2026-07-26","firm":"DC Consultores","value":12.6},{"date":"2026-07-26","firm":"Rubikon Intel","value":27.5},{"date":"2026-07-26","firm":"Zuban Córdoba","value":17.3},{"date":"2026-07-28","firm":"Trends","value":9.0},{"date":"2026-07-31","firm":"Observatorio de Psicología Social Aplicada (UBA)","value":8.0},{"date":"2026-08-11","firm":"ESPOP (UdeSA)","value":31.0},{"date":"2026-08-12","firm":"Proyección Consultores","value":17.4},{"date":"2026-08-17","firm":"Aresco","value":12.6},{"date":"2026-08-29","firm":"Isasi-Burdman","value":17.0}],"avg":{"dates":["2026-04-30","2026-05-07","2026-05-14","2026-05-21","2026-05-28","2026-06-04","2026-06-11","2026-06-18","2026-06-25","2026-07-02","2026-07-09","2026-07-16","2026-07-23","2026-07-30","2026-08-06","2026-08-13","2026-08-20","2026-08-27","2026-08-29"],"values":[15.9,15.9,16.3,16.9,17.7,18.2,18.1,17.6,17.1,16.9,16.8,16.7,16.7,16.8,17.0,17.3,17.5,17.6,17.6]}},"Resto":{"polls":[{"date":"2026-04-30","firm":"QSocial","value":22.0},{"date":"2026-05-01","firm":"Zuban Córdoba","value":11.8},{"date":"2026-05-05","firm":"Opinargentina","value":14.0},{"date":"2026-05-10","firm":"Proyección Consultores","value":2.9},{"date":"2026-05-15","firm":"Synopsis","value":10.0},{"date":"2026-05-20","firm":"Equipo Mide","value":26.0},{"date":"2026-05-25","firm":"Isasi-Burdman","value":8.0},{"date":"2026-05-28","firm":"QSocial","value":18.0},{"date":"2026-06-05","firm":"ESPOP (UdeSA)","value":9.0},{"date":"2026-06-18","firm":"Trends","value":9.0},{"date":"2026-06-25","firm":"Isasi-Burdman","value":11.0},{"date":"2026-06-26","firm":"Equipo Mide","value":22.0},{"date":"2026-06-30","firm":"D'Alessio IROL y Berensztein","value":12.0},{"date":"2026-07-08","firm":"ESPOP (UdeSA)","value":9.0},{"date":"2026-07-10","firm":"Proyección Consultores","value":2.1},{"date":"2026-07-12","firm":"Synopsis","value":9.8},{"date":"2026-07-25","firm":"Isasi-Burdman","value":11.0},{"date":"2026-07-26","firm":"DC Consultores","value":17.0},{"date":"2026-07-26","firm":"Rubikon Intel","value":2.4},{"date":"2026-07-26","firm":"Zuban Córdoba","value":12.2},{"date":"2026-07-28","firm":"Trends","value":10.0},{"date":"2026-07-31","firm":"Observatorio de Psicología Social Aplicada (UBA)","value":6.0},{"date":"2026-08-11","firm":"ESPOP (UdeSA)","value":9.0},{"date":"2026-08-12","firm":"Proyección Consultores","value":4.2},{"date":"2026-08-17","firm":"Aresco","value":49.6},{"date":"2026-08-29","firm":"Isasi-Burdman","value":8.0}],"avg":{"dates":["2026-04-30","2026-05-07","2026-05-14","2026-05-21","2026-05-28","2026-06-04","2026-06-11","2026-06-18","2026-06-25","2026-07-02","2026-07-09","2026-07-16","2026-07-23","2026-07-30","2026-08-06","2026-08-13","2026-08-20","2026-08-27","2026-08-29"],"values":[13.7,13.5,13.4,13.4,13.2,12.9,12.5,11.9,11.4,10.8,10.3,10.2,10.5,11.2,12.4,13.8,15.3,16.3,16.5]}},"Alianza LLA+PRO":{"polls":[{"date":"2026-04-30","firm":"QSocial","value":34.0},{"date":"2026-05-01","firm":"Zuban Córdoba","value":27.5},{"date":"2026-05-10","firm":"Proyección Consultores","value":39.0},{"date":"2026-05-15","firm":"Synopsis","value":38.1},{"date":"2026-05-20","firm":"Equipo Mide","value":37.0},{"date":"2026-05-28","firm":"QSocial","value":33.0},{"date":"2026-06-05","firm":"ESPOP (UdeSA)","value":29.0},{"date":"2026-06-18","firm":"Trends","value":43.0},{"date":"2026-06-26","firm":"Equipo Mide","value":35.0},{"date":"2026-06-30","firm":"D'Alessio IROL y Berensztein","value":44.0},{"date":"2026-07-08","firm":"ESPOP (UdeSA)","value":28.0},{"date":"2026-07-10","firm":"Proyección Consultores","value":42.2},{"date":"2026-07-12","firm":"Synopsis","value":44.0},{"date":"2026-07-25","firm":"Isasi-Burdman","value":45.0},{"date":"2026-07-26","firm":"Rubikon Intel","value":37.2},{"date":"2026-07-26","firm":"Zuban Córdoba","value":34.8},{"date":"2026-07-28","firm":"Trends","value":41.0},{"date":"2026-07-31","firm":"Observatorio de Psicología Social Aplicada (UBA)","value":41.0},{"date":"2026-08-11","firm":"ESPOP (UdeSA)","value":29.0},{"date":"2026-08-12","firm":"Proyección Consultores","value":39.1}],"avg":{"dates":["2026-04-30","2026-05-07","2026-05-14","2026-05-21","2026-05-28","2026-06-04","2026-06-11","2026-06-18","2026-06-25","2026-07-02","2026-07-09","2026-07-16","2026-07-23","2026-07-30","2026-08-06","2026-08-12"],"values":[34.3,34.7,35.0,35.1,35.3,35.7,36.5,37.5,38.3,38.8,39.0,39.0,38.9,38.6,38.2,37.7]}}}}
+/* ESPACIO_END */
 </script>
 
 <script id="appdata" type="application/json">
@@ -899,7 +944,78 @@
       .catch(function(){ render(embedded(),false); });
   })();
 
-  // ===== Chart 02 — ICG index + components =====
+  // ===== Chart 02 & 03 — National vote by space + LLA/PRO alliance =====
+  // Reads espacio_history.json (written daily by fetch_encuestar_espacio.py), embedded snapshot
+  // as offline fallback. Chart 02 shows the forces separately; Chart 03 merges LLA+PRO into the
+  // aggregator's day-by-day "Alianza LLA+PRO" sum, set against Peronismo.
+  (function(){
+    var COL={
+      'La Libertad Avanza':C.milei, 'Peronismo':C.kicillof, 'PRO':C.macri,
+      'Izquierda':C.red, 'Sin definir':'#9097A0', 'Alianza LLA+PRO':C.milei
+    };
+    function embedded(){
+      try{
+        var t=document.getElementById('espaciodata').textContent
+                .replace(/\/\*\s*ESPACIO_START\s*\*\//,'').replace(/\/\*\s*ESPACIO_END\s*\*\//,'');
+        return JSON.parse(t);
+      }catch(e){ return null; }
+    }
+    // draw one chart into `elId` for the given ordered list of spaces
+    function drawInto(elId, ledId, D2, spaces, live, note){
+      if(!D2||!D2.spaces){ return; }
+      var traces=[], ends=[];
+      spaces.forEach(function(sp){
+        var blk=D2.spaces[sp]; if(!blk) return;
+        var col=COL[sp]||C.gray, muted=(sp==='Sin definir');
+        var pol=blk.polls||[], avg=blk.avg||{dates:[],values:[]};
+        // faint dots — individual polls
+        traces.push({x:pol.map(function(p){return p.date;}), y:pol.map(function(p){return p.value;}),
+          customdata:pol.map(function(p){return [p.firm, fmtDay(p.date)];}),
+          mode:'markers', type:'scatter', name:sp, legendgroup:sp, showlegend:false,
+          marker:{size:5, color:col, opacity:muted?0.16:0.22, line:{width:0}},
+          hovertemplate:'<b>%{customdata[0]}</b><br>'+sp+' · %{customdata[1]}<br>%{y:.1f}%<extra></extra>'});
+        // bold smoothed line
+        traces.push({x:avg.dates, y:avg.values, mode:'lines', type:'scatter', name:sp, legendgroup:sp,
+          line:{color:col, width:muted?1.6:2.8, dash:muted?'dot':'solid'},
+          opacity:muted?0.8:1,
+          hovertemplate:'<b>'+sp+'</b> · %{x}<br>%{y:.1f}% (avg)<extra></extra>'});
+        if(avg.values&&avg.values.length){
+          ends.push({sp:sp, color:col, y:avg.values[avg.values.length-1],
+                     x:avg.dates[avg.dates.length-1], muted:muted});
+        }
+      });
+      // declutter end labels
+      ends.sort(function(a,b){return a.y-b.y;});
+      for(var i=1;i<ends.length;i++){ if(ends[i].y-ends[i-1].y<1.6) ends[i].y=ends[i-1].y+1.6; }
+      var lastX=ends.reduce(function(m,e){return e.x>m?e.x:m;}, '');
+      var ann=ends.map(function(e){return {x:e.x,y:e.y,xanchor:'left',xshift:8,showarrow:false,
+        text:'<b>'+e.y.toFixed(0)+'%</b>',font:{family:'Inter',size:11,color:e.color}};});
+      Plotly.newPlot(elId,traces,
+        lay({margin:{l:42,r:96,t:12,b:44}, showlegend:false, annotations:ann,
+          yaxis:{rangemode:'tozero', gridcolor:'#F0F1ED', linecolor:C.line, ticksuffix:'%',
+                 tickfont:{size:11,color:C.muted}, title:{text:'vote intention',font:{size:11,color:C.muted}}},
+          xaxis:{type:'date', gridcolor:'#F0F1ED', linecolor:C.line, tickfont:{size:11,color:C.muted}}}),CONFIG);
+      ledger(ledId,[
+        (live?'Live source: <b>EncuestAR</b> (auto-updated daily)':'Source: <b>EncuestAR</b> · embedded fallback'),
+        'faint dots = individual polls · bold line = smoothed average', note]);
+    }
+    function render(D2, live){
+      drawInto('chart-espacio','ledger-espacio',D2,
+        ['La Libertad Avanza','Peronismo','PRO','Izquierda','Sin definir'], live,
+        'Grouped by space · undecided muted · residual “resto” omitted');
+      drawInto('chart-alianza','ledger-alianza',D2,
+        ['Alianza LLA+PRO','Peronismo','Izquierda','Sin definir'], live,
+        'Alianza line = day-by-day sum of LLA + PRO, not a measured ticket');
+    }
+    var EMB=embedded();
+    if(EMB) render(EMB,false);   // paint fallback immediately
+    fetch('espacio_history.json',{cache:'no-store'})
+      .then(function(r){ if(!r.ok) throw 0; return r.json(); })
+      .then(function(j){ if(!(j&&j.spaces)) throw 0; render(j,true); })
+      .catch(function(){ /* keep embedded snapshot */ });
+  })();
+
+  // ===== Chart 04 — ICG index + components =====
   (function(){
     var idx=D.icg.index;
     var x=idx.map(function(d){return d.date;}), y=idx.map(function(d){return d.value;});
@@ -932,7 +1048,7 @@
         xaxis:{gridcolor:'#F0F1ED',linecolor:C.line,tickfont:{size:11,color:C.muted}}}),CONFIG);
   })();
 
-  // ===== Chart 03 — ICG by president (reads Evolution_ICG.xlsx live, embedded fallback) =====
+  // ===== Chart 05 — ICG by president (reads Evolution_ICG.xlsx live, embedded fallback) =====
   (function(){
     var STYLE={
       'Nestor Kirchner':                    {c:'#8C8C8C', dash:'solid', w:2},
@@ -1060,7 +1176,7 @@
       .catch(function(){ /* keep embedded snapshot */ });
   })();
 
-  // ===== Chart 05 — Polymarket implied probability over time (live time series) =====
+  // ===== Chart 07 — Polymarket implied probability over time (live time series) =====
   (function(){
     var SLUG='argentina-presidential-election-winner';
     var GAMMA='https://gamma-api.polymarket.com/events?slug='+SLUG;
