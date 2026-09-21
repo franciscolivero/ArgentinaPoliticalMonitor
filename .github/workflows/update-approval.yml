@@ -1,0 +1,54 @@
+name: Update approval average
+
+# Daily: scrape new approval polls from EncuestAR into approval_polls.csv (fetch_approval.py),
+# then rebuild the Silver Bulletin-style average (build_approval.py), which writes
+# approval_history.json and re-embeds the fallback copy into index.html.
+# Also runs when you edit the CSV or the engine by hand.
+
+on:
+  schedule:
+    - cron: "52 8 * * *"     # daily, 08:52 UTC, after the other EncuestAR scrapes
+  push:
+    paths:
+      - "approval_polls.csv"
+      - "build_approval.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: approval-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests beautifulsoup4 lxml numpy
+
+      # A failed scrape must not block the rebuild: the average still rolls forward on the
+      # polls already in the CSV.
+      - name: Scrape new approval polls (EncuestAR)
+        continue-on-error: true
+        run: python fetch_approval.py
+
+      - name: Rebuild approval average
+        run: python build_approval.py
+
+      - name: Commit (if changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain approval_polls.csv approval_history.json index.html)" ]; then
+            git add approval_polls.csv approval_history.json index.html
+            git commit -m "Update approval polls + average ($(date -u +%Y-%m-%d))"
+            git pull --rebase
+            git push
+          else
+            echo "No change"
+          fi
