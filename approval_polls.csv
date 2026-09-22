@@ -1,4 +1,12 @@
 firm,end_date,approve,disapprove,n,date_approx,source,origin
+Alaska + Trespuntozero,2026-07-29,32.2,64.8,,0,https://www.eldestapeweb.com/politica/gestion-milei-toca-piso-historico-consolida-nucleo-duro-opositor-2026811780,manual
+AtlasIntel,2026-02-15,41.5,55.3,,1,data.json atlas.approval,manual
+AtlasIntel,2026-03-15,36.4,61.6,,1,data.json atlas.approval,manual
+AtlasIntel,2026-04-15,35.5,63.0,,1,https://thedialogue.org/analysis/why-are-mileis-approval-ratings-falling-in-argentina,manual
+AtlasIntel,2026-05-25,39.9,58.3,4613,0,https://www.batimes.com.ar/news/argentina/mileis-approval-rises-from-lowest-point-as-inflation-worries-ease.phtml,manual
+AtlasIntel,2026-08-03,37.1,62.4,1120,0,https://www.riotimesonline.com/mileis-youth-support-slips-as-new-polls-show-high-disapproval/,manual
+Delfos,2026-05-22,34,65,2689,0,https://x.com/_EncuestAR_/status/2058014037082869802,encuestar
+Delfos,2026-08-26,30,67,2900,0,https://www.perfil.com/noticias/cordoba/nueva-encuesta-desde-cordoba-milei-repunta-en-agosto-pero-la-crisis-social-frena-su-recuperacion.phtml,manual
 ESPOP (UdeSA),2024-11-15,54,,,1,data.json espop.approval,manual
 ESPOP (UdeSA),2025-03-15,43,51,,1,data.json espop.approval,manual
 ESPOP (UdeSA),2025-05-15,49,,,1,data.json espop.approval,manual
@@ -7,24 +15,20 @@ ESPOP (UdeSA),2025-11-15,45,,,1,data.json espop.approval,manual
 ESPOP (UdeSA),2026-03-17,38,59,1008,0,https://www.riotimesonline.com/milei-approval-ranking-argentina-april-2026-cb-global/,manual
 ESPOP (UdeSA),2026-06-05,35,61,,0,data.json espop.approval (fieldwork end per EncuestAR),manual
 ESPOP (UdeSA),2026-07-08,34,62,,0,data.json espop.approval (fieldwork end per EncuestAR),manual
-AtlasIntel,2026-02-15,41.5,55.3,,1,data.json atlas.approval,manual
-AtlasIntel,2026-03-15,36.4,61.6,,1,data.json atlas.approval,manual
-AtlasIntel,2026-04-15,35.5,63.0,,1,https://thedialogue.org/analysis/why-are-mileis-approval-ratings-falling-in-argentina,manual
-AtlasIntel,2026-05-25,39.9,58.3,4613,0,https://www.batimes.com.ar/news/argentina/mileis-approval-rises-from-lowest-point-as-inflation-worries-ease.phtml,manual
-AtlasIntel,2026-08-03,37.1,62.4,1120,0,https://www.riotimesonline.com/mileis-youth-support-slips-as-new-polls-show-high-disapproval/,manual
 Management & Fit,2026-02-15,46.8,,,1,https://www.lapoliticaonline.com/politica/una-encuesta-de-management-fit-muestra-que-la-aprobacion-de-milei-cayo-10-puntos-por-el-caso-adorni-y-libra/,manual
 Management & Fit,2026-04-20,37.2,54.3,,1,https://www.lapoliticaonline.com/politica/una-encuesta-de-management-fit-muestra-que-la-aprobacion-de-milei-cayo-10-puntos-por-el-caso-adorni-y-libra/,manual
 Management & Fit,2026-05-20,37.9,,,1,https://www.lapoliticaonline.com/politica/la-desaprobacion-de-milei-llego-a-su-nivel-mas-alto-segun-management-fit/,manual
 Management & Fit,2026-06-20,37.3,58.2,,1,https://www.lapoliticaonline.com/politica/la-desaprobacion-de-milei-llego-a-su-nivel-mas-alto-segun-management-fit/,manual
 Management & Fit,2026-07-31,37.1,58.6,2600,0,https://www.cronista.com/economia-politica/una-encuesta-enciende-una-alerta-para-milei-57-pide-un-cambio-pero-hay-un-dato-que-sostiene-al-gobierno/,manual
+Observatorio de Psicología Social Aplicada (UBA),2026-07-01,37.2,62.8,2184,0,https://x.com/_EncuestAR_/status/2072480020518355422,encuestar
 Poliarquía,2026-07-15,42,,,1,https://www.lanacion.com.ar/politica/encuesta-de-poliarquia-la-imagen-de-milei-no-remonta-crece-el-rechazo-entre-las-mujeres-y-se-nid18092026/,manual
 Poliarquía,2026-08-15,42,,,1,https://www.lanacion.com.ar/politica/encuesta-de-poliarquia-la-imagen-de-milei-no-remonta-crece-el-rechazo-entre-las-mujeres-y-se-nid18092026/,manual
 Poliarquía,2026-09-10,42,,,1,https://www.infobae.com/politica/2026/09/18/una-nueva-encuesta-mostro-un-deterioro-de-la-imagen-de-milei-y-una-aprobacion-estancada-en-42/,manual
 QSocial,2026-06-15,34,,,1,https://www.perfil.com/noticias/politica/encuesta-milei-vuelve-al-34-de-aprobacion-pero-crecen-las-senales-de-alerta-para-el-gobierno.phtml,manual
 QSocial,2026-07-15,31,,,1,https://www.perfil.com/noticias/politica/encuesta-milei-vuelve-al-34-de-aprobacion-pero-crecen-las-senales-de-alerta-para-el-gobierno.phtml,manual
 QSocial,2026-08-15,34,61,,1,https://www.perfil.com/noticias/politica/encuesta-milei-vuelve-al-34-de-aprobacion-pero-crecen-las-senales-de-alerta-para-el-gobierno.phtml,manual
+Synopsis,2026-05-30,31.3,54.5,1585,0,https://x.com/_EncuestAR_/status/2060762189674287465,encuestar
+Synopsis,2026-07-12,36.8,,,1,https://www.lanacion.com.ar/opinion/milei-y-las-encuestas-no-esta-bien-pero-tampoco-tan-mal-nid08082026/,manual
+ZX Consultora,2026-06-30,33.2,56.6,1297,0,https://x.com/_EncuestAR_/status/2072018458708004986,encuestar
 Zuban Córdoba,2026-04-10,33.9,65,,1,https://www.riotimesonline.com/milei-approval-ranking-argentina-april-2026-cb-global/,manual
 Zuban Córdoba,2026-07-26,33.4,65.3,1500,0,https://www.infoplatense.com.ar/el-65-desaprueba-a-milei-y-el-62-votaria-por-un-cambio-en-2027-segun-la-encuesta-de-zuban-cordoba/,manual
-Synopsis,2026-07-12,36.8,,,1,https://www.lanacion.com.ar/opinion/milei-y-las-encuestas-no-esta-bien-pero-tampoco-tan-mal-nid08082026/,manual
-Alaska + Trespuntozero,2026-07-29,32.2,64.8,,0,https://www.eldestapeweb.com/politica/gestion-milei-toca-piso-historico-consolida-nucleo-duro-opositor-2026811780,manual
-Delfos,2026-08-26,30,67,2900,0,https://www.perfil.com/noticias/cordoba/nueva-encuesta-desde-cordoba-milei-repunta-en-agosto-pero-la-crisis-social-frena-su-recuperacion.phtml,manual
