@@ -1,0 +1,104 @@
+election_id,firm,end_date,date_approx,n,c1,c2,c3,source
+2015-paso,Poliarquía,2015-08-02,1,,39.6,26.1,13.5,es.wikipedia 2015
+2015-paso,IPSOS,2015-08-05,1,,35.9,26.6,15.4,es.wikipedia 2015
+2015-paso,Management & Fit,2015-08-05,1,,36.1,27.0,12.0,es.wikipedia 2015
+2015-paso,OPSM,2015-08-05,1,,35.9,26.0,13.6,es.wikipedia 2015
+2015-paso,Hugo Jaime & Asociados,2015-08-05,1,,37.9,26.2,14.9,es.wikipedia 2015
+2015-paso,CEOP,2015-08-05,1,,37.4,24.8,13.4,es.wikipedia 2015
+2015-paso,Query,2015-08-05,1,,36.7,26.6,14.1,es.wikipedia 2015
+2015-paso,Raúl Aragón,2015-07-22,1,,39.3,26.5,14.0,es.wikipedia 2015
+2015-general,Management & Fit,2015-10-17,1,,38.3,29.2,21.0,es.wikipedia 2015
+2015-general,Ricardo Rouvier y Asociados,2015-10-21,1,,40.1,29.2,21.6,es.wikipedia 2015
+2015-general,Aurelio,2015-10-05,1,,41,30,20,es.wikipedia 2015
+2015-general,González y Valladares,2015-10-06,1,,35.4,25.3,26.3,es.wikipedia 2015
+2015-general,Poliarquía,2015-10-07,1,,37.1,26.2,20.1,es.wikipedia 2015
+2015-general,OPSM,2015-10-09,1,,38.4,28.8,20.5,es.wikipedia 2015
+2015-general,Raúl G. Aragón & Asociados,2015-10-17,1,,38.8,27.9,22.6,es.wikipedia 2015
+2015-general,Ipsos-Mora y Araujo,2015-10-15,1,,42.0,28.2,22.9,es.wikipedia 2015
+2015-general,Consultora Dicen,2015-10-15,1,,40.9,25.8,23.3,es.wikipedia 2015
+2015-general,Giacobbe y asociados,2015-10-17,1,,40.3,28.7,20.1,es.wikipedia 2015
+2015-general,Circuitos,2015-10-17,1,,39.1,26.9,20.2,es.wikipedia 2015
+2015-general,CEOP,2015-10-18,1,,40.7,28.2,21.9,es.wikipedia 2015
+2015-ballotage,González y Valladares,2015-11-19,1,,43.6,56.1,,es.wikipedia 2015
+2015-ballotage,Elypsis,2015-11-18,1,,39.3,47.0,,es.wikipedia 2015
+2015-ballotage,Quorus,2015-11-18,1,,45.98,47.02,,es.wikipedia 2015
+2015-ballotage,Management & Fit,2015-11-13,1,,43.7,52.0,,es.wikipedia 2015
+2015-ballotage,Giacobbe & Asociados,2015-11-13,1,,42.1,49.0,,es.wikipedia 2015
+2015-ballotage,Universidad Nacional de San Martín,2015-11-13,1,,45.55,42.55,,es.wikipedia 2015
+2015-ballotage,Fundación para la Dignificación del Hombre en el Trabajo,2015-11-12,1,,41.79,43.56,,es.wikipedia 2015
+2015-ballotage,Poliarquía,2015-11-11,1,,40.2,48.7,,es.wikipedia 2015
+2015-ballotage,Raúl Aragón y asoc.,2015-11-10,1,,46,54,,es.wikipedia 2015
+2015-ballotage,Ipsos,2015-11-08,1,,39.9,51.2,,es.wikipedia 2015
+2015-ballotage,Hugo Haime y Asociados,2015-11-07,1,,40.4,44.2,,es.wikipedia 2015
+2015-ballotage,Polldata,2015-10-31,1,,39.7,50.3,,es.wikipedia 2015
+2019-paso,Universidad de San Andrés,2019-07-18,0,,29,25,5,es.wikipedia 2019
+2019-paso,Tendencias,2019-07-23,0,,38.5,32.7,7.1,es.wikipedia 2019
+2019-paso,Giacobbe & Asociados,2019-07-28,0,,40,38.5,3.9,es.wikipedia 2019
+2019-paso,Reale Dallatorre,2019-07-28,0,,37.6,35.9,9,es.wikipedia 2019
+2019-paso,Circuitos,2019-07-29,0,,39.6,34.7,9.7,es.wikipedia 2019
+2019-paso,Marketing & Estadística,2019-07-29,0,,41,37,4,es.wikipedia 2019
+2019-paso,CIGP,2019-07-31,0,,40.08,39.56,6.93,es.wikipedia 2019
+2019-paso,Real Time Data,2019-07-31,0,,39,38,10,es.wikipedia 2019
+2019-paso,Oh Panel!,2019-08-01,0,,41,35,9,es.wikipedia 2019
+2019-paso,Opinaia,2019-08-01,0,,37.6,36.4,8.5,es.wikipedia 2019
+2019-paso,Dicen,2019-08-01,0,,40.5,35.3,8.2,es.wikipedia 2019
+2019-paso,Federico González & Asociados,2019-08-02,0,,42,34.6,6.4,es.wikipedia 2019
+2019-paso,Ideia Big Data,2019-08-02,1,,37,40,6,es.wikipedia 2019
+2019-paso,Management & Fit,2019-08-02,1,,40.2,38.3,10.5,es.wikipedia 2019
+2019-paso,Raúl Aragón & Asociados,2019-08-02,1,,41.6,36.1,8.3,es.wikipedia 2019 (via Página/12)
+2019-paso,Ricardo Rouvier & Asociados,2019-08-02,1,,39,34,9.5,es.wikipedia 2019 (via Página/12)
+2019-paso,Gustavo Córdoba y Asociados,2019-08-02,1,,38.2,34.1,11.7,es.wikipedia 2019 (via Página/12)
+2019-paso,Opina Argentina,2019-08-02,1,,39,35,8,es.wikipedia 2019 (via Página/12)
+2019-paso,Trespuntocero,2019-08-02,1,,43.6,36,6.5,es.wikipedia 2019 (via Página/12)
+2019-paso,CELAG,2019-08-02,1,,42.5,33.5,8.5,es.wikipedia 2019 (via Página/12)
+2019-general,AtlasIntel,2019-10-18,0,,49.5,39.6,6.7,es.wikipedia 2019
+2019-general,Federico González & Asociados,2019-10-17,0,1800,54,31.5,8.2,es.wikipedia 2019
+2019-general,Trespuntozero,2019-10-16,0,,52.5,34.8,6.6,es.wikipedia 2019
+2019-general,Proyección,2019-10-16,0,1913,53.8,33.4,6.9,es.wikipedia 2019
+2019-general,Ricardo Rouvier,2019-10-16,0,,52.3,34.3,7.6,es.wikipedia 2019
+2019-general,Oh Panel!,2019-10-16,0,1250,52,33,10,es.wikipedia 2019
+2019-general,CIGP,2019-10-15,0,,51.37,35.08,7.46,es.wikipedia 2019
+2019-general,Dicen,2019-10-15,0,,51.9,33.2,10.1,es.wikipedia 2019
+2019-general,Gustavo Córdoba,2019-10-09,0,,50.3,31.8,9.2,es.wikipedia 2019
+2019-general,Clivajes,2019-10-06,0,,53.7,33.2,8.2,es.wikipedia 2019
+2019-general,CB Consultora,2019-10-02,0,,52.7,31.3,4.1,es.wikipedia 2019
+2019-general,Opinaia,2019-09-30,0,,48,30,7,es.wikipedia 2019
+2023-paso,Opinaia,2023-07-18,0,2000,22,30,22,en.wikipedia 2023
+2023-paso,UdeSA,2023-07-21,0,1003,20.7,23.7,15.9,en.wikipedia 2023
+2023-paso,Nueva Comunicación,2023-07-21,0,1780,28,29,19,en.wikipedia 2023
+2023-paso,CEOP,2023-07-23,0,1167,28.5,30.3,19.1,en.wikipedia 2023
+2023-paso,Políticos en Redes,2023-07-25,0,2237,25.2,31.2,23,en.wikipedia 2023
+2023-paso,Circuitos,2023-07-27,0,2180,30.1,34.8,16.7,en.wikipedia 2023
+2023-paso,Management & Fit,2023-07-27,0,1800,31.7,34.7,17,en.wikipedia 2023
+2023-paso,Hugo Haime Consultora,2023-07-29,0,,32.1,32.5,22,en.wikipedia 2023
+2023-paso,CIGP,2023-07-29,0,1602,31.2,36.5,13.8,en.wikipedia 2023
+2023-paso,CB Consultora,2023-07-29,0,1985,30.4,33,20.3,en.wikipedia 2023
+2023-paso,Proyección Consultores,2023-07-31,0,2130,31.1,34.3,19.1,en.wikipedia 2023
+2023-paso,Giacobbe & Asociados,2023-07-31,0,2500,32.2,38,18.8,en.wikipedia 2023
+2023-paso,Opinión Pública Servicios y Mercados,2023-08-01,0,1200,29.9,35.6,17.5,en.wikipedia 2023
+2023-paso,Opina Argentina,2023-08-02,0,1404,31,32,20,en.wikipedia 2023
+2023-paso,Federico González & Asociados,2023-08-03,0,2400,30.1,36.4,19.5,en.wikipedia 2023
+2023-paso,Atlas Intel,2023-08-04,0,9517,30.8,31.9,20.8,en.wikipedia 2023
+2023-general,UdeSA,2023-09-25,0,1000,29.8,26.4,34.7,en.wikipedia 2023
+2023-general,Aresco,2023-09-29,0,1200,32.1,25.9,35.0,en.wikipedia 2023
+2023-general,Reale Dalla Torre,2023-10-03,0,2615,24.7,21.8,36.2,en.wikipedia 2023
+2023-general,Zuban Córdoba & Asociados,2023-10-04,0,1400,32.7,25.0,34.7,en.wikipedia 2023
+2023-general,Fixer,2023-10-05,0,2506,26.1,25.4,34.3,en.wikipedia 2023
+2023-general,Giacobbe & Asociados,2023-10-07,0,2500,28.5,27.3,32.9,en.wikipedia 2023
+2023-general,CIGP,2023-10-08,0,1500,28.1,20.9,27.2,en.wikipedia 2023
+2023-general,Proyección Consultores,2023-10-09,0,2966,30.9,23.2,35.5,en.wikipedia 2023
+2023-general,DC Consultores,2023-10-10,0,2700,26.2,28.9,35.6,en.wikipedia 2023
+2023-general,Opinaia,2023-10-11,0,2000,29,22,32,en.wikipedia 2023
+2023-general,CB Consultora,2023-10-11,0,4069,29.1,21.8,29.9,en.wikipedia 2023
+2023-general,Circuitos Consultora,2023-10-11,0,2131,32.3,24.4,34.1,en.wikipedia 2023
+2023-general,Clivajes Consultores,2023-10-11,0,1240,31.4,26.8,33.1,en.wikipedia 2023
+2023-general,Consultora Tendencias,2023-10-12,0,17702,29.8,23.1,30.2,en.wikipedia 2023
+2023-general,Atlas Intel,2023-10-13,0,5702,30.9,24.4,26.5,en.wikipedia 2023
+2023-ballotage,Inteligencia Analitica,2023-10-29,0,17395,43.1,43.3,,en.wikipedia 2023
+2023-ballotage,Zuban Cordoba,2023-10-29,0,2000,45.4,43.1,,en.wikipedia 2023
+2023-ballotage,Analogias,2023-11-03,0,2324,42.4,39.7,,en.wikipedia 2023
+2023-ballotage,CIGP,2023-11-03,0,1798,49,51,,en.wikipedia 2023
+2023-ballotage,Proyección Consultores,2023-11-06,1,3879,49,51,,en.wikipedia 2023
+2023-ballotage,CB Consultora,2023-11-06,0,2471,43.1,46.3,,en.wikipedia 2023
+2023-ballotage,CELAG,2023-11-08,0,2005,50.8,49.2,,en.wikipedia 2023
+2023-ballotage,AtlasIntel,2023-11-09,0,8971,44.6,48.6,,en.wikipedia 2023

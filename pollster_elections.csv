@@ -1,0 +1,9 @@
+election_id,date,label,kind,c1,c1_result,c2,c2_result,c3,c3_result,peronist,source
+2015-paso,2015-08-09,PASO 2015,paso,Scioli,38.67,Macri,24.49,Massa,14.33,c1,es.wikipedia Anexo encuestas 2015 (votos afirmativos por precandidato)
+2015-general,2015-10-25,General 2015,general,Scioli,37.08,Macri,34.15,Massa,21.39,c1,es.wikipedia Anexo encuestas 2015
+2015-ballotage,2015-11-22,Runoff 2015,ballotage,Scioli,48.66,Macri,51.34,,,c1,Resultado oficial
+2019-paso,2019-08-11,PASO 2019,paso,Fernández,49.50,Macri,32.93,Lavagna,8.44,c1,es.wikipedia Anexo encuestas 2019 (votos afirmativos)
+2019-general,2019-10-27,General 2019,general,Fernández,48.24,Macri,40.28,Lavagna,6.14,c1,es.wikipedia Anexo encuestas 2019
+2023-paso,2023-08-13,PASO 2023,paso,Unión por la Patria,27.27,Juntos por el Cambio,28.27,La Libertad Avanza,30.04,c1,en.wikipedia Opinion polling 2023 (por coalición)
+2023-general,2023-10-22,General 2023,general,Massa,36.68,Bullrich,23.83,Milei,29.98,c1,en.wikipedia Opinion polling 2023
+2023-ballotage,2023-11-19,Runoff 2023,ballotage,Massa,44.30,Milei,55.70,,,c1,en.wikipedia Opinion polling 2023

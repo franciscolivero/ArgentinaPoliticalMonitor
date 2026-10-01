@@ -15,8 +15,9 @@ What is implemented, step by step, and how it maps to the methodology page
    Poll = one row per firm/wave, dated on its fieldwork-end date.
 
 2. Poll weights ("influence score"), three factors:
-   a) pollster rating  -> POLLSTER_RATING below. There is no public accuracy rating for Argentine
-      firms, so every firm starts at 1.0. Edit the dict if you want to encode your own view.
+   a) pollster rating  -> POLLSTER_RATING, loaded from pollster_ratings.json (built by
+      build_pollster_ratings.py from each firm's election-eve accuracy 2015-2023). Rated firms
+      average 1.0; firms with no track record stay at 1.0.
    b) sample size with diminishing returns -> sqrt(min(n, N_CAP) / 1000). Missing n -> 1000.
    c) recency -> handled inside the local regression by a Gaussian kernel in time.
    Anti-flooding: a firm's total sample inside a +/-FLOOD_WINDOW-day window is capped at
@@ -56,7 +57,30 @@ JSON_OUT = HERE / "approval_history.json"
 HTML_FILE = HERE / "index.html"
 
 # ---- tunable constants (all documented above) ----------------------------------------------
-POLLSTER_RATING = {}          # e.g. {"Poliarquía": 1.1, "Delfos": 0.8}; default 1.0
+RATINGS_JSON = HERE / "pollster_ratings.json"
+
+
+def load_pollster_rating():
+    """Weights from build_pollster_ratings.py (credit-style track record, rated firms average 1.0).
+    Keys are published under both the canonical name and every alias, so the firm names used in
+    approval_polls.csv match. Firms without a track record keep the default 1.0. If the file is
+    missing or unreadable, every firm is 1.0, exactly as before."""
+    try:
+        d = json.loads(RATINGS_JSON.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    w = dict(d.get("weights", {}))
+    for alias, canonical in d.get("aliases", {}).items():
+        if canonical in d.get("weights", {}):
+            w.setdefault(alias, d["weights"][canonical])
+    return w
+
+
+def rating_of(firm):
+    return POLLSTER_RATING.get(firm, POLLSTER_RATING.get(firm.strip().lower(), 1.0))
+
+
+POLLSTER_RATING = load_pollster_rating()   # {} -> every firm 1.0
 DEFAULT_N = 1000              # typical Argentine national sample when the ficha isn't published
 N_CAP = 2500                  # diminishing returns: samples above this add no extra weight
 FIRM_N_CAP = 3000             # anti-flooding cap on a firm's aggregate sample inside the window
@@ -103,7 +127,7 @@ def poll_weights(polls):
         same = [q for q in polls if q["firm"] == p["firm"] and abs(q["t"] - p["t"]) <= FLOOD_WINDOW]
         tot = sum(q["n_used"] for q in same)
         n_eff = p["n_used"] * min(1.0, FIRM_N_CAP / tot)
-        rating = POLLSTER_RATING.get(p["firm"], 1.0)
+        rating = rating_of(p["firm"])
         p["w"] = rating * math.sqrt(min(n_eff, N_CAP) / 1000.0)
 
 
@@ -157,7 +181,7 @@ def fit_house_effects(polls, m, hs, iters=30):
             shrink = n_tot / (n_tot + HOUSE_K)
             new[f] = shrink * float((w * raw).sum() / w.sum())
         # centre on the rating-weighted consensus ("true north")
-        cw = {f: POLLSTER_RATING.get(f, 1.0) * sum(p["w"] for p in sel if p["firm"] == f) for f in firms}
+        cw = {f: rating_of(f) * sum(p["w"] for p in sel if p["firm"] == f) for f in firms}
         centre = sum(new[f] * cw[f] for f in firms) / sum(cw.values())
         new = {f: v - centre for f, v in new.items()}
         delta = max(abs(new[f] - he[f]) for f in firms)
@@ -275,7 +299,9 @@ def build():
             "reference": "https://www.natesilver.net/p/silver-bulletin-polling-average-methodology",
             "bandwidths_days": list(hs), "one_step_rmse": round(cv_rmse, 2),
             "band": calib, "house_k": HOUSE_K, "n_cap": N_CAP, "firm_n_cap": FIRM_N_CAP,
-            "pollster_rating": POLLSTER_RATING or "all firms 1.0",
+            "pollster_rating": ({f: round(rating_of(f), 3) for f in firms}
+                                if POLLSTER_RATING else "all firms 1.0"),
+            "pollster_rating_source": "pollster_ratings.json" if POLLSTER_RATING else None,
         },
         "latest": {m: out_avg[m][-1] for m in MEASURES + ("net",)},
         "last_poll": {m: max(p["date"] for p in polls if p[m] is not None) for m in MEASURES},
