@@ -1,0 +1,55 @@
+name: Update pollster ratings
+
+# Rebuilds the credit-style pollster ratings (build_pollster_ratings.py) whenever the historical
+# CSVs or the engine change, and weekly so the "active in 2026" flags follow the live scrapes.
+# Writes pollster_ratings.json and re-embeds its fallback copy into pollsters.html, then rebuilds
+# the approval average so its pollster weights update in the same commit.
+# To add an election: append rows to pollster_elections.csv and pollster_polls.csv and push.
+
+on:
+  schedule:
+    - cron: "10 9 * * 1"      # Mondays 09:10 UTC, after the daily EncuestAR/approval runs
+  push:
+    paths:
+      - "pollster_elections.csv"
+      - "pollster_polls.csv"
+      - "pollster_aliases.csv"
+      - "build_pollster_ratings.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: approval-update          # shares a lock with the approval workflow: both write index.html
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install numpy
+
+      - name: Rebuild pollster ratings
+        run: python build_pollster_ratings.py --print
+
+      - name: Rebuild approval average with the new weights
+        run: python build_approval.py
+
+      - name: Commit (if changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          FILES="pollster_ratings.json pollsters.html approval_history.json index.html"
+          if [ -n "$(git status --porcelain $FILES)" ]; then
+            git add $FILES
+            git commit -m "Update pollster ratings ($(date -u +%Y-%m-%d))"
+            git pull --rebase
+            git push
+          else
+            echo "No change"
+          fi
