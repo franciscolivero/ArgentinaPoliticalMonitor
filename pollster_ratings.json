@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-01T14:49:08+00:00",
+ "updated": "2026-10-05T18:20:12+00:00",
  "method": {
   "window_days": 28,
   "min_polls_per_race": 4,
@@ -3244,7 +3244,7 @@
    ],
    "weight": 0.803,
    "active_2026": true,
-   "last_seen_2026": "2026-08-31"
+   "last_seen_2026": "2026-09-29"
   },
   {
    "firm": "Ideia Big Data",
