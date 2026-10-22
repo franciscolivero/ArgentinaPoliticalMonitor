@@ -5,6 +5,8 @@ AtlasIntel,2026-03-15,36.4,61.6,,1,data.json atlas.approval,manual
 AtlasIntel,2026-04-15,35.5,63.0,,1,https://thedialogue.org/analysis/why-are-mileis-approval-ratings-falling-in-argentina,manual
 AtlasIntel,2026-05-25,39.9,58.3,4613,0,https://www.batimes.com.ar/news/argentina/mileis-approval-rises-from-lowest-point-as-inflation-worries-ease.phtml,manual
 AtlasIntel,2026-08-03,37.1,62.4,1120,0,https://www.riotimesonline.com/mileis-youth-support-slips-as-new-polls-show-high-disapproval/,manual
+AtlasIntel,2026-09-03,38.1,58,2193,0,https://www.red43.com.ar/nota/2026-9-15-14-40-4-milei-enfrenta-un-nuevo-dato-negativo-el-58-desaprueba-su-gestion-segun-una-encuesta,manual
+AtlasIntel,2026-10-07,38.5,57.2,2067,0,https://diarioneuquino.com.ar/encuesta-nacional-el-572-desaprueba-la-gestion-de-javier-milei-y-el-385-la-aprueba/,manual
 Delfos,2026-05-22,34,65,2689,0,https://x.com/_EncuestAR_/status/2058014037082869802,encuestar
 Delfos,2026-08-26,30,67,2900,0,https://www.perfil.com/noticias/cordoba/nueva-encuesta-desde-cordoba-milei-repunta-en-agosto-pero-la-crisis-social-frena-su-recuperacion.phtml,manual
 ESPOP (UdeSA),2024-11-15,54,,,1,data.json espop.approval,manual
@@ -15,6 +17,9 @@ ESPOP (UdeSA),2025-11-15,45,,,1,data.json espop.approval,manual
 ESPOP (UdeSA),2026-03-17,38,59,1008,0,https://www.riotimesonline.com/milei-approval-ranking-argentina-april-2026-cb-global/,manual
 ESPOP (UdeSA),2026-06-05,35,61,,0,data.json espop.approval (fieldwork end per EncuestAR),manual
 ESPOP (UdeSA),2026-07-08,34,62,,0,data.json espop.approval (fieldwork end per EncuestAR),manual
+ESPOP (UdeSA),2026-09-09,36,60,1004,0,https://www.infobae.com/politica/2026/10/19/aciertos-y-deudas-del-gobierno-de-milei-la-desaprobacion-llega-al-60-mientras-crece-la-incertidumbre-electoral-segun-una-encuesta/,manual
+ESPOP (UdeSA),2026-10-13,36,60,1000,0,https://www.infobae.com/politica/2026/10/19/aciertos-y-deudas-del-gobierno-de-milei-la-desaprobacion-llega-al-60-mientras-crece-la-incertidumbre-electoral-segun-una-encuesta/,manual
+Equipo Mide,2026-09-25,38,59,2114,0,https://www.eldestapeweb.com/politica/nueva-encuesta-javier-milei-angustia-bronca-dato-electoral-inesperado-inquieta-casa-rosada-202693015240,manual
 Management & Fit,2026-02-15,46.8,,,1,https://www.lapoliticaonline.com/politica/una-encuesta-de-management-fit-muestra-que-la-aprobacion-de-milei-cayo-10-puntos-por-el-caso-adorni-y-libra/,manual
 Management & Fit,2026-04-20,37.2,54.3,,1,https://www.lapoliticaonline.com/politica/una-encuesta-de-management-fit-muestra-que-la-aprobacion-de-milei-cayo-10-puntos-por-el-caso-adorni-y-libra/,manual
 Management & Fit,2026-05-20,37.9,,,1,https://www.lapoliticaonline.com/politica/la-desaprobacion-de-milei-llego-a-su-nivel-mas-alto-segun-management-fit/,manual
@@ -32,3 +37,4 @@ Synopsis,2026-07-12,36.8,,,1,https://www.lanacion.com.ar/opinion/milei-y-las-enc
 ZX Consultora,2026-06-30,33.2,56.6,1297,0,https://x.com/_EncuestAR_/status/2072018458708004986,encuestar
 Zuban Córdoba,2026-04-10,33.9,65,,1,https://www.riotimesonline.com/milei-approval-ranking-argentina-april-2026-cb-global/,manual
 Zuban Córdoba,2026-07-26,33.4,65.3,1500,0,https://www.infoplatense.com.ar/el-65-desaprueba-a-milei-y-el-62-votaria-por-un-cambio-en-2027-segun-la-encuesta-de-zuban-cordoba/,manual
+Zuban Córdoba,2026-09-19,35.3,63.6,2000,0,https://www.conclusion.com.ar/politica/nueva-encuesta-mas-de-6-de-cada-10-argentinos-desaprueban-la-gestion-de-milei-mientras-crecen-opositores/09/2026/,manual
