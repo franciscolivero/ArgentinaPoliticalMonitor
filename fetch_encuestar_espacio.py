@@ -46,8 +46,8 @@ ALLIANCE = "Alianza LLA+PRO"
 # One tooltip point: "<Consultora> — <Espacio>: <valor>% (fin de campo <YYYY-MM-DD>)".
 # The character classes stop at '<'/'>' so a match never crosses an HTML tag boundary.
 POINT_RE = re.compile(
-    r"([^<>—]+?)\s*—\s*([^<>:]+?):\s*([\d]+(?:[.,]\d+)?)\s*%\s*"
-    r"\(fin de campo\s*(\d{4}-\d{2}-\d{2})\)")
+    r"([^<>—–\n]+?)\s*[—–]\s*([^<>:—–\n]+?):\s*([\d]+(?:[.,]\d+)?)\s*%\s*"
+    r"\(\s*fin de campo:?\s*(\d{4}-\d{2}-\d{2})[^)]*\)", re.I)
 
 # Headline current-average block: "<Espacio><valor>%" (no separator on the page).
 HEAD_RE = re.compile(
@@ -72,10 +72,31 @@ def _num(s):
     return float(s.replace(".", "").replace(",", ".")) if ("," in s) else float(s)
 
 
-def parse_points(text):
+def _variants(text):
+    """The raw page, entity-decoded, and a tag-stripped copy: a tooltip may sit in an attribute,
+    an SVG <title> or be split across inline tags, so we read all three and de-duplicate."""
+    import html as _html
+    dec = _html.unescape(text).replace("\xa0", " ")
+    stripped = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", dec))
+    return [dec, stripped]
+
+
+def parse_points(text, known_firms=()):
     """Return {space: [(date, firm, value), ...]} from every tooltip string in the page."""
     series = defaultdict(list)
-    for firm, space, val, date in POINT_RE.findall(text):
+    raw, stripped = _variants(text)
+    raw_hits = POINT_RE.findall(raw)
+    known = sorted({re.sub(r"\s+", " ", f).strip(" ·-–—") for f, *_ in raw_hits} |
+                   set(known_firms), key=len, reverse=True)
+    hits = list(raw_hits)
+    for firm, space, val, date in POINT_RE.findall(stripped):
+        # without tags around it the firm capture can swallow preceding text: snap it to a
+        # firm we already know, or accept it only if it is short enough to be a name
+        f = re.sub(r"\s+", " ", firm).strip(" ·-–—")
+        f = next((k for k in known if f.endswith(k)), f if len(f) <= 60 else None)
+        if f:
+            hits.append((f, space, val, date))
+    for firm, space, val, date in hits:
         space = re.sub(r"\s+", " ", space).strip()
         firm  = re.sub(r"\s+", " ", firm).strip(" ·-–—")
         if space not in SPACES:
@@ -92,7 +113,7 @@ def parse_points(text):
 def parse_headline(text):
     """Return {space: value} from the current-average block, best-effort."""
     out = {}
-    for space, val in HEAD_RE.findall(text):
+    for space, val in HEAD_RE.findall(_variants(text)[1]):
         out.setdefault(space.strip(), _num(val))   # first hit wins (the summary block)
     return out
 
@@ -169,7 +190,13 @@ def main():
         print(f"  ! fetch/parse failed ({e}); leaving {out_path} untouched.", file=sys.stderr)
         sys.exit(1)
 
-    series = parse_points(text)
+    known = set()
+    try:
+        prev0 = json.loads(pathlib.Path(out_path).read_text(encoding="utf-8"))
+        known = {p["firm"] for b in prev0.get("spaces", {}).values() for p in b.get("polls", [])}
+    except (OSError, ValueError, KeyError):
+        pass
+    series = parse_points(text, known)
     headline = parse_headline(text)
 
     if "--list-espacios" in args:
@@ -186,6 +213,18 @@ def main():
         print(f"  · only {total} point(s) parsed; nothing to update, leaving {out_path} "
               f"untouched. Run --list-espacios to inspect.", file=sys.stderr)
         return
+
+    # Merge with what we already hold so a poll never drops out because one day's markup
+    # changed: today's scrape wins for any (firm, date) it sees, older rows are kept otherwise.
+    try:
+        prev = json.loads(pathlib.Path(out_path).read_text(encoding="utf-8"))
+        for space, blk in (prev.get("spaces") or {}).items():
+            seen = {(f.lower(), d) for d, f, _ in series.get(space, [])}
+            for p in blk.get("polls", []):
+                if (p["firm"].lower(), p["date"]) not in seen:
+                    series[space].append((p["date"], p["firm"], p["value"]))
+    except (OSError, ValueError, KeyError):
+        pass
 
     data = build(series, headline)
     pathlib.Path(out_path).write_text(

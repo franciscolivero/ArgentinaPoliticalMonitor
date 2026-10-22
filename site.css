@@ -1,0 +1,97 @@
+/* Argentina 2027 monitor — shared styles (index.html, governors.html)
+   Type: Archivo, by Omnibus-Type (Buenos Aires). Colour: navy ink, flag celeste as the one accent. */
+:root{
+  --paper:#FFFFFF;
+  --ground:#F3F6F9;
+  --ink:#0F2238;
+  --muted:#5B6B7C;
+  --faint:#8C99A7;
+  --rule:#DDE3EA;
+  --celeste:#75AADB;
+  --celeste-deep:#2F6FA8;
+  --rail:248px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:Archivo, "Helvetica Neue", Arial, sans-serif; font-size:16px; line-height:1.5;
+  font-variant-numeric:tabular-nums; -webkit-font-smoothing:antialiased;
+}
+a{color:var(--celeste-deep); text-underline-offset:3px}
+a:focus-visible, button:focus-visible{outline:2px solid var(--celeste-deep); outline-offset:3px; border-radius:2px}
+
+/* ---------- frame: rail + main ---------- */
+.frame{display:grid; grid-template-columns:var(--rail) minmax(0,1fr); min-height:100vh}
+.rail{
+  position:sticky; top:0; height:100vh; overflow-y:auto;
+  background:var(--ground); border-right:1px solid var(--rule);
+  padding:28px 22px 28px 28px; display:flex; flex-direction:column; gap:26px;
+}
+.brand{display:block; text-decoration:none; color:var(--ink)}
+.brand-mark{display:block; width:28px; height:4px; background:var(--celeste); margin-bottom:14px}
+.brand-name{display:block; font-stretch:75%; font-weight:800; font-size:25px; line-height:1; letter-spacing:-.01em}
+.brand-by{display:block; margin-top:6px; font-size:13px; color:var(--muted)}
+.nav-group{display:flex; flex-direction:column; gap:1px}
+.nav-group h3{margin:0 0 6px; font-size:12.5px; font-weight:600; color:var(--faint); letter-spacing:.01em}
+.nav-group a{
+  display:block; padding:5px 0 5px 12px; margin-left:-12px; border-left:2px solid transparent;
+  font-size:14.5px; color:var(--ink); text-decoration:none;
+}
+.nav-group a:hover{color:var(--celeste-deep)}
+.nav-group a.active{border-left-color:var(--celeste); font-weight:600}
+.nav-group a.out::after{content:" ↗"; color:var(--faint); font-size:12px}
+.rail-foot{margin-top:auto; font-size:12.5px; color:var(--muted); line-height:1.45}
+
+main{padding:0 clamp(16px,5vw,64px) 80px; max-width:1040px}
+
+/* ---------- hero ---------- */
+.hero{padding:56px 0 40px; border-bottom:1px solid var(--rule)}
+.hero h1{
+  margin:0; font-stretch:62%; font-weight:800; line-height:.88;
+  font-size:clamp(56px,9vw,112px); letter-spacing:-.015em;
+}
+.hero .stand{margin:18px 0 0; max-width:44ch; font-size:19px; line-height:1.4; color:var(--muted)}
+.hero .stand b{color:var(--ink); font-weight:600}
+.count{display:flex; align-items:baseline; gap:12px; margin-top:28px}
+.count .num{font-stretch:62%; font-weight:700; font-size:44px; line-height:1; color:var(--celeste-deep)}
+.count .lbl{font-size:15px; color:var(--muted)}
+
+/* ---------- chart blocks ---------- */
+.block{padding:44px 0 8px; border-bottom:1px solid var(--rule); scroll-margin-top:12px}
+.block:last-of-type{border-bottom:0}
+.block h2{
+  margin:0 0 10px; font-weight:650; font-size:22px; line-height:1.2; letter-spacing:-.005em;
+  max-width:36ch;
+}
+.plot{width:100%}
+.key{display:flex; flex-wrap:wrap; gap:6px 18px; margin:2px 0 6px; font-size:13.5px; color:var(--muted)}
+.key i{display:inline-block; width:12px; height:12px; border-radius:2px; margin-right:7px; vertical-align:-1px}
+
+/* ---------- sources ---------- */
+.sources{padding:48px 0 0; max-width:68ch; color:var(--muted); font-size:14.5px}
+.sources h2{color:var(--ink); font-size:18px; font-weight:650; margin:0 0 10px}
+.sources ul{margin:0 0 22px; padding-left:18px}
+.sources li{margin:6px 0}
+.sources b{color:var(--ink); font-weight:600}
+.sources code{font-family:ui-monospace,Menlo,Consolas,monospace; font-size:13px; color:var(--ink)}
+
+/* ---------- small screens: rail becomes a top bar ---------- */
+@media (max-width:900px){
+  .frame{display:block}
+  .rail{
+    position:sticky; top:0; z-index:30; height:auto; flex-direction:row; align-items:center;
+    gap:18px; padding:10px 16px; border-right:0; border-bottom:1px solid var(--rule);
+    overflow-x:auto; overflow-y:hidden; white-space:nowrap;
+  }
+  .brand-mark,.brand-by,.rail-foot,.nav-group h3{display:none}
+  .brand-name{font-size:19px}
+  .nav-group{flex-direction:row; gap:14px}
+  .nav-group a{padding:6px 0; margin:0; border-left:0; border-bottom:2px solid transparent; font-size:14px}
+  .nav-group a.active{border-bottom-color:var(--celeste)}
+  .hero{padding:36px 0 30px}
+  .hero .stand{font-size:17px}
+  .block{padding-top:34px; scroll-margin-top:58px}
+  .block h2{font-size:19px}
+}
