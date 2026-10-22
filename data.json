@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated": "2026-07-28",
+    "updated": "2026-10-22",
     "title": "Argentina 2027 — Political Forecast Monitor",
     "sources": [
       "ESPOP / LOOP – Universidad de San Andrés (UdeSA)",
@@ -289,6 +289,14 @@
       {
         "date": "2026-07-01",
         "value": 1.94
+      },
+      {
+        "date": "2026-08-01",
+        "value": 2.06
+      },
+      {
+        "date": "2026-09-01",
+        "value": 1.94
       }
     ],
     "components": {
@@ -300,7 +308,9 @@
         "2026-03-01",
         "2026-05-01",
         "2026-06-01",
-        "2026-07-01"
+        "2026-07-01",
+        "2026-08-01",
+        "2026-09-01"
       ],
       "series": {
         "General evaluation of government": [
@@ -311,7 +321,9 @@
           1.98,
           1.69,
           1.68,
-          1.64
+          1.64,
+          1.76,
+          1.6
         ],
         "Capacity to solve problems": [
           2.46,
@@ -321,7 +333,9 @@
           2.55,
           2.36,
           2.46,
-          2.28
+          2.28,
+          2.29,
+          2.2
         ],
         "Honesty of officials": [
           2.54,
@@ -331,6 +345,8 @@
           2.73,
           2.46,
           2.46,
+          2.45,
+          2.52,
           2.45
         ],
         "Efficiency of public spending": [
@@ -341,7 +357,9 @@
           2.38,
           1.88,
           2.12,
-          1.79
+          1.79,
+          2.02,
+          1.94
         ],
         "Concern for the general interest": [
           1.73,
@@ -351,7 +369,9 @@
           1.87,
           1.57,
           1.63,
-          1.51
+          1.51,
+          1.71,
+          1.5
         ]
       }
     }
