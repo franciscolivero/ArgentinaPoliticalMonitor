@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Latin America Presidential Approval</title>
+<meta name="description" content="Presidential approval in eleven Latin American countries, averaged from polls reported in the press and updated daily. By Francisco M. Olivero.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<style>
+  .grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:40px}
+  .grid .block{border-bottom:1px solid var(--rule)}
+  .grid h2{font-size:19px}
+  .grid h2 span{display:block; font-weight:400; font-size:15px; color:var(--muted); margin-top:2px}
+  .empty{height:260px; display:flex; align-items:center; color:var(--muted); font-size:15px; max-width:34ch}
+  @media (max-width:900px){ .grid{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+<div class="frame">
+
+<aside class="rail">
+  <a class="brand" href="index.html">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-name">Argentina 2027</span>
+    <span class="brand-by">Political monitor by Francisco M. Olivero</span>
+  </a>
+  <nav class="nav-group" aria-label="Monitor">
+    <h3>Monitor</h3>
+    <a href="index.html">← Argentina</a>
+    <a href="governors.html">Governors</a>
+  </nav>
+  <nav class="nav-group" aria-label="Latin America" id="nav-countries">
+    <h3>Latin America</h3>
+    <a href="#ranking">Ranking</a>
+  </nav>
+  <div class="rail-foot">Updated <span id="updated">—</span></div>
+</aside>
+
+<main id="top">
+  <header class="hero">
+    <h1>Latin America</h1>
+    <p class="stand">How eleven presidents are rated at home, averaged from the approval polls reported in each country’s press. Updated every day.</p>
+  </header>
+
+  <section class="block" id="ranking">
+    <h2>Presidential approval, latest average</h2>
+    <div class="plot" id="chart-rank" style="height:520px"></div>
+  </section>
+
+  <div class="grid" id="grid"></div>
+
+  <footer class="sources">
+    <h2>Sources</h2>
+    <ul>
+      <li><b>Google News</b>, searched daily in each country’s edition for reports of approval polls. A poll is kept only when the headline names the sitting president, cites a known pollster and gives an approval share. Fieldwork dates are rarely reported, so most polls are placed four days before publication. Every poll and its source link is in <code>latam_approval.json</code>.</li>
+      <li><b>Average</b>: Gaussian-kernel poll average with a 21-day bandwidth; a pollster publishing several times a month counts as one voice in that month.</li>
+      <li><b>Argentina</b>: the monitor’s own approval average (<a href="index.html#approval">Milei approval</a>).</li>
+    </ul>
+  </footer>
+</main>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var CDNS=["https://cdn.plot.ly/plotly-2.35.2.min.js","https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.35.2/plotly.min.js","https://unpkg.com/plotly.js-dist-min@2.35.2/plotly.min.js"];
+  function load(i){ if(window.Plotly) return go(); if(i>=CDNS.length) return;
+    var s=document.createElement('script'); s.src=CDNS[i]; s.async=true;
+    s.onload=function(){ window.Plotly?go():load(i+1); }; s.onerror=function(){ load(i+1); };
+    document.head.appendChild(s); }
+  load(0);
+
+  var C={ink:'#0F2238', muted:'#5B6B7C', line:'#DDE3EA', grid:'#E9EEF3', pos:'#24875A', neg:'#C8443A', bar:'#75AADB', ar:'#0F2238'};
+  var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function fmtDay(d){var p=d.split('-'); return (+p[2])+' '+MON[+p[1]-1]+' '+p[0];}
+  var CONFIG={displayModeBar:'hover', displaylogo:false, responsive:true,
+    modeBarButtonsToRemove:['select2d','lasso2d','autoScale2d','toggleSpikelines'],
+    toImageButtonOptions:{format:'png', scale:2, filename:'latam-approval-francisco-olivero'}};
+  function lay(o){
+    var b={paper_bgcolor:'rgba(0,0,0,0)', plot_bgcolor:'rgba(0,0,0,0)', showlegend:false, hovermode:'closest',
+      font:{family:'Archivo, sans-serif', size:13, color:C.ink},
+      hoverlabel:{bgcolor:'#fff', bordercolor:C.line, font:{family:'Archivo, sans-serif', size:13, color:C.ink}, align:'left'}};
+    Object.assign(b,o||{});
+    b.margin=b.margin||{l:40,r:16,t:8,b:36}; b.margin.b+=22;
+    b.annotations=(b.annotations||[]).concat([{xref:'paper',yref:'paper',x:1,y:0,xanchor:'right',yanchor:'bottom',
+      yshift:-(b.margin.b-2),showarrow:false,text:'Source: Francisco Olivero',font:{family:'Archivo, sans-serif',size:11,color:'#8C99A7'}}]);
+    return b;
+  }
+  function last(a){ return a&&a.length?a[a.length-1]:null; }
+  function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+
+  function go(){
+    Promise.all([
+      fetch('latam_approval.json',{cache:'no-store'}).then(function(r){ if(!r.ok) throw 0; return r.json(); }),
+      fetch('approval_history.json',{cache:'no-store'}).then(function(r){ return r.ok?r.json():null; }).catch(function(){ return null; })
+    ]).then(function(res){ render(res[0], res[1]); })
+      .catch(function(){
+        document.getElementById('chart-rank').innerHTML='<div class="empty">The data file latam_approval.json could not be loaded. Run the “Update Latin America approval” action once, then reload.</div>';
+      });
+  }
+
+  function render(L, AR){
+    var u=(L.updated||'').slice(0,10); if(u) document.getElementById('updated').textContent=fmtDay(u);
+    var codes=Object.keys(L.countries);
+
+    // ---- ranking ----
+    var rows=[];
+    codes.forEach(function(c){
+      var k=L.countries[c], a=k.avg&&k.avg.approve;
+      if(a&&a.values&&a.values.length) rows.push({name:k.president,
+        country:k.country, v:last(a.values), d:last(a.dates), n:k.polls.length, ar:false});
+    });
+    if(AR&&AR.latest) rows.push({name:'Javier Milei', country:'Argentina', v:AR.latest.approve, d:(AR.updated||'').slice(0,10), n:(AR.polls||[]).length, ar:true});
+    rows.sort(function(a,b){return a.v-b.v;});
+    var labels=rows.map(function(r){return r.name+' ('+r.country+')';});
+    document.getElementById('chart-rank').style.height=Math.max(260,rows.length*38+70)+'px';
+    Plotly.newPlot('chart-rank',[{type:'bar',orientation:'h',y:labels,x:rows.map(function(r){return r.v;}),
+      marker:{color:rows.map(function(r){return r.ar?C.ar:C.bar;})},
+      text:rows.map(function(r){return r.v.toFixed(0)+'%';}), textposition:'outside', cliponaxis:false,
+      textfont:{family:'Archivo',size:13,color:C.ink},
+      customdata:rows.map(function(r){return [r.n, fmtDay(r.d)];}),
+      hovertemplate:'<b>%{y}</b><br>%{x:.1f}% approve (average)<br>%{customdata[0]} polls · last %{customdata[1]}<extra></extra>'}],
+      lay({margin:{l:10,r:44,t:6,b:30}, bargap:0.32,
+        xaxis:{range:[0,100], ticksuffix:'%', gridcolor:C.grid, linecolor:C.line, tickfont:{size:11,color:C.muted}, zeroline:false},
+        yaxis:{automargin:true, tickfont:{size:13,color:C.ink}}}), CONFIG);
+
+    // ---- per-country small multiples ----
+    var grid=document.getElementById('grid'), nav=document.getElementById('nav-countries');
+    codes.sort(function(a,b){ return L.countries[a].country.localeCompare(L.countries[b].country); });
+    codes.forEach(function(c){
+      var k=L.countries[c], id='c-'+c.toLowerCase();
+      var sec=document.createElement('section'); sec.className='block'; sec.id=id;
+      sec.innerHTML='<h2>'+esc(k.country)+'<span>'+esc(k.president)+'</span></h2><div class="plot" id="p-'+id+'" style="height:300px"></div>';
+      grid.appendChild(sec);
+      var a=document.createElement('a'); a.href='#'+id; a.textContent=k.country; nav.appendChild(a);
+      var polls=k.polls||[];
+      if(!polls.length){
+        document.getElementById('p-'+id).outerHTML='<div class="empty">No approval polls for '+esc(k.president)+' found yet. The daily search adds them as they are published.</div>';
+        return;
+      }
+      var t=[], ann=[];
+      [['approve','Approve',C.pos],['disapprove','Disapprove',C.neg]].forEach(function(s){
+        var pp=polls.filter(function(p){return p[s[0]]!=null;}); if(!pp.length) return;
+        t.push({x:pp.map(function(p){return p.date;}), y:pp.map(function(p){return p[s[0]];}), mode:'markers', type:'scatter',
+          marker:{size:7,color:s[2],opacity:0.35},
+          customdata:pp.map(function(p){return [p.firm,(p.approx?'≈ ':'')+fmtDay(p.date)];}),
+          hovertemplate:'<b>%{customdata[0]}</b> · %{customdata[1]}<br>'+s[1]+' %{y:.1f}%<extra></extra>'});
+        var av=k.avg&&k.avg[s[0]];
+        if(av&&av.values&&av.values.length>1){
+          t.push({x:av.dates, y:av.values, mode:'lines', type:'scatter', line:{color:s[2],width:2.6,shape:'spline',smoothing:0.5},
+            hovertemplate:s[1]+' average<br>%{x|%d %b %Y}: %{y:.1f}%<extra></extra>'});
+        }
+        var lv=av&&av.values&&av.values.length?last(av.values):last(pp).value;
+        var lx=av&&av.dates&&av.dates.length?last(av.dates):last(pp).date;
+        if(lv==null) lv=last(pp)[s[0]];
+        ann.push({x:lx,y:lv,xanchor:'left',xshift:8,showarrow:false,text:'<b>'+lv.toFixed(0)+'%</b>',font:{family:'Archivo',size:12.5,color:s[2]}});
+      });
+      var ds=polls.map(function(p){return p.date;}).sort();
+      var lo=new Date(ds[0]+'T00:00:00Z'); lo.setUTCDate(lo.getUTCDate()-12);
+      var hi=new Date(last(ds)+'T00:00:00Z'); hi.setUTCDate(hi.getUTCDate()+12);
+      Plotly.newPlot('p-'+id,t,lay({margin:{l:40,r:44,t:8,b:32}, annotations:ann,
+        yaxis:{range:[0,100], ticksuffix:'%', dtick:25, gridcolor:C.grid, linecolor:C.line, tickfont:{size:11,color:C.muted}, zeroline:false},
+        xaxis:{type:'date', range:[lo.toISOString().slice(0,10),hi.toISOString().slice(0,10)], gridcolor:C.grid, linecolor:C.line,
+               tickfont:{size:11,color:C.muted}, nticks:5}}), CONFIG);
+    });
+
+    // scrollspy
+    var links=[].slice.call(document.querySelectorAll('.nav-group a[href^="#"]'));
+    var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
+    function spy(){ var y=window.scrollY+120, cur=-1;
+      secs.forEach(function(s,i){ if(s&&s.getBoundingClientRect().top+window.scrollY<=y) cur=i; });
+      links.forEach(function(a,i){a.classList.toggle('active',i===cur);}); }
+    window.addEventListener('scroll',spy,{passive:true}); spy();
+  }
+})();
+</script>
+</body>
+</html>

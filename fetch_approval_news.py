@@ -100,10 +100,14 @@ def find_firm(text, table):
     return None
 
 
+VAGUE = re.compile(r"(?:menos|m[aá]s|cerca|debajo|encima|alrededor|casi|supera|superior|inferior)\s+(?:de|del|al|a)?\s*(?:el\s+)?$", re.I)
+
+
 def first(pats, text):
     for p in pats:
-        m = p.search(text)
-        if m:
+        for m in p.finditer(text):
+            if VAGUE.search(text[max(0, m.start(1) - 25):m.start(1)]):
+                continue                      # "menos del 40%" is a threshold, not a reading
             return float(m.group(1).replace(",", "."))
     return None
 

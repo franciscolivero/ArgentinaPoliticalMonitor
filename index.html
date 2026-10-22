@@ -32,13 +32,13 @@
     <a href="#icg-comp">Index components</a>
     <a href="#by-president">By president</a>
     <a href="#implied">Implied vote</a>
+    <a href="#icg-votes">ICG and elections</a>
   </nav>
   <nav class="nav-group" aria-label="Markets and more">
     <h3>Markets and more</h3>
     <a href="#market">Polymarket</a>
     <a href="governors.html" class="out">Governors</a>
-    <a href="pollsters.html" class="out">Pollster ratings</a>
-    <a href="forecast.html" class="out">My forecast</a>
+    <a href="latam.html" class="out">Latin America approval</a>
     <a href="#sources">Sources</a>
   </nav>
   <div class="rail-foot">Updated <span id="updated">—</span></div>
@@ -92,6 +92,11 @@
     <div class="plot" id="chart-president-vi" style="height:460px"></div>
   </section>
 
+  <section class="block" id="icg-votes">
+    <h2>Confidence in government and the incumbent's vote, 2005–2025</h2>
+    <div class="plot" id="chart-icg-votes" style="height:460px"></div>
+  </section>
+
   <section class="block" id="market">
     <h2>Polymarket, election winner odds</h2>
     <div class="plot" id="chart-market" style="height:430px"></div>
@@ -101,9 +106,10 @@
     <h2>Sources</h2>
     <ul>
       <li><b>EncuestAR</b> poll aggregator for the runoff and vote-by-space series (<a href="https://encuestar.netlify.app/encuestas/" target="_blank" rel="noopener">polls</a>, <a href="https://encuestar.netlify.app/carrera/voto-nacional-espacio/" target="_blank" rel="noopener">vote by space</a>). Each poll belongs to the firm that ran it. The LLA + PRO line is the sum of the two averages, not a measured ticket.</li>
-      <li><b>Approval</b> polls of Milei's <i>gestión</i> from national pollsters, compiled from EncuestAR, the firms' releases and press coverage, averaged with the <a href="https://www.natesilver.net/p/silver-bulletin-polling-average-methodology" target="_blank" rel="noopener">Silver Bulletin method</a> and weighted by the <a href="pollsters.html">pollster ratings</a>. Every poll and its source link is in <code>approval_polls.csv</code>.</li>
+      <li><b>Approval</b> polls of Milei's <i>gestión</i> from national pollsters, compiled from EncuestAR, the firms' releases and press coverage, averaged with the <a href="https://www.natesilver.net/p/silver-bulletin-polling-average-methodology" target="_blank" rel="noopener">Silver Bulletin method</a>. Every poll and its source link is in <code>approval_polls.csv</code>.</li>
       <li><b>ICG</b>, Universidad Torcuato Di Tella, monthly, 0–5 scale (<a href="https://www.utdt.edu//ver_contenido.php?id_contenido=1439&id_item_menu=2964" target="_blank" rel="noopener">reports</a>).</li>
       <li><b>Polymarket</b>, Argentina Presidential Election Winner market.</li>
+      <li><b>Elections</b>: incumbent's first-round presidential share, or national Chamber of Deputies share in midterms, from official results.</li>
     </ul>
     <h2>Updates</h2>
     <ul>
@@ -774,11 +780,11 @@
     // ensure room at the bottom for the attribution
     o.margin = o.margin || {l:48,r:18,t:14,b:40};
     if(o.margin.b==null) o.margin.b=40;
-    o.margin.b += 22;
+    o.margin.b += o.showlegend ? 40 : 22;
     // credit annotation — travels with the figure into any downloaded PNG
     o.annotations = (o.annotations||[]).concat([{
-      xref:'paper', yref:'paper', x:1, y:0, xanchor:'right', yanchor:'top',
-      yshift:-(o.margin.b-20), showarrow:false, text:'Source: Francisco Olivero',
+      xref:'paper', yref:'paper', x:1, y:0, xanchor:'right', yanchor:'bottom',
+      yshift:-(o.margin.b-2), showarrow:false, text:'Source: Francisco Olivero',
       font:{family:'Archivo, sans-serif', size:11, color:'#8C99A7'}
     }]);
     return o;
@@ -1165,6 +1171,67 @@
     }).then(function(r){ if(!r.ok) throw new Error('no file'); return r.arrayBuffer(); })
       .then(function(buf){ draw(parseWB(XLSX.read(buf,{type:'array'})), true); })
       .catch(function(){ /* keep embedded snapshot */ });
+  })();
+
+  // ===== ICG at election time vs. the incumbent coalition's national vote =====
+  // ICG = the Di Tella reading of the election month (fieldwork precedes the vote).
+  // Vote = incumbent's first-round presidential share, or its national Chamber of Deputies
+  // share in midterms (coalition total incl. allied lists where reported).
+  (function(){
+    var E=[
+      {y:2005,k:'mid',icg:2.192,v:39.46,who:'Frente para la Victoria (Kirchner)'},
+      {y:2007,k:'pres',icg:1.678,v:45.29,who:'Cristina Fernández de Kirchner (FpV)'},
+      {y:2009,k:'mid',icg:1.340,v:29.89,who:'Frente para la Victoria (CFK)'},
+      {y:2011,k:'pres',icg:2.621,v:54.11,who:'Cristina Fernández de Kirchner (FpV)'},
+      {y:2013,k:'mid',icg:1.976,v:33.05,who:'Frente para la Victoria (CFK)'},
+      {y:2015,k:'pres',icg:1.909,v:37.08,who:'Daniel Scioli (FpV)'},
+      {y:2017,k:'mid',icg:2.828,v:41.75,who:'Cambiemos (Macri)'},
+      {y:2019,k:'pres',icg:2.009,v:40.28,who:'Mauricio Macri (JxC)'},
+      {y:2021,k:'mid',icg:1.454,v:34.17,who:'Frente de Todos (A. Fernández)'},
+      {y:2023,k:'pres',icg:1.223,v:36.78,who:'Sergio Massa (UxP)'},
+      {y:2025,k:'mid',icg:2.101,v:40.66,who:'La Libertad Avanza (Milei)'}
+    ];
+    var n=E.length, mx=0, my=0;
+    E.forEach(function(e){ e.x=+(e.icg*20).toFixed(1); });
+    E.forEach(function(e){mx+=e.x/n; my+=e.v/n;});
+    var sxy=0, sxx=0, syy=0;
+    E.forEach(function(e){sxy+=(e.x-mx)*(e.v-my); sxx+=(e.x-mx)*(e.x-mx); syy+=(e.v-my)*(e.v-my);});
+    var b=sxy/sxx, a=my-b*mx, r=sxy/Math.sqrt(sxx*syy);
+    var x0=20, x1=60;
+    var traces=[
+      {x:[x0,x1], y:[x0,x1], mode:'lines', type:'scatter', name:'Implied = actual',
+       line:{color:'#B7C1CC',width:1.5,dash:'dot'}, hoverinfo:'skip'},
+      {x:[x0,x1], y:[a+b*x0,a+b*x1], mode:'lines', type:'scatter', name:'Linear fit (r = '+r.toFixed(2)+')',
+       line:{color:C.ink,width:2,dash:'dash'},
+       hovertemplate:'Fit: vote = '+a.toFixed(1)+' + '+b.toFixed(2)+' × implied<br>r = '+r.toFixed(2)+' · n = '+n+'<extra></extra>'}];
+    [['pres','Presidential (1st round)','circle',C.celeste],['mid','Midterm (Deputies)','diamond',C.amber]].forEach(function(g){
+      var pts=E.filter(function(e){return e.k===g[0];});
+      traces.push({x:pts.map(function(e){return e.x;}), y:pts.map(function(e){return e.v;}),
+        text:pts.map(function(e){return String(e.y);}), customdata:pts.map(function(e){return e.who;}),
+        mode:'markers+text', type:'scatter', name:g[1],
+        textposition:pts.map(function(e){return e.y===2015?'bottom center':'top center';}),
+        textfont:{family:'Archivo',size:11.5,color:C.muted},
+        marker:{size:12,symbol:g[2],color:g[3],line:{color:'#fff',width:1.5}},
+        hovertemplate:'<b>%{text} · %{customdata}</b><br>Implied (ICG × 20) %{x:.1f}% · actual vote %{y:.1f}%<extra></extra>'});
+    });
+    function draw(icg){
+      var last=icg.index[icg.index.length-1], lx=last.value*20, proj=a+b*lx;
+      var t=traces.slice();
+      t.push({x:[lx], y:[proj], mode:'markers+text', type:'scatter', name:'Milei, latest ICG',
+        text:['Milei now'], textposition:'middle left', textfont:{family:'Archivo',size:12,color:C.milei},
+        marker:{size:13,color:'#fff',line:{color:C.milei,width:2.5}},
+        hovertemplate:'<b>Latest ICG ('+fmtMonth(last.date)+')</b><br>Implied %{x:.1f}% → fitted incumbent vote %{y:.1f}%<extra></extra>'});
+      Plotly.newPlot('chart-icg-votes', t,
+        lay({margin:{l:46,r:18,t:10,b:64}, showlegend:true,
+          legend:{orientation:'h',y:-0.16,x:0,font:{size:12,color:C.muted}},
+          yaxis:{range:[25,58], ticksuffix:'%', gridcolor:'#E9EEF3', linecolor:C.line, tickfont:{size:11,color:C.muted},
+                 title:{text:'Incumbent vote',font:{size:12,color:C.muted}}},
+          xaxis:{range:[x0,x1], ticksuffix:'%', gridcolor:'#E9EEF3', linecolor:C.line, tickfont:{size:11,color:C.muted},
+                 title:{text:'Implied vote in the election month (ICG × 20)',font:{size:12,color:C.muted}}}}), CONFIG);
+    }
+    draw(D.icg);
+    fetch('data.json',{cache:'no-store'}).then(function(r){ if(!r.ok) throw 0; return r.json(); })
+      .then(function(j){ if(j&&j.icg&&j.icg.index) draw(j.icg); }).catch(function(){});
   })();
 
   // ===== Chart 08 — Polymarket implied probability over time (live time series) =====
