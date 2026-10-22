@@ -37,6 +37,7 @@ jobs:
           if [ -n "$(git status --porcelain espacio_history.json)" ]; then
             git add espacio_history.json
             git commit -m "Refresh national vote-by-space polls ($(date -u +%Y-%m-%d))"
+            git pull --rebase
             git push
           else
             echo "No change in espacio_history.json"

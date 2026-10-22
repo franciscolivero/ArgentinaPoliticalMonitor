@@ -1,6 +1,7 @@
 name: Update approval average
 
-# Daily: scrape new approval polls from EncuestAR into approval_polls.csv (fetch_approval.py),
+# Daily: scrape new approval polls from EncuestAR (fetch_approval.py) and from press coverage
+# via Google News (fetch_approval_news.py) into approval_polls.csv,
 # then rebuild the Silver Bulletin-style average (build_approval.py), which writes
 # approval_history.json and re-embeds the fallback copy into index.html.
 # Also runs when you edit the CSV or the engine by hand.
@@ -12,6 +13,7 @@ on:
     paths:
       - "approval_polls.csv"
       - "build_approval.py"
+      - "fetch_approval_news.py"
   workflow_dispatch:
 
 permissions:
@@ -36,6 +38,10 @@ jobs:
       - name: Scrape new approval polls (EncuestAR)
         continue-on-error: true
         run: python fetch_approval.py
+
+      - name: Harvest new approval polls from the press (Google News)
+        continue-on-error: true
+        run: python fetch_approval_news.py
 
       - name: Rebuild approval average
         run: python build_approval.py

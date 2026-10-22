@@ -1,0 +1,45 @@
+name: Update ICG (headline + components)
+
+# Daily check of the Di Tella ICG page. When a new month is published, fetch_icg.py reads the
+# headline value and the five components from that month's PDF, validates them (the ICG is the
+# mean of its components), and writes data.json, index.html (fallback copy) and
+# Evolution_ICG.xlsx. Days with nothing new end without a commit.
+
+on:
+  schedule:
+    - cron: "23 10 * * *"     # daily, 10:23 UTC (~07:23 Argentina)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: approval-update          # shares the lock with the other workflows that write index.html
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests beautifulsoup4 lxml pypdf openpyxl
+
+      - name: Fetch ICG
+        run: python fetch_icg.py
+
+      - name: Commit (if changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          FILES="data.json index.html Evolution_ICG.xlsx"
+          if [ -n "$(git status --porcelain $FILES)" ]; then
+            git add $FILES
+            git commit -m "Update ICG ($(date -u +%Y-%m-%d))"
+            git pull --rebase
+            git push
+          else
+            echo "No new ICG month"
+          fi
