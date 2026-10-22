@@ -1,0 +1,46 @@
+name: Update Latin America approval
+
+# Daily: reads Google News coverage of presidential-approval polls for eleven Latin American
+# countries (fetch_latam_approval.py), merges new polls into latam_approval.json and rebuilds
+# each country's average. latam.html reads the JSON on load.
+
+on:
+  schedule:
+    - cron: "07 11 * * *"     # daily, 11:07 UTC
+  push:
+    paths:
+      - "fetch_latam_approval.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: latam-approval
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests numpy
+
+      - name: Scrape Google News and rebuild averages
+        run: python fetch_latam_approval.py
+
+      - name: Commit (if changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain latam_approval.json)" ]; then
+            git add latam_approval.json
+            git commit -m "Update Latin America approval ($(date -u +%Y-%m-%d))"
+            git pull --rebase
+            git push
+          else
+            echo "No change"
+          fi
