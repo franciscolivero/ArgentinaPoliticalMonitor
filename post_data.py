@@ -69,11 +69,47 @@ def delta(new, old, nd=1, unit=" pp"):
 
 
 # ---------------------------------------------------------------------------- Argentina tables
+def _interp(dates, vals, d):
+    """Linear interpolation of an average onto date d (None outside its range)."""
+    import bisect
+    if not dates or d < dates[0] or d > dates[-1]:
+        return None
+    i = bisect.bisect_left(dates, d)
+    if dates[i] == d:
+        return vals[i]
+    d0, d1 = datetime.date.fromisoformat(dates[i - 1]), datetime.date.fromisoformat(dates[i])
+    t = (datetime.date.fromisoformat(d) - d0).days / max(1, (d1 - d0).days)
+    return round(vals[i - 1] + t * (vals[i] - vals[i - 1]), 2)
+
+
+def with_dots(avgs, dots, start=None):
+    """avgs: [(label, dates, values)] smooth lines; dots: [(label, [(date, value)])] individual polls.
+    Returns a table on the union of dates: lines interpolated (so they stay continuous), dots only on
+    the dates a poll exists (Datawrapper draws them as symbols with an invisible line)."""
+    dd = [dict((d, v) for d, v in pts if v is not None) for _, pts in dots]
+    dates = sorted({d for _, ds, _ in avgs for d in ds} | {d for m in dd for d in m})
+    if start:
+        dates = [d for d in dates if d >= start]
+    rows = []
+    for d in dates:
+        row = [d] + [_interp(ds, vs, d) for _, ds, vs in avgs] + [m.get(d) for m in dd]
+        rows.append(row)
+    return table(["Fecha"] + [a[0] for a in avgs] + [x[0] for x in dots], rows)
+
+
+def dot_label(name):
+    return f"{name} · encuestas"
+
+
 def runoff():
     e = load("encuestas_history.json") or {}
     a = e.get("avg") or {}
-    rows = list(zip(a.get("dates", []), a.get("milei", []), a.get("kicillof", [])))
-    return table(["Fecha", "Milei", "Kicillof"], rows), a
+    polls = [p for p in e.get("polls", []) if not p.get("archived")]
+    t = with_dots([("Milei", a.get("dates", []), a.get("milei", [])),
+                   ("Kicillof", a.get("dates", []), a.get("kicillof", []))],
+                  [(dot_label("Milei"), [(p["date"], p.get("milei")) for p in polls]),
+                   (dot_label("Kicillof"), [(p["date"], p.get("kicillof")) for p in polls])])
+    return t, a
 
 
 ESPACIO_LABELS = {"La Libertad Avanza": "LLA", "Peronismo": "Peronismo", "PRO": "PRO",
@@ -82,21 +118,24 @@ ESPACIO_LABELS = {"La Libertad Avanza": "LLA", "Peronismo": "Peronismo", "PRO": 
 
 def espacio(spaces):
     s = load("espacio_history.json") or {"spaces": {}}
-    dates = sorted({d for sp in spaces for d in (s["spaces"].get(sp, {}).get("avg", {}).get("dates", []))})
-    cols = []
+    avgs, dots = [], []
     for sp in spaces:
-        av = s["spaces"].get(sp, {}).get("avg", {})
-        cols.append(dict(zip(av.get("dates", []), av.get("values", []))))
-    rows = [[d] + [c.get(d) for c in cols] for d in dates]
-    return table(["Fecha"] + [ESPACIO_LABELS[sp] for sp in spaces], rows), s
+        blk = s["spaces"].get(sp, {})
+        av = blk.get("avg", {})
+        avgs.append((ESPACIO_LABELS[sp], av.get("dates", []), av.get("values", [])))
+        dots.append((dot_label(ESPACIO_LABELS[sp]), [(p["date"], p["value"]) for p in blk.get("polls", [])]))
+    return with_dots(avgs, dots), s
 
 
 def approval(months=12):
     a = load("approval_history.json") or {"avg": {"dates": []}}
     av = a["avg"]
     start = ago(months * 31)
-    rows = [(d, ap, dp) for d, ap, dp in zip(av["dates"], av["approve"], av["disapprove"]) if d >= start]
-    return table(["Fecha", "Aprueba", "Desaprueba"], rows), a
+    polls = a.get("polls", [])
+    t = with_dots([("Aprueba", av["dates"], av["approve"]), ("Desaprueba", av["dates"], av["disapprove"])],
+                  [(dot_label("Aprueba"), [(p["date"], p.get("approve")) for p in polls]),
+                   (dot_label("Desaprueba"), [(p["date"], p.get("disapprove")) for p in polls])], start=start)
+    return t, a
 
 
 COMP_ES = {"General evaluation of government": "Evaluación general",
@@ -212,7 +251,7 @@ def latam():
                     "disapprove": dv["values"][-1] if dv.get("values") else None,
                     "approve_30": at(av["dates"], av["values"], ago(30)),
                     "n": len(polls), "n_30": sum(1 for p in polls if p["date"] >= ago(30)),
-                    "last": last_poll, "avg": av, "davg": dv})
+                    "last": last_poll, "avg": av, "davg": dv, "polls": polls})
     ar = load("approval_history.json")
     if ar and ar.get("latest"):
         A = ar["avg"]
@@ -232,6 +271,8 @@ def latam_ranking_table(rows):
 
 def latam_country_table(r):
     av, dv = r["avg"], r["davg"] or {}
-    dd = dict(zip(dv.get("dates", []), dv.get("values", [])))
-    return table(["Fecha", "Aprueba", "Desaprueba"],
-                 [(d, v, dd.get(d)) for d, v in zip(av["dates"], av["values"])])
+    polls = r.get("polls", [])
+    return with_dots([("Aprueba", av.get("dates", []), av.get("values", [])),
+                      ("Desaprueba", dv.get("dates", []), dv.get("values", []))],
+                     [(dot_label("Aprueba"), [(p["date"], p.get("approve")) for p in polls]),
+                      (dot_label("Desaprueba"), [(p["date"], p.get("disapprove")) for p in polls])])

@@ -34,8 +34,28 @@ C = {"milei": "#6D3FD8", "kicillof": "#2A8BD0", "pro": "#C98A1B", "izq": "#C8443
      "pos": "#24875A", "neg": "#C8443A", "ns": "#B7C1CC", "ink": "#0F2238", "celeste": "#75AADB"}
 
 
-def lines_meta(colors, suffix="%", y_range=None):
-    vis = {"custom-colors": colors, "line-widths": {k: 2.5 for k in colors},
+STYLE_VERSION = 2   # bump to re-apply titles/colours to charts that already exist
+
+
+def tint(hex_color, k=0.55):
+    """Lighter version of a colour for the individual-poll dots."""
+    h = hex_color.lstrip("#")
+    r, g, b = (int(h[i:i + 2], 16) for i in (0, 2, 4))
+    return "#{:02X}{:02X}{:02X}".format(*(round(c + (255 - c) * k) for c in (r, g, b)))
+
+
+def lines_meta(colors, suffix="%", y_range=None, dots=True):
+    """Smooth average lines in `colors`; with dots=True each series also gets a '<name> · encuestas'
+    column drawn as dots only (invisible line), in a lighter shade of the same colour."""
+    cols = dict(colors)
+    lines = {k: {"symbols": {"enabled": False}} for k in colors}
+    if dots:
+        for k, c in colors.items():
+            dk = P.dot_label(k)
+            cols[dk] = tint(c)
+            lines[dk] = {"width": "invisible", "symbols": {"enabled": True, "on": "every", "style": "fill",
+                                                            "size": 4}}
+    vis = {"custom-colors": cols, "lines": lines,
            "label-colors": True, "show-tooltips": True, "interpolation": "monotone-x",
            "y-grid": "on", "x-grid": "off"}
     if y_range:
@@ -63,17 +83,17 @@ def build_specs():
                   lines_meta({"Aprueba": C["pos"], "Desaprueba": C["neg"]}, y_range=["25", "70"]), "ar"))
     t1, t2, icg = P.icg()
     specs.append(("ar-icg", "Índice de Confianza en el Gobierno (UTDT)", "d3-lines", t1,
-                  lines_meta({"ICG": C["ink"]}, suffix="", y_range=["1.5", "3"]), "ar"))
+                  lines_meta({"ICG": C["ink"]}, suffix="", y_range=["1.5", "3"], dots=False), "ar"))
     specs.append(("ar-icg-comp", "Componentes del ICG", "d3-lines", t2,
                   lines_meta({"Evaluación general": C["neg"], "Capacidad para resolver problemas": "#2F6FA8",
                               "Honestidad": C["pos"], "Eficiencia del gasto": C["pro"],
-                              "Preocupación por el interés general": C["milei"]}, suffix="", y_range=["1.3", "3.1"]),
+                              "Preocupación por el interés general": C["milei"]}, suffix="", y_range=["1.3", "3.1"], dots=False),
                   "ar"))
     t, _, _ = P.icg_by_president()
     pres_cols = {"N. Kirchner": "#8C8C8C", "CFK I": "#27AAE1", "CFK II": "#3E78B2", "Macri": "#F2B600",
                  "A. Fernández": "#1F3C5F", "Milei": C["milei"]}
     specs.append(("ar-icg-pres", "Confianza en el gobierno por presidente, según mes de gestión", "d3-lines", t,
-                  lines_meta(pres_cols, suffix="", y_range=["0", "4"]), "ar"))
+                  lines_meta(pres_cols, suffix="", y_range=["0", "4"], dots=False), "ar"))
     latest_icg = icg["index"][-1]["value"]
     t, _ = P.icg_votes(latest_icg)
     specs.append(("ar-icg-votes", "Confianza en el gobierno y voto del oficialismo, 2005–2025", "d3-scatter-plot", t,
@@ -85,7 +105,7 @@ def build_specs():
     t, _ = P.polymarket()
     specs.append(("ar-polymarket", "Polymarket: probabilidad de ganar la presidencia en 2027", "d3-lines", t,
                   lines_meta({"Javier Milei": C["milei"], "Axel Kicillof": C["kicillof"], "Sergio Massa": C["gris"],
-                              "Patricia Bullrich": "#A88BE6"}), "ar"))
+                              "Patricia Bullrich": "#A88BE6"}, dots=False), "ar"))
     t, _, month = P.governors()
     specs.append(("ar-governors", f"Imagen de los gobernadores, {month or ''}".strip(", "), "d3-bars-stacked", t,
                   {"visualize": {"custom-colors": {"Positiva": C["pos"], "Negativa": C["neg"], "NS/NC": C["ns"]},
@@ -144,8 +164,12 @@ def main():
             if not cid:
                 cid = api("POST", "/charts", token, json={"title": title, "type": typ, "language": "es-ES",
                                                           "metadata": meta})["id"]
-                st = {"id": cid, "title": title, "post": post}
+                st = {"id": cid, "title": title, "post": post, "style_version": STYLE_VERSION, "type": typ}
                 report.append(f"  + created {key} → {cid}")
+            if st.get("style_version", 1) < STYLE_VERSION or st.get("type") != typ:
+                api("PATCH", f"/charts/{cid}", token, json={"title": title, "type": typ, "metadata": meta})
+                st["style_version"], st["type"] = STYLE_VERSION, typ
+                report.append(f"  ~ restyled {key}")
             state[key] = st
             api("PUT", f"/charts/{cid}/data", token, data=csv_text.encode("utf-8"),
                 headers={"Content-Type": "text/csv; charset=utf-8"})
