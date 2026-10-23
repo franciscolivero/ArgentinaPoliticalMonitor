@@ -1,0 +1,450 @@
+{
+ "note": "Hand-verified polls. fetch_latam_approval.py merges these into latam_approval.json on every run; add rows here, never edit latam_approval.json by hand.",
+ "countries": {
+  "CL": [
+   {
+    "date": "2026-09-30",
+    "firm": "Mitofsky (ranking)",
+    "approve": 36,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://www.poresto.com/mexico/2026/10/5/claudia-sheinbaum-alcanza-72-de-aprobacion-y-supera-a-trump-lula-y-milei-en-medicion-de-mitofsky.html",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-10-11",
+    "firm": "Criteria",
+    "approve": 27,
+    "disapprove": 64,
+    "approx": true,
+    "source": "https://www.emol.com/noticias/Nacional/2026/10/11/1213867/encuesta-criteria-aprobacion-presidencial.html",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-10-16",
+    "firm": "Criteria",
+    "approve": 28,
+    "disapprove": 60,
+    "approx": true,
+    "source": "https://www.emol.com/noticias/Nacional/2026/10/18/1214471/aprobacion-desaprobacion-kast-encuesta-criteria.html",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-10-16",
+    "firm": "Cadem",
+    "approve": 30,
+    "disapprove": 65,
+    "approx": true,
+    "source": "https://www.eldinamo.cl/politica/2026/10/19/encuesta-cadem-aprobacion-de-kast-cae-al-30-y-un-60-apoya-eliminar-el-indulto-presidencial/",
+    "origin": "manual"
+   }
+  ],
+  "BO": [
+   {
+    "date": "2025-11-20",
+    "firm": "Ipsos Ciesmori",
+    "approve": 65,
+    "disapprove": 18,
+    "approx": true,
+    "source": "https://www.prensa-latina.cu/2026/07/03/decrece-aprobacion-del-presidente-de-bolivia/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-02-15",
+    "firm": "Ipsos Ciesmori",
+    "approve": 63,
+    "disapprove": 30,
+    "approx": true,
+    "source": "https://www.prensa-latina.cu/2026/07/03/decrece-aprobacion-del-presidente-de-bolivia/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-02-15",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 52.9,
+    "disapprove": 44.2,
+    "approx": false,
+    "source": "https://revistasumma.com/bukele-sheinbaum-y-chaves-encabezan-ranking-regional-de-presidentes-con-popularidad/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-04-30",
+    "firm": "Ipsos Ciesmori",
+    "approve": 52,
+    "disapprove": 46,
+    "approx": true,
+    "source": "https://www.prensa-latina.cu/2026/07/03/decrece-aprobacion-del-presidente-de-bolivia/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-06-30",
+    "firm": "Ipsos Ciesmori",
+    "approve": 38,
+    "disapprove": 45,
+    "approx": false,
+    "source": "https://www.prensa-latina.cu/2026/07/03/decrece-aprobacion-del-presidente-de-bolivia/",
+    "origin": "manual"
+   }
+  ],
+  "PE": [
+   {
+    "date": "2026-08-07",
+    "firm": "Datum",
+    "approve": 60,
+    "disapprove": 24,
+    "approx": false,
+    "source": "https://en.mercopress.com/2026/08/09/keiko-fujimori-starts-her-term-in-peru-with-60-approval-datum-poll-finds",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-30",
+    "firm": "Mitofsky (ranking)",
+    "approve": 49,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://www.poresto.com/mexico/2026/10/5/claudia-sheinbaum-alcanza-72-de-aprobacion-y-supera-a-trump-lula-y-milei-en-medicion-de-mitofsky.html",
+    "origin": "manual"
+   }
+  ],
+  "CO": [
+   {
+    "date": "2026-09-05",
+    "firm": "AtlasIntel",
+    "approve": 52,
+    "disapprove": 43,
+    "approx": true,
+    "source": "https://www.lasillavacia.com/en-vivo/primera-encuesta-del-presidente-de-la-espriella-52-positivo-43-negativo",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-30",
+    "firm": "Mitofsky (ranking)",
+    "approve": 53,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://www.poresto.com/mexico/2026/10/5/claudia-sheinbaum-alcanza-72-de-aprobacion-y-supera-a-trump-lula-y-milei-en-medicion-de-mitofsky.html",
+    "origin": "manual"
+   }
+  ],
+  "VE": [
+   {
+    "date": "2026-02-15",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 27.5,
+    "disapprove": 67.6,
+    "approx": false,
+    "source": "https://revistasumma.com/bukele-sheinbaum-y-chaves-encabezan-ranking-regional-de-presidentes-con-popularidad/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-03-28",
+    "firm": "AtlasIntel",
+    "approve": 35,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://www.bloomberglinea.com/latinoamerica/venezuela/aprobacion-de-delcy-rodriguez-en-venezuela-que-dicen-las-ultimas-encuestas/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-04-28",
+    "firm": "AtlasIntel",
+    "approve": 31,
+    "disapprove": null,
+    "approx": false,
+    "source": "https://www.bloomberglinea.com/latinoamerica/venezuela/aprobacion-de-delcy-rodriguez-en-venezuela-que-dicen-las-ultimas-encuestas/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-30",
+    "firm": "Mitofsky (ranking)",
+    "approve": 26,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://www.poresto.com/mexico/2026/10/5/claudia-sheinbaum-alcanza-72-de-aprobacion-y-supera-a-trump-lula-y-milei-en-medicion-de-mitofsky.html",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-10-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 32.3,
+    "disapprove": null,
+    "approx": false,
+    "source": "https://www.perfil.com/noticias/politica/milei-quedo-14-en-el-ranking-de-presidentes-de-america-latina-quien-lidera-la-encuesta.phtml",
+    "origin": "manual"
+   }
+  ],
+  "MX": [
+   {
+    "date": "2026-02-15",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 69.8,
+    "disapprove": 26.8,
+    "approx": false,
+    "source": "https://revistasumma.com/bukele-sheinbaum-y-chaves-encabezan-ranking-regional-de-presidentes-con-popularidad/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-03-31",
+    "firm": "Mitofsky",
+    "approve": 68.4,
+    "disapprove": 31.2,
+    "approx": false,
+    "source": "https://en.wikipedia.org/wiki/Opinion_polling_on_the_Sheinbaum_presidency",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-04-28",
+    "firm": "El Financiero",
+    "approve": 68,
+    "disapprove": 32,
+    "approx": false,
+    "source": "https://en.wikipedia.org/wiki/Opinion_polling_on_the_Sheinbaum_presidency",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-04-28",
+    "firm": "AtlasIntel",
+    "approve": 50.7,
+    "disapprove": 42.7,
+    "approx": false,
+    "source": "https://en.wikipedia.org/wiki/Opinion_polling_on_the_Sheinbaum_presidency",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-05-12",
+    "firm": "Becerra Mizuno",
+    "approve": 59,
+    "disapprove": 39,
+    "approx": false,
+    "source": "https://en.wikipedia.org/wiki/Opinion_polling_on_the_Sheinbaum_presidency",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-05-19",
+    "firm": "Enkoll",
+    "approve": 68,
+    "disapprove": 27,
+    "approx": false,
+    "source": "https://en.wikipedia.org/wiki/Opinion_polling_on_the_Sheinbaum_presidency",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-05-25",
+    "firm": "El Financiero",
+    "approve": 69,
+    "disapprove": 31,
+    "approx": false,
+    "source": "https://en.wikipedia.org/wiki/Opinion_polling_on_the_Sheinbaum_presidency",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-05-25",
+    "firm": "AtlasIntel",
+    "approve": 52.8,
+    "disapprove": 38.1,
+    "approx": false,
+    "source": "https://en.wikipedia.org/wiki/Opinion_polling_on_the_Sheinbaum_presidency",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-05-31",
+    "firm": "Varela",
+    "approve": 57,
+    "disapprove": 37,
+    "approx": false,
+    "source": "https://en.wikipedia.org/wiki/Opinion_polling_on_the_Sheinbaum_presidency",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-07-29",
+    "firm": "El Financiero",
+    "approve": 67,
+    "disapprove": 33,
+    "approx": true,
+    "source": "https://www.elfinanciero.com.mx/encuestas-ef/2026/08/03/mantiene-sheinbaum-aprobacion-consistente-en-julio-encuesta-ef/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-30",
+    "firm": "Mitofsky (ranking)",
+    "approve": 72,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://www.poresto.com/mexico/2026/10/5/claudia-sheinbaum-alcanza-72-de-aprobacion-y-supera-a-trump-lula-y-milei-en-medicion-de-mitofsky.html",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-10-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 69.3,
+    "disapprove": null,
+    "approx": false,
+    "source": "https://www.perfil.com/noticias/politica/milei-quedo-14-en-el-ranking-de-presidentes-de-america-latina-quien-lidera-la-encuesta.phtml",
+    "origin": "manual"
+   }
+  ],
+  "EC": [
+   {
+    "date": "2026-02-15",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 35.7,
+    "disapprove": 61.5,
+    "approx": false,
+    "source": "https://revistasumma.com/bukele-sheinbaum-y-chaves-encabezan-ranking-regional-de-presidentes-con-popularidad/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-06-16",
+    "firm": "Maluk Research",
+    "approve": 22.49,
+    "disapprove": 75.46,
+    "approx": false,
+    "source": "https://larepublica.pe/mundo/2026/06/22/una-reciente-encuesta-en-ecuador-revela-una-desaprobacion-del-75-para-el-presidente-daniel-noboa-417494",
+    "origin": "manual"
+   }
+  ],
+  "SV": [
+   {
+    "date": "2026-02-15",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 70.1,
+    "disapprove": 26.3,
+    "approx": false,
+    "source": "https://revistasumma.com/bukele-sheinbaum-y-chaves-encabezan-ranking-regional-de-presidentes-con-popularidad/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-02-18",
+    "firm": "CID Gallup",
+    "approve": 93,
+    "disapprove": null,
+    "approx": false,
+    "source": "https://en.wikipedia.org/wiki/Opinion_polling_on_the_Nayib_Bukele_presidency",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-02-18",
+    "firm": "Data Poll",
+    "approve": 93,
+    "disapprove": 5,
+    "approx": false,
+    "source": "https://en.wikipedia.org/wiki/Opinion_polling_on_the_Nayib_Bukele_presidency",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-03-21",
+    "firm": "CID Gallup",
+    "approve": 94,
+    "disapprove": null,
+    "approx": false,
+    "source": "https://en.wikipedia.org/wiki/Opinion_polling_on_the_Nayib_Bukele_presidency",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-05-15",
+    "firm": "CID Gallup",
+    "approve": 93,
+    "disapprove": 3,
+    "approx": true,
+    "source": "https://en.wikipedia.org/wiki/Opinion_polling_on_the_Nayib_Bukele_presidency",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-05-23",
+    "firm": "LPG Datos",
+    "approve": 85.5,
+    "disapprove": 10.9,
+    "approx": false,
+    "source": "https://en.wikipedia.org/wiki/Opinion_polling_on_the_Nayib_Bukele_presidency",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-05-26",
+    "firm": "IUDOP (UCA)",
+    "approve": 87.8,
+    "disapprove": null,
+    "approx": false,
+    "source": "https://en.wikipedia.org/wiki/Opinion_polling_on_the_Nayib_Bukele_presidency",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-30",
+    "firm": "Mitofsky (ranking)",
+    "approve": 90,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://www.poresto.com/mexico/2026/10/5/claudia-sheinbaum-alcanza-72-de-aprobacion-y-supera-a-trump-lula-y-milei-en-medicion-de-mitofsky.html",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-10-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 68.3,
+    "disapprove": null,
+    "approx": false,
+    "source": "https://www.perfil.com/noticias/politica/milei-quedo-14-en-el-ranking-de-presidentes-de-america-latina-quien-lidera-la-encuesta.phtml",
+    "origin": "manual"
+   }
+  ],
+  "PA": [
+   {
+    "date": "2026-02-15",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 34.1,
+    "disapprove": 62.4,
+    "approx": false,
+    "source": "https://revistasumma.com/bukele-sheinbaum-y-chaves-encabezan-ranking-regional-de-presidentes-con-popularidad/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-04-15",
+    "firm": "Prodigious",
+    "approve": 18.4,
+    "disapprove": 80.8,
+    "approx": true,
+    "source": "https://www.prensa-latina.cu/2026/07/22/panamenos-desaprueban-gestion-del-gobierno-segun-sondeo/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-07-15",
+    "firm": "Prodigious",
+    "approve": 17.9,
+    "disapprove": 77.6,
+    "approx": true,
+    "source": "https://www.prensa-latina.cu/2026/07/22/panamenos-desaprueban-gestion-del-gobierno-segun-sondeo/",
+    "origin": "manual"
+   }
+  ],
+  "GT": [
+   {
+    "date": "2026-02-15",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 37.3,
+    "disapprove": 56.8,
+    "approx": false,
+    "source": "https://revistasumma.com/bukele-sheinbaum-y-chaves-encabezan-ranking-regional-de-presidentes-con-popularidad/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-10-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 31.0,
+    "disapprove": null,
+    "approx": false,
+    "source": "https://www.perfil.com/noticias/politica/milei-quedo-14-en-el-ranking-de-presidentes-de-america-latina-quien-lidera-la-encuesta.phtml",
+    "origin": "manual"
+   }
+  ],
+  "HN": [
+   {
+    "date": "2026-02-15",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 40.5,
+    "disapprove": 54.3,
+    "approx": false,
+    "source": "https://revistasumma.com/bukele-sheinbaum-y-chaves-encabezan-ranking-regional-de-presidentes-con-popularidad/",
+    "origin": "manual"
+   }
+  ]
+ }
+}

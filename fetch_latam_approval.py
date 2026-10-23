@@ -333,6 +333,23 @@ def main():
         blk.update({"country": country, "president": pres, "since": since})
         store[code] = [p for p in blk["polls"] if p["date"] >= since]
 
+    # hand-verified polls live in latam_seed.json and are merged on every run, so the scraped
+    # history in latam_approval.json is never overwritten when seeds are added
+    seed_path = HERE / "latam_seed.json"
+    if seed_path.exists():
+        seed = json.loads(seed_path.read_text(encoding="utf-8")).get("countries", {})
+        for code, rows in seed.items():
+            if code not in store:
+                continue
+            for p in rows:
+                if p["date"] < PRESIDENTS[code][3]:
+                    continue
+                same = [q for q in store[code] if q["firm"] == p["firm"] and q["date"] == p["date"]]
+                if same:
+                    same[0].update(p)
+                elif not is_dup(p, store[code]):
+                    store[code].append(dict(p))
+
     added = 0
     if not rebuild:
         pool, seen = [], set()
