@@ -1,20 +1,20 @@
-run 2026-10-23 01:00 UTC · 161 new poll(s)
+run 2026-10-23 15:44 UTC · 11 new poll(s)
 
-CL Chile         79 polls  manual 4, news 67, pollster 8
+CL Chile         80 polls  manual 4, news 68, pollster 8
 BO Bolivia       12 polls  manual 5, news 7
-PE Peru          13 polls  manual 2, news 11
+PE Peru          15 polls  manual 2, news 13
 CO Colombia       8 polls  manual 5, news 3
 VE Venezuela      6 polls  manual 5, news 1
-MX Mexico        82 polls  manual 12, news 27, wikipedia 43
+MX Mexico        83 polls  manual 12, news 28, wikipedia 43
 EC Ecuador       11 polls  manual 2, news 9
 SV El Salvador   20 polls  manual 9, news 6, pollster 1, wikipedia 4
 PA Panama         3 polls  manual 3
 GT Guatemala      2 polls  manual 2
-BR Brazil       102 polls  manual 2, news 100
+BR Brazil       108 polls  manual 2, news 106
 HN Honduras       1 polls  manual 1
 
 log:
-  · CL Cadem: 5 new wave(s) from 5 unread PDF(s)
+  · CL Cadem: 2 new wave(s) from 2 unread PDF(s)
   · CL Criteria: no validated figure in Agenda_Criteria_15_Marzo_2026.pdf
   · CL Criteria: no validated figure in Agenda_Criteria_22_Marzo_2026.pdf
   · CL Criteria: no validated figure in Agenda_Criteria_29_Marzo_2026.pdf
@@ -38,185 +38,20 @@ log:
   · CL Criteria: no validated figure in Agenda_Criteria_2_Agosto_2026_8cLMx.pdf
   · CL Criteria: no validated figure in Agenda_Criteria_13_Septiembre_2026_9dGv2.pdf
   · CL Criteria: no validated figure in Agenda_Criteria_20_Septiembre_2026_9eBc3.pdf
-  · CL Criteria: 9 new wave(s) from 32 unread PDF(s)
-  ~ CL Cadem 2026-10-02: replaced press copy with pollster
-  + CL Cadem ≈2026-10-07: 32.0/65.0 [pollster]
-  + CL Cadem ≈2026-10-20: 33.0/62.0 [pollster]
-  ~ CL Criteria 2026-08-07: replaced press copy with pollster
-  ~ CL Criteria 2026-08-22: replaced press copy with pollster
-  ~ CL Criteria 2026-08-28: replaced press copy with pollster
-  ~ CL Criteria 2026-09-05: replaced press copy with pollster
-  ~ CL Criteria 2026-09-25: replaced press copy with pollster
+  · CL Criteria: 4 new wave(s) from 27 unread PDF(s)
   · MX Wikipedia Opinion_polling_on_the_Sheinbaum_presidency: 50 rows
-  + MX AtlasIntel ≈2026-10-07: 57.4/28.9 [wikipedia]
-  ~ MX El Financiero 2026-09-20: replaced press copy with wikipedia
-  + MX AtlasIntel ≈2026-09-03: 59.0/34.5 [wikipedia]
-  + MX Enkoll ≈2026-08-29: 69.0/26.0 [wikipedia]
-  ~ MX El Financiero 2026-08-23: replaced press copy with wikipedia
-  + MX AtlasIntel ≈2026-08-03: 57.2/33.3 [wikipedia]
-  + MX AtlasIntel ≈2026-06-30: 48.9/37.7 [wikipedia]
-  ~ MX El Financiero 2026-06-28: replaced press copy with wikipedia
-  + MX Varela y Asociados ≈2026-05-31: 57.0/37.0 [wikipedia]
-  + MX Becerra Mizuno y Asociados ≈2026-05-12: 59.0/39.0 [wikipedia]
-  + MX Pew Research Center ≈2026-04-10: 64.0/35.0 [wikipedia]
-  + MX Varela y Asociados ≈2026-03-28: 60.0/36.0 [wikipedia]
-  + MX AtlasIntel ≈2026-03-24: 53.9/40.9 [wikipedia]
-  ~ MX El Financiero 2026-03-22: replaced press copy with wikipedia
-  + MX Enkoll ≈2026-02-28: 75.0/20.0 [wikipedia]
-  + MX Mitofsky ≈2026-02-28: 69.1/30.8 [wikipedia]
-  + MX AtlasIntel ≈2026-02-24: 56.0/36.1 [wikipedia]
-  + MX El Financiero ≈2026-02-27: 72.0/28.0 [wikipedia]
-  + MX Mitofsky ≈2026-01-31: 69.2/30.6 [wikipedia]
-  ~ MX El Financiero 2026-01-21: replaced press copy with wikipedia
-  + MX AtlasIntel ≈2026-01-20: 62.8/30.5 [wikipedia]
-  + MX El Financiero ≈2025-12-17: 69.0/31.0 [wikipedia]
-  + MX Enkoll ≈2025-12-01: 74.0/24.0 [wikipedia]
-  ~ MX El Financiero 2025-11-24: replaced press copy with wikipedia
-  ~ MX El Financiero 2025-10-28: replaced press copy with wikipedia
-  + MX Enkoll ≈2025-09-26: 78.0/18.0 [wikipedia]
-  + MX El Financiero ≈2025-09-22: 73.0/27.0 [wikipedia]
-  + MX Varela y Asociados ≈2025-09-12: 68.0/29.0 [wikipedia]
-  + MX Enkoll ≈2025-08-27: 79.0/18.0 [wikipedia]
-  + MX El Financiero ≈2025-08-25: 74.0/26.0 [wikipedia]
-  + MX Enkoll ≈2025-07-22: 80.0/17.0 [wikipedia]
-  + MX El Financiero ≈2025-07-28: 75.0/24.0 [wikipedia]
-  + MX El Financiero ≈2025-06-23: 76.0/22.0 [wikipedia]
-  + MX Enkoll ≈2025-05-20: 83.0/15.0 [wikipedia]
-  + MX El Financiero ≈2025-05-20: 77.0/22.0 [wikipedia]
-  + MX El Financiero ≈2025-04-28: 81.0/18.0 [wikipedia]
-  + MX Becerra Mizuno y Asociados ≈2025-04-01: 80.0/15.0 [wikipedia]
-  + MX Pew Research Center ≈2025-03-25: 83.0/15.0 [wikipedia]
-  + MX Enkoll ≈2025-03-23: 82.0/15.0 [wikipedia]
-  + MX El Financiero ≈2025-03-23: 83.0/15.0 [wikipedia]
-  + MX El Financiero ≈2025-02-24: 85.0/15.0 [wikipedia]
-  + MX El Financiero ≈2025-01-27: 81.0/15.0 [wikipedia]
-  + MX Enkoll ≈2025-01-05: 80.0/16.0 [wikipedia]
   · SV Wikipedia Opinion_polling_on_the_Nayib_Bukele_presidency: 23 rows
-  + SV Data Poll ≈2026-07-12: 94.0/4.0 [wikipedia]
-  + SV IUDOP ≈2026-05-26: 87.8/None [wikipedia]
-  + SV LPG Datos ≈2026-01-25: 91.9/5.9 [wikipedia]
-  + SV LPG Datos ≈2025-05-20: 85.2/10.8 [wikipedia]
   · Mitofsky 2026-09: 6 tracked presidents
-  · CID Gallup SV 2026-10-14: 92.0%
-  ~ SV CID Gallup 2026-10-07: replaced press copy with pollster
-  · Google News: 2872 unique articles read
-  + BR Paraná Pesquisas ≈2025-10-24: 47.9/49.2 [news]
-  + BR Quaest ≈2025-11-08: 47.0/50.0 [news]
-  + BR Paraná Pesquisas ≈2025-11-08: 45.9/50.9 [news]
-  + BR Ipsos ≈2025-12-05: 42.0/52.0 [news]
-  + BR AtlasIntel ≈2025-12-14: 50.7/50.7 [news]
-  + BR AtlasIntel ≈2025-12-14: 48.8/50.7 [news]
-  + BO Unitel ≈2025-12-19: 64.0/None [news]
-  + BR Paraná Pesquisas ≈2025-12-25: 45.6/50.9 [news]
-  + BR Paraná Pesquisas ≈2025-12-25: 50.9/50.9 [news]
-  + BR Quaest ≈2026-01-10: 58.0/None [news]
-  + BR AtlasIntel ≈2026-01-18: 48.7/50.7 [news]
-  + BR AtlasIntel ≈2026-01-18: 50.7/50.7 [news]
-  + EC Pollster not named (press) ≈2026-01-19: 47.0/None [news]
-  + BR PoderData ≈2026-01-24: 41.0/53.0 [news]
-  + BR PoderData ≈2026-01-24: 34.0/57.0 [news]
-  + BR Paraná Pesquisas ≈2026-01-25: 46.4/50.6 [news]
-  + BR Real Time Big Data ≈2026-02-07: 64.0/33.0 [news]
-  + BR Paraná Pesquisas ≈2026-02-08: 42.1/54.7 [news]
-  + BR CB Consultora (imagen positiva) ≈2026-02-14: 49.0/48.0 [news]
-  + BR AtlasIntel ≈2026-02-21: 46.6/51.5 [news]
-  + BR AtlasIntel ≈2026-02-21: 51.5/None [news]
-  + BR Paraná Pesquisas ≈2026-02-23: 52.0/None [news]
-  + BR Paraná Pesquisas ≈2026-02-23: 45.0/52.0 [news]
-  + BR Ipsos ≈2026-03-06: 43.0/51.0 [news]
-  + BR Ipsos ≈2026-03-06: 51.0/51.0 [news]
-  + BR Quaest ≈2026-03-07: 44.0/51.0 [news]
-  + BR Ideia ≈2026-03-07: 50.5/50.5 [news]
-  + CL Panel Ciudadano UDD ≈2026-03-11: 78.0/None [news]
-  + BR AtlasIntel ≈2026-03-21: 53.5/None [news]
-  + BR AtlasIntel ≈2026-03-21: 45.9/53.5 [news]
-  + BR PoderData ≈2026-03-21: 37.0/57.0 [news]
-  + CL Pulso Ciudadano ≈2026-03-25: 48.7/48.7 [news]
-  + BR Paraná Pesquisas ≈2026-03-26: 44.6/52.0 [news]
-  + BR AtlasIntel ≈2026-03-28: 43.0/56.0 [news]
-  + BR Paraná Pesquisas ≈2026-03-29: 55.7/None [news]
-  + CL Cadem ≈2026-04-02: 50.0/50.0 [news]
-  + BR Quaest ≈2026-04-11: 43.0/52.0 [news]
-  + BR Paraná Pesquisas ≈2026-04-14: 42.6/54.4 [news]
-  + MX Pollster not named (press) ≈2026-04-16: 70.0/None [news]
-  + BR AtlasIntel ≈2026-04-24: 46.8/52.5 [news]
-  + BR AtlasIntel ≈2026-04-24: 52.5/None [news]
-  + CL Cadem ≈2026-05-07: 42.0/None [news]
-  + BR Quaest ≈2026-05-09: 46.0/49.0 [news]
-  + CL Criteria ≈2026-05-13: 38.0/53.0 [news]
-  + CL Pulso Ciudadano ≈2026-05-13: 31.0/None [news]
-  + BR AtlasIntel ≈2026-05-15: 42.9/None [news]
-  + BR AtlasIntel ≈2026-05-15: 47.4/51.3 [news]
-  + BR PoderData ≈2026-05-25: 50.0/50.0 [news]
-  + BR PoderData ≈2026-05-25: 44.0/None [news]
-  + BR Quaest ≈2026-06-06: 47.0/48.0 [news]
-  + CL Pulso Ciudadano ≈2026-06-10: 30.5/56.7 [news]
-  + BR CNT/MDA ≈2026-06-12: 49.0/46.0 [news]
-  + CL Cadem ≈2026-06-17: 44.0/None [news]
-  + BR Ipsos ≈2026-06-18: 44.0/50.0 [news]
-  + MX Mitofsky ≈2026-06-21: 57.0/None [news]
-  + BR PoderData ≈2026-06-21: 43.0/52.0 [news]
-  + CL Pulso Ciudadano ≈2026-06-24: 30.0/None [news]
-  + BR AtlasIntel ≈2026-06-27: 45.9/52.3 [news]
-  + BR Paraná Pesquisas ≈2026-06-28: 47.9/49.3 [news]
-  + BR Datafolha ≈2026-07-04: 55.0/None [news]
-  + BR Datafolha ≈2026-07-09: 32.0/None [news]
-  + EC CB Consultora (imagen positiva) ≈2026-07-11: 41.0/None [news]
-  + BR Quaest ≈2026-07-11: 48.0/47.0 [news]
-  + BR PoderData ≈2026-07-12: 42.0/51.0 [news]
-  + BR PoderData ≈2026-07-18: 46.0/47.0 [news]
-  + BR Datafolha ≈2026-07-20: 49.0/48.0 [news]
-  + BR PoderData ≈2026-07-26: 43.0/49.0 [news]
-  + BR PoderData ≈2026-07-26: 49.0/49.0 [news]
-  + BR Ideia ≈2026-08-01: 48.5/49.0 [news]
-  + BR Quaest ≈2026-08-01: 48.0/46.0 [news]
-  + BR PoderData ≈2026-08-09: 43.0/50.0 [news]
-  + BR Quaest ≈2026-08-10: 46.0/48.0 [news]
-  + CL Cadem ≈2026-08-13: 90.0/None [news]
-  + BR Datafolha ≈2026-08-17: 47.0/50.0 [news]
-  + BR PoderData ≈2026-08-23: 42.0/50.0 [news]
-  + BR PoderData ≈2026-08-23: 50.0/50.0 [news]
-  + BR Quaest ≈2026-08-29: 45.0/48.0 [news]
-  + BR Quaest ≈2026-08-29: 48.0/48.0 [news]
-  + BR Datafolha ≈2026-08-30: 45.0/51.0 [news]
-  + BR Real Time Big Data ≈2026-08-30: 60.0/37.0 [news]
-  + BR Datafolha ≈2026-08-30: 51.0/None [news]
-  + MX Pollster not named (press) ≈2026-09-03: 71.8/None [news]
-  + BR Quaest ≈2026-09-03: 43.0/50.0 [news]
-  + BR Ideia ≈2026-09-05: 48.4/48.4 [news]
-  + BR PoderData ≈2026-09-06: 51.0/51.0 [news]
-  + BR AtlasIntel ≈2026-09-06: 43.7/53.8 [news]
-  + BR PoderData ≈2026-09-06: 42.0/52.0 [news]
-  + BR Datafolha ≈2026-09-07: 47.0/50.0 [news]
-  + BR CNT/MDA ≈2026-09-11: 45.9/49.7 [news]
-  + BR Ipsos ≈2026-09-12: 42.0/53.0 [news]
-  + BR Ipsos ≈2026-09-12: 33.0/None [news]
-  + PE Ipsos ≈2026-09-13: 42.0/48.0 [news]
-  + BR Datafolha ≈2026-09-13: 50.0/50.0 [news]
-  + PE IEP ≈2026-09-14: 49.0/49.0 [news]
-  + BR PoderData ≈2026-09-14: 75.0/None [news]
-  + BR Quaest ≈2026-09-17: 44.0/50.0 [news]
-  + BR Quaest ≈2026-09-17: 50.0/50.0 [news]
-  + BR Quaest ≈2026-09-19: 62.0/32.0 [news]
-  + BR AtlasIntel ≈2026-09-19: 45.4/53.0 [news]
-  + BR AtlasIntel ≈2026-09-19: 53.0/None [news]
-  + BR Datafolha ≈2026-09-20: 47.0/50.0 [news]
-  + BR Futura ≈2026-09-20: 44.2/53.3 [news]
-  + BR PoderData ≈2026-09-20: 50.0/50.0 [news]
-  + BR PoderData ≈2026-09-20: 42.0/51.0 [news]
-  + BR Quaest ≈2026-09-24: 46.0/49.0 [news]
-  + BR Ideia ≈2026-09-26: 49.0/49.0 [news]
-  + BR PoderData ≈2026-09-29: 44.0/49.0 [news]
-  + BR CNT/MDA ≈2026-09-29: 47.4/49.2 [news]
-  + BR AtlasIntel ≈2026-10-05: 44.7/53.4 [news]
-  + BR Quaest ≈2026-10-10: 45.0/48.0 [news]
-  + BR Quaest ≈2026-10-10: 48.0/48.0 [news]
-  + BR Datafolha ≈2026-10-11: 50.0/50.0 [news]
-  + BR Datafolha ≈2026-10-11: 48.0/48.0 [news]
-  + BR PoderData ≈2026-10-12: 46.0/47.0 [news]
-  + BR CNT/MDA ≈2026-10-12: 47.7/49.3 [news]
-  + BR CNT/MDA ≈2026-10-12: 49.3/49.3 [news]
-  + BR AtlasIntel ≈2026-10-15: 52.3/None [news]
-  + BR PoderData ≈2026-10-15: 44.0/50.0 [news]
-  + CL Cadem ≈2026-10-16: 69.0/None [news]
+  · Google News: 2925 unique articles read
+  + BR Quaest ≈2025-12-12: 48.0/49.0 [news]
+  + MX Pollster not named (press) ≈2026-01-03: 75.6/None [news]
+  + BR Quaest ≈2026-02-07: 45.0/49.0 [news]
+  + BR Datafolha ≈2026-06-16: 38.0/38.0 [news]
+  + BR Futura ≈2026-08-07: 47.3/49.9 [news]
+  + PE Ipsos ≈2026-08-10: 50.0/None [news]
+  + CL Black White ≈2026-08-17: 58.0/None [news]
+  + CL Criteria ≈2026-08-26: 55.0/None [news]
+  + BR AtlasIntel ≈2026-08-27: 45.4/45.4 [news]
+  + BR Quaest ≈2026-09-03: 50.0/50.0 [news]
+  + PE Pollster not named (press) ≈2026-10-19: 35.6/None [news]
   · Google News queries failed: 0
