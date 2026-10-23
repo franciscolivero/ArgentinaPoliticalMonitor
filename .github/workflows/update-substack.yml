@@ -45,7 +45,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A charts_data datawrapper_charts.json posts 2>/dev/null || true
+          git add -A charts_data datawrapper_charts.json datawrapper_log.txt posts 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "Substack charts/drafts ($(date -u +%Y-%m-%d))"
             git pull --rebase
