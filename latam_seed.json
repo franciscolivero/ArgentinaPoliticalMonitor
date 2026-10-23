@@ -108,21 +108,48 @@
   ],
   "CO": [
    {
-    "date": "2026-09-05",
-    "firm": "AtlasIntel",
-    "approve": 52,
-    "disapprove": 43,
-    "approx": true,
-    "source": "https://www.lasillavacia.com/en-vivo/primera-encuesta-del-presidente-de-la-espriella-52-positivo-43-negativo",
-    "origin": "manual"
-   },
-   {
     "date": "2026-09-30",
     "firm": "Mitofsky (ranking)",
     "approve": 53,
     "disapprove": null,
     "approx": true,
     "source": "https://www.poresto.com/mexico/2026/10/5/claudia-sheinbaum-alcanza-72-de-aprobacion-y-supera-a-trump-lula-y-milei-en-medicion-de-mitofsky.html",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-03",
+    "firm": "AtlasIntel",
+    "approve": 51.8,
+    "disapprove": 43.2,
+    "approx": false,
+    "source": "https://www.elcolombiano.com/colombia/aprobacion-de-de-la-espriella-baja-49-porciento-encuesta-atlas-intel-asi-le-va-a-otros-lideres-del-pais-OG42339106",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-10-07",
+    "firm": "AtlasIntel",
+    "approve": 48.7,
+    "disapprove": 44.6,
+    "approx": false,
+    "source": "https://www.elcolombiano.com/colombia/aprobacion-de-de-la-espriella-baja-49-porciento-encuesta-atlas-intel-asi-le-va-a-otros-lideres-del-pais-OG42339106",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 53.6,
+    "disapprove": 41.6,
+    "approx": true,
+    "source": "https://analisisurbano.org/abelardo-de-la-espriella-cae-aprobacion-encuesta-octubre-2026/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-10-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 49.7,
+    "disapprove": 47.0,
+    "approx": false,
+    "source": "https://analisisurbano.org/abelardo-de-la-espriella-cae-aprobacion-encuesta-octubre-2026/",
     "origin": "manual"
    }
   ],
@@ -443,6 +470,26 @@
     "disapprove": 54.3,
     "approx": false,
     "source": "https://revistasumma.com/bukele-sheinbaum-y-chaves-encabezan-ranking-regional-de-presidentes-con-popularidad/",
+    "origin": "manual"
+   }
+  ],
+  "BR": [
+   {
+    "date": "2026-07-25",
+    "firm": "AtlasIntel",
+    "approve": 47.6,
+    "disapprove": 51.2,
+    "approx": true,
+    "source": "https://www.opovo.com.br/noticias/politica/2026/07/29/lula-tem-476-de-aprovacao-e-512-de-desaprovacao-aponta-pesquisa-atlas-bloomberg.html",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-30",
+    "firm": "Mitofsky (ranking)",
+    "approve": 32,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://www.poresto.com/mexico/2026/10/5/claudia-sheinbaum-alcanza-72-de-aprobacion-y-supera-a-trump-lula-y-milei-en-medicion-de-mitofsky.html",
     "origin": "manual"
    }
   ]

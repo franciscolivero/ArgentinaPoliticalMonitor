@@ -66,20 +66,23 @@ PRESIDENTS = {
            ["ipsos", "dichter neira", "unimer", "gallup panama", "prodigious", "ipec", "tvn", "la prensa"]),
     "GT": ("Guatemala", "Bernardo Arévalo", ["arevalo"], "2024-01-14", "GT",
            ["prodatos", "prensa libre", "fundacion libertad y desarrollo", "proyecta", "aprobacion cid"]),
+    "BR": ("Brazil", "Luiz Inácio Lula da Silva", ["lula"], "2023-01-01", "BR",
+           ["datafolha", "quaest", "genial quaest", "atlas", "atlasintel", "ipec", "poderdata", "parana pesquisas",
+            "cnt mda", "mda", "ipespe", "real time big data", "ideia", "futura", "vox populi"]),
     "HN": ("Honduras", "Nasry Asfura", ["asfura"], "2026-01-27", "HN",
            ["eric", "eric sj", "le vote", "paradigma", "tresearch", "unah"]),
 }
-REGIONAL = ["atlasintel", "atlas intel", "cid gallup", "cid-gallup", "gallup", "ipsos", "latinobarometro",
+REGIONAL = ["cb", "atlasintel", "atlas intel", "cid gallup", "cid-gallup", "gallup", "ipsos", "latinobarometro",
             "mitofsky", "comunicaliza", "cb consultora", "cb global"]
 
 QUERIES = ["aprobación {s} encuesta", "aprueba gestión {s} encuesta", "desaprobación {s} encuesta",
-           "aprobación {s} sondeo", "popularidad {s} encuesta"]
+           "aprobación {s} sondeo", "popularidad {s} encuesta", "favorabilidad {s} encuesta"]
 # headlines that name the pollster are the ones we can attribute: search each country's main firms too
 FIRM_QUERIES = {
     "CL": ["Cadem", "Criteria", "Pulso Ciudadano", "CEP", "Panel Ciudadano UDD"],
     "BO": ["Ipsos Ciesmori", "Diagnosis", "Captura Consulting"],
     "PE": ["Ipsos", "Datum", "IEP", "CPI"],
-    "CO": ["Invamer", "Guarumo", "CNC", "AtlasIntel", "Opinómetro"],
+    "CO": ["Invamer", "Guarumo", "CNC", "AtlasIntel", "Opinómetro", "YanHaas", "GAD3", "Datexco", "EcoAnalítica"],
     "VE": ["Datanálisis", "Delphos", "Meganálisis", "AtlasIntel"],
     "MX": ["El Financiero", "Enkoll", "Mitofsky", "Buendía & Márquez", "Demoscopia Digital"],
     "EC": ["Cedatos", "Comunicaliza", "Click Research", "Negocios & Estrategias"],
@@ -87,24 +90,34 @@ FIRM_QUERIES = {
     "PA": ["CID Gallup", "Ipsos", "Dichter & Neira", "Prodigious"],
     "GT": ["CID Gallup", "Prodatos", "Fundación Libertad y Desarrollo"],
     "HN": ["CID Gallup", "ERIC", "Le Vote", "Paradigma"],
+    "BR": ["Datafolha", "Quaest", "AtlasIntel", "Ipec", "PoderData", "Paraná Pesquisas", "CNT/MDA"],
 }
 UNNAMED = "Pollster not named (press)"
 RSS = "https://news.google.com/rss/search?q={q}+when:{w}&hl=es-419&gl={gl}&ceid={gl}:es-419"
+RSS_PT = "https://news.google.com/rss/search?q={q}+when:{w}&hl=pt-BR&gl=BR&ceid=BR:pt-419"
+LANG = {"BR": "pt"}
+QUERIES_PT = ["aprovação {s} pesquisa", "desaprovação {s} pesquisa", "aprovação governo {s}",
+              "avaliação governo {s} pesquisa aprova"]
 
 OFF_TOPIC = re.compile(r"\branking\b|\bimagen\b(?!.{0,40}gesti[oó]n)|alcald|gobernador|intendente|"
                        r"intenci[oó]n de voto|primera vuelta|segunda vuelta|falso|bulo|"
-                       r"\bfake\b|desmiente", re.I)
-ON_TOPIC = re.compile(r"aprob|aprueb|gesti[oó]n|popularidad|respaldo", re.I)
+                       r"\bfake\b|desmiente|inten[cç][aã]o de voto|turno|prefeit|governador|\bvotos\b|"
+                       r"lidera (?:a )?(?:corrida|disputa)|empate t[eé]cnico|cen[aá]rio", re.I)
+ON_TOPIC = re.compile(r"aprob|aprueb|aprov|gesti[oó]n|popularidad|respaldo|favorabilidad", re.I)
 PCT = r"(\d{1,2}(?:[.,]\d{1,2})?)\s*%"
-GAP_A = r"(?:(?!desaprob|desaprueb|rechaz)[^.%]){0,40}?"
-GAP_D = r"(?:(?!aprob|aprueb|respald|\by\b)[^.%]){0,40}?"
-FROM_TO = r"[^.%]{0,60}?\bde(?:l)?\s+\d{1,2}(?:[.,]\d{1,2})?\s*%\s+al?\s+" + PCT   # "cae de 65% a 32%"
-APPROVE = [re.compile(r"(?<!des)aprobaci[oó]n" + FROM_TO, re.I),
-           re.compile(PCT + GAP_A + r"(?<!des)(?:aprueba|aprobaci[oó]n|respalda)", re.I),
-           re.compile(r"(?<!des)(?:aprobaci[oó]n|aprueba)[^.%]{0,60}?" + PCT, re.I)]
-DISAPPROVE = [re.compile(r"(?:desaprobaci[oó]n|rechazo)" + FROM_TO, re.I),
-              re.compile(r"(?:desaprobaci[oó]n|desaprueba|rechazo)[^.%]{0,60}?" + PCT, re.I),
-              re.compile(PCT + GAP_D + r"(?:desaprueba|desaprobaci[oó]n|rechaza)", re.I)]
+GAP_A = r"(?:(?!desaprob|desaprueb|desaprov|reprov|rechaz)[^.;%]){0,40}?"
+GAP_D = r"(?:(?!aprob|aprueb|aprov|respald|\by\b|\be\b)[^.;%]){0,40}?"
+A_NOUN = r"(?:aprobaci[oó]n|aprova[cç][aã]o|favorabilidad)"
+A_VERB = r"(?:aprueban?|aprovam?|respalda)"
+D_NOUN = r"(?:desaprobaci[oó]n|desaprova[cç][aã]o|reprova[cç][aã]o|rechazo|desfavorabilidad)"
+D_VERB = r"(?:desaprueban?|desaprovam?|reprovam?|rechaza)"
+FROM_TO = r"[^.%]{0,60}?\b(?:de(?:l)?|d[eo])\s+\d{1,2}(?:[.,]\d{1,2})?\s*%\s+(?:al?|para)\s+" + PCT   # "cae de 65% a 32%"
+APPROVE = [re.compile(r"(?<!des)(?<!re)" + A_NOUN + FROM_TO, re.I),
+           re.compile(PCT + GAP_A + r"(?<!des)(?<!re)(?:" + A_VERB + "|" + A_NOUN + ")", re.I),
+           re.compile(r"(?<!des)(?<!re)(?:" + A_NOUN + "|" + A_VERB + r")[^.%]{0,60}?" + PCT, re.I)]
+DISAPPROVE = [re.compile(D_NOUN + FROM_TO, re.I),
+              re.compile(r"(?:" + D_NOUN + "|" + D_VERB + r")[^.%]{0,60}?" + PCT, re.I),
+              re.compile(PCT + GAP_D + r"(?:" + D_VERB + "|" + D_NOUN + ")", re.I)]
 
 BW, STEP, FIRM_WIN = 21, 7, 30
 
@@ -123,7 +136,10 @@ def nice_firm(alias):
              "tresearch": "TResearch", "eric": "ERIC-SJ", "eric sj": "ERIC-SJ", "panel ciudadano": "Panel Ciudadano UDD",
              "centro de estudios publicos": "CEP", "centro nacional de consultoria": "CNC",
              "instituto de estudios peruanos": "IEP", "cb global": "CB Consultora", "dichter neira": "Dichter & Neira",
-             "negocios estrategias": "Negocios & Estrategias", "maluk": "Maluk Research"}
+             "negocios estrategias": "Negocios & Estrategias", "maluk": "Maluk Research",
+             "atlas": "AtlasIntel", "cb": "CB Consultora (imagen positiva)", "cb consultora": "CB Consultora (imagen positiva)",
+             "genial quaest": "Quaest", "cnt mda": "CNT/MDA", "mda": "CNT/MDA", "poderdata": "PoderData",
+             "parana pesquisas": "Paraná Pesquisas"}
     return names.get(alias, alias.title())
 
 
@@ -135,16 +151,23 @@ def find_firm(text, firms):
     return None
 
 
-VAGUE = re.compile(r"(?:menos|m[aá]s|cerca|debajo|encima|alrededor|casi|supera|superior|inferior)\s+(?:de|del|al|a)?\s*(?:el\s+)?$", re.I)
+VAGUE = re.compile(r"(?:menos|m[aá]s|mais|cerca|debajo|abaixo|encima|acima|alrededor|casi|quase|supera|superior|inferior)\s+(?:de|del|do|da|al|a)?\s*(?:el\s+|o\s+)?$", re.I)
 
 
 def first(pats, text):
-    for p in pats:
+    """pats[0] is the 'from X% to Y%' form and wins outright; otherwise the tightest keyword-number
+    pair wins, so '52,9% desaprovam … e 45,4% aprovam' credits each figure to its own verb."""
+    best = None
+    for i, p in enumerate(pats):
         for m in p.finditer(text):
             if VAGUE.search(text[max(0, m.start(1) - 25):m.start(1)]):
                 continue                      # "menos del 50%" is a threshold, not a reading
-            return float(m.group(1).replace(",", "."))
-    return None
+            if i == 0:
+                return float(m.group(1).replace(",", "."))
+            span = m.end() - m.start()
+            if best is None or span < best[0]:
+                best = (span, float(m.group(1).replace(",", ".")))
+    return best[1] if best else None
 
 
 def parse_item(item, code):
@@ -165,6 +188,9 @@ def parse_item(item, code):
         firm = UNNAMED
     if code == "BO" and firm == "Ipsos":
         firm = "Ipsos Ciesmori"
+    if re.search(r"favorabilidad|imagen favorable", title, re.I) and not re.search(r"aprob|aprueb|aprov", title, re.I) \
+            and "imagen" not in firm:
+        firm += " (favorabilidad)"
     ap = first(APPROVE, title)
     ap = ap if ap is not None else first(APPROVE, text)
     dp = first(DISAPPROVE, title)
@@ -194,7 +220,7 @@ RANK_QUERIES = [("ranking CB presidentes América", "AR"), ("ranking presidentes
                 ("AtlasIntel Latam Pulse aprobación", "CO"), ("presidentes mejor valorados América encuesta", "AR")]
 RANK_WIN = 48
 # other leaders who appear in these rankings: they are never credited, but they end a name's window
-STOPPERS = ["milei", "lula", "orsi", "pena", "ortega", "abinader", "chaves", "laura fernandez", "trump",
+STOPPERS = ["milei", "orsi", "pena", "ortega", "abinader", "chaves", "laura fernandez", "trump",
             "carney", "petro", "boric", "balcazar", "jeri", "boluarte", "arce", "xiomara", "castro", "maduro",
             "takaichi", "meloni", "frederiksen", "trudeau", "putin", "john lee", "macron", "merz",
             "laura fernandez", "noboa padre", "starmer", "sanchez", "modi", "erdogan", "xi jinping"]
@@ -268,10 +294,10 @@ def is_multi(item):
                           title, re.I)) or len(codes) > 1
 
 
-def fetch_query(q, window, gl):
+def fetch_query(q, window, gl, lang="es"):
     import requests
     from urllib.parse import quote_plus
-    url = RSS.format(q=quote_plus(q), w=window, gl=gl)
+    url = (RSS_PT if lang == "pt" else RSS).format(q=quote_plus(q), w=window, gl=gl)
     try:
         r = requests.get(url, timeout=30, headers=latam_sources.UA)
         r.raise_for_status()
@@ -293,20 +319,25 @@ def fetch_query(q, window, gl):
 
 def fetch(code, window):
     _, pres, tokens, _, gl, _ = PRESIDENTS[code]
-    surname = {"CO": "De la Espriella", "VE": "Delcy Rodríguez"}.get(code, pres.split()[-1])
+    surname = {"CO": "De la Espriella", "VE": "Delcy Rodríguez", "BR": "Lula"}.get(code, pres.split()[-1])
+    lang = LANG.get(code, "es")
+    word = "aprovação" if lang == "pt" else "aprobación"
     items = []
-    for q in QUERIES:
-        items.extend(fetch_query(q.format(s=surname), window, gl))
+    for q in (QUERIES_PT if lang == "pt" else QUERIES):
+        items.extend(fetch_query(q.format(s=surname), window, gl, lang))
     for firm in FIRM_QUERIES.get(code, []):
-        items.extend(fetch_query(f"{firm} {surname} aprobación", window, gl))
+        items.extend(fetch_query(f"{firm} {surname} {word}", window, gl, lang))
     return items
 
 
 def is_dup(p, polls):
+    """Same firm, approval within 1.5 pts, and close in time. Weekly trackers (Cadem, Criteria)
+    publish similar numbers a week apart, so exact-dated polls only merge within 4 days."""
     t = datetime.date.fromisoformat(p["date"])
     for q in polls:
+        win = 4 if not (p.get("approx") or q.get("approx")) else 12
         if q["firm"] == p["firm"] and abs(q["approve"] - p["approve"]) <= 1.5 and \
-           abs((datetime.date.fromisoformat(q["date"]) - t).days) <= 20:
+           abs((datetime.date.fromisoformat(q["date"]) - t).days) <= win:
             return q
     return None
 
@@ -374,6 +405,8 @@ def main():
     # history in latam_approval.json is never overwritten when seeds are added
     seed_path = HERE / "latam_seed.json"
     if seed_path.exists():
+        for code in store:                      # the seed file is the only home of manual rows
+            store[code] = [p for p in store[code] if p.get("origin") != "manual"]
         seed = json.loads(seed_path.read_text(encoding="utf-8")).get("countries", {})
         for code, rows in seed.items():
             if code not in store:
@@ -384,7 +417,7 @@ def main():
                 same = [q for q in store[code] if q["firm"] == p["firm"] and q["date"] == p["date"]]
                 if same:
                     same[0].update(p)
-                elif not is_dup(p, store[code]):
+                else:                            # curated rows are trusted as distinct polls
                     store[code].append(dict(p))
 
     added = 0

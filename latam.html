@@ -42,7 +42,7 @@
 <main id="top">
   <header class="hero">
     <h1>Latin America</h1>
-    <p class="stand">How eleven presidents are rated at home, averaged from the approval polls reported in each country’s press. Updated every day.</p>
+    <p class="stand">How the region’s presidents are rated at home, averaged from the approval polls reported in each country’s press. Updated every day.</p>
   </header>
 
   <section class="block" id="ranking">
@@ -91,6 +91,7 @@
       yshift:-(b.margin.b-2),showarrow:false,text:'Source: Francisco Olivero',font:{family:'Archivo, sans-serif',size:11,color:'#8C99A7'}}]);
     return b;
   }
+  var MIN_POLLS=2;   // a country with a single observation is left off the page until a second one arrives
   function last(a){ return a&&a.length?a[a.length-1]:null; }
   function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
 
@@ -112,7 +113,7 @@
     var rows=[];
     codes.forEach(function(c){
       var k=L.countries[c], a=k.avg&&k.avg.approve;
-      if(a&&a.values&&a.values.length) rows.push({name:k.president,
+      if(a&&a.values&&a.values.length&&(k.polls||[]).length>=MIN_POLLS) rows.push({name:k.president,
         country:k.country, v:last(a.values), d:last(k.polls.map(function(p){return p.date;}).sort()), n:k.polls.length, ar:false});
     });
     if(AR&&AR.latest) rows.push({name:'Javier Milei', country:'Argentina', v:AR.latest.approve, d:(AR.updated||'').slice(0,10), n:(AR.polls||[]).length, ar:true});
@@ -136,6 +137,7 @@
     codes.sort(function(a,b){ return L.countries[a].country.localeCompare(L.countries[b].country); });
     codes.forEach(function(c){
       var k=L.countries[c], id='c-'+c.toLowerCase();
+      if((k.polls||[]).length<MIN_POLLS) return;
       var sec=document.createElement('section'); sec.className='block'; sec.id=id;
       sec.innerHTML='<h2>'+esc(k.country)+'<span>'+esc(k.president)+'</span></h2><div class="plot" id="p-'+id+'" style="height:300px"></div>';
       grid.appendChild(sec);
