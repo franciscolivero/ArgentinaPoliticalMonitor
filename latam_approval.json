@@ -12,6 +12,33 @@
      "origin": "manual"
     },
     {
+     "date": "2026-10-07",
+     "firm": "Cadem",
+     "approve": 64.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNQWtMTU1xME9SZlhiSTRsRU8tbG94U2VSd3Z4NWxrZlkydk1NRWQ0WGdlVXpINEtCUk52MlN1VGdrcUwwR1p1Ym0zSlFuWGRnVjBKajRnQ2IybXV5Z3ZoaWRtd3hQVDhVd2w3dmJLYTgzTnY3Ml9XcjdodVdzdWpLazJQSWtpTk5nb3dUOEhhdjlHSWpzUVZwaE4tTm9CUVV3TXdTOHIwLWxRUDVFdU44dDBqN1BpSnBEYTROc2pB?oc=5",
+     "origin": "news"
+    },
+    {
+     "date": "2026-10-07",
+     "firm": "Cadem",
+     "approve": 32.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNeUlUMWlIN3hsUTdUem02ZUpYSWxhMjdSekdNMHZzak9HYUZCcjBfVnpaMjFjcXh3QkFXVnNwdlRmZS05ZUpVUU1EUnZYeElwZUZQTXVnYkpHNEdvaDFDdTItZmUzRzNnN3FzWk1adE10Z2U3MzF1cTZoUTZCd2JZNGZzVURJMldMZ2Yzb0ctSnBqQXpnZGI3VFlLYjR1NzVraDdULXZmaEFacE8tZUdVTjVJQTA1SDZUcGxYN0JtenFKYVp3dzNJRUg0c2g2RnVTcTFLWXM2b3RuTHc?oc=5",
+     "origin": "news"
+    },
+    {
+     "date": "2026-10-07",
+     "firm": "Criteria",
+     "approve": 64.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQUjk4ZlBwdlBjUVJrQ2NVd2RfMzhUb3hUYk83U1RFM0w1MWkyRW56N3JiYlU2WEt3Y2JxMHFRUlhxZlVFcVhhbjRpRHZYTGZuZWIzemJUV0d2VGZRc2JNcXpfZTU1ejRkdXZoRnM3dWIwYTlQYkxkWUVGQjZ6SERkaDlUMGppdThPSVVPUmZLWWNtZWxSd0pCNUlxM2NLVDBFSnY0LVJLRFp4b1ZaX0V1U3VNUnRUSjZXWkdNSXNlZmlWZ2Y5WUE?oc=5",
+     "origin": "news"
+    },
+    {
      "date": "2026-10-11",
      "firm": "Criteria",
      "approve": 27,
@@ -51,10 +78,10 @@
       "2026-10-16"
      ],
      "values": [
-      31.5,
-      31.2,
-      30.8,
-      30.7
+      39.8,
+      39.5,
+      39.2,
+      39.1
      ]
     },
     "disapprove": {
@@ -279,6 +306,51 @@
      "origin": "manual"
     },
     {
+     "date": "2026-08-09",
+     "firm": "Ipsos",
+     "approve": 57.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQRzA3X0lsXzdEdG9nWC1hbHR1VXo2OTlhVnJETG11YV8tbzMwSEMxWFpzQ2VqODlJQVVOMzUwQlczenJPeWs0MGJ3YXI2OWYtekZvNkd2TVV5RHhUM3BCa0x4OVh4OTkyTFFaY3FVTkIxRkF2SkdfSEszN0dtLUhER1NYZHp6VFlNRnVwWVJOQkxZM1NQeGdLVno5Y1lIaXFLMHZIemcxV0Q4aWoyeHU0QUVad3gxOVNNV3luNUdlOFQ0X1BLamlEcEI5ZUczRXE1M3J5X003MGxZaDUwMkJXdExydlZiaTduSEhVZw?oc=5",
+     "origin": "news"
+    },
+    {
+     "date": "2026-08-25",
+     "firm": "CPI",
+     "approve": 52.6,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNQzBWbFdkclVLcG41d3lJdVBuQTlXYUJBbDhQdUdYT3JWNGMzYmI1aXdaSHRGa05CVDlCY1FZX2JWVkkzb05iTWIxOVAzQk11VDBOWEZBNU5xVjhQRWtUWHhYcl9BVFFSTVBlY2QwUjZnQThscWk3N1VEMTF4eThPcDVHeFVyWUJjUzg5aEZJMXBwMlg4NGU3NU1tdV9ETGpKZUFfa2NxUEpFNldOeFpXdUJJRE1tcmNpaHFmaUxPU3ZuclRVLXR1cWNWRUNzaVJ1eGJiM0FGcnUwd2RlREk0bG1WTURSVkFicEZCWTZR0gGIAkFVX3lxTE9rbEZnT3JJU2FkcEJuNkZrcnZzbUhLN3FUdi1feWFZM3k3RGs3aEdJWG1UbXQxeTN5N3pwa09MRVFOLUl0UllzOEtuNnRGU2wwQkNaMzdRQzVQV1J2c0U5N2E4eWswWnZrbTMyYjAwTHljXzJVdmpISjcwNTIxam5KNmx5cUtuTnhGcmdzNzZHQ09nMm9zZlNaT0pfVUFyT3NybXJTY01PVExtM05BSVItUThtRXJQMDFDRTNVdF9JSGQ0NUdYRDZrUlNROGt0Y1R1dFBOVjFWNTZ6YjRiQjVIMXhLeDNYcGROOFVGekVkd2g0aFFCcmREbjN3Wkd5UTZUNDgzVVprVg?oc=5",
+     "origin": "news"
+    },
+    {
+     "date": "2026-09-13",
+     "firm": "Ipsos",
+     "approve": 48.0,
+     "disapprove": 48.0,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNOUxWSlU2bS1HOGNHMm1DcXM3WDJlcXhSWjBoaXRVUXBtSVB4M1JtNDc0STFDbmlRVXRwUHp6dE1tQnp1bTM1dDcwN1VxY2VycWppUmdtbW5rMndRNVB3T3BMUkw3VjBpMVAwQUtkR2V0M1dwMmVHMEtGcmViMnRCWGlmUWRENm9teTJNb3pKWDNMLUxaVjFJQ09yVkx1Z3lKaUVpcXd0R0Z6VGUzWFctSk9JVmZYTW5TQmxUVlZkajBzVUw3Y25kaFplRzBoS0lCWXYxLUk2a3F5cTFEQkxoWVdJWDlpLTRweEJZY2VuVTFicmM?oc=5",
+     "origin": "news"
+    },
+    {
+     "date": "2026-09-14",
+     "firm": "IEP",
+     "approve": 37.0,
+     "disapprove": 49.0,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxORWZ0OHNBbUtjdEhsd0xtNDNLZV8tT1lVLXE3Y18ybFIxM3haUURkTnl5NUhLZnF1YzRVQ3NzMzJuLVAtUmVxVTNzd1psR2xNcXQyUzVteE1qYU9WMi1rYkp3eEpiV29xOW10MXBSVmVMNzQ5dWJVaGVhMEdYa1BhbHFFblRVU0tHSDNXU2U3ZUtMTkxod0lZaER1bDNIenNjcmxZbC1PMDJrWlN3NEZqN2lZR0huOHZaV1VieGotSEREMWxWX0RfQzBTVnUwTlNYMHc?oc=5",
+     "origin": "news"
+    },
+    {
+     "date": "2026-09-14",
+     "firm": "Datum",
+     "approve": 42.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOUXExVlFZbVJBeFNWTnhUYTRKTENxNEpmYmMxQjNaQWUxUFpQQkVyYjdudnhkNHVhTW9lNEN6ZExRV1lieVVINC1qTDJsdFpyM0VMNEFmS0lpVURzSnpQZFZSRGhHVUVGWm1lUEJRTmdYWm81eUNIT1JUekNkRXc5NnVXd3I3b2h3MHlacVVuazBfMFdhZDFXbUtUaDk2dDZyZnJrRTRzUC1ZZDE4NFVSNlVDX3g1OFBtLUxjOXJFbm56dkV0TEQw0gHbAUFVX3lxTE9GblpGQWFaNGdVNHZYYm8xTFhwQVVJZUc5Vy1PekxaUU9ZYmIwWE5iR2lSTlZCdEEyWGJyaGFFZ2pGVFdfSkVVOVo2XzdZTDRZUmlwY2pZa1E0UjRDVHNaVVI1eTdrR1IxTHdnQURFOXFvY1JnX210VUJyV0RqV0NRcmRLMHVLcm13QlM5Q3Y4YzdYZmc2czhTeHJnX3JFYTN5TU5OTS1mLVVFczJTZDcybEswN2dMU2lUY19WWE92VUFyVThkUkY3OFJXemFlWEJRNEpLRjJtVUVJNA?oc=5",
+     "origin": "news"
+    },
+    {
      "date": "2026-09-30",
      "firm": "Mitofsky (ranking)",
      "approve": 49,
@@ -286,6 +358,24 @@
      "approx": true,
      "source": "https://www.poresto.com/mexico/2026/10/5/claudia-sheinbaum-alcanza-72-de-aprobacion-y-supera-a-trump-lula-y-milei-en-medicion-de-mitofsky.html",
      "origin": "manual"
+    },
+    {
+     "date": "2026-10-10",
+     "firm": "AtlasIntel",
+     "approve": 28.3,
+     "disapprove": 53.6,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQYzdpYXhLV1ZLLWVsTC1FUFVnOXl4MlJBcnpnT3dSbEQwZkU2NjctTHJMZUhxMFo1S0w1NlQzR3R1ZDQ1WDJrQWtWclNCbzNzY2x6TjRmVWVvallyUWhKcEVFNEhFdkpBbk5kLW02RHNxUWxIclRXUWFoRXQ0VlBMSDZ5ZEdrTlFteTNEVHJqNzh3TmFmYk1BS0J5SjdRY216OTB1YkRjODJSUVNQQTdRR0x5dXhGWlJFbnRLdWlNdFA5czJpNmVraC1GSkY5MU9yZGZVQl94UE1Qcjl2UUtNLWlUS1FHRGJRSEV2eG1aV1VVX2M?oc=5",
+     "origin": "news"
+    },
+    {
+     "date": "2026-10-12",
+     "firm": "Ipsos",
+     "approve": 40.0,
+     "disapprove": 49.0,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNQWNLT3hlQ2VmWEw4MllhN2I5TXpZZmdlODUxY2RWQU5lTUFqcXYzNGtTenA1aUlnamoteV9yd3pUYU9uT0JJTW1jbGRoZTZIMFJYTUt0dkZhdEpySkNVOWxaRS0tTGpXbHl3a0x6WTBJRDdQVnFXMlhnS05UNFVxbEg5LW9IV2ZWNkFqR2t3SkNJVXZLNW93dXZrYXhSQ3I5djVv?oc=5",
+     "origin": "news"
     }
    ],
    "country": "Peru",
@@ -302,26 +392,50 @@
       "2026-09-11",
       "2026-09-18",
       "2026-09-25",
-      "2026-09-30"
+      "2026-10-02",
+      "2026-10-09",
+      "2026-10-12"
      ],
      "values": [
-      59.6,
-      59.1,
-      58.1,
-      56.4,
-      54.2,
-      52.0,
-      50.5,
-      49.7,
-      49.4
+      54.4,
+      52.8,
+      50.8,
+      48.7,
+      46.6,
+      44.7,
+      43.2,
+      41.9,
+      40.8,
+      39.9,
+      39.5
      ]
     },
     "disapprove": {
      "dates": [
-      "2026-08-07"
+      "2026-08-07",
+      "2026-08-14",
+      "2026-08-21",
+      "2026-08-28",
+      "2026-09-04",
+      "2026-09-11",
+      "2026-09-18",
+      "2026-09-25",
+      "2026-10-02",
+      "2026-10-09",
+      "2026-10-12"
      ],
      "values": [
-      24
+      29.9,
+      33.2,
+      37.1,
+      41.0,
+      44.4,
+      46.8,
+      48.5,
+      49.6,
+      50.3,
+      50.8,
+      51.0
      ]
     }
    }
@@ -338,6 +452,15 @@
      "origin": "manual"
     },
     {
+     "date": "2026-09-06",
+     "firm": "AtlasIntel",
+     "approve": 54.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQeEhfcEs4SlQybXAyX3BtQWJySVUxNHp6c0ZhWmFqdjRBNWtvTVI3Um9mZVY2dVAtM3NFbE9oRWJjRXpTNVFrSnZKa3ZKcHdLNHJBeGx6d3cwNFU5SERHVERsNUF6TjNkc0lMbEh4MVVwQWd4RjNWZU1GQXZpenUxdVcyamx0TjlxSU1ZMFNLQU11MU0ta05LNnN6V0Q0eG84RHV1Wjd5YTRXemlYYXZzM0t4VHJFeVkxM1FqeElFOXNOY2UwZllpQXpPY1JsZG0zT3o1bmtyMXJZbFZsbVNR0gHkAUFVX3lxTE5VcjZNLVF4SDRxSElCRTZzWktOTFdDV2dwQW01Yk5mbHoyWXZQTDRqVTRzSzZfMjU5YU1obWc0Q3VXVHRWUDdVUTNkNnh2d1MzcXc2S0pUUjc4LVZlWG1VMWt2WEhtcDZKb0pFNUxBSzRFVnNjTDZxeWgyVmJRZEsxOGJBT3F4ZGtGVENGbzZQQ05TbkdwQjZYM2g4bS12WElGTWpfYXFoeFVxenJvWmQ1YU5uci0wVjFpSTZxZmNpN0Z6bTBRWmMySDBHdDFNVTV4R0dNQmpKcmRiNFgyVWowZXR4Yw?oc=5",
+     "origin": "news"
+    },
+    {
      "date": "2026-09-30",
      "firm": "Mitofsky (ranking)",
      "approve": 53,
@@ -345,6 +468,15 @@
      "approx": true,
      "source": "https://www.poresto.com/mexico/2026/10/5/claudia-sheinbaum-alcanza-72-de-aprobacion-y-supera-a-trump-lula-y-milei-en-medicion-de-mitofsky.html",
      "origin": "manual"
+    },
+    {
+     "date": "2026-10-12",
+     "firm": "AtlasIntel",
+     "approve": 49.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNSUZHMzBBelJrS0xkblBHcko3aVNXU1JMbGxLUU5RY0xqZW9qZjhkNWVtaEh5dzRfenVlcXdZSWlyVFVqY3E2NThQTFpFOGRDVkdPbTlkRURGdnRsZlhDM3B6eHlSVmU1WE92MHVBMnM0ZjRjUm9QanA1dHY3WC14bG9ZV2Q0LUs2eUZvU3VnUzh6SEpqY01EeVNqV3RCWDBJWU1JWXEwQUEyUGFWY09HV0lfdEFFam1SOEVPbGNHejNzRzJuX0NRbFBLaF9DWW95OWVHMnJhaldUN3VqODI4ZTZ1NVlrcU3SAewBQVVfeXFMTlpCXzBWeVlBamxlWHdVeTVtN2l2aERLUnlpWmJtUXFhQ1U1amh4aE5YTEpNX3lyWFp3ak40ZUtacC1lb1BqdWh6QUk2bkRZcXRMLTN4NmlJb2xRdTFjejB0c19BQmRHXzVjSWgyZVZQMTRpUjMyRm5fUWdUNnVhV0M3TS1kUDRTaUJFaHExeW5kSjg4WWJJYjUzLWQ2NnFJZjRWNmtyRFI5ZEdlMF9ISmJZcGFPb1JiTUJJRy1vSHhHLUR4bDVMZmJVT0x0aEJjbUNsaE9LNnpCWUswSVd3MWNub0lYYXY4b3J5OUU?oc=5",
+     "origin": "news"
     }
    ],
    "country": "Colombia",
@@ -357,14 +489,18 @@
       "2026-09-12",
       "2026-09-19",
       "2026-09-26",
-      "2026-09-30"
+      "2026-10-03",
+      "2026-10-10",
+      "2026-10-12"
      ],
      "values": [
-      52.3,
-      52.4,
       52.5,
-      52.6,
-      52.7
+      52.3,
+      52.0,
+      51.7,
+      51.4,
+      51.2,
+      51.1
      ]
     },
     "disapprove": {
@@ -783,6 +919,24 @@
      "approx": false,
      "source": "https://larepublica.pe/mundo/2026/06/22/una-reciente-encuesta-en-ecuador-revela-una-desaprobacion-del-75-para-el-presidente-daniel-noboa-417494",
      "origin": "manual"
+    },
+    {
+     "date": "2026-07-11",
+     "firm": "Cb Consultora",
+     "approve": 41.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQdUJKa0w3bU52aFVyZ0N2VmhvbWwxNDNTa2FwZTFVYTVFUlc0SDc1Z0ZkWVpFVHY4OUxkRnBoenpkZVNmNzhiblhWMEJZWmZPeDEybURCVTN6aldNd1V2Mk5kUDFjVnR3djVNUE5JUm85NWJ1bDRVemVzczNUb0ZFTXlPQnJYbk1iTlJUS3FnamxjMVM1UjdIeWlSbUwyMGlJNlZSaTZVZEttWWtpdjI4T1NpLXRocGQtLS1udmNoeFg?oc=5",
+     "origin": "news"
+    },
+    {
+     "date": "2026-09-22",
+     "firm": "Click Research",
+     "approve": 43.88,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOdU1aQmNrY1N3Y3NkRGt1b3NsYUdsNUc0bGN3YmJoZnZTa3lLRThNRXlEZ0RVWUc4V0p4LUJWYXpuazdPYWhfekIxbU5uTEhRZkpKbEN4bkR1ajNibkVPYnA1S3Z0aldTU2Jla1ZuTnB0MXNZSUZOVm5GYUNFTzRIRG5fYjFJdkdDeU82RTd0X0F2dmRnSzRvelBoY0RXLUJ4RDdxVk0yY0FTLXRvT3ZvbTlnNWVHaVNFN05JOHkwQlc0Y2FvcDRkZGRLZXo3c1FNdTkwRTNDMzItb1NNdHhnVUFFN1lpeWg40gH8AUFVX3lxTE94Z21jVGIxUU1mVlVpODJxd3VVSkpObWZCNDlkbDBpUE1DZ2ZUcTVycUVZQlhFbVFLZTVwZ1lqNGUtVkJYT3J0MkMteFRIWDg4LXI5YXBfcmhjVmdrV0dNOUEtMUZPRkRCQ0k2MDZYZ29GdXZ2WWw5UTV4ZzJXaXpia3h3enhZRVBWREZiNlRKQmpVczJ0TGplTkZSSmJHUlkwejZRZXA4ZVNyUEZsVnlFeWZfN1U3cExaVDkzRkotaUpyTC1MWU1Ha1REY1czU2RyWF9FRnhHeGRqZW5PNDVTcDJHbXFtUE0zU3g4WWM2bVIzSmpVQjZQNHB3Nw?oc=5",
+     "origin": "news"
     }
    ],
    "country": "Ecuador",
@@ -809,7 +963,21 @@
       "2026-05-31",
       "2026-06-07",
       "2026-06-14",
-      "2026-06-16"
+      "2026-06-21",
+      "2026-06-28",
+      "2026-07-05",
+      "2026-07-12",
+      "2026-07-19",
+      "2026-07-26",
+      "2026-08-02",
+      "2026-08-09",
+      "2026-08-16",
+      "2026-08-23",
+      "2026-08-30",
+      "2026-09-06",
+      "2026-09-13",
+      "2026-09-20",
+      "2026-09-22"
      ],
      "values": [
       35.7,
@@ -821,16 +989,30 @@
       35.6,
       35.2,
       32.7,
-      26.9,
-      23.4,
-      22.6,
-      22.5,
-      22.5,
-      22.5,
-      22.5,
-      22.5,
-      22.5,
-      22.5
+      27.1,
+      23.8,
+      23.3,
+      23.6,
+      24.0,
+      24.7,
+      25.6,
+      26.7,
+      28.1,
+      29.8,
+      31.6,
+      33.4,
+      35.1,
+      36.6,
+      37.9,
+      39.1,
+      40.3,
+      41.7,
+      42.9,
+      43.5,
+      43.8,
+      43.8,
+      43.9,
+      43.9
      ]
     },
     "disapprove": {
@@ -954,6 +1136,15 @@
      "origin": "manual"
     },
     {
+     "date": "2026-10-01",
+     "firm": "Mitofsky",
+     "approve": 90.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOUlhabVBLNWNJTlBLV2VhZVAzMXU5LTRRRDFwTDRYcDYtVGtESEY1R2hfQ3JSLU9VTkFQZk1BOEdEUmMyRnZ5T1ZJb3dGd1dMSGFyLV81S0dOVWVZVmY0UVh0bG5ZUnI2Z0ZhVDFNOUZ4SzRwWl84RUJRU2JWQzNJb1dOVmRlY1FlcVQ2UnBLRnRwQnBtdmNUOV92NTZfckh4NzBOZF9RZw?oc=5",
+     "origin": "news"
+    },
+    {
      "date": "2026-10-08",
      "firm": "CB Consultora (imagen positiva)",
      "approve": 68.3,
@@ -961,6 +1152,15 @@
      "approx": false,
      "source": "https://www.perfil.com/noticias/politica/milei-quedo-14-en-el-ranking-de-presidentes-de-america-latina-quien-lidera-la-encuesta.phtml",
      "origin": "manual"
+    },
+    {
+     "date": "2026-10-10",
+     "firm": "CID Gallup",
+     "approve": 92.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPQ2lqWDZyeGVxU2lrZ29fZnRBeVVuYmotSXlUdWZvTEdyQlBBb2pHZWlsZ2tpS2cxa2JIZXE1WDhuOE5LM0RGX2xSRi1JeWF3ZFd6eHpRN2l3SHBheWxDRm0taU9nZzFQMnBlUlhyVjRJUDN3ZEZkclNSOTgzcUxZbWhfa01JczF2WS1n0gGWAUFVX3lxTE5yVTFOMGZlanZjeGZEZmFqWDN5bnZUUEtULXFXMXNNSl9rcjZmQS02djhXbXRVZ19xRGhQNS1Qb3hKTHRKd1hYX2pFSDBtd3FCZHZIQzBkMW41QzZzWUhkclFiWjYzNUdjSTI5MEEyT0VCMFlONDRSX3RhRW1zc0NlU1FfRWVMWVBtd0pJT19nV1ktSzdhQQ?oc=5",
+     "origin": "news"
     }
    ],
    "country": "El Salvador",
@@ -1003,7 +1203,7 @@
       "2026-09-20",
       "2026-09-27",
       "2026-10-04",
-      "2026-10-08"
+      "2026-10-10"
      ],
      "values": [
       86.0,
@@ -1028,19 +1228,19 @@
       87.9,
       87.8,
       87.7,
+      87.6,
       87.5,
+      87.4,
+      87.1,
       86.9,
-      85.5,
-      84.4,
-      83.7,
-      83.1,
-      82.5,
-      81.8,
-      81.2,
-      80.5,
-      79.8,
-      79.2,
-      78.8
+      86.6,
+      86.3,
+      86.1,
+      85.8,
+      85.6,
+      85.3,
+      85.0,
+      84.8
      ]
     },
     "disapprove": {
@@ -1363,6 +1563,6 @@
    }
   }
  },
- "updated": "2026-10-22T23:59:56Z",
+ "updated": "2026-10-23T00:04:48Z",
  "method": "Google News coverage of national polls and regional rankings (CB Consultora, Mitofsky, AtlasIntel); Gaussian-kernel average, 21-day bandwidth, firm-crowding weights."
 }
