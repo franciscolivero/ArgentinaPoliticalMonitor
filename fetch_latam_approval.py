@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 fetch_latam_approval.py — daily presidential-approval tracker for eleven Latin American countries,
-built entirely from Google News (RSS) coverage of published polls. Feeds latam.html.
+built from the pollsters' own releases and Wikipedia's polling tables (latam_sources.py) plus Google
+News (RSS) coverage of published polls. Feeds latam.html.
 
 For each country it searches Google News in that country's edition, keeps an article only if
   * the headline names the sitting president (surname) and no other tracked president,
@@ -33,6 +34,8 @@ Usage:
 import re, sys, json, html, datetime, pathlib, unicodedata
 from email.utils import parsedate_to_datetime
 from xml.etree import ElementTree as ET
+
+import latam_sources
 
 HERE = pathlib.Path(__file__).parent
 OUT = HERE / "latam_approval.json"
@@ -69,7 +72,23 @@ PRESIDENTS = {
 REGIONAL = ["atlasintel", "atlas intel", "cid gallup", "cid-gallup", "gallup", "ipsos", "latinobarometro",
             "mitofsky", "comunicaliza", "cb consultora", "cb global"]
 
-QUERIES = ["aprobación {s} encuesta", "aprueba gestión {s} encuesta", "desaprobación {s} encuesta"]
+QUERIES = ["aprobación {s} encuesta", "aprueba gestión {s} encuesta", "desaprobación {s} encuesta",
+           "aprobación {s} sondeo", "popularidad {s} encuesta"]
+# headlines that name the pollster are the ones we can attribute: search each country's main firms too
+FIRM_QUERIES = {
+    "CL": ["Cadem", "Criteria", "Pulso Ciudadano", "CEP", "Panel Ciudadano UDD"],
+    "BO": ["Ipsos Ciesmori", "Diagnosis", "Captura Consulting"],
+    "PE": ["Ipsos", "Datum", "IEP", "CPI"],
+    "CO": ["Invamer", "Guarumo", "CNC", "AtlasIntel", "Opinómetro"],
+    "VE": ["Datanálisis", "Delphos", "Meganálisis", "AtlasIntel"],
+    "MX": ["El Financiero", "Enkoll", "Mitofsky", "Buendía & Márquez", "Demoscopia Digital"],
+    "EC": ["Cedatos", "Comunicaliza", "Click Research", "Negocios & Estrategias"],
+    "SV": ["CID Gallup", "LPG Datos", "IUDOP"],
+    "PA": ["CID Gallup", "Ipsos", "Dichter & Neira", "Prodigious"],
+    "GT": ["CID Gallup", "Prodatos", "Fundación Libertad y Desarrollo"],
+    "HN": ["CID Gallup", "ERIC", "Le Vote", "Paradigma"],
+}
+UNNAMED = "Pollster not named (press)"
 RSS = "https://news.google.com/rss/search?q={q}+when:{w}&hl=es-419&gl={gl}&ceid={gl}:es-419"
 
 OFF_TOPIC = re.compile(r"\branking\b|\bimagen\b(?!.{0,40}gesti[oó]n)|alcald|gobernador|intendente|"
@@ -140,7 +159,10 @@ def parse_item(item, code):
     text = f"{title}. {item['desc']}"
     firm = find_firm(text, firms + REGIONAL)
     if not firm:
-        return None
+        # still a poll if the headline says so; kept at half weight in the average
+        if not re.search(r"encuesta|sondeo|medici[oó]n|estudio|consultora|seg[uú]n", title, re.I):
+            return None
+        firm = UNNAMED
     if code == "BO" and firm == "Ipsos":
         firm = "Ipsos Ciesmori"
     ap = first(APPROVE, title)
@@ -174,7 +196,8 @@ RANK_WIN = 48
 # other leaders who appear in these rankings: they are never credited, but they end a name's window
 STOPPERS = ["milei", "lula", "orsi", "pena", "ortega", "abinader", "chaves", "laura fernandez", "trump",
             "carney", "petro", "boric", "balcazar", "jeri", "boluarte", "arce", "xiomara", "castro", "maduro",
-            "takaichi", "meloni", "frederiksen", "trudeau"]
+            "takaichi", "meloni", "frederiksen", "trudeau", "putin", "john lee", "macron", "merz",
+            "laura fernandez", "noboa padre", "starmer", "sanchez", "modi", "erdogan", "xi jinping"]
 
 
 def fold(s):
@@ -274,6 +297,8 @@ def fetch(code, window):
     items = []
     for q in QUERIES:
         items.extend(fetch_query(q.format(s=surname), window, gl))
+    for firm in FIRM_QUERIES.get(code, []):
+        items.extend(fetch_query(f"{firm} {surname} aprobación", window, gl))
     return items
 
 
@@ -296,6 +321,7 @@ def average(polls, key_):
     crowd = np.array([sum(1 for k, q in enumerate(pts) if q["firm"] == p["firm"] and abs(days[k] - days[i]) <= FIRM_WIN)
                       for i, p in enumerate(pts)], float)
     base = 1.0 / crowd
+    base = base * np.array([0.5 if p["firm"] == UNNAMED else 1.0 for p in pts])
     grid = list(np.arange(days[0], days[-1] + 1, STEP))
     if grid[-1] != days[-1]:
         grid.append(days[-1])
@@ -309,15 +335,26 @@ def average(polls, key_):
     return {"dates": dates, "values": vals}
 
 
+RANK = {"manual": 3, "pollster": 2, "wikipedia": 2, "news": 1, "news-ranking": 1}
+
+
 def add(code, p, store, log):
     polls = store[code]
     d = is_dup(p, polls)
-    if d:
-        if d.get("disapprove") is None and p["disapprove"] is not None and str(d.get("origin", "")).startswith("news"):
+    if d is None and p["firm"] == UNNAMED:
+        # an unattributed headline about a poll we already hold from a named firm
+        t = datetime.date.fromisoformat(p["date"])
+        d = next((q for q in polls if abs(q["approve"] - p["approve"]) <= 1.0 and
+                  abs((datetime.date.fromisoformat(q["date"]) - t).days) <= 10), None)
+    if d is not None:
+        if RANK.get(p.get("origin"), 1) > RANK.get(d.get("origin"), 1):
+            d.clear(); d.update(p)                 # a primary source replaces a press report
+            log.append(f"  ~ {code} {p['firm']} {p['date']}: replaced press copy with {p['origin']}")
+        elif d.get("disapprove") is None and p["disapprove"] is not None:
             d["disapprove"] = p["disapprove"]
         return 0
     polls.append(p)
-    log.append(f"  + {code} {p['firm']} ≈{p['date']}: {p['approve']}/{p['disapprove']}")
+    log.append(f"  + {code} {p['firm']} ≈{p['date']}: {p['approve']}/{p['disapprove']} [{p.get('origin')}]")
     return 1
 
 
@@ -352,6 +389,17 @@ def main():
 
     added = 0
     if not rebuild:
+        for code in PRESIDENTS:
+            since = PRESIDENTS[code][3]
+            have = {p.get("source") for p in store[code]}
+            for p in latam_sources.run_all(code, since, have, log):
+                if p["date"] >= since:
+                    added += add(code, p, store, log)
+        names = {c: v[2] for c, v in PRESIDENTS.items()}
+        have_all = {p.get("source") for v in store.values() for p in v}
+        for code, p in latam_sources.run_regional(names, STOPPERS, have_all, log):
+            if p["date"] >= PRESIDENTS[code][3]:
+                added += add(code, p, store, log)
         pool, seen = [], set()
         def take(items):
             for it in items:
