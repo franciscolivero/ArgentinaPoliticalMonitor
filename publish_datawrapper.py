@@ -128,22 +128,44 @@ def main():
         print("no DATAWRAPPER_TOKEN (or --dry-run): charts not published")
         return
     state = json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() else {}
+    report, ok = [], 0
     for key, title, typ, csv_text, meta, post in specs:
+        st = state.get(key, {})
         try:
-            cid = state.get(key, {}).get("id")
+            cid = st.get("id")
+            if cid:
+                try:                                   # the chart may have been deleted by hand
+                    api("GET", f"/charts/{cid}", token)
+                except RuntimeError as e:
+                    if " 404 " in str(e):
+                        cid = None
+                    else:
+                        raise
             if not cid:
                 cid = api("POST", "/charts", token, json={"title": title, "type": typ, "language": "es-ES",
                                                           "metadata": meta})["id"]
-                state[key] = {"id": cid, "title": title, "post": post,
-                              "embed": f"https://datawrapper.dwcdn.net/{cid}/"}
-                print(f"  + created {key} → {cid}")
+                st = {"id": cid, "title": title, "post": post}
+                report.append(f"  + created {key} → {cid}")
+            state[key] = st
             api("PUT", f"/charts/{cid}/data", token, data=csv_text.encode("utf-8"),
-                headers={"Content-Type": "text/csv"})
+                headers={"Content-Type": "text/csv; charset=utf-8"})
             api("POST", f"/charts/{cid}/publish", token)
-            print(f"  ✓ {key} published")
+            info = api("GET", f"/charts/{cid}", token) or {}
+            public = info.get("publicUrl") or ""
+            # publicUrl ends in /<version>/ ; the bare /<id>/ address always serves the latest one
+            st["embed"] = f"https://datawrapper.dwcdn.net/{cid}/"
+            st["public_url"] = public
+            st["published"] = bool(public)
+            ok += bool(public)
+            report.append(f"  {'✓' if public else '?'} {key}: {public or 'publish returned no public URL'}")
         except Exception as e:
-            print(f"  ! {key}: {e}")
+            st["published"] = False
+            state[key] = st
+            report.append(f"  ! {key}: {e}")
     STATE.write_text(json.dumps(state, ensure_ascii=False, indent=1), encoding="utf-8")
+    report.insert(0, f"{ok}/{len(specs)} charts published")
+    (HERE / "datawrapper_log.txt").write_text("\n".join(report) + "\n", encoding="utf-8")
+    print("\n".join(report))
 
 
 if __name__ == "__main__":

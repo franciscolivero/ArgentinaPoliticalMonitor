@@ -23,7 +23,9 @@ SIGN = "F.M.O."
 
 def embed(key, state):
     s = state.get(key)
-    return s["embed"] if s else f"[gráfico {key}: se crea en la primera corrida de publish_datawrapper.py]"
+    if s and s.get("published") and s.get("embed"):
+        return s["embed"]
+    return f"[gráfico {key}: todavía no publicado en Datawrapper; ver datawrapper_log.txt]"
 
 
 def trend_word(d, small=1.0):
