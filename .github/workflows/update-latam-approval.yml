@@ -10,6 +10,7 @@ on:
   push:
     paths:
       - "fetch_latam_approval.py"
+      - "latam_seed.json"
   workflow_dispatch:
 
 permissions:
