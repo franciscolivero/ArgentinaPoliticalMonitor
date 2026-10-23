@@ -19,7 +19,9 @@ To add a pollster: add a WP_SOURCES entry (site, media search term, title filter
 
 import io, re, datetime
 
-UA = {"User-Agent": "Mozilla/5.0 (arg2027-monitor; +github-pages)"}
+UA = {"User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+                      "Chrome/124.0 Safari/537.36 arg2027-monitor/1.0 (github.com; francisco olivero)"),
+      "Accept-Language": "es-419,es;q=0.9,en;q=0.8"}
 ES_MONTHS = {"enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6, "julio": 7,
              "agosto": 8, "septiembre": 9, "setiembre": 9, "octubre": 10, "noviembre": 11, "diciembre": 12}
 EN_MONTHS = {m: i + 1 for i, m in enumerate(["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug",
@@ -254,8 +256,17 @@ def src_wordpress(code, since, have_sources, log, max_new=120):
     return polls
 
 
+def _safe(fn, label, log, *a):
+    try:
+        return fn(*a)
+    except Exception as e:                     # one broken source must never stop the run
+        log.append(f"  ! {label} crashed: {type(e).__name__}: {e}")
+        return []
+
+
 def run_all(code, since, have_sources, log):
-    return src_wikipedia(code, log) + src_wordpress(code, since, have_sources, log)
+    return (_safe(src_wikipedia, f"{code} Wikipedia", log, code, log) +
+            _safe(src_wordpress, f"{code} WordPress", log, code, since, have_sources, log))
 
 
 # ------------------------------------------------------------------ regional, multi-country sources
@@ -420,4 +431,5 @@ def src_cidgallup(names, stoppers, have_sources, log):
 
 
 def run_regional(names, stoppers, have_sources, log):
-    return src_mitofsky(names, stoppers, have_sources, log) + src_cidgallup(names, stoppers, have_sources, log)
+    return (_safe(src_mitofsky, "Mitofsky", log, names, stoppers, have_sources, log) +
+            _safe(src_cidgallup, "CID Gallup", log, names, stoppers, have_sources, log))

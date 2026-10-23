@@ -273,7 +273,7 @@ def fetch_query(q, window, gl):
     from urllib.parse import quote_plus
     url = RSS.format(q=quote_plus(q), w=window, gl=gl)
     try:
-        r = requests.get(url, timeout=30, headers={"User-Agent": "Mozilla/5.0 (arg2027-monitor)"})
+        r = requests.get(url, timeout=30, headers=latam_sources.UA)
         r.raise_for_status()
         root = ET.fromstring(r.content)
     except Exception as e:
@@ -407,10 +407,11 @@ def main():
                 if k not in seen:
                     seen.add(k); pool.append(it)
         for code in PRESIDENTS:
-            take(fetch(code, "365d" if len(store[code]) < 4 else "14d"))
+            take(fetch(code, "365d"))     # Google News returns ≤100 items per query; dedupe handles overlap
         thin = any(len(v) < 4 for v in store.values())
         for q, gl in RANK_QUERIES:
-            take(fetch_query(q, "365d" if thin else "21d", gl))
+            take(fetch_query(q, "365d", gl))
+        log.append(f"  · Google News: {len(pool)} unique articles read")
         for it in sorted(pool, key=lambda x: x["pub"]):
             if is_multi(it):
                 for code, p in parse_multi(it):
@@ -421,6 +422,18 @@ def main():
                     if p:
                         added += add(code, p, store, log)
     print("\n".join(log))
+    # run report committed next to the data, so a thin country can be diagnosed from the repo
+    from collections import Counter
+    rep = [f"run {datetime.datetime.now(datetime.timezone.utc):%Y-%m-%d %H:%M} UTC · {added} new poll(s)", ""]
+    for code, polls in store.items():
+        c = Counter(p.get("origin", "?") for p in polls)
+        rep.append(f"{code} {PRESIDENTS[code][0]:<12} {len(polls):>3} polls  " +
+                   ", ".join(f"{k} {v}" for k, v in sorted(c.items())))
+    rep += ["", "log:"] + [l for l in log if "query failed" not in l][:400]
+    fails = sum(1 for l in log if "query failed" in l)
+    rep.append(f"  · Google News queries failed: {fails}")
+    if not dry:
+        (HERE / "latam_log.txt").write_text("\n".join(rep) + "\n", encoding="utf-8")
 
     for code, polls in store.items():
         polls.sort(key=lambda p: p["date"])
