@@ -55,7 +55,7 @@
   <footer class="sources">
     <h2>Sources</h2>
     <ul>
-      <li><b>Google News</b>, searched daily in each country’s edition for reports of approval polls. A poll is kept only when the headline names the sitting president, cites a known pollster and gives an approval share. Fieldwork dates are rarely reported, so most polls are placed four days before publication. Every poll and its source link is in <code>latam_approval.json</code>.</li>
+      <li><b>Google News</b>, searched daily in each country’s edition for reports of approval polls. A national poll is kept when the headline names the sitting president, cites a known pollster and gives an approval share. Regional rankings are read too: CB Consultora (positive image, monthly), Mitofsky’s ranking of leaders’ approval and AtlasIntel’s Latam Pulse; each president is credited with the figure that follows his or her name. Fieldwork dates are rarely reported, so most polls are placed four days before publication. Every poll and its source link is in <code>latam_approval.json</code>.</li>
       <li><b>Average</b>: Gaussian-kernel poll average with a 21-day bandwidth; a pollster publishing several times a month counts as one voice in that month.</li>
       <li><b>Argentina</b>: the monitor’s own approval average (<a href="index.html#approval">Milei approval</a>).</li>
     </ul>
@@ -111,14 +111,16 @@
     codes.forEach(function(c){
       var k=L.countries[c], a=k.avg&&k.avg.approve;
       if(a&&a.values&&a.values.length) rows.push({name:k.president,
-        country:k.country, v:last(a.values), d:last(a.dates), n:k.polls.length, ar:false});
+        country:k.country, v:last(a.values), d:last(k.polls.map(function(p){return p.date;}).sort()), n:k.polls.length, ar:false});
     });
     if(AR&&AR.latest) rows.push({name:'Javier Milei', country:'Argentina', v:AR.latest.approve, d:(AR.updated||'').slice(0,10), n:(AR.polls||[]).length, ar:true});
     rows.sort(function(a,b){return a.v-b.v;});
-    var labels=rows.map(function(r){return r.name+' ('+r.country+')';});
+    var today=new Date();
+    rows.forEach(function(r){ r.stale=r.d && (today-new Date(r.d+'T00:00:00Z'))/86400000>75; });
+    var labels=rows.map(function(r){return r.name+' ('+r.country+')'+(r.stale?' · last poll '+MON[+r.d.slice(5,7)-1]:'');});
     document.getElementById('chart-rank').style.height=Math.max(260,rows.length*38+70)+'px';
     Plotly.newPlot('chart-rank',[{type:'bar',orientation:'h',y:labels,x:rows.map(function(r){return r.v;}),
-      marker:{color:rows.map(function(r){return r.ar?C.ar:C.bar;})},
+      marker:{color:rows.map(function(r){return r.ar?C.ar:(r.stale?'#C9D6E3':C.bar);})},
       text:rows.map(function(r){return r.v.toFixed(0)+'%';}), textposition:'outside', cliponaxis:false,
       textfont:{family:'Archivo',size:13,color:C.ink},
       customdata:rows.map(function(r){return [r.n, fmtDay(r.d)];}),
