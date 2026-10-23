@@ -104,6 +104,33 @@
     "approx": true,
     "source": "https://www.poresto.com/mexico/2026/10/5/claudia-sheinbaum-alcanza-72-de-aprobacion-y-supera-a-trump-lula-y-milei-en-medicion-de-mitofsky.html",
     "origin": "manual"
+   },
+   {
+    "date": "2026-09-15",
+    "firm": "Datum",
+    "approve": 42,
+    "disapprove": 44,
+    "approx": false,
+    "source": "https://forbes.pe/actualidad/2026-09-18/la-aprobacion-de-fujimori-en-peru-cayo-18-puntos-en-primer-mes-de-gestion-dice-encuesta-de-datum/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-12",
+    "firm": "Ipsos",
+    "approve": 42,
+    "disapprove": 48,
+    "approx": true,
+    "source": "https://caretas.pe/?p=839489",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-10-12",
+    "firm": "Ipsos",
+    "approve": 40,
+    "disapprove": 49,
+    "approx": true,
+    "source": "https://caretas.pe/?p=839489",
+    "origin": "manual"
    }
   ],
   "CO": [
@@ -490,6 +517,33 @@
     "disapprove": null,
     "approx": true,
     "source": "https://www.poresto.com/mexico/2026/10/5/claudia-sheinbaum-alcanza-72-de-aprobacion-y-supera-a-trump-lula-y-milei-en-medicion-de-mitofsky.html",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-10-02",
+    "firm": "Quaest",
+    "approve": 44,
+    "disapprove": 49,
+    "approx": true,
+    "source": "https://www.oliberal.com/politica/quaest-48-desaprovam-o-governo-lula-contra-45-que-aprovam-1.1182657",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-10-13",
+    "firm": "Quaest",
+    "approve": 45,
+    "disapprove": 48,
+    "approx": false,
+    "source": "https://www.oliberal.com/politica/quaest-48-desaprovam-o-governo-lula-contra-45-que-aprovam-1.1182657",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-10-20",
+    "firm": "Quaest",
+    "approve": 46,
+    "disapprove": 47,
+    "approx": false,
+    "source": "https://portaldeprefeitura.com.br/bastidores-da-politica/desaprovacao-do-governo-lula-e-de-47-enquanto-aprovacao-chega-a-46/634535/",
     "origin": "manual"
    }
   ]
