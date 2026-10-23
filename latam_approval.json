@@ -534,6 +534,15 @@
      "origin": "news"
     },
     {
+     "date": "2026-09-03",
+     "firm": "Cadem",
+     "approve": 60.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxONnVvSFFPU0NENlRJa2ZPNFJlaVp6ZktieUdmSFhySzR2cE1ITWJLWUo5bTJRSGd5THFsNV8zbHpONF9iajd5bVk4QWFpSjZfbWxIdlRBeVNIUGVMUGJJY2lFRkVIV1hvMGJEWDFqaHlYaFpiMi1EVGlBa3VfTEQ0cEloVjhlLXVZVFFzSE5YdElMM25qVE9uLUh0Q0ltSmNqeFE4RjlzNG5zZVR5VGNOWW9WYl9zeFFoaFBsLU1ia0kxdFlFMzJuMA?oc=5",
+     "origin": "news"
+    },
+    {
      "date": "2026-09-05",
      "firm": "Criteria",
      "approve": 30.0,
@@ -697,20 +706,20 @@
     },
     {
      "date": "2026-10-16",
-     "firm": "Cadem",
-     "approve": 30,
-     "disapprove": 65,
-     "approx": true,
-     "source": "https://www.eldinamo.cl/politica/2026/10/19/encuesta-cadem-aprobacion-de-kast-cae-al-30-y-un-60-apoya-eliminar-el-indulto-presidencial/",
-     "origin": "manual"
-    },
-    {
-     "date": "2026-10-16",
      "firm": "Criteria",
      "approve": 28,
      "disapprove": 60,
      "approx": true,
      "source": "https://www.emol.com/noticias/Nacional/2026/10/18/1214471/aprobacion-desaprobacion-kast-encuesta-criteria.html",
+     "origin": "manual"
+    },
+    {
+     "date": "2026-10-16",
+     "firm": "Cadem",
+     "approve": 30,
+     "disapprove": 65,
+     "approx": true,
+     "source": "https://www.eldinamo.cl/politica/2026/10/19/encuesta-cadem-aprobacion-de-kast-cae-al-30-y-un-60-apoya-eliminar-el-indulto-presidencial/",
      "origin": "manual"
     },
     {
@@ -780,23 +789,23 @@
       34.9,
       35.6,
       36.7,
-      38.4,
-      40.5,
-      42.8,
+      38.3,
+      40.4,
+      42.7,
       45.1,
-      47.2,
+      47.1,
       48.5,
       48.9,
-      48.2,
-      46.5,
-      44.3,
-      42.1,
-      40.4,
-      39.3,
+      48.3,
+      46.8,
+      44.6,
+      42.4,
+      40.7,
+      39.5,
+      39.0,
       38.8,
-      38.6,
-      38.7,
-      38.8
+      38.8,
+      38.9
      ]
     },
     "disapprove": {
@@ -900,6 +909,15 @@
      "disapprove": null,
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNazU4SVl6NlNpMmZ3WEJYSDlHOWVNMk5qU1ZWUXpRNDJJU1JPYUl0b0JGb0pJckdLWk1ZS2I0NW1pTmFLcmZEWlB5aHFoWnZXb09ia3AxN1NBNGhZNVc1LVZ5Y3dHazNQYkZLTlFFM2l5UmxDWXFNWXlydXdQVXA0XzItT3RENWNIMXZHWHR4Q2RkQ19aRXZLWUtKbzhaeVZ0X2NTZDk3TUMtcWF0YUJ4WDcwd1NEWEZyQXRPaHhFVHpWVVk?oc=5",
+     "origin": "news"
+    },
+    {
+     "date": "2026-01-30",
+     "firm": "Pollster not named (press)",
+     "approve": 65.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPT1JWU0IyemcxYjEzQlhKVXVoYnd0TV9UVjdvaEZhYTI2RWJ4bkF1dEJSTmJvSlNNQ1N0ckpRN1FVZUpRRmszb1A4NVZLQmY4YWd2cWxMSFRNN1E5MmZDYWtmVXRQM0RXR1YyV05JcjhmREppZk5Db1B6Tkc4UEZtcnEwREhjQzF5M3ZNTWpSWjdxVjZ0bTJmcg?oc=5",
      "origin": "news"
     },
     {
@@ -1039,21 +1057,21 @@
       64.8,
       64.6,
       64.4,
-      64.0,
-      63.1,
-      61.5,
+      64.1,
+      63.4,
+      62.4,
+      61.4,
+      60.5,
       59.9,
-      58.8,
-      58.2,
-      57.8,
-      57.5,
+      59.3,
+      58.7,
+      58.0,
       56.9,
-      56.0,
-      54.4,
-      52.3,
-      50.0,
-      48.4,
-      47.8,
+      55.1,
+      52.8,
+      50.3,
+      48.6,
+      47.9,
       48.1,
       48.8,
       49.6,
@@ -1200,6 +1218,15 @@
      "origin": "news"
     },
     {
+     "date": "2026-09-12",
+     "firm": "Ipsos",
+     "approve": 42,
+     "disapprove": 48,
+     "approx": true,
+     "source": "https://caretas.pe/?p=839489",
+     "origin": "manual"
+    },
+    {
      "date": "2026-09-13",
      "firm": "Ipsos",
      "approve": 48.0,
@@ -1245,6 +1272,15 @@
      "origin": "news"
     },
     {
+     "date": "2026-09-15",
+     "firm": "Datum",
+     "approve": 42,
+     "disapprove": 44,
+     "approx": false,
+     "source": "https://forbes.pe/actualidad/2026-09-18/la-aprobacion-de-fujimori-en-peru-cayo-18-puntos-en-primer-mes-de-gestion-dice-encuesta-de-datum/",
+     "origin": "manual"
+    },
+    {
      "date": "2026-09-30",
      "firm": "Mitofsky (ranking)",
      "approve": 49,
@@ -1274,11 +1310,11 @@
     {
      "date": "2026-10-12",
      "firm": "Ipsos",
-     "approve": 40.0,
-     "disapprove": 49.0,
+     "approve": 40,
+     "disapprove": 49,
      "approx": true,
-     "source": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNQWNLT3hlQ2VmWEw4MllhN2I5TXpZZmdlODUxY2RWQU5lTUFqcXYzNGtTenA1aUlnamoteV9yd3pUYU9uT0JJTW1jbGRoZTZIMFJYTUt0dkZhdEpySkNVOWxaRS0tTGpXbHl3a0x6WTBJRDdQVnFXMlhnS05UNFVxbEg5LW9IV2ZWNkFqR2t3SkNJVXZLNW93dXZrYXhSQ3I5djVv?oc=5",
-     "origin": "news"
+     "source": "https://caretas.pe/?p=839489",
+     "origin": "manual"
     },
     {
      "date": "2026-10-19",
@@ -1310,16 +1346,16 @@
       "2026-10-19"
      ],
      "values": [
-      54.5,
-      53.1,
-      51.4,
-      49.5,
-      47.6,
-      45.9,
-      44.4,
+      54.4,
+      53.0,
+      51.3,
+      49.4,
+      47.5,
+      45.8,
+      44.3,
       43.1,
-      42.0,
-      41.0,
+      41.9,
+      40.9,
       40.0,
       39.4
      ]
@@ -1339,17 +1375,17 @@
       "2026-10-12"
      ],
      "values": [
-      30.4,
-      33.7,
-      37.6,
-      41.4,
+      32.2,
+      35.7,
+      39.2,
+      42.2,
       44.5,
-      46.9,
-      48.5,
+      46.1,
+      47.2,
+      48.1,
+      48.8,
       49.5,
-      50.3,
-      50.9,
-      51.1
+      49.8
      ]
     }
    }
@@ -2064,6 +2100,15 @@
      "origin": "news"
     },
     {
+     "date": "2026-04-21",
+     "firm": "CB Consultora (imagen positiva)",
+     "approve": 72.3,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQejF0YWF6aW5BVUlwdXBwN2tvalo2UEZ0UXNoUE9xNFdpTzRmSVdSSlFCbWVsbjZMOEtEclR4WkkteHNTRzJOODAwNUhYSlI4REtjZnVJb19kNjlPSmRtcXRDR2t2anBFWE5LeldmYW1VQWhrbmh2NVY5NFdhRi1ld29BM0VsbzdyS2NaQjdtNnNXRGJvd3R1NnQ5LTc5emp2Y3hjQjV5WUxVV3pOcnJadnY2UkhFZFlNb0Y5SHpnd0RxX19BRzBYdm1nTWQ?oc=5",
+     "origin": "news-ranking"
+    },
+    {
      "date": "2026-04-28",
      "firm": "El Financiero",
      "approve": 68,
@@ -2532,22 +2577,22 @@
       68.5,
       68.3,
       68.0,
-      67.4,
-      66.8,
-      66.2,
+      67.5,
+      67.0,
+      66.5,
+      66.1,
       65.7,
-      65.1,
-      64.5,
-      63.9,
-      63.2,
-      62.5,
-      61.9,
-      61.4,
+      65.3,
+      64.8,
+      64.2,
+      63.4,
+      62.7,
+      62.0,
+      61.5,
       61.1,
       60.9,
       60.8,
-      60.8,
-      60.6,
+      60.7,
       60.4,
       60.1,
       59.8,
@@ -4651,6 +4696,15 @@
      "origin": "manual"
     },
     {
+     "date": "2026-10-02",
+     "firm": "Quaest",
+     "approve": 44,
+     "disapprove": 49,
+     "approx": true,
+     "source": "https://www.oliberal.com/politica/quaest-48-desaprovam-o-governo-lula-contra-45-que-aprovam-1.1182657",
+     "origin": "manual"
+    },
+    {
      "date": "2026-10-05",
      "firm": "AtlasIntel",
      "approve": 44.7,
@@ -4723,6 +4777,15 @@
      "origin": "news"
     },
     {
+     "date": "2026-10-13",
+     "firm": "Quaest",
+     "approve": 45,
+     "disapprove": 48,
+     "approx": false,
+     "source": "https://www.oliberal.com/politica/quaest-48-desaprovam-o-governo-lula-contra-45-que-aprovam-1.1182657",
+     "origin": "manual"
+    },
+    {
      "date": "2026-10-15",
      "firm": "AtlasIntel",
      "approve": 52.3,
@@ -4739,6 +4802,15 @@
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPMVdNSTRIVDdSTk1hX0MtclpQajY5UnpLV3JWODJoTlB2c3hRa2xPYl9UR3FrRmJVXzBNOW1tRW9qa3RRRi1ocHlIc2llUlZlYTktNURlcXJ2d004NVczM2VPQkg4dU1jTVlqaGhzZHVzc0xfSWYxemZTZHhtNFBxSmdvam9VNlFUbzdjYURqZ1hqMWo4ZHh3WE4yYlk?oc=5",
      "origin": "news"
+    },
+    {
+     "date": "2026-10-20",
+     "firm": "Quaest",
+     "approve": 46,
+     "disapprove": 47,
+     "approx": false,
+     "source": "https://portaldeprefeitura.com.br/bastidores-da-politica/desaprovacao-do-governo-lula-e-de-47-enquanto-aprovacao-chega-a-46/634535/",
+     "origin": "manual"
     }
    ],
    "country": "Brazil",
@@ -4798,7 +4870,8 @@
       "2026-09-25",
       "2026-10-02",
       "2026-10-09",
-      "2026-10-15"
+      "2026-10-16",
+      "2026-10-20"
      ],
      "values": [
       46.8,
@@ -4850,9 +4923,10 @@
       46.4,
       45.9,
       45.5,
-      45.3,
+      45.2,
       45.1,
-      45.1
+      45.1,
+      45.2
      ]
     },
     "disapprove": {
@@ -4908,7 +4982,8 @@
       "2026-09-25",
       "2026-10-02",
       "2026-10-09",
-      "2026-10-15"
+      "2026-10-16",
+      "2026-10-20"
      ],
      "values": [
       50.1,
@@ -4961,13 +5036,14 @@
       49.4,
       49.6,
       49.7,
-      49.8,
-      49.8
+      49.7,
+      49.7,
+      49.7
      ]
     }
    }
   }
  },
- "updated": "2026-10-23T15:44:55Z",
+ "updated": "2026-10-23T22:47:31Z",
  "method": "Google News coverage of national polls and regional rankings (CB Consultora, Mitofsky, AtlasIntel); Gaussian-kernel average, 21-day bandwidth, firm-crowding weights."
 }
