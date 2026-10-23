@@ -5,7 +5,9 @@
   "post": "ar",
   "embed": "https://datawrapper.dwcdn.net/DG8e6/",
   "published": true,
-  "public_url": "https://datawrapper.dwcdn.net/DG8e6/1/"
+  "public_url": "https://datawrapper.dwcdn.net/DG8e6/2/",
+  "style_version": 2,
+  "type": "d3-lines"
  },
  "ar-espacio": {
   "id": "6mul2",
@@ -13,7 +15,9 @@
   "post": "ar",
   "embed": "https://datawrapper.dwcdn.net/6mul2/",
   "published": true,
-  "public_url": "https://datawrapper.dwcdn.net/6mul2/1/"
+  "public_url": "https://datawrapper.dwcdn.net/6mul2/2/",
+  "style_version": 2,
+  "type": "d3-lines"
  },
  "ar-alianza": {
   "id": "h9457",
@@ -21,7 +25,9 @@
   "post": "ar",
   "embed": "https://datawrapper.dwcdn.net/h9457/",
   "published": true,
-  "public_url": "https://datawrapper.dwcdn.net/h9457/1/"
+  "public_url": "https://datawrapper.dwcdn.net/h9457/2/",
+  "style_version": 2,
+  "type": "d3-lines"
  },
  "ar-approval": {
   "id": "KF748",
@@ -29,7 +35,9 @@
   "post": "ar",
   "embed": "https://datawrapper.dwcdn.net/KF748/",
   "published": true,
-  "public_url": "https://datawrapper.dwcdn.net/KF748/1/"
+  "public_url": "https://datawrapper.dwcdn.net/KF748/2/",
+  "style_version": 2,
+  "type": "d3-lines"
  },
  "ar-icg": {
   "id": "oF6mg",
@@ -37,7 +45,9 @@
   "post": "ar",
   "embed": "https://datawrapper.dwcdn.net/oF6mg/",
   "published": true,
-  "public_url": "https://datawrapper.dwcdn.net/oF6mg/1/"
+  "public_url": "https://datawrapper.dwcdn.net/oF6mg/2/",
+  "style_version": 2,
+  "type": "d3-lines"
  },
  "ar-icg-comp": {
   "id": "eoZvu",
@@ -45,7 +55,9 @@
   "post": "ar",
   "embed": "https://datawrapper.dwcdn.net/eoZvu/",
   "published": true,
-  "public_url": "https://datawrapper.dwcdn.net/eoZvu/1/"
+  "public_url": "https://datawrapper.dwcdn.net/eoZvu/2/",
+  "style_version": 2,
+  "type": "d3-lines"
  },
  "ar-icg-pres": {
   "id": "W9JHs",
@@ -53,7 +65,9 @@
   "post": "ar",
   "embed": "https://datawrapper.dwcdn.net/W9JHs/",
   "published": true,
-  "public_url": "https://datawrapper.dwcdn.net/W9JHs/1/"
+  "public_url": "https://datawrapper.dwcdn.net/W9JHs/2/",
+  "style_version": 2,
+  "type": "d3-lines"
  },
  "ar-icg-votes": {
   "id": "b2IuX",
@@ -61,7 +75,9 @@
   "post": "ar",
   "embed": "https://datawrapper.dwcdn.net/b2IuX/",
   "published": true,
-  "public_url": "https://datawrapper.dwcdn.net/b2IuX/1/"
+  "public_url": "https://datawrapper.dwcdn.net/b2IuX/2/",
+  "style_version": 2,
+  "type": "d3-scatter-plot"
  },
  "ar-polymarket": {
   "id": "9p7Rn",
@@ -69,7 +85,9 @@
   "post": "ar",
   "embed": "https://datawrapper.dwcdn.net/9p7Rn/",
   "published": true,
-  "public_url": "https://datawrapper.dwcdn.net/9p7Rn/1/"
+  "public_url": "https://datawrapper.dwcdn.net/9p7Rn/2/",
+  "style_version": 2,
+  "type": "d3-lines"
  },
  "ar-governors": {
   "id": "Otsj8",
@@ -77,7 +95,9 @@
   "post": "ar",
   "embed": "https://datawrapper.dwcdn.net/Otsj8/",
   "published": true,
-  "public_url": "https://datawrapper.dwcdn.net/Otsj8/1/"
+  "public_url": "https://datawrapper.dwcdn.net/Otsj8/2/",
+  "style_version": 2,
+  "type": "d3-bars-stacked"
  },
  "latam-ranking": {
   "id": "qkV1I",
@@ -85,7 +105,9 @@
   "post": "latam",
   "embed": "https://datawrapper.dwcdn.net/qkV1I/",
   "published": true,
-  "public_url": "https://datawrapper.dwcdn.net/qkV1I/1/"
+  "public_url": "https://datawrapper.dwcdn.net/qkV1I/2/",
+  "style_version": 2,
+  "type": "d3-bars"
  },
  "latam-sv": {
   "id": "wUZbw",
@@ -93,7 +115,9 @@
   "post": "latam",
   "embed": "https://datawrapper.dwcdn.net/wUZbw/",
   "published": true,
-  "public_url": "https://datawrapper.dwcdn.net/wUZbw/1/"
+  "public_url": "https://datawrapper.dwcdn.net/wUZbw/2/",
+  "style_version": 2,
+  "type": "d3-lines"
  },
  "latam-mx": {
   "id": "DZCj3",
@@ -101,7 +125,9 @@
   "post": "latam",
   "embed": "https://datawrapper.dwcdn.net/DZCj3/",
   "published": true,
-  "public_url": "https://datawrapper.dwcdn.net/DZCj3/1/"
+  "public_url": "https://datawrapper.dwcdn.net/DZCj3/2/",
+  "style_version": 2,
+  "type": "d3-lines"
  },
  "latam-co": {
   "id": "GPHp7",
@@ -109,7 +135,9 @@
   "post": "latam",
   "embed": "https://datawrapper.dwcdn.net/GPHp7/",
   "published": true,
-  "public_url": "https://datawrapper.dwcdn.net/GPHp7/1/"
+  "public_url": "https://datawrapper.dwcdn.net/GPHp7/2/",
+  "style_version": 2,
+  "type": "d3-lines"
  },
  "latam-br": {
   "id": "cMoms",
@@ -117,7 +145,9 @@
   "post": "latam",
   "embed": "https://datawrapper.dwcdn.net/cMoms/",
   "published": true,
-  "public_url": "https://datawrapper.dwcdn.net/cMoms/1/"
+  "public_url": "https://datawrapper.dwcdn.net/cMoms/2/",
+  "style_version": 2,
+  "type": "d3-lines"
  },
  "latam-ec": {
   "id": "JgScd",
@@ -125,7 +155,9 @@
   "post": "latam",
   "embed": "https://datawrapper.dwcdn.net/JgScd/",
   "published": true,
-  "public_url": "https://datawrapper.dwcdn.net/JgScd/1/"
+  "public_url": "https://datawrapper.dwcdn.net/JgScd/2/",
+  "style_version": 2,
+  "type": "d3-lines"
  },
  "latam-pe": {
   "id": "ThsOX",
@@ -133,7 +165,9 @@
   "post": "latam",
   "embed": "https://datawrapper.dwcdn.net/ThsOX/",
   "published": true,
-  "public_url": "https://datawrapper.dwcdn.net/ThsOX/1/"
+  "public_url": "https://datawrapper.dwcdn.net/ThsOX/2/",
+  "style_version": 2,
+  "type": "d3-lines"
  },
  "latam-cl": {
   "id": "ykR5W",
@@ -141,7 +175,9 @@
   "post": "latam",
   "embed": "https://datawrapper.dwcdn.net/ykR5W/",
   "published": true,
-  "public_url": "https://datawrapper.dwcdn.net/ykR5W/1/"
+  "public_url": "https://datawrapper.dwcdn.net/ykR5W/2/",
+  "style_version": 2,
+  "type": "d3-lines"
  },
  "latam-gt": {
   "id": "TsQAm",
@@ -149,7 +185,9 @@
   "post": "latam",
   "embed": "https://datawrapper.dwcdn.net/TsQAm/",
   "published": true,
-  "public_url": "https://datawrapper.dwcdn.net/TsQAm/1/"
+  "public_url": "https://datawrapper.dwcdn.net/TsQAm/2/",
+  "style_version": 2,
+  "type": "d3-lines"
  },
  "latam-ve": {
   "id": "8PQRI",
@@ -157,7 +195,9 @@
   "post": "latam",
   "embed": "https://datawrapper.dwcdn.net/8PQRI/",
   "published": true,
-  "public_url": "https://datawrapper.dwcdn.net/8PQRI/1/"
+  "public_url": "https://datawrapper.dwcdn.net/8PQRI/2/",
+  "style_version": 2,
+  "type": "d3-lines"
  },
  "latam-bo": {
   "id": "jXv7V",
@@ -165,7 +205,9 @@
   "post": "latam",
   "embed": "https://datawrapper.dwcdn.net/jXv7V/",
   "published": true,
-  "public_url": "https://datawrapper.dwcdn.net/jXv7V/1/"
+  "public_url": "https://datawrapper.dwcdn.net/jXv7V/2/",
+  "style_version": 2,
+  "type": "d3-lines"
  },
  "latam-pa": {
   "id": "J8NTB",
@@ -173,6 +215,8 @@
   "post": "latam",
   "embed": "https://datawrapper.dwcdn.net/J8NTB/",
   "published": true,
-  "public_url": "https://datawrapper.dwcdn.net/J8NTB/1/"
+  "public_url": "https://datawrapper.dwcdn.net/J8NTB/2/",
+  "style_version": 2,
+  "type": "d3-lines"
  }
 }
