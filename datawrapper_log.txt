@@ -1,23 +1,23 @@
-0/22 charts published
-  ! ar-runoff: POST /charts/DG8e6/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
-  ! ar-espacio: POST /charts/6mul2/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
-  ! ar-alianza: POST /charts/h9457/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
-  ! ar-approval: POST /charts/KF748/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
-  ! ar-icg: POST /charts/oF6mg/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
-  ! ar-icg-comp: POST /charts/eoZvu/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
-  ! ar-icg-pres: POST /charts/W9JHs/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
-  ! ar-icg-votes: POST /charts/b2IuX/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
-  ! ar-polymarket: POST /charts/9p7Rn/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
-  ! ar-governors: POST /charts/Otsj8/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
-  ! latam-ranking: POST /charts/qkV1I/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
-  ! latam-sv: POST /charts/wUZbw/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
-  ! latam-mx: POST /charts/DZCj3/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
-  ! latam-co: POST /charts/GPHp7/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
-  ! latam-br: POST /charts/cMoms/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
-  ! latam-ec: POST /charts/JgScd/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
-  ! latam-pe: POST /charts/ThsOX/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
-  ! latam-cl: POST /charts/ykR5W/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
-  ! latam-gt: POST /charts/TsQAm/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
-  ! latam-ve: POST /charts/8PQRI/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
-  ! latam-bo: POST /charts/jXv7V/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
-  ! latam-pa: POST /charts/J8NTB/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
+22/22 charts published
+  ✓ ar-runoff: https://datawrapper.dwcdn.net/DG8e6/1/
+  ✓ ar-espacio: https://datawrapper.dwcdn.net/6mul2/1/
+  ✓ ar-alianza: https://datawrapper.dwcdn.net/h9457/1/
+  ✓ ar-approval: https://datawrapper.dwcdn.net/KF748/1/
+  ✓ ar-icg: https://datawrapper.dwcdn.net/oF6mg/1/
+  ✓ ar-icg-comp: https://datawrapper.dwcdn.net/eoZvu/1/
+  ✓ ar-icg-pres: https://datawrapper.dwcdn.net/W9JHs/1/
+  ✓ ar-icg-votes: https://datawrapper.dwcdn.net/b2IuX/1/
+  ✓ ar-polymarket: https://datawrapper.dwcdn.net/9p7Rn/1/
+  ✓ ar-governors: https://datawrapper.dwcdn.net/Otsj8/1/
+  ✓ latam-ranking: https://datawrapper.dwcdn.net/qkV1I/1/
+  ✓ latam-sv: https://datawrapper.dwcdn.net/wUZbw/1/
+  ✓ latam-mx: https://datawrapper.dwcdn.net/DZCj3/1/
+  ✓ latam-co: https://datawrapper.dwcdn.net/GPHp7/1/
+  ✓ latam-br: https://datawrapper.dwcdn.net/cMoms/1/
+  ✓ latam-ec: https://datawrapper.dwcdn.net/JgScd/1/
+  ✓ latam-pe: https://datawrapper.dwcdn.net/ThsOX/1/
+  ✓ latam-cl: https://datawrapper.dwcdn.net/ykR5W/1/
+  ✓ latam-gt: https://datawrapper.dwcdn.net/TsQAm/1/
+  ✓ latam-ve: https://datawrapper.dwcdn.net/8PQRI/1/
+  ✓ latam-bo: https://datawrapper.dwcdn.net/jXv7V/1/
+  ✓ latam-pa: https://datawrapper.dwcdn.net/J8NTB/1/

@@ -4,153 +4,175 @@
   "title": "Milei vs. Kicillof: intención de voto en un ballotage",
   "post": "ar",
   "embed": "https://datawrapper.dwcdn.net/DG8e6/",
-  "published": false
+  "published": true,
+  "public_url": "https://datawrapper.dwcdn.net/DG8e6/1/"
  },
  "ar-espacio": {
   "id": "6mul2",
   "title": "Intención de voto nacional por espacio",
   "post": "ar",
   "embed": "https://datawrapper.dwcdn.net/6mul2/",
-  "published": false
+  "published": true,
+  "public_url": "https://datawrapper.dwcdn.net/6mul2/1/"
  },
  "ar-alianza": {
   "id": "h9457",
   "title": "Si La Libertad Avanza y el PRO fueran juntos",
   "post": "ar",
   "embed": "https://datawrapper.dwcdn.net/h9457/",
-  "published": false
+  "published": true,
+  "public_url": "https://datawrapper.dwcdn.net/h9457/1/"
  },
  "ar-approval": {
   "id": "KF748",
   "title": "Aprobación de Javier Milei, promedio de encuestas",
   "post": "ar",
   "embed": "https://datawrapper.dwcdn.net/KF748/",
-  "published": false
+  "published": true,
+  "public_url": "https://datawrapper.dwcdn.net/KF748/1/"
  },
  "ar-icg": {
   "id": "oF6mg",
   "title": "Índice de Confianza en el Gobierno (UTDT)",
   "post": "ar",
   "embed": "https://datawrapper.dwcdn.net/oF6mg/",
-  "published": false
+  "published": true,
+  "public_url": "https://datawrapper.dwcdn.net/oF6mg/1/"
  },
  "ar-icg-comp": {
   "id": "eoZvu",
   "title": "Componentes del ICG",
   "post": "ar",
   "embed": "https://datawrapper.dwcdn.net/eoZvu/",
-  "published": false
+  "published": true,
+  "public_url": "https://datawrapper.dwcdn.net/eoZvu/1/"
  },
  "ar-icg-pres": {
   "id": "W9JHs",
   "title": "Confianza en el gobierno por presidente, según mes de gestión",
   "post": "ar",
   "embed": "https://datawrapper.dwcdn.net/W9JHs/",
-  "published": false
+  "published": true,
+  "public_url": "https://datawrapper.dwcdn.net/W9JHs/1/"
  },
  "ar-icg-votes": {
   "id": "b2IuX",
   "title": "Confianza en el gobierno y voto del oficialismo, 2005–2025",
   "post": "ar",
   "embed": "https://datawrapper.dwcdn.net/b2IuX/",
-  "published": false
+  "published": true,
+  "public_url": "https://datawrapper.dwcdn.net/b2IuX/1/"
  },
  "ar-polymarket": {
   "id": "9p7Rn",
   "title": "Polymarket: probabilidad de ganar la presidencia en 2027",
   "post": "ar",
   "embed": "https://datawrapper.dwcdn.net/9p7Rn/",
-  "published": false
+  "published": true,
+  "public_url": "https://datawrapper.dwcdn.net/9p7Rn/1/"
  },
  "ar-governors": {
   "id": "Otsj8",
   "title": "Imagen de los gobernadores, Octubre 2026",
   "post": "ar",
   "embed": "https://datawrapper.dwcdn.net/Otsj8/",
-  "published": false
+  "published": true,
+  "public_url": "https://datawrapper.dwcdn.net/Otsj8/1/"
  },
  "latam-ranking": {
   "id": "qkV1I",
   "title": "Aprobación presidencial en América Latina",
   "post": "latam",
   "embed": "https://datawrapper.dwcdn.net/qkV1I/",
-  "published": false
+  "published": true,
+  "public_url": "https://datawrapper.dwcdn.net/qkV1I/1/"
  },
  "latam-sv": {
   "id": "wUZbw",
   "title": "El Salvador: aprobación de Nayib Bukele",
   "post": "latam",
   "embed": "https://datawrapper.dwcdn.net/wUZbw/",
-  "published": false
+  "published": true,
+  "public_url": "https://datawrapper.dwcdn.net/wUZbw/1/"
  },
  "latam-mx": {
   "id": "DZCj3",
   "title": "México: aprobación de Claudia Sheinbaum",
   "post": "latam",
   "embed": "https://datawrapper.dwcdn.net/DZCj3/",
-  "published": false
+  "published": true,
+  "public_url": "https://datawrapper.dwcdn.net/DZCj3/1/"
  },
  "latam-co": {
   "id": "GPHp7",
   "title": "Colombia: aprobación de Abelardo de la Espriella",
   "post": "latam",
   "embed": "https://datawrapper.dwcdn.net/GPHp7/",
-  "published": false
+  "published": true,
+  "public_url": "https://datawrapper.dwcdn.net/GPHp7/1/"
  },
  "latam-br": {
   "id": "cMoms",
   "title": "Brasil: aprobación de Luiz Inácio Lula da Silva",
   "post": "latam",
   "embed": "https://datawrapper.dwcdn.net/cMoms/",
-  "published": false
+  "published": true,
+  "public_url": "https://datawrapper.dwcdn.net/cMoms/1/"
  },
  "latam-ec": {
   "id": "JgScd",
   "title": "Ecuador: aprobación de Daniel Noboa",
   "post": "latam",
   "embed": "https://datawrapper.dwcdn.net/JgScd/",
-  "published": false
+  "published": true,
+  "public_url": "https://datawrapper.dwcdn.net/JgScd/1/"
  },
  "latam-pe": {
   "id": "ThsOX",
   "title": "Perú: aprobación de Keiko Fujimori",
   "post": "latam",
   "embed": "https://datawrapper.dwcdn.net/ThsOX/",
-  "published": false
+  "published": true,
+  "public_url": "https://datawrapper.dwcdn.net/ThsOX/1/"
  },
  "latam-cl": {
   "id": "ykR5W",
   "title": "Chile: aprobación de José Antonio Kast",
   "post": "latam",
   "embed": "https://datawrapper.dwcdn.net/ykR5W/",
-  "published": false
+  "published": true,
+  "public_url": "https://datawrapper.dwcdn.net/ykR5W/1/"
  },
  "latam-gt": {
   "id": "TsQAm",
   "title": "Guatemala: aprobación de Bernardo Arévalo",
   "post": "latam",
   "embed": "https://datawrapper.dwcdn.net/TsQAm/",
-  "published": false
+  "published": true,
+  "public_url": "https://datawrapper.dwcdn.net/TsQAm/1/"
  },
  "latam-ve": {
   "id": "8PQRI",
   "title": "Venezuela: aprobación de Delcy Rodríguez",
   "post": "latam",
   "embed": "https://datawrapper.dwcdn.net/8PQRI/",
-  "published": false
+  "published": true,
+  "public_url": "https://datawrapper.dwcdn.net/8PQRI/1/"
  },
  "latam-bo": {
   "id": "jXv7V",
   "title": "Bolivia: aprobación de Rodrigo Paz",
   "post": "latam",
   "embed": "https://datawrapper.dwcdn.net/jXv7V/",
-  "published": false
+  "published": true,
+  "public_url": "https://datawrapper.dwcdn.net/jXv7V/1/"
  },
  "latam-pa": {
   "id": "J8NTB",
   "title": "Panamá: aprobación de José Raúl Mulino",
   "post": "latam",
   "embed": "https://datawrapper.dwcdn.net/J8NTB/",
-  "published": false
+  "published": true,
+  "public_url": "https://datawrapper.dwcdn.net/J8NTB/1/"
  }
 }
