@@ -14,7 +14,7 @@
 
 El promedio ubica la aprobación de la gestión en **36,8%** y la desaprobación en **59,0%**, un saldo neto de −22,2 puntos. Hace un mes la aprobación era 36,7%: la serie está estable.
 
-https://datawrapper.dwcdn.net/KF748/
+[gráfico ar-approval: todavía no publicado en Datawrapper; ver datawrapper_log.txt]
 
 Entraron 4 encuestas en los últimos 30 días: Equipo Mide (38%/59%); AtlasIntel (38%/57%); Management & Fit (37%/58%); ESPOP (UdeSA) (36%/60%). El promedio pondera por tamaño de muestra, por antigüedad y por el historial de cada encuestadora, y descuenta el sesgo sistemático de cada casa, así que una medición aislada mueve poco la línea. ✍️ Qué explica el movimiento.
 
@@ -22,47 +22,47 @@ Entraron 4 encuestas en los últimos 30 días: Equipo Mide (38%/59%); AtlasIntel
 
 En un ballotage hipotético el promedio da **40,7% a 40,0%**, una diferencia de 0,7 puntos. Hace un mes era 41,9% a 41,1%. Con una brecha de este tamaño, la carrera está dentro del margen en el que una sola encuesta puede dar vuelta el resultado.
 
-https://datawrapper.dwcdn.net/DG8e6/
+[gráfico ar-runoff: todavía no publicado en Datawrapper; ver datawrapper_log.txt]
 
 ## La primera vuelta, por espacio
 
 Agrupando por espacio, La Libertad Avanza promedia **33,1%** (−0,7 pp) y el peronismo **31,7%** (sin cambios). Los indecisos suben a 18,1% (+3,3 pp): buena parte de la elección todavía no tiene dueño.
 
-https://datawrapper.dwcdn.net/6mul2/
+[gráfico ar-espacio: todavía no publicado en Datawrapper; ver datawrapper_log.txt]
 
 Si se suma el PRO, el bloque LLA + PRO llega a **36,7%**. Es una suma de promedios, no una medición de una lista conjunta: cuando dos fuerzas se unen el voto no se transfiere entero, así que conviene leerlo como un techo.
 
-https://datawrapper.dwcdn.net/h9457/
+[gráfico ar-alianza: todavía no publicado en Datawrapper; ver datawrapper_log.txt]
 
 ## Confianza en el gobierno
 
 El Índice de Confianza en el Gobierno de la Di Tella fue de **1,94** en septiembre de 2026, contra 2,06 el mes anterior.
 
-https://datawrapper.dwcdn.net/oF6mg/
+[gráfico ar-icg: todavía no publicado en Datawrapper; ver datawrapper_log.txt]
 
 Por componentes: Preocupación por el interés general 1,50 (−0,21); Evaluación general 1,60 (−0,16); Capacidad para resolver problemas 2,20 (−0,09); Eficiencia del gasto 1,94 (−0,08); Honestidad 2,45 (−0,07).
 
-https://datawrapper.dwcdn.net/eoZvu/
+[gráfico ar-icg-comp: todavía no publicado en Datawrapper; ver datawrapper_log.txt]
 
 Comparado con sus antecesores en el mismo mes de gestión (el 33), Milei está en 1,94: por encima de A. Fernández, CFK I, CFK II, Macri y por debajo de N. Kirchner.
 
-https://datawrapper.dwcdn.net/W9JHs/
+[gráfico ar-icg-pres: todavía no publicado en Datawrapper; ver datawrapper_log.txt]
 
 ¿Cuánto vale ese número en votos? Desde 2005, el ICG del mes de la elección multiplicado por 20 anticipa razonablemente el voto del oficialismo (r = 0,63 en once elecciones). Con el ICG actual, el voto implícito es 38,8% y la recta de ajuste lo lleva a **39,3%**. Es una regularidad, no un pronóstico: 2007 y 2011 quedaron muy por encima.
 
-https://datawrapper.dwcdn.net/b2IuX/
+[gráfico ar-icg-votes: todavía no publicado en Datawrapper; ver datawrapper_log.txt]
 
 ## Lo que dicen los mercados
 
 En Polymarket: Javier Milei 46% (−8 pp); Axel Kicillof 32% (−4 pp); Sergio Massa 12% (+5 pp); Patricia Bullrich 3% (sin comparación). Es un mercado chico, así que los saltos de un día dicen poco; importa la tendencia. ✍️ Contexto si hubo un movimiento grande.
 
-https://datawrapper.dwcdn.net/9p7Rn/
+[gráfico ar-polymarket: todavía no publicado en Datawrapper; ver datawrapper_log.txt]
 
 ## Los gobernadores
 
 En el ranking de CB de octubre de 2026, la imagen positiva promedio de los 24 gobernadores es 49,2% (−0,1 pp). Arriba están Rolando Figueroa (Neuquén, 55,8%), Osvaldo Jaldo (Tucumán, 53,7%), Gustavo Sáenz (Salta, 53,4%); abajo, Ricardo Quintela (La Rioja, 42,8%), Axel Kicillof (Buenos Aires, 43,1%), Gustavo Melella (Tierra del Fuego, 43,5%).
 
-https://datawrapper.dwcdn.net/Otsj8/
+[gráfico ar-governors: todavía no publicado en Datawrapper; ver datawrapper_log.txt]
 
 La mayor suba fue la de Raúl Jalil (+2,0 pp) y la mayor caída, la de Alberto Weretilneck (−3,1 pp). Kicillof, el principal candidato opositor en las encuestas nacionales, tiene 43,1% de imagen positiva en su propia provincia, puesto 23 de 24.
 

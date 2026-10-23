@@ -1,0 +1,23 @@
+0/22 charts published
+  ! ar-runoff: POST /charts/DG8e6/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
+  ! ar-espacio: POST /charts/6mul2/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
+  ! ar-alianza: POST /charts/h9457/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
+  ! ar-approval: POST /charts/KF748/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
+  ! ar-icg: POST /charts/oF6mg/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
+  ! ar-icg-comp: POST /charts/eoZvu/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
+  ! ar-icg-pres: POST /charts/W9JHs/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
+  ! ar-icg-votes: POST /charts/b2IuX/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
+  ! ar-polymarket: POST /charts/9p7Rn/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
+  ! ar-governors: POST /charts/Otsj8/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
+  ! latam-ranking: POST /charts/qkV1I/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
+  ! latam-sv: POST /charts/wUZbw/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
+  ! latam-mx: POST /charts/DZCj3/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
+  ! latam-co: POST /charts/GPHp7/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
+  ! latam-br: POST /charts/cMoms/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
+  ! latam-ec: POST /charts/JgScd/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
+  ! latam-pe: POST /charts/ThsOX/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
+  ! latam-cl: POST /charts/ykR5W/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
+  ! latam-gt: POST /charts/TsQAm/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
+  ! latam-ve: POST /charts/8PQRI/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
+  ! latam-bo: POST /charts/jXv7V/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
+  ! latam-pa: POST /charts/J8NTB/publish: 403 {"statusCode":403,"error":"Forbidden","message":"Insufficient scope"}
