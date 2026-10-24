@@ -1,16 +1,16 @@
-run 2026-10-23 22:47 UTC · 3 new poll(s)
+run 2026-10-24 14:28 UTC · 4 new poll(s)
 
-CL Chile         81 polls  manual 4, news 69, pollster 8
+CL Chile         82 polls  manual 4, news 70, pollster 8
 BO Bolivia       13 polls  manual 5, news 8
 PE Peru          17 polls  manual 5, news 12
 CO Colombia       8 polls  manual 5, news 3
 VE Venezuela      6 polls  manual 5, news 1
-MX Mexico        84 polls  manual 12, news 28, news-ranking 1, wikipedia 43
+MX Mexico        85 polls  manual 12, news 29, news-ranking 1, wikipedia 43
 EC Ecuador       11 polls  manual 2, news 9
 SV El Salvador   20 polls  manual 9, news 6, pollster 1, wikipedia 4
 PA Panama         3 polls  manual 3
 GT Guatemala      2 polls  manual 2
-BR Brazil       111 polls  manual 5, news 106
+BR Brazil       113 polls  manual 5, news 108
 HN Honduras       1 polls  manual 1
 
 log:
@@ -42,8 +42,9 @@ log:
   · MX Wikipedia Opinion_polling_on_the_Sheinbaum_presidency: 50 rows
   · SV Wikipedia Opinion_polling_on_the_Nayib_Bukele_presidency: 23 rows
   · Mitofsky 2026-09: 6 tracked presidents
-  · Google News: 2825 unique articles read
-  + BO Pollster not named (press) ≈2026-01-30: 65.0/None [news]
-  + MX CB Consultora (imagen positiva) ≈2026-04-21: 72.3/None [news-ranking]
-  + CL Cadem ≈2026-09-03: 60.0/None [news]
+  · Google News: 2860 unique articles read
+  + BR Datafolha ≈2025-10-25: 24.0/None [news]
+  + MX Pollster not named (press) ≈2026-05-07: 72.0/None [news]
+  + CL Pulso Ciudadano ≈2026-06-10: 56.7/None [news]
+  + BR Ipespe ≈2026-10-19: 45.0/47.0 [news]
   · Google News queries failed: 0
