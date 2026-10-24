@@ -34,7 +34,7 @@ C = {"milei": "#6D3FD8", "kicillof": "#2A8BD0", "pro": "#C98A1B", "izq": "#C8443
      "pos": "#24875A", "neg": "#C8443A", "ns": "#B7C1CC", "ink": "#0F2238", "celeste": "#75AADB"}
 
 
-STYLE_VERSION = 2   # bump to re-apply titles/colours to charts that already exist
+STYLE_VERSION = 3   # bump to re-apply titles/colours to charts that already exist
 
 
 def tint(hex_color, k=0.55):
@@ -48,13 +48,14 @@ def lines_meta(colors, suffix="%", y_range=None, dots=True):
     """Smooth average lines in `colors`; with dots=True each series also gets a '<name> · encuestas'
     column drawn as dots only (invisible line), in a lighter shade of the same colour."""
     cols = dict(colors)
-    lines = {k: {"symbols": {"enabled": False}} for k in colors}
+    lines = {k: {"symbols": {"enabled": False}, "directLabel": True} for k in colors}
     if dots:
         for k, c in colors.items():
             dk = P.dot_label(k)
             cols[dk] = tint(c)
-            lines[dk] = {"width": "invisible", "symbols": {"enabled": True, "on": "every", "style": "fill",
-                                                            "size": 4}}
+            lines[dk] = {"width": "invisible", "directLabel": False, "colorKey": False,
+                         "valueLabels": {"enabled": False},
+                         "symbols": {"enabled": True, "on": "every", "style": "fill", "size": 4}}
     vis = {"custom-colors": cols, "lines": lines,
            "label-colors": True, "show-tooltips": True, "interpolation": "monotone-x",
            "y-grid": "on", "x-grid": "off"}
