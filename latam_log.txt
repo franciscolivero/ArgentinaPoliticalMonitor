@@ -1,6 +1,6 @@
-run 2026-10-24 14:28 UTC · 4 new poll(s)
+run 2026-10-25 14:57 UTC · 6 new poll(s)
 
-CL Chile         82 polls  manual 4, news 70, pollster 8
+CL Chile         85 polls  manual 4, news 73, pollster 8
 BO Bolivia       13 polls  manual 5, news 8
 PE Peru          17 polls  manual 5, news 12
 CO Colombia       8 polls  manual 5, news 3
@@ -10,7 +10,7 @@ EC Ecuador       11 polls  manual 2, news 9
 SV El Salvador   20 polls  manual 9, news 6, pollster 1, wikipedia 4
 PA Panama         3 polls  manual 3
 GT Guatemala      2 polls  manual 2
-BR Brazil       113 polls  manual 5, news 108
+BR Brazil       116 polls  manual 5, news 111
 HN Honduras       1 polls  manual 1
 
 log:
@@ -38,13 +38,15 @@ log:
   · CL Criteria: no validated figure in Agenda_Criteria_2_Agosto_2026_8cLMx.pdf
   · CL Criteria: no validated figure in Agenda_Criteria_13_Septiembre_2026_9dGv2.pdf
   · CL Criteria: no validated figure in Agenda_Criteria_20_Septiembre_2026_9eBc3.pdf
-  · CL Criteria: 4 new wave(s) from 27 unread PDF(s)
+  · CL Criteria: 5 new wave(s) from 28 unread PDF(s)
   · MX Wikipedia Opinion_polling_on_the_Sheinbaum_presidency: 50 rows
   · SV Wikipedia Opinion_polling_on_the_Nayib_Bukele_presidency: 23 rows
   · Mitofsky 2026-09: 6 tracked presidents
-  · Google News: 2860 unique articles read
-  + BR Datafolha ≈2025-10-25: 24.0/None [news]
-  + MX Pollster not named (press) ≈2026-05-07: 72.0/None [news]
-  + CL Pulso Ciudadano ≈2026-06-10: 56.7/None [news]
-  + BR Ipespe ≈2026-10-19: 45.0/47.0 [news]
+  · Google News: 2837 unique articles read
+  + BR Quaest ≈2026-01-10: 47.0/49.0 [news]
+  + CL Criteria ≈2026-04-08: 40.0/None [news]
+  + CL Cadem ≈2026-05-29: 41.0/None [news]
+  + CL Cadem ≈2026-07-30: 60.0/None [news]
+  + BR Ipespe ≈2026-10-06: 43.0/50.0 [news]
+  + BR AtlasIntel ≈2026-10-20: 47.9/50.8 [news]
   · Google News queries failed: 0
