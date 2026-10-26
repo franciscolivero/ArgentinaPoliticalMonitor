@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T16:24:51+00:00",
+ "updated": "2026-10-26T16:04:07+00:00",
  "method": {
   "window_days": 28,
   "min_polls_per_race": 4,
@@ -1676,7 +1676,7 @@
    ],
    "weight": 1.6,
    "active_2026": true,
-   "last_seen_2026": "2026-08-03"
+   "last_seen_2026": "2026-10-07"
   },
   {
    "firm": "Hugo Haime & Asociados",
@@ -1948,7 +1948,7 @@
    ],
    "weight": 1.091,
    "active_2026": true,
-   "last_seen_2026": "2026-09-09"
+   "last_seen_2026": "2026-10-13"
   },
   {
    "firm": "Raúl Aragón & Asociados",
@@ -2079,8 +2079,8 @@
     }
    ],
    "weight": 1.084,
-   "active_2026": false,
-   "last_seen_2026": null
+   "active_2026": true,
+   "last_seen_2026": "2026-10-23"
   },
   {
    "firm": "Ricardo Rouvier & Asociados",
@@ -2704,7 +2704,7 @@
    ],
    "weight": 0.924,
    "active_2026": true,
-   "last_seen_2026": "2026-09-18"
+   "last_seen_2026": "2026-10-20"
   },
   {
    "firm": "Federico González & Asociados",
@@ -3084,7 +3084,7 @@
    ],
    "weight": 0.862,
    "active_2026": true,
-   "last_seen_2026": "2026-07-31"
+   "last_seen_2026": "2026-10-12"
   },
   {
    "firm": "Giacobbe & Asociados",
@@ -3417,6 +3417,7 @@
   "d&#39;alessio irol y berensztein": "D'Alessio IROL y Berensztein"
  },
  "unrated_active_2026": [
+  "Afiches AC",
   "Alaska + Trespuntozero",
   "Consultora Arena Pública",
   "D'Alessio IROL y Berensztein",
