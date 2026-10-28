@@ -1,20 +1,20 @@
-run 2026-10-27 16:30 UTC · 4 new poll(s)
+run 2026-10-28 17:09 UTC · 8 new poll(s)
 
-CL Chile         89 polls  manual 4, news 77, pollster 8
+CL Chile         95 polls  manual 4, news 83, pollster 8
 BO Bolivia       14 polls  manual 5, news 9
 PE Peru          17 polls  manual 5, news 12
 CO Colombia       8 polls  manual 5, news 3
 VE Venezuela      6 polls  manual 5, news 1
-MX Mexico        86 polls  manual 12, news 30, news-ranking 1, wikipedia 43
+MX Mexico        87 polls  manual 12, news 31, news-ranking 1, wikipedia 43
 EC Ecuador       11 polls  manual 2, news 9
-SV El Salvador   20 polls  manual 9, news 6, pollster 1, wikipedia 4
+SV El Salvador   21 polls  manual 9, news 6, pollster 1, wikipedia 5
 PA Panama         3 polls  manual 3
 GT Guatemala      2 polls  manual 2
 BR Brazil       119 polls  manual 5, news 114
 HN Honduras       1 polls  manual 1
 
 log:
-  · CL Cadem: 3 new wave(s) from 3 unread PDF(s)
+  · CL Cadem: 4 new wave(s) from 4 unread PDF(s)
   · CL Criteria: no validated figure in Agenda_Criteria_15_Marzo_2026.pdf
   · CL Criteria: no validated figure in Agenda_Criteria_22_Marzo_2026.pdf
   · CL Criteria: no validated figure in Agenda_Criteria_29_Marzo_2026.pdf
@@ -40,11 +40,16 @@ log:
   · CL Criteria: no validated figure in Agenda_Criteria_20_Septiembre_2026_9eBc3.pdf
   · CL Criteria: 5 new wave(s) from 28 unread PDF(s)
   · MX Wikipedia Opinion_polling_on_the_Sheinbaum_presidency: 50 rows
-  · SV Wikipedia Opinion_polling_on_the_Nayib_Bukele_presidency: 23 rows
+  · SV Wikipedia Opinion_polling_on_the_Nayib_Bukele_presidency: 24 rows
+  + SV CID Gallup ≈2026-10-27: 94.0/None [wikipedia]
   · Mitofsky 2026-09: 6 tracked presidents
-  · Google News: 2469 unique articles read
-  + BR Quaest ≈2026-03-07: 51.0/51.0 [news]
-  + CL Criteria ≈2026-03-18: 68.0/None [news]
-  + BO Ipsos Ciesmori ≈2026-10-19: 21.0/None [news]
-  + MX Pollster not named (press) ≈2026-10-22: 69.0/None [news]
+  · CID Gallup SV 2026-10-27: 94.0%
+  · Google News: 2312 unique articles read
+  + CL Criteria ≈2026-03-11: 46.0/None [news]
+  + CL Cadem ≈2026-04-29: 67.0/None [news]
+  + CL Cadem ≈2026-05-13: 58.0/None [news]
+  + CL Cadem ≈2026-05-16: 87.0/None [news]
+  + CL Cadem ≈2026-08-01: 38.0/None [news]
+  + MX TResearch ≈2026-10-01: 71.0/None [news]
+  + CL Cadem ≈2026-10-23: 12.0/77.0 [news]
   · Google News queries failed: 0

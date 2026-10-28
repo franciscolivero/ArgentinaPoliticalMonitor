@@ -39,6 +39,15 @@
      "origin": "news"
     },
     {
+     "date": "2026-03-11",
+     "firm": "Criteria",
+     "approve": 46.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOUG1kTmpuWlI1YVBoV2FqTFpzS2ptc3kwcUhTWHpKS1dfc0FDOV9TVlNXOXhOYkMyVkFxWWlYaUh0SjUyUnhjdk1yeUlDTkZwWDBVdE96UDFBMXZ5OHhDNlpmaFU4bndwLVlMdW1uRVViQ3FsMTRTaXpITXJDQ25GVlJzeTFRbWxHQUUzekl6YXdIY1huVjlfbzNuX1lOVkIzWEJHZ0ZaeDFGbkU?oc=5",
+     "origin": "news"
+    },
+    {
      "date": "2026-03-18",
      "firm": "Cadem",
      "approve": 51.0,
@@ -192,6 +201,15 @@
      "origin": "news"
     },
     {
+     "date": "2026-04-29",
+     "firm": "Cadem",
+     "approve": 67.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxOaEN1bDJHSldQcDc4NGRuQUZkVWdmZUswWHYzOVREa2pOOHhFcDJRN01wckRLbVNUakVEcXEwZnpwd0VhTlVDSUpPYWlseTRRbnhybHMwSS1vZTFLUWt4bk9fcGZlQkJRalEzekRBUHI5cjdsWGdlUjFtZEpKR1FLZUZkNHNESDdBcW9odUdtRnRaSDFtbklsb29IT3duZ096RThickZWc3JIaEViZFU3TzJKX3NTRkVoWGFRbUh3RVBudEZfZVJpV0g3Zm9PdVRGZ2tlNGgtQzVCUmhhZVpkcUI5RDJLOGJ3NlhKa2xHSEFTUzI1M3lhQ2VyYmdKbng0dWtvd1p0YzbSAaoCQVVfeXFMTkpaYnl0cldrRDNhRllIS2liWWUtcVJQWE5FX29GS3J4MlU5aHpZdkMxMXhVMlo1UmY4dzV3X3lNLXMwTEZLN1dHdXM0S1ZlUWJHTEh3ZXF4THREVU9UR0lVam1ndnZsUVAwNHRCN3ZxZ3ZMZmU3UG0wUmdwSWZMWWdfSVdNRXRFaHUwXzhRX19XQmVRcDRudlZFblpjLWFzVzY1cE5ScHJNSU9uRFJISnFuN216M2tfMHNqS1VHdUZ5cld1Q0c3ZkNtMlJoZmRwT3ZPVUo2YV9Id1VWekxrWk9GcHZCVFlfbWszNEpBTzdmWlVfbWtob1J4NERzeWlLR3gzQnE4S0hPMVh6cXhhaWJGbDVzcmZZTDRsMkVYb053ZlFHTERaazViZw?oc=5",
+     "origin": "news"
+    },
+    {
      "date": "2026-05-06",
      "firm": "Criteria",
      "approve": 36.0,
@@ -228,12 +246,30 @@
      "origin": "news"
     },
     {
+     "date": "2026-05-13",
+     "firm": "Cadem",
+     "approve": 58.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPengyRnVfZWM4RHFGc1lHUENpYVZzS0Z6cUNNR0ZNeHZKSFNuT2Qza2MtZF8zYVFGT1E2SFE1cUVvT1pvekNPODBISGVUSTUyYTlDVlZ1X0o5VWc0cHZPZFk4czh1ZGxYelZIQ3JEMjlfREI0dlRUZktwTnJFNVN6bHVpZjZaN1hFWS1hV3czUVFUVXZ2ZkR5WVpsZk1QX05KTDBUZVUwZGx1MXQyVElQSTNHV2ZUWDZ0ZE05a24xVTFkeWQ5YXYxWUVzQ2FXYmMyV25TWUNpM0NydGtxdURoLTdfTEM3MlNRWXVTR0xpVEd4bkJFa1E?oc=5",
+     "origin": "news"
+    },
+    {
      "date": "2026-05-14",
      "firm": "Cadem",
      "approve": 36.0,
      "disapprove": 58.0,
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQN3dyUFlxMjNoZ2dSRGRaZXpfNGFFV2IwaFlTVE5oYnl0SDR3OURQdE5CM2pLR2k3cVJPN1BQcnMtVEUtS082dEU1S1N4Y3pPamdvOHVlcF9idHVLdTA3MnNEVURMb1lRNTFnU1JST0VKQ3BNblhtMm5idF8xUUpZalR2eHJOajhiN3ZzUzhMRy1GQk0xNm9DR2c0X2ZEV1hCMVVwT1o5ZHkyY1dTRzRQdUZrZG84ejBaSlJzS2xvZGJtX0lzYjViclZvSXpfZk5feGdpSnVNMi1CREdraHY4N202dm12clZqRTBFWDg4TzEyUzA4?oc=5",
+     "origin": "news"
+    },
+    {
+     "date": "2026-05-16",
+     "firm": "Cadem",
+     "approve": 87.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQeU8tMDM4aVhMLW90Z0J3UlVpV1E0X0szV2NLemxsbGZGMEtlaGpUeWFPcDdVejNCcU1YODZaaW9DcHhtOEw0OGdpUXd6dGRhblc4N1BoSGNsaFZkMWRtSS1zTy1ZZkZkZkx6c013S2Fsa0o2cXNReHdlX1U4NEhXSFBnUmRIbWtBYXVvT3NfXzlkTjdMeXNHNUhxX1JUY0dxYVFKa3FfQVJfU0dLQk9wY0JGaUZtM3lqdzg3TVlZd2dMMHBVbS14NThHTmt1WDNhQlZ4ZEtWeGFCUWNsU3FndmFDZFpSSi05bHMtZWZn?oc=5",
      "origin": "news"
     },
     {
@@ -468,6 +504,15 @@
      "disapprove": null,
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPelEwaWE1cVBOWkJmTV9fNzQwVGFlbHZsSTBvQkN3aF84YURsZFl1R1JuWndsc0p2VlpfRklMS1lsWWVvamZoTmpiMjMxVVlUM01vaVJMVEd1aC1HaEFIMnd4eW14Q2o1SHNrblpveHpMQWJSMk1HZUt6dU5IbjNHNTd1X0FHVzFWS2tTNGE4RnlGWEpGOU1fcXVlVUZZcjJxdUxyOGxLSEd4XzVqT1dsbW1fZnpHV2RZTlBqVTZxemNFUlRBXzFDNw?oc=5",
+     "origin": "news"
+    },
+    {
+     "date": "2026-08-01",
+     "firm": "Cadem",
+     "approve": 38.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQbDN6d1FfOGw3SDJKQ2NQX0x3YkItTndnWTdHTFNtb015bUsxaGl3aXpXMkEwUlcwSEN6TUJMdURweDhCb2trYmctQVB5NnZEMF8tT3dpeGptaGVidXlFcFlsNWp2WW1hbmxHU3lzWEJXZ3hsVEl6OFBNV0JvbEVtODRLbm1kVi1HLTN2cC1VSGp6dUQ0OVFpQWlRVGs1ampXU09ESDZYZWM2dXJEcUlIWGwtLXk3Q3FqR3BwamREX1lKSl9Cb2pZZ3RyUDB6UQ?oc=5",
      "origin": "news"
     },
     {
@@ -802,6 +847,15 @@
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQNzJ3M1VIUXhaZkpiSDNXWmx2dGtacmtSSFZfRDJ3aklVb1ZTZ3hGanFDTTc4XzcyNk1vWnZmZ05DWHRaSnJ0WWFUOHVZcnAzZ056ZEF0WEV0MmxlQW1TczVsRVBZaG9RM1hGVzl1YUpkN1pYLWh3ZmxKZXpOX3o4YzVmWlVDOFdLZ01WNllVMHl0LWpRVm1kbXdZVExPWDAxekM0R1NINjhBb1NVMy0xdzY5LVpPYk9SWmxlYVlWVHFvTUJQajVvMU93TGQ3bFltNDZ1UjM1LVhtR1pLcDVPU2xTdjVhQ1VxWmt0T2gxRTVacmFFcTRmTm1pUURUVzZ1NGZCY01B0gGnAkFVX3lxTFBERnlUTWFTNkZ5Tk05NXpuYVFsNVM2b1V5bTBuQUU4SlVOdzg5Q2FYSEFsRUJETjBuVDdaQmwxencyZjI4bXJ0bThwbHItSFdGYno2Y0Z3cHJSR0dqTjRGUWVkYzVYdmxTT0hTQWpaY05jYVU5QTlWbDBNaVVMSFZqUUE3dVpXbDViTU4tc28teWU2YTlNS1NjUjhELTFvX2RObHV2dG9VZFhmM3A1cXBqTWFUR1U5YVlpRHZXMnpSLVdmMEp6NmYxMVUzMGJlQnp4U2RMSFpqemhUWUJidzFXMnN1eVVZaGRmUWUyeVB5NWR5Z1RNazZybWptdGs4Q3E1M29vc0dBSmdJTmxJX1FKazdTMjE4bUxha2I5QVFYUUFUN3NwNHM?oc=5",
      "origin": "news"
+    },
+    {
+     "date": "2026-10-23",
+     "firm": "Cadem",
+     "approve": 12.0,
+     "disapprove": 77.0,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMipgJBVV95cUxQalVZTEYtSkVYOEs5SlJ3VUFRbHI1N0p0R0ZqOGdtZEVzYlF1UjNPby1sUkVRY1FCcjFSdUZLZE9Lak5WRGlsYVRxR19FU0RYb3hFRFRCT3VLTmljN3Y0d3BLRFR3SXR4aXVDTFhYdlJPenZGZlJiNm9FUUdqV09QZ2pPRUU2Q3ViNnIzZW5FWkVOdUxia0hGUkVlaS1qdlZvQUdxcmxySW9kbGlTYXpjaUxCbEtYZjRxNEd4M25hektVVDlSVGY1bm8yQlVRcUlVdDgtd2N6Z3JSUkZ5RFNObG9PV1d4bW4yLWJLaGlIWnpvbERaMEcwOXNxTTI1UVlHR0RobkxodWEzajM2YUVVXy1yRTFQdzVGaGVZOGl0U3JMS1prb0E?oc=5",
+     "origin": "news"
     }
    ],
    "country": "Chile",
@@ -842,42 +896,44 @@
       "2026-09-30",
       "2026-10-07",
       "2026-10-14",
-      "2026-10-21"
+      "2026-10-21",
+      "2026-10-23"
      ],
      "values": [
-      53.9,
+      53.8,
       52.4,
-      50.5,
-      48.2,
-      45.7,
-      43.1,
-      40.6,
-      38.6,
-      37.3,
-      36.5,
-      36.2,
-      36.1,
-      36.1,
-      36.4,
-      36.9,
-      37.9,
-      39.3,
-      41.2,
-      43.4,
-      45.7,
-      47.6,
-      48.9,
-      49.3,
-      48.7,
-      47.1,
-      45.0,
-      42.9,
+      50.7,
+      48.8,
+      46.6,
+      44.5,
+      42.7,
       41.4,
-      40.5,
       40.4,
-      40.8,
-      41.6,
-      42.7
+      39.5,
+      38.8,
+      38.1,
+      37.6,
+      37.4,
+      37.5,
+      38.1,
+      39.4,
+      41.2,
+      43.3,
+      45.5,
+      47.4,
+      48.7,
+      49.1,
+      48.5,
+      47.0,
+      44.9,
+      42.8,
+      41.1,
+      40.2,
+      39.9,
+      40.1,
+      40.6,
+      41.3,
+      41.5
      ]
     },
     "disapprove": {
@@ -914,7 +970,8 @@
       "2026-09-30",
       "2026-10-07",
       "2026-10-14",
-      "2026-10-20"
+      "2026-10-21",
+      "2026-10-23"
      ],
      "values": [
       48.0,
@@ -943,13 +1000,14 @@
       56.6,
       56.9,
       57.3,
-      57.8,
-      58.4,
-      59.0,
-      59.6,
-      60.2,
-      60.7,
-      61.1
+      57.9,
+      58.5,
+      59.3,
+      60.1,
+      60.9,
+      61.7,
+      62.5,
+      62.7
      ]
     }
    }
@@ -2492,6 +2550,15 @@
      "origin": "news"
     },
     {
+     "date": "2026-10-01",
+     "firm": "TResearch",
+     "approve": 71.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMitwFBVV95cUxONXJTcjdrbXZwM0pjMGZhanNwbWt5WEZQWmVoWnBhaG55M0gwclZQejRHN21qQWx4ZUFnQ2xGcGNfSXMxZk9pdHhUSzV4ZEVQdWR0OV9SNm9DU2ZnalJSYllSNmFEUFFod1BQbzVqNHVwSDhURVlOQWhwZzBnSmtBTk5rSndWNFJKOVFWbU1RNUVOaVc0blg3bXU3Y2QxZEZCeFVfSGFVZmRjbFh0eTBSQnY0TXI5WlE?oc=5",
+     "origin": "news"
+    },
+    {
      "date": "2026-10-04",
      "firm": "Pollster not named (press)",
      "approve": 68.0,
@@ -2714,18 +2781,18 @@
       59.6,
       59.8,
       60.5,
-      61.6,
-      63.0,
-      64.4,
-      65.6,
-      66.6,
-      67.2,
-      67.7,
-      67.9,
-      67.9,
-      67.9,
-      67.8,
-      67.7
+      61.7,
+      63.1,
+      64.6,
+      65.9,
+      66.9,
+      67.6,
+      68.0,
+      68.3,
+      68.4,
+      68.3,
+      68.2,
+      68.1
      ]
     },
     "disapprove": {
@@ -3365,6 +3432,15 @@
      "approx": false,
      "source": "https://www.perfil.com/noticias/politica/milei-quedo-14-en-el-ranking-de-presidentes-de-america-latina-quien-lidera-la-encuesta.phtml",
      "origin": "manual"
+    },
+    {
+     "date": "2026-10-27",
+     "firm": "CID Gallup",
+     "approve": 94.0,
+     "disapprove": null,
+     "approx": false,
+     "origin": "wikipedia",
+     "source": "https://en.wikipedia.org/wiki/Opinion_polling_on_the_Nayib_Bukele_presidency"
     }
    ],
    "country": "El Salvador",
@@ -3446,7 +3522,9 @@
       "2026-09-22",
       "2026-09-29",
       "2026-10-06",
-      "2026-10-08"
+      "2026-10-13",
+      "2026-10-20",
+      "2026-10-27"
      ],
      "values": [
       85.2,
@@ -3514,15 +3592,17 @@
       93.3,
       93.2,
       92.5,
-      90.6,
-      88.4,
-      87.1,
-      86.4,
-      86.0,
-      85.7,
-      85.3,
+      90.5,
+      88.2,
+      86.7,
+      85.9,
+      85.5,
+      85.2,
       85.0,
-      84.9
+      84.8,
+      84.7,
+      84.8,
+      85.1
      ]
     },
     "disapprove": {
@@ -5233,6 +5313,6 @@
    }
   }
  },
- "updated": "2026-10-27T16:30:44Z",
+ "updated": "2026-10-28T17:09:45Z",
  "method": "Google News coverage of national polls and regional rankings (CB Consultora, Mitofsky, AtlasIntel); Gaussian-kernel average, 21-day bandwidth, firm-crowding weights."
 }
