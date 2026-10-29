@@ -35,6 +35,7 @@
   <nav class="nav-group" aria-label="Latin America" id="nav-countries">
     <h3>Latin America</h3>
     <a href="#ranking">Ranking</a>
+    <a href="#forecast">Forecast</a>
   </nav>
   <div class="rail-foot">Updated <span id="updated">—</span></div>
 </aside>
@@ -48,6 +49,11 @@
   <section class="block" id="ranking">
     <h2>Presidential approval, latest average</h2>
     <div class="plot" id="chart-rank" style="height:520px"></div>
+  </section>
+
+  <section class="block" id="forecast">
+    <h2>Chance that the governing party keeps the presidency at the next election</h2>
+    <div class="plot" id="chart-forecast" style="height:520px"></div>
   </section>
 
   <div class="grid" id="grid"></div>
@@ -131,6 +137,24 @@
       lay({margin:{l:10,r:44,t:6,b:30}, bargap:0.32,
         xaxis:{range:[0,100], ticksuffix:'%', gridcolor:C.grid, linecolor:C.line, tickfont:{size:11,color:C.muted}, zeroline:false},
         yaxis:{automargin:true, tickfont:{size:13,color:C.ink}}}), CONFIG);
+
+    // ---- forecast: ridge logistic trained on Latin American elections (forecast_latam.py) ----
+    fetch('forecast_latam.json',{cache:'no-store'}).then(function(r){ if(!r.ok) throw 0; return r.json(); })
+    .then(function(F){
+      var rows=F.forecasts.slice().sort(function(a,b){return a.p-b.p;});
+      var lab=rows.map(function(r){return r.president+' ('+r.country+', '+r.next_election.slice(0,4)+')';});
+      document.getElementById('chart-forecast').style.height=Math.max(260,rows.length*38+70)+'px';
+      Plotly.newPlot('chart-forecast',[{type:'bar',orientation:'h',y:lab,x:rows.map(function(r){return +(r.p*100).toFixed(1);}),
+        marker:{color:rows.map(function(r){return r.iso==='AR'?C.ar:(r.president_running?'#2F6FA8':C.bar);})},
+        text:rows.map(function(r){return Math.round(r.p*100)+'%';}), textposition:'outside', cliponaxis:false,
+        textfont:{family:'Archivo',size:13,color:C.ink},
+        customdata:rows.map(function(r){return [r.approval, r.president_running?'President can run':'Party runs a new candidate', r.years_to_election];}),
+        hovertemplate:'<b>%{y}</b><br>%{x:.0f}% chance the governing party wins<br>Approval %{customdata[0]}% · %{customdata[1]}<br>%{customdata[2]} years to the election<extra></extra>'}],
+        lay({margin:{l:10,r:44,t:6,b:30}, bargap:0.32,
+          shapes:[{type:'line',x0:50,x1:50,yref:'paper',y0:0,y1:1,line:{color:'#C9D2DB',width:1,dash:'dot'}}],
+          xaxis:{range:[0,100], ticksuffix:'%', gridcolor:C.grid, linecolor:C.line, tickfont:{size:11,color:C.muted}, zeroline:false},
+          yaxis:{automargin:true, tickfont:{size:13,color:C.ink}}}), CONFIG);
+    }).catch(function(){ var el=document.getElementById('forecast'); if(el) el.style.display='none'; });
 
     // ---- per-country small multiples ----
     var grid=document.getElementById('grid'), nav=document.getElementById('nav-countries');

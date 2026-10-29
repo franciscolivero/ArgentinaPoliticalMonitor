@@ -34,7 +34,7 @@ C = {"milei": "#6D3FD8", "kicillof": "#2A8BD0", "pro": "#C98A1B", "izq": "#C8443
      "pos": "#24875A", "neg": "#C8443A", "ns": "#B7C1CC", "ink": "#0F2238", "celeste": "#75AADB"}
 
 
-STYLE_VERSION = 3   # bump to re-apply titles/colours to charts that already exist
+STYLE_VERSION = 4   # bump to re-apply titles/colours to charts that already exist
 
 
 def tint(hex_color, k=0.55):
@@ -112,6 +112,27 @@ def build_specs():
                   {"visualize": {"custom-colors": {"Positiva": C["pos"], "Negativa": C["neg"], "NS/NC": C["ns"]},
                                  "show-values": True, "sort-bars": False},
                    "describe": {"source-name": SOURCE + " · CB Consultora", "number-append": "%"}}, "ar"))
+    t, F = P.forecast_ar()
+    if t:
+        specs.append(("ar-forecast", "Chance de que Milei gane la elección presidencial de 2027", "d3-lines", t,
+                      {"visualize": {"custom-colors": {"Pronóstico": C["milei"], "Encuestas": "#2A8BD0",
+                                                       "Fundamentales (ML)": C["pos"], "Polymarket": C["gris"]},
+                                     "lines": {"Pronóstico": {"width": "style3", "directLabel": True},
+                                               "Encuestas": {"width": "style0", "dash": "style2", "directLabel": False},
+                                               "Fundamentales (ML)": {"width": "style0", "dash": "style2", "directLabel": False},
+                                               "Polymarket": {"width": "style0", "dash": "style2", "directLabel": False}},
+                                     "custom-range-y": ["0", "100"], "y-grid": "on", "label-colors": True,
+                                     "show-tooltips": True},
+                       "describe": {"source-name": SOURCE + " · modelo híbrido", "number-append": "%",
+                                    "number-format": "0"}}, "ar"))
+    t, F = P.forecast_latam()
+    if t:
+        specs.append(("latam-forecast", "Chance de que el oficialismo gane la próxima elección presidencial",
+                      "d3-bars", t,
+                      {"visualize": {"custom-colors": {}, "show-values": True, "sort-bars": True,
+                                     "base-color": C["celeste"]},
+                       "describe": {"source-name": SOURCE + " · modelo entrenado con Latinobarómetro",
+                                    "number-append": "%", "number-format": "0"}}, "latam"))
     rows = P.latam()
     specs.append(("latam-ranking", "Aprobación presidencial en América Latina", "d3-bars", P.latam_ranking_table(rows),
                   {"visualize": {"custom-colors": {f"{r['president']} ({r['country']})":

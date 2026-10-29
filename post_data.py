@@ -276,3 +276,25 @@ def latam_country_table(r):
                       ("Desaprueba", dv.get("dates", []), dv.get("values", []))],
                      [(dot_label("Aprueba"), [(p["date"], p.get("approve")) for p in polls]),
                       (dot_label("Desaprueba"), [(p["date"], p.get("disapprove")) for p in polls])])
+
+
+# ------------------------------------------------------------------------------- forecasts
+def forecast_ar():
+    F = load("forecast_ar.json")
+    if not F:
+        return None, None
+    s = F["series"]
+    def pc(v):
+        return None if v is None else round(100 * v, 1)
+    rows = [(d, pc(p), pc(a), pc(b), pc(c)) for d, p, a, b, c in
+            zip(s["date"], s["p"], s["p_polls"], s["p_fund"], s["p_market"])]
+    return table(["Fecha", "Pronóstico", "Encuestas", "Fundamentales (ML)", "Polymarket"], rows), F
+
+
+def forecast_latam():
+    F = load("forecast_latam.json")
+    if not F:
+        return None, None
+    rows = [(f"{r['president']} ({COUNTRY_ES.get(r['country'], r['country'])}, {r['next_election'][:4]})",
+             round(100 * r["p"], 1)) for r in F["forecasts"]]
+    return table(["Presidente (país, elección)", "Chance de que gane el oficialismo"], rows), F
