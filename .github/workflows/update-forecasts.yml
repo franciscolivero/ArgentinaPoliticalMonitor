@@ -1,0 +1,54 @@
+name: Update forecasts
+
+# Daily, after the poll and approval workflows: retrains the Latin American model
+# (forecast_latam.py, validated by leave-one-out) and recomputes the Argentina hybrid forecast
+# (forecast_ar.py). Both pages and the Datawrapper charts read the JSON files this commits.
+
+on:
+  schedule:
+    - cron: "25 11 * * *"     # daily, 11:25 UTC
+  push:
+    paths:
+      - "forecast_ar.py"
+      - "forecast_latam.py"
+      - "ml_utils.py"
+      - "latam_elections.csv"
+      - "latam_lb_approval.csv"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: forecasts
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install numpy
+
+      - name: Latin America model (train, validate, forecast)
+        run: python forecast_latam.py
+
+      - name: Argentina hybrid forecast
+        run: python forecast_ar.py
+
+      - name: Commit (if changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          FILES="forecast_ar.json forecast_latam.json forecast_latam_model.json"
+          if [ -n "$(git status --porcelain $FILES)" ]; then
+            git add $FILES
+            git commit -m "Update forecasts ($(date -u +%Y-%m-%d))"
+            git pull --rebase
+            git push
+          else
+            echo "No change"
+          fi
