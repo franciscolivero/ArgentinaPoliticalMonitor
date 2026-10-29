@@ -121,7 +121,17 @@
     <ul>
       <li>Daily, by GitHub Actions: runoff and vote-by-space polls, approval polls (EncuestAR and press), the approval average, Polymarket, and the ICG with its five components as soon as Di Tella publishes a new month.</li>
       <li>Monthly, by hand: the CB governors ranking (<code>Governors_CB.xlsx</code>).</li>
+      <li>Daily, after the polls update: the election forecast (<code>forecast_ar.json</code>).</li>
     </ul>
+    <h2 id="forecast-method">How the forecast works</h2>
+    <p>The forecast is the chance that Milei wins the presidency in October 2027. It is a hybrid model: it combines three independent reads of the race, and the weight of each one changes as the election gets closer.</p>
+    <ul>
+      <li><b>Polls.</b> Milei's two-way share in the Milei vs. Kicillof runoff average. The model asks how likely that share is to end above 50% on election day, given two sources of uncertainty: how wrong Argentine polls have been on election day (the final-month average missed by 5.2 points of two-way share on average across the 2015–2023 national elections, with no consistent bias toward either side), and how much opinion can still move before the vote (about 2 points per month, measured on the runoff average itself). The further away the election, the wider the range and the closer this read stays to 50%.</li>
+      <li><b>Fundamentals (machine learning).</b> A logistic regression trained on Latin American presidential elections since 2002 that predicts whether the governing party keeps the presidency from two things: the president's approval and whether the president is on the ballot. It is regularised (ridge) so it does not overfit a few dozen elections, and it is validated out of sample: each election is predicted by a model that never saw it (leave-one-out), and that accuracy is compared with simply guessing the historical rate. Milei's current approval average goes into that model. Until the training data is loaded, this read is left out and its weight is shared between the other two.</li>
+      <li><b>Market.</b> Polymarket's price for Milei.</li>
+    </ul>
+    <p>The three probabilities are averaged on the log-odds scale. Polymarket always gets 20%. The other 80% is split between polls and fundamentals: a year out, fundamentals weigh about two-thirds of it, because polls this early say little about the final result; as the election approaches, the weight moves toward the polls, which carry almost all of it on election eve. The line on the chart is rebuilt for every past day using only the data available that day, so it shows what the forecast would have said in real time.</p>
+    <p>A 55% chance is not a prediction that Milei wins; it means that in races like this one, the frontrunner loses close to half the time.</p>
   </footer>
 
 </main>
