@@ -1,20 +1,26 @@
 name: Update forecasts
 
 # Daily, after the poll and approval workflows: retrains the Latin American model
-# (forecast_latam.py, validated by leave-one-out) and recomputes the Argentina hybrid forecast
-# (forecast_ar.py). Both pages and the Datawrapper charts read the JSON files this commits.
+# (forecast_latam.py, validated by leave-one-out) and recomputes both Argentina forecasts: the
+# Blend model (forecast_ar.py) and the Simulation model (forecast_sim.py). Both pages and the Datawrapper charts read the JSON files this commits.
 
 on:
   schedule:
-    - cron: "25 11 * * *"     # daily, 11:25 UTC
+    - cron: "25 11 * * *"     # daily, 11:25 UTC (fallback)
   push:
     paths:
       - "forecast_ar.py"
+      - "forecast_sim.py"
       - "forecast_latam.py"
       - "ml_utils.py"
       - "latam_elections.csv"
       - "latam_lb_approval.csv"
   workflow_dispatch:
+  # also right after any of its inputs updates (GitHub often delays scheduled runs by hours)
+  workflow_run:
+    workflows: ["Update EncuestAR polls", "Update national vote-by-space polls", "Update approval average",
+                "Update Polymarket history", "Update ICG (headline + components)"]
+    types: [completed]
 
 permissions:
   contents: write
@@ -36,15 +42,18 @@ jobs:
       - name: Latin America model (train, validate, forecast)
         run: python forecast_latam.py
 
-      - name: Argentina hybrid forecast
+      - name: Argentina, Blend model
         run: python forecast_ar.py
+
+      - name: Argentina, Simulation model (40,000 simulated elections)
+        run: python forecast_sim.py
 
       - name: Commit (if changed)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           FILES=""
-          for f in forecast_ar.json forecast_latam.json forecast_latam_model.json; do
+          for f in forecast_ar.json forecast_sim.json forecast_latam.json forecast_latam_model.json; do
             [ -f "$f" ] && FILES="$FILES $f"
           done
           if [ -n "$FILES" ] && [ -n "$(git status --porcelain $FILES)" ]; then
