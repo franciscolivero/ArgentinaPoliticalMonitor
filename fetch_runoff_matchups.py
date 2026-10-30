@@ -195,7 +195,7 @@ def parse_text(text):
         (p1, v1, w1), (p2, v2, w2) = assigned[i], assigned[i + 1]
         if w1 != w2 and "Milei" in (w1, w2) and p2 - p1 < 400:
             mil, riv, rname = (v1, v2, w2) if w1 == "Milei" else (v2, v1, w1)
-            if 15 <= mil <= 70 and 15 <= riv <= 70 and 55 <= mil + riv <= 102:
+            if 15 <= mil <= 70 and 15 <= riv <= 70 and 68 <= mil + riv <= 102:
                 pairs.append((rname, mil, riv, p1))
                 i += 2
                 continue
@@ -350,7 +350,7 @@ def main():
         print(f"  ! news search failed ({e}); CSV untouched.")
         return
     print(f"  · {len(arts)} articles to read")
-    added, read = [], 0
+    added, found, read = [], [], 0
     import time
     t0 = time.time()
     for title, url, pub in sorted(arts, key=lambda a: a[2]):
@@ -369,18 +369,35 @@ def main():
         for rival, mil, riv, pos in pairs:
             end, approx = fieldwork_end(text, pub, pos)
             firm = firm_near(f, pos, pats)
-            if not firm:
-                continue
-            tw = two_way(mil, riv)
-            dup = any(r["firm"] == firm and r["opponent"] == rival and
-                      abs((datetime.date.fromisoformat(r["end_date"]) - end).days) <= MATCH_DAYS and
-                      abs(two_way(r["milei"], r["opponent_share"]) - tw) <= 1.5 for r in rows)
-            if dup:
-                continue
-            row = {"end_date": end.isoformat(), "firm": firm, "opponent": rival, "milei": fmt(mil),
-                   "opponent_share": fmt(riv), "date_approx": "1" if approx else "0", "origin": "news", "source": url}
-            rows.append(row)
-            added.append(row)
+            if firm:
+                found.append({"end_date": end.isoformat(), "firm": firm, "opponent": rival, "milei": fmt(mil),
+                              "opponent_share": fmt(riv), "date_approx": "1" if approx else "0",
+                              "origin": "news", "source": url})
+    # one reading per poll: group what the press reported for the same pollster and rival within
+    # MATCH_DAYS; keep the figure most outlets agree on (ties: the one with fewer undecided, i.e.
+    # the full-sample number rather than a subgroup), and nothing if the poll is already stored.
+    def same(a, b):
+        return a["firm"] == b["firm"] and a["opponent"] == b["opponent"] and \
+            abs((datetime.date.fromisoformat(a["end_date"]) - datetime.date.fromisoformat(b["end_date"])).days) <= MATCH_DAYS
+    groups = []
+    for r in found:
+        for g in groups:
+            if same(g[0], r):
+                g.append(r)
+                break
+        else:
+            groups.append([r])
+    for g in groups:
+        if any(same(r, g[0]) for r in rows):
+            continue
+        def support(c):
+            return sum(abs(two_way(c["milei"], c["opponent_share"]) - two_way(o["milei"], o["opponent_share"])) <= 1.5
+                       for o in g)
+        best = max(g, key=lambda c: (support(c), float(c["milei"]) + float(c["opponent_share"])))
+        if len(g) > 1:
+            best = dict(best, date_approx=min((o["date_approx"] for o in g), key=int))
+        rows.append(best)
+        added.append(best)
     print(f"  · {read} articles read, {len(added)} new matchups")
     for r in added:
         print(f"    + {r['end_date']} {r['firm']}: Milei {r['milei']} – {r['opponent']} {r['opponent_share']}  ({r['source'][:80]})")
