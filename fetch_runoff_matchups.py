@@ -245,7 +245,7 @@ def firm_near(f, pos, pats):
 
 def rss(url):
     import requests
-    r = requests.get(url, timeout=30, headers=UA)
+    r = requests.get(url, timeout=12, headers=UA)
     r.raise_for_status()
     root = ET.fromstring(r.content)
     for it in root.iter("item"):
@@ -263,7 +263,7 @@ def resolve(link):
     if "news.google.com" in link:
         try:
             from googlenewsdecoder import gnewsdecoder
-            d = gnewsdecoder(link, interval=1)
+            d = gnewsdecoder(link)
             return d.get("decoded_url") if d.get("status") else None
         except Exception:
             return None
@@ -273,7 +273,7 @@ def resolve(link):
 def article_text(url):
     import requests
     from bs4 import BeautifulSoup
-    r = requests.get(url, timeout=30, headers=UA)
+    r = requests.get(url, timeout=12, headers=UA)
     r.raise_for_status()
     soup = BeautifulSoup(r.content, "lxml")
     for t in soup(["script", "style", "nav", "footer", "aside", "form"]):
@@ -283,23 +283,44 @@ def article_text(url):
     return "\n".join(p for p in parts if p)
 
 
+RELEVANT = re.compile(r"balotaje|ballotage|segunda vuelta|mano a mano|escenario", re.I)
+MAX_ARTICLES = 40          # per run; the 21-day lookback means anything missed today is retried tomorrow
+MAX_GOOGLE_DECODES = 15    # decoding a Google News link takes a request of its own
+TIME_BUDGET = 8 * 60       # seconds for the whole run
+
+
 def harvest(today):
-    seen, out = set(), []
-    for q in QUERIES:
-        for tmpl in (BING, GNEWS):
+    """Candidate articles: titles must mention a runoff; Bing first (direct links), Google News only
+    for stories Bing did not have, newest first."""
+    seen_titles, cands = set(), []
+    for tmpl in (BING, GNEWS):
+        for q in QUERIES:
             try:
                 items = list(rss(tmpl.format(q=quote_plus(q))))
             except Exception as e:
                 print(f"  · feed failed ({tmpl[:30]}…, {q}): {e}")
                 continue
             for title, link, pub in items:
-                if (today - pub).days > LOOKBACK_DAYS:
+                if (today - pub).days > LOOKBACK_DAYS or not RELEVANT.search(title):
                     continue
-                url = resolve(link)
-                if not url or url in seen:
+                k = re.sub(r"\W+", " ", fold(re.sub(r"\s+-\s+[^-]{2,60}$", "", title))).strip()[:80]
+                if k in seen_titles:
                     continue
-                seen.add(url)
-                out.append((title, url, pub))
+                seen_titles.add(k)
+                cands.append((title, link, pub))
+    cands.sort(key=lambda c: c[2], reverse=True)
+    out, seen_urls, decodes = [], set(), 0
+    for title, link, pub in cands:
+        if len(out) >= MAX_ARTICLES:
+            break
+        if "news.google.com" in link:
+            if decodes >= MAX_GOOGLE_DECODES:
+                continue
+            decodes += 1
+        url = resolve(link)
+        if url and url not in seen_urls:
+            seen_urls.add(url)
+            out.append((title, url, pub))
     return out
 
 
@@ -330,7 +351,12 @@ def main():
         return
     print(f"  · {len(arts)} articles to read")
     added, read = [], 0
+    import time
+    t0 = time.time()
     for title, url, pub in sorted(arts, key=lambda a: a[2]):
+        if time.time() - t0 > TIME_BUDGET:
+            print("  · time budget reached; the rest will be read on the next run")
+            break
         try:
             text = title + "\n" + article_text(url)
         except Exception:
