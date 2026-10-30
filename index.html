@@ -23,6 +23,7 @@
     <h3>The race</h3>
     <a href="#forecast">Forecast 2027</a>
     <a href="#h2h">Milei vs. Kicillof</a>
+    <a href="#rivals">Kicillof or Massa</a>
     <a href="#espacio">Vote by space</a>
     <a href="#alianza">LLA + PRO</a>
   </nav>
@@ -62,6 +63,11 @@
   <section class="block" id="h2h">
     <h2>Milei vs. Kicillof, runoff voting intention</h2>
     <div class="plot" id="chart-h2h" style="height:420px"></div>
+  </section>
+
+  <section class="block" id="rivals">
+    <h2>Milei's runoff share against Kicillof and against Massa</h2>
+    <div class="plot" id="chart-rivals" style="height:420px"></div>
   </section>
 
   <section class="block" id="espacio">
@@ -953,6 +959,62 @@
       .then(function(r){ if(!r.ok) throw 0; return r.json(); })
       .then(function(j){ if(!(j.polls&&j.polls.length)) throw 0; render(j,true); })
       .catch(function(){ render(embedded(),false); });
+  })();
+
+  // ===== Runoff rivals — Milei vs Kicillof and vs Massa, from runoff_matchups.csv =====
+  // Polls that asked both matchups (collected daily from the press by fetch_runoff_matchups.py).
+  // y = Milei's share of the two-way vote; line = local average (30-day Gaussian kernel) once a rival has 3+ polls.
+  (function(){
+    function parseCSV(t){
+      var lines=t.replace(/\r/g,'').split('\n').filter(function(l){return l.trim();});
+      var head=lines.shift().split(',');
+      return lines.map(function(l){
+        var out=[], cur='', q=false;
+        for(var i=0;i<l.length;i++){ var ch=l[i];
+          if(ch=='"'){ q=!q; } else if(ch==',' && !q){ out.push(cur); cur=''; } else cur+=ch; }
+        out.push(cur);
+        var o={}; head.forEach(function(h,i){ o[h]=out[i]; }); return o;
+      });
+    }
+    var RIVALS=[['Kicillof',C.kicillof,'Kicillof'],['Massa','#D9822B','Massa']];
+    fetch('runoff_matchups.csv',{cache:'no-store'}).then(function(r){ if(!r.ok) throw 0; return r.text(); })
+    .then(function(t){
+      var rows=parseCSV(t), data=[], ann=[], lastX=null;
+      RIVALS.forEach(function(R){
+        var ps=rows.filter(function(r){return r.opponent===R[0];})
+          .map(function(r){ var m=+r.milei, o=+r.opponent_share;
+            return {d:r.end_date, y:+(100*m/(m+o)).toFixed(1), firm:r.firm, m:m, o:o}; })
+          .sort(function(a,b){return a.d<b.d?-1:1;});
+        if(!ps.length) return;
+        data.push({x:ps.map(function(p){return p.d;}), y:ps.map(function(p){return p.y;}),
+          customdata:ps.map(function(p){return [p.firm, fmtDay(p.d), p.m, p.o];}),
+          mode:'markers', type:'scatter', name:'vs. '+R[2], legendgroup:R[0],
+          marker:{size:11,color:R[1],opacity:0.55,line:{color:R[1],width:1}},
+          hovertemplate:'<b>Milei vs. '+R[2]+'</b><br>%{customdata[0]} · %{customdata[1]}<br>Milei %{customdata[2]}% – '+R[2]+' %{customdata[3]}%<br>Milei two-way share %{y}%<extra></extra>'});
+        if(ps.length>=3){
+          var t0=new Date(ps[0].d), t1=new Date(ps[ps.length-1].d), xs=[], ys=[];
+          for(var d=new Date(t0); d<=t1; d.setDate(d.getDate()+3)){
+            var sw=0, sy=0;
+            ps.forEach(function(p){ var age=(d-new Date(p.d))/864e5;
+              var w=Math.exp(-0.5*Math.pow(age/30,2)); sw+=w; sy+=w*p.y; });
+            if(sw>0){ xs.push(d.toISOString().slice(0,10)); ys.push(+(sy/sw).toFixed(1)); }
+          }
+          data.push({x:xs, y:ys, mode:'lines', type:'scatter', name:'vs. '+R[2]+' avg', legendgroup:R[0], showlegend:false,
+            line:{color:R[1],width:3,shape:'spline',smoothing:0.6},
+            hovertemplate:'Average vs. '+R[2]+' %{y:.1f}%<extra></extra>'});
+          ann.push({x:xs[xs.length-1], y:ys[ys.length-1], xanchor:'left', xshift:10, showarrow:false,
+            text:'<b>vs. '+R[2]+' '+Math.round(ys[ys.length-1])+'%</b>', font:{family:'Archivo',size:12.5,color:R[1]}});
+        }
+      });
+      if(!data.length) throw 0;
+      if(ann.length==2 && Math.abs(ann[0].y-ann[1].y)<1.5){ var hi=ann[0].y>ann[1].y?0:1; ann[hi].yshift=9; ann[1-hi].yshift=-9; }
+      Plotly.newPlot('chart-rivals', data, lay({margin:{l:48,r:110,t:14,b:40}, showlegend:true,
+        legend:{orientation:'h', y:-0.14, x:0, font:{size:12,color:C.muted}},
+        shapes:[{type:'line',xref:'paper',x0:0,x1:1,y0:50,y1:50,line:{color:'#C9D2DB',width:1,dash:'dot'}}],
+        yaxis:{ticksuffix:'%', range:[40,60], gridcolor:'#E9EEF3', linecolor:C.line, tickfont:{size:11,color:C.muted}},
+        xaxis:{type:'date', gridcolor:'#E9EEF3', linecolor:C.line, tickfont:{size:11,color:C.muted}},
+        annotations:ann}), CONFIG);
+    }).catch(function(){ var el=document.getElementById('rivals'); if(el) el.style.display='none'; });
   })();
 
   // ===== Chart 02 & 03 — National vote by space + LLA/PRO alliance =====
