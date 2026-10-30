@@ -123,6 +123,7 @@
       <li>Daily, by GitHub Actions: runoff and vote-by-space polls, approval polls (EncuestAR and press), the approval average, Polymarket, and the ICG with its five components as soon as Di Tella publishes a new month.</li>
       <li>Monthly, by hand: the CB governors ranking (<code>Governors_CB.xlsx</code>).</li>
       <li>Daily, as soon as the polls, approval, Polymarket or the ICG update: both election forecasts (<code>forecast_sim.json</code>, <code>forecast_ar.json</code>).</li>
+      <li>Daily, from the press: runoff polls of Milei against each possible rival (<code>runoff_matchups.csv</code>).</li>
     </ul>
     <h2 id="forecast-method">How the forecasts work</h2>
     <p>Two models answer the same question, the chance that Milei wins the presidency in October 2027, in two different ways. Showing both is deliberate: when they agree, that is a sign the result does not hinge on one set of assumptions; when they diverge, the gap is itself information. Neither is a crystal ball. Both are attempts to say, as honestly as the data allow, how likely each outcome is.</p>
@@ -132,9 +133,10 @@
       <li><b>Polls, adjusted.</b> First-round vote for La Libertad Avanza and Peronismo (as shares of decided voters) and the Milei vs. Kicillof runoff. Each pollster's house effect, how far its numbers sit from everyone else's, is estimated and removed, and polls are weighted by the pollster's track record and by how recent they are.</li>
       <li><b>Fundamentals.</b> Across the eleven national elections since 2005, the governing party's vote tracks confidence in government (the ICG regression above). Today's ICG gives an expected vote for LLA, with an error band that includes how much the ICG can still move before the election. Polls and fundamentals are blended by precision, each weighted by how reliable it is at this distance from the vote, so the polls gain weight as the election nears.</li>
       <li><b>Uncertainty.</b> Each simulation draws a polling error the size Argentine polls have actually made: the final-month average missed the margin between the top two by about 11 points on average in the 2015, 2019 and 2023 first rounds, and the runoff by about 5 points of two-way share. On top of that comes how much opinion can still move before the vote. Errors are fat-tailed, so big misses like the 2019 and 2023 primaries are not treated as near-impossible, and a miss in the first round tends to carry over to the runoff.</li>
+      <li><b>The runoff rival.</b> The Peronist nominee is not settled. In each simulation the nominee is Kicillof with a 60% chance and otherwise another Peronist (Massa, the one pollsters test). How Milei would fare against that rival comes from polls that asked both matchups of the same voters, collected every day from the press: so far the difference is small and goes both ways (QSocial and Afiches show Massa doing better than Kicillof against Milei, Trends shows the opposite), so the model adds that uncertainty rather than a fixed penalty. Against non-Peronist rivals the same polls show Milei clearly ahead.</li>
       <li><b>Result.</b> Milei's chance is the share of simulations he wins. The model also reports how often he wins in the first round, how often there is a runoff, and how the odds change if LLA and the PRO run on a single ticket.</li>
     </ul>
-    <p>Its limits: parties other than LLA and Peronismo are assumed not to reach the runoff, the candidates are those the polls ask about today, and the size of polling errors comes from only three presidential cycles.</p>
+    <p>Its limits: parties other than LLA and Peronismo are assumed not to reach the runoff, the 60% chance that Kicillof is the nominee is a judgment call, and the size of polling errors comes from only three presidential cycles.</p>
     <h3>Blend model</h3>
     <p>A simpler and faster read that averages three probabilities, with weights that shift toward the polls as the election approaches.</p>
     <ul>
@@ -882,8 +884,9 @@
         label(S.series.date[S.series.date.length-1], S.latest.p*100, C.milei);
         var L=S.latest, f=function(v){ return Math.round(v*100)+'%'; };
         document.getElementById('fc-stats').innerHTML='Simulation model, '+S.n_sims.toLocaleString('en-US')+' simulated elections: '+
-          'Milei wins in the first round <b>'+f(L.p_first_round_win)+'</b> · runoff <b>'+f(L.p_runoff)+'</b> · '+
-          'wins if LLA and PRO run together <b>'+f(L.p_alliance)+'</b>';
+          'Milei wins outright in the first round <b>'+f(L.p_first_round_win)+'</b> · there is a runoff <b>'+f(L.p_runoff)+'</b>'+
+          (L.p_win_runoff_if_held!=null ? ' · Milei wins the runoff, if there is one, <b>'+f(L.p_win_runoff_if_held)+'</b>' : '')+
+          ' · overall chance if LLA and PRO run together <b>'+f(L.p_alliance)+'</b>';
       }
       if(ann.length==2 && Math.abs(ann[0].y-ann[1].y)<4){ var hi=ann[0].y>ann[1].y?0:1; ann[hi].yshift=9; ann[1-hi].yshift=-9; }
       Plotly.newPlot('chart-forecast', t, lay({margin:{l:46,r:90,t:10,b:40}, showlegend:true,

@@ -38,6 +38,12 @@ the two are linked.
    Then it applies the rules: outright win at 45%, or 40% with a 10-point lead; if not, a runoff
    between the top two. Milei's chance is the share of simulations he wins.
 
+   The runoff rival is not settled. Each simulation picks the Peronist nominee: Kicillof with
+   probability 0.6, otherwise another Peronist (Massa is the one pollsters test). How Milei would do
+   against that other nominee comes from polls that asked both matchups of the same sample
+   (runoff_matchups.csv, updated daily from the press by fetch_runoff_matchups.py): the average difference, shrunk toward zero, plus an uncertainty equal to
+   how much that difference varies across polls (at least 2 points).
+
 Also reported: the chance he wins in the first round, the chance of a runoff, and the same chance
 if LLA and the PRO run on one ticket (PRO's share added to LLA's in the first round; the runoff is
 unchanged, since PRO voters already back Milei there).
@@ -64,6 +70,9 @@ ICG_DRIFT_MONTH = 0.172     # ICG points per √month (RMS change, 2002–2026)
 BANDWIDTH = 21              # days, recency kernel
 HOUSE_SHRINK = 2            # pseudo-polls pulling each house effect toward zero
 UNRATED_WEIGHT = 0.8
+P_KICILLOF = 0.6            # chance the Peronist nominee is Kicillof (judgment; edit as the race clarifies)
+ALT_PERONISTS = {"Massa"}   # other Peronist nominees with runoff polls (Cristina Kirchner is barred from office)
+NOMINEE_SD_MIN = 2.0        # floor on the uncertainty about how another nominee would do
 
 # ICG in the election month and the governing party's national vote (same table as the main page)
 ELECTIONS = [(2005, 2.192, 39.46), (2007, 1.678, 45.29), (2009, 1.340, 29.89), (2011, 2.621, 54.11),
@@ -146,6 +155,27 @@ def runoff_polls():
     return out
 
 
+def nominee_effect():
+    """How Milei's runoff share changes if the Peronist nominee is not Kicillof, from polls that
+    tested both matchups with the same sample (runoff_matchups.csv). Returns (mean, sd, n)."""
+    import csv
+    f = HERE / "runoff_matchups.csv"
+    if not f.exists():
+        return 0.0, NOMINEE_SD_MIN, 0
+    by = collections.defaultdict(dict)
+    with open(f, encoding="utf-8") as fh:
+        for r in csv.DictReader(fh):
+            m, o = float(r["milei"]), float(r["opponent_share"])
+            by[(r["end_date"], r["firm"])][r["opponent"]] = 100 * m / (m + o)
+    diffs = [v[c] - v["Kicillof"] for v in by.values() if "Kicillof" in v for c in v if c in ALT_PERONISTS]
+    if not diffs:
+        return 0.0, NOMINEE_SD_MIN, 0
+    n = len(diffs)
+    mean = sum(diffs) / n * n / (n + 3)                      # shrunk toward no difference
+    sd = max(math.sqrt(sum((d - mean) ** 2 for d in diffs) / n), NOMINEE_SD_MIN)
+    return mean, sd, n
+
+
 # ---------- fundamentals ----------
 
 def fundamentals_fit():
@@ -169,7 +199,7 @@ def icg_at(day):
 
 # ---------- simulation ----------
 
-def simulate(L, P, PRO, R, days, rng):
+def simulate(L, P, PRO, R, days, rng, nominee=(0.0, NOMINEE_SD_MIN)):
     months = max(days, 0) / 30.4
     sd_m = math.sqrt(MARGIN_SD_FINAL ** 2 + MARGIN_DRIFT_30D ** 2 * months)
     sd_r = math.sqrt(RUNOFF_SD_FINAL ** 2 + RUNOFF_DRIFT_30D ** 2 * months)
@@ -181,7 +211,8 @@ def simulate(L, P, PRO, R, days, rng):
     pro = PRO + rng.normal(0, BLOC_SD / 2, N_SIMS)
     rest = np.maximum(100 - L - P, 1) + rng.normal(0, BLOC_SD, N_SIMS)
     l, p, pro, rest = (np.maximum(v, 0.1) for v in (l, p, pro, rest))
-    runoff = R + zr * sd_r
+    kic = rng.random(N_SIMS) < P_KICILLOF                     # who the Peronist nominee is
+    runoff = R + zr * sd_r + np.where(kic, 0.0, nominee[0] + rng.normal(0, nominee[1], N_SIMS))
 
     def play(lla, pj, other):
         tot = lla + pj + other
@@ -199,6 +230,8 @@ def simulate(L, P, PRO, R, days, rng):
         "p_lose_first_round": float(p1.mean()),
         "p_runoff": float((~l1 & ~p1).mean()),
         "p_win_runoff_if_held": float((runoff[~l1 & ~p1] > 50).mean()) if (~l1 & ~p1).any() else None,
+        "p_win_runoff_vs_kicillof": float((runoff[~l1 & ~p1 & kic] > 50).mean()) if (~l1 & ~p1 & kic).any() else None,
+        "p_win_runoff_vs_other": float((runoff[~l1 & ~p1 & ~kic] > 50).mean()) if (~l1 & ~p1 & ~kic).any() else None,
         "p_alliance": float(win_alliance.mean()),
         "sd_margin": sd_m, "sd_runoff": sd_r,
         "_first": lshare, "_runoff": runoff,
@@ -210,6 +243,7 @@ def main():
     Lp, Pp, PROp = first_round_polls()
     Rp = runoff_polls()
     a, b, fund_err = fundamentals_fit()
+    nom = nominee_effect()
 
     start = max(min(p[0] for p in Lp), min(p[0] for p in Rp))
     today = datetime.date.today()
@@ -239,10 +273,11 @@ def main():
             P = P_poll * (100 - L) / (100 - L_poll)          # others give up or gain share pro rata
             R = R_poll + 100 * (L / (L + P) - L_poll / (L_poll + P_poll))
         rng = np.random.default_rng(int(d.strftime("%Y%m%d")))
-        s = simulate(L, P, PRO, R, days, rng)
+        s = simulate(L, P, PRO, R, days, rng, nom[:2])
         rows.append({"date": d.isoformat(), "p": round(s["p"], 3),
                      "p_first_round_win": round(s["p_first_round_win"], 3),
                      "p_runoff": round(s["p_runoff"], 3), "p_alliance": round(s["p_alliance"], 3),
+                     "p_win_runoff_if_held": None if s["p_win_runoff_if_held"] is None else round(s["p_win_runoff_if_held"], 3),
                      "lla_poll": round(L_poll, 1), "pj_poll": round(P_poll, 1), "pro_poll": round(PRO, 1),
                      "runoff_poll": round(R_poll, 1), "icg": icg,
                      "lla_fund": None if L_fund is None else round(L_fund, 1),
@@ -254,7 +289,8 @@ def main():
     s, latest = last
     latest = {**latest,
               "p_lose_first_round": round(s["p_lose_first_round"], 3),
-              "p_win_runoff_if_held": None if s["p_win_runoff_if_held"] is None else round(s["p_win_runoff_if_held"], 3),
+              "p_win_runoff_vs_kicillof": None if s["p_win_runoff_vs_kicillof"] is None else round(s["p_win_runoff_vs_kicillof"], 3),
+              "p_win_runoff_vs_other": None if s["p_win_runoff_vs_other"] is None else round(s["p_win_runoff_vs_other"], 3),
               "sd_margin": round(s["sd_margin"], 1), "sd_runoff": round(s["sd_runoff"], 1)}
     fb = np.arange(15, 66, 1)
     rb = np.arange(30, 71, 1)
@@ -264,7 +300,8 @@ def main():
         "election": FIRST_ROUND.isoformat(),
         "n_sims": N_SIMS,
         "latest": latest,
-        "series": {k: [r[k] for r in rows] for k in ("date", "p", "p_first_round_win", "p_runoff", "p_alliance")},
+        "series": {k: [r[k] for r in rows] for k in ("date", "p", "p_first_round_win", "p_runoff",
+                                                       "p_win_runoff_if_held", "p_alliance")},
         "distribution": {
             "first_round_lla": {"bins": fb[:-1].tolist(),
                                 "share_of_sims": (np.histogram(s["_first"], fb)[0] / N_SIMS).round(4).tolist()},
@@ -273,12 +310,14 @@ def main():
         },
         "method": {"n_sims": N_SIMS, "t_df": T_DF, "margin_sd_final": MARGIN_SD_FINAL,
                    "margin_drift_30d": MARGIN_DRIFT_30D, "runoff_sd_final": RUNOFF_SD_FINAL,
-                   "runoff_drift_30d": RUNOFF_DRIFT_30D, "rho": RHO,
+                   "runoff_drift_30d": RUNOFF_DRIFT_30D, "rho": RHO, "p_kicillof_nominee": P_KICILLOF,
+                   "other_nominee_effect": {"mean": round(nom[0], 2), "sd": round(nom[1], 2), "n_pairs": nom[2]},
                    "fundamentals": {"a": round(a, 2), "b": round(b, 2), "loo_rmse": round(fund_err, 2)}},
     }
     (HERE / "forecast_sim.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"Simulation model, {N_SIMS:,} sims: Milei {latest['p']:.0%} | first-round win {latest['p_first_round_win']:.0%}, "
-          f"runoff {latest['p_runoff']:.0%}, wins runoff if held {latest['p_win_runoff_if_held']:.0%} | "
+          f"runoff {latest['p_runoff']:.0%}, wins runoff if held {latest['p_win_runoff_if_held']:.0%} "
+          f"(vs Kicillof {latest['p_win_runoff_vs_kicillof']:.0%}, vs another Peronist {latest['p_win_runoff_vs_other']:.0%}) | "
           f"with PRO ticket {latest['p_alliance']:.0%}")
     print(f"  LLA {latest['lla_poll']} (polls) / {latest['lla_fund']} (ICG) -> {latest['lla']} "
           f"[poll weight {latest['weight_polls']}], PJ {latest['pj']}, runoff {latest['runoff_poll']} -> {latest['runoff']}")
