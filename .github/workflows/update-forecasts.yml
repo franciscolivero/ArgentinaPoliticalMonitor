@@ -60,8 +60,9 @@ jobs:
           if [ -n "$FILES" ] && [ -n "$(git status --porcelain $FILES)" ]; then
             git add $FILES
             git commit -m "Update forecasts ($(date -u +%Y-%m-%d))"
-            git pull --rebase
-            git push
+            # another run may have pushed the same files meanwhile: keep this (newer) version
+            git pull --rebase -X theirs || { git rebase --abort; echo "Rebase failed; next run will update"; exit 0; }
+            git push || echo "Push failed; next run will update"
           else
             echo "No change"
           fi
