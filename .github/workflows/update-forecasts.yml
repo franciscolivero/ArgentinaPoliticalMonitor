@@ -11,6 +11,7 @@ on:
     paths:
       - "forecast_ar.py"
       - "forecast_sim.py"
+      - "runoff_matchups.csv"
       - "forecast_latam.py"
       - "ml_utils.py"
       - "latam_elections.csv"
@@ -19,7 +20,7 @@ on:
   # also right after any of its inputs updates (GitHub often delays scheduled runs by hours)
   workflow_run:
     workflows: ["Update EncuestAR polls", "Update national vote-by-space polls", "Update approval average",
-                "Update Polymarket history", "Update ICG (headline + components)"]
+                "Update Polymarket history", "Update ICG (headline + components)", "Update runoff matchups"]
     types: [completed]
 
 permissions:

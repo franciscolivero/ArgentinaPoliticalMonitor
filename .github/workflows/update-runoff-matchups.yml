@@ -1,0 +1,50 @@
+name: Update runoff matchups
+
+# Daily: reads the press (Bing News + Google News) for new runoff polls that pit Milei against
+# each possible rival (fetch_runoff_matchups.py) and appends them to runoff_matchups.csv.
+# When it finishes, "Update forecasts" runs and the Simulation model picks the new polls up.
+
+on:
+  schedule:
+    - cron: "05 9 * * *"      # daily, 09:05 UTC (~06:05 Argentina)
+  push:
+    paths:
+      - "fetch_runoff_matchups.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: runoff-matchups
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests beautifulsoup4 lxml googlenewsdecoder
+
+      - name: Check the parser on known examples
+        run: python fetch_runoff_matchups.py --test
+
+      - name: Harvest new runoff polls from the press
+        continue-on-error: true
+        run: python fetch_runoff_matchups.py
+
+      - name: Commit (if changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain runoff_matchups.csv)" ]; then
+            git add runoff_matchups.csv
+            git commit -m "Update runoff matchups ($(date -u +%Y-%m-%d))"
+            git pull --rebase
+            git push
+          else
+            echo "No change"
+          fi
