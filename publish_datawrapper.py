@@ -34,7 +34,7 @@ C = {"milei": "#6D3FD8", "kicillof": "#2A8BD0", "pro": "#C98A1B", "izq": "#C8443
      "pos": "#24875A", "neg": "#C8443A", "ns": "#B7C1CC", "ink": "#0F2238", "celeste": "#75AADB"}
 
 
-STYLE_VERSION = 4   # bump to re-apply titles/colours to charts that already exist
+STYLE_VERSION = 5   # bump to re-apply titles/colours to charts that already exist
 
 
 def tint(hex_color, k=0.55):
@@ -115,15 +115,14 @@ def build_specs():
     t, F = P.forecast_ar()
     if t:
         specs.append(("ar-forecast", "Chance de que Milei gane la elección presidencial de 2027", "d3-lines", t,
-                      {"visualize": {"custom-colors": {"Pronóstico": C["milei"], "Encuestas": "#2A8BD0",
-                                                       "Fundamentales (ML)": C["pos"], "Polymarket": C["gris"]},
-                                     "lines": {"Pronóstico": {"width": "style3", "directLabel": True},
-                                               "Encuestas": {"width": "style0", "dash": "style2", "directLabel": False},
-                                               "Fundamentales (ML)": {"width": "style0", "dash": "style2", "directLabel": False},
+                      {"visualize": {"custom-colors": {"Modelo de simulación": C["milei"], "Modelo combinado": "#2F6FA8",
+                                                       "Polymarket": C["gris"]},
+                                     "lines": {"Modelo de simulación": {"width": "style3", "directLabel": True},
+                                               "Modelo combinado": {"width": "style1", "directLabel": True},
                                                "Polymarket": {"width": "style0", "dash": "style2", "directLabel": False}},
                                      "custom-range-y": ["0", "100"], "y-grid": "on", "label-colors": True,
                                      "show-tooltips": True},
-                       "describe": {"source-name": SOURCE + " · modelo híbrido", "number-append": "%",
+                       "describe": {"source-name": SOURCE + " · modelos de simulación y combinado", "number-append": "%",
                                     "number-format": "0"}}, "ar"))
     t, F = P.forecast_latam()
     if t:

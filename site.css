@@ -95,3 +95,9 @@ main{padding:0 clamp(16px,5vw,64px) 80px; max-width:1040px}
   .block{padding-top:34px; scroll-margin-top:58px}
   .block h2{font-size:19px}
 }
+
+/* forecast summary line */
+.fc-stats{margin:6px 0 0; font-size:13.5px; color:var(--muted)}
+.fc-stats b{color:var(--ink); font-weight:600}
+.sources h3{color:var(--ink); font-size:15.5px; font-weight:650; margin:18px 0 6px}
+.sources p{margin:0 0 12px}

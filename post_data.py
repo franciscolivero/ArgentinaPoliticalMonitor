@@ -280,15 +280,19 @@ def latam_country_table(r):
 
 # ------------------------------------------------------------------------------- forecasts
 def forecast_ar():
-    F = load("forecast_ar.json")
-    if not F:
+    """Both Argentina models on one table: Simulation (forecast_sim.json), Blend (forecast_ar.json)
+    and Polymarket. Returns (table, {"sim": ..., "blend": ...})."""
+    S, B = load("forecast_sim.json"), load("forecast_ar.json")
+    if not S and not B:
         return None, None
-    s = F["series"]
     def pc(v):
         return None if v is None else round(100 * v, 1)
-    rows = [(d, pc(p), pc(a), pc(b), pc(c)) for d, p, a, b, c in
-            zip(s["date"], s["p"], s["p_polls"], s["p_fund"], s["p_market"])]
-    return table(["Fecha", "Pronóstico", "Encuestas", "Fundamentales (ML)", "Polymarket"], rows), F
+    sim = dict(zip(S["series"]["date"], S["series"]["p"])) if S else {}
+    bl = dict(zip(B["series"]["date"], B["series"]["p"])) if B else {}
+    mk = dict(zip(B["series"]["date"], B["series"]["p_market"])) if B else {}
+    dates = sorted(set(sim) | set(bl))
+    rows = [(d, pc(sim.get(d)), pc(bl.get(d)), pc(mk.get(d))) for d in dates]
+    return table(["Fecha", "Modelo de simulación", "Modelo combinado", "Polymarket"], rows), {"sim": S, "blend": B}
 
 
 def forecast_latam():

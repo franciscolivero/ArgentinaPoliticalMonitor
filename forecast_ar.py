@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-forecast_ar.py — chance that Javier Milei wins the 2027 presidential election. Writes forecast_ar.json.
+forecast_ar.py — the Blend model: chance that Javier Milei wins the 2027 presidential election.
+Writes forecast_ar.json. (The Simulation model is forecast_sim.py.)
 
 A hybrid model in the sense of Pasek (2015): three independent reads, combined with weights that
 shift toward the polls as the election approaches.

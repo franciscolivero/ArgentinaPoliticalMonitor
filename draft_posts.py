@@ -79,7 +79,7 @@ def argentina(today, state):
 
     w("# Monitor Electoral Argentina 2027")
     w("")
-    w("## La foto en seis números" if P.load("forecast_ar.json") else "## La foto en cinco números")
+    w("## La foto en seis números" if (P.load("forecast_sim.json") or P.load("forecast_ar.json")) else "## La foto en cinco números")
     w("")
     w(f"- Aprobación de Milei: {P.pct(a_now, 1)} ({P.delta(a_now, a_30)} en 30 días); desaprobación {P.pct(d_now, 1)}.")
     w(f"- Ballotage Milei–Kicillof: {P.pct(m_now, 1)} a {P.pct(k_now, 1)} en el promedio de encuestas.")
@@ -90,33 +90,42 @@ def argentina(today, state):
     if cands:
         w(f"- Polymarket: {cands[0]['name']} {P.pct(cands[0]['points'][-1][1])} de probabilidad de ganar en 2027.")
     _, FA = P.forecast_ar()
-    if FA:
-        w(f"- Pronóstico: Milei tiene {P.pct(100 * FA['latest']['p'])} de chances de ganar la elección de 2027.")
+    FS, FB = (FA or {}).get("sim"), (FA or {}).get("blend")
+    if FS or FB:
+        bits = []
+        if FS:
+            bits.append(f"{P.pct(100 * FS['latest']['p'])} de chances de ganar en 2027 según el modelo de simulación")
+        if FB:
+            bits.append(f"{P.pct(100 * FB['latest']['p'])} según el modelo combinado")
+        w(f"- Pronóstico: Milei tiene {' y '.join(bits)}.")
     w("")
 
-    if FA:
-        L0 = FA["latest"]
-        s30 = FA["series"]
-        p30 = P.at(s30["date"], s30["p"], t30)
-        model = P.load("forecast_latam_model.json") or {}
+    if FS or FB:
         w("## El pronóstico")
         w("")
-        txt = (f"Nuestro modelo le asigna a Milei un {P.pct(100 * L0['p'])} de chances de ganar la elección "
-               f"presidencial de 2027"
-               + (f" ({P.delta(100 * L0['p'], 100 * p30, 0)} en 30 días)" if p30 is not None else "") + ". "
-               f"Combina tres lecturas. Las encuestas del ballotage le dan {P.pct(100 * L0['p_polls'])}")
-        if L0.get("p_fund") is not None:
-            txt += (f"; los fundamentales, un modelo de machine learning entrenado con {model.get('n', '—')} "
-                    f"elecciones presidenciales latinoamericanas que estima la chance del oficialismo a partir de la "
-                    f"aprobación presidencial, le dan {P.pct(100 * L0['p_fund'])}")
-        if L0.get("p_market") is not None:
-            txt += f"; Polymarket, {P.pct(100 * L0['p_market'])}"
-        wts = L0.get("weights", {})
-        txt += (f". Hoy las encuestas pesan {P.pct(100 * wts.get('polls', 0))}, los fundamentales "
-                f"{P.pct(100 * wts.get('fundamentals', 0))} y el mercado {P.pct(100 * wts.get('market', 0))}; "
-                "a medida que se acerque la elección, el peso se corre hacia las encuestas.")
-        w(txt)
-        w("")
+        if FS:
+            L0, s30 = FS["latest"], FS["series"]
+            p30 = P.at(s30["date"], s30["p"], t30)
+            txt = (f"El modelo de simulación le asigna a Milei un {P.pct(100 * L0['p'])} de chances de ganar"
+                   + (f" ({P.delta(100 * L0['p'], 100 * p30, 0)} en 30 días)" if p30 is not None else "") + ". "
+                   f"Simula {FS['n_sims']:,}".replace(",", ".") + " veces la elección con sus dos vueltas: "
+                   f"Milei gana en primera vuelta en el {P.pct(100 * L0['p_first_round_win'])} de los casos y hay "
+                   f"ballotage en el {P.pct(100 * L0['p_runoff'])}. Si LLA y el PRO compitieran juntos, su chance "
+                   f"subiría a {P.pct(100 * L0['p_alliance'])}.")
+            w(txt)
+            w("")
+        if FB:
+            L1 = FB["latest"]
+            model = P.load("forecast_latam_model.json") or {}
+            txt = (f"El modelo combinado, que promedia encuestas, fundamentales y mercado, le da {P.pct(100 * L1['p'])}. "
+                   f"Las encuestas del ballotage le dan {P.pct(100 * L1['p_polls'])}")
+            if L1.get("p_fund") is not None:
+                txt += (f"; los fundamentales, un modelo de machine learning entrenado con {model.get('n', '—')} "
+                        f"elecciones presidenciales latinoamericanas, {P.pct(100 * L1['p_fund'])}")
+            if L1.get("p_market") is not None:
+                txt += f"; Polymarket, {P.pct(100 * L1['p_market'])}"
+            w(txt + ".")
+            w("")
         w(embed("ar-forecast", state))
         w("")
 
