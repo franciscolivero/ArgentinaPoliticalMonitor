@@ -3,19 +3,23 @@
 fetch_approval_news.py — daily harvest of new Milei approval polls from the press.
 
 EncuestAR only relays a handful of approval polls, so on its own the approval average would
-stop getting new information. This script reads Google News RSS searches (Argentine edition)
-for approval-poll headlines, keeps an item only when it names a known pollster AND states an
-approval share of the national government's gestión, and appends it to approval_polls.csv with
-origin=news. build_approval.py then rolls it into the average.
+stop getting new information. This script searches the press every day (Bing News and Google
+News, last three weeks), downloads each article and reads its body text, not just the headline:
+headlines rarely carry both the pollster and the figures. In every sentence about approval of the
+national government's gestión it reads the approval share (and the disapproval share when given),
+credits it to the pollster named closest before it, and appends new polls to approval_polls.csv
+with origin=news. build_approval.py then rolls them into the average.
 
 Safeguards
-  * Firm must resolve through pollster_aliases.csv / the names already in the CSV.
-  * Text must speak of approval of the gestión (not imagen, not a governor or a mayor).
+  * Firm must resolve through pollster_aliases.csv / known spellings / the names already in the CSV.
+  * The sentence must speak of approval or disapproval of the gestión or the government, not of
+    image (imagen), a governor or mayor, or a subgroup of voters ("entre los jóvenes"...).
   * 15 <= approve <= 70, 20 <= disapprove <= 80, approve + disapprove <= 102.
-  * Fieldwork end is rarely in a headline, so the poll is dated publication − 5 days and
-    flagged date_approx=1; when EncuestAR (fetch_approval.py) later carries the same poll its
-    exact date replaces this one. Hand-entered rows are never touched.
+  * Fieldwork end is read when the article states it ("entre el 12 y el 17 de octubre"); otherwise
+    publication − 5 days, flagged date_approx=1. When EncuestAR (fetch_approval.py) later carries
+    the same poll its exact date replaces this one. Hand-entered rows are never touched.
   * The same poll reported by several outlets is merged (same firm, ±20 days, ±1.5 pts).
+  * At most 40 articles and 8 minutes per run; anything missed is retried the next day.
 
 Usage:
     python fetch_approval_news.py            # merge into approval_polls.csv
@@ -31,13 +35,16 @@ CSV_PATH = HERE / "approval_polls.csv"
 ALIASES = HERE / "pollster_aliases.csv"
 FIELDS = ["firm", "end_date", "approve", "disapprove", "n", "date_approx", "source", "origin"]
 MATCH_DAYS, LOOKBACK_DAYS = 20, 21
+MAX_ARTICLES, TIME_BUDGET = 40, 8 * 60
 
 QUERIES = [
     "aprobación gestión Milei encuesta",
-    "aprueba gestión Milei encuesta",
     "desaprueba gestión Milei encuesta",
+    "desaprobación Milei encuesta nacional",
     "aprobación del gobierno Milei consultora",
+    "encuesta nacional Milei gestión",
 ]
+TITLE_OK = re.compile(r"aprob|aprueb|desaprueb|gesti[oó]n|encuesta|sondeo|rechazo", re.I)
 RSS = "https://news.google.com/rss/search?q={q}+when:14d&hl=es-419&gl=AR&ceid=AR:es-419"
 
 # extra spellings seen in headlines -> canonical name (pollster_aliases.csv is read on top)
@@ -113,51 +120,82 @@ def first(pats, text):
 
 
 def fetch_items():
-    import requests
+    """Articles about approval polls: (title, url, pub), newest first, deduplicated."""
+    import fetch_runoff_matchups as R
     from urllib.parse import quote_plus
-    items = []
-    for q in QUERIES:
-        try:
-            r = requests.get(RSS.format(q=quote_plus(q)), timeout=30,
-                             headers={"User-Agent": "Mozilla/5.0 (arg2027-monitor)"})
-            r.raise_for_status()
-            root = ET.fromstring(r.content)
-        except Exception as e:
-            print(f"  · query failed ({q}): {e}")
-            continue
-        for it in root.iter("item"):
-            title = it.findtext("title") or ""
-            desc = re.sub(r"<[^>]+>", " ", html.unescape(it.findtext("description") or ""))
+    today = datetime.date.today()
+    seen, cands = set(), []
+    for tmpl in (R.BING, R.GNEWS):
+        for q in QUERIES:
             try:
-                pub = parsedate_to_datetime(it.findtext("pubDate")).date()
-            except Exception:
+                items = list(R.rss(tmpl.format(q=quote_plus(q))))
+            except Exception as e:
+                print(f"  · feed failed ({q}): {e}")
                 continue
-            items.append({"title": html.unescape(title), "desc": desc, "pub": pub,
-                          "link": it.findtext("link") or ""})
-    return items
+            for title, link, pub in items:
+                if (today - pub).days > LOOKBACK_DAYS or not TITLE_OK.search(title):
+                    continue
+                k = key(re.sub(r"\s+-\s+[^-]{2,60}$", "", title))[:80]
+                if k in seen:
+                    continue
+                seen.add(k)
+                cands.append((title, link, pub))
+    cands.sort(key=lambda c: c[2], reverse=True)
+    out, urls, decodes = [], set(), 0
+    for title, link, pub in cands:
+        if len(out) >= MAX_ARTICLES:
+            break
+        if "news.google.com" in link:
+            if decodes >= R.MAX_GOOGLE_DECODES:
+                continue
+            decodes += 1
+        url = R.resolve(link)
+        if url and url not in urls:
+            urls.add(url)
+            out.append({"title": html.unescape(title), "link": url, "pub": pub})
+    return out
 
 
-def parse_item(it, table):
-    # Google News titles end with " - Outlet"; drop it so outlet names don't read as firms
-    title = re.sub(r"\s+-\s+[^-]{2,60}$", "", it["title"])
-    text = f"{title}. {it['desc']}"
-    if not ON_TOPIC.search(title) or OFF_TOPIC.search(title):
-        return None
-    firm = find_firm(text, table)
-    if not firm:
-        return None
-    ap, dp = first(APPROVE, title), first(DISAPPROVE, title)
-    if ap is None:
-        ap = first(APPROVE, text)
-    if dp is None:
-        dp = first(DISAPPROVE, text)
-    if ap is None or not 15 <= ap <= 70:
-        return None
-    if dp is not None and (not 20 <= dp <= 80 or ap + dp > 102):
-        dp = None
-    end = it["pub"] - datetime.timedelta(days=5)
-    return {"firm": firm, "end_date": end.isoformat(), "approve": ap, "disapprove": dp,
-            "source": it["link"], "pub": it["pub"]}
+SENT_OK = re.compile(r"aprob|aprueb|desaprueb|valoraci[oó]n (?:positiva|negativa)|evaluaci[oó]n (?:positiva|negativa)", re.I)
+SENT_OFF = re.compile(r"\bimagen\b(?!.{0,40}gesti[oó]n)|gobernador|intendente|jefe de gobierno porte|"
+                      r"provincia de buenos aires|bonaerense|municipio|entre (?:los|las|quienes)|votantes de|"
+                      r"j[oó]venes|mujeres|varones|congreso|ley\b|proyecto", re.I)
+APPROVE.append(re.compile(r"valoraci[oó]n positiva[^.%]{0,30}?" + PCT, re.I))
+DISAPPROVE.append(re.compile(r"valoraci[oó]n negativa[^.%]{0,30}?" + PCT, re.I))
+DISAPPROVE.append(re.compile(r"(?:evaluaciones|valoraciones|opiniones|calificaciones) negativas[^.%]{0,30}?" + PCT, re.I))
+
+
+def parse_article(art, table):
+    """Approval polls in one article: [{firm, end_date, approve, disapprove, source, pub, approx}]."""
+    import fetch_runoff_matchups as R
+    try:
+        text = art["title"] + "\n" + R.article_text(art["link"])
+    except Exception:
+        return []
+    pats = R.firm_patterns() + [(re.compile(r"(?<![a-z])" + re.escape(a) + r"(?![a-z])"), c)
+                                 for a, c in table if len(a) >= 4]
+    f = R.fold(text)
+    sents = [(m.start(), m.group(0)) for m in re.finditer(r"[^.\n]+(?:\.(?!\d)|\n|$)", text)]
+    out, firms_done = [], set()
+    for k, (pos, sent) in enumerate(sents):
+        if not SENT_OK.search(sent) or SENT_OFF.search(sent):
+            continue
+        ap = first(APPROVE, sent)
+        if ap is None or not 15 <= ap <= 70:
+            continue
+        dp = first(DISAPPROVE, sent)
+        if dp is None and k + 1 < len(sents) and not SENT_OFF.search(sents[k + 1][1]):
+            dp = first(DISAPPROVE, sents[k + 1][1])
+        if dp is not None and (not 20 <= dp <= 80 or ap + dp > 102):
+            dp = None
+        firm = R.firm_near(f, pos + len(sent), pats)
+        if not firm or firm in firms_done:
+            continue
+        firms_done.add(firm)
+        end, approx = R.fieldwork_end(text, art["pub"], pos)
+        out.append({"firm": firm, "end_date": end.isoformat(), "approve": ap, "disapprove": dp,
+                    "source": art["link"], "pub": art["pub"], "approx": approx})
+    return out
 
 
 def fmt(v):
@@ -175,13 +213,16 @@ def main():
     except Exception as e:
         print(f"  ! news fetch failed ({e}); CSV untouched.")
         return
-    added = []
+    import time
+    t0 = time.time()
+    polls = []
     for it in sorted(items, key=lambda x: x["pub"]):
-        if (today - it["pub"]).days > LOOKBACK_DAYS:
-            continue
-        p = parse_item(it, table)
-        if not p:
-            continue
+        if time.time() - t0 > TIME_BUDGET:
+            print("  · time budget reached; the rest will be read on the next run")
+            break
+        polls.extend(parse_article(it, table))
+    added = []
+    for p in polls:
         t = datetime.date.fromisoformat(p["end_date"])
         dup = False
         for r in rows:
@@ -196,7 +237,7 @@ def main():
         if dup:
             continue
         row = {"firm": p["firm"], "end_date": p["end_date"], "approve": fmt(p["approve"]),
-               "disapprove": fmt(p["disapprove"]), "n": "", "date_approx": "1",
+               "disapprove": fmt(p["disapprove"]), "n": "", "date_approx": "1" if p["approx"] else "0",
                "source": p["source"], "origin": "news"}
         rows.append(row)
         added.append(row)
