@@ -14,6 +14,7 @@ on:
       - "approval_polls.csv"
       - "build_approval.py"
       - "fetch_approval_news.py"
+      - "fetch_runoff_matchups.py"
   workflow_dispatch:
 
 permissions:
@@ -31,7 +32,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install requests beautifulsoup4 lxml numpy
+      - run: pip install requests beautifulsoup4 lxml numpy googlenewsdecoder
 
       # A failed scrape must not block the rebuild: the average still rolls forward on the
       # polls already in the CSV.
@@ -39,8 +40,9 @@ jobs:
         continue-on-error: true
         run: python fetch_approval.py
 
-      - name: Harvest new approval polls from the press (Google News)
+      - name: Harvest new approval polls from the press (Bing + Google News, full articles)
         continue-on-error: true
+        timeout-minutes: 10
         run: python fetch_approval_news.py
 
       - name: Rebuild approval average
