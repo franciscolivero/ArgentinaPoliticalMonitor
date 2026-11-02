@@ -138,6 +138,15 @@
      "origin": "news"
     },
     {
+     "date": "2026-04-05",
+     "firm": "Cadem",
+     "approve": 41.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNOWtONi03cVVfcnlDbXRrVHBZdVRUVERNQ3hMQzFKUXRFVTU5RHE5N2RBM1JrYWwtT29jc1RBVnZlYS1mSUUwTTRLN290MTNGdUhSanBSRG5ZamN0UGdjNk1GSGlDa2pSZENEOHotZGhxOENsRjVLaGctTmZJd3JfWWhSSGNwOXM4T2JLaXV1aFBEMkdsczF2RHVJb0hsZzlDdVMydVdtMmVkdXdCVnhvcWJmSWhlNWgyYjFmWS1vcWZQUVh3alZhZ183QVNOZTk4S3M4M3FNckFOYzVmTGdfQmRUNC1KRzg?oc=5",
+     "origin": "news"
+    },
+    {
      "date": "2026-04-08",
      "firm": "Criteria",
      "approve": 36.0,
@@ -297,6 +306,15 @@
      "disapprove": null,
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPS0V3YXlCQkhrLUVzQnZZNmdLcGsxSVZhUEhwUXF0QVU1RGR4Z2dZVTlGMGtMM2d1dUFsUC14eTRzd1pjQVhCTE9PUnp3LTdxa084cTdlRG10cUNtaUdaWTZESDVUVGVJVGVFd3VoU2N3UGM3VmpYZnFsZXRSck5HS1lNZ2hUaWxmQ2RIeFl5aHR5Z0dVQnFrd2R3cWRUYlIzWHYzc1k5MmdEN09CQlQyRnJEaS1PQVEzNFdpcVlGdGlfMGI3U1BYRkprNTJ6VTctYUNYLTNnMEYyWWN2ajFoUnI5dWxkU2gzUVZzaTFyV2xkem5QNDZF0gGYAkFVX3lxTE41Y3R0UnZfV1BQVjNzQngwOVRiRk5tUXpDRGdfSlE1Z19jYWROa2d0N2JzbW84RDBhSkNtRDVjbHNqbTY3ZFItSU11SHZHdEp0MGFROXlVUGZaUjNIaXhkN3ZkQkxZc3JLUnE3NE5DNWpoTmdOT2l1bXplVnpJRTIxV0c0OWdUQzI5NVZ5eklOQVBheTY0TTZrTlBBX05QSl9QZy1PTGtNSmZjVkN3T050bFFKVk1mc2dkTmVSUTN0NTFka1J5eWpKWnk4Q0tGVXhyZEcwR3dtOUl2Smh6VjUwUTNETjRPLWotRk9mbG1QaWdLNzd5TnF6UWRPYzk5cGJjeDE4bGFpTlhJNmJITXFNSnA0MXpHemc?oc=5",
+     "origin": "news"
+    },
+    {
+     "date": "2026-05-29",
+     "firm": "Criteria",
+     "approve": 36.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQMkRCYlY4aDl3NjlzM0VxVWIxT1pKQ2oyaGo3RTNlT1FqNTBpTWxXUDlacjNTaEstMllqTWJrSHFzR2hCci1ZYmZibjFCTU5tRlRKUjIyWFJFeHB0eUR2S2g5d2dOdC1kWWhwSkdxVDZZM0JoTnB5UVRaYnZCd1VlYkY5YTkzMmF2R0FpeVR4TEVhcGdlMjlWZ1daUVZOYjFweUxEOUJ1MXVKWGFBeGp5ZmhNdHNYeHN0VVVQOHlaczhvOUs0bF9KenVPSHdfVzlwZ2ZiTFZlV3U5RXc1V19VWi1pRVlWamthdldFQg?oc=5",
      "origin": "news"
     },
     {
@@ -876,6 +894,15 @@
      "origin": "news"
     },
     {
+     "date": "2026-10-30",
+     "firm": "Cadem",
+     "approve": 26.0,
+     "disapprove": 69.0,
+     "approx": false,
+     "source": "https://cadem.cl/wp-content/uploads/2026/11/Track-PP-702-Octubre-S5-M2-VF.pdf",
+     "origin": "pollster"
+    },
+    {
      "date": "2026-10-31",
      "firm": "Criteria",
      "approve": 25.0,
@@ -928,24 +955,24 @@
       "2026-10-31"
      ],
      "values": [
-      53.8,
-      52.4,
-      50.7,
-      48.8,
-      46.6,
-      44.5,
-      42.7,
-      41.4,
-      40.4,
-      39.5,
-      38.8,
-      38.1,
-      37.6,
-      37.4,
-      37.5,
-      38.1,
-      39.4,
+      53.7,
+      52.2,
+      50.4,
+      48.5,
+      46.4,
+      44.3,
+      42.5,
       41.2,
+      40.2,
+      39.3,
+      38.6,
+      38.0,
+      37.5,
+      37.3,
+      37.4,
+      38.1,
+      39.3,
+      41.1,
       43.3,
       45.5,
       47.4,
@@ -953,16 +980,16 @@
       49.1,
       48.5,
       47.0,
-      44.9,
+      44.8,
       42.7,
       41.1,
-      40.2,
+      40.1,
+      39.9,
       40.0,
-      40.3,
-      40.8,
-      41.4,
-      41.9,
-      42.1
+      40.4,
+      40.9,
+      41.3,
+      41.4
      ]
     },
     "disapprove": {
@@ -1031,14 +1058,14 @@
       56.9,
       57.4,
       58.0,
-      58.9,
+      58.8,
       59.8,
-      61.0,
-      62.1,
-      63.2,
-      64.2,
-      65.0,
-      65.3
+      60.9,
+      62.2,
+      63.3,
+      64.3,
+      65.2,
+      65.4
      ]
     }
    }
@@ -2651,6 +2678,15 @@
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQWkJPdnQzanh3eFZYanF0VjZpOGw2WXRoNW1EdDd1ajdwWjZuNEQtc1Q4Y3lNNllZS0RVS0R4bmIwekFld2lVc0xualdVNWFNOE52dERXNkE4ZzluczlMclJvc200bGFnZUMyWndiVnpiRHJjTlRJaUZ5b0txN0tiTER4RUNnZ0FTaUQyTW0xcDZhZkljMm9qQVZaZlV0cEt4TGZxSURRbzloZw?oc=5",
      "origin": "news"
+    },
+    {
+     "date": "2026-10-29",
+     "firm": "Demoscopia Digital",
+     "approve": 71.2,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZTVwODVBMklmR3NPRnhXT2ltald4eHEzSm94aUlMTEpLbDFUUU1nWjE3Tm85ZDFkNHRsUzV1SkF2Z0RCM0xzQnBGWXBzZVNzZVJMczJNR1dJSVlRZ19rbVNBY3pIRGZtNk9nS3pQSHhtWkNMa0wteUF0ajloWC02X3h1UWVzelhsN0FuNG93cFlRaHFvWlo4UGRhMjJqZ21CNTBnODlsX1pHdUVKSU15Q1B0NA?oc=5",
+     "origin": "news"
     }
    ],
    "country": "Mexico",
@@ -2753,7 +2789,8 @@
       "2026-10-04",
       "2026-10-11",
       "2026-10-18",
-      "2026-10-22"
+      "2026-10-25",
+      "2026-10-29"
      ],
      "values": [
       80.3,
@@ -2844,13 +2881,14 @@
       64.6,
       65.9,
       66.9,
-      67.6,
-      68.0,
-      68.3,
+      67.7,
+      68.1,
       68.4,
-      68.3,
-      68.2,
-      68.1
+      68.5,
+      68.6,
+      68.7,
+      68.7,
+      68.8
      ]
     },
     "disapprove": {
@@ -5436,6 +5474,6 @@
    }
   }
  },
- "updated": "2026-11-01T17:07:17Z",
+ "updated": "2026-11-02T20:45:45Z",
  "method": "Google News coverage of national polls and regional rankings (CB Consultora, Mitofsky, AtlasIntel); Gaussian-kernel average, 21-day bandwidth, firm-crowding weights."
 }
