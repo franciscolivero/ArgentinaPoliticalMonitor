@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26T16:04:07+00:00",
+ "updated": "2026-11-02T19:25:29+00:00",
  "method": {
   "window_days": 28,
   "min_polls_per_race": 4,
@@ -2580,7 +2580,7 @@
    ],
    "weight": 0.941,
    "active_2026": true,
-   "last_seen_2026": "2026-09-19"
+   "last_seen_2026": "2026-10-25"
   },
   {
    "firm": "Query",
@@ -2704,7 +2704,7 @@
    ],
    "weight": 0.924,
    "active_2026": true,
-   "last_seen_2026": "2026-10-20"
+   "last_seen_2026": "2026-10-27"
   },
   {
    "firm": "Federico González & Asociados",
@@ -3023,8 +3023,8 @@
     }
    ],
    "weight": 0.863,
-   "active_2026": false,
-   "last_seen_2026": null
+   "active_2026": true,
+   "last_seen_2026": "2026-10-14"
   },
   {
    "firm": "Management & Fit",
