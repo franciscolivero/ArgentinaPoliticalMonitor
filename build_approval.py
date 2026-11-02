@@ -131,12 +131,26 @@ def poll_weights(polls):
         p["w"] = rating * math.sqrt(min(n_eff, N_CAP) / 1000.0)
 
 
+def _no_nan(o):
+    """JSON has no NaN: missing estimates are written as null so the page can still parse the file."""
+    if isinstance(o, float) and (math.isnan(o) or math.isinf(o)):
+        return None
+    if isinstance(o, dict):
+        return {k: _no_nan(v) for k, v in o.items()}
+    if isinstance(o, list):
+        return [_no_nan(v) for v in o]
+    return o
+
+
 # ---------------------------------------------------------------- local linear regression
 def loclin(t0, ts, ys, ws, h):
     """Local-linear estimate at t0 with Gaussian kernel of bandwidth h (days)."""
     if len(ts) == 0:
         return float("nan")
     k = np.exp(-0.5 * ((ts - t0) / h) ** 2) * ws
+    while k.sum() < 1e-6 and h < 720:          # a gap wider than the bandwidth: widen it locally
+        h *= 2
+        k = np.exp(-0.5 * ((ts - t0) / h) ** 2) * ws
     if k.sum() < 1e-9:
         return float("nan")
     x = ts - t0
@@ -322,6 +336,7 @@ def embed(data):
     if not HTML_FILE.exists():
         return
     html = HTML_FILE.read_text(encoding="utf-8")
+    data = _no_nan(data)
     block = "\n" + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + "\n"
     new, k = re.subn(r"(/\*\s*APPROVAL_START\s*\*/).*?(/\*\s*APPROVAL_END\s*\*/)",
                      lambda m: m.group(1) + block + m.group(2), html, count=1, flags=re.S)
@@ -331,7 +346,7 @@ def embed(data):
 
 
 def main():
-    data = build()
+    data = _no_nan(build())
     JSON_OUT.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     L, M = data["latest"], data["method"]
     print(f"wrote {JSON_OUT.name}: {len(data['polls'])} polls, bandwidths {M['bandwidths_days']} d, "

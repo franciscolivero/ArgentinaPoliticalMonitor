@@ -26,7 +26,7 @@ Usage:
     python fetch_approval_news.py --dry-run  # show what would be added
 """
 
-import csv, re, sys, html, datetime, pathlib, unicodedata
+import csv, re, sys, json, html, datetime, pathlib, unicodedata
 from email.utils import parsedate_to_datetime
 from xml.etree import ElementTree as ET
 
@@ -165,13 +165,33 @@ DISAPPROVE.append(re.compile(r"valoraci[oó]n negativa[^.%]{0,30}?" + PCT, re.I)
 DISAPPROVE.append(re.compile(r"(?:evaluaciones|valoraciones|opiniones|calificaciones) negativas[^.%]{0,30}?" + PCT, re.I))
 
 
+TITLE_OFF = re.compile(r"mujeres|j[oó]venes|bonaerense|provincia|gobernador|intendente|c[oó]rdoba(?! *&)|"
+                       r"santa fe|mendoza|tucum[aá]n|salta|ciudad de buenos aires|porte[nñ]o|kicillof|llaryora|pullaro", re.I)
+PLAUSIBLE = 12      # points from the current average beyond which a reading is treated as a misread
+
+
+def current_average():
+    try:
+        L = json.loads((HERE / "approval_history.json").read_text(encoding="utf-8"))["latest"]
+        return L.get("approve"), L.get("disapprove")
+    except Exception:
+        return None, None
+
+
 def parse_article(art, table):
-    """Approval polls in one article: [{firm, end_date, approve, disapprove, source, pub, approx}]."""
+    """Approval polls in one article: [{firm, end_date, approve, disapprove, source, pub, approx}].
+    Strict on purpose (a wrong poll does more harm than a missed one): the article must be about the
+    national government, the sentence must give BOTH approval and disapproval of the gestión
+    (adding to 85–102), both must sit within 12 points of the current average, and the pollster must
+    be named in that sentence or just before it."""
     import fetch_runoff_matchups as R
+    if TITLE_OFF.search(art["title"]):
+        return []
     try:
         text = art["title"] + "\n" + R.article_text(art["link"])
     except Exception:
         return []
+    a0, d0 = current_average()
     pats = R.firm_patterns() + [(re.compile(r"(?<![a-z])" + re.escape(a) + r"(?![a-z])"), c)
                                  for a, c in table if len(a) >= 4]
     f = R.fold(text)
@@ -180,15 +200,16 @@ def parse_article(art, table):
     for k, (pos, sent) in enumerate(sents):
         if not SENT_OK.search(sent) or SENT_OFF.search(sent):
             continue
-        ap = first(APPROVE, sent)
-        if ap is None or not 15 <= ap <= 70:
-            continue
-        dp = first(DISAPPROVE, sent)
-        if dp is None and k + 1 < len(sents) and not SENT_OFF.search(sents[k + 1][1]):
+        ap, dp = first(APPROVE, sent), first(DISAPPROVE, sent)
+        if ap is not None and dp is None and k + 1 < len(sents) and not SENT_OFF.search(sents[k + 1][1]):
             dp = first(DISAPPROVE, sents[k + 1][1])
-        if dp is not None and (not 20 <= dp <= 80 or ap + dp > 102):
-            dp = None
-        firm = R.firm_near(f, pos + len(sent), pats)
+        if ap is None or dp is None or not 85 <= ap + dp <= 102:
+            continue
+        if a0 is not None and (abs(ap - a0) > PLAUSIBLE or abs(dp - d0) > PLAUSIBLE):
+            continue
+        lo = max(0, pos - 400)
+        firm = R.firm_near(f[lo:pos + len(sent)], pos - lo + len(sent), pats) if any(
+            rx.search(f[lo:pos + len(sent)]) for rx, _ in pats) else None
         if not firm or firm in firms_done:
             continue
         firms_done.add(firm)
@@ -228,8 +249,8 @@ def main():
         for r in rows:
             if r["firm"] != p["firm"] or not r.get("approve"):
                 continue
-            if abs((datetime.date.fromisoformat(r["end_date"]) - t).days) <= MATCH_DAYS + 5 and \
-               abs(float(r["approve"]) - p["approve"]) <= 1.5:
+            gap = abs((datetime.date.fromisoformat(r["end_date"]) - t).days)
+            if gap <= 12 or (gap <= MATCH_DAYS + 5 and abs(float(r["approve"]) - p["approve"]) <= 1.5):
                 dup = True
                 if not r.get("disapprove") and p["disapprove"] is not None and r.get("origin") == "news":
                     r["disapprove"] = fmt(p["disapprove"])
