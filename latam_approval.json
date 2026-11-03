@@ -2671,6 +2671,15 @@
      "origin": "manual"
     },
     {
+     "date": "2026-10-20",
+     "firm": "El Financiero",
+     "approve": 69.0,
+     "disapprove": 31.0,
+     "approx": false,
+     "origin": "wikipedia",
+     "source": "https://en.wikipedia.org/wiki/Opinion_polling_on_the_Sheinbaum_presidency"
+    },
+    {
      "date": "2026-10-22",
      "firm": "Pollster not named (press)",
      "approve": 69.0,
@@ -2686,6 +2695,15 @@
      "disapprove": null,
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZTVwODVBMklmR3NPRnhXT2ltald4eHEzSm94aUlMTEpLbDFUUU1nWjE3Tm85ZDFkNHRsUzV1SkF2Z0RCM0xzQnBGWXBzZVNzZVJMczJNR1dJSVlRZ19rbVNBY3pIRGZtNk9nS3pQSHhtWkNMa0wteUF0ajloWC02X3h1UWVzelhsN0FuNG93cFlRaHFvWlo4UGRhMjJqZ21CNTBnODlsX1pHdUVKSU15Q1B0NA?oc=5",
+     "origin": "news"
+    },
+    {
+     "date": "2026-10-30",
+     "firm": "Pollster not named (press)",
+     "approve": 75.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOU010Z0RsaFdIZ3U5cmpJd3pOelRWMjNNRzhzZjFZdnpNcXhjbWNOcHJsd2pxamJLMWMycmxyZ01KNG95YVBMcmphV0pYdEpoYUpFRi1qazhORDR1T3Uwc3lNVVBDT2xyTXFmYTNmbHIzNmxRNHdhYUhCZXJlNzBzNVNxODZOM1kzR3p2YVZIOTRQYS0zRnVTZkJuYWgxWWZ5Q0ZOc0o1eXA?oc=5",
      "origin": "news"
     }
    ],
@@ -2790,7 +2808,7 @@
       "2026-10-11",
       "2026-10-18",
       "2026-10-25",
-      "2026-10-29"
+      "2026-10-30"
      ],
      "values": [
       80.3,
@@ -2876,19 +2894,19 @@
       59.6,
       59.8,
       60.5,
-      61.7,
+      61.6,
       63.1,
-      64.6,
-      65.9,
+      64.5,
+      65.8,
       66.9,
-      67.7,
+      67.6,
       68.1,
       68.4,
-      68.5,
       68.6,
       68.7,
-      68.7,
-      68.8
+      68.8,
+      68.9,
+      69.1
      ]
     },
     "disapprove": {
@@ -2985,7 +3003,9 @@
       "2026-09-20",
       "2026-09-27",
       "2026-10-04",
-      "2026-10-07"
+      "2026-10-11",
+      "2026-10-18",
+      "2026-10-20"
      ],
      "values": [
       15.8,
@@ -3074,13 +3094,15 @@
       32.0,
       31.5,
       31.1,
-      30.8,
-      30.6,
+      30.9,
+      30.7,
       30.5,
       30.3,
+      30.2,
       30.0,
-      29.8,
-      29.7
+      29.9,
+      29.9,
+      29.9
      ]
     }
    }
@@ -5474,6 +5496,6 @@
    }
   }
  },
- "updated": "2026-11-02T20:45:45Z",
+ "updated": "2026-11-03T18:24:15Z",
  "method": "Google News coverage of national polls and regional rankings (CB Consultora, Mitofsky, AtlasIntel); Gaussian-kernel average, 21-day bandwidth, firm-crowding weights."
 }
