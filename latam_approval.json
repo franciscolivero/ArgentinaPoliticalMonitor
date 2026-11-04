@@ -141,7 +141,7 @@
      "date": "2026-04-05",
      "firm": "Cadem",
      "approve": 41.0,
-     "disapprove": null,
+     "disapprove": 62.0,
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNOWtONi03cVVfcnlDbXRrVHBZdVRUVERNQ3hMQzFKUXRFVTU5RHE5N2RBM1JrYWwtT29jc1RBVnZlYS1mSUUwTTRLN290MTNGdUhSanBSRG5ZamN0UGdjNk1GSGlDa2pSZENEOHotZGhxOENsRjVLaGctTmZJd3JfWWhSSGNwOXM4T2JLaXV1aFBEMkdsczF2RHVJb0hsZzlDdVMydVdtMmVkdXdCVnhvcWJmSWhlNWgyYjFmWS1vcWZQUVh3alZhZ183QVNOZTk4S3M4M3FNckFOYzVmTGdfQmRUNC1KRzg?oc=5",
      "origin": "news"
@@ -1031,17 +1031,17 @@
       "2026-10-31"
      ],
      "values": [
-      48.0,
-      48.1,
-      48.4,
+      48.5,
       48.9,
-      49.6,
-      50.5,
-      51.6,
-      52.6,
-      53.4,
-      53.8,
-      53.9,
+      49.3,
+      49.9,
+      50.6,
+      51.5,
+      52.4,
+      53.2,
+      53.7,
+      54.0,
+      54.0,
       54.0,
       54.0,
       54.0,
@@ -2705,6 +2705,15 @@
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOU010Z0RsaFdIZ3U5cmpJd3pOelRWMjNNRzhzZjFZdnpNcXhjbWNOcHJsd2pxamJLMWMycmxyZ01KNG95YVBMcmphV0pYdEpoYUpFRi1qazhORDR1T3Uwc3lNVVBDT2xyTXFmYTNmbHIzNmxRNHdhYUhCZXJlNzBzNVNxODZOM1kzR3p2YVZIOTRQYS0zRnVTZkJuYWgxWWZ5Q0ZOc0o1eXA?oc=5",
      "origin": "news"
+    },
+    {
+     "date": "2026-10-30",
+     "firm": "Massive Caller",
+     "approve": 54.7,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPbXBOUXVtZDZNd000ZTVkUHVQbF9tV0taNXNNaENaeDZULU5kbkhzNzAtWjdwNW1Eclo4c0tsbWwyYXhKTFYyMldXcUhTU2UwZnVPbEVTSXZ1RlM1dDZrSXVyc2xsWVZhVW1oZWRIVksyUk55eGtaVTlpNFlHM3p3OUR1NzdyVlNQWXpzNVRPM29VMDZsMGNhX3BHLUpYVjc5ZzdqcUgyZ2Z1RVYzVW9TYi15LVE3WlE?oc=5",
+     "origin": "news"
     }
    ],
    "country": "Mexico",
@@ -2898,15 +2907,15 @@
       63.1,
       64.5,
       65.8,
-      66.9,
+      66.8,
+      67.5,
+      67.8,
+      67.9,
+      67.8,
       67.6,
-      68.1,
-      68.4,
-      68.6,
-      68.7,
-      68.8,
-      68.9,
-      69.1
+      67.2,
+      66.7,
+      66.4
      ]
     },
     "disapprove": {
@@ -5496,6 +5505,6 @@
    }
   }
  },
- "updated": "2026-11-03T18:24:15Z",
+ "updated": "2026-11-04T18:37:22Z",
  "method": "Google News coverage of national polls and regional rankings (CB Consultora, Mitofsky, AtlasIntel); Gaussian-kernel average, 21-day bandwidth, firm-crowding weights."
 }

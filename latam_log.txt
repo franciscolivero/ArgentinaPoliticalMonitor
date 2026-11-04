@@ -1,11 +1,11 @@
-run 2026-11-03 18:24 UTC · 2 new poll(s)
+run 2026-11-04 18:37 UTC · 1 new poll(s)
 
 CL Chile        101 polls  manual 4, news 87, pollster 10
 BO Bolivia       14 polls  manual 5, news 9
 PE Peru          17 polls  manual 5, news 12
 CO Colombia       8 polls  manual 5, news 3
 VE Venezuela      6 polls  manual 5, news 1
-MX Mexico        93 polls  manual 12, news 36, news-ranking 1, wikipedia 44
+MX Mexico        94 polls  manual 12, news 37, news-ranking 1, wikipedia 44
 EC Ecuador       11 polls  manual 2, news 9
 SV El Salvador   22 polls  manual 9, news 6, pollster 1, wikipedia 6
 PA Panama         3 polls  manual 3
@@ -40,10 +40,9 @@ log:
   · CL Criteria: no validated figure in Agenda_Criteria_20_Septiembre_2026_9eBc3.pdf
   · CL Criteria: 5 new wave(s) from 28 unread PDF(s)
   · MX Wikipedia Opinion_polling_on_the_Sheinbaum_presidency: 51 rows
-  + MX El Financiero ≈2026-10-20: 69.0/31.0 [wikipedia]
   · SV Wikipedia Opinion_polling_on_the_Nayib_Bukele_presidency: 25 rows
   · Mitofsky 2026-09: 6 tracked presidents
   · CID Gallup SV 2026-10-27: 94.0%
-  · Google News: 2284 unique articles read
-  + MX Pollster not named (press) ≈2026-10-30: 75.0/None [news]
+  · Google News: 1647 unique articles read
+  + MX Massive Caller ≈2026-10-30: 54.7/None [news]
   · Google News queries failed: 0
