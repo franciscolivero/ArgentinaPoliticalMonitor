@@ -1,6 +1,6 @@
-run 2026-11-05 18:42 UTC · 0 new poll(s)
+run 2026-11-06 17:55 UTC · 2 new poll(s)
 
-CL Chile        101 polls  manual 4, news 87, pollster 10
+CL Chile        103 polls  manual 4, news 89, pollster 10
 BO Bolivia       14 polls  manual 5, news 9
 PE Peru          17 polls  manual 5, news 12
 CO Colombia       8 polls  manual 5, news 3
@@ -43,5 +43,7 @@ log:
   · SV Wikipedia Opinion_polling_on_the_Nayib_Bukele_presidency: 25 rows
   · Mitofsky 2026-09: 6 tracked presidents
   · CID Gallup SV 2026-10-27: 94.0%
-  · Google News: 1638 unique articles read
+  · Google News: 1637 unique articles read
+  + CL Black White ≈2026-11-02: 68.0/None [news]
+  + CL Black White ≈2026-11-02: 20.0/None [news]
   · Google News queries failed: 0

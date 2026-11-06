@@ -910,6 +910,24 @@
      "approx": true,
      "source": "https://www.criteria.cl/site/wp-content/uploads/2026/11/Agenda_Criteria_01_Noviembre_2026_11dtB.pdf",
      "origin": "pollster"
+    },
+    {
+     "date": "2026-11-02",
+     "firm": "Black White",
+     "approve": 68.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNQmc5VXdkSTBmOG9OaWlPQXRwUkdrRVIwbU1SQTBaQ0tCVktvRlN2NTJoV0NKWTl4SmRyMW9md0xEMG9nbEdUT3NaaGpvelVwLUNPOXE3RlVYS0JtdHFodEl0NjlwT054RkVEY1V6RG1vNXRuUmhoaXlCWnp5Vm9mRXN4UHVFVEU5dkJLcDI2QzNEdjk5MTBRaENQdUhkSGhlczVzWnJzT3NrdUlvdWp4VXVZb1Nja3BnYkdvTmg4Nm8waWh1VjVSWg?oc=5",
+     "origin": "news"
+    },
+    {
+     "date": "2026-11-02",
+     "firm": "Black White",
+     "approve": 20.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQdGdwdDZabGxYMDMtcW5wbDE3amhad0YxMmhmekY3TENmTUN1YVJ0SmtCaUZqOEdXeHAyNTE1UlUxX0JIQl9HRk5tbTUwaUprbEhlR3dPdEhHVXN1T1Z0RTl2TVl1UVFaRVZWS082VEdjSmdGdWo4TUlSTVlUVXRLLTZZUzBrcDFMc1I4NV9fdjFMcFozYUxLOHNhMlNrZlg4R2xwR1NOdkVVWFlKbGtselVkRkFaTHhiZ2dFSHl3YXUzazB5a3BhQ25GNzA3X3RrdzVaelZJRGxTRjVqQ1l5TA?oc=5",
+     "origin": "news"
     }
    ],
    "country": "Chile",
@@ -952,7 +970,7 @@
       "2026-10-14",
       "2026-10-21",
       "2026-10-28",
-      "2026-10-31"
+      "2026-11-02"
      ],
      "values": [
       53.7,
@@ -983,13 +1001,13 @@
       44.8,
       42.7,
       41.1,
+      40.3,
       40.1,
-      39.9,
-      40.0,
       40.4,
       40.9,
-      41.3,
-      41.4
+      41.5,
+      41.9,
+      42.2
      ]
     },
     "disapprove": {
@@ -5505,6 +5523,6 @@
    }
   }
  },
- "updated": "2026-11-05T18:42:16Z",
+ "updated": "2026-11-06T17:55:37Z",
  "method": "Google News coverage of national polls and regional rankings (CB Consultora, Mitofsky, AtlasIntel); Gaussian-kernel average, 21-day bandwidth, firm-crowding weights."
 }
