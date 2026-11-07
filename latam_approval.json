@@ -1215,6 +1215,15 @@
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPRFB3cllxZl9aa2ZBMUR5NHozWUlTcW1sMFZ1d0NLd3MtZFF0VDRITW1PTmx0ekt5MlZWamk1ZFQwV0k0RnA2Vzc3U18ycEY5ZG9sZ3BlczgzSG9fY0xIaW51VEkyR2YzWGF5eDFDcG1ZYTA5RUFaQy16RmpuMjhHa3JBUUZhcjZ5RGdMUEZQZkM2N05zZndZbVhVUG1ZV3hyalE5UnNHT3h6blBRWjU1XzNZMXZrYXFMSTJCOWVJVkQ4U25tckJBaA?oc=5",
      "origin": "news"
+    },
+    {
+     "date": "2026-11-03",
+     "firm": "Ipsos Ciesmori",
+     "approve": 25.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOUnJ5NlphaU10YTJwdUZRN1AzQmg5OFZ1RFJtN0NydU5ybzMyb2g1dXdYek9mdHFnX1Z5b3VDV25nSXNibk8zYm5mNW1GV2xLSmJxQnQ0WmhLOGJxbVRralo0dDlYRV9DX3plX3BHelloQ1pDczcxSGtYWG9uTXNiaUtRelhLOGgtZHY0NFROTXFKZ1pMbkxLdlZYWXRXcm11czlPaTFB?oc=5",
+     "origin": "news"
     }
    ],
    "country": "Bolivia",
@@ -1271,7 +1280,9 @@
       "2026-10-01",
       "2026-10-08",
       "2026-10-15",
-      "2026-10-19"
+      "2026-10-22",
+      "2026-10-29",
+      "2026-11-03"
      ],
      "values": [
       64.9,
@@ -1314,15 +1325,17 @@
       30.3,
       28.3,
       26.4,
-      24.7,
-      23.4,
-      22.4,
-      21.7,
-      21.3,
-      21.1,
-      21.0,
-      21.0,
-      21.0
+      24.8,
+      23.5,
+      22.6,
+      22.1,
+      21.9,
+      22.0,
+      22.3,
+      22.5,
+      22.8,
+      23.1,
+      23.2
      ]
     },
     "disapprove": {
@@ -5523,6 +5536,6 @@
    }
   }
  },
- "updated": "2026-11-06T17:55:37Z",
+ "updated": "2026-11-07T16:49:53Z",
  "method": "Google News coverage of national polls and regional rankings (CB Consultora, Mitofsky, AtlasIntel); Gaussian-kernel average, 21-day bandwidth, firm-crowding weights."
 }
