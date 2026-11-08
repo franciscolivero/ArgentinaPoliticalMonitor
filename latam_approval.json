@@ -928,6 +928,15 @@
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQdGdwdDZabGxYMDMtcW5wbDE3amhad0YxMmhmekY3TENmTUN1YVJ0SmtCaUZqOEdXeHAyNTE1UlUxX0JIQl9HRk5tbTUwaUprbEhlR3dPdEhHVXN1T1Z0RTl2TVl1UVFaRVZWS082VEdjSmdGdWo4TUlSTVlUVXRLLTZZUzBrcDFMc1I4NV9fdjFMcFozYUxLOHNhMlNrZlg4R2xwR1NOdkVVWFlKbGtselVkRkFaTHhiZ2dFSHl3YXUzazB5a3BhQ25GNzA3X3RrdzVaelZJRGxTRjVqQ1l5TA?oc=5",
      "origin": "news"
+    },
+    {
+     "date": "2026-11-04",
+     "firm": "Criteria",
+     "approve": 67.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNNGtpeW5RdnNHclJUaklfUFFCd0xiSEgzM3VRRXdMWUZfVmxad0tPay1LbTRFR1F1R2FjaVNkTmVJNmN3OXFZdkI3LVNwYjVabndscnRUZlhrYWpLYzJJYUNLQ2xIZXI4UnZwN1FNYjdpRjBwOFEyU1JxU1U2a2NxVnVfeFlfcWQ2Q1VmZTBkNDZUQUZsWEZhbnlxMk9tSGliNDVmTEU2QQ?oc=5",
+     "origin": "news"
     }
    ],
    "country": "Chile",
@@ -970,7 +979,7 @@
       "2026-10-14",
       "2026-10-21",
       "2026-10-28",
-      "2026-11-02"
+      "2026-11-04"
      ],
      "values": [
       53.7,
@@ -1002,12 +1011,12 @@
       42.7,
       41.1,
       40.3,
-      40.1,
-      40.4,
-      40.9,
-      41.5,
-      41.9,
-      42.2
+      40.2,
+      40.6,
+      41.3,
+      42.1,
+      42.7,
+      43.3
      ]
     },
     "disapprove": {
@@ -5303,6 +5312,15 @@
      "approx": false,
      "source": "https://portaldeprefeitura.com.br/bastidores-da-politica/desaprovacao-do-governo-lula-e-de-47-enquanto-aprovacao-chega-a-46/634535/",
      "origin": "manual"
+    },
+    {
+     "date": "2026-11-04",
+     "firm": "Quaest",
+     "approve": 48.0,
+     "disapprove": 44.0,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQa0ZnS1FFVGpvczJDeWt2VW95THdILVRVUzNEd0VpTXFKSXlSRkw2NVR5SHY5M1VIRmxrMU52QkhpX3hWMEJsVEI4OG5yYTFEeVdaSXl4cjU5cWlHbmZoNm5nMzhwT1hxYlVqN2VPaFNfb0dMREl4YjlNVGprWl9ESXdpeWlpOFJvRk5tY3NVc1h3endJeDBZVW8zN1JtbTgyUmE2WkpqUXJITzBtQTU5WG9xd1FabnlsQlJnTm0zRk5wbjdqWC1XLW1USXJWSTVDbmg5cU04RGNGNEZFZG5FU0tDODdoZ9IB9AFBVV95cUxOZkhfc0MwSXJFaGFiSzJ6aXVPYXl3WVZNM3dvUldkVUFCWXVYenVOSWJqdFl0dnN5MGQtY2U3cHNOZHA2WlJjaGVMVU5kc0tOWGFlZjhVQmpSYVVlYzlBTjNnbzhrbGxXUnpHZ1BzUHlLc1BraGxRZHpPLVJlM1BIZ3E3ZU1KYngyNks2alZHSzd3TFBZeGNyMjFEZ0o2RUhCX1pjRG1MaVNkWGhoZklXWHRaWFp6YlNFTVhvaC12Wlg2SThEY3JVRVo1UkstZnNsRmN5dWZCMDBxd0VDRWgydzJhSExyLXJBWkt5VDlhRFRFNlJt?oc=5",
+     "origin": "news"
     }
    ],
    "country": "Brazil",
@@ -5363,7 +5381,9 @@
       "2026-10-02",
       "2026-10-09",
       "2026-10-16",
-      "2026-10-20"
+      "2026-10-23",
+      "2026-10-30",
+      "2026-11-04"
      ],
      "values": [
       39.6,
@@ -5417,8 +5437,10 @@
       45.4,
       45.1,
       45.0,
-      45.0,
-      45.1
+      45.1,
+      45.2,
+      45.5,
+      45.6
      ]
     },
     "disapprove": {
@@ -5475,7 +5497,9 @@
       "2026-10-02",
       "2026-10-09",
       "2026-10-16",
-      "2026-10-20"
+      "2026-10-23",
+      "2026-10-30",
+      "2026-11-04"
      ],
      "values": [
       49.0,
@@ -5529,13 +5553,15 @@
       49.5,
       49.6,
       49.6,
-      49.5,
-      49.5
+      49.4,
+      49.3,
+      49.1,
+      48.9
      ]
     }
    }
   }
  },
- "updated": "2026-11-07T16:49:53Z",
+ "updated": "2026-11-08T17:01:47Z",
  "method": "Google News coverage of national polls and regional rankings (CB Consultora, Mitofsky, AtlasIntel); Gaussian-kernel average, 21-day bandwidth, firm-crowding weights."
 }
