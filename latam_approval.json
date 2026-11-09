@@ -937,6 +937,24 @@
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNNGtpeW5RdnNHclJUaklfUFFCd0xiSEgzM3VRRXdMWUZfVmxad0tPay1LbTRFR1F1R2FjaVNkTmVJNmN3OXFZdkI3LVNwYjVabndscnRUZlhrYWpLYzJJYUNLQ2xIZXI4UnZwN1FNYjdpRjBwOFEyU1JxU1U2a2NxVnVfeFlfcWQ2Q1VmZTBkNDZUQUZsWEZhbnlxMk9tSGliNDVmTEU2QQ?oc=5",
      "origin": "news"
+    },
+    {
+     "date": "2026-11-05",
+     "firm": "Cadem",
+     "approve": 68.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQWUFkc2wtSXludHdpc19WdTI1ZXMyeF82UWZZTEcwTF9xNXEycFVwM3dfSXlCS2NINHl2ZzJSOVd6eldjOFp4Tm9JNzQ5VTJSMmU3NFZydVlrNlFhcktuc2J2d2xIcTRGS3M2c0RVdG1aTEdQRDdfUVBKcnJPSWtLYUJpYWZLN2Vibld1MllTSVRDVERiZTFEM3FlclZSZG1Xc1hPb1NDcURQWjJjWHpnYkdJLWV3SWp4MlhBNkdfcWliYnBGdWxaOA?oc=5",
+     "origin": "news"
+    },
+    {
+     "date": "2026-11-06",
+     "firm": "Cadem",
+     "approve": 29.0,
+     "disapprove": 68.0,
+     "approx": false,
+     "source": "https://cadem.cl/wp-content/uploads/2026/11/Track-PP-703-Noviembre-S1-M1-VF.pdf",
+     "origin": "pollster"
     }
    ],
    "country": "Chile",
@@ -979,7 +997,8 @@
       "2026-10-14",
       "2026-10-21",
       "2026-10-28",
-      "2026-11-04"
+      "2026-11-04",
+      "2026-11-06"
      ],
      "values": [
       53.7,
@@ -1012,11 +1031,12 @@
       41.1,
       40.3,
       40.2,
-      40.6,
-      41.3,
-      42.1,
-      42.7,
-      43.3
+      40.7,
+      41.5,
+      42.3,
+      43.0,
+      43.6,
+      43.7
      ]
     },
     "disapprove": {
@@ -1055,7 +1075,8 @@
       "2026-10-14",
       "2026-10-21",
       "2026-10-28",
-      "2026-10-31"
+      "2026-11-04",
+      "2026-11-06"
      ],
      "values": [
       48.5,
@@ -1083,16 +1104,17 @@
       56.3,
       56.5,
       56.9,
-      57.4,
+      57.3,
       58.0,
       58.8,
       59.8,
       60.9,
-      62.2,
+      62.1,
       63.3,
-      64.3,
+      64.4,
       65.2,
-      65.4
+      65.8,
+      66.0
      ]
     }
    }
@@ -2754,6 +2776,15 @@
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPbXBOUXVtZDZNd000ZTVkUHVQbF9tV0taNXNNaENaeDZULU5kbkhzNzAtWjdwNW1Eclo4c0tsbWwyYXhKTFYyMldXcUhTU2UwZnVPbEVTSXZ1RlM1dDZrSXVyc2xsWVZhVW1oZWRIVksyUk55eGtaVTlpNFlHM3p3OUR1NzdyVlNQWXpzNVRPM29VMDZsMGNhX3BHLUpYVjc5ZzdqcUgyZ2Z1RVYzVW9TYi15LVE3WlE?oc=5",
      "origin": "news"
+    },
+    {
+     "date": "2026-11-05",
+     "firm": "Pollster not named (press)",
+     "approve": 70.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPckF0WWRLYjlWZHF5WDUtUjgtTmlUcXpqY09VaVJmVnFEbHR0S2RWM29wT0lwbHB5VTgyQXhxWEFHM0tzeWw1eTE1eGNtTG1sUzhPQzVYYjNlZUluTHhPRENxa2gwcXItRXJOYllzSDltN1RwU01wQVVFRWFnNDZDcjdlekI2QnlLaFF5WllsVGNtTjRmMXF1eEtqVHF1Z1FfcndjUzFkMnRsSlZybWdFV0lRcjlGMkJwZWVfSGpFbkl0elQ2T1RVZk43cDBhOGhhakE?oc=5",
+     "origin": "news"
     }
    ],
    "country": "Mexico",
@@ -2857,7 +2888,8 @@
       "2026-10-11",
       "2026-10-18",
       "2026-10-25",
-      "2026-10-30"
+      "2026-11-01",
+      "2026-11-05"
      ],
      "values": [
       80.3,
@@ -2955,7 +2987,8 @@
       67.6,
       67.2,
       66.7,
-      66.4
+      66.3,
+      66.0
      ]
     },
     "disapprove": {
@@ -5562,6 +5595,6 @@
    }
   }
  },
- "updated": "2026-11-08T17:01:47Z",
+ "updated": "2026-11-09T21:25:32Z",
  "method": "Google News coverage of national polls and regional rankings (CB Consultora, Mitofsky, AtlasIntel); Gaussian-kernel average, 21-day bandwidth, firm-crowding weights."
 }
