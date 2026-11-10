@@ -1,4 +1,4 @@
-run 2026-11-09 21:25 UTC · 3 new poll(s)
+run 2026-11-10 18:39 UTC · 2 new poll(s)
 
 CL Chile        106 polls  manual 4, news 91, pollster 11
 BO Bolivia       15 polls  manual 5, news 10
@@ -6,7 +6,7 @@ PE Peru          17 polls  manual 5, news 12
 CO Colombia       8 polls  manual 5, news 3
 VE Venezuela      6 polls  manual 5, news 1
 MX Mexico        95 polls  manual 12, news 38, news-ranking 1, wikipedia 44
-EC Ecuador       11 polls  manual 2, news 9
+EC Ecuador       13 polls  manual 2, news 11
 SV El Salvador   22 polls  manual 9, news 6, pollster 1, wikipedia 6
 PA Panama         3 polls  manual 3
 GT Guatemala      2 polls  manual 2
@@ -14,7 +14,7 @@ BR Brazil       126 polls  manual 5, news 121
 HN Honduras       1 polls  manual 1
 
 log:
-  · CL Cadem: 5 new wave(s) from 5 unread PDF(s)
+  · CL Cadem: 4 new wave(s) from 4 unread PDF(s)
   · CL Criteria: no validated figure in Agenda_Criteria_15_Marzo_2026.pdf
   · CL Criteria: no validated figure in Agenda_Criteria_22_Marzo_2026.pdf
   · CL Criteria: no validated figure in Agenda_Criteria_29_Marzo_2026.pdf
@@ -39,12 +39,11 @@ log:
   · CL Criteria: no validated figure in Agenda_Criteria_13_Septiembre_2026_9dGv2.pdf
   · CL Criteria: no validated figure in Agenda_Criteria_20_Septiembre_2026_9eBc3.pdf
   · CL Criteria: 6 new wave(s) from 29 unread PDF(s)
-  + CL Cadem ≈2026-11-06: 29.0/68.0 [pollster]
   · MX Wikipedia Opinion_polling_on_the_Sheinbaum_presidency: 51 rows
   · SV Wikipedia Opinion_polling_on_the_Nayib_Bukele_presidency: 25 rows
   · Mitofsky 2026-09: 6 tracked presidents
   · CID Gallup SV 2026-10-27: 94.0%
-  · Google News: 1701 unique articles read
-  + CL Cadem ≈2026-11-05: 68.0/None [news]
-  + MX Pollster not named (press) ≈2026-11-05: 70.0/None [news]
+  · Google News: 1700 unique articles read
+  + EC Pollster not named (press) ≈2026-11-06: 38.9/None [news]
+  + EC Pollster not named (press) ≈2026-11-06: 49.0/None [news]
   · Google News queries failed: 0

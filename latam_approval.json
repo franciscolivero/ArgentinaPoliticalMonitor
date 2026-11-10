@@ -3289,6 +3289,24 @@
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNc1J6V1RPZUg0bzEzeGNNZVFaYmN3RnE3UUhoUW12ZF9sUWZpN2w5eko2QjBURVJKQ2EyVzljM2dodFZZVjYwMkxqUExodnhVWkY4eUVEd1dDLVoxbDVPbFpod0pzYlN6YzRJdUVfTTlXUUhobFNoWGNObVZjLVg1cDAtcUlYc251MTdvbDR6YjhVYWVRMHdjanlTdTc0SE14aERXUUQ5VVhOV1pFX2t5b09RV3V5UQ?oc=5",
      "origin": "news"
+    },
+    {
+     "date": "2026-11-06",
+     "firm": "Pollster not named (press)",
+     "approve": 38.9,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOSVhPVVNUTjNPbkpaQ2JYQVFST2wxbF9hYlNuVDBfTmF3REpyNnBiRTBMazVJaFM0RXhjLXNDaFhIUVhsWkU5dkM1MmNxS2Vld3IyZDFUdXBNWjFVYkpTZFRhRG9GWkV1WUVmUjlnTlNXWS10WkRPbVBrcnQ4MTNVRDZIRmNEVUt0MDRQWUdfSjhyZlBIdzRiUGIzRWttanJyUFl3TUt3TkFvQ1hTSWpoazR3?oc=5",
+     "origin": "news"
+    },
+    {
+     "date": "2026-11-06",
+     "firm": "Pollster not named (press)",
+     "approve": 49.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPZmFfbVpTWXZlR25zdzN4YWdLaVVLdk5rM0FyVGVlbFMtNWdrbWNaVkxzNUcwQWFwamNXa1BXWUEtRGdKMU9qejAwbk91c1o1Rjk1TGRmVUo5SlNOa05Gc0Z0RFQzQjgzY3I5VVBxWlQ5MnBpNkRDbGhld2g5QWFOekZfSEpWTEpLdkZhWkRKQXhPbHY2dkJfc0hYbXlxX1djWFBlU3h0al9UQUdJQS1xenJCaUpOdkladXNqcDVTOHJvSTRyS3pHcHBwdlA2NkRlNW8yN2RxOA?oc=5",
+     "origin": "news"
     }
    ],
    "country": "Ecuador",
@@ -3348,7 +3366,11 @@
       "2026-09-24",
       "2026-10-01",
       "2026-10-08",
-      "2026-10-09"
+      "2026-10-15",
+      "2026-10-22",
+      "2026-10-29",
+      "2026-11-05",
+      "2026-11-06"
      ],
      "values": [
       60.3,
@@ -3393,14 +3415,18 @@
       36.5,
       36.9,
       37.5,
-      38.6,
-      39.9,
-      41.2,
-      42.0,
+      38.5,
+      39.8,
+      41.0,
+      41.8,
+      42.3,
       42.6,
-      43.0,
-      43.4,
+      42.9,
+      43.2,
+      43.5,
       43.8,
+      44.0,
+      44.2,
       44.3,
       44.3
      ]
@@ -5595,6 +5621,6 @@
    }
   }
  },
- "updated": "2026-11-09T21:25:32Z",
+ "updated": "2026-11-10T18:39:36Z",
  "method": "Google News coverage of national polls and regional rankings (CB Consultora, Mitofsky, AtlasIntel); Gaussian-kernel average, 21-day bandwidth, firm-crowding weights."
 }
