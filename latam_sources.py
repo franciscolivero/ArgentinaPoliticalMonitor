@@ -544,11 +544,33 @@ def parse_cb_ranking(page_text, ocr_texts):
     return rows
 
 
-def src_cbglobal(names, stoppers, have_sources, log):
+def _cb_text_pages(blob):
+    """Text of each page. poppler's pdftotext is fast; pypdf can take many minutes on this
+    image-heavy PDF, so it is only a fallback and is cut off after two minutes."""
+    import subprocess, tempfile, shutil, os, signal
+    if shutil.which("pdftotext"):
+        with tempfile.TemporaryDirectory() as d:
+            pdf = os.path.join(d, "r.pdf")
+            open(pdf, "wb").write(blob)
+            r = subprocess.run(["pdftotext", "-enc", "UTF-8", pdf, "-"], capture_output=True, text=True, timeout=120)
+            return r.stdout.split("\f")
     from pypdf import PdfReader
+
+    def _stop(*_):
+        raise TimeoutError("pypdf took too long")
+    signal.signal(signal.SIGALRM, _stop)
+    signal.alarm(120)
+    try:
+        return [(p.extract_text() or "") for p in PdfReader(io.BytesIO(blob)).pages]
+    finally:
+        signal.alarm(0)
+
+
+def src_cbglobal(names, stoppers, have_sources, log):
     out = []
     for link, pub, content in _cb_posts(log):
-        if link in have_sources:
+        # only recent rankings: older ones are already in the data (or in the seed)
+        if link in have_sources or (datetime.date.today() - datetime.date.fromisoformat(pub)).days > 40:
             continue
         try:
             blob = _cb_pdf(content)
@@ -558,7 +580,11 @@ def src_cbglobal(names, stoppers, have_sources, log):
         if not blob:
             log.append(f"  · CB {link}: no PDF found")
             continue
-        pages = [(p.extract_text() or "") for p in PdfReader(io.BytesIO(blob)).pages]
+        try:
+            pages = _cb_text_pages(blob)
+        except Exception as e:
+            log.append(f"  · CB {link}: could not read the PDF text ({e})")
+            continue
         full = "\n".join(pages)
         fw = re.search(r"DEL\s+\d{1,2}\s+AL\s+(\d{1,2})\s+de\s+([A-Za-zÁÉÍÓÚáéíóú]+)\s+de\s+(\d{4})", full, re.I)
         if fw and _fold(fw.group(2)).strip() in ES_MONTHS:
