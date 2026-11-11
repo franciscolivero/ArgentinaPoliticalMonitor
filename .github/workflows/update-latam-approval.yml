@@ -29,6 +29,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: OCR tools (CB Global Data prints this month's figures inside an image)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq tesseract-ocr poppler-utils
       - run: pip install requests numpy beautifulsoup4 lxml pypdf
 
       - name: Read pollsters, Wikipedia and Google News; rebuild averages
