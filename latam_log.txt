@@ -1,8 +1,8 @@
-run 2026-11-10 18:39 UTC · 2 new poll(s)
+run 2026-11-11 18:38 UTC · 2 new poll(s)
 
 CL Chile        106 polls  manual 4, news 91, pollster 11
 BO Bolivia       15 polls  manual 5, news 10
-PE Peru          17 polls  manual 5, news 12
+PE Peru          18 polls  manual 5, news 13
 CO Colombia       8 polls  manual 5, news 3
 VE Venezuela      6 polls  manual 5, news 1
 MX Mexico        95 polls  manual 12, news 38, news-ranking 1, wikipedia 44
@@ -10,7 +10,7 @@ EC Ecuador       13 polls  manual 2, news 11
 SV El Salvador   22 polls  manual 9, news 6, pollster 1, wikipedia 6
 PA Panama         3 polls  manual 3
 GT Guatemala      2 polls  manual 2
-BR Brazil       126 polls  manual 5, news 121
+BR Brazil       127 polls  manual 5, news 122
 HN Honduras       1 polls  manual 1
 
 log:
@@ -43,7 +43,7 @@ log:
   · SV Wikipedia Opinion_polling_on_the_Nayib_Bukele_presidency: 25 rows
   · Mitofsky 2026-09: 6 tracked presidents
   · CID Gallup SV 2026-10-27: 94.0%
-  · Google News: 1700 unique articles read
-  + EC Pollster not named (press) ≈2026-11-06: 38.9/None [news]
-  + EC Pollster not named (press) ≈2026-11-06: 49.0/None [news]
+  · Google News: 1669 unique articles read
+  + BR Real Time Big Data ≈2026-07-17: 46.0/None [news]
+  + PE Ipsos ≈2026-11-07: 37.0/None [news]
   · Google News queries failed: 0

@@ -1597,6 +1597,15 @@
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQdDljcW9haXNIVFBWendCRW1QRi0tVDh5YnU0TFZkWHpsZEZPczNheloxNGJ1bmhSTGJXSV9DQ3dkMjZRV1ViRUh1NnEwZ1ZOSGs1ZDhBeWZpVXJWV2RpVWFKa2NaQXBZQmJoSTNkT1V0WnNsVm1zYTVwajktOGhUNldrR1JrMlFoRlQxSFZxTGFiMkFRbm5HNlRCSkctSlkzRUZ3Tkt2RG1UTHF0YUNqSTZtMEV3RDQ?oc=5",
      "origin": "news"
+    },
+    {
+     "date": "2026-11-07",
+     "firm": "Ipsos",
+     "approve": 37.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMitAFBVV95cUxONUpZRXIyb3gzSC1uU09GVmNqc1JIWWcxdFR2emZkbGttX0ItUGhLMWdsQVJ6VVptV2YzdGdZWl9PMXBoaHhRYzV6OVpTMjRSOGJJZ2FrVFBZLXVqM3ZjeEotZTJvdHlUbmczZHFLaXFURl94R0lOQzYwNjdzNDRkRENRbDZPd1k1X3VUYnhVNXhsZ2p4aGFjT3ByWnhxb1A3UlBBckxuM01DMFlWRV8yQzJSZ24?oc=5",
+     "origin": "news"
     }
    ],
    "country": "Peru",
@@ -1616,7 +1625,10 @@
       "2026-09-30",
       "2026-10-07",
       "2026-10-14",
-      "2026-10-19"
+      "2026-10-21",
+      "2026-10-28",
+      "2026-11-04",
+      "2026-11-07"
      ],
      "values": [
       54.4,
@@ -1626,11 +1638,14 @@
       47.5,
       45.8,
       44.3,
-      43.1,
+      43.0,
       41.9,
-      40.9,
-      40.0,
-      39.4
+      40.8,
+      39.8,
+      38.9,
+      38.0,
+      37.4,
+      37.2
      ]
     },
     "disapprove": {
@@ -4824,6 +4839,15 @@
      "origin": "news"
     },
     {
+     "date": "2026-07-17",
+     "firm": "Real Time Big Data",
+     "approve": 46.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNUWhxemtPQ1hFTXBGdjFYa2ZrcV9RbU9mNks0TlVZd0xERFd5NC1MM1BYSlNySEprdkZfZmo5M0RmemFJYnNsVENGY2ttX3pRVWlSRjhMWXFZMlVqdVgtSXVRMHBqZUg0QWZuNklpVHpuNk1mVGtOUzhEbkhWbWhvUTdKNG0wOUdMU2tB?oc=5",
+     "origin": "news"
+    },
+    {
      "date": "2026-07-18",
      "firm": "PoderData",
      "approve": 46.0,
@@ -5482,13 +5506,13 @@
       46.4,
       46.3,
       46.3,
-      46.5,
-      46.8,
-      47.1,
-      47.5,
+      46.4,
+      46.7,
+      47.0,
+      47.3,
+      47.6,
       47.7,
-      47.8,
-      47.7,
+      47.6,
       47.3,
       46.8,
       46.3,
@@ -5621,6 +5645,6 @@
    }
   }
  },
- "updated": "2026-11-10T18:39:36Z",
+ "updated": "2026-11-11T18:38:48Z",
  "method": "Google News coverage of national polls and regional rankings (CB Consultora, Mitofsky, AtlasIntel); Gaussian-kernel average, 21-day bandwidth, firm-crowding weights."
 }
