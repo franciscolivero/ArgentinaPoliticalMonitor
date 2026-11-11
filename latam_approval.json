@@ -795,6 +795,15 @@
      "origin": "pollster"
     },
     {
+     "date": "2026-10-08",
+     "firm": "CB Consultora (imagen positiva)",
+     "approve": 38.8,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+     "origin": "manual"
+    },
+    {
      "date": "2026-10-11",
      "firm": "Criteria",
      "approve": 27,
@@ -955,6 +964,16 @@
      "approx": false,
      "source": "https://cadem.cl/wp-content/uploads/2026/11/Track-PP-703-Noviembre-S1-M1-VF.pdf",
      "origin": "pollster"
+    },
+    {
+     "date": "2026-11-09",
+     "firm": "CB Consultora (imagen positiva)",
+     "approve": 33.5,
+     "disapprove": 62.7,
+     "n": 3065,
+     "approx": false,
+     "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
+     "origin": "manual"
     }
    ],
    "country": "Chile",
@@ -998,7 +1017,7 @@
       "2026-10-21",
       "2026-10-28",
       "2026-11-04",
-      "2026-11-06"
+      "2026-11-09"
      ],
      "values": [
       53.7,
@@ -1022,21 +1041,21 @@
       43.3,
       45.5,
       47.4,
-      48.7,
-      49.1,
-      48.5,
-      47.0,
-      44.8,
-      42.7,
-      41.1,
-      40.3,
-      40.2,
-      40.7,
-      41.5,
-      42.3,
-      43.0,
-      43.6,
-      43.7
+      48.6,
+      49.0,
+      48.4,
+      46.8,
+      44.6,
+      42.4,
+      40.8,
+      40.0,
+      39.8,
+      40.1,
+      40.5,
+      40.9,
+      41.2,
+      41.3,
+      41.3
      ]
     },
     "disapprove": {
@@ -1076,7 +1095,7 @@
       "2026-10-21",
       "2026-10-28",
       "2026-11-04",
-      "2026-11-06"
+      "2026-11-09"
      ],
      "values": [
       48.5,
@@ -1108,13 +1127,13 @@
       58.0,
       58.8,
       59.8,
-      60.9,
-      62.1,
-      63.3,
-      64.4,
-      65.2,
-      65.8,
-      66.0
+      61.0,
+      62.2,
+      63.2,
+      64.1,
+      64.6,
+      64.9,
+      65.0
      ]
     }
    }
@@ -1239,6 +1258,15 @@
      "origin": "news"
     },
     {
+     "date": "2026-10-08",
+     "firm": "CB Consultora (imagen positiva)",
+     "approve": 41.1,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+     "origin": "manual"
+    },
+    {
      "date": "2026-10-19",
      "firm": "Ipsos Ciesmori",
      "approve": 21.0,
@@ -1255,6 +1283,16 @@
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOUnJ5NlphaU10YTJwdUZRN1AzQmg5OFZ1RFJtN0NydU5ybzMyb2g1dXdYek9mdHFnX1Z5b3VDV25nSXNibk8zYm5mNW1GV2xLSmJxQnQ0WmhLOGJxbVRralo0dDlYRV9DX3plX3BHelloQ1pDczcxSGtYWG9uTXNiaUtRelhLOGgtZHY0NFROTXFKZ1pMbkxLdlZYWXRXcm11czlPaTFB?oc=5",
      "origin": "news"
+    },
+    {
+     "date": "2026-11-09",
+     "firm": "CB Consultora (imagen positiva)",
+     "approve": 40.2,
+     "disapprove": 55.6,
+     "n": 2768,
+     "approx": false,
+     "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
+     "origin": "manual"
     }
    ],
    "country": "Bolivia",
@@ -1313,7 +1351,8 @@
       "2026-10-15",
       "2026-10-22",
       "2026-10-29",
-      "2026-11-03"
+      "2026-11-05",
+      "2026-11-09"
      ],
      "values": [
       64.9,
@@ -1353,20 +1392,21 @@
       35.4,
       34.0,
       32.3,
-      30.3,
-      28.3,
-      26.4,
-      24.8,
-      23.5,
-      22.6,
-      22.1,
-      21.9,
-      22.0,
-      22.3,
-      22.5,
-      22.8,
-      23.1,
-      23.2
+      30.5,
+      28.7,
+      27.5,
+      27.3,
+      28.2,
+      30.1,
+      32.0,
+      33.4,
+      34.0,
+      34.1,
+      33.9,
+      33.8,
+      33.8,
+      33.9,
+      34.1
      ]
     },
     "disapprove": {
@@ -1403,7 +1443,26 @@
       "2026-06-11",
       "2026-06-18",
       "2026-06-25",
-      "2026-06-30"
+      "2026-07-02",
+      "2026-07-09",
+      "2026-07-16",
+      "2026-07-23",
+      "2026-07-30",
+      "2026-08-06",
+      "2026-08-13",
+      "2026-08-20",
+      "2026-08-27",
+      "2026-09-03",
+      "2026-09-10",
+      "2026-09-17",
+      "2026-09-24",
+      "2026-10-01",
+      "2026-10-08",
+      "2026-10-15",
+      "2026-10-22",
+      "2026-10-29",
+      "2026-11-05",
+      "2026-11-09"
      ],
      "values": [
       18.0,
@@ -1438,7 +1497,26 @@
       45.2,
       45.1,
       45.0,
-      45.0
+      45.0,
+      45.0,
+      45.0,
+      45.0,
+      45.0,
+      45.0,
+      45.0,
+      45.1,
+      45.9,
+      49.5,
+      54.1,
+      55.4,
+      55.6,
+      55.6,
+      55.6,
+      55.6,
+      55.6,
+      55.6,
+      55.6,
+      55.6
      ]
     }
    }
@@ -1563,6 +1641,15 @@
      "origin": "manual"
     },
     {
+     "date": "2026-10-08",
+     "firm": "CB Consultora (imagen positiva)",
+     "approve": 46.3,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+     "origin": "manual"
+    },
+    {
      "date": "2026-10-09",
      "firm": "Pollster not named (press)",
      "approve": 46.3,
@@ -1606,6 +1693,16 @@
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMitAFBVV95cUxONUpZRXIyb3gzSC1uU09GVmNqc1JIWWcxdFR2emZkbGttX0ItUGhLMWdsQVJ6VVptV2YzdGdZWl9PMXBoaHhRYzV6OVpTMjRSOGJJZ2FrVFBZLXVqM3ZjeEotZTJvdHlUbmczZHFLaXFURl94R0lOQzYwNjdzNDRkRENRbDZPd1k1X3VUYnhVNXhsZ2p4aGFjT3ByWnhxb1A3UlBBckxuM01DMFlWRV8yQzJSZ24?oc=5",
      "origin": "news"
+    },
+    {
+     "date": "2026-11-09",
+     "firm": "CB Consultora (imagen positiva)",
+     "approve": 43.8,
+     "disapprove": 54.4,
+     "n": 3089,
+     "approx": false,
+     "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
+     "origin": "manual"
     }
    ],
    "country": "Peru",
@@ -1628,24 +1725,24 @@
       "2026-10-21",
       "2026-10-28",
       "2026-11-04",
-      "2026-11-07"
+      "2026-11-09"
      ],
      "values": [
       54.4,
       53.0,
-      51.3,
-      49.4,
-      47.5,
+      51.2,
+      49.3,
+      47.4,
       45.8,
-      44.3,
-      43.0,
+      44.5,
+      43.4,
+      42.6,
       41.9,
-      40.8,
-      39.8,
-      38.9,
-      38.0,
-      37.4,
-      37.2
+      41.3,
+      40.9,
+      40.7,
+      40.6,
+      40.6
      ]
     },
     "disapprove": {
@@ -1660,7 +1757,11 @@
       "2026-09-25",
       "2026-10-02",
       "2026-10-09",
-      "2026-10-12"
+      "2026-10-16",
+      "2026-10-23",
+      "2026-10-30",
+      "2026-11-06",
+      "2026-11-09"
      ],
      "values": [
       32.2,
@@ -1669,11 +1770,15 @@
       42.2,
       44.5,
       46.1,
-      47.2,
-      48.1,
-      48.8,
-      49.5,
-      49.8
+      47.3,
+      48.3,
+      49.2,
+      50.1,
+      51.0,
+      51.9,
+      52.7,
+      53.3,
+      53.5
      ]
     }
    }
@@ -1751,6 +1856,16 @@
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNSUZHMzBBelJrS0xkblBHcko3aVNXU1JMbGxLUU5RY0xqZW9qZjhkNWVtaEh5dzRfenVlcXdZSWlyVFVqY3E2NThQTFpFOGRDVkdPbTlkRURGdnRsZlhDM3B6eHlSVmU1WE92MHVBMnM0ZjRjUm9QanA1dHY3WC14bG9ZV2Q0LUs2eUZvU3VnUzh6SEpqY01EeVNqV3RCWDBJWU1JWXEwQUEyUGFWY09HV0lfdEFFam1SOEVPbGNHejNzRzJuX0NRbFBLaF9DWW95OWVHMnJhaldUN3VqODI4ZTZ1NVlrcU3SAewBQVVfeXFMTlpCXzBWeVlBamxlWHdVeTVtN2l2aERLUnlpWmJtUXFhQ1U1amh4aE5YTEpNX3lyWFp3ak40ZUtacC1lb1BqdWh6QUk2bkRZcXRMLTN4NmlJb2xRdTFjejB0c19BQmRHXzVjSWgyZVZQMTRpUjMyRm5fUWdUNnVhV0M3TS1kUDRTaUJFaHExeW5kSjg4WWJJYjUzLWQ2NnFJZjRWNmtyRFI5ZEdlMF9ISmJZcGFPb1JiTUJJRy1vSHhHLUR4bDVMZmJVT0x0aEJjbUNsaE9LNnpCWUswSVd3MWNub0lYYXY4b3J5OUU?oc=5",
      "origin": "news"
+    },
+    {
+     "date": "2026-11-09",
+     "firm": "CB Consultora (imagen positiva)",
+     "approve": 46.9,
+     "disapprove": 51.7,
+     "n": 2996,
+     "approx": false,
+     "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
+     "origin": "manual"
     }
    ],
    "country": "Colombia",
@@ -1765,16 +1880,24 @@
       "2026-09-24",
       "2026-10-01",
       "2026-10-08",
-      "2026-10-12"
+      "2026-10-15",
+      "2026-10-22",
+      "2026-10-29",
+      "2026-11-05",
+      "2026-11-09"
      ],
      "values": [
       54.6,
       54.7,
-      54.7,
-      54.5,
-      54.2,
+      54.6,
+      54.3,
       53.8,
-      53.5
+      53.2,
+      52.4,
+      51.4,
+      50.5,
+      49.5,
+      49.0
      ]
     },
     "disapprove": {
@@ -1784,15 +1907,25 @@
       "2026-09-17",
       "2026-09-24",
       "2026-10-01",
-      "2026-10-08"
+      "2026-10-08",
+      "2026-10-15",
+      "2026-10-22",
+      "2026-10-29",
+      "2026-11-05",
+      "2026-11-09"
      ],
      "values": [
-      43.2,
-      43.5,
-      43.8,
-      44.1,
-      44.5,
-      44.8
+      43.3,
+      43.6,
+      43.9,
+      44.4,
+      45.0,
+      45.7,
+      46.5,
+      47.4,
+      48.4,
+      49.2,
+      49.7
      ]
     }
    }
@@ -1852,6 +1985,16 @@
      "approx": false,
      "source": "https://www.perfil.com/noticias/politica/milei-quedo-14-en-el-ranking-de-presidentes-de-america-latina-quien-lidera-la-encuesta.phtml",
      "origin": "manual"
+    },
+    {
+     "date": "2026-11-09",
+     "firm": "CB Consultora (imagen positiva)",
+     "approve": 35.6,
+     "disapprove": 59.3,
+     "n": 3045,
+     "approx": false,
+     "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
+     "origin": "manual"
     }
    ],
    "country": "Venezuela",
@@ -1894,7 +2037,12 @@
       "2026-09-20",
       "2026-09-27",
       "2026-10-04",
-      "2026-10-08"
+      "2026-10-11",
+      "2026-10-18",
+      "2026-10-25",
+      "2026-11-01",
+      "2026-11-08",
+      "2026-11-09"
      ],
      "values": [
       28.5,
@@ -1924,22 +2072,91 @@
       59.4,
       57.1,
       52.7,
-      45.8,
+      45.7,
       38.4,
       33.2,
-      30.6,
-      29.6,
-      29.3,
-      29.3,
-      29.3
+      30.7,
+      29.8,
+      29.7,
+      29.9,
+      30.5,
+      31.2,
+      32.0,
+      32.9,
+      33.7,
+      33.8
      ]
     },
     "disapprove": {
      "dates": [
-      "2026-02-15"
+      "2026-02-15",
+      "2026-02-22",
+      "2026-03-01",
+      "2026-03-08",
+      "2026-03-15",
+      "2026-03-22",
+      "2026-03-29",
+      "2026-04-05",
+      "2026-04-12",
+      "2026-04-19",
+      "2026-04-26",
+      "2026-05-03",
+      "2026-05-10",
+      "2026-05-17",
+      "2026-05-24",
+      "2026-05-31",
+      "2026-07-26",
+      "2026-08-02",
+      "2026-08-09",
+      "2026-08-16",
+      "2026-08-23",
+      "2026-08-30",
+      "2026-09-06",
+      "2026-09-13",
+      "2026-09-20",
+      "2026-09-27",
+      "2026-10-04",
+      "2026-10-11",
+      "2026-10-18",
+      "2026-10-25",
+      "2026-11-01",
+      "2026-11-08",
+      "2026-11-09"
      ],
      "values": [
-      67.6
+      67.6,
+      67.6,
+      67.6,
+      67.6,
+      67.6,
+      67.6,
+      67.6,
+      67.6,
+      67.6,
+      67.6,
+      67.6,
+      67.6,
+      67.6,
+      67.6,
+      67.6,
+      67.6,
+      59.3,
+      59.3,
+      59.3,
+      59.3,
+      59.3,
+      59.3,
+      59.3,
+      59.3,
+      59.3,
+      59.3,
+      59.3,
+      59.3,
+      59.3,
+      59.3,
+      59.3,
+      59.3,
+      59.3
      ]
     }
    }
@@ -2800,6 +3017,16 @@
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPckF0WWRLYjlWZHF5WDUtUjgtTmlUcXpqY09VaVJmVnFEbHR0S2RWM29wT0lwbHB5VTgyQXhxWEFHM0tzeWw1eTE1eGNtTG1sUzhPQzVYYjNlZUluTHhPRENxa2gwcXItRXJOYllzSDltN1RwU01wQVVFRWFnNDZDcjdlekI2QnlLaFF5WllsVGNtTjRmMXF1eEtqVHF1Z1FfcndjUzFkMnRsSlZybWdFV0lRcjlGMkJwZWVfSGpFbkl0elQ2T1RVZk43cDBhOGhhakE?oc=5",
      "origin": "news"
+    },
+    {
+     "date": "2026-11-09",
+     "firm": "CB Consultora (imagen positiva)",
+     "approve": 69.8,
+     "disapprove": 25.5,
+     "n": 3931,
+     "approx": false,
+     "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
+     "origin": "manual"
     }
    ],
    "country": "Mexico",
@@ -2904,7 +3131,8 @@
       "2026-10-18",
       "2026-10-25",
       "2026-11-01",
-      "2026-11-05"
+      "2026-11-08",
+      "2026-11-09"
      ],
      "values": [
       80.3,
@@ -2996,14 +3224,15 @@
       65.8,
       66.8,
       67.5,
-      67.8,
       67.9,
-      67.8,
-      67.6,
-      67.2,
+      68.0,
+      67.9,
+      67.7,
+      67.4,
+      67.1,
+      66.8,
       66.7,
-      66.3,
-      66.0
+      66.7
      ]
     },
     "disapprove": {
@@ -3102,7 +3331,10 @@
       "2026-10-04",
       "2026-10-11",
       "2026-10-18",
-      "2026-10-20"
+      "2026-10-25",
+      "2026-11-01",
+      "2026-11-08",
+      "2026-11-09"
      ],
      "values": [
       15.8,
@@ -3194,12 +3426,15 @@
       30.9,
       30.7,
       30.5,
-      30.3,
       30.2,
-      30.0,
       29.9,
-      29.9,
-      29.9
+      29.6,
+      29.2,
+      28.8,
+      28.3,
+      27.8,
+      27.3,
+      27.3
      ]
     }
    }
@@ -3297,6 +3532,15 @@
      "origin": "news"
     },
     {
+     "date": "2026-10-08",
+     "firm": "CB Consultora (imagen positiva)",
+     "approve": 47.5,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+     "origin": "manual"
+    },
+    {
      "date": "2026-10-09",
      "firm": "Pollster not named (press)",
      "approve": 47.5,
@@ -3322,6 +3566,16 @@
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPZmFfbVpTWXZlR25zdzN4YWdLaVVLdk5rM0FyVGVlbFMtNWdrbWNaVkxzNUcwQWFwamNXa1BXWUEtRGdKMU9qejAwbk91c1o1Rjk1TGRmVUo5SlNOa05Gc0Z0RFQzQjgzY3I5VVBxWlQ5MnBpNkRDbGhld2g5QWFOekZfSEpWTEpLdkZhWkRKQXhPbHY2dkJfc0hYbXlxX1djWFBlU3h0al9UQUdJQS1xenJCaUpOdkladXNqcDVTOHJvSTRyS3pHcHBwdlA2NkRlNW8yN2RxOA?oc=5",
      "origin": "news"
+    },
+    {
+     "date": "2026-11-09",
+     "firm": "CB Consultora (imagen positiva)",
+     "approve": 47.8,
+     "disapprove": 48.3,
+     "n": 2015,
+     "approx": false,
+     "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
+     "origin": "manual"
     }
    ],
    "country": "Ecuador",
@@ -3385,7 +3639,7 @@
       "2026-10-22",
       "2026-10-29",
       "2026-11-05",
-      "2026-11-06"
+      "2026-11-09"
      ],
      "values": [
       60.3,
@@ -3428,22 +3682,22 @@
       35.2,
       36.0,
       36.5,
-      36.9,
-      37.5,
-      38.5,
-      39.8,
-      41.0,
-      41.8,
-      42.3,
-      42.6,
-      42.9,
+      37.0,
+      37.6,
+      38.7,
+      40.2,
+      41.5,
+      42.5,
       43.2,
-      43.5,
       43.8,
-      44.0,
-      44.2,
       44.3,
-      44.3
+      44.9,
+      45.4,
+      45.9,
+      46.3,
+      46.6,
+      46.7,
+      46.8
      ]
     },
     "disapprove": {
@@ -3466,7 +3720,28 @@
       "2026-05-31",
       "2026-06-07",
       "2026-06-14",
-      "2026-06-16"
+      "2026-06-21",
+      "2026-06-28",
+      "2026-07-05",
+      "2026-07-12",
+      "2026-07-19",
+      "2026-07-26",
+      "2026-08-02",
+      "2026-08-09",
+      "2026-08-16",
+      "2026-08-23",
+      "2026-08-30",
+      "2026-09-06",
+      "2026-09-13",
+      "2026-09-20",
+      "2026-09-27",
+      "2026-10-04",
+      "2026-10-11",
+      "2026-10-18",
+      "2026-10-25",
+      "2026-11-01",
+      "2026-11-08",
+      "2026-11-09"
      ],
      "values": [
       61.5,
@@ -3487,7 +3762,28 @@
       75.5,
       75.5,
       75.5,
-      75.5
+      75.5,
+      75.5,
+      75.5,
+      75.5,
+      75.5,
+      75.5,
+      75.5,
+      75.4,
+      75.0,
+      71.1,
+      57.5,
+      49.6,
+      48.4,
+      48.3,
+      48.3,
+      48.3,
+      48.3,
+      48.3,
+      48.3,
+      48.3,
+      48.3,
+      48.3
      ]
     }
    }
@@ -3691,6 +3987,16 @@
      "approx": false,
      "origin": "wikipedia",
      "source": "https://en.wikipedia.org/wiki/Opinion_polling_on_the_Nayib_Bukele_presidency"
+    },
+    {
+     "date": "2026-11-09",
+     "firm": "CB Consultora (imagen positiva)",
+     "approve": 69.5,
+     "disapprove": 24.9,
+     "n": 2944,
+     "approx": false,
+     "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
+     "origin": "manual"
     }
    ],
    "country": "El Salvador",
@@ -3775,7 +4081,8 @@
       "2026-10-13",
       "2026-10-20",
       "2026-10-27",
-      "2026-10-29"
+      "2026-11-03",
+      "2026-11-09"
      ],
      "values": [
       85.2,
@@ -3843,18 +4150,19 @@
       93.3,
       93.2,
       92.5,
-      90.6,
+      90.5,
       88.2,
-      86.8,
-      86.1,
-      85.8,
-      85.6,
-      85.6,
-      85.7,
+      86.7,
       86.0,
-      86.5,
-      87.1,
-      87.3
+      85.6,
+      85.3,
+      85.0,
+      84.8,
+      84.5,
+      84.1,
+      83.6,
+      83.0,
+      82.3
      ]
     },
     "disapprove": {
@@ -3915,7 +4223,24 @@
       "2026-06-23",
       "2026-06-30",
       "2026-07-07",
-      "2026-07-12"
+      "2026-07-14",
+      "2026-07-21",
+      "2026-07-28",
+      "2026-08-04",
+      "2026-08-11",
+      "2026-08-18",
+      "2026-08-25",
+      "2026-09-01",
+      "2026-09-08",
+      "2026-09-15",
+      "2026-09-22",
+      "2026-09-29",
+      "2026-10-06",
+      "2026-10-13",
+      "2026-10-20",
+      "2026-10-27",
+      "2026-11-03",
+      "2026-11-09"
      ],
      "values": [
       10.8,
@@ -3974,7 +4299,24 @@
       5.8,
       5.1,
       4.6,
-      4.4
+      4.3,
+      4.1,
+      4.1,
+      4.0,
+      4.0,
+      4.0,
+      4.3,
+      5.7,
+      11.7,
+      20.6,
+      24.1,
+      24.8,
+      24.9,
+      24.9,
+      24.9,
+      24.9,
+      24.9,
+      24.9
      ]
     }
    }
@@ -4007,6 +4349,25 @@
      "approx": true,
      "source": "https://www.prensa-latina.cu/2026/07/22/panamenos-desaprueban-gestion-del-gobierno-segun-sondeo/",
      "origin": "manual"
+    },
+    {
+     "date": "2026-10-08",
+     "firm": "CB Consultora (imagen positiva)",
+     "approve": 36.5,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+     "origin": "manual"
+    },
+    {
+     "date": "2026-11-09",
+     "firm": "CB Consultora (imagen positiva)",
+     "approve": 34.9,
+     "disapprove": 59.3,
+     "n": 2880,
+     "approx": false,
+     "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
+     "origin": "manual"
     }
    ],
    "country": "Panama",
@@ -4037,7 +4398,24 @@
       "2026-06-28",
       "2026-07-05",
       "2026-07-12",
-      "2026-07-15"
+      "2026-07-19",
+      "2026-07-26",
+      "2026-08-02",
+      "2026-08-09",
+      "2026-08-16",
+      "2026-08-23",
+      "2026-08-30",
+      "2026-09-06",
+      "2026-09-13",
+      "2026-09-20",
+      "2026-09-27",
+      "2026-10-04",
+      "2026-10-11",
+      "2026-10-18",
+      "2026-10-25",
+      "2026-11-01",
+      "2026-11-08",
+      "2026-11-09"
      ],
      "values": [
       33.8,
@@ -4062,7 +4440,24 @@
       17.9,
       17.9,
       17.9,
-      17.9
+      17.9,
+      17.9,
+      18.1,
+      18.5,
+      20.1,
+      24.2,
+      30.3,
+      34.3,
+      35.8,
+      36.2,
+      36.3,
+      36.2,
+      36.0,
+      35.9,
+      35.7,
+      35.5,
+      35.3,
+      35.3
      ]
     },
     "disapprove": {
@@ -4089,7 +4484,24 @@
       "2026-06-28",
       "2026-07-05",
       "2026-07-12",
-      "2026-07-15"
+      "2026-07-19",
+      "2026-07-26",
+      "2026-08-02",
+      "2026-08-09",
+      "2026-08-16",
+      "2026-08-23",
+      "2026-08-30",
+      "2026-09-06",
+      "2026-09-13",
+      "2026-09-20",
+      "2026-09-27",
+      "2026-10-04",
+      "2026-10-11",
+      "2026-10-18",
+      "2026-10-25",
+      "2026-11-01",
+      "2026-11-08",
+      "2026-11-09"
      ],
      "values": [
       62.7,
@@ -4114,7 +4526,24 @@
       77.6,
       77.6,
       77.6,
-      77.6
+      77.6,
+      77.6,
+      77.6,
+      77.6,
+      77.6,
+      77.5,
+      77.0,
+      74.1,
+      66.7,
+      61.0,
+      59.6,
+      59.3,
+      59.3,
+      59.3,
+      59.3,
+      59.3,
+      59.3,
+      59.3
      ]
     }
    }
@@ -4137,6 +4566,16 @@
      "disapprove": null,
      "approx": false,
      "source": "https://www.perfil.com/noticias/politica/milei-quedo-14-en-el-ranking-de-presidentes-de-america-latina-quien-lidera-la-encuesta.phtml",
+     "origin": "manual"
+    },
+    {
+     "date": "2026-11-09",
+     "firm": "CB Consultora (imagen positiva)",
+     "approve": 31.4,
+     "disapprove": 63.4,
+     "n": 2070,
+     "approx": false,
+     "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
      "origin": "manual"
     }
    ],
@@ -4178,7 +4617,12 @@
       "2026-09-20",
       "2026-09-27",
       "2026-10-04",
-      "2026-10-08"
+      "2026-10-11",
+      "2026-10-18",
+      "2026-10-25",
+      "2026-11-01",
+      "2026-11-08",
+      "2026-11-09"
      ],
      "values": [
       37.3,
@@ -4212,16 +4656,85 @@
       31.0,
       31.0,
       31.0,
-      31.0,
-      31.0
+      31.1,
+      31.1,
+      31.2,
+      31.2,
+      31.3,
+      31.3,
+      31.3
      ]
     },
     "disapprove": {
      "dates": [
-      "2026-02-15"
+      "2026-02-15",
+      "2026-02-22",
+      "2026-03-01",
+      "2026-03-08",
+      "2026-03-15",
+      "2026-03-22",
+      "2026-03-29",
+      "2026-04-05",
+      "2026-04-12",
+      "2026-04-19",
+      "2026-04-26",
+      "2026-05-03",
+      "2026-05-10",
+      "2026-05-17",
+      "2026-05-24",
+      "2026-05-31",
+      "2026-07-26",
+      "2026-08-02",
+      "2026-08-09",
+      "2026-08-16",
+      "2026-08-23",
+      "2026-08-30",
+      "2026-09-06",
+      "2026-09-13",
+      "2026-09-20",
+      "2026-09-27",
+      "2026-10-04",
+      "2026-10-11",
+      "2026-10-18",
+      "2026-10-25",
+      "2026-11-01",
+      "2026-11-08",
+      "2026-11-09"
      ],
      "values": [
-      56.8
+      56.8,
+      56.8,
+      56.8,
+      56.8,
+      56.8,
+      56.8,
+      56.8,
+      56.8,
+      56.8,
+      56.8,
+      56.8,
+      56.8,
+      56.8,
+      56.8,
+      56.8,
+      56.8,
+      63.4,
+      63.4,
+      63.4,
+      63.4,
+      63.4,
+      63.4,
+      63.4,
+      63.4,
+      63.4,
+      63.4,
+      63.4,
+      63.4,
+      63.4,
+      63.4,
+      63.4,
+      63.4,
+      63.4
      ]
     }
    }
@@ -4236,6 +4749,25 @@
      "approx": false,
      "source": "https://revistasumma.com/bukele-sheinbaum-y-chaves-encabezan-ranking-regional-de-presidentes-con-popularidad/",
      "origin": "manual"
+    },
+    {
+     "date": "2026-10-08",
+     "firm": "CB Consultora (imagen positiva)",
+     "approve": 44.1,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+     "origin": "manual"
+    },
+    {
+     "date": "2026-11-09",
+     "firm": "CB Consultora (imagen positiva)",
+     "approve": 45.7,
+     "disapprove": 52.1,
+     "n": 2831,
+     "approx": false,
+     "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
+     "origin": "manual"
     }
    ],
    "country": "Honduras",
@@ -4244,18 +4776,156 @@
    "avg": {
     "approve": {
      "dates": [
-      "2026-02-15"
+      "2026-02-15",
+      "2026-02-22",
+      "2026-03-01",
+      "2026-03-08",
+      "2026-03-15",
+      "2026-03-22",
+      "2026-03-29",
+      "2026-04-05",
+      "2026-04-12",
+      "2026-04-19",
+      "2026-04-26",
+      "2026-05-03",
+      "2026-05-10",
+      "2026-05-17",
+      "2026-05-24",
+      "2026-05-31",
+      "2026-06-21",
+      "2026-06-28",
+      "2026-07-05",
+      "2026-07-12",
+      "2026-07-19",
+      "2026-07-26",
+      "2026-08-02",
+      "2026-08-09",
+      "2026-08-16",
+      "2026-08-23",
+      "2026-08-30",
+      "2026-09-06",
+      "2026-09-13",
+      "2026-09-20",
+      "2026-09-27",
+      "2026-10-04",
+      "2026-10-11",
+      "2026-10-18",
+      "2026-10-25",
+      "2026-11-01",
+      "2026-11-08",
+      "2026-11-09"
      ],
      "values": [
-      40.5
+      40.5,
+      40.5,
+      40.5,
+      40.5,
+      40.5,
+      40.5,
+      40.5,
+      40.5,
+      40.5,
+      40.5,
+      40.5,
+      40.5,
+      40.5,
+      40.5,
+      40.5,
+      40.5,
+      44.1,
+      44.1,
+      44.1,
+      44.1,
+      44.1,
+      44.1,
+      44.1,
+      44.1,
+      44.1,
+      44.1,
+      44.1,
+      44.1,
+      44.2,
+      44.2,
+      44.3,
+      44.4,
+      44.5,
+      44.7,
+      44.9,
+      45.1,
+      45.3,
+      45.3
      ]
     },
     "disapprove": {
      "dates": [
-      "2026-02-15"
+      "2026-02-15",
+      "2026-02-22",
+      "2026-03-01",
+      "2026-03-08",
+      "2026-03-15",
+      "2026-03-22",
+      "2026-03-29",
+      "2026-04-05",
+      "2026-04-12",
+      "2026-04-19",
+      "2026-04-26",
+      "2026-05-03",
+      "2026-05-10",
+      "2026-05-17",
+      "2026-05-24",
+      "2026-05-31",
+      "2026-07-26",
+      "2026-08-02",
+      "2026-08-09",
+      "2026-08-16",
+      "2026-08-23",
+      "2026-08-30",
+      "2026-09-06",
+      "2026-09-13",
+      "2026-09-20",
+      "2026-09-27",
+      "2026-10-04",
+      "2026-10-11",
+      "2026-10-18",
+      "2026-10-25",
+      "2026-11-01",
+      "2026-11-08",
+      "2026-11-09"
      ],
      "values": [
-      54.3
+      54.3,
+      54.3,
+      54.3,
+      54.3,
+      54.3,
+      54.3,
+      54.3,
+      54.3,
+      54.3,
+      54.3,
+      54.3,
+      54.3,
+      54.3,
+      54.3,
+      54.3,
+      54.3,
+      52.1,
+      52.1,
+      52.1,
+      52.1,
+      52.1,
+      52.1,
+      52.1,
+      52.1,
+      52.1,
+      52.1,
+      52.1,
+      52.1,
+      52.1,
+      52.1,
+      52.1,
+      52.1,
+      52.1
      ]
     }
    }
@@ -5280,6 +5950,15 @@
      "origin": "news"
     },
     {
+     "date": "2026-10-08",
+     "firm": "CB Consultora (imagen positiva)",
+     "approve": 45.3,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+     "origin": "manual"
+    },
+    {
      "date": "2026-10-10",
      "firm": "Quaest",
      "approve": 45.0,
@@ -5404,6 +6083,16 @@
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQa0ZnS1FFVGpvczJDeWt2VW95THdILVRVUzNEd0VpTXFKSXlSRkw2NVR5SHY5M1VIRmxrMU52QkhpX3hWMEJsVEI4OG5yYTFEeVdaSXl4cjU5cWlHbmZoNm5nMzhwT1hxYlVqN2VPaFNfb0dMREl4YjlNVGprWl9ESXdpeWlpOFJvRk5tY3NVc1h3endJeDBZVW8zN1JtbTgyUmE2WkpqUXJITzBtQTU5WG9xd1FabnlsQlJnTm0zRk5wbjdqWC1XLW1USXJWSTVDbmg5cU04RGNGNEZFZG5FU0tDODdoZ9IB9AFBVV95cUxOZkhfc0MwSXJFaGFiSzJ6aXVPYXl3WVZNM3dvUldkVUFCWXVYenVOSWJqdFl0dnN5MGQtY2U3cHNOZHA2WlJjaGVMVU5kc0tOWGFlZjhVQmpSYVVlYzlBTjNnbzhrbGxXUnpHZ1BzUHlLc1BraGxRZHpPLVJlM1BIZ3E3ZU1KYngyNks2alZHSzd3TFBZeGNyMjFEZ0o2RUhCX1pjRG1MaVNkWGhoZklXWHRaWFp6YlNFTVhvaC12Wlg2SThEY3JVRVo1UkstZnNsRmN5dWZCMDBxd0VDRWgydzJhSExyLXJBWkt5VDlhRFRFNlJt?oc=5",
      "origin": "news"
+    },
+    {
+     "date": "2026-11-09",
+     "firm": "CB Consultora (imagen positiva)",
+     "approve": 50.4,
+     "disapprove": 46.9,
+     "n": 3709,
+     "approx": false,
+     "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
+     "origin": "manual"
     }
    ],
    "country": "Brazil",
@@ -5466,7 +6155,8 @@
       "2026-10-16",
       "2026-10-23",
       "2026-10-30",
-      "2026-11-04"
+      "2026-11-06",
+      "2026-11-09"
      ],
      "values": [
       39.6,
@@ -5515,15 +6205,16 @@
       47.6,
       47.3,
       46.8,
-      46.3,
+      46.2,
       45.8,
       45.4,
-      45.1,
-      45.0,
-      45.1,
-      45.2,
-      45.5,
-      45.6
+      45.3,
+      45.3,
+      45.4,
+      45.8,
+      46.2,
+      46.8,
+      47.0
      ]
     },
     "disapprove": {
@@ -5582,7 +6273,8 @@
       "2026-10-16",
       "2026-10-23",
       "2026-10-30",
-      "2026-11-04"
+      "2026-11-06",
+      "2026-11-09"
      ],
      "values": [
       49.0,
@@ -5634,17 +6326,18 @@
       49.1,
       49.3,
       49.5,
-      49.6,
-      49.6,
+      49.5,
       49.4,
-      49.3,
-      49.1,
-      48.9
+      49.2,
+      49.0,
+      48.7,
+      48.3,
+      48.2
      ]
     }
    }
   }
  },
- "updated": "2026-11-11T18:38:48Z",
+ "updated": "2026-11-11T23:46:34Z",
  "method": "Google News coverage of national polls and regional rankings (CB Consultora, Mitofsky, AtlasIntel); Gaussian-kernel average, 21-day bandwidth, firm-crowding weights."
 }
