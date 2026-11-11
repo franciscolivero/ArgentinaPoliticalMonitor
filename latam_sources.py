@@ -430,6 +430,183 @@ def src_cidgallup(names, stoppers, have_sources, log):
     return out
 
 
+# --- CB Global Data: monthly "Ranking presidentes de Latinoamérica" (cbglobaldata.com)
+# The post only embeds a PDF from Google Drive. In that PDF the current month's approval and
+# disapproval are drawn inside the chart image, while the text layer carries only last month's
+# figure ("IMAGEN POSITIVA OCT./26"). So:
+#   1. the ranking page is rendered and read with OCR (tesseract) for this month's approve /
+#      disapprove; the rows are matched to the presidents by rank and checked against the text
+#      layer's last-month column, which OCR also reads on each row — if they do not line up the OCR
+#      result is discarded rather than guessed;
+#   2. if OCR is unavailable or fails the check, this month's figures are taken from the executive
+#      summary (top three and bottom three only), and last month's column is kept for everyone.
+CB_FIRM = "CB Consultora (imagen positiva)"
+CB_SEARCH = "https://cbglobaldata.com/wp-json/wp/v2/posts"
+CB_COUNTRY = {"mexico": "MX", "el salvador": "SV", "brasil": "BR", "ecuador": "EC", "colombia": "CO",
+              "honduras": "HN", "peru": "PE", "bolivia": "BO", "venezuela": "VE", "panama": "PA",
+              "chile": "CL", "guatemala": "GT", "argentina": "AR", "uruguay": "UY", "paraguay": "PY",
+              "costa rica": "CR", "rep. dominicana": "DO", "republica dominicana": "DO", "nicaragua": "NI"}
+PCT_RE = re.compile(r"(\d{1,2}[.,]\d)\s*%")
+
+
+def _cb_posts(log):
+    import requests
+    try:
+        r = requests.get(CB_SEARCH, params={"search": "ranking presidentes latinoamerica", "per_page": 6,
+                                            "_fields": "link,date,title,content"}, timeout=40, headers=UA)
+        r.raise_for_status()
+        return [(p["link"], p["date"][:10], p["content"]["rendered"]) for p in r.json()
+                if "ranking" in p["link"] and "presidentes" in p["link"]]
+    except Exception as e:
+        log.append(f"  · CB Global Data listing failed ({e})")
+        return []
+
+
+def _cb_pdf(content):
+    import requests
+    m = re.search(r"drive\.google\.com/file/d/([\w-]+)", content)
+    if not m:
+        return None
+    url = f"https://drive.google.com/uc?export=download&id={m.group(1)}"
+    blob = requests.get(url, timeout=120, headers=UA).content
+    if not blob.startswith(b"%PDF"):
+        tok = re.search(rb'name="confirm" value="([^"]+)"', blob)
+        uuid = re.search(rb'name="uuid" value="([^"]+)"', blob)
+        if tok:
+            blob = requests.get("https://drive.usercontent.google.com/download",
+                                params={"id": m.group(1), "export": "download", "confirm": tok.group(1).decode(),
+                                        "uuid": uuid.group(1).decode() if uuid else ""}, timeout=120, headers=UA).content
+    return blob if blob.startswith(b"%PDF") else None
+
+
+def _cb_ocr_page(blob, page_no):
+    """OCR readings of one PDF page (1-based) under a few settings, or [] if poppler/tesseract are
+    not installed. parse_cb_ranking keeps the first reading that passes its checks."""
+    import subprocess, tempfile, shutil, os
+    if not (shutil.which("pdftoppm") and shutil.which("tesseract")):
+        return []
+    outs = []
+    with tempfile.TemporaryDirectory() as d:
+        pdf = os.path.join(d, "r.pdf")
+        open(pdf, "wb").write(blob)
+        for dpi in (300, 200):
+            stem = os.path.join(d, f"p{dpi}")
+            subprocess.run(["pdftoppm", "-r", str(dpi), "-gray", "-f", str(page_no), "-l", str(page_no),
+                            "-png", pdf, stem], check=True, timeout=180)
+            png = [os.path.join(d, f) for f in os.listdir(d) if f.startswith(f"p{dpi}") and f.endswith(".png")][0]
+            for psm in ("6", "4"):
+                r = subprocess.run(["tesseract", png, "-", "--psm", psm], capture_output=True, text=True, timeout=180)
+                outs.append(r.stdout)
+    return outs
+
+
+def parse_cb_ranking(page_text, ocr_texts):
+    """-> rows [{rank, name, country, prev, approve, disapprove}] from the ranking page.
+    `prev` (last month) comes from the text layer; approve/disapprove from OCR when it lines up."""
+    t = re.sub(r"\s+", " ", page_text)
+    countries = sorted({k for k in CB_COUNTRY}, key=len, reverse=True)
+    rx = re.compile(r"\b(\d{1,2})\.\s+([A-ZÁÉÍÓÚÑÜ][A-ZÁÉÍÓÚÑÜ\.\s'’-]{2,40}?)\s+(" +
+                    "|".join(re.escape(c).replace("e", "[EÉ]").replace("a", "[AÁ]").replace("u", "[UÚ]")
+                             .replace("i", "[IÍ]").replace("o", "[OÓ]") for c in countries) + r")\b", re.I)
+    rows, seen = [], set()
+    for m in rx.finditer(t):
+        c = CB_COUNTRY.get(_fold(m.group(3)).strip())
+        rank = int(m.group(1))
+        if c and rank not in seen:
+            seen.add(rank)
+            rows.append({"rank": rank, "name": m.group(2).strip(), "country": c, "prev": None,
+                         "approve": None, "disapprove": None})
+    rows.sort(key=lambda r: r["rank"])
+    prev = [_num(x) for x in PCT_RE.findall(t)]     # the text layer holds only last month's column
+    if rows and len(prev) == len(rows):
+        for r, v in zip(rows, prev):
+            r["prev"] = v
+    if isinstance(ocr_texts, str):
+        ocr_texts = [ocr_texts]
+    for ocr_text in ocr_texts or []:
+        lines = [PCT_RE.findall(l) for l in ocr_text.splitlines()]
+        lines = [[_num(x) for x in l] for l in lines if len(l) >= 2]
+        if len(lines) != len(rows):
+            continue
+        checked = ok = 0
+        sane = True
+        for r, l in zip(rows, lines):
+            a, d = l[0], l[1]
+            if not (3 <= a <= 97 and 3 <= d <= 97 and 85 <= a + d <= 101.5):
+                sane = False
+            if len(l) >= 3 and r["prev"] is not None:
+                checked += 1
+                ok += abs(l[-1] - r["prev"]) < 0.05
+        if sane and checked >= len(rows) // 2 and ok >= checked - 1:
+            for r, l in zip(rows, lines):
+                r["approve"], r["disapprove"] = l[0], l[1]
+            break
+    return rows
+
+
+def src_cbglobal(names, stoppers, have_sources, log):
+    from pypdf import PdfReader
+    out = []
+    for link, pub, content in _cb_posts(log):
+        if link in have_sources:
+            continue
+        try:
+            blob = _cb_pdf(content)
+        except Exception as e:
+            log.append(f"  · CB {link}: PDF download failed ({e})")
+            continue
+        if not blob:
+            log.append(f"  · CB {link}: no PDF found")
+            continue
+        pages = [(p.extract_text() or "") for p in PdfReader(io.BytesIO(blob)).pages]
+        full = "\n".join(pages)
+        fw = re.search(r"DEL\s+\d{1,2}\s+AL\s+(\d{1,2})\s+de\s+([A-Za-zÁÉÍÓÚáéíóú]+)\s+de\s+(\d{4})", full, re.I)
+        if fw and _fold(fw.group(2)).strip() in ES_MONTHS:
+            end = datetime.date(int(fw.group(3)), ES_MONTHS[_fold(fw.group(2)).strip()], int(fw.group(1)))
+        else:
+            end = datetime.date.fromisoformat(pub) - datetime.timedelta(days=2)
+        rp = next((i for i, p in enumerate(pages) if "APROBACI" in p.upper() and re.search(r"\b1\.\s+[A-Z]", p)), None)
+        if rp is None:
+            log.append(f"  · CB {link}: ranking page not found")
+            continue
+        ocr = []
+        try:
+            ocr = _cb_ocr_page(blob, rp + 1)
+        except Exception as e:
+            log.append(f"  · CB {link}: OCR failed ({e})")
+        rows = parse_cb_ranking(pages[rp], ocr)
+        n_by = {}
+        for m in re.finditer(r"ENCUESTA\s+([A-ZÁÉÍÓÚÑ\.\s]+?)\s*-\s*CB GLOBAL DATA.{0,80}?MUESTRA\s+(\d[\d.]*)", full, re.S):
+            c = CB_COUNTRY.get(_fold(m.group(1)).strip())
+            if c:
+                n_by[c] = int(m.group(2).replace(".", ""))
+        if not any(r["approve"] is not None for r in rows):        # fall back to the executive summary
+            summ = next((p for p in pages if "imagen positiva" in p.lower() and "%" in p), "")
+            figs = credit_figures(re.sub(r"\s+", " ", summ), names, stoppers)
+            for r in rows:
+                if r["country"] in figs:
+                    r["approve"] = figs[r["country"]]
+        used = 0
+        prev_date = (end - datetime.timedelta(days=31)).isoformat()
+        for r in rows:
+            c = r["country"]
+            if c not in names:
+                continue
+            if r["approve"] is not None:
+                out.append((c, {"date": end.isoformat(), "firm": CB_FIRM, "approve": r["approve"],
+                                "disapprove": r["disapprove"], "n": n_by.get(c), "approx": False,
+                                "source": link, "origin": "pollster"}))
+                used += 1
+            if r["prev"] is not None:     # last month's figure, kept for months whose PDF we never read
+                out.append((c, {"date": prev_date, "firm": CB_FIRM, "approve": r["prev"], "disapprove": None,
+                                "approx": True, "source": link + "#previous-month", "origin": "pollster"}))
+        how = "OCR" if any(r["disapprove"] is not None for r in rows) else "summary only"
+        log.append(f"  · CB Global Data {end:%Y-%m}: {used} presidents this month ({how}), "
+                   f"{sum(r['prev'] is not None for r in rows)} with last month's figure")
+    return out
+
+
 def run_regional(names, stoppers, have_sources, log):
     return (_safe(src_mitofsky, "Mitofsky", log, names, stoppers, have_sources, log) +
-            _safe(src_cidgallup, "CID Gallup", log, names, stoppers, have_sources, log))
+            _safe(src_cidgallup, "CID Gallup", log, names, stoppers, have_sources, log) +
+            _safe(src_cbglobal, "CB Global Data", log, names, stoppers, have_sources, log))

@@ -12,6 +12,15 @@
     "origin": "manual"
    },
    {
+    "date": "2026-10-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 38.8,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+    "origin": "manual"
+   },
+   {
     "date": "2026-10-11",
     "firm": "Criteria",
     "approve": 27,
@@ -36,6 +45,16 @@
     "disapprove": 65,
     "approx": true,
     "source": "https://www.eldinamo.cl/politica/2026/10/19/encuesta-cadem-aprobacion-de-kast-cae-al-30-y-un-60-apoya-eliminar-el-indulto-presidencial/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-11-09",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 33.5,
+    "disapprove": 62.7,
+    "n": 3065,
+    "approx": false,
+    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
     "origin": "manual"
    }
   ],
@@ -84,6 +103,25 @@
     "approx": false,
     "source": "https://www.prensa-latina.cu/2026/07/03/decrece-aprobacion-del-presidente-de-bolivia/",
     "origin": "manual"
+   },
+   {
+    "date": "2026-10-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 41.1,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-11-09",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 40.2,
+    "disapprove": 55.6,
+    "n": 2768,
+    "approx": false,
+    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
+    "origin": "manual"
    }
   ],
   "PE": [
@@ -97,12 +135,12 @@
     "origin": "manual"
    },
    {
-    "date": "2026-09-30",
-    "firm": "Mitofsky (ranking)",
-    "approve": 49,
-    "disapprove": null,
+    "date": "2026-09-12",
+    "firm": "Ipsos",
+    "approve": 42,
+    "disapprove": 48,
     "approx": true,
-    "source": "https://www.poresto.com/mexico/2026/10/5/claudia-sheinbaum-alcanza-72-de-aprobacion-y-supera-a-trump-lula-y-milei-en-medicion-de-mitofsky.html",
+    "source": "https://caretas.pe/?p=839489",
     "origin": "manual"
    },
    {
@@ -115,12 +153,21 @@
     "origin": "manual"
    },
    {
-    "date": "2026-09-12",
-    "firm": "Ipsos",
-    "approve": 42,
-    "disapprove": 48,
+    "date": "2026-09-30",
+    "firm": "Mitofsky (ranking)",
+    "approve": 49,
+    "disapprove": null,
     "approx": true,
-    "source": "https://caretas.pe/?p=839489",
+    "source": "https://www.poresto.com/mexico/2026/10/5/claudia-sheinbaum-alcanza-72-de-aprobacion-y-supera-a-trump-lula-y-milei-en-medicion-de-mitofsky.html",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-10-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 46.3,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
     "origin": "manual"
    },
    {
@@ -131,32 +178,24 @@
     "approx": true,
     "source": "https://caretas.pe/?p=839489",
     "origin": "manual"
+   },
+   {
+    "date": "2026-11-09",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 43.8,
+    "disapprove": 54.4,
+    "n": 3089,
+    "approx": false,
+    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
+    "origin": "manual"
    }
   ],
   "CO": [
-   {
-    "date": "2026-09-30",
-    "firm": "Mitofsky (ranking)",
-    "approve": 53,
-    "disapprove": null,
-    "approx": true,
-    "source": "https://www.poresto.com/mexico/2026/10/5/claudia-sheinbaum-alcanza-72-de-aprobacion-y-supera-a-trump-lula-y-milei-en-medicion-de-mitofsky.html",
-    "origin": "manual"
-   },
    {
     "date": "2026-09-03",
     "firm": "AtlasIntel",
     "approve": 51.8,
     "disapprove": 43.2,
-    "approx": false,
-    "source": "https://www.elcolombiano.com/colombia/aprobacion-de-de-la-espriella-baja-49-porciento-encuesta-atlas-intel-asi-le-va-a-otros-lideres-del-pais-OG42339106",
-    "origin": "manual"
-   },
-   {
-    "date": "2026-10-07",
-    "firm": "AtlasIntel",
-    "approve": 48.7,
-    "disapprove": 44.6,
     "approx": false,
     "source": "https://www.elcolombiano.com/colombia/aprobacion-de-de-la-espriella-baja-49-porciento-encuesta-atlas-intel-asi-le-va-a-otros-lideres-del-pais-OG42339106",
     "origin": "manual"
@@ -171,12 +210,40 @@
     "origin": "manual"
    },
    {
+    "date": "2026-09-30",
+    "firm": "Mitofsky (ranking)",
+    "approve": 53,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://www.poresto.com/mexico/2026/10/5/claudia-sheinbaum-alcanza-72-de-aprobacion-y-supera-a-trump-lula-y-milei-en-medicion-de-mitofsky.html",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-10-07",
+    "firm": "AtlasIntel",
+    "approve": 48.7,
+    "disapprove": 44.6,
+    "approx": false,
+    "source": "https://www.elcolombiano.com/colombia/aprobacion-de-de-la-espriella-baja-49-porciento-encuesta-atlas-intel-asi-le-va-a-otros-lideres-del-pais-OG42339106",
+    "origin": "manual"
+   },
+   {
     "date": "2026-10-08",
     "firm": "CB Consultora (imagen positiva)",
     "approve": 49.7,
     "disapprove": 47.0,
     "approx": false,
     "source": "https://analisisurbano.org/abelardo-de-la-espriella-cae-aprobacion-encuesta-octubre-2026/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-11-09",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 46.9,
+    "disapprove": 51.7,
+    "n": 2996,
+    "approx": false,
+    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
     "origin": "manual"
    }
   ],
@@ -224,6 +291,16 @@
     "disapprove": null,
     "approx": false,
     "source": "https://www.perfil.com/noticias/politica/milei-quedo-14-en-el-ranking-de-presidentes-de-america-latina-quien-lidera-la-encuesta.phtml",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-11-09",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 35.6,
+    "disapprove": 59.3,
+    "n": 3045,
+    "approx": false,
+    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
     "origin": "manual"
    }
   ],
@@ -335,6 +412,16 @@
     "approx": false,
     "source": "https://www.perfil.com/noticias/politica/milei-quedo-14-en-el-ranking-de-presidentes-de-america-latina-quien-lidera-la-encuesta.phtml",
     "origin": "manual"
+   },
+   {
+    "date": "2026-11-09",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 69.8,
+    "disapprove": 25.5,
+    "n": 3931,
+    "approx": false,
+    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
+    "origin": "manual"
    }
   ],
   "EC": [
@@ -354,6 +441,25 @@
     "disapprove": 75.46,
     "approx": false,
     "source": "https://larepublica.pe/mundo/2026/06/22/una-reciente-encuesta-en-ecuador-revela-una-desaprobacion-del-75-para-el-presidente-daniel-noboa-417494",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-10-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 47.5,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-11-09",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 47.8,
+    "disapprove": 48.3,
+    "n": 2015,
+    "approx": false,
+    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
     "origin": "manual"
    }
   ],
@@ -438,6 +544,16 @@
     "approx": false,
     "source": "https://www.perfil.com/noticias/politica/milei-quedo-14-en-el-ranking-de-presidentes-de-america-latina-quien-lidera-la-encuesta.phtml",
     "origin": "manual"
+   },
+   {
+    "date": "2026-11-09",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 69.5,
+    "disapprove": 24.9,
+    "n": 2944,
+    "approx": false,
+    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
+    "origin": "manual"
    }
   ],
   "PA": [
@@ -467,6 +583,25 @@
     "approx": true,
     "source": "https://www.prensa-latina.cu/2026/07/22/panamenos-desaprueban-gestion-del-gobierno-segun-sondeo/",
     "origin": "manual"
+   },
+   {
+    "date": "2026-10-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 36.5,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-11-09",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 34.9,
+    "disapprove": 59.3,
+    "n": 2880,
+    "approx": false,
+    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
+    "origin": "manual"
    }
   ],
   "GT": [
@@ -487,6 +622,16 @@
     "approx": false,
     "source": "https://www.perfil.com/noticias/politica/milei-quedo-14-en-el-ranking-de-presidentes-de-america-latina-quien-lidera-la-encuesta.phtml",
     "origin": "manual"
+   },
+   {
+    "date": "2026-11-09",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 31.4,
+    "disapprove": 63.4,
+    "n": 2070,
+    "approx": false,
+    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
+    "origin": "manual"
    }
   ],
   "HN": [
@@ -497,6 +642,25 @@
     "disapprove": 54.3,
     "approx": false,
     "source": "https://revistasumma.com/bukele-sheinbaum-y-chaves-encabezan-ranking-regional-de-presidentes-con-popularidad/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-10-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 44.1,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-11-09",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 45.7,
+    "disapprove": 52.1,
+    "n": 2831,
+    "approx": false,
+    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
     "origin": "manual"
    }
   ],
@@ -529,6 +693,15 @@
     "origin": "manual"
    },
    {
+    "date": "2026-10-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 45.3,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+    "origin": "manual"
+   },
+   {
     "date": "2026-10-13",
     "firm": "Quaest",
     "approve": 45,
@@ -544,6 +717,16 @@
     "disapprove": 47,
     "approx": false,
     "source": "https://portaldeprefeitura.com.br/bastidores-da-politica/desaprovacao-do-governo-lula-e-de-47-enquanto-aprovacao-chega-a-46/634535/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-11-09",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 50.4,
+    "disapprove": 46.9,
+    "n": 3709,
+    "approx": false,
+    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
     "origin": "manual"
    }
   ]
