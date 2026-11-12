@@ -312,7 +312,7 @@
      "date": "2026-05-29",
      "firm": "Criteria",
      "approve": 36.0,
-     "disapprove": null,
+     "disapprove": 53.0,
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQMkRCYlY4aDl3NjlzM0VxVWIxT1pKQ2oyaGo3RTNlT1FqNTBpTWxXUDlacjNTaEstMllqTWJrSHFzR2hCci1ZYmZibjFCTU5tRlRKUjIyWFJFeHB0eUR2S2g5d2dOdC1kWWhwSkdxVDZZM0JoTnB5UVRaYnZCd1VlYkY5YTkzMmF2R0FpeVR4TEVhcGdlMjlWZ1daUVZOYjFweUxEOUJ1MXVKWGFBeGp5ZmhNdHNYeHN0VVVQOHlaczhvOUs0bF9KenVPSHdfVzlwZ2ZiTFZlV3U5RXc1V19VWi1pRVlWamthdldFQg?oc=5",
      "origin": "news"
@@ -966,6 +966,15 @@
      "origin": "pollster"
     },
     {
+     "date": "2026-11-06",
+     "firm": "Panel Ciudadano UDD",
+     "approve": 24.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQVmgtSkNCQUwxY0s1V3B6SXNzVnhyWU1fSzZNdW1idk1nc2hjS0xURTBSeDlkVkpVY2pPV2JuWFpMbktPN2N4alNUWHJaQnZsOHRVb0d5SzhwWGY1bmtGNUJCb1NJV3k5d3BldjktUWxDWlJuZml4SzZ2UG5BT1lra2I4VnpLWGlLUUlkOVVvZWhVV1ZfOWRoSTNNRE1ycVNJcFIzTk1scDRTcTBUbmJaWnRlWVYyVkVGMk5STUxNS2NiSnNTeG1MTFp2d3RsLW9kS1hZV2xjM0o?oc=5",
+     "origin": "news"
+    },
+    {
      "date": "2026-11-09",
      "firm": "CB Consultora (imagen positiva)",
      "approve": 33.5,
@@ -1044,18 +1053,18 @@
       48.6,
       49.0,
       48.4,
-      46.8,
-      44.6,
-      42.4,
-      40.8,
-      40.0,
-      39.8,
-      40.1,
-      40.5,
-      40.9,
-      41.2,
-      41.3,
-      41.3
+      46.7,
+      44.5,
+      42.3,
+      40.7,
+      39.7,
+      39.3,
+      39.2,
+      39.2,
+      39.1,
+      38.8,
+      38.5,
+      38.2
      ]
     },
     "disapprove": {
@@ -1106,18 +1115,18 @@
       51.5,
       52.4,
       53.2,
-      53.7,
-      54.0,
-      54.0,
-      54.0,
-      54.0,
+      53.8,
       54.0,
       54.1,
+      54.1,
+      54.0,
+      54.1,
+      54.2,
       54.4,
-      54.7,
-      55.1,
-      55.5,
-      55.8,
+      54.8,
+      55.2,
+      55.6,
+      55.9,
       56.0,
       56.2,
       56.3,
@@ -6338,6 +6347,6 @@
    }
   }
  },
- "updated": "2026-11-11T23:46:34Z",
+ "updated": "2026-11-12T18:52:59Z",
  "method": "Google News coverage of national polls and regional rankings (CB Consultora, Mitofsky, AtlasIntel); Gaussian-kernel average, 21-day bandwidth, firm-crowding weights."
 }
