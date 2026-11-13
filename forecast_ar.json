@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T16:46:09Z",
+ "updated": "2026-11-13T16:47:04Z",
  "election": "2027-10-24",
  "latest": {
   "date": "2026-11-13",
@@ -9,7 +9,7 @@
   "p_market": 0.435,
   "share": 50.4,
   "sd": 8.5,
-  "approval": 35.6,
+  "approval": 35.44,
   "weights": {
    "polls": 0.58,
    "fundamentals": 0,
