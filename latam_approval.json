@@ -1875,6 +1875,15 @@
      "approx": false,
      "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
      "origin": "manual"
+    },
+    {
+     "date": "2026-11-09",
+     "firm": "AtlasIntel",
+     "approve": 48.3,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOUTNNWTRjMkV3NlZDVl9BVmFSMlJ5R19CTVpQMFVDOVY4QWgtT0VMVGQ2N3VEd3FlOFJqOEVaaVdSMkg3LUduekc0M2hvQ2QyRlk5ZWlDcERPYVRoRk1qdmJLcmQtNTZRUkJkX1NMcG1KVWJ3RXJwdkd1Z0MtNVMwME5USURZcEZ6X0N3RDkzVVdCQ2xwVWk3M1VibjlPcFJnQ0REWjJzY1dadE8ycVp3eGwwcjZnQXh6QXoyMC1tZUxubm1hQjBlOHJNRGNSamZsbWJ3NnVKcVlMY3hXdnhIV1dqbTDSAeQBQVVfeXFMTlEzTVk0YzJFdzZWQ1ZfQVZhUjJSeUdfQk1aUDBVQzlWOEFoLU9FTFRkNjd1RHdxZThSajhFWmlXUjJINy1HbnpHNDNob0NkMkZZOWVpQ3BET2FUaEZNanZiS3JkLTU2UVJCZF9TTHBtSlVid0VycHZHdWdDLTVTMDBOVElEWXBGel9Dd0Q5M1VXQkNscFVpNzNVYm45T3BSZ0NERFoyc2NXWnRPMnFad3hsMHI2Z0F4ekF6MjAtbWVMbm5tYUIwZThyTURjUmpmbG1idzZ1SnFZTGN4V3Z4SFdXam0w?oc=5",
+     "origin": "news"
     }
    ],
    "country": "Colombia",
@@ -1896,17 +1905,17 @@
       "2026-11-09"
      ],
      "values": [
-      54.6,
       54.7,
-      54.6,
-      54.3,
-      53.8,
+      54.8,
+      54.7,
+      54.4,
+      53.9,
       53.2,
-      52.4,
-      51.4,
-      50.5,
-      49.5,
-      49.0
+      52.3,
+      51.2,
+      50.2,
+      49.3,
+      48.8
      ]
     },
     "disapprove": {
@@ -6102,6 +6111,15 @@
      "approx": false,
      "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
      "origin": "manual"
+    },
+    {
+     "date": "2026-11-09",
+     "firm": "AtlasIntel",
+     "approve": 47.7,
+     "disapprove": 50.3,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQdVVwcEpSWW9ORzItOWl4U21ySVhHdzIxVlQwUHpXQnl1NG1iUFREbi1LaHFMZ2pUaFJKMDVZSS1NcmtjSVU1dXFtNExPbm4wQjA5U0hxZGpRdVRRek91R0ZMYkNFSmlzQWxjVVR4UGt2NVpLNm9Bd3E3TlVNYlFiRl9JcHdrSGZPVWlqUnU2NEtFMnlh?oc=5",
+     "origin": "news"
     }
    ],
    "country": "Brazil",
@@ -6217,13 +6235,13 @@
       46.2,
       45.8,
       45.4,
-      45.3,
-      45.3,
+      45.2,
+      45.2,
       45.4,
       45.8,
-      46.2,
+      46.3,
       46.8,
-      47.0
+      47.1
      ]
     },
     "disapprove": {
@@ -6340,13 +6358,13 @@
       49.2,
       49.0,
       48.7,
-      48.3,
-      48.2
+      48.5,
+      48.4
      ]
     }
    }
   }
  },
- "updated": "2026-11-12T18:52:59Z",
+ "updated": "2026-11-13T18:30:58Z",
  "method": "Google News coverage of national polls and regional rankings (CB Consultora, Mitofsky, AtlasIntel); Gaussian-kernel average, 21-day bandwidth, firm-crowding weights."
 }

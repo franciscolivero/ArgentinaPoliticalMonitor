@@ -1,16 +1,16 @@
-run 2026-11-12 18:52 UTC · 1 new poll(s)
+run 2026-11-13 18:30 UTC · 2 new poll(s)
 
 CL Chile        109 polls  manual 6, news 92, pollster 11
 BO Bolivia       17 polls  manual 7, news 10
 PE Peru          20 polls  manual 7, news 13
-CO Colombia       9 polls  manual 6, news 3
+CO Colombia      10 polls  manual 6, news 4
 VE Venezuela      7 polls  manual 6, news 1
 MX Mexico        96 polls  manual 13, news 38, news-ranking 1, wikipedia 44
 EC Ecuador       15 polls  manual 4, news 11
 SV El Salvador   23 polls  manual 10, news 6, pollster 1, wikipedia 6
 PA Panama         5 polls  manual 5
 GT Guatemala      3 polls  manual 3
-BR Brazil       129 polls  manual 7, news 122
+BR Brazil       130 polls  manual 7, news 123
 HN Honduras       3 polls  manual 3
 
 log:
@@ -42,8 +42,9 @@ log:
   · MX Wikipedia Opinion_polling_on_the_Sheinbaum_presidency: 51 rows
   · SV Wikipedia Opinion_polling_on_the_Nayib_Bukele_presidency: 25 rows
   · Mitofsky 2026-09: 6 tracked presidents
-  · CID Gallup listing failed (HTTPSConnectionPool(host='www.cidgallup.com', port=443): Max retries exceeded with url: /publicaciones.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.cidgallup.com', port=443) at 0x77284b227b60>, 'Connection to www.cidgallup.com timed out. (connect timeout=45)')))
+  · CID Gallup SV 2026-10-27: 94.0%
   · CB Global Data 2026-10: 3 presidents this month (summary only), 0 with last month's figure
-  · Google News: 1662 unique articles read
-  + CL Panel Ciudadano UDD ≈2026-11-06: 24.0/None [news]
+  · Google News: 1680 unique articles read
+  + CO AtlasIntel ≈2026-11-09: 48.3/None [news]
+  + BR AtlasIntel ≈2026-11-09: 47.7/50.3 [news]
   · Google News queries failed: 0
