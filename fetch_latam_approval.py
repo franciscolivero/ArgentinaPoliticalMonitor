@@ -475,6 +475,14 @@ def main():
             for p in rows:
                 if p["date"] < PRESIDENTS[code][3]:
                     continue
+                # a scraped copy of the same poll (same firm or unnamed, ±1.5 pts, two weeks apart)
+                # gives way to the hand-verified row, so no poll is plotted twice
+                fk = re.sub(r"[^a-z0-9]", "", key(p["firm"]))
+                t = datetime.date.fromisoformat(p["date"])
+                store[code] = [q for q in store[code] if q.get("origin") == "manual" or not (
+                    (q["firm"] == UNNAMED or re.sub(r"[^a-z0-9]", "", key(q["firm"])) == fk) and
+                    abs(q["approve"] - p["approve"]) <= 1.5 and
+                    abs((datetime.date.fromisoformat(q["date"]) - t).days) <= 14)]
                 same = [q for q in store[code] if q["firm"] == p["firm"] and q["date"] == p["date"]]
                 if same:
                     same[0].update(p)

@@ -3,6 +3,66 @@
  "countries": {
   "CL": [
    {
+    "date": "2026-04-18",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 45.1,
+    "disapprove": null,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Abril 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-05-18",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 43.4,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Mayo 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-06-07",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 45.2,
+    "disapprove": 50.5,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Junio 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-07-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 44.6,
+    "disapprove": 52.8,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Julio 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-08-12",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 47.7,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Agosto 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-11",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 42.9,
+    "disapprove": 52.5,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Septiembre 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
     "date": "2026-09-30",
     "firm": "Mitofsky (ranking)",
     "approve": 36,
@@ -15,9 +75,10 @@
     "date": "2026-10-08",
     "firm": "CB Consultora (imagen positiva)",
     "approve": 38.8,
-    "disapprove": null,
-    "approx": true,
-    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+    "disapprove": 56.8,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Octubre 2026 (cifras publicadas por Bloomberg Línea / La República)",
     "origin": "manual"
    },
    {
@@ -31,20 +92,20 @@
    },
    {
     "date": "2026-10-16",
-    "firm": "Criteria",
-    "approve": 28,
-    "disapprove": 60,
-    "approx": true,
-    "source": "https://www.emol.com/noticias/Nacional/2026/10/18/1214471/aprobacion-desaprobacion-kast-encuesta-criteria.html",
-    "origin": "manual"
-   },
-   {
-    "date": "2026-10-16",
     "firm": "Cadem",
     "approve": 30,
     "disapprove": 65,
     "approx": true,
     "source": "https://www.eldinamo.cl/politica/2026/10/19/encuesta-cadem-aprobacion-de-kast-cae-al-30-y-un-60-apoya-eliminar-el-indulto-presidencial/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-10-16",
+    "firm": "Criteria",
+    "approve": 28,
+    "disapprove": 60,
+    "approx": true,
+    "source": "https://www.emol.com/noticias/Nacional/2026/10/18/1214471/aprobacion-desaprobacion-kast-encuesta-criteria.html",
     "origin": "manual"
    },
    {
@@ -70,6 +131,16 @@
    },
    {
     "date": "2026-02-15",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 48.8,
+    "disapprove": null,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Febrero 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-02-15",
     "firm": "Ipsos Ciesmori",
     "approve": 63,
     "disapprove": 30,
@@ -78,12 +149,13 @@
     "origin": "manual"
    },
    {
-    "date": "2026-02-15",
+    "date": "2026-04-18",
     "firm": "CB Consultora (imagen positiva)",
     "approve": 52.9,
-    "disapprove": 44.2,
+    "disapprove": null,
+    "n": null,
     "approx": false,
-    "source": "https://revistasumma.com/bukele-sheinbaum-y-chaves-encabezan-ranking-regional-de-presidentes-con-popularidad/",
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Abril 2026 (cifras publicadas por Bloomberg Línea / La República)",
     "origin": "manual"
    },
    {
@@ -96,6 +168,26 @@
     "origin": "manual"
    },
    {
+    "date": "2026-05-18",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 55.6,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Mayo 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-06-07",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 46.4,
+    "disapprove": 52.3,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Junio 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
     "date": "2026-06-30",
     "firm": "Ipsos Ciesmori",
     "approve": 38,
@@ -105,12 +197,43 @@
     "origin": "manual"
    },
    {
+    "date": "2026-07-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 49.1,
+    "disapprove": 47.7,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Julio 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-08-12",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 50.5,
+    "disapprove": 44.9,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Agosto 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-11",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 41.2,
+    "disapprove": 53.6,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Septiembre 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
     "date": "2026-10-08",
     "firm": "CB Consultora (imagen positiva)",
     "approve": 41.1,
-    "disapprove": null,
-    "approx": true,
-    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+    "disapprove": 53.5,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Octubre 2026 (cifras publicadas por Bloomberg Línea / La República)",
     "origin": "manual"
    },
    {
@@ -132,6 +255,56 @@
     "disapprove": 24,
     "approx": false,
     "source": "https://en.mercopress.com/2026/08/09/keiko-fujimori-starts-her-term-in-peru-with-60-approval-datum-poll-finds",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-08-12",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 55.0,
+    "disapprove": 40.7,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Agosto 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-08-15",
+    "firm": "Ipsos",
+    "approve": 57,
+    "disapprove": 25,
+    "n": null,
+    "approx": true,
+    "source": "https://caretas.pe/politica/aprobacion-de-keiko-fujimori-cae-15-puntos-en-un-mes-y-desaprobacion-llega-a-48-segun-ipsos/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-07",
+    "firm": "AtlasIntel",
+    "approve": 42.8,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "https://www.bloomberglinea.com/latinoamerica/peru/aprobacion-de-keiko-fujimori-cae-a-283-en-peru-por-temores-economicos-y-de-seguridad/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-10",
+    "firm": "IEP",
+    "approve": 37,
+    "disapprove": 49,
+    "n": null,
+    "approx": false,
+    "source": "https://elnuevodiario.com.do/aprobacion-de-fujimori-cae-18-puntos-en-su-primer-mes/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-11",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 52.4,
+    "disapprove": null,
+    "n": null,
+    "approx": false,
+    "source": "https://www.revistaeyn.com/portada/ranking-de-presidentes-bukele-lidera-centroamerica-y-arevalo-queda-ultimo-OF32041294",
     "origin": "manual"
    },
    {
@@ -162,12 +335,23 @@
     "origin": "manual"
    },
    {
+    "date": "2026-10-07",
+    "firm": "AtlasIntel",
+    "approve": 28.3,
+    "disapprove": 53.6,
+    "n": null,
+    "approx": true,
+    "source": "https://www.bloomberglinea.com/latinoamerica/peru/aprobacion-de-keiko-fujimori-cae-a-283-en-peru-por-temores-economicos-y-de-seguridad/",
+    "origin": "manual"
+   },
+   {
     "date": "2026-10-08",
     "firm": "CB Consultora (imagen positiva)",
     "approve": 46.3,
-    "disapprove": null,
-    "approx": true,
-    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+    "disapprove": 50.8,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Octubre 2026 (cifras publicadas por Bloomberg Línea / La República)",
     "origin": "manual"
    },
    {
@@ -192,6 +376,16 @@
   ],
   "CO": [
    {
+    "date": "2026-08-12",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 52.4,
+    "disapprove": 42.2,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Agosto 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
     "date": "2026-09-03",
     "firm": "AtlasIntel",
     "approve": 51.8,
@@ -201,12 +395,13 @@
     "origin": "manual"
    },
    {
-    "date": "2026-09-08",
+    "date": "2026-09-11",
     "firm": "CB Consultora (imagen positiva)",
     "approve": 53.6,
     "disapprove": 41.6,
-    "approx": true,
-    "source": "https://analisisurbano.org/abelardo-de-la-espriella-cae-aprobacion-encuesta-octubre-2026/",
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Septiembre 2026 (cifras publicadas por Bloomberg Línea / La República)",
     "origin": "manual"
    },
    {
@@ -232,8 +427,19 @@
     "firm": "CB Consultora (imagen positiva)",
     "approve": 49.7,
     "disapprove": 47.0,
+    "n": null,
     "approx": false,
-    "source": "https://analisisurbano.org/abelardo-de-la-espriella-cae-aprobacion-encuesta-octubre-2026/",
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Octubre 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-11-08",
+    "firm": "AtlasIntel",
+    "approve": 48.3,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "https://www.infobae.com/colombia/2026/11/13/abelardo-de-la-espriella-tiene-un-indice-de-aprobacion-de-casi-50-en-sus-primeros-100-dias-de-gobierno-revelo-encuesta-de-altasintel/",
     "origin": "manual"
    },
    {
@@ -251,10 +457,21 @@
    {
     "date": "2026-02-15",
     "firm": "CB Consultora (imagen positiva)",
-    "approve": 27.5,
-    "disapprove": 67.6,
+    "approve": 23.7,
+    "disapprove": 72.7,
+    "n": null,
     "approx": false,
-    "source": "https://revistasumma.com/bukele-sheinbaum-y-chaves-encabezan-ranking-regional-de-presidentes-con-popularidad/",
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Febrero 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-03-15",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 26.4,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Marzo 2026 (cifras publicadas por Bloomberg Línea / La República)",
     "origin": "manual"
    },
    {
@@ -267,12 +484,72 @@
     "origin": "manual"
    },
    {
+    "date": "2026-04-18",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 27.5,
+    "disapprove": null,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Abril 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
     "date": "2026-04-28",
     "firm": "AtlasIntel",
     "approve": 31,
     "disapprove": null,
     "approx": false,
     "source": "https://www.bloomberglinea.com/latinoamerica/venezuela/aprobacion-de-delcy-rodriguez-en-venezuela-que-dicen-las-ultimas-encuestas/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-05-18",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 24.1,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Mayo 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-06-07",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 29.5,
+    "disapprove": 64.8,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Junio 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-07-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 22.7,
+    "disapprove": 70.8,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Julio 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-08-12",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 26.7,
+    "disapprove": 67.4,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Agosto 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-11",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 28.8,
+    "disapprove": 64.3,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Septiembre 2026 (cifras publicadas por Bloomberg Línea / La República)",
     "origin": "manual"
    },
    {
@@ -288,9 +565,10 @@
     "date": "2026-10-08",
     "firm": "CB Consultora (imagen positiva)",
     "approve": 32.3,
-    "disapprove": null,
+    "disapprove": 60.9,
+    "n": null,
     "approx": false,
-    "source": "https://www.perfil.com/noticias/politica/milei-quedo-14-en-el-ranking-de-presidentes-de-america-latina-quien-lidera-la-encuesta.phtml",
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Octubre 2026 (cifras publicadas por Bloomberg Línea / La República)",
     "origin": "manual"
    },
    {
@@ -308,10 +586,21 @@
    {
     "date": "2026-02-15",
     "firm": "CB Consultora (imagen positiva)",
-    "approve": 69.8,
-    "disapprove": 26.8,
+    "approve": 68.5,
+    "disapprove": 29.9,
+    "n": null,
     "approx": false,
-    "source": "https://revistasumma.com/bukele-sheinbaum-y-chaves-encabezan-ranking-regional-de-presidentes-con-popularidad/",
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Febrero 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-03-15",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 72.3,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Marzo 2026 (cifras publicadas por Bloomberg Línea / La República)",
     "origin": "manual"
    },
    {
@@ -319,6 +608,25 @@
     "firm": "Mitofsky",
     "approve": 68.4,
     "disapprove": 31.2,
+    "approx": false,
+    "source": "https://en.wikipedia.org/wiki/Opinion_polling_on_the_Sheinbaum_presidency",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-04-18",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 69.8,
+    "disapprove": null,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Abril 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-04-28",
+    "firm": "AtlasIntel",
+    "approve": 50.7,
+    "disapprove": 42.7,
     "approx": false,
     "source": "https://en.wikipedia.org/wiki/Opinion_polling_on_the_Sheinbaum_presidency",
     "origin": "manual"
@@ -333,15 +641,6 @@
     "origin": "manual"
    },
    {
-    "date": "2026-04-28",
-    "firm": "AtlasIntel",
-    "approve": 50.7,
-    "disapprove": 42.7,
-    "approx": false,
-    "source": "https://en.wikipedia.org/wiki/Opinion_polling_on_the_Sheinbaum_presidency",
-    "origin": "manual"
-   },
-   {
     "date": "2026-05-12",
     "firm": "Becerra Mizuno",
     "approve": 59,
@@ -351,19 +650,20 @@
     "origin": "manual"
    },
    {
+    "date": "2026-05-18",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 67.8,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Mayo 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
     "date": "2026-05-19",
     "firm": "Enkoll",
     "approve": 68,
     "disapprove": 27,
-    "approx": false,
-    "source": "https://en.wikipedia.org/wiki/Opinion_polling_on_the_Sheinbaum_presidency",
-    "origin": "manual"
-   },
-   {
-    "date": "2026-05-25",
-    "firm": "El Financiero",
-    "approve": 69,
-    "disapprove": 31,
     "approx": false,
     "source": "https://en.wikipedia.org/wiki/Opinion_polling_on_the_Sheinbaum_presidency",
     "origin": "manual"
@@ -378,6 +678,15 @@
     "origin": "manual"
    },
    {
+    "date": "2026-05-25",
+    "firm": "El Financiero",
+    "approve": 69,
+    "disapprove": 31,
+    "approx": false,
+    "source": "https://en.wikipedia.org/wiki/Opinion_polling_on_the_Sheinbaum_presidency",
+    "origin": "manual"
+   },
+   {
     "date": "2026-05-31",
     "firm": "Varela",
     "approve": 57,
@@ -387,12 +696,52 @@
     "origin": "manual"
    },
    {
+    "date": "2026-06-07",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 65.5,
+    "disapprove": 31.0,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Junio 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-07-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 65.1,
+    "disapprove": 30.2,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Julio 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
     "date": "2026-07-29",
     "firm": "El Financiero",
     "approve": 67,
     "disapprove": 33,
     "approx": true,
     "source": "https://www.elfinanciero.com.mx/encuestas-ef/2026/08/03/mantiene-sheinbaum-aprobacion-consistente-en-julio-encuesta-ef/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-08-12",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 66.5,
+    "disapprove": 31.4,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Agosto 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-11",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 69.0,
+    "disapprove": 28.3,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Septiembre 2026 (cifras publicadas por Bloomberg Línea / La República)",
     "origin": "manual"
    },
    {
@@ -409,8 +758,9 @@
     "firm": "CB Consultora (imagen positiva)",
     "approve": 69.3,
     "disapprove": null,
+    "n": null,
     "approx": false,
-    "source": "https://www.perfil.com/noticias/politica/milei-quedo-14-en-el-ranking-de-presidentes-de-america-latina-quien-lidera-la-encuesta.phtml",
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Octubre 2026 (cifras publicadas por Bloomberg Línea / La República)",
     "origin": "manual"
    },
    {
@@ -428,10 +778,51 @@
    {
     "date": "2026-02-15",
     "firm": "CB Consultora (imagen positiva)",
-    "approve": 35.7,
-    "disapprove": 61.5,
+    "approve": 36.8,
+    "disapprove": null,
+    "n": null,
     "approx": false,
-    "source": "https://revistasumma.com/bukele-sheinbaum-y-chaves-encabezan-ranking-regional-de-presidentes-con-popularidad/",
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Febrero 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-03-15",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 33.5,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Marzo 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-04-18",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 35.7,
+    "disapprove": null,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Abril 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-05-18",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 39.4,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Mayo 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-06-07",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 41.7,
+    "disapprove": 55.4,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Junio 2026 (cifras publicadas por Bloomberg Línea / La República)",
     "origin": "manual"
    },
    {
@@ -444,12 +835,43 @@
     "origin": "manual"
    },
    {
+    "date": "2026-07-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 41.0,
+    "disapprove": 55.9,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Julio 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-08-12",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 45.3,
+    "disapprove": 51.3,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Agosto 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-11",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 47.4,
+    "disapprove": 48.9,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Septiembre 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
     "date": "2026-10-08",
     "firm": "CB Consultora (imagen positiva)",
     "approve": 47.5,
     "disapprove": null,
-    "approx": true,
-    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Octubre 2026 (cifras publicadas por Bloomberg Línea / La República)",
     "origin": "manual"
    },
    {
@@ -467,10 +889,11 @@
    {
     "date": "2026-02-15",
     "firm": "CB Consultora (imagen positiva)",
-    "approve": 70.1,
-    "disapprove": 26.3,
+    "approve": 72.6,
+    "disapprove": 24.8,
+    "n": null,
     "approx": false,
-    "source": "https://revistasumma.com/bukele-sheinbaum-y-chaves-encabezan-ranking-regional-de-presidentes-con-popularidad/",
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Febrero 2026 (cifras publicadas por Bloomberg Línea / La República)",
     "origin": "manual"
    },
    {
@@ -492,6 +915,16 @@
     "origin": "manual"
    },
    {
+    "date": "2026-03-15",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 71.8,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Marzo 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
     "date": "2026-03-21",
     "firm": "CID Gallup",
     "approve": 94,
@@ -501,12 +934,32 @@
     "origin": "manual"
    },
    {
+    "date": "2026-04-18",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 70.1,
+    "disapprove": null,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Abril 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
     "date": "2026-05-15",
     "firm": "CID Gallup",
     "approve": 93,
     "disapprove": 3,
     "approx": true,
     "source": "https://en.wikipedia.org/wiki/Opinion_polling_on_the_Nayib_Bukele_presidency",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-05-18",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 67.5,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Mayo 2026 (cifras publicadas por Bloomberg Línea / La República)",
     "origin": "manual"
    },
    {
@@ -528,6 +981,46 @@
     "origin": "manual"
    },
    {
+    "date": "2026-06-07",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 69.1,
+    "disapprove": 27.6,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Junio 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-07-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 67.4,
+    "disapprove": 28.3,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Julio 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-08-12",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 68.7,
+    "disapprove": 28.4,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Agosto 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-11",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 66.2,
+    "disapprove": 29.9,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Septiembre 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
     "date": "2026-09-30",
     "firm": "Mitofsky (ranking)",
     "approve": 90,
@@ -541,8 +1034,9 @@
     "firm": "CB Consultora (imagen positiva)",
     "approve": 68.3,
     "disapprove": null,
+    "n": null,
     "approx": false,
-    "source": "https://www.perfil.com/noticias/politica/milei-quedo-14-en-el-ranking-de-presidentes-de-america-latina-quien-lidera-la-encuesta.phtml",
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Octubre 2026 (cifras publicadas por Bloomberg Línea / La República)",
     "origin": "manual"
    },
    {
@@ -558,12 +1052,43 @@
   ],
   "PA": [
    {
+    "date": "2025-06-15",
+    "firm": "Prodigious",
+    "approve": 10.4,
+    "disapprove": 89.0,
+    "n": null,
+    "approx": true,
+    "source": "https://www.laestrella.com.pa/ (Vea Panamá, junio 2025)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-01-10",
+    "firm": "Prodigious",
+    "approve": 19.5,
+    "disapprove": 76.3,
+    "n": null,
+    "approx": true,
+    "source": "https://www.prensa-latina.cu/2026/01/14/gobierno-panameno-con-baja-aprobacion-ciudadana-segun-encuesta/",
+    "origin": "manual"
+   },
+   {
     "date": "2026-02-15",
     "firm": "CB Consultora (imagen positiva)",
-    "approve": 34.1,
-    "disapprove": 62.4,
+    "approve": 31.6,
+    "disapprove": 64.7,
+    "n": null,
     "approx": false,
-    "source": "https://revistasumma.com/bukele-sheinbaum-y-chaves-encabezan-ranking-regional-de-presidentes-con-popularidad/",
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Febrero 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-03-15",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 34.2,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Marzo 2026 (cifras publicadas por Bloomberg Línea / La República)",
     "origin": "manual"
    },
    {
@@ -576,6 +1101,46 @@
     "origin": "manual"
    },
    {
+    "date": "2026-04-18",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 34.1,
+    "disapprove": null,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Abril 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-05-18",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 35.7,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Mayo 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-06-07",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 36.0,
+    "disapprove": 59.4,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Junio 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-07-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 34.2,
+    "disapprove": 61.2,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Julio 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
     "date": "2026-07-15",
     "firm": "Prodigious",
     "approve": 17.9,
@@ -585,12 +1150,33 @@
     "origin": "manual"
    },
    {
+    "date": "2026-08-12",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 31.4,
+    "disapprove": 64.4,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Agosto 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-11",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 32.1,
+    "disapprove": 63.4,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Septiembre 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
     "date": "2026-10-08",
     "firm": "CB Consultora (imagen positiva)",
     "approve": 36.5,
-    "disapprove": null,
-    "approx": true,
-    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+    "disapprove": 58.9,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Octubre 2026 (cifras publicadas por Bloomberg Línea / La República)",
     "origin": "manual"
    },
    {
@@ -606,21 +1192,123 @@
   ],
   "GT": [
    {
+    "date": "2026-01-17",
+    "firm": "CID Gallup (Fundación Libertad y Desarrollo)",
+    "approve": 35,
+    "disapprove": 62,
+    "n": null,
+    "approx": false,
+    "source": "https://emisorasunidas.com/nacional/2026/01/29/encuesta-gobierno-arevalo-economia-guatemala-enero-2026",
+    "origin": "manual"
+   },
+   {
     "date": "2026-02-15",
     "firm": "CB Consultora (imagen positiva)",
-    "approve": 37.3,
-    "disapprove": 56.8,
+    "approve": 34.9,
+    "disapprove": null,
+    "n": null,
     "approx": false,
-    "source": "https://revistasumma.com/bukele-sheinbaum-y-chaves-encabezan-ranking-regional-de-presidentes-con-popularidad/",
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Febrero 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-03-15",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 36.1,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Marzo 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-04-18",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 37.3,
+    "disapprove": null,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Abril 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-05-18",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 36.9,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Mayo 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-05-20",
+    "firm": "CID Gallup (Fundación Libertad y Desarrollo)",
+    "approve": 41,
+    "disapprove": 54,
+    "n": null,
+    "approx": true,
+    "source": "CID Gallup / Fundación Libertad y Desarrollo, publicado el 27 de mayo de 2026 (prensa guatemalteca)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-06-07",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 33.1,
+    "disapprove": 63.0,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Junio 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-07-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 30.8,
+    "disapprove": 63.4,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Julio 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-08-04",
+    "firm": "Estudio Entelequia",
+    "approve": 32,
+    "disapprove": 46,
+    "n": null,
+    "approx": true,
+    "source": "https://centroamerica360.com/politica/presidente-de-guatemala-enfrenta-desgaste-politico-y-tiene-apenas-32-de-aprobacion-segun-encuesta/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-08-12",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 29.5,
+    "disapprove": 66.4,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Agosto 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-11",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 28.2,
+    "disapprove": 67.3,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Septiembre 2026 (cifras publicadas por Bloomberg Línea / La República)",
     "origin": "manual"
    },
    {
     "date": "2026-10-08",
     "firm": "CB Consultora (imagen positiva)",
     "approve": 31.0,
-    "disapprove": null,
+    "disapprove": 63.1,
+    "n": null,
     "approx": false,
-    "source": "https://www.perfil.com/noticias/politica/milei-quedo-14-en-el-ranking-de-presidentes-de-america-latina-quien-lidera-la-encuesta.phtml",
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Octubre 2026 (cifras publicadas por Bloomberg Línea / La República)",
     "origin": "manual"
    },
    {
@@ -638,19 +1326,81 @@
    {
     "date": "2026-02-15",
     "firm": "CB Consultora (imagen positiva)",
-    "approve": 40.5,
-    "disapprove": 54.3,
+    "approve": 43.4,
+    "disapprove": null,
+    "n": null,
     "approx": false,
-    "source": "https://revistasumma.com/bukele-sheinbaum-y-chaves-encabezan-ranking-regional-de-presidentes-con-popularidad/",
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Febrero 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-04-18",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 40.5,
+    "disapprove": null,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Abril 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-05-18",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 41.9,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Mayo 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-06-07",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 44.5,
+    "disapprove": 49.5,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Junio 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-07-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 45.3,
+    "disapprove": 50.3,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Julio 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-08-12",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 41.6,
+    "disapprove": 55.5,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Agosto 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-11",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 43.2,
+    "disapprove": 54.2,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Septiembre 2026 (cifras publicadas por Bloomberg Línea / La República)",
     "origin": "manual"
    },
    {
     "date": "2026-10-08",
     "firm": "CB Consultora (imagen positiva)",
     "approve": 44.1,
-    "disapprove": null,
-    "approx": true,
-    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+    "disapprove": 53.9,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Octubre 2026 (cifras publicadas por Bloomberg Línea / La República)",
     "origin": "manual"
    },
    {
@@ -666,12 +1416,82 @@
   ],
   "BR": [
    {
+    "date": "2026-02-15",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 49.2,
+    "disapprove": 47.5,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Febrero 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-04-18",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 48.4,
+    "disapprove": null,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Abril 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-05-18",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 49.5,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Mayo 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-06-07",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 47.6,
+    "disapprove": 48.1,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Junio 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-07-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 50.6,
+    "disapprove": 47.1,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Julio 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
     "date": "2026-07-25",
     "firm": "AtlasIntel",
     "approve": 47.6,
     "disapprove": 51.2,
     "approx": true,
     "source": "https://www.opovo.com.br/noticias/politica/2026/07/29/lula-tem-476-de-aprovacao-e-512-de-desaprovacao-aponta-pesquisa-atlas-bloomberg.html",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-08-12",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 51.9,
+    "disapprove": 46.1,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Agosto 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-11",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 48.5,
+    "disapprove": 49.2,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Septiembre 2026 (cifras publicadas por Bloomberg Línea / La República)",
     "origin": "manual"
    },
    {
@@ -696,9 +1516,10 @@
     "date": "2026-10-08",
     "firm": "CB Consultora (imagen positiva)",
     "approve": 45.3,
-    "disapprove": null,
-    "approx": true,
-    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+    "disapprove": 50.5,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Octubre 2026 (cifras publicadas por Bloomberg Línea / La República)",
     "origin": "manual"
    },
    {
@@ -732,12 +1553,83 @@
   ],
   "UY": [
    {
+    "date": "2026-02-15",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 40.7,
+    "disapprove": null,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Febrero 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-04-18",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 41.7,
+    "disapprove": null,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Abril 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-05-18",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 40.3,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Mayo 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-06-07",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 38.8,
+    "disapprove": 55.7,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Junio 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-07-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 37.4,
+    "disapprove": 57.5,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Julio 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-08-12",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 37.5,
+    "disapprove": 58.3,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Agosto 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-11",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 37.7,
+    "disapprove": 59.1,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Septiembre 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
     "date": "2026-10-08",
     "firm": "CB Consultora (imagen positiva)",
     "approve": 35.2,
-    "disapprove": null,
-    "approx": true,
-    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+    "disapprove": 62.1,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Octubre 2026 (cifras publicadas por Bloomberg Línea / La República)",
     "origin": "manual"
    },
    {
@@ -753,12 +1645,133 @@
   ],
   "DO": [
    {
+    "date": "2025-07-15",
+    "firm": "ACD Media",
+    "approve": 58.9,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "https://www.primiciasdelsur.com/2026/02/presidente-luis-abinader-mantiene-55-de.html",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-02-09",
+    "firm": "ACD Media",
+    "approve": 55,
+    "disapprove": 43,
+    "n": null,
+    "approx": false,
+    "source": "https://www.primiciasdelsur.com/2026/02/presidente-luis-abinader-mantiene-55-de.html",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-02-15",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 54.8,
+    "disapprove": 41.1,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Febrero 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-03-15",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 58.7,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Marzo 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-04-18",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 57.3,
+    "disapprove": null,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Abril 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-05-01",
+    "firm": "Gallup República Dominicana",
+    "approve": 51.7,
+    "disapprove": 36.9,
+    "n": null,
+    "approx": false,
+    "source": "https://revistaprisma.do/abinader-aprobacion-51-7-gallup-mayo-2026/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-05-18",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 60.2,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Mayo 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-06-07",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 54.8,
+    "disapprove": 42.2,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Junio 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-07-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 48.7,
+    "disapprove": 48.1,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Julio 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-08-12",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 48.1,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Agosto 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-11",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 50.8,
+    "disapprove": 43.8,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Septiembre 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-29",
+    "firm": "AtlasIntel",
+    "approve": 56.3,
+    "disapprove": 34.3,
+    "n": null,
+    "approx": false,
+    "source": "https://7dias.com.do/2026/10/01/a-seis-anos-de-gestion-abinader-registra-56-3-de-aprobacion-segun-atlasintel-turismo-lidera-las-areas-mejor-valoradas/",
+    "origin": "manual"
+   },
+   {
     "date": "2026-10-08",
     "firm": "CB Consultora (imagen positiva)",
     "approve": 51.9,
     "disapprove": null,
-    "approx": true,
-    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Octubre 2026 (cifras publicadas por Bloomberg Línea / La República)",
     "origin": "manual"
    },
    {
@@ -774,12 +1787,113 @@
   ],
   "PY": [
    {
-    "date": "2026-10-08",
+    "date": "2024-08-31",
+    "firm": "Ati Snead",
+    "approve": 56.1,
+    "disapprove": 43.9,
+    "n": null,
+    "approx": true,
+    "source": "https://www.lanacion.com.py/politica/2024/10/03/aprobacion-a-santiago-pena-sigue-en-aumento-segun-encuesta/",
+    "origin": "manual"
+   },
+   {
+    "date": "2024-09-30",
+    "firm": "Ati Snead",
+    "approve": 52.3,
+    "disapprove": 47.7,
+    "n": null,
+    "approx": true,
+    "source": "https://www.lanacion.com.py/politica/2024/10/03/aprobacion-a-santiago-pena-sigue-en-aumento-segun-encuesta/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-02-15",
     "firm": "CB Consultora (imagen positiva)",
     "approve": 42.9,
     "disapprove": null,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Febrero 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-04-18",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 43.2,
+    "disapprove": null,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Abril 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-05-18",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 46.6,
+    "disapprove": null,
+    "n": null,
     "approx": true,
-    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Mayo 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-06-07",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 48.3,
+    "disapprove": 48.2,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Junio 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-06-30",
+    "firm": "ICA",
+    "approve": 47,
+    "disapprove": 51,
+    "n": null,
+    "approx": true,
+    "source": "https://www.lanacion.com.py/politica/2026/07/06/santiago-pena-cuenta-con-el-47-de-reconocimiento-en-su-gestion-en-este-2026/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-07-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 51.2,
+    "disapprove": 45.7,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Julio 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-08-12",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 47.2,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Agosto 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-11",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 45.5,
+    "disapprove": 51.2,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Septiembre 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-10-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 42.9,
+    "disapprove": 52.7,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Octubre 2026 (cifras publicadas por Bloomberg Línea / La República)",
     "origin": "manual"
    },
    {
@@ -795,12 +1909,103 @@
   ],
   "CR": [
    {
+    "date": "2026-05-18",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 52.7,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Mayo 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-06-07",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 56.1,
+    "disapprove": 37.1,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Junio 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-07-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 55.5,
+    "disapprove": 38.2,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Julio 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-08-12",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 49.8,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Agosto 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-08-16",
+    "firm": "OPol Consultores",
+    "approve": 74.7,
+    "disapprove": 20.5,
+    "n": null,
+    "approx": false,
+    "source": "https://www.diarioextra.com/noticia/encuesta-de-opol-laura-fernandez-llega-a-los-100-dias-con-mas-de-70-de-aprobacion/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-08-20",
+    "firm": "CID Gallup",
+    "approve": 74,
+    "disapprove": null,
+    "n": null,
+    "approx": true,
+    "source": "https://elmundo.cr/costa-rica/gobierno-de-laura-fernandez-con-un-fuerte-apoyo-segun-todas-las-encuestas-chavismo-se-consolida/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-01",
+    "firm": "CIEP UCR",
+    "approve": 59,
+    "disapprove": 24,
+    "n": null,
+    "approx": false,
+    "source": "https://www.nacion.com/politica/encuesta-del-ciep-laura-fernandez-tiene-aprobacion/GYO7VHJWJNHQLB5PIHE6XZGHEM/story/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-11",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 49.7,
+    "disapprove": 45.0,
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Septiembre 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
     "date": "2026-10-08",
     "firm": "CB Consultora (imagen positiva)",
     "approve": 51.0,
     "disapprove": null,
-    "approx": true,
-    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+    "n": null,
+    "approx": false,
+    "source": "CB Global Data, Ranking de Presidentes de Latinoamérica, Octubre 2026 (cifras publicadas por Bloomberg Línea / La República)",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-10-18",
+    "firm": "OPol Consultores",
+    "approve": 72.8,
+    "disapprove": 22.8,
+    "n": null,
+    "approx": false,
+    "source": "https://www.larepublica.net/laura-fernandez-mantiene-solido-respaldo-al-cumplir-cinco-meses-de-gestion-segun-opol-consultores/",
     "origin": "manual"
    },
    {
