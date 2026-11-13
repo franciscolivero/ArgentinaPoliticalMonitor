@@ -729,6 +729,90 @@
     "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
     "origin": "manual"
    }
+  ],
+  "UY": [
+   {
+    "date": "2026-10-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 35.2,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-11-09",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 38.6,
+    "disapprove": 57.7,
+    "n": 2847,
+    "approx": false,
+    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
+    "origin": "manual"
+   }
+  ],
+  "DO": [
+   {
+    "date": "2026-10-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 51.9,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-11-09",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 51.2,
+    "disapprove": 43.5,
+    "n": 2985,
+    "approx": false,
+    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
+    "origin": "manual"
+   }
+  ],
+  "PY": [
+   {
+    "date": "2026-10-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 42.9,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-11-09",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 24.7,
+    "disapprove": 69.8,
+    "n": 1930,
+    "approx": false,
+    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
+    "origin": "manual"
+   }
+  ],
+  "CR": [
+   {
+    "date": "2026-10-08",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 51.0,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-11-09",
+    "firm": "CB Consultora (imagen positiva)",
+    "approve": 52.3,
+    "disapprove": 42.1,
+    "n": 2910,
+    "approx": false,
+    "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
+    "origin": "manual"
+   }
   ]
  }
 }

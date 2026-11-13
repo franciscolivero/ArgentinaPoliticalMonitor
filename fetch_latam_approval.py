@@ -48,10 +48,11 @@ PRESIDENTS = {
     "BO": ("Bolivia", "Rodrigo Paz", ["rodrigo paz", "paz pereira", "presidente paz"], "2025-11-08", "BO",
            ["ipsos ciesmori", "ciesmori", "diagnosis", "captura consulting", "unitel", "red uno"]),
     "PE": ("Peru", "Keiko Fujimori", ["fujimori", "keiko"], "2026-07-28", "PE",
-           ["ipsos peru", "ipsos", "datum", "iep", "instituto de estudios peruanos", "cpi", "imasen"]),
+           ["ipsos peru", "ipsos", "datum", "iep", "instituto de estudios peruanos", "cpi", "imasen", "cit",
+            "compania peruana de estudios de mercados"]),
     "CO": ("Colombia", "Abelardo de la Espriella", ["de la espriella", "espriella"], "2026-08-07", "CO",
            ["invamer", "guarumo", "cnc", "centro nacional de consultoria", "datexco", "yanhaas",
-            "opinometro", "polimetrica", "gallup colombia"]),
+            "opinometro", "polimetrica", "gallup colombia", "cifras y conceptos", "atlasintel"]),
     "VE": ("Venezuela", "Delcy Rodríguez", ["delcy"], "2026-01-05", "VE",
            ["datanalisis", "delphos", "meganalisis", "hercon", "consultores 21", "more consulting", "poder y estrategia"]),
     "MX": ("Mexico", "Claudia Sheinbaum", ["sheinbaum"], "2024-10-01", "MX",
@@ -71,6 +72,18 @@ PRESIDENTS = {
             "cnt mda", "mda", "ipespe", "real time big data", "ideia", "futura", "vox populi"]),
     "HN": ("Honduras", "Nasry Asfura", ["asfura"], "2026-01-27", "HN",
            ["eric", "eric sj", "le vote", "paradigma", "tresearch", "unah"]),
+    "UY": ("Uruguay", "Yamandú Orsi", ["orsi"], "2025-03-01", "UY",
+           ["equipos consultores", "equipos", "factum", "cifra", "opcion consultores", "nomade",
+            "usina de percepcion ciudadana", "usina"]),
+    "PY": ("Paraguay", "Santiago Peña", ["santiago pena", "pena"], "2023-08-15", "PY",
+           ["ati snead", "atisnead", "gfk", "first analysis", "ati", "nexo", "geo", "ka atu", "ojo ciudadano",
+            "ati research"]),
+    "CR": ("Costa Rica", "Laura Fernández", ["laura fernandez", "fernandez delgado"], "2026-05-08", "CR",
+           ["ciep", "ciep ucr", "universidad de costa rica", "ucr", "opol", "opol consultores", "demoscopia",
+            "unimer", "idespo", "borge", "enfoques"]),
+    "DO": ("Dominican Republic", "Luis Abinader", ["abinader"], "2024-08-16", "DO",
+           ["gallup rd", "gallup hoy", "gallup", "greenberg", "mark penn", "stagwell", "asisa", "sig",
+            "centro economico del cibao", "mercaturo", "rd elige", "markestrategia"]),
 }
 REGIONAL = ["cb", "atlasintel", "atlas intel", "cid gallup", "cid-gallup", "gallup", "ipsos", "latinobarometro",
             "mitofsky", "comunicaliza", "cb consultora", "cb global"]
@@ -91,6 +104,10 @@ FIRM_QUERIES = {
     "GT": ["CID Gallup", "Prodatos", "Fundación Libertad y Desarrollo"],
     "HN": ["CID Gallup", "ERIC", "Le Vote", "Paradigma"],
     "BR": ["Datafolha", "Quaest", "AtlasIntel", "Ipec", "PoderData", "Paraná Pesquisas", "CNT/MDA"],
+    "UY": ["Equipos Consultores", "Factum", "Cifra", "Opción Consultores", "Nómade"],
+    "PY": ["Ati Snead", "First Analysis", "GEO", "Nexo"],
+    "CR": ["CIEP UCR", "OPol Consultores", "Demoscopía", "Unimer", "IDESPO"],
+    "DO": ["Gallup", "Greenberg", "Mark Penn", "CID Gallup", "AtlasIntel"],
 }
 UNNAMED = "Pollster not named (press)"
 RSS = "https://news.google.com/rss/search?q={q}+when:{w}&hl=es-419&gl={gl}&ceid={gl}:es-419"
@@ -139,7 +156,17 @@ def nice_firm(alias):
              "negocios estrategias": "Negocios & Estrategias", "maluk": "Maluk Research",
              "atlas": "AtlasIntel", "cb": "CB Consultora (imagen positiva)", "cb consultora": "CB Consultora (imagen positiva)",
              "genial quaest": "Quaest", "cnt mda": "CNT/MDA", "mda": "CNT/MDA", "poderdata": "PoderData",
-             "parana pesquisas": "Paraná Pesquisas"}
+             "parana pesquisas": "Paraná Pesquisas", "equipos": "Equipos Consultores",
+             "equipos consultores": "Equipos Consultores", "opcion consultores": "Opción Consultores",
+             "nomade": "Nómade", "usina": "Usina de Percepción Ciudadana",
+             "usina de percepcion ciudadana": "Usina de Percepción Ciudadana", "ati snead": "Ati Snead",
+             "atisnead": "Ati Snead", "ati": "Ati Snead", "ati research": "Ati Snead", "geo": "GEO",
+             "ciep": "CIEP-UCR", "ciep ucr": "CIEP-UCR", "universidad de costa rica": "CIEP-UCR", "ucr": "CIEP-UCR",
+             "opol": "OPol Consultores", "opol consultores": "OPol Consultores", "demoscopia": "Demoscopía",
+             "idespo": "IDESPO", "gallup rd": "Gallup RD", "gallup hoy": "Gallup RD", "greenberg": "Greenberg",
+             "mark penn": "Mark Penn/Stagwell", "stagwell": "Mark Penn/Stagwell", "sig": "SIG",
+             "first analysis": "First Analysis", "cifras y conceptos": "Cifras y Conceptos", "cit": "CIT",
+             "compania peruana de estudios de mercados": "CPI", "markestrategia": "Markestrategia", "nexo": "Nexo", "unimer": "Unimer", "factum": "Factum", "cifra": "Cifra"}
     return names.get(alias, alias.title())
 
 
@@ -220,10 +247,10 @@ RANK_QUERIES = [("ranking CB presidentes América", "AR"), ("ranking presidentes
                 ("AtlasIntel Latam Pulse aprobación", "CO"), ("presidentes mejor valorados América encuesta", "AR")]
 RANK_WIN = 48
 # other leaders who appear in these rankings: they are never credited, but they end a name's window
-STOPPERS = ["milei", "orsi", "pena", "ortega", "abinader", "chaves", "laura fernandez", "trump",
+STOPPERS = ["milei", "ortega", "chaves", "trump",
             "carney", "petro", "boric", "balcazar", "jeri", "boluarte", "arce", "xiomara", "castro", "maduro",
             "takaichi", "meloni", "frederiksen", "trudeau", "putin", "john lee", "macron", "merz",
-            "laura fernandez", "noboa padre", "starmer", "sanchez", "modi", "erdogan", "xi jinping"]
+            "noboa padre", "starmer", "sanchez", "modi", "erdogan", "xi jinping"]
 
 
 def fold(s):
@@ -319,7 +346,8 @@ def fetch_query(q, window, gl, lang="es"):
 
 def fetch(code, window):
     _, pres, tokens, _, gl, _ = PRESIDENTS[code]
-    surname = {"CO": "De la Espriella", "VE": "Delcy Rodríguez", "BR": "Lula"}.get(code, pres.split()[-1])
+    surname = {"CO": "De la Espriella", "VE": "Delcy Rodríguez", "BR": "Lula", "PY": "Santiago Peña",
+               "CR": "Laura Fernández", "UY": "Orsi"}.get(code, pres.split()[-1])
     lang = LANG.get(code, "es")
     word = "aprovação" if lang == "pt" else "aprobación"
     items = []
@@ -445,6 +473,15 @@ def main():
         for q, gl in RANK_QUERIES:
             take(fetch_query(q, "365d", gl))
         log.append(f"  · Google News: {len(pool)} unique articles read")
+        # full-text reading of press articles (polls described inside the article, not in the headline)
+        try:
+            import latam_articles
+            for code, p in latam_articles.harvest(PRESIDENTS, store, log, key, find_firm, first, APPROVE,
+                                                  DISAPPROVE, REGIONAL):
+                if p["date"] >= PRESIDENTS[code][3]:
+                    added += add(code, p, store, log)
+        except Exception as e:
+            log.append(f"  · articles: failed ({e})")
         for it in sorted(pool, key=lambda x: x["pub"]):
             if is_multi(it):
                 for code, p in parse_multi(it):
@@ -474,8 +511,9 @@ def main():
         blk["polls"] = polls
         blk["avg"] = {"approve": average(polls, "approve"), "disapprove": average(polls, "disapprove")}
     data["updated"] = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    data["method"] = ("Google News coverage of national polls and regional rankings (CB Consultora, "
-                      "Mitofsky, AtlasIntel); Gaussian-kernel average, 21-day bandwidth, firm-crowding weights.")
+    data["method"] = ("Pollster releases, Wikipedia poll tables, press articles (headlines and full text) and "
+                      "regional rankings (CB Consultora, Mitofsky, CID Gallup, AtlasIntel); Gaussian-kernel "
+                      "average, 21-day bandwidth, firm-crowding weights.")
     print(f"{added} new poll(s).")
     if dry:
         return

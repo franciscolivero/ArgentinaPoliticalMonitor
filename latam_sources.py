@@ -54,12 +54,25 @@ WIKI_PAGES = {
     "MX": ["Opinion_polling_on_the_Sheinbaum_presidency"],
     "SV": ["Opinion_polling_on_the_Nayib_Bukele_presidency"],
 }
+# Spanish Wikipedia pages with an approval table ("Encuestadora | Fecha | Aprueba | Desaprueba")
+WIKI_PAGES_ES = {
+    "UY": ["Gobierno_de_Yamandú_Orsi"],
+    "CL": ["Anexo:Encuestas_de_aprobación_del_gobierno_de_José_Antonio_Kast"],
+    "EC": ["Segundo_gobierno_de_Daniel_Noboa"],
+    "GT": ["Bernardo_Arévalo"],
+}
+WIKI_FIRMS = [("cb consultora", "CB Consultora (imagen positiva)"), ("cid gallup", "CID Gallup"),
+              ("atlas", "AtlasIntel"), ("cadem", "Cadem"), ("criteria", "Criteria"), ("cedatos", "Cedatos"),
+              ("equipos", "Equipos Consultores"), ("opcion", "Opción Consultores"), ("pulso ciudadano", "Pulso Ciudadano"),
+              ("panel ciudadano", "Panel Ciudadano UDD"), ("cep", "CEP"), ("maluk", "Maluk Research")]
+ES_ABBR = {"ene": 1, "feb": 2, "mar": 3, "abr": 4, "may": 5, "jun": 6, "jul": 7, "ago": 8, "sep": 9, "set": 9,
+           "oct": 10, "nov": 11, "dic": 12, "jan": 1, "apr": 4, "aug": 8, "dec": 12}
 DAY_MON_YEAR = re.compile(r"(\d{1,2})\s*([A-Za-z]{3})[a-z]*\.?\s*(\d{4})?")
 
 
-def _wiki_html(page):
+def _wiki_html(page, lang="en"):
     import json
-    raw = _get("https://en.wikipedia.org/w/api.php",
+    raw = _get(f"https://{lang}.wikipedia.org/w/api.php",
                params={"action": "parse", "page": page, "prop": "text", "format": "json",
                        "formatversion": "2", "redirects": "1"})
     return json.loads(raw)["parse"]["text"]
@@ -118,8 +131,115 @@ def parse_wiki_tables(html_text, today=None):
     return out
 
 
+def _grid(tbl):
+    """Rows of a table with rowspan/colspan expanded: [(is_header, [cell texts])]."""
+    out, carry = [], {}
+    for tr in tbl.find_all("tr"):
+        row, col = [], 0
+        cells = tr.find_all(["th", "td"], recursive=False)
+        hdr = bool(cells) and all(c.name == "th" for c in cells)
+        it = iter(cells)
+        while True:
+            while col in carry:
+                txt, left = carry[col]
+                row.append(txt)
+                carry[col] = (txt, left - 1)
+                if left - 1 == 0:
+                    del carry[col]
+                col += 1
+            c = next(it, None)
+            if c is None:
+                break
+            txt = re.sub(r"\[.*?\]", "", c.get_text(" ", strip=True)).replace("\u200b", "").strip()
+            span = int(c.get("colspan", 1) or 1)
+            rs = int(c.get("rowspan", 1) or 1)
+            for k in range(span):
+                row.append(txt)
+                if rs > 1:
+                    carry[col] = (txt, rs - 1)
+                col += 1
+        out.append((hdr, row))
+    return out
+
+
+def _es_table_date(txt, today):
+    t = _fold(txt)
+    hits = re.findall(r"(\d{1,2})?\s*(?:de\s+)?([a-z]{3,10})\.?\s*(?:de\s+)?(\d{4})?", t)
+    best = None
+    for day, mon, yr in hits:
+        m = ES_MONTHS.get(mon) or ES_ABBR.get(mon[:3]) if (mon in ES_MONTHS or mon[:3] in ES_ABBR) else None
+        if not m:
+            continue
+        best = (int(day) if day else 15, m, int(yr) if yr else None)
+    if not best:
+        return None
+    yrs = re.findall(r"(\d{4})", t)
+    year = best[2] or (int(yrs[-1]) if yrs else today.year)
+    d, m = best[0], best[1]
+    try:
+        return datetime.date(year, m, min(d, 28 if m == 2 else 30 if m in (4, 6, 9, 11) else 31))
+    except ValueError:
+        return None
+
+
+def parse_wiki_es_tables(html_text, today=None):
+    """Rows from Spanish wikitables with Encuestadora / Fecha / Aprueba / Desaprueba columns
+    (single- or multi-row headers). 'Imagen' tables are skipped."""
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(html_text, "lxml")
+    today = today or datetime.date.today()
+    out = []
+    for tbl in soup.select("table.wikitable"):
+        g = _grid(tbl)
+        heads = [r for h, r in g if h]
+        if not heads:
+            continue
+        width = max(len(r) for r in heads)
+        labels = [" ".join(_fold(r[i]) for r in heads if i < len(r)) for i in range(width)]
+        if any("imagen" in l for l in labels):
+            continue
+
+        def col(pat, avoid=None):
+            for i, l in enumerate(labels):
+                if re.search(pat, l) and not (avoid and re.search(avoid, l)):
+                    return i
+            return None
+        ifirm = col(r"encuest|medio|empresa")
+        idate = col(r"fecha")
+        ia = col(r"\baprue|\baprob", r"desap")
+        idis = col(r"desap")
+        if None in (ifirm, idate, ia):
+            continue
+        for h, cells in g:
+            if h or len(cells) <= max(i for i in (ifirm, idate, ia, idis) if i is not None):
+                continue
+            a = _num(cells[ia])
+            d = _num(cells[idis]) if idis is not None else None
+            dt = _es_table_date(cells[idate], today)
+            if dt is None or dt > today or not _ok(a, d):
+                continue
+            out.append({"date": dt.isoformat(), "firm": cells[ifirm].strip(), "approve": a, "disapprove": d,
+                        "approx": False, "origin": "wikipedia"})
+    return out
+
+
 def src_wikipedia(code, log):
     polls = []
+    for page in WIKI_PAGES_ES.get(code, []):
+        try:
+            rows = parse_wiki_es_tables(_wiki_html(page, "es"))
+        except Exception as e:
+            log.append(f"  · {code} Wikipedia (es) {page}: {e}")
+            continue
+        for r in rows:
+            r["source"] = "https://es.wikipedia.org/wiki/" + page
+            f = _fold(r["firm"])
+            for k, v in WIKI_FIRMS:
+                if k in f:
+                    r["firm"] = v
+                    break
+        polls.extend(rows)
+        log.append(f"  · {code} Wikipedia (es) {page}: {len(rows)} rows")
     for page in WIKI_PAGES.get(code, []):
         try:
             rows = parse_wiki_tables(_wiki_html(page))
@@ -320,6 +440,10 @@ def credit_figures(text, names, stoppers, win=60, need_pct=False):
 
 # --- Mitofsky: monthly "Ranking aprobación de mandatarios" posts (mitofsky.mx, Evaluación de gobierno)
 MITOFSKY_CAT = "https://www.mitofsky.mx/estudios/categories/evgobierno"
+WIKI_FIRMS = [("cb consultora", "CB Consultora (imagen positiva)"), ("cid gallup", "CID Gallup"),
+              ("atlas", "AtlasIntel"), ("cadem", "Cadem"), ("criteria", "Criteria"), ("cedatos", "Cedatos"),
+              ("equipos", "Equipos Consultores"), ("opcion", "Opción Consultores"), ("pulso ciudadano", "Pulso Ciudadano"),
+              ("panel ciudadano", "Panel Ciudadano UDD"), ("cep", "CEP"), ("maluk", "Maluk Research")]
 ES_ABBR = {"ene": 1, "feb": 2, "mar": 3, "abr": 4, "may": 5, "jun": 6, "jul": 7, "ago": 8, "sep": 9,
            "oct": 10, "nov": 11, "dic": 12}
 

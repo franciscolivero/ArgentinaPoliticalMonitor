@@ -233,7 +233,8 @@ MIN_POLLS = 2
 COUNTRY_ES = {"Chile": "Chile", "Bolivia": "Bolivia", "Peru": "Perú", "Colombia": "Colombia",
               "Venezuela": "Venezuela", "Mexico": "México", "Ecuador": "Ecuador",
               "El Salvador": "El Salvador", "Panama": "Panamá", "Guatemala": "Guatemala",
-              "Honduras": "Honduras", "Brazil": "Brasil"}
+              "Honduras": "Honduras", "Brazil": "Brasil", "Uruguay": "Uruguay", "Paraguay": "Paraguay",
+              "Costa Rica": "Costa Rica", "Dominican Republic": "República Dominicana"}
 
 
 def latam():
