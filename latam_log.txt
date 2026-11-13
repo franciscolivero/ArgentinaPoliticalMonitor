@@ -1,21 +1,21 @@
-run 2026-11-13 22:01 UTC · 1 new poll(s)
+run 2026-11-13 22:14 UTC · 3 new poll(s)
 
-CL Chile        172 polls  manual 6, news 57, pollster 11, wikipedia 98
-BO Bolivia       17 polls  manual 7, news 10
-PE Peru          22 polls  manual 7, news 15
-CO Colombia      11 polls  manual 6, news 5
-VE Venezuela      8 polls  manual 6, news 2
-MX Mexico        96 polls  manual 13, news 38, news-ranking 1, wikipedia 44
-EC Ecuador       30 polls  manual 4, news 12, wikipedia 14
-SV El Salvador   23 polls  manual 10, news 6, pollster 1, wikipedia 6
-PA Panama         5 polls  manual 5
-GT Guatemala      5 polls  manual 3, wikipedia 2
-BR Brazil       132 polls  manual 7, news 125
-HN Honduras       3 polls  manual 3
-UY Uruguay       42 polls  manual 2, news 11, wikipedia 29
-PY Paraguay       2 polls  manual 2
-CR Costa Rica     7 polls  manual 2, news 3, pollster 2
-DO Dominican Republic   7 polls  manual 2, news 4, pollster 1
+CL Chile        178 polls  manual 12, news 57, pollster 11, wikipedia 98
+BO Bolivia       23 polls  manual 13, news 10
+PE Peru          23 polls  manual 13, news 10
+CO Colombia      11 polls  manual 8, news 3
+VE Venezuela     15 polls  manual 13, news 2
+MX Mexico        97 polls  manual 20, news 32, news-ranking 1, wikipedia 44
+EC Ecuador       35 polls  manual 11, news 10, wikipedia 14
+SV El Salvador   30 polls  manual 17, news 6, pollster 1, wikipedia 6
+PA Panama        14 polls  manual 14
+GT Guatemala     15 polls  manual 13, wikipedia 2
+BR Brazil       138 polls  manual 14, news 124
+HN Honduras       9 polls  manual 9
+UY Uruguay       49 polls  manual 9, news 11, wikipedia 29
+PY Paraguay      12 polls  manual 12
+CR Costa Rica    13 polls  manual 11, news 1, pollster 1
+DO Dominican Republic  17 polls  manual 14, news 2, pollster 1
 
 log:
   · CL Wikipedia (es) Anexo:Encuestas_de_aprobación_del_gobierno_de_José_Antonio_Kast: 140 rows
@@ -50,24 +50,16 @@ log:
   · GT Wikipedia (es) Bernardo_Arévalo: 3 rows
   · UY Wikipedia (es) Gobierno_de_Yamandú_Orsi: 29 rows
   · CID Gallup SV 2026-10-27: 94.0%
+  · CID Gallup CR 2026-08-17: 74.0%
   · CB Global Data 2026-10: 3 presidents this month (summary only), 0 with last month's figure
-  · Google News: 1977 unique articles read
-  · articles PY: 2 read, 0 poll reading(s)
-  · articles GT: 4 read, 0 poll reading(s)
-  · articles CR: 1 read, 0 poll reading(s)
-  · articles VE: 1 read, 0 poll reading(s)
-  · articles CO: 12 read, 3 poll reading(s)
-  · articles BO: 11 read, 3 poll reading(s)
-  · articles PE: skipped Ipsos 11.0% (far from recent median 42.9)
-  · articles PE: 12 read, 4 poll reading(s)
-  · articles SV: 4 read, 1 poll reading(s)
-  · articles EC: 4 read, 0 poll reading(s)
-  · articles UY: 11 read, 6 poll reading(s)
+  · Google News: 1970 unique articles read
+  · articles CO: 7 read, 2 poll reading(s)
+  · articles PE: 3 read, 4 poll reading(s)
   · articles MX: 6 read, 0 poll reading(s)
-  · articles BR: 6 read, 2 poll reading(s)
-  · articles CL: skipped Cadem 68.0% (far from recent median 36.0)
-  · articles CL: skipped Criteria 67.0% (far from recent median 36.0)
-  · articles CL: 6 read, 2 poll reading(s)
-  · articles: 63 articles read in 82s
-  + CR Pollster not named (press) ≈2026-09-05: 59.0/None [news]
+  · articles BR: 3 read, 3 poll reading(s)
+  · articles CL: 6 read, 4 poll reading(s)
+  · articles: 23 articles read in 31s
+  + PE Datum ≈2026-09-10: 42.0/44.0 [news]
+  + BR Ideia ≈2026-10-16: 46.4/48.2 [news]
+  + EC Pollster not named (press) ≈2026-11-06: 49.0/None [news]
   · Google News queries failed: 0
