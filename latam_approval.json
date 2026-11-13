@@ -4280,21 +4280,21 @@
     },
     {
      "date": "2026-10-08",
-     "firm": "CB Consultora (imagen positiva)",
-     "approve": 47.5,
-     "disapprove": null,
-     "approx": true,
-     "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
-     "origin": "manual"
-    },
-    {
-     "date": "2026-10-08",
      "firm": "CB Consultora",
      "approve": 47.5,
      "disapprove": null,
      "approx": false,
      "origin": "news",
      "source": "https://www.eldiario.ec/ecuador/daniel-noboa-alcanza-47-5-de-aprobacion-y-sube-al-sexto-puesto-en-ranking-de-america-latina-12102026/"
+    },
+    {
+     "date": "2026-10-08",
+     "firm": "CB Consultora (imagen positiva)",
+     "approve": 47.5,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/#previous-month",
+     "origin": "manual"
     },
     {
      "date": "2026-10-09",
@@ -7818,6 +7818,15 @@
     },
     {
      "date": "2026-11-09",
+     "firm": "Pollster not named (press)",
+     "approve": 20.0,
+     "disapprove": 49.0,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOb2VjZm5oZE4ycUdjclppTjVxdTVYUEhWLUhHTmNBRWVGelM5T0hqQlZmNGJ1Y2RtV3E3M2l0YWtrVi1ac2twRVBPY2lhWUJQVHh3VzZIRWRpdV9RWThkN2tIRGRldHphZ1RmTF9FM1EyODhjM3A4ZjVzTHpqYWRXQktfU2dLUkRxTGYtUU9mdS1NNm9IZWswZ0RiT3U3ZWpwa0xlUEpWcWdla3MzNHZSNVVPT1BUeExDaW5GMF9ycUZ5ZERCUWJMX05R0gHuAUFVX3lxTFAyM1lEYWVUVXZ0Q3NhZ1MzVnQ4Wm1YRFV6cFBsLWo2dGdseFlJZDBQVGFva2tsRFNhS2REMUczQ3ZKUVlpN041UjZBWEZOd1dLV08tT3VSNG5VX1BSWTBvdjV6a25FRG9zUy1GY0UwTld1LVVxRWVlczB4M3VVcThjekwzdWJiQy1ScU9EcmFxaWdVRzhIQjRRbEVfTm9wZnR4TTJQbWNqaEtsS09mQjQ3aG16ZkZlOTlGUkUwSnNKTUhicFZCZDB0eTl6bkpuMGlRQktOTnJrNjJscGlyaUI2clFIcTNadnVwZHpjTHc?oc=5",
+     "origin": "news"
+    },
+    {
+     "date": "2026-11-09",
      "firm": "CB Consultora (imagen positiva)",
      "approve": 38.6,
      "disapprove": 57.7,
@@ -7825,15 +7834,6 @@
      "approx": false,
      "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
      "origin": "manual"
-    },
-    {
-     "date": "2026-11-09",
-     "firm": "Pollster not named (press)",
-     "approve": 20.0,
-     "disapprove": 49.0,
-     "approx": true,
-     "source": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOb2VjZm5oZE4ycUdjclppTjVxdTVYUEhWLUhHTmNBRWVGelM5T0hqQlZmNGJ1Y2RtV3E3M2l0YWtrVi1ac2twRVBPY2lhWUJQVHh3VzZIRWRpdV9RWThkN2tIRGRldHphZ1RmTF9FM1EyODhjM3A4ZjVzTHpqYWRXQktfU2dLUkRxTGYtUU9mdS1NNm9IZWswZ0RiT3U3ZWpwa0xlUEpWcWdla3MzNHZSNVVPT1BUeExDaW5GMF9ycUZ5ZERCUWJMX05R0gHuAUFVX3lxTFAyM1lEYWVUVXZ0Q3NhZ1MzVnQ4Wm1YRFV6cFBsLWo2dGdseFlJZDBQVGFva2tsRFNhS2REMUczQ3ZKUVlpN041UjZBWEZOd1dLV08tT3VSNG5VX1BSWTBvdjV6a25FRG9zUy1GY0UwTld1LVVxRWVlczB4M3VVcThjekwzdWJiQy1ScU9EcmFxaWdVRzhIQjRRbEVfTm9wZnR4TTJQbWNqaEtsS09mQjQ3aG16ZkZlOTlGUkUwSnNKTUhicFZCZDB0eTl6bkpuMGlRQktOTnJrNjJscGlyaUI2clFIcTNadnVwZHpjTHc?oc=5",
-     "origin": "news"
     }
    ],
    "country": "Uruguay",
@@ -8273,6 +8273,15 @@
      "origin": "news"
     },
     {
+     "date": "2026-09-05",
+     "firm": "Pollster not named (press)",
+     "approve": 59.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNb1NIMVdPNThKVnlicDAzUEtkOENWYWZsZzM3dmJRTmVVNzFRR2hjckVPWTBZSHFsMXQxaG43d0Y2YTR5X3gzNGZKeV95Mmx6N1RNSU81UWJZZXkzLXdGR3l0a2NwTFBGVUhRMFhpeC03SEwtUElpMGdIT21rVnVpcTlBb2pqRi1WdVpqUDNMemVaOC1GOVZBQUdyX015SzlnVUdn?oc=5",
+     "origin": "news"
+    },
+    {
      "date": "2026-09-30",
      "firm": "Mitofsky (ranking)",
      "approve": 59.0,
@@ -8332,20 +8341,20 @@
       "2026-11-09"
      ],
      "values": [
-      70.2,
       68.7,
-      66.9,
-      64.9,
-      63.0,
-      61.3,
-      60.0,
+      67.2,
+      65.5,
+      63.9,
+      62.3,
+      60.9,
+      59.9,
       59.1,
       58.5,
       58.1,
       57.7,
-      57.2,
-      56.6,
-      55.9
+      57.3,
+      56.7,
+      56.0
      ]
     },
     "disapprove": {
@@ -8526,6 +8535,6 @@
    }
   }
  },
- "updated": "2026-11-13T21:28:20Z",
+ "updated": "2026-11-13T22:01:15Z",
  "method": "Pollster releases, Wikipedia poll tables, press articles (headlines and full text) and regional rankings (CB Consultora, Mitofsky, CID Gallup, AtlasIntel); Gaussian-kernel average, 21-day bandwidth, firm-crowding weights."
 }
