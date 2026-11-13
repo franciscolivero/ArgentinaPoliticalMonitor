@@ -1,19 +1,24 @@
-run 2026-11-13 18:30 UTC · 2 new poll(s)
+run 2026-11-13 21:28 UTC · 135 new poll(s)
 
-CL Chile        109 polls  manual 6, news 92, pollster 11
+CL Chile        172 polls  manual 6, news 57, pollster 11, wikipedia 98
 BO Bolivia       17 polls  manual 7, news 10
-PE Peru          20 polls  manual 7, news 13
-CO Colombia      10 polls  manual 6, news 4
-VE Venezuela      7 polls  manual 6, news 1
+PE Peru          22 polls  manual 7, news 15
+CO Colombia      11 polls  manual 6, news 5
+VE Venezuela      8 polls  manual 6, news 2
 MX Mexico        96 polls  manual 13, news 38, news-ranking 1, wikipedia 44
-EC Ecuador       15 polls  manual 4, news 11
+EC Ecuador       30 polls  manual 4, news 12, wikipedia 14
 SV El Salvador   23 polls  manual 10, news 6, pollster 1, wikipedia 6
 PA Panama         5 polls  manual 5
-GT Guatemala      3 polls  manual 3
-BR Brazil       130 polls  manual 7, news 123
+GT Guatemala      5 polls  manual 3, wikipedia 2
+BR Brazil       132 polls  manual 7, news 125
 HN Honduras       3 polls  manual 3
+UY Uruguay       42 polls  manual 2, news 11, wikipedia 29
+PY Paraguay       2 polls  manual 2
+CR Costa Rica     6 polls  manual 2, news 2, pollster 2
+DO Dominican Republic   7 polls  manual 2, news 4, pollster 1
 
 log:
+  · CL Wikipedia (es) Anexo:Encuestas_de_aprobación_del_gobierno_de_José_Antonio_Kast: 140 rows
   · CL Cadem: 4 new wave(s) from 4 unread PDF(s)
   · CL Criteria: no validated figure in Agenda_Criteria_15_Marzo_2026.pdf
   · CL Criteria: no validated figure in Agenda_Criteria_22_Marzo_2026.pdf
@@ -39,12 +44,199 @@ log:
   · CL Criteria: no validated figure in Agenda_Criteria_13_Septiembre_2026_9dGv2.pdf
   · CL Criteria: no validated figure in Agenda_Criteria_20_Septiembre_2026_9eBc3.pdf
   · CL Criteria: 6 new wave(s) from 29 unread PDF(s)
+  + CL Activa ≈2026-10-30: 22.1/67.5 [wikipedia]
+  + CL Data Influye ≈2026-10-19: 25.0/58.0 [wikipedia]
+  + CL Cadem ≈2026-09-29: 36.0/57.0 [wikipedia]
+  ~ CL Cadem 2026-09-25: replaced press copy with wikipedia
+  + CL Activa ≈2026-09-25: 28.2/57.6 [wikipedia]
+  ~ CL Data Influye 2026-09-21: replaced press copy with wikipedia
+  + CL Cadem ≈2026-09-17: 36.0/60.0 [wikipedia]
+  ~ CL Cadem 2026-09-11: replaced press copy with wikipedia
+  + CL Cadem ≈2026-09-04: 36.0/60.0 [wikipedia]
+  + CL Cadem ≈2026-09-02: 34.0/61.0 [wikipedia]
+  + CL Cadem ≈2026-08-28: 38.0/59.0 [wikipedia]
+  + CL Activa ≈2026-08-28: 33.8/54.4 [wikipedia]
+  + CL Panel Ciudadano UDD ≈2026-08-26: 35.0/56.0 [wikipedia]
+  + CL Data Influye ≈2026-08-25: 36.0/61.0 [wikipedia]
+  ~ CL Cadem 2026-08-21: replaced press copy with wikipedia
+  + CL Cadem ≈2026-08-14: 41.0/53.0 [wikipedia]
+  ~ CL Cadem 2026-08-11: replaced press copy with wikipedia
+  + CL Cadem ≈2026-08-04: 38.0/56.0 [wikipedia]
+  ~ CL Cadem 2026-07-31: replaced press copy with wikipedia
+  + CL Activa ≈2026-07-31: 25.6/58.9 [wikipedia]
+  + CL Data Influye ≈2026-07-27: 29.0/56.0 [wikipedia]
+  + CL Cadem ≈2026-07-24: 37.0/59.0 [wikipedia]
+  ~ CL Criteria 2026-07-23: replaced press copy with wikipedia
+  ~ CL Cadem 2026-07-21: replaced press copy with wikipedia
+  + CL Panel Ciudadano UDD ≈2026-07-18: 34.0/56.0 [wikipedia]
+  + CL Activa ≈2026-07-17: 28.9/56.6 [wikipedia]
+  + CL Criteria ≈2026-07-16: 37.0/52.0 [wikipedia]
+  ~ CL Cadem 2026-07-14: replaced press copy with wikipedia
+  + CL Cadem ≈2026-07-10: 38.0/58.0 [wikipedia]
+  ~ CL Criteria 2026-07-09: replaced press copy with wikipedia
+  + CL Cadem ≈2026-07-03: 37.0/60.0 [wikipedia]
+  ~ CL Criteria 2026-07-02: replaced press copy with wikipedia
+  + CL Cadem ≈2026-06-26: 41.0/53.0 [wikipedia]
+  + CL Activa ≈2026-06-26: 30.1/56.9 [wikipedia]
+  ~ CL Criteria 2026-06-25: replaced press copy with wikipedia
+  + CL Data Influye ≈2026-06-22: 30.0/58.0 [wikipedia]
+  + CL Panel Ciudadano UDD ≈2026-06-20: 37.0/53.0 [wikipedia]
+  ~ CL Cadem 2026-06-19: replaced press copy with wikipedia
+  + CL Criteria ≈2026-06-18: 39.0/51.0 [wikipedia]
+  + CL Cadem ≈2026-06-12: 40.0/54.0 [wikipedia]
+  + CL Activa ≈2026-06-12: 30.5/56.7 [wikipedia]
+  ~ CL Criteria 2026-06-11: replaced press copy with wikipedia
+  ~ CL Cadem 2026-06-10: replaced press copy with wikipedia
+  ~ CL Cadem 2026-06-04: replaced press copy with wikipedia
+  + CL Criteria ≈2026-06-04: 40.0/47.0 [wikipedia]
+  + CL Cadem ≈2026-06-02: 41.0/55.0 [wikipedia]
+  ~ CL Cadem 2026-05-29: replaced press copy with wikipedia
+  + CL Activa ≈2026-05-29: 31.0/53.3 [wikipedia]
+  ~ CL Criteria 2026-05-28: replaced press copy with wikipedia
+  ~ CL CEP 2026-05-27: replaced press copy with wikipedia
+  + CL Cadem ≈2026-05-22: 41.0/55.0 [wikipedia]
+  ~ CL Criteria 2026-05-21: replaced press copy with wikipedia
+  + CL Panel Ciudadano UDD ≈2026-05-20: 35.0/53.0 [wikipedia]
+  + CL Data Influye ≈2026-05-17: 26.0/54.0 [wikipedia]
+  ~ CL Cadem 2026-05-15: replaced press copy with wikipedia
+  + CL Activa ≈2026-05-15: 31.2/54.4 [wikipedia]
+  + CL Criteria ≈2026-05-14: 38.0/53.0 [wikipedia]
+  + CL Cadem ≈2026-05-13: 40.0/55.0 [wikipedia]
+  ~ CL Cadem 2026-05-08: replaced press copy with wikipedia
+  ~ CL Criteria 2026-05-07: replaced press copy with wikipedia
+  + CL Cadem ≈2026-05-06: 38.0/56.0 [wikipedia]
+  + CL Cadem ≈2026-05-01: 39.0/57.0 [wikipedia]
+  + CL Activa ≈2026-04-30: 29.1/55.6 [wikipedia]
+  ~ CL Criteria 2026-04-29: replaced press copy with wikipedia
+  ~ CL Cadem 2026-04-28: replaced press copy with wikipedia
+  + CL Black & White ≈2026-04-28: 37.0/52.0 [wikipedia]
+  + CL Panel Ciudadano UDD ≈2026-04-26: 38.0/52.0 [wikipedia]
+  + CL Criteria ≈2026-04-23: 38.0/49.0 [wikipedia]
+  ~ CL Cadem 2026-04-23: replaced press copy with wikipedia
+  + CL Black & White ≈2026-04-22: 40.0/50.0 [wikipedia]
+  + CL Data Influye ≈2026-04-20: 33.0/47.0 [wikipedia]
+  + CL Cadem ≈2026-04-17: 43.0/51.0 [wikipedia]
+  + CL Activa ≈2026-04-17: 33.3/53.3 [wikipedia]
+  + CL Panel Ciudadano UDD ≈2026-04-16: 39.0/49.0 [wikipedia]
+  ~ CL Cadem 2026-04-16: replaced press copy with wikipedia
+  ~ CL Criteria 2026-04-16: replaced press copy with wikipedia
+  + CL Black & White ≈2026-04-14: 34.0/55.0 [wikipedia]
+  + CL Cadem ≈2026-04-10: 42.0/53.0 [wikipedia]
+  + CL Criteria ≈2026-04-09: 36.0/49.0 [wikipedia]
+  + CL Black & White ≈2026-04-08: 44.0/42.0 [wikipedia]
+  ~ CL Cadem 2026-04-03: replaced press copy with wikipedia
+  ~ CL Criteria 2026-04-02: replaced press copy with wikipedia
+  + CL Cadem ≈2026-04-01: 44.0/52.0 [wikipedia]
+  + CL Black & White ≈2026-03-31: 42.0/52.0 [wikipedia]
+  + CL Activa ≈2026-03-27: 34.7/48.7 [wikipedia]
+  + CL Cadem ≈2026-03-26: 43.0/51.0 [wikipedia]
+  + CL Criteria ≈2026-03-26: 43.0/47.0 [wikipedia]
+  + CL Panel Ciudadano UDD ≈2026-03-24: 42.0/48.0 [wikipedia]
+  + CL Cadem ≈2026-03-24: 47.0/49.0 [wikipedia]
+  + CL Data Influye ≈2026-03-24: 41.0/43.0 [wikipedia]
+  + CL Black & White ≈2026-03-24: 36.0/56.0 [wikipedia]
+  ~ CL Cadem 2026-03-20: replaced press copy with wikipedia
+  ~ CL Criteria 2026-03-20: replaced press copy with wikipedia
+  ~ CL Cadem 2026-03-17: replaced press copy with wikipedia
+  + CL Black & White ≈2026-03-18: 44.0/44.0 [wikipedia]
+  ~ CL Panel Ciudadano UDD 2026-03-13: replaced press copy with wikipedia
+  + CL Activa ≈2026-03-13: 47.5/26.3 [wikipedia]
+  ~ CL Criteria 2026-03-13: replaced press copy with wikipedia
   · MX Wikipedia Opinion_polling_on_the_Sheinbaum_presidency: 51 rows
+  · EC Wikipedia (es) Segundo_gobierno_de_Daniel_Noboa: 14 rows
+  + EC Cedatos ≈2025-09-25: 51.6/43.2 [wikipedia]
+  + EC CB Consultora (imagen positiva) ≈2025-09-21: 46.2/51.4 [wikipedia]
+  + EC CIEES ≈2025-09-14: 42.0/56.0 [wikipedia]
+  + EC Cedatos ≈2025-08-26: 55.4/40.7 [wikipedia]
+  + EC CIEES ≈2025-08-24: 45.0/54.0 [wikipedia]
+  + EC Maluk Research ≈2025-08-24: 36.6/60.3 [wikipedia]
+  + EC CB Consultora (imagen positiva) ≈2025-08-22: 46.8/50.1 [wikipedia]
+  + EC Imasen ≈2025-08-18: 49.8/44.2 [wikipedia]
+  + EC CB Consultora (imagen positiva) ≈2025-07-25: 49.1/48.2 [wikipedia]
+  + EC Maluk Research ≈2025-07-16: 38.95/53.9 [wikipedia]
+  + EC Imasen ≈2025-06-22: 52.7/42.3 [wikipedia]
+  + EC CB Consultora (imagen positiva) ≈2025-06-20: 52.4/43.8 [wikipedia]
+  + EC Maluk Research ≈2025-06-18: 41.01/54.78 [wikipedia]
+  + EC CIEES ≈2025-06-15: 45.0/52.0 [wikipedia]
   · SV Wikipedia Opinion_polling_on_the_Nayib_Bukele_presidency: 25 rows
-  · Mitofsky 2026-09: 6 tracked presidents
+  · GT Wikipedia (es) Bernardo_Arévalo: 3 rows
+  + GT CID Gallup ≈2024-06-15: 64.0/18.0 [wikipedia]
+  + GT CID Gallup ≈2024-01-15: 78.0/22.0 [wikipedia]
+  · UY Wikipedia (es) Gobierno_de_Yamandú_Orsi: 29 rows
+  + UY Factum ≈2026-10-17: 26.0/52.0 [wikipedia]
+  + UY Cifra ≈2026-10-12: 24.0/57.0 [wikipedia]
+  + UY Equipos Consultores ≈2026-08-31: 28.0/51.0 [wikipedia]
+  + UY Cifra ≈2026-08-18: 26.0/57.0 [wikipedia]
+  + UY Opción Consultores ≈2026-08-11: 19.0/57.0 [wikipedia]
+  + UY Equipos Consultores ≈2026-07-08: 26.0/53.0 [wikipedia]
+  + UY Cifra ≈2026-06-17: 20.0/65.0 [wikipedia]
+  + UY CEP ≈2026-05-26: 24.0/49.0 [wikipedia]
+  + UY Opción Consultores ≈2026-05-28: 20.0/48.0 [wikipedia]
+  + UY Factum ≈2026-05-05: 29.0/46.0 [wikipedia]
+  + UY Equipos Consultores ≈2026-05-04: 27.0/48.0 [wikipedia]
+  + UY Equipos Consultores ≈2026-03-05: 33.0/40.0 [wikipedia]
+  + UY Cifra ≈2026-02-28: 31.0/46.0 [wikipedia]
+  + UY Factum ≈2026-02-22: 37.0/41.0 [wikipedia]
+  + UY Opción Consultores ≈2026-02-25: 23.0/38.0 [wikipedia]
+  + UY Equipos Consultores ≈2025-12-02: 36.0/36.0 [wikipedia]
+  + UY Opción Consultores ≈2025-11-25: 28.0/30.0 [wikipedia]
+  + UY Cifra ≈2025-11-03: 40.0/40.0 [wikipedia]
+  + UY Equipos Consultores ≈2025-10-19: 36.0/32.0 [wikipedia]
+  + UY Opción Consultores ≈2025-10-20: 26.0/29.0 [wikipedia]
+  + UY Cifra ≈2025-09-28: 43.0/33.0 [wikipedia]
+  + UY Opción Consultores ≈2025-08-23: 29.0/22.0 [wikipedia]
+  + UY Nómade ≈2025-07-19: 34.8/29.8 [wikipedia]
+  + UY Equipos Consultores ≈2025-07-02: 44.0/21.0 [wikipedia]
+  + UY Ágora ≈2025-06-07: 38.5/28.5 [wikipedia]
+  + UY Nómade ≈2025-05-09: 31.8/22.8 [wikipedia]
+  + UY Cifra ≈2025-04-19: 41.0/18.0 [wikipedia]
+  + UY Equipos Consultores ≈2025-04-15: 41.0/14.0 [wikipedia]
+  + UY Cifra ≈2025-03-30: 37.0/15.0 [wikipedia]
+  · Mitofsky 2026-09: 8 tracked presidents
   · CID Gallup SV 2026-10-27: 94.0%
+  · CID Gallup CR 2026-08-17: 74.0%
   · CB Global Data 2026-10: 3 presidents this month (summary only), 0 with last month's figure
-  · Google News: 1680 unique articles read
-  + CO AtlasIntel ≈2026-11-09: 48.3/None [news]
-  + BR AtlasIntel ≈2026-11-09: 47.7/50.3 [news]
+  + CR Mitofsky (ranking) ≈2026-09-30: 59.0/None [pollster]
+  + DO Mitofsky (ranking) ≈2026-09-30: 51.0/None [pollster]
+  + CR CID Gallup ≈2026-08-10: 74.0/None [pollster]
+  · Google News: 1970 unique articles read
+  · articles PY: 2 read, 0 poll reading(s)
+  · articles GT: 4 read, 0 poll reading(s)
+  · articles VE: 1 read, 1 poll reading(s)
+  · articles CO: 12 read, 3 poll reading(s)
+  · articles BO: 11 read, 2 poll reading(s)
+  · articles PE: 12 read, 5 poll reading(s)
+  · articles SV: 3 read, 1 poll reading(s)
+  · articles EC: 5 read, 1 poll reading(s)
+  · articles UY: 12 read, 7 poll reading(s)
+  · articles MX: 6 read, 0 poll reading(s)
+  · articles BR: 6 read, 5 poll reading(s)
+  · articles CL: skipped Cadem 68.0% (far from recent median 36.0)
+  · articles CL: skipped Criteria 67.0% (far from recent median 36.0)
+  · articles CL: 6 read, 2 poll reading(s)
+  · articles: 65 articles read in 85s
+  + VE AtlasIntel ≈2026-09-24: 37.0/None [news]
+  + CO Cifras y Conceptos ≈2026-11-08: 48.3/46.0 [news]
+  + PE IEP ≈2026-11-07: 37.0/53.0 [news]
+  + PE CIT ≈2026-11-02: 32.0/None [news]
+  + EC CB Consultora ≈2026-10-08: 47.5/None [news]
+  + UY Equipos Consultores ≈2026-11-01: 24.0/None [news]
+  + BR AtlasIntel ≈2026-11-08: 50.3/50.3 [news]
+  + BR Datafolha ≈2026-11-08: 49.0/None [news]
+  + DO Pollster not named (press) ≈2026-02-12: 55.0/None [news]
+  + UY Equipos Consultores ≈2026-05-10: 48.0/48.0 [news]
+  + UY Factum ≈2026-05-14: 17.0/None [news]
+  + UY Pollster not named (press) ≈2026-05-30: 48.0/48.0 [news]
+  + UY Factum ≈2026-06-28: 56.0/None [news]
+  + DO Pollster not named (press) ≈2026-07-09: 51.0/None [news]
+  + UY Equipos Consultores ≈2026-07-11: 53.0/None [news]
+  + UY Pollster not named (press) ≈2026-08-08: 57.0/None [news]
+  + DO AtlasIntel ≈2026-08-08: 55.5/None [news]
+  + UY Factum ≈2026-08-27: 26.0/None [news]
+  + UY Factum ≈2026-08-27: 55.0/None [news]
+  + CR CIEP-UCR ≈2026-09-05: 64.0/None [news]
+  + DO AtlasIntel ≈2026-09-27: 56.3/None [news]
+  + UY Cifra ≈2026-10-12: 57.0/None [news]
+  + CR Pollster not named (press) ≈2026-10-17: 72.8/None [news]
+  + UY Pollster not named (press) ≈2026-11-09: 20.0/49.0 [news]
   · Google News queries failed: 0
