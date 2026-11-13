@@ -31,7 +31,7 @@ Usage:
     python fetch_latam_approval.py --dry-run  # print what would be added
 """
 
-import re, sys, json, html, datetime, pathlib, unicodedata
+import time, re, sys, json, html, datetime, pathlib, unicodedata
 from email.utils import parsedate_to_datetime
 from xml.etree import ElementTree as ET
 
@@ -112,6 +112,9 @@ FIRM_QUERIES = {
 UNNAMED = "Pollster not named (press)"
 RSS = "https://news.google.com/rss/search?q={q}+when:{w}&hl=es-419&gl={gl}&ceid={gl}:es-419"
 RSS_PT = "https://news.google.com/rss/search?q={q}+when:{w}&hl=pt-BR&gl=BR&ceid=BR:pt-419"
+RSS_RANGE = "https://news.google.com/rss/search?q={q}+after:{a}+before:{b}&hl=es-419&gl={gl}&ceid={gl}:es-419"
+# Countries whose history is rebuilt by --backfill (Brazil, Chile and Mexico are already dense)
+BACKFILL = ["CO", "PE", "CR", "DO", "GT", "HN", "PA", "PY", "BO", "EC", "VE", "SV", "UY"]
 LANG = {"BR": "pt"}
 QUERIES_PT = ["aprovação {s} pesquisa", "desaprovação {s} pesquisa", "aprovação governo {s}",
               "avaliação governo {s} pesquisa aprova"]
@@ -344,6 +347,36 @@ def fetch_query(q, window, gl, lang="es"):
     return items
 
 
+def fetch_range(code, after, before):
+    """Google News items between two dates (the 'when:' window only reaches back a year and
+    returns at most 100 items, so history is read in two-month slices)."""
+    import requests
+    from urllib.parse import quote_plus
+    _, pres, tokens, _, gl, _ = PRESIDENTS[code]
+    surname = {"CO": "De la Espriella", "VE": "Delcy Rodríguez", "PY": "Santiago Peña",
+               "CR": "Laura Fernández", "UY": "Orsi"}.get(code, pres.split()[-1])
+    qs = [q.format(s=surname) for q in QUERIES[:3]] + [f"{f} {surname}" for f in FIRM_QUERIES.get(code, [])]
+    items = []
+    for q in qs:
+        url = RSS_RANGE.format(q=quote_plus(q), a=after, b=before, gl=gl)
+        try:
+            r = requests.get(url, timeout=30, headers=latam_sources.UA)
+            r.raise_for_status()
+            root = ET.fromstring(r.content)
+        except Exception:
+            continue
+        for it in root.iter("item"):
+            try:
+                pub = parsedate_to_datetime(it.findtext("pubDate")).date()
+            except Exception:
+                continue
+            items.append({"title": html.unescape(it.findtext("title") or ""),
+                          "desc": re.sub(r"<[^>]+>", " ", html.unescape(it.findtext("description") or "")),
+                          "pub": pub, "link": it.findtext("link") or ""})
+        time.sleep(0.3)
+    return items
+
+
 def fetch(code, window):
     _, pres, tokens, _, gl, _ = PRESIDENTS[code]
     surname = {"CO": "De la Espriella", "VE": "Delcy Rodríguez", "BR": "Lula", "PY": "Santiago Peña",
@@ -419,7 +452,7 @@ def add(code, p, store, log):
 
 def main():
     args = sys.argv[1:]
-    dry, rebuild = "--dry-run" in args, "--rebuild" in args
+    dry, rebuild, backfill = "--dry-run" in args, "--rebuild" in args, "--backfill" in args
     data = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {"countries": {}}
     store, log = {}, []
     for code, (country, pres, _, since, _, _) in PRESIDENTS.items():
@@ -458,7 +491,7 @@ def main():
                     added += add(code, p, store, log)
         names = {c: v[2] for c, v in PRESIDENTS.items()}
         have_all = {p.get("source") for v in store.values() for p in v}
-        for code, p in latam_sources.run_regional(names, STOPPERS, have_all, log):
+        for code, p in latam_sources.run_regional(names, STOPPERS, have_all, log, backfill):
             if p["date"] >= PRESIDENTS[code][3]:
                 added += add(code, p, store, log)
         pool, seen = [], set()
@@ -469,10 +502,33 @@ def main():
                     seen.add(k); pool.append(it)
         for code in PRESIDENTS:
             take(fetch(code, "365d"))     # Google News returns ≤100 items per query; dedupe handles overlap
+        hist = []
+        if backfill:
+            today = datetime.date.today()
+            for code in BACKFILL:
+                start = max(datetime.date.fromisoformat(PRESIDENTS[code][3]), today - datetime.timedelta(days=730))
+                a = start
+                n0 = len(pool)
+                while a < today:
+                    b = min(a + datetime.timedelta(days=61), today + datetime.timedelta(days=1))
+                    got = fetch_range(code, a.isoformat(), b.isoformat())
+                    take(got)
+                    hist.extend(got)
+                    a = b
+                log.append(f"  · backfill Google News {code}: {len(pool) - n0} new headlines since {start}")
         thin = any(len(v) < 4 for v in store.values())
         for q, gl in RANK_QUERIES:
             take(fetch_query(q, "365d", gl))
         log.append(f"  · Google News: {len(pool)} unique articles read")
+        if backfill:
+            try:
+                import latam_articles
+                for code, p in latam_articles.backfill(PRESIDENTS, store, log, hist, BACKFILL, key, find_firm, first,
+                                                       APPROVE, DISAPPROVE, REGIONAL):
+                    if p["date"] >= PRESIDENTS[code][3]:
+                        added += add(code, p, store, log)
+            except Exception as e:
+                log.append(f"  · backfill articles: failed ({e})")
         # full-text reading of press articles (polls described inside the article, not in the headline)
         try:
             import latam_articles

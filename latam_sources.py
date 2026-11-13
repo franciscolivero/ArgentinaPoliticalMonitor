@@ -573,17 +573,26 @@ CB_COUNTRY = {"mexico": "MX", "el salvador": "SV", "brasil": "BR", "ecuador": "E
 PCT_RE = re.compile(r"(\d{1,2}[.,]\d)\s*%")
 
 
-def _cb_posts(log):
+def _cb_posts(log, backfill=False):
+    """Monthly presidential rankings: 'ranking presidentes de Latinoamérica' (2026 on, 18 countries)
+    and, for backfill, the older 'ranking presidentes de Sudamérica' (2024–25, South America only)."""
     import requests
-    try:
-        r = requests.get(CB_SEARCH, params={"search": "ranking presidentes latinoamerica", "per_page": 6,
-                                            "_fields": "link,date,title,content"}, timeout=40, headers=UA)
-        r.raise_for_status()
-        return [(p["link"], p["date"][:10], p["content"]["rendered"]) for p in r.json()
-                if "ranking" in p["link"] and "presidentes" in p["link"]]
-    except Exception as e:
-        log.append(f"  · CB Global Data listing failed ({e})")
-        return []
+    searches = ["ranking presidentes latinoamerica"] + (["ranking presidentes sudamerica",
+                                                          "ranking de presidentes sudamericanos"] if backfill else [])
+    out, seen = [], set()
+    for q in searches:
+        try:
+            r = requests.get(CB_SEARCH, params={"search": q, "per_page": 100 if backfill else 6,
+                                                "_fields": "link,date,title,content"}, timeout=60, headers=UA)
+            r.raise_for_status()
+            for p in r.json():
+                l = p["link"]
+                if "ranking" in l and "presidentes" in l and "alcaldes" not in l and l not in seen:
+                    seen.add(l)
+                    out.append((l, p["date"][:10], p["content"]["rendered"]))
+        except Exception as e:
+            log.append(f"  · CB Global Data listing failed ({e})")
+    return out
 
 
 def _cb_pdf(content):
@@ -690,11 +699,11 @@ def _cb_text_pages(blob):
         signal.alarm(0)
 
 
-def src_cbglobal(names, stoppers, have_sources, log):
+def src_cbglobal(names, stoppers, have_sources, log, backfill=False):
     out = []
-    for link, pub, content in _cb_posts(log):
-        # only recent rankings: older ones are already in the data (or in the seed)
-        if link in have_sources or (datetime.date.today() - datetime.date.fromisoformat(pub)).days > 40:
+    for link, pub, content in _cb_posts(log, backfill):
+        # daily: only recent rankings; backfill: every ranking CB has published
+        if link in have_sources or (not backfill and (datetime.date.today() - datetime.date.fromisoformat(pub)).days > 40):
             continue
         try:
             blob = _cb_pdf(content)
@@ -756,7 +765,7 @@ def src_cbglobal(names, stoppers, have_sources, log):
     return out
 
 
-def run_regional(names, stoppers, have_sources, log):
+def run_regional(names, stoppers, have_sources, log, backfill=False):
     return (_safe(src_mitofsky, "Mitofsky", log, names, stoppers, have_sources, log) +
             _safe(src_cidgallup, "CID Gallup", log, names, stoppers, have_sources, log) +
-            _safe(src_cbglobal, "CB Global Data", log, names, stoppers, have_sources, log))
+            _safe(src_cbglobal, "CB Global Data", log, names, stoppers, have_sources, log, backfill))

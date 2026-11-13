@@ -31,7 +31,7 @@ from xml.etree import ElementTree as ET
 
 HERE = pathlib.Path(__file__).parent
 SEEN = HERE / "latam_articles_seen.json"
-LOOKBACK, KEEP_SEEN, BUDGET = 45, 75, 8 * 60
+LOOKBACK, KEEP_SEEN, BUDGET = 60, 400, 8 * 60
 CAP = {"BR": 6, "CL": 6, "MX": 6}
 BING = "https://www.bing.com/news/search?q={q}&format=rss&setlang={lang}&cc={cc}"
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -192,4 +192,75 @@ def harvest(presidents, store, log, key, find_firm, first, approve, disapprove, 
     except Exception:
         pass
     log.append(f"  · articles: {read} articles read in {time.time() - t0:.0f}s")
+    return results
+
+
+def _decode(link):
+    if "news.google.com" not in link:
+        return link
+    try:
+        from googlenewsdecoder import gnewsdecoder
+        d = gnewsdecoder(link)
+        return d.get("decoded_url") if d.get("status") else None
+    except Exception:
+        return None
+
+
+def backfill(presidents, store, log, pool, codes, key, find_firm, first, approve, disapprove, regional,
+             cap=40, budget=30 * 60):
+    """History: read the articles behind Google News items from past months (pool) for `codes`.
+    Google links are decoded one by one, so each country is capped at `cap` articles."""
+    from fetch_runoff_matchups import fieldwork_end
+    seen = {}
+    try:
+        seen = json.loads(SEEN.read_text(encoding="utf-8"))
+    except Exception:
+        pass
+    today = datetime.date.today()
+    have = {p.get("source") for v in store.values() for p in v}
+    t0, results, read = time.time(), [], 0
+    for code in sorted(codes, key=lambda c: len(store.get(c, []))):
+        if time.time() - t0 > budget:
+            log.append("  · backfill articles: time budget reached")
+            break
+        tokens, since = presidents[code][2], presidents[code][3]
+        cands = []
+        for it in pool:
+            kt = " " + key(it["title"]) + " "
+            if it["pub"].isoformat() < since or not any(f" {key(t)} " in kt for t in tokens):
+                continue
+            if not TITLE_OK.search(it["title"]) or it["link"] in seen or it["link"] in have:
+                continue
+            cands.append(it)
+        cands.sort(key=lambda it: it["pub"], reverse=True)
+        n_new, n_read = 0, 0
+        for it in cands:
+            if n_read >= cap or time.time() - t0 > budget:
+                break
+            seen[it["link"]] = today.isoformat()
+            url = _decode(it["link"])
+            if not url or url in have:
+                continue
+            try:
+                text = it["title"] + "\n" + _text(url)
+            except Exception:
+                continue
+            n_read += 1
+            read += 1
+            near = [p["approve"] for p in store.get(code, [])
+                    if abs((datetime.date.fromisoformat(p["date"]) - it["pub"]).days) <= 90]
+            med = statistics.median(near) if len(near) >= 3 else None
+            for p in parse_article(code, it["title"], text, it["pub"], presidents, key, find_firm, first,
+                                   approve, disapprove, regional, fieldwork_end):
+                if med is not None and abs(p["approve"] - med) > 18:
+                    continue
+                p["source"] = url
+                results.append((code, p))
+                n_new += 1
+        log.append(f"  · backfill articles {code}: {n_read} read, {n_new} poll reading(s)")
+    try:
+        SEEN.write_text(json.dumps(seen, indent=0, sort_keys=True), encoding="utf-8")
+    except Exception:
+        pass
+    log.append(f"  · backfill articles: {read} read in {time.time() - t0:.0f}s")
     return results
