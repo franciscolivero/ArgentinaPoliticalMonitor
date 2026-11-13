@@ -46,7 +46,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           if [ -n "$(git status --porcelain latam_approval.json latam_log.txt)" ]; then
-            git add latam_approval.json latam_log.txt
+            git add latam_approval.json latam_log.txt latam_articles_seen.json 2>/dev/null || git add latam_approval.json latam_log.txt
             git commit -m "Update Latin America approval ($(date -u +%Y-%m-%d))"
             git pull --rebase
             git push
