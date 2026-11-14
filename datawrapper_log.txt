@@ -1,25 +1,33 @@
-24/24 charts published
-  ✓ ar-runoff: https://datawrapper.dwcdn.net/DG8e6/27/
-  ✓ ar-espacio: https://datawrapper.dwcdn.net/6mul2/27/
-  ✓ ar-alianza: https://datawrapper.dwcdn.net/h9457/27/
-  ✓ ar-approval: https://datawrapper.dwcdn.net/KF748/27/
-  ✓ ar-icg: https://datawrapper.dwcdn.net/oF6mg/27/
-  ✓ ar-icg-comp: https://datawrapper.dwcdn.net/eoZvu/27/
-  ✓ ar-icg-pres: https://datawrapper.dwcdn.net/W9JHs/27/
-  ✓ ar-icg-votes: https://datawrapper.dwcdn.net/b2IuX/27/
-  ✓ ar-polymarket: https://datawrapper.dwcdn.net/9p7Rn/27/
-  ✓ ar-governors: https://datawrapper.dwcdn.net/Otsj8/27/
-  ✓ ar-forecast: https://datawrapper.dwcdn.net/aXRSz/17/
-  ✓ latam-ranking: https://datawrapper.dwcdn.net/qkV1I/27/
-  ✓ latam-sv: https://datawrapper.dwcdn.net/wUZbw/27/
-  ✓ latam-mx: https://datawrapper.dwcdn.net/DZCj3/27/
-  ✓ latam-co: https://datawrapper.dwcdn.net/GPHp7/27/
-  ✓ latam-br: https://datawrapper.dwcdn.net/cMoms/27/
-  ✓ latam-ec: https://datawrapper.dwcdn.net/JgScd/27/
-  ✓ latam-hn: https://datawrapper.dwcdn.net/STQUw/3/
-  ✓ latam-pe: https://datawrapper.dwcdn.net/ThsOX/27/
-  ✓ latam-cl: https://datawrapper.dwcdn.net/ykR5W/27/
-  ✓ latam-pa: https://datawrapper.dwcdn.net/J8NTB/27/
-  ✓ latam-bo: https://datawrapper.dwcdn.net/jXv7V/26/
-  ✓ latam-ve: https://datawrapper.dwcdn.net/8PQRI/27/
-  ✓ latam-gt: https://datawrapper.dwcdn.net/TsQAm/27/
+28/28 charts published
+  ✓ ar-runoff: https://datawrapper.dwcdn.net/DG8e6/28/
+  ✓ ar-espacio: https://datawrapper.dwcdn.net/6mul2/28/
+  ✓ ar-alianza: https://datawrapper.dwcdn.net/h9457/28/
+  ✓ ar-approval: https://datawrapper.dwcdn.net/KF748/28/
+  ✓ ar-icg: https://datawrapper.dwcdn.net/oF6mg/28/
+  ✓ ar-icg-comp: https://datawrapper.dwcdn.net/eoZvu/28/
+  ✓ ar-icg-pres: https://datawrapper.dwcdn.net/W9JHs/28/
+  ✓ ar-icg-votes: https://datawrapper.dwcdn.net/b2IuX/28/
+  ✓ ar-polymarket: https://datawrapper.dwcdn.net/9p7Rn/28/
+  ✓ ar-governors: https://datawrapper.dwcdn.net/Otsj8/28/
+  ✓ ar-forecast: https://datawrapper.dwcdn.net/aXRSz/18/
+  ✓ latam-ranking: https://datawrapper.dwcdn.net/qkV1I/28/
+  ✓ latam-sv: https://datawrapper.dwcdn.net/wUZbw/28/
+  ✓ latam-mx: https://datawrapper.dwcdn.net/DZCj3/28/
+  + created latam-cr → 6yBVe
+  ✓ latam-cr: https://datawrapper.dwcdn.net/6yBVe/1/
+  + created latam-do → s9LlW
+  ✓ latam-do: https://datawrapper.dwcdn.net/s9LlW/1/
+  ✓ latam-co: https://datawrapper.dwcdn.net/GPHp7/28/
+  ✓ latam-br: https://datawrapper.dwcdn.net/cMoms/28/
+  ✓ latam-ec: https://datawrapper.dwcdn.net/JgScd/28/
+  ✓ latam-hn: https://datawrapper.dwcdn.net/STQUw/4/
+  ✓ latam-pe: https://datawrapper.dwcdn.net/ThsOX/28/
+  ✓ latam-pa: https://datawrapper.dwcdn.net/J8NTB/28/
+  ✓ latam-ve: https://datawrapper.dwcdn.net/8PQRI/28/
+  ✓ latam-cl: https://datawrapper.dwcdn.net/ykR5W/28/
+  ✓ latam-bo: https://datawrapper.dwcdn.net/jXv7V/27/
+  ✓ latam-gt: https://datawrapper.dwcdn.net/TsQAm/28/
+  + created latam-uy → ahX12
+  ✓ latam-uy: https://datawrapper.dwcdn.net/ahX12/1/
+  + created latam-py → p9W3F
+  ✓ latam-py: https://datawrapper.dwcdn.net/p9W3F/1/
