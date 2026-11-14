@@ -1,0 +1,813 @@
+{
+ "updated": "2026-11-14",
+ "features": [
+  "approval",
+  "running"
+ ],
+ "lambda": 3,
+ "lambda_grid_logloss": {
+  "0.1": 0.5052,
+  "0.3": 0.5028,
+  "1": 0.4976,
+  "3": 0.4949,
+  "10": 0.5118,
+  "30": 0.5594
+ },
+ "coef": {
+  "intercept": -2.6271195906735696,
+  "slopes": [
+   0.04746785385607956,
+   1.7008934309156631
+  ]
+ },
+ "n": 78,
+ "base_rate": 0.449,
+ "loo": {
+  "brier": 0.1569,
+  "logloss": 0.4949,
+  "accuracy": 0.8205,
+  "brier_baseline": 0.2474
+ },
+ "training": [
+  {
+   "country": "Argentina",
+   "iso": "AR",
+   "date": "2007-10-28",
+   "approval": 51.7,
+   "lb_wave": 2007,
+   "running": 0,
+   "won": 1,
+   "p_loo": 0.443
+  },
+  {
+   "country": "Argentina",
+   "iso": "AR",
+   "date": "2011-10-23",
+   "approval": 57.1,
+   "lb_wave": 2011,
+   "running": 1,
+   "won": 1,
+   "p_loo": 0.85
+  },
+  {
+   "country": "Argentina",
+   "iso": "AR",
+   "date": "2015-10-25",
+   "approval": 42.1,
+   "lb_wave": 2015,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.355
+  },
+  {
+   "country": "Argentina",
+   "iso": "AR",
+   "date": "2019-10-27",
+   "approval": 23.1,
+   "lb_wave": 2018,
+   "running": 1,
+   "won": 0,
+   "p_loo": 0.623
+  },
+  {
+   "country": "Argentina",
+   "iso": "AR",
+   "date": "2023-10-22",
+   "approval": 20.2,
+   "lb_wave": 2023,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.163
+  },
+  {
+   "country": "Bolivia",
+   "iso": "BO",
+   "date": "2002-06-30",
+   "approval": 42.1,
+   "lb_wave": 2002,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.355
+  },
+  {
+   "country": "Bolivia",
+   "iso": "BO",
+   "date": "2009-12-06",
+   "approval": 57.2,
+   "lb_wave": 2009,
+   "running": 1,
+   "won": 1,
+   "p_loo": 0.851
+  },
+  {
+   "country": "Bolivia",
+   "iso": "BO",
+   "date": "2014-10-12",
+   "approval": 55.2,
+   "lb_wave": 2013,
+   "running": 1,
+   "won": 1,
+   "p_loo": 0.838
+  },
+  {
+   "country": "Bolivia",
+   "iso": "BO",
+   "date": "2025-08-17",
+   "approval": 46.3,
+   "lb_wave": 2023,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.403
+  },
+  {
+   "country": "Brazil",
+   "iso": "BR",
+   "date": "2002-10-06",
+   "approval": 33.5,
+   "lb_wave": 2002,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.267
+  },
+  {
+   "country": "Brazil",
+   "iso": "BR",
+   "date": "2006-10-01",
+   "approval": 47.4,
+   "lb_wave": 2005,
+   "running": 1,
+   "won": 1,
+   "p_loo": 0.778
+  },
+  {
+   "country": "Brazil",
+   "iso": "BR",
+   "date": "2010-10-03",
+   "approval": 86.6,
+   "lb_wave": 2010,
+   "running": 0,
+   "won": 1,
+   "p_loo": 0.805
+  },
+  {
+   "country": "Brazil",
+   "iso": "BR",
+   "date": "2014-10-05",
+   "approval": 56.1,
+   "lb_wave": 2013,
+   "running": 1,
+   "won": 1,
+   "p_loo": 0.844
+  },
+  {
+   "country": "Brazil",
+   "iso": "BR",
+   "date": "2018-10-07",
+   "approval": 5.6,
+   "lb_wave": 2018,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.088
+  },
+  {
+   "country": "Brazil",
+   "iso": "BR",
+   "date": "2022-10-02",
+   "approval": 42.0,
+   "lb_wave": 2020,
+   "running": 1,
+   "won": 0,
+   "p_loo": 0.802
+  },
+  {
+   "country": "Chile",
+   "iso": "CL",
+   "date": "2005-12-11",
+   "approval": 65.5,
+   "lb_wave": 2005,
+   "running": 0,
+   "won": 1,
+   "p_loo": 0.601
+  },
+  {
+   "country": "Chile",
+   "iso": "CL",
+   "date": "2009-12-13",
+   "approval": 84.6,
+   "lb_wave": 2009,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.856
+  },
+  {
+   "country": "Chile",
+   "iso": "CL",
+   "date": "2013-11-17",
+   "approval": 28.9,
+   "lb_wave": 2013,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.227
+  },
+  {
+   "country": "Chile",
+   "iso": "CL",
+   "date": "2017-11-19",
+   "approval": 33.4,
+   "lb_wave": 2017,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.266
+  },
+  {
+   "country": "Chile",
+   "iso": "CL",
+   "date": "2021-11-21",
+   "approval": 15.0,
+   "lb_wave": 2020,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.131
+  },
+  {
+   "country": "Chile",
+   "iso": "CL",
+   "date": "2025-11-16",
+   "approval": 42.8,
+   "lb_wave": 2023,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.363
+  },
+  {
+   "country": "Colombia",
+   "iso": "CO",
+   "date": "2006-05-28",
+   "approval": 69.4,
+   "lb_wave": 2005,
+   "running": 1,
+   "won": 1,
+   "p_loo": 0.912
+  },
+  {
+   "country": "Colombia",
+   "iso": "CO",
+   "date": "2010-05-30",
+   "approval": 72.2,
+   "lb_wave": 2009,
+   "running": 0,
+   "won": 1,
+   "p_loo": 0.674
+  },
+  {
+   "country": "Colombia",
+   "iso": "CO",
+   "date": "2014-05-25",
+   "approval": 52.6,
+   "lb_wave": 2013,
+   "running": 1,
+   "won": 1,
+   "p_loo": 0.82
+  },
+  {
+   "country": "Colombia",
+   "iso": "CO",
+   "date": "2018-05-27",
+   "approval": 13.7,
+   "lb_wave": 2017,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.124
+  },
+  {
+   "country": "Colombia",
+   "iso": "CO",
+   "date": "2022-05-29",
+   "approval": 41.2,
+   "lb_wave": 2020,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.345
+  },
+  {
+   "country": "Colombia",
+   "iso": "CO",
+   "date": "2026-05-31",
+   "approval": 43.5,
+   "lb_wave": 2023,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.371
+  },
+  {
+   "country": "Costa Rica",
+   "iso": "CR",
+   "date": "2006-02-05",
+   "approval": 32.4,
+   "lb_wave": 2005,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.257
+  },
+  {
+   "country": "Costa Rica",
+   "iso": "CR",
+   "date": "2010-02-07",
+   "approval": 75.4,
+   "lb_wave": 2009,
+   "running": 0,
+   "won": 1,
+   "p_loo": 0.706
+  },
+  {
+   "country": "Costa Rica",
+   "iso": "CR",
+   "date": "2014-02-02",
+   "approval": 21.7,
+   "lb_wave": 2013,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.173
+  },
+  {
+   "country": "Costa Rica",
+   "iso": "CR",
+   "date": "2018-02-04",
+   "approval": 49.8,
+   "lb_wave": 2017,
+   "running": 0,
+   "won": 1,
+   "p_loo": 0.421
+  },
+  {
+   "country": "Costa Rica",
+   "iso": "CR",
+   "date": "2022-02-06",
+   "approval": 13.8,
+   "lb_wave": 2020,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.125
+  },
+  {
+   "country": "Costa Rica",
+   "iso": "CR",
+   "date": "2026-02-01",
+   "approval": 65.0,
+   "lb_wave": 2023,
+   "running": 0,
+   "won": 1,
+   "p_loo": 0.596
+  },
+  {
+   "country": "Dominican Republic",
+   "iso": "DO",
+   "date": "2008-05-16",
+   "approval": 46.4,
+   "lb_wave": 2007,
+   "running": 1,
+   "won": 1,
+   "p_loo": 0.769
+  },
+  {
+   "country": "Dominican Republic",
+   "iso": "DO",
+   "date": "2012-05-20",
+   "approval": 35.8,
+   "lb_wave": 2011,
+   "running": 0,
+   "won": 1,
+   "p_loo": 0.269
+  },
+  {
+   "country": "Dominican Republic",
+   "iso": "DO",
+   "date": "2016-05-15",
+   "approval": 81.9,
+   "lb_wave": 2015,
+   "running": 1,
+   "won": 1,
+   "p_loo": 0.951
+  },
+  {
+   "country": "Dominican Republic",
+   "iso": "DO",
+   "date": "2020-07-05",
+   "approval": 52.7,
+   "lb_wave": 2018,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.481
+  },
+  {
+   "country": "Dominican Republic",
+   "iso": "DO",
+   "date": "2024-05-19",
+   "approval": 60.3,
+   "lb_wave": 2023,
+   "running": 1,
+   "won": 1,
+   "p_loo": 0.869
+  },
+  {
+   "country": "Ecuador",
+   "iso": "EC",
+   "date": "2009-04-26",
+   "approval": 65.9,
+   "lb_wave": 2008,
+   "running": 1,
+   "won": 1,
+   "p_loo": 0.898
+  },
+  {
+   "country": "Ecuador",
+   "iso": "EC",
+   "date": "2013-02-17",
+   "approval": 64.3,
+   "lb_wave": 2011,
+   "running": 1,
+   "won": 1,
+   "p_loo": 0.89
+  },
+  {
+   "country": "Ecuador",
+   "iso": "EC",
+   "date": "2017-02-19",
+   "approval": 39.7,
+   "lb_wave": 2016,
+   "running": 0,
+   "won": 1,
+   "p_loo": 0.309
+  },
+  {
+   "country": "Ecuador",
+   "iso": "EC",
+   "date": "2021-02-07",
+   "approval": 8.5,
+   "lb_wave": 2020,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.1
+  },
+  {
+   "country": "El Salvador",
+   "iso": "SV",
+   "date": "2004-03-21",
+   "approval": 48.1,
+   "lb_wave": 2003,
+   "running": 0,
+   "won": 1,
+   "p_loo": 0.402
+  },
+  {
+   "country": "El Salvador",
+   "iso": "SV",
+   "date": "2009-03-15",
+   "approval": 50.5,
+   "lb_wave": 2008,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.454
+  },
+  {
+   "country": "El Salvador",
+   "iso": "SV",
+   "date": "2014-02-02",
+   "approval": 66.4,
+   "lb_wave": 2013,
+   "running": 0,
+   "won": 1,
+   "p_loo": 0.611
+  },
+  {
+   "country": "El Salvador",
+   "iso": "SV",
+   "date": "2019-02-03",
+   "approval": 21.8,
+   "lb_wave": 2018,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.173
+  },
+  {
+   "country": "El Salvador",
+   "iso": "SV",
+   "date": "2024-02-04",
+   "approval": 89.7,
+   "lb_wave": 2023,
+   "running": 1,
+   "won": 1,
+   "p_loo": 0.966
+  },
+  {
+   "country": "Guatemala",
+   "iso": "GT",
+   "date": "2003-11-09",
+   "approval": 14.8,
+   "lb_wave": 2003,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.13
+  },
+  {
+   "country": "Guatemala",
+   "iso": "GT",
+   "date": "2007-09-09",
+   "approval": 44.9,
+   "lb_wave": 2006,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.387
+  },
+  {
+   "country": "Guatemala",
+   "iso": "GT",
+   "date": "2011-09-11",
+   "approval": 43.5,
+   "lb_wave": 2011,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.371
+  },
+  {
+   "country": "Guatemala",
+   "iso": "GT",
+   "date": "2019-06-16",
+   "approval": 25.3,
+   "lb_wave": 2018,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.198
+  },
+  {
+   "country": "Guatemala",
+   "iso": "GT",
+   "date": "2023-06-25",
+   "approval": 20.9,
+   "lb_wave": 2023,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.167
+  },
+  {
+   "country": "Honduras",
+   "iso": "HN",
+   "date": "2005-11-27",
+   "approval": 38.6,
+   "lb_wave": 2005,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.317
+  },
+  {
+   "country": "Honduras",
+   "iso": "HN",
+   "date": "2009-11-29",
+   "approval": 43.7,
+   "lb_wave": 2009,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.373
+  },
+  {
+   "country": "Honduras",
+   "iso": "HN",
+   "date": "2013-11-24",
+   "approval": 32.3,
+   "lb_wave": 2013,
+   "running": 0,
+   "won": 1,
+   "p_loo": 0.236
+  },
+  {
+   "country": "Honduras",
+   "iso": "HN",
+   "date": "2017-11-26",
+   "approval": 48.9,
+   "lb_wave": 2017,
+   "running": 1,
+   "won": 1,
+   "p_loo": 0.791
+  },
+  {
+   "country": "Honduras",
+   "iso": "HN",
+   "date": "2021-11-28",
+   "approval": 18.3,
+   "lb_wave": 2020,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.151
+  },
+  {
+   "country": "Honduras",
+   "iso": "HN",
+   "date": "2025-11-30",
+   "approval": 36.4,
+   "lb_wave": 2023,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.295
+  },
+  {
+   "country": "Mexico",
+   "iso": "MX",
+   "date": "2006-07-02",
+   "approval": 41.3,
+   "lb_wave": 2005,
+   "running": 0,
+   "won": 1,
+   "p_loo": 0.326
+  },
+  {
+   "country": "Mexico",
+   "iso": "MX",
+   "date": "2012-07-01",
+   "approval": 59.4,
+   "lb_wave": 2011,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.568
+  },
+  {
+   "country": "Mexico",
+   "iso": "MX",
+   "date": "2018-07-01",
+   "approval": 18.1,
+   "lb_wave": 2018,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.149
+  },
+  {
+   "country": "Mexico",
+   "iso": "MX",
+   "date": "2024-06-02",
+   "approval": 58.4,
+   "lb_wave": 2023,
+   "running": 0,
+   "won": 1,
+   "p_loo": 0.52
+  },
+  {
+   "country": "Panama",
+   "iso": "PA",
+   "date": "2004-05-02",
+   "approval": 13.7,
+   "lb_wave": 2003,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.124
+  },
+  {
+   "country": "Panama",
+   "iso": "PA",
+   "date": "2009-05-03",
+   "approval": 41.5,
+   "lb_wave": 2008,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.348
+  },
+  {
+   "country": "Panama",
+   "iso": "PA",
+   "date": "2014-05-04",
+   "approval": 42.7,
+   "lb_wave": 2013,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.362
+  },
+  {
+   "country": "Panama",
+   "iso": "PA",
+   "date": "2019-05-05",
+   "approval": 24.5,
+   "lb_wave": 2018,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.192
+  },
+  {
+   "country": "Panama",
+   "iso": "PA",
+   "date": "2024-05-05",
+   "approval": 22.2,
+   "lb_wave": 2023,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.176
+  },
+  {
+   "country": "Paraguay",
+   "iso": "PY",
+   "date": "2003-04-27",
+   "approval": 4.9,
+   "lb_wave": 2002,
+   "running": 0,
+   "won": 1,
+   "p_loo": 0.059
+  },
+  {
+   "country": "Paraguay",
+   "iso": "PY",
+   "date": "2008-04-20",
+   "approval": 16.9,
+   "lb_wave": 2007,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.142
+  },
+  {
+   "country": "Paraguay",
+   "iso": "PY",
+   "date": "2018-04-22",
+   "approval": 19.6,
+   "lb_wave": 2017,
+   "running": 0,
+   "won": 1,
+   "p_loo": 0.134
+  },
+  {
+   "country": "Paraguay",
+   "iso": "PY",
+   "date": "2023-04-30",
+   "approval": 17.8,
+   "lb_wave": 2023,
+   "running": 0,
+   "won": 1,
+   "p_loo": 0.122
+  },
+  {
+   "country": "Uruguay",
+   "iso": "UY",
+   "date": "2004-10-31",
+   "approval": 12.1,
+   "lb_wave": 2004,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.116
+  },
+  {
+   "country": "Uruguay",
+   "iso": "UY",
+   "date": "2009-10-25",
+   "approval": 73.5,
+   "lb_wave": 2009,
+   "running": 0,
+   "won": 1,
+   "p_loo": 0.687
+  },
+  {
+   "country": "Uruguay",
+   "iso": "UY",
+   "date": "2014-10-26",
+   "approval": 60.7,
+   "lb_wave": 2013,
+   "running": 0,
+   "won": 1,
+   "p_loo": 0.547
+  },
+  {
+   "country": "Uruguay",
+   "iso": "UY",
+   "date": "2019-10-27",
+   "approval": 40.9,
+   "lb_wave": 2018,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.342
+  },
+  {
+   "country": "Uruguay",
+   "iso": "UY",
+   "date": "2024-10-27",
+   "approval": 49.4,
+   "lb_wave": 2023,
+   "running": 0,
+   "won": 0,
+   "p_loo": 0.44
+  },
+  {
+   "country": "Venezuela",
+   "iso": "VE",
+   "date": "2006-12-03",
+   "approval": 64.7,
+   "lb_wave": 2006,
+   "running": 1,
+   "won": 1,
+   "p_loo": 0.892
+  },
+  {
+   "country": "Venezuela",
+   "iso": "VE",
+   "date": "2012-10-07",
+   "approval": 49.4,
+   "lb_wave": 2011,
+   "running": 1,
+   "won": 1,
+   "p_loo": 0.795
+  }
+ ]
+}
