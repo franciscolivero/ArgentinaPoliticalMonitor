@@ -1,11 +1,11 @@
-run 2026-11-13 22:29 UTC · 7 new poll(s)
+run 2026-11-14 17:02 UTC · 3 new poll(s)
 
-CL Chile        179 polls  manual 12, news 58, pollster 11, wikipedia 98
+CL Chile        180 polls  manual 12, news 59, pollster 11, wikipedia 98
 BO Bolivia       23 polls  manual 13, news 10
 PE Peru          22 polls  manual 13, news 9
 CO Colombia      11 polls  manual 8, news 3
 VE Venezuela     15 polls  manual 13, news 2
-MX Mexico        98 polls  manual 20, news 33, news-ranking 1, wikipedia 44
+MX Mexico        99 polls  manual 20, news 33, news-ranking 1, wikipedia 45
 EC Ecuador       35 polls  manual 11, news 10, wikipedia 14
 SV El Salvador   31 polls  manual 17, news 7, pollster 1, wikipedia 6
 PA Panama        14 polls  manual 14
@@ -44,82 +44,24 @@ log:
   · CL Criteria: no validated figure in Agenda_Criteria_13_Septiembre_2026_9dGv2.pdf
   · CL Criteria: no validated figure in Agenda_Criteria_20_Septiembre_2026_9eBc3.pdf
   · CL Criteria: 6 new wave(s) from 29 unread PDF(s)
-  · MX Wikipedia Opinion_polling_on_the_Sheinbaum_presidency: 51 rows
+  · MX Wikipedia Opinion_polling_on_the_Sheinbaum_presidency: 52 rows
+  + MX AtlasIntel ≈2026-11-09: 57.9/33.8 [wikipedia]
   · EC Wikipedia (es) Segundo_gobierno_de_Daniel_Noboa: 14 rows
   · SV Wikipedia Opinion_polling_on_the_Nayib_Bukele_presidency: 25 rows
   · GT Wikipedia (es) Bernardo_Arévalo: 3 rows
   · UY Wikipedia (es) Gobierno_de_Yamandú_Orsi: 29 rows
   · CID Gallup SV 2026-10-27: 94.0%
   · CID Gallup CR 2026-08-17: 74.0%
-  · CB Global Data listing failed (429 Client Error: Too Many Requests for url: https://cbglobaldata.com/wp-json/wp/v2/posts?search=ranking+de+presidentes+sudamericanos&per_page=100&_fields=link%2Cdate%2Ctitle%2Ccontent)
-  · CB Global Data 2026-10: 3 presidents this month (summary only), 0 with last month's figure
-  · CB Global Data 2026-09: 2 presidents this month (summary only), 0 with last month's figure
-  · CB Global Data 2026-08: 2 presidents this month (summary only), 0 with last month's figure
-  · CB https://cbglobaldata.com/julio-2026-ranking-presidentes-de-latinoamerica/: ranking page not found
-  · CB https://cbglobaldata.com/junio-2026-ranking-presidentes-de-latinoamerica/: ranking page not found
-  · CB https://cbglobaldata.com/mayo-2026-ranking-presidentes-de-latinoamerica/: ranking page not found
-  · CB https://cbglobaldata.com/abril-2026-ranking-presidentes-de-latinoamerica/: ranking page not found
-  · CB https://cbglobaldata.com/marzo-2026-ranking-presidentes-de-latinoamerica/: ranking page not found
-  · CB https://cbglobaldata.com/febrero-2026-ranking-presidentes-de-latinoamerica/: ranking page not found
-  · CB https://cbglobaldata.com/diciembre-2025-ranking-presidentes-de-sudamerica/: ranking page not found
-  · CB https://cbglobaldata.com/noviembre-2025-ranking-presidentes-de-sudamerica/: ranking page not found
-  · CB https://cbglobaldata.com/octubre-2025-ranking-presidentes-de-sudamerica-ranking-ministros-nac-pais-por-pais/: ranking page not found
-  · CB https://cbglobaldata.com/septiembre-2025-ranking-presidentes-de-sudamerica-ranking-ministros-nac-pais-por-pais/: no PDF found
-  · CB https://cbglobaldata.com/agosto-2025-ranking-presidentes-de-sudamerica-ranking-ministros-nac-pais-por-pais/: no PDF found
-  · CB https://cbglobaldata.com/julio-2025-ranking-presidentes-de-sudamerica/: no PDF found
-  · CB https://cbglobaldata.com/junio-2025-ranking-presidentes-de-sudamerica/: no PDF found
-  · CB https://cbglobaldata.com/ranking-presidentes-de-sudamerica-mayo-2025/: no PDF found
-  · CB https://cbglobaldata.com/abril-2025-ranking-presidentes-de-sudamerica-ranking-de-parlamentarios-pais-por-pais/: no PDF found
-  · CB https://cbglobaldata.com/ranking-presidentes-de-sudamerica-ranking-de-parlamentarios-pais-por-pais-marzo-2025/: no PDF found
-  · CB https://cbglobaldata.com/ranking-presidentes-de-sudamerica-febrero-2025/: no PDF found
-  · CB https://cbglobaldata.com/ranking-presidentes-de-sudamerica-diciembre-2024/: no PDF found
-  · CB https://cbglobaldata.com/ranking-presidentes-de-sudamerica-ranking-de-parlamentarios-pais-por-pais-noviembre-2024/: no PDF found
-  · CB https://cbglobaldata.com/septiembre-2024-ranking-de-presidentes-sudamericanos/: no PDF found
-  · CB https://cbglobaldata.com/agosto-2024-ranking-de-presidentes-sudamericanos/: no PDF found
-  · CB https://cbglobaldata.com/julio-2024-ranking-de-presidentes-sudamericanos/: no PDF found
-  · CB https://cbglobaldata.com/ranking-presidentes-de-sudamerica-junio-2024/: no PDF found
-  · CB https://cbglobaldata.com/ranking-presidentes-de-sudamerica-e-imagen-de-principales-politicos-nacionales-pais-por-pais-mayo-2024/: no PDF found
-  · CB https://cbglobaldata.com/ranking-presidentes-de-sudamerica-e-imagen-de-principales-politicos-nacionales-pais-por-pais-abril-2024/: no PDF found
-  · CB https://cbglobaldata.com/ranking-de-presidentes-sudamericanos-e-imagen-de-principales-politicos-nacionales-pais-por-pais-marzo-2024/: no PDF found
-  · backfill Google News CO: 42 new headlines since 2026-08-07
-  · backfill Google News PE: 54 new headlines since 2026-07-28
-  · backfill Google News CR: 84 new headlines since 2026-05-08
-  · backfill Google News DO: 78 new headlines since 2024-11-13
-  · backfill Google News GT: 46 new headlines since 2024-11-13
-  · backfill Google News HN: 68 new headlines since 2026-01-27
-  · backfill Google News PA: 24 new headlines since 2024-11-13
-  · backfill Google News PY: 257 new headlines since 2024-11-13
-  · backfill Google News BO: 91 new headlines since 2025-11-08
-  · backfill Google News EC: 167 new headlines since 2025-05-24
-  · backfill Google News VE: 111 new headlines since 2026-01-05
-  · backfill Google News SV: 205 new headlines since 2024-11-13
-  · backfill Google News UY: 251 new headlines since 2025-03-01
-  · Google News: 3426 unique articles read
-  · backfill articles HN: 0 read, 0 poll reading(s)
-  · backfill articles CO: 0 read, 0 poll reading(s)
-  · backfill articles PY: 0 read, 0 poll reading(s)
-  · backfill articles CR: 0 read, 0 poll reading(s)
-  · backfill articles PA: 0 read, 0 poll reading(s)
-  · backfill articles GT: 0 read, 0 poll reading(s)
-  · backfill articles VE: 0 read, 0 poll reading(s)
-  · backfill articles DO: 0 read, 0 poll reading(s)
-  · backfill articles PE: 0 read, 0 poll reading(s)
-  · backfill articles BO: 0 read, 0 poll reading(s)
-  · backfill articles SV: 0 read, 0 poll reading(s)
-  · backfill articles EC: 0 read, 0 poll reading(s)
-  · backfill articles UY: 0 read, 0 poll reading(s)
-  · backfill articles: 0 read in 254s
-  · articles BO: skipped Ipsos Ciesmori 16.0% (far from recent median 36.1)
-  · articles BO: 1 read, 0 poll reading(s)
-  · articles UY: 1 read, 1 poll reading(s)
-  · articles MX: 6 read, 0 poll reading(s)
+  · CB Global Data listing failed (404 Client Error: Not Found for url: https://cbglobaldata.com/wp-json/wp/v2/posts?search=ranking+presidentes+latinoamerica&per_page=6&_fields=link%2Cdate%2Ctitle%2Ccontent)
+  · Google News: 1882 unique articles read
+  · articles CO: 3 read, 0 poll reading(s)
+  · articles PE: 2 read, 0 poll reading(s)
+  · articles BO: 2 read, 0 poll reading(s)
+  · articles MX: 1 read, 0 poll reading(s)
+  · articles BR: 5 read, 2 poll reading(s)
+  · articles CL: skipped Criteria 67.0% (far from recent median 36.0)
   · articles CL: 6 read, 4 poll reading(s)
-  · articles: 10 articles read in 31s
-  + CL Pulso Ciudadano ≈2026-10-30: 25.0/65.0 [news]
-  + DO Rd Elige ≈2025-02-15: 66.8/None [news]
-  + UY Equipos Consultores ≈2025-03-03: 61.0/None [news]
-  + SV CID Gallup ≈2025-05-24: 85.0/None [news]
-  + MX Pollster not named (press) ≈2025-08-28: 70.0/None [news]
-  + DO Rd Elige ≈2026-09-24: 50.3/None [news]
+  · articles: 16 articles read in 39s
+  + CL Black White ≈2026-10-25: 24.0/None [news]
   + EC Pollster not named (press) ≈2026-11-06: 49.0/None [news]
   · Google News queries failed: 0
