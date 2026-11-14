@@ -78,9 +78,9 @@ def fundamentals_model():
     feats = m["features"]
 
     def f(approval, running=1):
-        x = {"approval": approval, "running": running}
+        x = {"approval": approval, "running": running, "approval_x_running": approval * running}
         z = a + sum(bi * x[k] for bi, k in zip(b, feats))
-        return 1 / (1 + math.exp(-z))
+        return min(0.97, max(0.03, 1 / (1 + math.exp(-z))))
     return f
 
 
