@@ -11,9 +11,12 @@ Training data
                           2013 (not competitive), Peru (governing parties rarely field candidates),
                           caretaker governments with no party (Bolivia 2005, Ecuador 2002/2006/2023).
   latam_lb_approval.csv   Latinobarómetro: share approving "la gestión del gobierno que encabeza el
-                          presidente", by country and year (latam_lb_extract.py). Each election
-                          takes the latest wave fielded before it (same year if the election is
-                          from September on, otherwise the year before), up to two years back.
+                          presidente", by country and wave, with fieldwork dates
+                          (latam_lb_extract.py). Each election takes the latest wave whose
+                          fieldwork ended before the vote, at most ~40 months earlier, and only if
+                          it was fielded under the same president (after the previous election and
+                          any mid-term succession, so Noboa 2025 is not judged on Lasso's approval
+                          and Bolivia 2020 not on a wave fielded after the vote).
 
 Model (machine learning with few cases)
   Ridge-penalised logistic regression: P(governing party wins) ~ approval + president running.
@@ -46,25 +49,51 @@ NEXT = {
 FEATURES = ["approval", "running"]
 
 
+# presidents who took office between elections (impeachment, resignation, snap election): a wave
+# fielded before these dates measured the previous president, so it is not used for the next vote
+SUCCESSIONS = {"EC": ["2005-04-20", "2023-11-23"], "BO": ["2003-10-17", "2005-06-09", "2019-11-12"],
+               "BR": ["2016-05-12"], "PY": ["2012-06-22"], "GT": ["2015-09-03"], "AR": ["2001-12-20"]}
+MAX_GAP_DAYS = 40 * 30      # a wave counts if its fieldwork ended at most ~40 months before the vote
+
+
 def load_training():
-    lb = {}
+    waves = {}
     with open(HERE / "latam_lb_approval.csv", encoding="utf-8") as f:
         for r in csv.DictReader(f):
-            lb[(r["iso"], int(r["year"]))] = float(r["approval"])
-    rows = []
+            waves.setdefault(r["iso"], []).append(r)
+    elections = []
     with open(HERE / "latam_elections.csv", encoding="utf-8") as f:
-        for r in csv.DictReader(f):
-            d = datetime.date.fromisoformat(r["date"])
-            first = d.year if d.month >= 9 else d.year - 1
-            appr, wave = None, None
-            for y in range(first, first - 3, -1):
-                if (r["iso"], y) in lb:
-                    appr, wave = lb[(r["iso"], y)], y
-                    break
-            if appr is None:
-                continue
-            rows.append({**r, "approval": appr, "lb_wave": wave,
-                         "running": int(r["incumbent_running"]), "won": int(r["incumbent_party_won"])})
+        elections = list(csv.DictReader(f))
+    prev = {}
+    for r in sorted(elections, key=lambda r: r["date"]):
+        r["_prev"] = prev.get(r["iso"])
+        prev[r["iso"]] = r["date"]
+    rows = []
+    for r in elections:
+        d = datetime.date.fromisoformat(r["date"])
+        # the president in office before this vote took office at the later of the previous election
+        # and any mid-term succession
+        start = max([x for x in [r["_prev"]] + SUCCESSIONS.get(r["iso"], []) if x and x < r["date"]],
+                    default="1900-01-01")
+        best = None
+        for w in waves.get(r["iso"], []):
+            if w.get("fw_end"):
+                end, beg = datetime.date.fromisoformat(w["fw_end"]), w["fw_start"]
+                if end >= d or (d - end).days > MAX_GAP_DAYS or beg < start:
+                    continue
+                key_ = w["fw_end"]
+            else:                                 # no fieldwork dates: the year rule
+                y, first = int(w["year"]), d.year if d.month >= 9 else d.year - 1
+                if not first - 2 <= y <= first:
+                    continue
+                key_ = w["year"]
+            if best is None or key_ > best[0]:
+                best = (key_, w)
+        if best is None:
+            continue
+        w = best[1]
+        rows.append({**r, "approval": float(w["approval"]), "lb_wave": int(w["year"]), "lb_fieldwork": w.get("fw_end", ""),
+                     "running": int(r["incumbent_running"]), "won": int(r["incumbent_party_won"])})
     return rows
 
 
