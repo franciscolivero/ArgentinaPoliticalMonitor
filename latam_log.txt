@@ -1,7 +1,7 @@
-run 2026-11-14 17:02 UTC · 3 new poll(s)
+run 2026-11-15 17:42 UTC · 6 new poll(s)
 
-CL Chile        180 polls  manual 12, news 59, pollster 11, wikipedia 98
-BO Bolivia       23 polls  manual 13, news 10
+CL Chile        183 polls  manual 12, news 61, pollster 12, wikipedia 98
+BO Bolivia       24 polls  manual 13, news 11
 PE Peru          22 polls  manual 13, news 9
 CO Colombia      11 polls  manual 8, news 3
 VE Venezuela     15 polls  manual 13, news 2
@@ -12,7 +12,7 @@ PA Panama        14 polls  manual 14
 GT Guatemala     15 polls  manual 13, wikipedia 2
 BR Brazil       138 polls  manual 14, news 124
 HN Honduras       9 polls  manual 9
-UY Uruguay       50 polls  manual 9, news 12, wikipedia 29
+UY Uruguay       51 polls  manual 9, news 12, wikipedia 30
 PY Paraguay      12 polls  manual 12
 CR Costa Rica    13 polls  manual 11, news 1, pollster 1
 DO Dominican Republic  19 polls  manual 14, news 4, pollster 1
@@ -43,25 +43,27 @@ log:
   · CL Criteria: no validated figure in Agenda_Criteria_2_Agosto_2026_8cLMx.pdf
   · CL Criteria: no validated figure in Agenda_Criteria_13_Septiembre_2026_9dGv2.pdf
   · CL Criteria: no validated figure in Agenda_Criteria_20_Septiembre_2026_9eBc3.pdf
-  · CL Criteria: 6 new wave(s) from 29 unread PDF(s)
+  · CL Criteria: 7 new wave(s) from 30 unread PDF(s)
+  + CL Criteria ≈2026-11-14: 18.0/72.0 [pollster]
   · MX Wikipedia Opinion_polling_on_the_Sheinbaum_presidency: 52 rows
-  + MX AtlasIntel ≈2026-11-09: 57.9/33.8 [wikipedia]
   · EC Wikipedia (es) Segundo_gobierno_de_Daniel_Noboa: 14 rows
   · SV Wikipedia Opinion_polling_on_the_Nayib_Bukele_presidency: 25 rows
   · GT Wikipedia (es) Bernardo_Arévalo: 3 rows
-  · UY Wikipedia (es) Gobierno_de_Yamandú_Orsi: 29 rows
+  · UY Wikipedia (es) Gobierno_de_Yamandú_Orsi: 30 rows
+  + UY Opción Consultores ≈2026-11-05: 19.0/52.0 [wikipedia]
   · CID Gallup SV 2026-10-27: 94.0%
   · CID Gallup CR 2026-08-17: 74.0%
-  · CB Global Data listing failed (404 Client Error: Not Found for url: https://cbglobaldata.com/wp-json/wp/v2/posts?search=ranking+presidentes+latinoamerica&per_page=6&_fields=link%2Cdate%2Ctitle%2Ccontent)
-  · Google News: 1882 unique articles read
-  · articles CO: 3 read, 0 poll reading(s)
-  · articles PE: 2 read, 0 poll reading(s)
-  · articles BO: 2 read, 0 poll reading(s)
+  · CB Global Data 2026-10: 3 presidents this month (summary only), 0 with last month's figure
+  · Google News: 1902 unique articles read
+  · articles CO: 2 read, 1 poll reading(s)
+  · articles CR: 1 read, 0 poll reading(s)
+  · articles UY: 2 read, 1 poll reading(s)
   · articles MX: 1 read, 0 poll reading(s)
-  · articles BR: 5 read, 2 poll reading(s)
-  · articles CL: skipped Criteria 67.0% (far from recent median 36.0)
-  · articles CL: 6 read, 4 poll reading(s)
-  · articles: 16 articles read in 39s
-  + CL Black White ≈2026-10-25: 24.0/None [news]
+  · articles BR: 3 read, 1 poll reading(s)
+  · articles CL: 6 read, 3 poll reading(s)
+  · articles: 13 articles read in 32s
+  + BO Unitel ≈2026-02-26: 63.0/None [news]
   + EC Pollster not named (press) ≈2026-11-06: 49.0/None [news]
+  + CL Criteria ≈2026-11-11: 72.0/None [news]
+  + CL Criteria ≈2026-11-11: 79.0/None [news]
   · Google News queries failed: 0
