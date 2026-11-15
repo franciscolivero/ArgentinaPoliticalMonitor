@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T16:16:08Z",
+ "updated": "2026-11-15T17:53:02Z",
  "model": {
   "n": 78,
   "base_rate": 0.449,
@@ -183,15 +183,15 @@
    "iso": "CL",
    "country": "Chile",
    "president": "José Antonio Kast",
-   "approval": 33.5,
-   "approval_asof": "2026-11-09",
+   "approval": 34.5,
+   "approval_asof": "2026-11-14",
    "next_election": "2029-11-18",
    "date_precision": "approx",
    "president_running": 0,
    "years_to_election": 3.0,
-   "p_model": 0.232,
+   "p_model": 0.242,
    "weight_model": 0.62,
-   "p": 0.314
+   "p": 0.32
   },
   {
    "iso": "PA",
@@ -211,15 +211,15 @@
    "iso": "UY",
    "country": "Uruguay",
    "president": "Yamandú Orsi",
-   "approval": 30.3,
+   "approval": 27.8,
    "approval_asof": "2026-11-09",
    "next_election": "2029-10-28",
    "date_precision": "approx",
    "president_running": 0,
    "years_to_election": 3.0,
-   "p_model": 0.202,
+   "p_model": 0.181,
    "weight_model": 0.63,
-   "p": 0.292
+   "p": 0.279
   },
   {
    "iso": "GT",
