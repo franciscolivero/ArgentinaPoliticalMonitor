@@ -680,6 +680,15 @@
      "origin": "news"
     },
     {
+     "date": "2026-06-06",
+     "firm": "CEP",
+     "approve": 67.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQQTByODR1NEd1ODl0MHpxSkcwbW1ZRU9KT2F3T0VfUE5FOTIzcVpxWGQ3TWtmYm1LNE9uX1kwd2hpYmtsLXUtSC0xdnA3eDhkb2xQZ2ZHSFhrWURNdFFwMThuaTdYY1hNN2xCQkNqNU9UNHRibXJ0SExfcWtzZFo0d2tnWFFENm9mWWRscU81RFF1WS1GNGJQcTdZNWZwLWVpVnZ4TmtYNklFOHZMWmdxZE84NFJYVXFCTlE?oc=5",
+     "origin": "news"
+    },
+    {
      "date": "2026-06-07",
      "firm": "CB Consultora (imagen positiva)",
      "approve": 45.2,
@@ -1649,6 +1658,33 @@
      "origin": "news"
     },
     {
+     "date": "2026-11-12",
+     "firm": "Cadem",
+     "approve": 79.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZ3NpdXF0cFMwU1VIS2NCU0FwWl9kNU5MX25oSVFkeWVlZDNleGhVVWJWUW1YQWVnamxLM21uU05fSmFsR3drbXBmODRLUzJYams4alVlN3l0LVJlMEdZbVZ6Tm5fdThMQTBsQ2cxU3VJdUxXTWYyaW84a0cwQkxMLVBhNjYxcGV4eE5kYnVUMzFGMmZ1ZFRvS00xYm5KQjZ6WUpmN3VjOC1JSnJvNlAtYmY4MU95LWYxWHFEVUlSdldsbnVW0gHYAUFVX3lxTFBKbHlNRjYtRjBYejRET244Zy1wTExCMjhlVzlQYUNMLU9LTnZOQjl6SmxhN1U1eTVQa1A0TkRFUmcxWUFYeEQxUWFVaG1SRDJhdWV6X1JfVWVxSjlaYnYza2o4c0pHck5qeDdKRGhzRHdMR0RVR1B3MWhUOXpNXzZZc3FNUVptWnZfZ3dDeEhyb1lRVi11RzZ6QU83RmNpV1pXeG5xeVgydERxVm53dWJDMk14a25EZ1Z1VWV4R2tiS2NtdnVyeHlwdTBtZkpMVjB5R21fbzhOTw?oc=5",
+     "origin": "news"
+    },
+    {
+     "date": "2026-11-12",
+     "firm": "Cadem",
+     "approve": 64.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPSzlpSGZONDdadTMzUUtyem9fS3l6dWZQYVM4bnc5dlhobFRVanRfY2cwc3JpWk5qbHBWNlo5a1liN21LcVlMOHhFV0k2cnJpTGJ1Um84OTB3cF9pVFpZSUY2U3JVdlRSYkV2WnI5a2FleGZjVUpSVU05Q0JMejA1ZDNQd01XM0RoWHc5bnhTVU9oTnF4dVdjQ0ZuSktRdTg?oc=5",
+     "origin": "news"
+    },
+    {
+     "date": "2026-11-13",
+     "firm": "Cadem",
+     "approve": 27.0,
+     "disapprove": 69.0,
+     "approx": false,
+     "origin": "wikipedia",
+     "source": "https://es.wikipedia.org/wiki/Anexo:Encuestas_de_aprobación_del_gobierno_de_José_Antonio_Kast"
+    },
+    {
      "date": "2026-11-14",
      "firm": "Criteria",
      "approve": 18.0,
@@ -1707,23 +1743,23 @@
       45.6,
       44.2,
       42.8,
-      41.3,
-      40.0,
-      38.8,
-      37.8,
-      37.1,
-      36.6,
-      36.2,
-      36.0,
-      36.0,
-      36.0,
-      36.1,
-      36.4,
-      36.7,
-      37.3,
+      41.4,
+      40.1,
+      39.0,
       38.1,
-      39.1,
-      40.2,
+      37.6,
+      37.3,
+      37.2,
+      37.2,
+      37.2,
+      37.2,
+      37.1,
+      37.2,
+      37.3,
+      37.7,
+      38.3,
+      39.2,
+      40.3,
       41.3,
       42.1,
       42.4,
@@ -1732,14 +1768,14 @@
       40.3,
       39.1,
       38.0,
-      37.0,
-      36.2,
-      35.5,
-      35.1,
-      34.7,
-      34.5,
-      34.5,
-      34.5
+      37.1,
+      36.3,
+      35.7,
+      35.4,
+      35.2,
+      35.2,
+      35.3,
+      35.3
      ]
     },
     "disapprove": {
@@ -1810,7 +1846,7 @@
       56.6,
       57.0,
       57.5,
-      58.4,
+      58.3,
       59.4,
       60.6,
       61.8,
@@ -1818,8 +1854,8 @@
       63.8,
       64.5,
       65.0,
-      65.3,
-      65.4
+      65.4,
+      65.5
      ]
     }
    }
@@ -2655,7 +2691,7 @@
      "date": "2026-11-08",
      "firm": "AtlasIntel",
      "approve": 48.3,
-     "disapprove": 46.0,
+     "disapprove": null,
      "n": null,
      "approx": true,
      "source": "https://www.infobae.com/colombia/2026/11/13/abelardo-de-la-espriella-tiene-un-indice-de-aprobacion-de-casi-50-en-sus-primeros-100-dias-de-gobierno-revelo-encuesta-de-altasintel/",
@@ -2732,16 +2768,16 @@
       42.8,
       43.0,
       43.2,
-      43.6,
+      43.5,
       44.0,
       44.5,
       45.1,
       45.7,
-      46.3,
-      46.8,
-      47.1,
-      47.4,
-      47.6
+      46.4,
+      47.0,
+      47.5,
+      48.0,
+      48.2
      ]
     }
    }
@@ -3974,6 +4010,15 @@
      "approx": false,
      "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
      "origin": "manual"
+    },
+    {
+     "date": "2026-11-11",
+     "firm": "Polls Mx",
+     "approve": 67.0,
+     "disapprove": 32.0,
+     "approx": true,
+     "origin": "news",
+     "source": "https://polls.politico.mx/2026/11/16/encuesta-de-encuestas-casi-7-de-cada-10-mexicanos-aprueban-a-sheinbaum/"
     }
    ],
    "country": "Mexico",
@@ -4079,7 +4124,7 @@
       "2026-10-25",
       "2026-11-01",
       "2026-11-08",
-      "2026-11-09"
+      "2026-11-11"
      ],
      "values": [
       80.3,
@@ -4177,9 +4222,9 @@
       67.4,
       66.9,
       66.4,
-      65.9,
-      65.5,
-      65.4
+      66.0,
+      65.7,
+      65.6
      ]
     },
     "disapprove": {
@@ -4281,7 +4326,7 @@
       "2026-10-25",
       "2026-11-01",
       "2026-11-08",
-      "2026-11-09"
+      "2026-11-11"
      ],
      "values": [
       15.8,
@@ -4374,14 +4419,14 @@
       30.4,
       30.2,
       30.1,
+      30.0,
       29.9,
-      29.8,
-      29.7,
-      29.7,
-      29.7,
-      29.7,
-      29.7,
-      29.7
+      30.0,
+      30.1,
+      30.2,
+      30.3,
+      30.3,
+      30.4
      ]
     }
    }
@@ -10355,6 +10400,6 @@
    }
   }
  },
- "updated": "2026-11-15T17:42:23Z",
+ "updated": "2026-11-16T20:59:46Z",
  "method": "Pollster releases, Wikipedia poll tables, press articles (headlines and full text) and regional rankings (CB Consultora, Mitofsky, CID Gallup, AtlasIntel); Gaussian-kernel average, 21-day bandwidth, firm-crowding weights."
 }
