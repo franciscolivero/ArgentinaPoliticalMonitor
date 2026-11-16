@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T17:53:02Z",
+ "updated": "2026-11-16T15:41:39Z",
  "model": {
   "n": 78,
   "base_rate": 0.449,
@@ -216,7 +216,7 @@
    "next_election": "2029-10-28",
    "date_precision": "approx",
    "president_running": 0,
-   "years_to_election": 3.0,
+   "years_to_election": 2.9,
    "p_model": 0.181,
    "weight_model": 0.63,
    "p": 0.279
