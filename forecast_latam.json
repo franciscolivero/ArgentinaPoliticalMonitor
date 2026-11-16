@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T19:31:03Z",
+ "updated": "2026-11-16T21:07:46Z",
  "model": {
   "n": 78,
   "base_rate": 0.449,
@@ -43,15 +43,15 @@
    "iso": "MX",
    "country": "Mexico",
    "president": "Claudia Sheinbaum",
-   "approval": 65.4,
-   "approval_asof": "2026-11-09",
+   "approval": 65.6,
+   "approval_asof": "2026-11-11",
    "next_election": "2030-06-02",
    "date_precision": "approx",
    "president_running": 0,
    "years_to_election": 3.5,
-   "p_model": 0.637,
+   "p_model": 0.639,
    "weight_model": 0.52,
-   "p": 0.547
+   "p": 0.549
   },
   {
    "iso": "CR",
@@ -183,15 +183,15 @@
    "iso": "CL",
    "country": "Chile",
    "president": "José Antonio Kast",
-   "approval": 34.5,
+   "approval": 35.3,
    "approval_asof": "2026-11-14",
    "next_election": "2029-11-18",
    "date_precision": "approx",
    "president_running": 0,
    "years_to_election": 3.0,
-   "p_model": 0.242,
+   "p_model": 0.25,
    "weight_model": 0.62,
-   "p": 0.32
+   "p": 0.325
   },
   {
    "iso": "PA",
