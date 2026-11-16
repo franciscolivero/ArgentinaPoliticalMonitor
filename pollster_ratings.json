@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T19:43:47+00:00",
+ "updated": "2026-11-16T19:30:11+00:00",
  "method": {
   "window_days": 28,
   "min_polls_per_race": 4,
@@ -1676,7 +1676,7 @@
    ],
    "weight": 1.6,
    "active_2026": true,
-   "last_seen_2026": "2026-10-07"
+   "last_seen_2026": "2026-11-08"
   },
   {
    "firm": "Hugo Haime & Asociados",
@@ -2212,7 +2212,7 @@
    ],
    "weight": 1.05,
    "active_2026": true,
-   "last_seen_2026": "2026-08-02"
+   "last_seen_2026": "2026-10-27"
   },
   {
    "firm": "Oh Panel!",
@@ -3244,7 +3244,7 @@
    ],
    "weight": 0.803,
    "active_2026": true,
-   "last_seen_2026": "2026-09-29"
+   "last_seen_2026": "2026-11-01"
   },
   {
    "firm": "Ideia Big Data",
