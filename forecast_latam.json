@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T21:07:46Z",
+ "updated": "2026-11-17T15:57:45Z",
  "model": {
   "n": 78,
   "base_rate": 0.449,
@@ -218,8 +218,8 @@
    "president_running": 0,
    "years_to_election": 2.9,
    "p_model": 0.181,
-   "weight_model": 0.63,
-   "p": 0.279
+   "weight_model": 0.64,
+   "p": 0.278
   },
   {
    "iso": "GT",
