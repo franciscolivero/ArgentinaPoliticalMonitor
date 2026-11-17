@@ -8126,6 +8126,15 @@
      "origin": "news"
     },
     {
+     "date": "2026-10-19",
+     "firm": "AtlasIntel",
+     "approve": 46.0,
+     "disapprove": null,
+     "approx": true,
+     "origin": "news",
+     "source": "https://noticias.r7.com/eleicoes/2026/pesquisa-atlas-flavio-aparece-com-508-dos-votos-validos-contra-492-de-lula-24102026/"
+    },
+    {
      "date": "2026-10-20",
      "firm": "AtlasIntel",
      "approve": 47.9,
@@ -8305,11 +8314,11 @@
       45.5,
       45.3,
       45.3,
-      45.6,
+      45.5,
       46.0,
-      46.6,
+      46.5,
       47.1,
-      47.4
+      47.3
      ]
     },
     "disapprove": {
@@ -10400,6 +10409,6 @@
    }
   }
  },
- "updated": "2026-11-16T20:59:46Z",
+ "updated": "2026-11-17T19:49:07Z",
  "method": "Pollster releases, Wikipedia poll tables, press articles (headlines and full text) and regional rankings (CB Consultora, Mitofsky, CID Gallup, AtlasIntel); Gaussian-kernel average, 21-day bandwidth, firm-crowding weights."
 }

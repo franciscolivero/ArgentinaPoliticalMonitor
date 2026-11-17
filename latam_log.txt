@@ -1,4 +1,4 @@
-run 2026-11-16 20:59 UTC · 6 new poll(s)
+run 2026-11-17 19:49 UTC · 2 new poll(s)
 
 CL Chile        187 polls  manual 12, news 64, pollster 12, wikipedia 99
 BO Bolivia       24 polls  manual 13, news 11
@@ -10,7 +10,7 @@ EC Ecuador       35 polls  manual 11, news 10, wikipedia 14
 SV El Salvador   31 polls  manual 17, news 7, pollster 1, wikipedia 6
 PA Panama        14 polls  manual 14
 GT Guatemala     15 polls  manual 13, wikipedia 2
-BR Brazil       138 polls  manual 14, news 124
+BR Brazil       139 polls  manual 14, news 125
 HN Honduras       9 polls  manual 9
 UY Uruguay       51 polls  manual 9, news 12, wikipedia 30
 PY Paraguay      12 polls  manual 12
@@ -44,7 +44,6 @@ log:
   · CL Criteria: no validated figure in Agenda_Criteria_13_Septiembre_2026_9dGv2.pdf
   · CL Criteria: no validated figure in Agenda_Criteria_20_Septiembre_2026_9eBc3.pdf
   · CL Criteria: 6 new wave(s) from 29 unread PDF(s)
-  + CL Cadem ≈2026-11-13: 27.0/69.0 [wikipedia]
   · MX Wikipedia Opinion_polling_on_the_Sheinbaum_presidency: 52 rows
   · EC Wikipedia (es) Segundo_gobierno_de_Daniel_Noboa: 14 rows
   · SV Wikipedia Opinion_polling_on_the_Nayib_Bukele_presidency: 25 rows
@@ -53,18 +52,15 @@ log:
   · CID Gallup SV 2026-10-27: 94.0%
   · CID Gallup CR 2026-08-17: 74.0%
   · CB Global Data 2026-10: 3 presidents this month (summary only), 0 with last month's figure
-  · Google News: 1504 unique articles read
-  · articles CO: 1 read, 1 poll reading(s)
+  · Google News: 1895 unique articles read
+  · articles CO: 1 read, 0 poll reading(s)
+  · articles VE: 1 read, 0 poll reading(s)
   · articles PE: 1 read, 1 poll reading(s)
-  · articles BO: 1 read, 1 poll reading(s)
-  · articles EC: 3 read, 0 poll reading(s)
-  · articles MX: 6 read, 1 poll reading(s)
-  · articles BR: 1 read, 1 poll reading(s)
-  · articles CL: 6 read, 4 poll reading(s)
-  · articles: 19 articles read in 40s
-  + MX Polls Mx ≈2026-11-11: 67.0/32.0 [news]
-  + CL CEP ≈2026-06-06: 67.0/None [news]
+  · articles SV: 1 read, 0 poll reading(s)
+  · articles MX: 2 read, 0 poll reading(s)
+  · articles BR: 3 read, 2 poll reading(s)
+  · articles CL: 6 read, 2 poll reading(s)
+  · articles: 12 articles read in 36s
+  + BR AtlasIntel ≈2026-10-19: 46.0/None [news]
   + EC Pollster not named (press) ≈2026-11-06: 49.0/None [news]
-  + CL Cadem ≈2026-11-12: 79.0/None [news]
-  + CL Cadem ≈2026-11-12: 64.0/None [news]
   · Google News queries failed: 0
