@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T18:28:06Z",
+ "updated": "2026-11-17T19:56:19Z",
  "model": {
   "n": 78,
   "base_rate": 0.449,
@@ -113,15 +113,15 @@
    "iso": "BR",
    "country": "Brazil",
    "president": "Luiz Inácio Lula da Silva",
-   "approval": 47.4,
+   "approval": 47.3,
    "approval_asof": "2026-11-09",
    "next_election": "2030-10-06",
    "date_precision": "approx",
    "president_running": 0,
    "years_to_election": 3.9,
-   "p_model": 0.394,
+   "p_model": 0.393,
    "weight_model": 0.46,
-   "p": 0.424
+   "p": 0.423
   },
   {
    "iso": "BO",
