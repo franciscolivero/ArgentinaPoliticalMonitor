@@ -11,7 +11,7 @@
 
 ## El pronóstico
 
-El modelo de simulación le asigna a Milei un 55% de chances de ganar (−1 pp en 30 días). Simula 40.000 veces la elección con sus dos vueltas: Milei gana en primera vuelta en el 29% de los casos y hay ballotage en el 56%. Si LLA y el PRO compitieran juntos, su chance subiría a 68%.
+El modelo de simulación le asigna a Milei un 55% de chances de ganar (−1 pp en 30 días). Simula 40.000 veces la elección con sus dos vueltas: Milei gana en primera vuelta en el 29% de los casos y hay ballotage en el 56%, que gana en el 47% de esos casos. Si LLA y el PRO compitieran juntos, su chance subiría a 68%.
 
 El modelo combinado, que promedia encuestas, fundamentales y mercado, le da 48%. Las encuestas del ballotage le dan 52%; los fundamentales, un modelo de machine learning entrenado con 78 elecciones presidenciales latinoamericanas, 47%; Polymarket, 44%.
 
@@ -72,6 +72,18 @@ En el ranking de CB de octubre de 2026, la imagen positiva promedio de los 24 go
 https://datawrapper.dwcdn.net/Otsj8/
 
 La mayor suba fue la de Raúl Jalil (+2,0 pp) y la mayor caída, la de Alberto Weretilneck (−3,1 pp). Kicillof, el principal candidato opositor en las encuestas nacionales, tiene 43,1% de imagen positiva en su propia provincia, puesto 23 de 24.
+
+## Milei, Kicillof y Bullrich en las provincias
+
+CB mide la imagen de los principales dirigentes nacionales en cada provincia. Entre febrero de 2026 y noviembre de 2026, la imagen positiva de Milei bajó en 23 de los 24 distritos; en promedio pasó de 46,9% a 36,8%, mientras la de Kicillof se mantuvo cerca de 33,2%. Las caídas más fuertes de Milei fueron en Misiones (−17,6 pp), Corrientes (−17,5 pp) y Tucumán (−16,3 pp). Casi toda esa baja se produjo antes de junio de 2026: desde entonces su promedio se movió −0,4 pp.
+
+https://datawrapper.dwcdn.net/KoMp9/
+
+En febrero de 2026 Milei tenía mejor imagen que Kicillof en 21 de los 24 distritos; en noviembre de 2026, en 14. Patricia Bullrich, medida por primera vez, promedia 36,1% y supera a Milei en 9 distritos, entre ellos Prov. de Buenos Aires, CABA y Chaco.
+
+https://datawrapper.dwcdn.net/UyKoi/
+
+https://datawrapper.dwcdn.net/9psOY/
 
 Los datos completos, con cada encuesta y su fuente, están en [el monitor](https://franciscolivero.github.io/ArgentinaPoliticalMonitor/index.html).
 
