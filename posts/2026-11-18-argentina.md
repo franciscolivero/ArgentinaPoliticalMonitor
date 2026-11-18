@@ -77,13 +77,11 @@ La mayor suba fue la de Raúl Jalil (+2,0 pp) y la mayor caída, la de Alberto W
 
 CB mide la imagen de los principales dirigentes nacionales en cada provincia. Entre febrero de 2026 y noviembre de 2026, la imagen positiva de Milei bajó en 23 de los 24 distritos; en promedio pasó de 46,9% a 36,8%, mientras la de Kicillof se mantuvo cerca de 33,2%. Las caídas más fuertes de Milei fueron en Misiones (−17,6 pp), Corrientes (−17,5 pp) y Tucumán (−16,3 pp). Casi toda esa baja se produjo antes de junio de 2026: desde entonces su promedio se movió −0,4 pp.
 
+![Imagen positiva de Milei, Kicillof y Bullrich, provincia por provincia](https://franciscolivero.github.io/ArgentinaPoliticalMonitor/post_images/ar-prov-small-multiples.png?v=2026-11-18)
+
 https://datawrapper.dwcdn.net/KoMp9/
 
 En febrero de 2026 Milei tenía mejor imagen que Kicillof en 21 de los 24 distritos; en noviembre de 2026, en 14. Patricia Bullrich, medida por primera vez, promedia 36,1% y supera a Milei en 9 distritos, entre ellos Prov. de Buenos Aires, CABA y Chaco.
-
-https://datawrapper.dwcdn.net/UyKoi/
-
-https://datawrapper.dwcdn.net/9psOY/
 
 Los datos completos, con cada encuesta y su fuente, están en [el monitor](https://franciscolivero.github.io/ArgentinaPoliticalMonitor/index.html).
 
