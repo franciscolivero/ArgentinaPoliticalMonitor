@@ -110,7 +110,10 @@ def argentina(today, state):
                    + (f" ({P.delta(100 * L0['p'], 100 * p30, 0)} en 30 días)" if p30 is not None else "") + ". "
                    f"Simula {FS['n_sims']:,}".replace(",", ".") + " veces la elección con sus dos vueltas: "
                    f"Milei gana en primera vuelta en el {P.pct(100 * L0['p_first_round_win'])} de los casos y hay "
-                   f"ballotage en el {P.pct(100 * L0['p_runoff'])}. Si LLA y el PRO compitieran juntos, su chance "
+                   f"ballotage en el {P.pct(100 * L0['p_runoff'])}"
+                   + (f", que gana en el {P.pct(100 * L0['p_win_runoff_if_held'])} de esos casos"
+                      if L0.get("p_win_runoff_if_held") is not None else "")
+                   + f". Si LLA y el PRO compitieran juntos, su chance "
                    f"subiría a {P.pct(100 * L0['p_alliance'])}.")
             w(txt)
             w("")
@@ -261,6 +264,41 @@ def argentina(today, state):
         if line:
             w(line.strip())
             w("")
+
+    _, ev = P.prov_evolution()
+    if ev and len(ev["months"]) >= 2:
+        S, D = ev["summary"], ev["data"]
+        f, l = S[0], S[-1]
+        a, b = f["month"], l["month"]
+        provs = sorted({k[2] for k in D if k[0] == b and k[1] == "Milei"})
+        ch = sorted(((D[(b, "Milei", q)][0] - D[(a, "Milei", q)][0]), q) for q in provs if (a, "Milei", q) in D)
+        fell = sum(1 for d, _ in ch if d < -0.05)
+        mlong = lambda m: P.fmonth(m + "-15")
+        ylist = lambda xs: ", ".join(xs[:-1]) + (" y " if len(xs) > 1 else "") + xs[-1] if xs else ""
+        w("## Milei, Kicillof y Bullrich en las provincias")
+        w("")
+        w(f"CB mide la imagen de los principales dirigentes nacionales en cada provincia. Entre {mlong(a)} y "
+          f"{mlong(b)}, la imagen positiva de Milei bajó en {fell} de los {len(provs)} distritos; en promedio pasó de "
+          f"{P.pct(f['Milei'], 1)} a {P.pct(l['Milei'], 1)}, mientras la de Kicillof se mantuvo cerca de "
+          f"{P.pct(l['Kicillof'], 1)}. Las caídas más fuertes de Milei fueron en " +
+          ylist([f"{P.PROV_SHORT.get(q, q)} ({P.num(d, 1)} pp)" for d, q in ch[:3]]) + "." +
+          (f" Casi toda esa baja se produjo antes de {mlong(S[1]['month'])}: desde entonces su promedio se movió "
+           f"{P.delta(l['Milei'], S[1]['Milei'])}." if len(S) > 2 and abs(l["Milei"] - S[1]["Milei"]) < 2 else ""))
+        w("")
+        w(embed("ar-prov-shift", state))
+        w("")
+        line = (f"En {mlong(a)} Milei tenía mejor imagen que Kicillof en {f['milei_ahead']} de los {f['n']} distritos; "
+                f"en {mlong(b)}, en {l['milei_ahead']}.")
+        if l.get("Bullrich") is not None:
+            better = [q for q in provs if (b, "Bullrich", q) in D and D[(b, "Bullrich", q)][0] > D[(b, "Milei", q)][0]]
+            line += (f" Patricia Bullrich, medida por primera vez, promedia {P.pct(l['Bullrich'], 1)} y supera a Milei en "
+                     f"{len(better)} distritos, entre ellos " + ylist([P.PROV_SHORT.get(q, q) for q in better[:3]]) + ".")
+        w(line)
+        w("")
+        w(embed("ar-prov-latest", state))
+        w("")
+        w(embed("ar-prov-evolution", state))
+        w("")
 
     w(f"Los datos completos, con cada encuesta y su fuente, están en [el monitor]({MONITOR_AR}).")
     w("")

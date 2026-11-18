@@ -112,6 +112,35 @@ def build_specs():
                   {"visualize": {"custom-colors": {"Positiva": C["pos"], "Negativa": C["neg"], "NS/NC": C["ns"]},
                                  "show-values": True, "sort-bars": False},
                    "describe": {"source-name": SOURCE + " · CB Consultora", "number-append": "%"}}, "ar"))
+    lead_cols = {"Milei": C["milei"], "Kicillof": C["kicillof"], "Bullrich": C["pro"]}
+    t, info = P.prov_evolution()
+    if t:
+        specs.append(("ar-prov-evolution", "Imagen positiva de Milei, Kicillof y Bullrich, promedio de las 24 provincias",
+                      "d3-lines", t,
+                      {"visualize": {"custom-colors": lead_cols,
+                                     "lines": {k: {"symbols": {"enabled": True, "on": "every", "style": "fill",
+                                                               "size": 5}, "directLabel": True} for k in lead_cols},
+                                     "label-colors": True, "show-tooltips": True, "y-grid": "on", "x-grid": "off",
+                                     "custom-range-y": ["0", "60"]},
+                       "describe": {"source-name": SOURCE + " · CB Consultora, medición provincia por provincia",
+                                    "number-append": "%", "number-format": "0.0",
+                                    "intro": "Promedio simple: cada provincia y la Ciudad cuentan una vez."}}, "ar"))
+    t, info = P.prov_shift()
+    if t:
+        a, b = info["cols"]
+        specs.append(("ar-prov-shift", "Cuánto cambió la imagen de Milei en cada provincia", "d3-dot-plot", t,
+                      {"visualize": {"custom-colors": {a: "#B9AFCB", b: C["milei"]}, "show-color-key": True,
+                                     "sort-values": False, "range-value-labels": "both"},
+                       "describe": {"source-name": SOURCE + " · CB Consultora", "number-append": "%",
+                                    "number-format": "0.0"}}, "ar"))
+    t, info = P.prov_latest()
+    if t:
+        cols = {l: lead_cols[l] for l in info["leaders"]}
+        specs.append(("ar-prov-latest", f"Imagen positiva por provincia, {P.fmonth(info['month'] + '-15')}",
+                      "d3-dot-plot", t,
+                      {"visualize": {"custom-colors": cols, "show-color-key": True, "sort-values": False},
+                       "describe": {"source-name": SOURCE + " · CB Consultora", "number-append": "%",
+                                    "number-format": "0.0"}}, "ar"))
     t, F = P.forecast_ar()
     if t:
         specs.append(("ar-forecast", "Chance de que Milei gane la elección presidencial de 2027", "d3-lines", t,

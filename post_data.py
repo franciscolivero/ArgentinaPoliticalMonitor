@@ -228,6 +228,78 @@ def governors():
     return t, rows, month
 
 
+
+# ------------------------------------------------------------- national leaders, province by province
+PROV_SHORT = {"Buenos Aires": "Prov. de Buenos Aires", "Santiago del Estero": "Sgo. del Estero"}
+
+
+def provincial_image():
+    """CB's positive image of Milei, Kicillof and Bullrich in each province (provincial_image_CB.csv).
+    Returns (data, months): data[(month, leader, province)] = (positive, negative), months sorted."""
+    path = HERE / "provincial_image_CB.csv"
+    if not path.exists():
+        return {}, []
+    data = {}
+    with open(path, encoding="utf-8") as f:
+        for r in csv.DictReader(f):
+            data[(r["month"], r["leader"], r["province"])] = (float(r["positive"]), float(r["negative"]))
+    return data, sorted({k[0] for k in data})
+
+
+def _mlabel(m):
+    return f"{MONTHS_ES[int(m[5:7]) - 1]}. {m[:4]}"
+
+
+def prov_shift():
+    """Dot plot: Milei's positive image in each province, first vs. latest measurement, sorted by the change."""
+    data, months = provincial_image()
+    if len(months) < 2:
+        return None, None
+    a, b = months[0], months[-1]
+    provs = sorted({k[2] for k in data if k[0] == b and k[1] == "Milei"},
+                   key=lambda p: data[(b, "Milei", p)][0] - data[(a, "Milei", p)][0])
+    cols = [f"Milei, {_mlabel(a)}", f"Milei, {_mlabel(b)}"]
+    t = table(["Provincia"] + cols,
+              [(PROV_SHORT.get(p, p), data[(a, "Milei", p)][0], data[(b, "Milei", p)][0]) for p in provs])
+    return t, {"first": a, "last": b, "cols": cols}
+
+
+def prov_latest():
+    """Dot plot: latest positive image of Milei, Kicillof and Bullrich in each province, sorted by Milei."""
+    data, months = provincial_image()
+    if not months:
+        return None, None
+    m = months[-1]
+    leaders = [l for l in ("Milei", "Kicillof", "Bullrich") if any(k[0] == m and k[1] == l for k in data)]
+    provs = sorted({k[2] for k in data if k[0] == m}, key=lambda p: -data.get((m, "Milei", p), (0,))[0])
+    t = table(["Provincia"] + leaders,
+              [[PROV_SHORT.get(p, p)] + [data.get((m, l, p), (None,))[0] for l in leaders] for p in provs])
+    return t, {"month": m, "leaders": leaders}
+
+
+def prov_evolution():
+    """Lines: average positive image across the 24 districts at each measurement, and in how many districts
+    Milei is ahead of Kicillof. Simple (unweighted) average: each province counts once."""
+    data, months = provincial_image()
+    if not months:
+        return None, None
+    rows, summ = [], []
+    for m in months:
+        row = [f"{m}-15"]
+        s = {"month": m}
+        for l in ("Milei", "Kicillof", "Bullrich"):
+            vals = [v[0] for k, v in data.items() if k[0] == m and k[1] == l]
+            avg = round(sum(vals) / len(vals), 1) if vals else None
+            row.append(avg)
+            s[l] = avg
+        provs = {k[2] for k in data if k[0] == m and k[1] == "Milei"}
+        s["milei_ahead"] = sum(data[(m, "Milei", p)][0] > data.get((m, "Kicillof", p), (999,))[0] for p in provs)
+        s["n"] = len(provs)
+        rows.append(row)
+        summ.append(s)
+    return table(["Fecha", "Milei", "Kicillof", "Bullrich"], rows), {"months": months, "summary": summ, "data": data}
+
+
 # ------------------------------------------------------------------------------ Latin America
 MIN_POLLS = 2
 COUNTRY_ES = {"Chile": "Chile", "Bolivia": "Bolivia", "Peru": "Perú", "Colombia": "Colombia",
