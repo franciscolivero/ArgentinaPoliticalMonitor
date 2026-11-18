@@ -1,18 +1,18 @@
-run 2026-11-17 19:49 UTC · 2 new poll(s)
+run 2026-11-18 19:24 UTC · 4 new poll(s)
 
 CL Chile        187 polls  manual 12, news 64, pollster 12, wikipedia 99
-BO Bolivia       24 polls  manual 13, news 11
+BO Bolivia       25 polls  manual 13, news 12
 PE Peru          22 polls  manual 13, news 9
 CO Colombia      11 polls  manual 8, news 3
 VE Venezuela     15 polls  manual 13, news 2
-MX Mexico       100 polls  manual 20, news 34, news-ranking 1, wikipedia 45
+MX Mexico       101 polls  manual 20, news 35, news-ranking 1, wikipedia 45
 EC Ecuador       35 polls  manual 11, news 10, wikipedia 14
 SV El Salvador   31 polls  manual 17, news 7, pollster 1, wikipedia 6
 PA Panama        14 polls  manual 14
 GT Guatemala     15 polls  manual 13, wikipedia 2
 BR Brazil       139 polls  manual 14, news 125
 HN Honduras       9 polls  manual 9
-UY Uruguay       51 polls  manual 9, news 12, wikipedia 30
+UY Uruguay       52 polls  manual 9, news 13, wikipedia 30
 PY Paraguay      12 polls  manual 12
 CR Costa Rica    13 polls  manual 11, news 1, pollster 1
 DO Dominican Republic  19 polls  manual 14, news 4, pollster 1
@@ -52,15 +52,15 @@ log:
   · CID Gallup SV 2026-10-27: 94.0%
   · CID Gallup CR 2026-08-17: 74.0%
   · CB Global Data 2026-10: 3 presidents this month (summary only), 0 with last month's figure
-  · Google News: 1895 unique articles read
-  · articles CO: 1 read, 0 poll reading(s)
-  · articles VE: 1 read, 0 poll reading(s)
-  · articles PE: 1 read, 1 poll reading(s)
-  · articles SV: 1 read, 0 poll reading(s)
-  · articles MX: 2 read, 0 poll reading(s)
-  · articles BR: 3 read, 2 poll reading(s)
-  · articles CL: 6 read, 2 poll reading(s)
-  · articles: 12 articles read in 36s
-  + BR AtlasIntel ≈2026-10-19: 46.0/None [news]
+  · Google News: 1921 unique articles read
+  · articles PA: 1 read, 0 poll reading(s)
+  · articles GT: 1 read, 0 poll reading(s)
+  · articles DO: 1 read, 0 poll reading(s)
+  · articles MX: 1 read, 0 poll reading(s)
+  · articles CL: 6 read, 3 poll reading(s)
+  · articles: 9 articles read in 24s
+  + BO Unitel ≈2026-01-29: 65.0/None [news]
+  + UY Factum ≈2026-05-14: 8.0/None [news]
   + EC Pollster not named (press) ≈2026-11-06: 49.0/None [news]
+  + MX CB Consultora ≈2026-11-08: 69.8/None [news]
   · Google News queries failed: 0
