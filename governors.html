@@ -3,11 +3,12 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Governors' image ranking — Argentina 2027</title>
+<title>Governors and national leaders by province — Argentina 2027</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
+<style>.note{margin:0 0 10px; max-width:68ch; font-size:14.5px; line-height:1.45; color:var(--muted)}</style>
 </head>
 <body>
 <div class="frame">
@@ -22,6 +23,8 @@
     <h3>Monitor</h3>
     <a href="index.html">← Back to the monitor</a>
     <a href="#ranking" class="active">Governors</a>
+    <a href="#leaders">Milei, Kicillof, Bullrich</a>
+    <a href="#provinces">By province</a>
     <a href="latam.html" class="out">Latin America approval</a>
   </nav>
   <div class="rail-foot">CB Global Data, <span id="month-rail">—</span></div>
@@ -44,10 +47,33 @@
     <div class="plot" id="chart-gov" style="height:780px"></div>
   </section>
 
+  <section class="block" id="leaders">
+    <h2>Milei has lost ground in almost every province since February, while Kicillof holds steady</h2>
+    <p class="note">Positive image of Javier Milei in each province, February vs. November 2026, with Axel Kicillof’s November reading for comparison. Provinces are sorted by how much Milei fell; the figure next to each name is his change in points. <span id="lead-count"></span></p>
+    <div class="key">
+      <span><i style="background:#B9AFCB"></i>Milei, Feb. 2026</span>
+      <span><i style="background:#6B3FA0"></i>Milei, Nov. 2026</span>
+      <span><i style="background:#2F6FA8;border-radius:50%"></i>Kicillof, Nov. 2026</span>
+    </div>
+    <div class="plot" id="chart-shift" style="height:820px"></div>
+  </section>
+
+  <section class="block" id="provinces">
+    <h2>Positive image of Milei, Kicillof and Bullrich, province by province</h2>
+    <p class="note">Every CB measurement so far: February, June, September and November 2026. Bullrich was measured for the first time in November. Each panel uses the same 0–70% scale.</p>
+    <div class="key">
+      <span><i style="background:#6B3FA0"></i>Javier Milei</span>
+      <span><i style="background:#2F6FA8"></i>Axel Kicillof</span>
+      <span><i style="background:#C9962B"></i>Patricia Bullrich</span>
+    </div>
+    <div class="plot" id="chart-provs" style="height:1180px"></div>
+  </section>
+
   <footer class="sources">
     <h2>Source</h2>
     <ul>
       <li><b>CB Global Data</b>, Ranking interprovincial de gobernadores. <span id="ficha"></span></li>
+      <li><b>CB Global Data</b>, ranking of positive image by province for Javier Milei and Axel Kicillof (February, June, September and November 2026 reports) and Patricia Bullrich (November 2026), about 24,600 online interviews per wave, 880–1,180 per province. These are the only CB reports since November 2025 that include the province-by-province measurement; the data are in <code>provincial_image_CB.csv</code>.</li>
     </ul>
   </footer>
 </main>
@@ -55,33 +81,39 @@
 
 <script id="govdata" type="application/json">
 /* GOV_START */
-{"month": "Octubre 2026", "fieldwork": "11–15 October 2026", "sample": "24,612 cases (886–1,176 per province)", "margin": "±2.9–3.3%","rows":[
-{"rank": 1, "governor": "Rolando Figueroa", "province": "Neuquén", "pos": 55.8, "neg": 40.2, "ns": 4.0, "prev": 54.2},
-{"rank": 2, "governor": "Osvaldo Jaldo", "province": "Tucumán", "pos": 53.7, "neg": 40.6, "ns": 5.7, "prev": 53.5},
-{"rank": 3, "governor": "Gustavo Sáenz", "province": "Salta", "pos": 53.4, "neg": 42.7, "ns": 3.9, "prev": 53.0},
-{"rank": 4, "governor": "Ignacio Torres", "province": "Chubut", "pos": 53.0, "neg": 45.0, "ns": 2.0, "prev": 52.7},
-{"rank": 5, "governor": "Hugo Passalacqua", "province": "Misiones", "pos": 52.8, "neg": 43.0, "ns": 4.2, "prev": 55.1},
-{"rank": 6, "governor": "Maximiliano Pullaro", "province": "Santa Fe", "pos": 52.5, "neg": 43.4, "ns": 4.1, "prev": 52.0},
-{"rank": 7, "governor": "Marcelo Orrego", "province": "San Juan", "pos": 51.7, "neg": 46.3, "ns": 2.0, "prev": 52.8},
-{"rank": 8, "governor": "Martín Llaryora", "province": "Córdoba", "pos": 51.3, "neg": 44.6, "ns": 4.1, "prev": 52.5},
-{"rank": 9, "governor": "Claudio Poggi", "province": "San Luis", "pos": 51.0, "neg": 46.2, "ns": 2.8, "prev": 49.6},
-{"rank": 10, "governor": "Raúl Jalil", "province": "Catamarca", "pos": 50.8, "neg": 44.9, "ns": 4.3, "prev": 48.8},
-{"rank": 11, "governor": "Juan Pablo Valdés", "province": "Corrientes", "pos": 50.4, "neg": 47.1, "ns": 2.5, "prev": 51.9},
-{"rank": 12, "governor": "Leandro Zdero", "province": "Chaco", "pos": 50.1, "neg": 46.1, "ns": 3.8, "prev": 51.1},
-{"rank": 13, "governor": "Elías Suárez", "province": "Santiago del Estero", "pos": 49.6, "neg": 43.0, "ns": 7.4, "prev": 49.1},
-{"rank": 14, "governor": "Rogelio Frigerio", "province": "Entre Ríos", "pos": 49.2, "neg": 47.1, "ns": 3.7, "prev": 48.4},
-{"rank": 15, "governor": "Claudio Vidal", "province": "Santa Cruz", "pos": 48.7, "neg": 48.5, "ns": 2.8, "prev": 48.2},
-{"rank": 16, "governor": "Carlos Sadir", "province": "Jujuy", "pos": 48.5, "neg": 45.9, "ns": 5.6, "prev": 50.3},
-{"rank": 17, "governor": "Sergio Ziliotto", "province": "La Pampa", "pos": 48.3, "neg": 49.5, "ns": 2.2, "prev": 47.6},
-{"rank": 18, "governor": "Jorge Macri", "province": "CABA", "pos": 47.1, "neg": 49.0, "ns": 3.9, "prev": 47.3},
-{"rank": 19, "governor": "Alfredo Cornejo", "province": "Mendoza", "pos": 45.2, "neg": 52.3, "ns": 2.5, "prev": 45.9},
-{"rank": 20, "governor": "Alberto Weretilneck", "province": "Río Negro", "pos": 44.9, "neg": 51.6, "ns": 3.5, "prev": 48.0},
-{"rank": 21, "governor": "Gildo Insfrán", "province": "Formosa", "pos": 44.0, "neg": 51.7, "ns": 4.3, "prev": 42.8},
-{"rank": 22, "governor": "Gustavo Melella", "province": "Tierra del Fuego", "pos": 43.5, "neg": 52.5, "ns": 4.0, "prev": 44.0},
-{"rank": 23, "governor": "Axel Kicillof", "province": "Buenos Aires", "pos": 43.1, "neg": 54.4, "ns": 2.5, "prev": 43.4},
-{"rank": 24, "governor": "Ricardo Quintela", "province": "La Rioja", "pos": 42.8, "neg": 54.1, "ns": 3.1, "prev": 42.3}
+{"month": "Noviembre 2026", "fieldwork": "8–13 November 2026", "sample": "24,625 cases (884–1,171 per province)", "margin": "±2.9–3.3%","rows":[
+{"rank": 1, "governor": "Osvaldo Jaldo", "province": "Tucumán", "pos": 57.2, "neg": 40.5, "ns": 2.3, "prev": 53.7},
+{"rank": 2, "governor": "Rolando Figueroa", "province": "Neuquén", "pos": 56.7, "neg": 41.2, "ns": 2.1, "prev": 55.8},
+{"rank": 3, "governor": "Maximiliano Pullaro", "province": "Santa Fe", "pos": 56.0, "neg": 41.3, "ns": 2.7, "prev": 52.5},
+{"rank": 4, "governor": "Marcelo Orrego", "province": "San Juan", "pos": 55.5, "neg": 41.4, "ns": 3.1, "prev": 51.7},
+{"rank": 5, "governor": "Hugo Passalacqua", "province": "Misiones", "pos": 54.4, "neg": 41.3, "ns": 4.3, "prev": 52.8},
+{"rank": 6, "governor": "Gustavo Sáenz", "province": "Salta", "pos": 53.8, "neg": 42.9, "ns": 3.3, "prev": 53.4},
+{"rank": 7, "governor": "Ignacio Torres", "province": "Chubut", "pos": 53.2, "neg": 43.2, "ns": 3.6, "prev": 53.0},
+{"rank": 8, "governor": "Martín Llaryora", "province": "Córdoba", "pos": 52.7, "neg": 44.7, "ns": 2.6, "prev": 51.3},
+{"rank": 9, "governor": "Claudio Poggi", "province": "San Luis", "pos": 52.4, "neg": 44.5, "ns": 3.1, "prev": 51.0},
+{"rank": 10, "governor": "Leandro Zdero", "province": "Chaco", "pos": 51.3, "neg": 43.1, "ns": 5.6, "prev": 50.1},
+{"rank": 11, "governor": "Carlos Sadir", "province": "Jujuy", "pos": 50.8, "neg": 44.7, "ns": 4.5, "prev": 48.5},
+{"rank": 12, "governor": "Sergio Ziliotto", "province": "La Pampa", "pos": 50.5, "neg": 45.4, "ns": 4.1, "prev": 48.3},
+{"rank": 13, "governor": "Raúl Jalil", "province": "Catamarca", "pos": 50.3, "neg": 46.9, "ns": 2.8, "prev": 50.8},
+{"rank": 14, "governor": "Elías Suárez", "province": "Santiago del Estero", "pos": 50.1, "neg": 41.3, "ns": 8.6, "prev": 49.6},
+{"rank": 15, "governor": "Juan Pablo Valdés", "province": "Corrientes", "pos": 50.0, "neg": 44.2, "ns": 5.8, "prev": 50.4},
+{"rank": 16, "governor": "Claudio Vidal", "province": "Santa Cruz", "pos": 49.7, "neg": 47.2, "ns": 3.1, "prev": 48.7},
+{"rank": 17, "governor": "Rogelio Frigerio", "province": "Entre Ríos", "pos": 48.3, "neg": 48.8, "ns": 2.9, "prev": 49.2},
+{"rank": 18, "governor": "Jorge Macri", "province": "CABA", "pos": 47.0, "neg": 48.3, "ns": 4.7, "prev": 47.1},
+{"rank": 19, "governor": "Gustavo Melella", "province": "Tierra del Fuego", "pos": 46.7, "neg": 50.7, "ns": 2.6, "prev": 43.5},
+{"rank": 20, "governor": "Gildo Insfrán", "province": "Formosa", "pos": 45.4, "neg": 50.5, "ns": 4.1, "prev": 44.0},
+{"rank": 21, "governor": "Alberto Weretilneck", "province": "Río Negro", "pos": 45.1, "neg": 51.7, "ns": 3.2, "prev": 44.9},
+{"rank": 22, "governor": "Ricardo Quintela", "province": "La Rioja", "pos": 44.4, "neg": 53.1, "ns": 2.5, "prev": 42.8},
+{"rank": 23, "governor": "Axel Kicillof", "province": "Buenos Aires", "pos": 43.7, "neg": 53.2, "ns": 3.1, "prev": 43.1},
+{"rank": 24, "governor": "Alfredo Cornejo", "province": "Mendoza", "pos": 43.3, "neg": 52.8, "ns": 3.9, "prev": 45.2}
 ]}
 /* GOV_END */
+</script>
+
+<script id="provdata" type="application/json">
+/* PROV_START */
+{"2026-02":{"Milei":{"Buenos Aires":[41.2,53.5],"CABA":[40.0,58.2],"Catamarca":[44.5,51.6],"Chaco":[41.6,54.6],"Chubut":[47.0,49.7],"Corrientes":[53.0,44.4],"Córdoba":[56.9,39.0],"Entre Ríos":[45.7,49.5],"Formosa":[36.4,58.5],"Jujuy":[50.7,46.2],"La Pampa":[48.7,49.3],"La Rioja":[43.3,52.9],"Mendoza":[57.3,40.0],"Misiones":[49.4,45.3],"Neuquén":[51.8,45.4],"Río Negro":[45.2,52.2],"Salta":[51.2,44.6],"San Juan":[49.5,47.2],"San Luis":[54.5,40.5],"Santa Cruz":[40.8,56.8],"Santa Fe":[52.1,44.1],"Santiago del Estero":[32.5,65.1],"Tierra del Fuego":[40.1,57.7],"Tucumán":[51.5,43.3]},"Kicillof":{"Buenos Aires":[47.0,49.3],"CABA":[28.7,68.2],"Catamarca":[41.6,53.5],"Chaco":[40.8,56.0],"Chubut":[25.9,69.5],"Corrientes":[25.4,73.0],"Córdoba":[18.2,78.5],"Entre Ríos":[26.6,69.3],"Formosa":[46.5,50.2],"Jujuy":[30.7,65.8],"La Pampa":[34.9,62.3],"La Rioja":[31.8,63.0],"Mendoza":[19.0,78.3],"Misiones":[29.8,67.7],"Neuquén":[28.4,68.5],"Río Negro":[34.1,63.6],"Salta":[24.9,72.9],"San Juan":[32.7,64.7],"San Luis":[22.9,71.9],"Santa Cruz":[29.0,68.6],"Santa Fe":[27.2,69.0],"Santiago del Estero":[55.9,42.7],"Tierra del Fuego":[38.3,57.9],"Tucumán":[43.6,54.2]}},"2026-06":{"Milei":{"Buenos Aires":[34.8,60.2],"CABA":[35.2,63.3],"Catamarca":[36.9,57.8],"Chaco":[33.1,62.7],"Chubut":[35.7,61.2],"Corrientes":[38.5,59.5],"Córdoba":[53.5,42.1],"Entre Ríos":[37.6,55.6],"Formosa":[21.2,75.3],"Jujuy":[39.1,57.6],"La Pampa":[37.3,61.2],"La Rioja":[37.4,59.6],"Mendoza":[52.7,44.1],"Misiones":[36.2,60.4],"Neuquén":[38.9,57.3],"Río Negro":[29.9,66.2],"Salta":[41.5,53.4],"San Juan":[40.6,56.6],"San Luis":[45.4,50.4],"Santa Cruz":[32.5,64.4],"Santa Fe":[42.8,51.8],"Santiago del Estero":[21.0,76.2],"Tierra del Fuego":[33.2,62.2],"Tucumán":[38.0,55.0]},"Kicillof":{"Buenos Aires":[42.0,54.8],"CABA":[28.0,69.0],"Catamarca":[39.9,55.1],"Chaco":[38.8,58.1],"Chubut":[29.2,66.9],"Corrientes":[24.7,69.7],"Córdoba":[21.0,74.8],"Entre Ríos":[23.3,70.6],"Formosa":[42.3,55.2],"Jujuy":[30.1,63.4],"La Pampa":[35.4,59.3],"La Rioja":[36.1,60.6],"Mendoza":[22.7,71.8],"Misiones":[29.9,66.6],"Neuquén":[27.1,70.1],"Río Negro":[33.8,63.1],"Salta":[30.2,64.1],"San Juan":[31.7,61.6],"San Luis":[37.8,59.7],"Santa Cruz":[27.8,69.8],"Santa Fe":[25.8,72.1],"Santiago del Estero":[52.4,44.6],"Tierra del Fuego":[37.9,57.6],"Tucumán":[39.1,57.9]}},"2026-09":{"Milei":{"Buenos Aires":[34.5,61.0],"CABA":[38.2,58.7],"Catamarca":[37.2,58.2],"Chaco":[31.3,66.8],"Chubut":[37.5,58.4],"Corrientes":[36.5,60.7],"Córdoba":[52.5,44.0],"Entre Ríos":[37.0,57.1],"Formosa":[21.8,75.0],"Jujuy":[34.8,62.5],"La Pampa":[33.9,63.0],"La Rioja":[36.4,61.3],"Mendoza":[53.7,43.4],"Misiones":[32.9,63.8],"Neuquén":[46.2,50.6],"Río Negro":[33.3,63.5],"Salta":[41.3,56.1],"San Juan":[35.6,60.8],"San Luis":[39.1,57.1],"Santa Cruz":[31.7,65.5],"Santa Fe":[40.5,54.6],"Santiago del Estero":[20.2,77.5],"Tierra del Fuego":[30.0,67.6],"Tucumán":[34.6,61.6]},"Kicillof":{"Buenos Aires":[43.4,54.5],"CABA":[28.1,69.1],"Catamarca":[39.2,55.8],"Chaco":[38.4,55.5],"Chubut":[30.3,64.6],"Corrientes":[25.4,66.8],"Córdoba":[19.0,75.0],"Entre Ríos":[23.3,71.2],"Formosa":[44.8,52.0],"Jujuy":[30.6,64.0],"La Pampa":[34.8,58.2],"La Rioja":[37.3,54.6],"Mendoza":[20.8,73.1],"Misiones":[31.9,62.5],"Neuquén":[28.7,64.7],"Río Negro":[35.1,58.9],"Salta":[28.8,64.2],"San Juan":[30.8,61.4],"San Luis":[39.5,53.2],"Santa Cruz":[29.7,63.0],"Santa Fe":[27.0,65.1],"Santiago del Estero":[52.8,41.4],"Tierra del Fuego":[39.0,55.1],"Tucumán":[40.7,51.7]}},"2026-11":{"Milei":{"Buenos Aires":[34.6,62.5],"CABA":[40.0,57.2],"Catamarca":[37.7,58.3],"Chaco":[33.1,65.7],"Chubut":[39.1,57.9],"Corrientes":[35.5,62.5],"Córdoba":[53.8,42.9],"Entre Ríos":[35.8,60.4],"Formosa":[22.5,72.3],"Jujuy":[35.7,60.9],"La Pampa":[35.6,62.8],"La Rioja":[36.5,60.2],"Mendoza":[52.6,46.1],"Misiones":[31.8,64.0],"Neuquén":[48.5,47.0],"Río Negro":[34.1,63.7],"Salta":[42.3,55.6],"San Juan":[35.3,61.0],"San Luis":[40.5,54.6],"Santa Cruz":[31.6,67.1],"Santa Fe":[39.0,57.7],"Santiago del Estero":[19.8,78.8],"Tierra del Fuego":[31.4,65.8],"Tucumán":[35.2,60.1]},"Kicillof":{"Buenos Aires":[43.7,51.5],"CABA":[28.7,69.2],"Catamarca":[40.8,54.4],"Chaco":[37.4,55.2],"Chubut":[29.7,63.9],"Corrientes":[24.3,69.8],"Córdoba":[20.6,73.3],"Entre Ríos":[23.1,69.5],"Formosa":[47.3,49.6],"Jujuy":[29.2,66.5],"La Pampa":[36.7,54.5],"La Rioja":[38.8,53.2],"Mendoza":[21.0,72.0],"Misiones":[29.9,64.2],"Neuquén":[28.4,65.1],"Río Negro":[34.3,60.7],"Salta":[27.4,64.6],"San Juan":[29.0,64.9],"San Luis":[38.3,55.5],"Santa Cruz":[29.6,64.8],"Santa Fe":[26.5,66.8],"Santiago del Estero":[51.9,43.1],"Tierra del Fuego":[39.6,55.3],"Tucumán":[40.4,53.3]},"Bullrich":{"Buenos Aires":[38.8,57.3],"CABA":[47.2,51.0],"Catamarca":[33.9,61.0],"Chaco":[35.9,61.2],"Chubut":[37.9,59.0],"Corrientes":[33.8,64.1],"Córdoba":[45.7,49.6],"Entre Ríos":[34.4,59.7],"Formosa":[23.1,75.4],"Jujuy":[33.8,62.5],"La Pampa":[33.6,63.9],"La Rioja":[37.2,60.2],"Mendoza":[48.1,48.8],"Misiones":[26.4,70.0],"Neuquén":[46.1,51.7],"Río Negro":[37.2,56.4],"Salta":[43.6,53.1],"San Juan":[30.6,65.4],"San Luis":[40.3,54.4],"Santa Cruz":[30.4,66.5],"Santa Fe":[44.2,51.9],"Santiago del Estero":[25.6,70.3],"Tierra del Fuego":[29.2,69.7],"Tucumán":[30.0,65.8]}}}
+/* PROV_END */
 </script>
 
 <script>
@@ -173,6 +205,71 @@
               'Report: <b>'+(d.month||'—')+'</b>',
               'Positive / negative / NA · 24 governors']);
     }
+
+
+    // ---- national leaders by province (CB) ----
+    function drawLeaders(){
+      var P; try{ P=JSON.parse(document.getElementById('provdata').textContent.replace(/\/\*\s*PROV_(START|END)\s*\*\//g,'')); }catch(e){ return; }
+      var MONTHS=Object.keys(P).sort(), FIRST=MONTHS[0], LAST=MONTHS[MONTHS.length-1];
+      var MLAB={'01':'Jan','02':'Feb','03':'Mar','04':'Apr','05':'May','06':'Jun','07':'Jul','08':'Aug','09':'Sep','10':'Oct','11':'Nov','12':'Dec'};
+      function mlab(m){ return MLAB[m.slice(5)]+' '+m.slice(2,4); }
+      var LC={Milei:'#6B3FA0',Kicillof:'#2F6FA8',Bullrich:'#C9962B'};
+      var provs=Object.keys(P[LAST].Milei);
+      function v(m,who,p){ var x=P[m]&&P[m][who]&&P[m][who][p]; return x?x[0]:null; }
+
+      // chart 1: Milei first vs last, Kicillof last
+      var rows=provs.map(function(p){ return {p:p,a:v(FIRST,'Milei',p),b:v(LAST,'Milei',p),k:v(LAST,'Kicillof',p)}; })
+        .sort(function(x,y){ return (y.b-y.a)-(x.b-x.a); });   // biggest fall at the top
+      function short(p){ return {'Buenos Aires':'Buenos Aires (prov.)','Santiago del Estero':'Sgo. del Estero','Tierra del Fuego':'T. del Fuego'}[p]||p; }
+      var y=rows.map(function(r){return r.p;});
+      var lines={type:'scatter',mode:'lines',hoverinfo:'skip',x:[],y:[],line:{color:'#CFC6DD',width:3}};
+      rows.forEach(function(r){ lines.x.push(r.a,r.b,null); lines.y.push(r.p,r.p,null); });
+      var tA={type:'scatter',mode:'markers',x:rows.map(function(r){return r.a;}),y:y,marker:{color:'#B9AFCB',size:10},
+        hovertemplate:'<b>%{y}</b><br>Milei, '+mlab(FIRST)+': %{x:.1f}%<extra></extra>'};
+      var dl=rows.map(function(r){var d=r.b-r.a; return Math.abs(d)<0.05?'0.0':(d>0?'+':'−')+Math.abs(d).toFixed(1);});
+      var tB={type:'scatter',mode:'markers',x:rows.map(function(r){return r.b;}),y:y,marker:{color:LC.Milei,size:11},customdata:dl,
+        hovertemplate:'<b>%{y}</b><br>Milei, '+mlab(LAST)+': %{x:.1f}% (%{customdata} pts)<extra></extra>'};
+      var tK={type:'scatter',mode:'markers',x:rows.map(function(r){return r.k;}),y:y,
+        marker:{color:'rgba(255,255,255,0)',size:10,line:{color:LC.Kicillof,width:2.2}},
+        hovertemplate:'<b>%{y}</b><br>Kicillof, '+mlab(LAST)+': %{x:.1f}%<extra></extra>'};
+      Plotly.newPlot('chart-shift',[lines,tA,tB,tK],lay({margin:{l:150,r:20,t:8,b:36},
+        xaxis:{range:[10,62],ticksuffix:'%',gridcolor:'#E9EEF3',linecolor:C.line,tickfont:{size:11,color:C.muted},zeroline:false},
+        yaxis:{automargin:true,tickfont:{size:12.5,color:C.ink},gridcolor:'#F1F4F7',tickvals:y,
+          ticktext:rows.map(function(r,i){ return short(r.p)+'  <span style="color:'+LC.Milei+'">'+dl[i]+'</span>'; })}}),CONFIG);
+      var lead=function(m){ return provs.filter(function(p){ return v(m,'Milei',p)>v(m,'Kicillof',p); }).length; };
+      var fell=rows.filter(function(r){return r.b<r.a-0.05;}).length;
+      document.getElementById('lead-count').textContent='Milei fell in '+fell+' of 24 districts. He was ahead of Kicillof in '+lead(FIRST)+' in '+mlab(FIRST).replace(' ',' 20')+' and in '+lead(LAST)+' in '+mlab(LAST).replace(' ',' 20')+'.';
+
+      // chart 2: small multiples
+      var el=document.getElementById('chart-provs');
+      var W=el.clientWidth||900, cols=W<560?2:(W<900?4:6), rowsN=Math.ceil(provs.length/cols);
+      var order=provs.slice().sort(function(a,b){ return v(LAST,'Milei',b)-v(LAST,'Milei',a); });
+      var X=MONTHS.map(function(m){ return +m.slice(5); });
+      var traces=[], ann=[], L={};
+      var H=Math.round(rowsN*(cols>4?190:(cols>2?175:165))+40); el.style.height=H+'px';
+      var gx=Math.min(0.06,26/W), gy=48/(H-42), cw=(1-gx*(cols-1))/cols, ch=(1-gy*(rowsN-1))/rowsN;
+      order.forEach(function(p,i){
+        var c=i%cols, r=Math.floor(i/cols), k=i+1, xa='x'+(k>1?k:''), ya='y'+(k>1?k:'');
+        var x0=c*(cw+gx), y1=1-r*(ch+gy);
+        L['xaxis'+(k>1?k:'')]={domain:[x0,x0+cw],anchor:ya,range:[1.4,11.6],tickvals:X,ticktext:MONTHS.map(function(m){return MLAB[m.slice(5)];}),
+          tickfont:{size:9.5,color:C.muted},tickangle:0,showgrid:false,linecolor:C.line,fixedrange:true};
+        L['yaxis'+(k>1?k:'')]={domain:[y1-ch,y1],anchor:xa,range:[0,70],tickvals:[0,20,40,60],showticklabels:c===0,ticksuffix:'%',
+          tickfont:{size:9.5,color:C.muted},gridcolor:'#EEF1F5',zeroline:false,fixedrange:true};
+        ann.push({xref:xa+' domain',yref:ya+' domain',x:0,y:1.02,xanchor:'left',yanchor:'bottom',showarrow:false,
+          text:'<b>'+short(p)+'</b>',font:{size:11.5,color:C.ink}});
+        ['Milei','Kicillof','Bullrich'].forEach(function(who){
+          var xs=[],ys=[]; MONTHS.forEach(function(m,j){ var val=v(m,who,p); if(val!=null){ xs.push(X[j]); ys.push(val);} });
+          if(!xs.length) return;
+          traces.push({type:'scatter',mode:xs.length>1?'lines+markers':'markers',x:xs,y:ys,xaxis:xa,yaxis:ya,name:who,
+            line:{color:LC[who],width:2},marker:{color:LC[who],size:xs.length>1?5:8,symbol:who==='Bullrich'?'diamond':'circle'},
+            hovertemplate:'<b>'+p+'</b> · '+who+'<br>%{y:.1f}%<extra></extra>'});
+        });
+      });
+      var lo=lay(Object.assign({margin:{l:40,r:10,t:22,b:20},annotations:ann},L));
+      Plotly.newPlot('chart-provs',traces,lo,CONFIG);
+    }
+
+    try{ drawLeaders(); }catch(e){ console.log('leaders chart', e); }
 
     // embedded fallback first
     var FB;
