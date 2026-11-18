@@ -1,7 +1,8 @@
 name: Substack charts and drafts
 
 # Weekly: refreshes the Datawrapper charts embedded in the Substack posts (publish_datawrapper.py)
-# and writes the two drafts for the week (draft_posts.py) into posts/. Needs the repository secret
+# and writes the two drafts for the week (draft_posts.py) into posts/. Charts Datawrapper cannot
+# draw (the province small multiples) are drawn as PNGs into post_images/ (make_post_images.py). Needs the repository secret
 # DATAWRAPPER_TOKEN; without it, only the CSVs and the drafts are produced.
 # The charts also refresh daily, so embeds in already-published posts stay current.
 
@@ -25,7 +26,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install requests openpyxl
+      - run: pip install requests openpyxl matplotlib
+      - name: Fonts for the post images
+        run: (sudo apt-get update -qq && sudo apt-get install -y -qq fonts-inter) >/dev/null 2>&1 || true
+
+      - name: Post images (charts Datawrapper cannot draw)
+        run: python make_post_images.py
 
       - name: Update Datawrapper charts
         env:
@@ -45,7 +51,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A charts_data datawrapper_charts.json datawrapper_log.txt posts 2>/dev/null || true
+          git add -A charts_data datawrapper_charts.json datawrapper_log.txt posts post_images 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "Substack charts/drafts ($(date -u +%Y-%m-%d))"
             git pull --rebase
