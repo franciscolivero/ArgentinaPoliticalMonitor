@@ -36,7 +36,8 @@ def trend_word(d, small=1.0):
     return "en alza" if d > 0 else "en baja"
 
 
-MONITOR_AR = "https://franciscolivero.github.io/ArgentinaPoliticalMonitor/index.html"
+PAGES = "https://franciscolivero.github.io/ArgentinaPoliticalMonitor/"
+MONITOR_AR = PAGES + "index.html"
 MONITOR_LATAM = "https://franciscolivero.github.io/ArgentinaPoliticalMonitor/latam.html"
 
 # House style (from the author's edits to the first edition):
@@ -285,6 +286,9 @@ def argentina(today, state):
           (f" Casi toda esa baja se produjo antes de {mlong(S[1]['month'])}: desde entonces su promedio se movió "
            f"{P.delta(l['Milei'], S[1]['Milei'])}." if len(S) > 2 and abs(l["Milei"] - S[1]["Milei"]) < 2 else ""))
         w("")
+        w(f"![Imagen positiva de Milei, Kicillof y Bullrich, provincia por provincia]({PAGES}post_images/"
+          f"ar-prov-small-multiples.png?v={today.isoformat()})")
+        w("")
         w(embed("ar-prov-shift", state))
         w("")
         line = (f"En {mlong(a)} Milei tenía mejor imagen que Kicillof en {f['milei_ahead']} de los {f['n']} distritos; "
@@ -294,10 +298,6 @@ def argentina(today, state):
             line += (f" Patricia Bullrich, medida por primera vez, promedia {P.pct(l['Bullrich'], 1)} y supera a Milei en "
                      f"{len(better)} distritos, entre ellos " + ylist([P.PROV_SHORT.get(q, q) for q in better[:3]]) + ".")
         w(line)
-        w("")
-        w(embed("ar-prov-latest", state))
-        w("")
-        w(embed("ar-prov-evolution", state))
         w("")
 
     w(f"Los datos completos, con cada encuesta y su fuente, están en [el monitor]({MONITOR_AR}).")
