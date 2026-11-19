@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T19:27:29Z",
+ "updated": "2026-11-19T15:42:11Z",
  "model": {
   "n": 78,
   "base_rate": 0.449,
@@ -10,11 +10,11 @@
    "brier_baseline": 0.2474
   },
   "coef": {
-   "intercept": -3.045525105117522,
+   "intercept": -3.0455251051175223,
    "slopes": [
-    0.0551595554371434,
-    -2.8402564368012517,
-    0.10752090705746697
+    0.05515955543714341,
+    -2.840256436801254,
+    0.107520907057467
    ]
   },
   "lambda": 0.1,
@@ -134,22 +134,8 @@
    "president_running": 1,
    "years_to_election": 3.7,
    "p_model": 0.393,
-   "weight_model": 0.48,
+   "weight_model": 0.49,
    "p": 0.422
-  },
-  {
-   "iso": "EC",
-   "country": "Ecuador",
-   "president": "Daniel Noboa",
-   "approval": 46.6,
-   "approval_asof": "2026-11-09",
-   "next_election": "2029-02-11",
-   "date_precision": "approx",
-   "president_running": 0,
-   "years_to_election": 2.2,
-   "p_model": 0.383,
-   "weight_model": 0.77,
-   "p": 0.399
   },
   {
    "iso": "HN",
@@ -164,6 +150,20 @@
    "p_model": 0.369,
    "weight_model": 0.62,
    "p": 0.399
+  },
+  {
+   "iso": "EC",
+   "country": "Ecuador",
+   "president": "Daniel Noboa",
+   "approval": 46.6,
+   "approval_asof": "2026-11-09",
+   "next_election": "2029-02-11",
+   "date_precision": "approx",
+   "president_running": 0,
+   "years_to_election": 2.2,
+   "p_model": 0.383,
+   "weight_model": 0.77,
+   "p": 0.398
   },
   {
    "iso": "PE",
@@ -190,8 +190,8 @@
    "president_running": 0,
    "years_to_election": 3.0,
    "p_model": 0.25,
-   "weight_model": 0.62,
-   "p": 0.325
+   "weight_model": 0.63,
+   "p": 0.324
   },
   {
    "iso": "PA",
