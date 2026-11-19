@@ -1,8 +1,8 @@
-run 2026-11-18 19:24 UTC · 4 new poll(s)
+run 2026-11-19 19:30 UTC · 2 new poll(s)
 
 CL Chile        187 polls  manual 12, news 64, pollster 12, wikipedia 99
 BO Bolivia       25 polls  manual 13, news 12
-PE Peru          22 polls  manual 13, news 9
+PE Peru          23 polls  manual 13, news 10
 CO Colombia      11 polls  manual 8, news 3
 VE Venezuela     15 polls  manual 13, news 2
 MX Mexico       101 polls  manual 20, news 35, news-ranking 1, wikipedia 45
@@ -52,15 +52,13 @@ log:
   · CID Gallup SV 2026-10-27: 94.0%
   · CID Gallup CR 2026-08-17: 74.0%
   · CB Global Data 2026-10: 3 presidents this month (summary only), 0 with last month's figure
-  · Google News: 1921 unique articles read
-  · articles PA: 1 read, 0 poll reading(s)
+  · Google News: 1915 unique articles read
   · articles GT: 1 read, 0 poll reading(s)
   · articles DO: 1 read, 0 poll reading(s)
-  · articles MX: 1 read, 0 poll reading(s)
-  · articles CL: 6 read, 3 poll reading(s)
-  · articles: 9 articles read in 24s
-  + BO Unitel ≈2026-01-29: 65.0/None [news]
-  + UY Factum ≈2026-05-14: 8.0/None [news]
+  · articles PE: 1 read, 1 poll reading(s)
+  · articles CL: skipped Cadem 64.0% (far from recent median 36.0)
+  · articles CL: 6 read, 4 poll reading(s)
+  · articles: 9 articles read in 26s
+  + PE CIT ≈2026-10-17: 35.6/52.6 [news]
   + EC Pollster not named (press) ≈2026-11-06: 49.0/None [news]
-  + MX CB Consultora ≈2026-11-08: 69.8/None [news]
   · Google News queries failed: 0
