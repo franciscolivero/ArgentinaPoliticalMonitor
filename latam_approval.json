@@ -7336,6 +7336,15 @@
      "origin": "news"
     },
     {
+     "date": "2026-04-11",
+     "firm": "Quaest",
+     "approve": 52.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQZzU5b0Fua2dkX2gtV3o4Q2ZxUEtOY0c0aERLM29zZ3hCblhwblFON1EwbFBvd1Y0VnJ4amdFNVZIZlVhbTFEWWVKeGk2WVVLekdlZTNNZ1NodGNWWktfTnR1UTVEUEFTX1pWcVNXc2FqZDg4a1BuanEzUTlPR0dDZk91eUliRlUzWVpFZEZ0blRSOVJXMXNEdUprR1JmNU5SaktXNDdrNHhDUy1DaVk4ZFdiNS02N2Vic3NxdVRkc3VSWVNtMzl1VnpPXzRUOFBVcmQ40gHiAUFVX3lxTFBNUDdxNTduMmpMOWJqb1Z5aTdRTTJXTWxZQjlBTVZHQ3dtM0lraVkxNGF2WlBlXzY5ZWZrNXZ4ZGlwZ2dEV21VVWphV3dWOTY1a3JIdGdxSmhCUGV0ZTFPUUFXQlFrSWo1VGJZNWRoUFdqTFA4dE9qTV9rZWN5QnNNdkt1R2JZaEpySy1ESU1LbG5kaUFjTnRtZEpWTGJjU0ptQUhENU1JbEJMcGRiQ3FFX3hlaDVuRVg3bGZLV3U1dEktalFMdHBhWU1TdGJtRlVhR2RRQjM3OHd1TzFpNFE2ZVE?oc=5",
+     "origin": "news"
+    },
+    {
      "date": "2026-04-14",
      "firm": "Paraná Pesquisas",
      "approve": 42.6,
@@ -8310,18 +8319,18 @@
       48.8,
       48.4,
       47.8,
-      47.2,
-      46.8,
-      46.5,
-      46.4,
-      46.5,
-      46.7,
-      47.0,
       47.3,
-      47.6,
+      46.9,
+      46.7,
+      46.6,
+      46.8,
+      47.0,
+      47.2,
+      47.5,
       47.7,
-      47.6,
-      47.4,
+      47.8,
+      47.7,
+      47.5,
       47.2,
       47.0,
       46.9,
@@ -10445,6 +10454,6 @@
    }
   }
  },
- "updated": "2026-11-19T19:30:19Z",
+ "updated": "2026-11-20T19:06:15Z",
  "method": "Pollster releases, Wikipedia poll tables, press articles (headlines and full text) and regional rankings (CB Consultora, Mitofsky, CID Gallup, AtlasIntel); Gaussian-kernel average, 21-day bandwidth, firm-crowding weights."
 }
