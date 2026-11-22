@@ -1,6 +1,6 @@
-run 2026-11-21 17:58 UTC · 1 new poll(s)
+run 2026-11-22 18:29 UTC · 5 new poll(s)
 
-CL Chile        187 polls  manual 12, news 64, pollster 12, wikipedia 99
+CL Chile        189 polls  manual 12, news 65, pollster 13, wikipedia 99
 BO Bolivia       25 polls  manual 13, news 12
 PE Peru          23 polls  manual 13, news 10
 CO Colombia      11 polls  manual 8, news 3
@@ -10,7 +10,7 @@ EC Ecuador       35 polls  manual 11, news 10, wikipedia 14
 SV El Salvador   31 polls  manual 17, news 7, pollster 1, wikipedia 6
 PA Panama        14 polls  manual 14
 GT Guatemala     15 polls  manual 13, wikipedia 2
-BR Brazil       140 polls  manual 14, news 126
+BR Brazil       142 polls  manual 14, news 128
 HN Honduras       9 polls  manual 9
 UY Uruguay       52 polls  manual 9, news 13, wikipedia 30
 PY Paraguay      12 polls  manual 12
@@ -43,7 +43,8 @@ log:
   · CL Criteria: no validated figure in Agenda_Criteria_2_Agosto_2026_8cLMx.pdf
   · CL Criteria: no validated figure in Agenda_Criteria_13_Septiembre_2026_9dGv2.pdf
   · CL Criteria: no validated figure in Agenda_Criteria_20_Septiembre_2026_9eBc3.pdf
-  · CL Criteria: 6 new wave(s) from 29 unread PDF(s)
+  · CL Criteria: 7 new wave(s) from 30 unread PDF(s)
+  + CL Criteria ≈2026-11-21: 23.0/68.0 [pollster]
   · MX Wikipedia Opinion_polling_on_the_Sheinbaum_presidency: 52 rows
   · EC Wikipedia (es) Segundo_gobierno_de_Daniel_Noboa: 14 rows
   · SV Wikipedia Opinion_polling_on_the_Nayib_Bukele_presidency: 25 rows
@@ -51,12 +52,16 @@ log:
   · UY Wikipedia (es) Gobierno_de_Yamandú_Orsi: 30 rows
   · CID Gallup SV 2026-10-27: 94.0%
   · CID Gallup CR 2026-08-17: 74.0%
-  · Google News: 1938 unique articles read
-  · articles PA: 1 read, 0 poll reading(s)
-  · articles DO: 1 read, 0 poll reading(s)
-  · articles UY: 2 read, 0 poll reading(s)
-  · articles BR: 3 read, 2 poll reading(s)
-  · articles CL: 1 read, 0 poll reading(s)
-  · articles: 6 articles read in 39s
+  · CB Global Data listing failed (Expecting value: line 1 column 1 (char 0))
+  · Google News: 2072 unique articles read
+  · articles VE: 1 read, 0 poll reading(s)
+  · articles SV: 1 read, 0 poll reading(s)
+  · articles MX: 2 read, 1 poll reading(s)
+  · articles BR: 5 read, 3 poll reading(s)
+  · articles CL: 6 read, 5 poll reading(s)
+  · articles: 13 articles read in 30s
+  + BR Quaest ≈2026-01-10: 49.0/49.0 [news]
+  + BR CNT/MDA ≈2026-04-10: 49.6/49.6 [news]
   + EC Pollster not named (press) ≈2026-11-06: 49.0/None [news]
+  + CL Criteria ≈2026-11-18: 68.0/None [news]
   · Google News queries failed: 0

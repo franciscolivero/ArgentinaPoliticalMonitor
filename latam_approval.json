@@ -1692,6 +1692,24 @@
      "approx": true,
      "source": "https://www.criteria.cl/site/wp-content/uploads/2026/11/Agenda_Criteria_15_Noviembre_2026_11vRs.pdf",
      "origin": "pollster"
+    },
+    {
+     "date": "2026-11-18",
+     "firm": "Criteria",
+     "approve": 68.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOTFVTUmd6b1dwaWZWc05KYXZXaml6NTRjV1o0Qk1BODR0NllJblR0c2xtb25Ra1d2dWo4LWRGOFVSN2oxcmdIZ2Fjc29ldWJieGlOc3hEbWFYdDRUWDh5VHdKd01IQWRzYk9yUXlEeVlPWlI5cGVGVFBXODNLbWx5TGEwc3NLb2Rpd3pBQVRTU1Bzc24tZ25zNjlDMUVGUkZCeVBBZXktTDBnRV9aTHdrTlRaaw?oc=5",
+     "origin": "news"
+    },
+    {
+     "date": "2026-11-21",
+     "firm": "Criteria",
+     "approve": 23.0,
+     "disapprove": 68.0,
+     "approx": true,
+     "source": "https://www.criteria.cl/site/wp-content/uploads/2026/11/Agenda_Criteria_22_Noviembre_2026_S4gPk.pdf",
+     "origin": "pollster"
     }
    ],
    "country": "Chile",
@@ -1736,7 +1754,8 @@
       "2026-10-28",
       "2026-11-04",
       "2026-11-11",
-      "2026-11-14"
+      "2026-11-18",
+      "2026-11-21"
      ],
      "values": [
       46.9,
@@ -1768,14 +1787,15 @@
       40.3,
       39.1,
       38.0,
-      37.1,
+      37.0,
       36.3,
       35.7,
-      35.4,
+      35.3,
       35.2,
       35.2,
       35.3,
-      35.3
+      35.6,
+      35.7
      ]
     },
     "disapprove": {
@@ -1816,7 +1836,8 @@
       "2026-10-28",
       "2026-11-04",
       "2026-11-11",
-      "2026-11-14"
+      "2026-11-18",
+      "2026-11-21"
      ],
      "values": [
       41.7,
@@ -1853,9 +1874,10 @@
       62.9,
       63.8,
       64.5,
-      65.0,
+      65.1,
       65.4,
-      65.5
+      65.7,
+      65.8
      ]
     }
    }
@@ -7092,6 +7114,15 @@
      "origin": "news"
     },
     {
+     "date": "2026-01-10",
+     "firm": "Quaest",
+     "approve": 49.0,
+     "disapprove": 49.0,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNTGU1LWdDTW5YSDJlNXZjNk1ZekJZM2xOa0VOVVYybWdQRmwwR0FpazgzWGVzLUU3QlpGUVdmelVydEVpOG41VDFQeEFrRXdQS2toenhoUGQyWE9zNXhHcVV1cktlX2I2S2JLY3AzNS11eEJVUkZZSTk5Z1JPTjE4eUYyRWZSSWxIR1B6ZDNfYlQ4Q1llV0xEcGZtdFJvcGhfd19DRmZYaGU3QUc5b0HSAbMBQVVfeXFMTy14Tml2UEkwUkM2OXYydThyOGd6NUt4RnBsc2p5OExqLTctZFlCNVQ2aHg4aFVibExERU9JbF83WEhNYjJxUHdJYm9Uc1pXcU1aUFd4WGZaWWJ5b2g0VVRGUFh6UW5UdllLSndNdVJtaFM0eS1yRlpuUk10VVQ5RDFGMk4zc0tvWVpaWVRqR2VQSnBreFVyT3NJMmNYMi1Fd1lwZXlicDJHb3NDZThVMHI3dGs?oc=5",
+     "origin": "news"
+    },
+    {
      "date": "2026-01-18",
      "firm": "AtlasIntel",
      "approve": 48.7,
@@ -7324,6 +7355,15 @@
      "disapprove": 51.0,
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNUkZXaUcyZ1E4NTZUeDB5Nko5d283RHIwTHlCWUlKYTJjcmhqYkVydy1pY2dCd2RnV0otdlFQXzB6UThFY2c1eWZUa0VpaHR3THZXeWxiUjYtWmpVS3ZjTml0a245QUVVUHJEd1JYTzZHbzhKM1psMnhuREhJSEluUWJ3dDhFQXJfVGZBSnctTGFFbzkxd1FkRTlpVGl5Wll6Uzc0eEhaamh4Nm5WcnFteA?oc=5",
+     "origin": "news"
+    },
+    {
+     "date": "2026-04-10",
+     "firm": "CNT/MDA",
+     "approve": 49.6,
+     "disapprove": 49.6,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNNnU1Tml5bzJiSGs2ZmVJUlF3bVN6bmttcDhNOEY1cWJqQmlaS3YtZUVIX0JvMmw4eERwWXVFMGdQWmhkeE1LbTV1Y20yOVotSUJRclN6UWhub21FS1U5M0p6UUZOaGJqZTh0eUhxd0NuWEk5aWlOd0xNUTl3NXlkVkxGNFB1SHlJYy1mVEt5d3ZtaXFHS1VwQzJsTDI3TE9ROTRPdWdUMm04VzhoUnhWeUdLSE8ySjdyNEY3WUlHVlV1aEZHTkE?oc=5",
      "origin": "news"
     },
     {
@@ -8301,33 +8341,33 @@
      "values": [
       39.6,
       40.5,
-      41.4,
+      41.3,
       42.1,
       42.7,
-      43.3,
+      43.2,
       43.8,
-      44.5,
+      44.4,
       45.2,
       46.0,
       46.8,
       47.5,
       48.1,
       48.6,
-      49.0,
+      48.9,
       49.2,
       49.1,
-      48.8,
+      48.9,
       48.4,
-      47.8,
-      47.3,
-      46.9,
-      46.7,
-      46.6,
-      46.8,
+      47.9,
+      47.4,
+      47.1,
       47.0,
+      47.1,
       47.2,
+      47.4,
       47.5,
       47.7,
+      47.8,
       47.8,
       47.7,
       47.5,
@@ -8422,7 +8462,7 @@
       48.5,
       48.2,
       48.1,
-      48.1,
+      48.0,
       48.2,
       48.4,
       48.8,
@@ -8436,17 +8476,17 @@
       48.6,
       49.1,
       49.8,
-      50.7,
-      51.5,
+      50.6,
+      51.3,
+      51.8,
       52.1,
-      52.4,
-      52.5,
-      52.2,
-      51.5,
-      50.7,
-      49.8,
-      48.9,
-      48.2,
+      52.0,
+      51.7,
+      51.2,
+      50.5,
+      49.7,
+      49.0,
+      48.3,
       47.7,
       47.4,
       47.2,
@@ -10454,6 +10494,6 @@
    }
   }
  },
- "updated": "2026-11-21T17:58:48Z",
+ "updated": "2026-11-22T18:29:33Z",
  "method": "Pollster releases, Wikipedia poll tables, press articles (headlines and full text) and regional rankings (CB Consultora, Mitofsky, CID Gallup, AtlasIntel); Gaussian-kernel average, 21-day bandwidth, firm-crowding weights."
 }
