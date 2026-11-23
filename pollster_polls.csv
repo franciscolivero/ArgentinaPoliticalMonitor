@@ -102,3 +102,14 @@ election_id,firm,end_date,date_approx,n,c1,c2,c3,source
 2023-ballotage,CB Consultora,2023-11-06,0,2471,43.1,46.3,,en.wikipedia 2023
 2023-ballotage,CELAG,2023-11-08,0,2005,50.8,49.2,,en.wikipedia 2023
 2023-ballotage,AtlasIntel,2023-11-09,0,8971,44.6,48.6,,en.wikipedia 2023
+2023-pba-general,Circuitos,2023-10-11,0,1248,38.9,30.1,20.3,es.wikipedia PBA 2023
+2023-pba-general,CB Consultora,2023-10-03,1,1181,36,22.9,21.7,es.wikipedia PBA 2023
+2023-pba-general,Aresco,2023-09-29,0,1200,35.9,25,28.1,es.wikipedia PBA 2023
+2023-pba-general,CELAG,2023-09-20,0,979,39.2,33.1,24.0,es.wikipedia PBA 2023
+2023-caba-general,Circuitos,2023-10-11,0,1129,44.5,23.1,21.9,es.wikipedia CABA 2023
+2023-caba-general,Opina Argentina,2023-10-10,0,820,44,22,20,es.wikipedia CABA 2023
+2023-caba-general,Proyección Consultores,2023-10-10,0,1287,47.5,26.7,19.4,es.wikipedia CABA 2023
+2023-caba-general,Federico González & Asociados,2023-09-30,0,1200,45.8,25.8,24.8,es.wikipedia CABA 2023
+2025-pba-legislativa,CB Consultora,2025-08-19,0,1215,41.3,39.1,,es.wikipedia PBA 2025
+2025-pba-legislativa,Consultora Tendencias,2025-08-15,0,6133,38.0,35.2,,es.wikipedia PBA 2025
+2025-pba-legislativa,Pulso Research,2025-08-13,0,5800,31.6,30.7,,es.wikipedia PBA 2025

@@ -7,3 +7,6 @@ election_id,date,label,kind,c1,c1_result,c2,c2_result,c3,c3_result,peronist,sour
 2023-paso,2023-08-13,PASO 2023,paso,Unión por la Patria,27.27,Juntos por el Cambio,28.27,La Libertad Avanza,30.04,c1,en.wikipedia Opinion polling 2023 (por coalición)
 2023-general,2023-10-22,General 2023,general,Massa,36.68,Bullrich,23.83,Milei,29.98,c1,en.wikipedia Opinion polling 2023
 2023-ballotage,2023-11-19,Runoff 2023,ballotage,Massa,44.30,Milei,55.70,,,c1,en.wikipedia Opinion polling 2023
+2023-pba-general,2023-10-22,PBA gobernador 2023,provincial,Kicillof,44.94,Grindetti,26.61,Píparo,24.57,c1,es.wikipedia Elecciones provinciales de Buenos Aires de 2023 (resultado y encuestas)
+2023-caba-general,2023-10-22,CABA jefe de gobierno 2023,provincial,Jorge Macri,49.67,Santoro,32.27,Marra,13.78,c2,es.wikipedia Elecciones de la Ciudad Autónoma de Buenos Aires de 2023
+2025-pba-legislativa,2025-09-07,PBA legislativa 2025,provincial,Fuerza Patria,47.28,La Libertad Avanza,33.71,,,c1,Resultado oficial provincial (suma de secciones); encuestas de es.wikipedia Elecciones provinciales de Buenos Aires de 2025

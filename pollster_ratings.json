@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-16T19:30:11+00:00",
+ "updated": "2026-11-23T20:30:26+00:00",
  "method": {
   "window_days": 28,
-  "min_polls_per_race": 4,
+  "min_polls_per_race": 3,
   "systemic_pts": 5.0,
   "grades": [
    [
@@ -47,10 +47,10 @@
    1.6
   ],
   "outlook_pts": 0.5,
-  "k": 4.97,
-  "market_median_abs_err": 11.17,
-  "sigma2": 10.92,
-  "tau2": 2.2,
+  "k": 4.54,
+  "market_median_abs_err": 10.99,
+  "sigma2": 10.88,
+  "tau2": 2.4,
   "metric": "error on the margin between the actual top two, shares of the K major candidates"
  },
  "races": [
@@ -1497,6 +1497,136 @@
    ]
   },
   {
+   "id": "2023-pba-general",
+   "label": "PBA gobernador 2023",
+   "date": "2023-10-22",
+   "kind": "provincial",
+   "winner": "Kicillof",
+   "runner_up": "Grindetti",
+   "actual_margin": 19.07,
+   "n_polls": 3,
+   "mean_signed_err": -6.29,
+   "mean_abs_err": 6.29,
+   "median_abs_err": 6.82,
+   "systemic": true,
+   "polls": [
+    {
+     "firm": "CB Consultora",
+     "firm_as_published": "CB Consultora",
+     "end_date": "2023-10-03",
+     "date_approx": true,
+     "days_before": 19,
+     "poll_margin": 16.25,
+     "err": -2.82,
+     "abs_err": 2.82,
+     "plus_minus": -5.2,
+     "mae_shares": 1.39,
+     "peronist_lean": -2.09,
+     "house_lean": 2.72
+    },
+    {
+     "firm": "Aresco",
+     "firm_as_published": "Aresco",
+     "end_date": "2023-09-29",
+     "date_approx": false,
+     "days_before": 23,
+     "poll_margin": 12.25,
+     "err": -6.82,
+     "abs_err": 6.82,
+     "plus_minus": 0.81,
+     "mae_shares": 4.28,
+     "peronist_lean": -6.42,
+     "house_lean": -3.78
+    },
+    {
+     "firm": "Circuitos Consultora",
+     "firm_as_published": "Circuitos",
+     "end_date": "2023-10-11",
+     "date_approx": false,
+     "days_before": 11,
+     "poll_margin": 9.85,
+     "err": -9.22,
+     "abs_err": 9.22,
+     "plus_minus": 4.4,
+     "mae_shares": 4.01,
+     "peronist_lean": -3.19,
+     "house_lean": 1.06
+    }
+   ]
+  },
+  {
+   "id": "2023-caba-general",
+   "label": "CABA jefe de gobierno 2023",
+   "date": "2023-10-22",
+   "kind": "provincial",
+   "winner": "Jorge Macri",
+   "runner_up": "Santoro",
+   "actual_margin": 18.18,
+   "n_polls": 4,
+   "mean_signed_err": 4.94,
+   "mean_abs_err": 4.94,
+   "median_abs_err": 4.89,
+   "systemic": false,
+   "polls": [
+    {
+     "firm": "Federico González & Asociados",
+     "firm_as_published": "Federico González & Asociados",
+     "end_date": "2023-09-30",
+     "date_approx": false,
+     "days_before": 22,
+     "poll_margin": 20.75,
+     "err": 2.57,
+     "abs_err": 2.57,
+     "plus_minus": -3.16,
+     "mae_shares": 7.55,
+     "peronist_lean": -6.95,
+     "house_lean": 0.12
+    },
+    {
+     "firm": "Proyección Consultores",
+     "firm_as_published": "Proyección Consultores",
+     "end_date": "2023-10-10",
+     "date_approx": false,
+     "days_before": 12,
+     "poll_margin": 22.22,
+     "err": 4.04,
+     "abs_err": 4.04,
+     "plus_minus": -1.19,
+     "mae_shares": 4.22,
+     "peronist_lean": -5.19,
+     "house_lean": 2.47
+    },
+    {
+     "firm": "Circuitos Consultora",
+     "firm_as_published": "Circuitos",
+     "end_date": "2023-10-11",
+     "date_approx": false,
+     "days_before": 11,
+     "poll_margin": 23.91,
+     "err": 5.73,
+     "abs_err": 5.73,
+     "plus_minus": 1.06,
+     "mae_shares": 6.72,
+     "peronist_lean": -7.9,
+     "house_lean": -1.15
+    },
+    {
+     "firm": "Opina Argentina",
+     "firm_as_published": "Opina Argentina",
+     "end_date": "2023-10-10",
+     "date_approx": false,
+     "days_before": 12,
+     "poll_margin": 25.58,
+     "err": 7.4,
+     "abs_err": 7.4,
+     "plus_minus": 3.29,
+     "mae_shares": 5.91,
+     "peronist_lean": -8.13,
+     "house_lean": -1.45
+    }
+   ]
+  },
+  {
    "id": "2023-ballotage",
    "label": "Runoff 2023",
    "date": "2023-11-19",
@@ -1623,6 +1753,64 @@
      "house_lean": 2.21
     }
    ]
+  },
+  {
+   "id": "2025-pba-legislativa",
+   "label": "PBA legislativa 2025",
+   "date": "2025-09-07",
+   "kind": "provincial",
+   "winner": "Fuerza Patria",
+   "runner_up": "La Libertad Avanza",
+   "actual_margin": 16.76,
+   "n_polls": 3,
+   "mean_signed_err": -14.09,
+   "mean_abs_err": 14.09,
+   "median_abs_err": 14.02,
+   "systemic": true,
+   "polls": [
+    {
+     "firm": "Consultora Tendencias",
+     "firm_as_published": "Consultora Tendencias",
+     "end_date": "2025-08-15",
+     "date_approx": false,
+     "days_before": 23,
+     "poll_margin": 3.83,
+     "err": -12.93,
+     "abs_err": 12.93,
+     "plus_minus": -1.73,
+     "mae_shares": 6.47,
+     "peronist_lean": -6.47,
+     "house_lean": 0.87
+    },
+    {
+     "firm": "CB Consultora",
+     "firm_as_published": "CB Consultora",
+     "end_date": "2025-08-19",
+     "date_approx": false,
+     "days_before": 19,
+     "poll_margin": 2.74,
+     "err": -14.02,
+     "abs_err": 14.02,
+     "plus_minus": -0.1,
+     "mae_shares": 7.01,
+     "peronist_lean": -7.01,
+     "house_lean": 0.05
+    },
+    {
+     "firm": "Pulso Research",
+     "firm_as_published": "Pulso Research",
+     "end_date": "2025-08-13",
+     "date_approx": false,
+     "days_before": 25,
+     "poll_margin": 1.44,
+     "err": -15.31,
+     "abs_err": 15.31,
+     "plus_minus": 1.84,
+     "mae_shares": 7.66,
+     "peronist_lean": -7.66,
+     "house_lean": -0.92
+    }
+   ]
   }
  ],
  "firms": [
@@ -1630,14 +1818,14 @@
    "firm": "AtlasIntel",
    "n_races": 4,
    "provisional": false,
-   "score": -3.15,
+   "score": -3.31,
    "raw_plus_minus": -7.05,
    "grade": "AAA",
    "investment_grade": true,
    "outlook": "Stable",
    "mean_abs_err": 6.6,
    "house_lean": -0.38,
-   "expected_abs_err": 8.02,
+   "expected_abs_err": 7.68,
    "first_race": "2019-general",
    "last_race": "2023-ballotage",
    "history": [
@@ -1682,14 +1870,14 @@
    "firm": "Hugo Haime & Asociados",
    "n_races": 3,
    "provisional": false,
-   "score": -1.22,
+   "score": -1.29,
    "raw_plus_minus": -3.25,
    "grade": "A",
    "investment_grade": true,
    "outlook": "Positive",
    "mean_abs_err": 6.5,
    "house_lean": 0.78,
-   "expected_abs_err": 9.95,
+   "expected_abs_err": 9.7,
    "first_race": "2015-paso",
    "last_race": "2023-paso",
    "history": [
@@ -1718,7 +1906,7 @@
      "house_lean": 1.27
     }
    ],
-   "weight": 1.237,
+   "weight": 1.258,
    "active_2026": false,
    "last_seen_2026": null
   },
@@ -1726,14 +1914,14 @@
    "firm": "Políticos en Redes",
    "n_races": 1,
    "provisional": true,
-   "score": -1.16,
+   "score": -1.25,
    "raw_plus_minus": -6.91,
    "grade": "A",
    "investment_grade": true,
    "outlook": null,
    "mean_abs_err": 12.4,
    "house_lean": -4.42,
-   "expected_abs_err": 10.01,
+   "expected_abs_err": 9.74,
    "first_race": "2023-paso",
    "last_race": "2023-paso",
    "history": [
@@ -1746,52 +1934,24 @@
      "house_lean": -4.42
     }
    ],
-   "weight": 1.221,
-   "active_2026": false,
-   "last_seen_2026": null
-  },
-  {
-   "firm": "Fundación para la Dignificación del Hombre en el Trabajo",
-   "n_races": 1,
-   "provisional": true,
-   "score": -0.93,
-   "raw_plus_minus": -5.53,
-   "grade": "BBB+",
-   "investment_grade": true,
-   "outlook": null,
-   "mean_abs_err": 0.61,
-   "house_lean": 2.67,
-   "expected_abs_err": 10.24,
-   "first_race": "2015-ballotage",
-   "last_race": "2015-ballotage",
-   "history": [
-    {
-     "race": "2015-ballotage",
-     "label": "Runoff 2015",
-     "err": -0.61,
-     "abs_err": 0.61,
-     "plus_minus": -5.53,
-     "house_lean": 2.67
-    }
-   ],
-   "weight": 1.167,
+   "weight": 1.246,
    "active_2026": false,
    "last_seen_2026": null
   },
   {
    "firm": "Consultora Tendencias",
-   "n_races": 2,
+   "n_races": 3,
    "provisional": false,
-   "score": -0.91,
-   "raw_plus_minus": -3.19,
-   "grade": "BBB+",
+   "score": -1.08,
+   "raw_plus_minus": -2.7,
+   "grade": "A",
    "investment_grade": true,
    "outlook": "Stable",
-   "mean_abs_err": 9.36,
-   "house_lean": 1.81,
-   "expected_abs_err": 10.26,
+   "mean_abs_err": 10.55,
+   "house_lean": 1.5,
+   "expected_abs_err": 9.91,
    "first_race": "2019-paso",
-   "last_race": "2023-general",
+   "last_race": "2025-pba-legislativa",
    "history": [
     {
      "race": "2019-paso",
@@ -1808,24 +1968,60 @@
      "abs_err": 7.89,
      "plus_minus": -3.55,
      "house_lean": 2.0
+    },
+    {
+     "race": "2025-pba-legislativa",
+     "label": "PBA legislativa 2025",
+     "err": -12.93,
+     "abs_err": 12.93,
+     "plus_minus": -1.73,
+     "house_lean": 0.87
     }
    ],
-   "weight": 1.164,
+   "weight": 1.203,
    "active_2026": true,
    "last_seen_2026": "2026-05-27"
+  },
+  {
+   "firm": "Fundación para la Dignificación del Hombre en el Trabajo",
+   "n_races": 1,
+   "provisional": true,
+   "score": -1.0,
+   "raw_plus_minus": -5.53,
+   "grade": "BBB+",
+   "investment_grade": true,
+   "outlook": null,
+   "mean_abs_err": 0.61,
+   "house_lean": 2.67,
+   "expected_abs_err": 9.99,
+   "first_race": "2015-ballotage",
+   "last_race": "2015-ballotage",
+   "history": [
+    {
+     "race": "2015-ballotage",
+     "label": "Runoff 2015",
+     "err": -0.61,
+     "abs_err": 0.61,
+     "plus_minus": -5.53,
+     "house_lean": 2.67
+    }
+   ],
+   "weight": 1.185,
+   "active_2026": false,
+   "last_seen_2026": null
   },
   {
    "firm": "Trespuntozero",
    "n_races": 2,
    "provisional": false,
-   "score": -0.78,
+   "score": -0.83,
    "raw_plus_minus": -2.71,
    "grade": "BBB+",
    "investment_grade": true,
    "outlook": "Stable",
    "mean_abs_err": 9.93,
    "house_lean": 1.64,
-   "expected_abs_err": 10.39,
+   "expected_abs_err": 10.16,
    "first_race": "2019-paso",
    "last_race": "2019-general",
    "history": [
@@ -1846,22 +2042,90 @@
      "house_lean": 0.11
     }
    ],
-   "weight": 1.134,
+   "weight": 1.146,
    "active_2026": false,
    "last_seen_2026": null
+  },
+  {
+   "firm": "CB Consultora",
+   "n_races": 6,
+   "provisional": false,
+   "score": -0.82,
+   "raw_plus_minus": -1.44,
+   "grade": "BBB+",
+   "investment_grade": true,
+   "outlook": "Stable",
+   "mean_abs_err": 11.03,
+   "house_lean": 1.34,
+   "expected_abs_err": 10.17,
+   "first_race": "2019-general",
+   "last_race": "2025-pba-legislativa",
+   "history": [
+    {
+     "race": "2019-general",
+     "label": "General 2019",
+     "err": 15.88,
+     "abs_err": 15.88,
+     "plus_minus": 4.84,
+     "house_lean": 4.37
+    },
+    {
+     "race": "2023-paso",
+     "label": "PASO 2023",
+     "err": -17.24,
+     "abs_err": 17.24,
+     "plus_minus": -1.74,
+     "house_lean": 0.47
+    },
+    {
+     "race": "2023-general",
+     "label": "General 2023",
+     "err": -8.39,
+     "abs_err": 8.39,
+     "plus_minus": -3.01,
+     "house_lean": 2.17
+    },
+    {
+     "race": "2023-pba-general",
+     "label": "PBA gobernador 2023",
+     "err": -2.82,
+     "abs_err": 2.82,
+     "plus_minus": -5.2,
+     "house_lean": 2.72
+    },
+    {
+     "race": "2023-ballotage",
+     "label": "Runoff 2023",
+     "err": -7.82,
+     "abs_err": 7.82,
+     "plus_minus": -3.43,
+     "house_lean": -1.72
+    },
+    {
+     "race": "2025-pba-legislativa",
+     "label": "PBA legislativa 2025",
+     "err": -14.02,
+     "abs_err": 14.02,
+     "plus_minus": -0.1,
+     "house_lean": 0.05
+    }
+   ],
+   "weight": 1.144,
+   "active_2026": true,
+   "last_seen_2026": "2026-10-27"
   },
   {
    "firm": "Quorus",
    "n_races": 1,
    "provisional": true,
-   "score": -0.75,
+   "score": -0.81,
    "raw_plus_minus": -4.48,
    "grade": "BBB+",
    "investment_grade": true,
    "outlook": null,
    "mean_abs_err": 1.56,
    "house_lean": 3.2,
-   "expected_abs_err": 10.42,
+   "expected_abs_err": 10.18,
    "first_race": "2015-ballotage",
    "last_race": "2015-ballotage",
    "history": [
@@ -1874,7 +2138,7 @@
      "house_lean": 3.2
     }
    ],
-   "weight": 1.128,
+   "weight": 1.141,
    "active_2026": false,
    "last_seen_2026": null
   },
@@ -1882,14 +2146,14 @@
    "firm": "Nueva Comunicación",
    "n_races": 1,
    "provisional": true,
-   "score": -0.65,
+   "score": -0.7,
    "raw_plus_minus": -3.89,
    "grade": "BBB+",
    "investment_grade": true,
    "outlook": null,
    "mean_abs_err": 15.23,
    "house_lean": 1.03,
-   "expected_abs_err": 10.52,
+   "expected_abs_err": 10.29,
    "first_race": "2023-paso",
    "last_race": "2023-paso",
    "history": [
@@ -1902,7 +2166,7 @@
      "house_lean": 1.03
     }
    ],
-   "weight": 1.107,
+   "weight": 1.118,
    "active_2026": false,
    "last_seen_2026": null
   },
@@ -1910,14 +2174,14 @@
    "firm": "ESPOP (UdeSA)",
    "n_races": 3,
    "provisional": false,
-   "score": -0.58,
+   "score": -0.61,
    "raw_plus_minus": -1.53,
    "grade": "BBB+",
    "investment_grade": true,
    "outlook": "Stable",
    "mean_abs_err": 13.08,
    "house_lean": -0.45,
-   "expected_abs_err": 10.59,
+   "expected_abs_err": 10.38,
    "first_race": "2019-paso",
    "last_race": "2023-general",
    "history": [
@@ -1946,22 +2210,58 @@
      "house_lean": -1.3
     }
    ],
-   "weight": 1.091,
+   "weight": 1.098,
    "active_2026": true,
    "last_seen_2026": "2026-10-13"
+  },
+  {
+   "firm": "CELAG",
+   "n_races": 2,
+   "provisional": false,
+   "score": -0.58,
+   "raw_plus_minus": -1.88,
+   "grade": "BBB+",
+   "investment_grade": true,
+   "outlook": "Negative",
+   "mean_abs_err": 10.29,
+   "house_lean": 2.02,
+   "expected_abs_err": 10.41,
+   "first_race": "2019-paso",
+   "last_race": "2023-ballotage",
+   "history": [
+    {
+     "race": "2019-paso",
+     "label": "PASO 2019",
+     "err": -7.58,
+     "abs_err": 7.58,
+     "plus_minus": -6.25,
+     "house_lean": 2.8
+    },
+    {
+     "race": "2023-ballotage",
+     "label": "Runoff 2023",
+     "err": -13.0,
+     "abs_err": 13.0,
+     "plus_minus": 2.49,
+     "house_lean": 1.24
+    }
+   ],
+   "weight": 1.09,
+   "active_2026": true,
+   "last_seen_2026": "2026-10-23"
   },
   {
    "firm": "Raúl Aragón & Asociados",
    "n_races": 4,
    "provisional": false,
-   "score": -0.54,
+   "score": -0.57,
    "raw_plus_minus": -1.21,
    "grade": "BBB+",
    "investment_grade": true,
    "outlook": "Stable",
    "mean_abs_err": 7.12,
    "house_lean": 0.13,
-   "expected_abs_err": 10.63,
+   "expected_abs_err": 10.42,
    "first_race": "2015-paso",
    "last_race": "2019-paso",
    "history": [
@@ -1998,7 +2298,7 @@
      "house_lean": 0.78
     }
    ],
-   "weight": 1.083,
+   "weight": 1.088,
    "active_2026": false,
    "last_seen_2026": null
   },
@@ -2006,14 +2306,14 @@
    "firm": "CEOP",
    "n_races": 3,
    "provisional": false,
-   "score": -0.54,
+   "score": -0.57,
    "raw_plus_minus": -1.43,
    "grade": "BBB+",
    "investment_grade": true,
    "outlook": "Stable",
    "mean_abs_err": 9.56,
    "house_lean": 0.94,
-   "expected_abs_err": 10.63,
+   "expected_abs_err": 10.42,
    "first_race": "2015-paso",
    "last_race": "2023-paso",
    "history": [
@@ -2042,58 +2342,22 @@
      "house_lean": 0.76
     }
    ],
-   "weight": 1.083,
+   "weight": 1.089,
    "active_2026": false,
    "last_seen_2026": null
-  },
-  {
-   "firm": "CELAG",
-   "n_races": 2,
-   "provisional": false,
-   "score": -0.54,
-   "raw_plus_minus": -1.88,
-   "grade": "BBB+",
-   "investment_grade": true,
-   "outlook": "Negative",
-   "mean_abs_err": 10.29,
-   "house_lean": 2.02,
-   "expected_abs_err": 10.63,
-   "first_race": "2019-paso",
-   "last_race": "2023-ballotage",
-   "history": [
-    {
-     "race": "2019-paso",
-     "label": "PASO 2019",
-     "err": -7.58,
-     "abs_err": 7.58,
-     "plus_minus": -6.25,
-     "house_lean": 2.8
-    },
-    {
-     "race": "2023-ballotage",
-     "label": "Runoff 2023",
-     "err": -13.0,
-     "abs_err": 13.0,
-     "plus_minus": 2.49,
-     "house_lean": 1.24
-    }
-   ],
-   "weight": 1.084,
-   "active_2026": true,
-   "last_seen_2026": "2026-10-23"
   },
   {
    "firm": "Ricardo Rouvier & Asociados",
    "n_races": 3,
    "provisional": false,
-   "score": -0.4,
+   "score": -0.43,
    "raw_plus_minus": -1.07,
    "grade": "BBB+",
    "investment_grade": true,
    "outlook": "Stable",
    "mean_abs_err": 10.57,
    "house_lean": -0.28,
-   "expected_abs_err": 10.77,
+   "expected_abs_err": 10.56,
    "first_race": "2015-general",
    "last_race": "2019-general",
    "history": [
@@ -2122,110 +2386,22 @@
      "house_lean": -0.32
     }
    ],
-   "weight": 1.056,
+   "weight": 1.06,
    "active_2026": false,
    "last_seen_2026": null
-  },
-  {
-   "firm": "Opina Argentina",
-   "n_races": 2,
-   "provisional": false,
-   "score": -0.38,
-   "raw_plus_minus": -1.34,
-   "grade": "BBB+",
-   "investment_grade": true,
-   "outlook": "Stable",
-   "mean_abs_err": 14.95,
-   "house_lean": 0.74,
-   "expected_abs_err": 10.79,
-   "first_race": "2019-paso",
-   "last_race": "2023-paso",
-   "history": [
-    {
-     "race": "2019-paso",
-     "label": "PASO 2019",
-     "err": -13.36,
-     "abs_err": 13.36,
-     "plus_minus": -0.17,
-     "house_lean": -0.08
-    },
-    {
-     "race": "2023-paso",
-     "label": "PASO 2023",
-     "err": -16.53,
-     "abs_err": 16.53,
-     "plus_minus": -2.51,
-     "house_lean": 1.57
-    }
-   ],
-   "weight": 1.053,
-   "active_2026": true,
-   "last_seen_2026": "2026-05-05"
-  },
-  {
-   "firm": "CB Consultora",
-   "n_races": 4,
-   "provisional": false,
-   "score": -0.37,
-   "raw_plus_minus": -0.83,
-   "grade": "BBB+",
-   "investment_grade": true,
-   "outlook": "Stable",
-   "mean_abs_err": 12.33,
-   "house_lean": 1.32,
-   "expected_abs_err": 10.8,
-   "first_race": "2019-general",
-   "last_race": "2023-ballotage",
-   "history": [
-    {
-     "race": "2019-general",
-     "label": "General 2019",
-     "err": 15.88,
-     "abs_err": 15.88,
-     "plus_minus": 4.84,
-     "house_lean": 4.37
-    },
-    {
-     "race": "2023-paso",
-     "label": "PASO 2023",
-     "err": -17.24,
-     "abs_err": 17.24,
-     "plus_minus": -1.74,
-     "house_lean": 0.47
-    },
-    {
-     "race": "2023-general",
-     "label": "General 2023",
-     "err": -8.39,
-     "abs_err": 8.39,
-     "plus_minus": -3.01,
-     "house_lean": 2.17
-    },
-    {
-     "race": "2023-ballotage",
-     "label": "Runoff 2023",
-     "err": -7.82,
-     "abs_err": 7.82,
-     "plus_minus": -3.43,
-     "house_lean": -1.72
-    }
-   ],
-   "weight": 1.05,
-   "active_2026": true,
-   "last_seen_2026": "2026-10-27"
   },
   {
    "firm": "Oh Panel!",
    "n_races": 2,
    "provisional": false,
-   "score": -0.33,
+   "score": -0.35,
    "raw_plus_minus": -1.15,
-   "grade": "BBB",
+   "grade": "BBB+",
    "investment_grade": true,
    "outlook": "Stable",
    "mean_abs_err": 11.38,
    "house_lean": -0.27,
-   "expected_abs_err": 10.84,
+   "expected_abs_err": 10.64,
    "first_race": "2019-paso",
    "last_race": "2019-general",
    "history": [
@@ -2246,58 +2422,22 @@
      "house_lean": -1.17
     }
    ],
-   "weight": 1.042,
+   "weight": 1.045,
    "active_2026": false,
    "last_seen_2026": null
-  },
-  {
-   "firm": "Aresco",
-   "n_races": 2,
-   "provisional": false,
-   "score": -0.23,
-   "raw_plus_minus": -0.8,
-   "grade": "BBB",
-   "investment_grade": true,
-   "outlook": "Stable",
-   "mean_abs_err": 9.72,
-   "house_lean": 0.73,
-   "expected_abs_err": 10.94,
-   "first_race": "2015-general",
-   "last_race": "2023-general",
-   "history": [
-    {
-     "race": "2015-general",
-     "label": "General 2015",
-     "err": 8.92,
-     "abs_err": 8.92,
-     "plus_minus": -0.88,
-     "house_lean": 0.89
-    },
-    {
-     "race": "2023-general",
-     "label": "General 2023",
-     "err": -10.52,
-     "abs_err": 10.52,
-     "plus_minus": -0.73,
-     "house_lean": 0.56
-    }
-   ],
-   "weight": 1.023,
-   "active_2026": true,
-   "last_seen_2026": "2026-08-17"
   },
   {
    "firm": "Poliarquía",
    "n_races": 3,
    "provisional": false,
-   "score": -0.2,
+   "score": -0.21,
    "raw_plus_minus": -0.52,
    "grade": "BBB",
    "investment_grade": true,
    "outlook": "Stable",
    "mean_abs_err": 6.01,
    "house_lean": 0.3,
-   "expected_abs_err": 10.97,
+   "expected_abs_err": 10.78,
    "first_race": "2015-paso",
    "last_race": "2015-ballotage",
    "history": [
@@ -2334,14 +2474,14 @@
    "firm": "Opinaia",
    "n_races": 4,
    "provisional": false,
-   "score": -0.19,
+   "score": -0.2,
    "raw_plus_minus": -0.43,
    "grade": "BBB",
    "investment_grade": true,
    "outlook": "Stable",
    "mean_abs_err": 13.36,
    "house_lean": -1.75,
-   "expected_abs_err": 10.98,
+   "expected_abs_err": 10.79,
    "first_race": "2019-paso",
    "last_race": "2023-general",
    "history": [
@@ -2383,6 +2523,50 @@
    "last_seen_2026": "2026-09-19"
   },
   {
+   "firm": "Aresco",
+   "n_races": 3,
+   "provisional": false,
+   "score": -0.11,
+   "raw_plus_minus": -0.27,
+   "grade": "BBB",
+   "investment_grade": true,
+   "outlook": "Stable",
+   "mean_abs_err": 8.75,
+   "house_lean": -0.78,
+   "expected_abs_err": 10.88,
+   "first_race": "2015-general",
+   "last_race": "2023-pba-general",
+   "history": [
+    {
+     "race": "2015-general",
+     "label": "General 2015",
+     "err": 8.92,
+     "abs_err": 8.92,
+     "plus_minus": -0.88,
+     "house_lean": 0.89
+    },
+    {
+     "race": "2023-general",
+     "label": "General 2023",
+     "err": -10.52,
+     "abs_err": 10.52,
+     "plus_minus": -0.73,
+     "house_lean": 0.56
+    },
+    {
+     "race": "2023-pba-general",
+     "label": "PBA gobernador 2023",
+     "err": -6.82,
+     "abs_err": 6.82,
+     "plus_minus": 0.81,
+     "house_lean": -3.78
+    }
+   ],
+   "weight": 0.998,
+   "active_2026": true,
+   "last_seen_2026": "2026-08-17"
+  },
+  {
    "firm": "Clivajes Consultores",
    "n_races": 2,
    "provisional": false,
@@ -2393,7 +2577,7 @@
    "outlook": "Stable",
    "mean_abs_err": 11.21,
    "house_lean": 0.57,
-   "expected_abs_err": 11.14,
+   "expected_abs_err": 10.96,
    "first_race": "2019-general",
    "last_race": "2023-general",
    "history": [
@@ -2414,7 +2598,7 @@
      "house_lean": 0.43
     }
    ],
-   "weight": 0.987,
+   "weight": 0.985,
    "active_2026": false,
    "last_seen_2026": null
   },
@@ -2429,7 +2613,7 @@
    "outlook": null,
    "mean_abs_err": 13.36,
    "house_lean": 2.49,
-   "expected_abs_err": 11.14,
+   "expected_abs_err": 10.96,
    "first_race": "2019-paso",
    "last_race": "2019-paso",
    "history": [
@@ -2442,7 +2626,59 @@
      "house_lean": 2.49
     }
    ],
-   "weight": 0.986,
+   "weight": 0.985,
+   "active_2026": false,
+   "last_seen_2026": null
+  },
+  {
+   "firm": "Federico González & Asociados",
+   "n_races": 4,
+   "provisional": false,
+   "score": -0.0,
+   "raw_plus_minus": -0.0,
+   "grade": "BBB",
+   "investment_grade": true,
+   "outlook": "Stable",
+   "mean_abs_err": 12.3,
+   "house_lean": 1.07,
+   "expected_abs_err": 10.99,
+   "first_race": "2019-paso",
+   "last_race": "2023-caba-general",
+   "history": [
+    {
+     "race": "2019-paso",
+     "label": "PASO 2019",
+     "err": -9.32,
+     "abs_err": 9.32,
+     "plus_minus": -4.42,
+     "house_lean": 3.12
+    },
+    {
+     "race": "2019-general",
+     "label": "General 2019",
+     "err": 15.6,
+     "abs_err": 15.6,
+     "plus_minus": 4.54,
+     "house_lean": 1.99
+    },
+    {
+     "race": "2023-paso",
+     "label": "PASO 2023",
+     "err": -21.72,
+     "abs_err": 21.72,
+     "plus_minus": 3.03,
+     "house_lean": -0.94
+    },
+    {
+     "race": "2023-caba-general",
+     "label": "CABA jefe de gobierno 2023",
+     "err": 2.57,
+     "abs_err": 2.57,
+     "plus_minus": -3.16,
+     "house_lean": 0.12
+    }
+   ],
+   "weight": 0.979,
    "active_2026": false,
    "last_seen_2026": null
   },
@@ -2457,7 +2693,7 @@
    "outlook": null,
    "mean_abs_err": 11.17,
    "house_lean": 0.2,
-   "expected_abs_err": 11.24,
+   "expected_abs_err": 11.06,
    "first_race": "2023-ballotage",
    "last_race": "2023-ballotage",
    "history": [
@@ -2470,9 +2706,53 @@
      "house_lean": 0.2
     }
    ],
-   "weight": 0.97,
+   "weight": 0.967,
    "active_2026": false,
    "last_seen_2026": null
+  },
+  {
+   "firm": "Opina Argentina",
+   "n_races": 3,
+   "provisional": false,
+   "score": 0.08,
+   "raw_plus_minus": 0.2,
+   "grade": "BBB",
+   "investment_grade": true,
+   "outlook": "Stable",
+   "mean_abs_err": 12.43,
+   "house_lean": 0.01,
+   "expected_abs_err": 11.07,
+   "first_race": "2019-paso",
+   "last_race": "2023-caba-general",
+   "history": [
+    {
+     "race": "2019-paso",
+     "label": "PASO 2019",
+     "err": -13.36,
+     "abs_err": 13.36,
+     "plus_minus": -0.17,
+     "house_lean": -0.08
+    },
+    {
+     "race": "2023-paso",
+     "label": "PASO 2023",
+     "err": -16.53,
+     "abs_err": 16.53,
+     "plus_minus": -2.51,
+     "house_lean": 1.57
+    },
+    {
+     "race": "2023-caba-general",
+     "label": "CABA jefe de gobierno 2023",
+     "err": 7.4,
+     "abs_err": 7.4,
+     "plus_minus": 3.29,
+     "house_lean": -1.45
+    }
+   ],
+   "weight": 0.965,
+   "active_2026": true,
+   "last_seen_2026": "2026-05-05"
   },
   {
    "firm": "Universidad Nacional de San Martín",
@@ -2485,7 +2765,7 @@
    "outlook": null,
    "mean_abs_err": 6.09,
    "house_lean": 5.66,
-   "expected_abs_err": 11.25,
+   "expected_abs_err": 11.07,
    "first_race": "2015-ballotage",
    "last_race": "2015-ballotage",
    "history": [
@@ -2498,7 +2778,7 @@
      "house_lean": 5.66
     }
    ],
-   "weight": 0.968,
+   "weight": 0.965,
    "active_2026": false,
    "last_seen_2026": null
   },
@@ -2506,14 +2786,14 @@
    "firm": "Elypsis",
    "n_races": 1,
    "provisional": true,
-   "score": 0.1,
+   "score": 0.11,
    "raw_plus_minus": 0.62,
    "grade": "BBB",
    "investment_grade": true,
    "outlook": null,
    "mean_abs_err": 6.24,
    "house_lean": -1.06,
-   "expected_abs_err": 11.27,
+   "expected_abs_err": 11.1,
    "first_race": "2015-ballotage",
    "last_race": "2015-ballotage",
    "history": [
@@ -2526,22 +2806,82 @@
      "house_lean": -1.06
     }
    ],
-   "weight": 0.963,
+   "weight": 0.96,
    "active_2026": false,
    "last_seen_2026": null
+  },
+  {
+   "firm": "Proyección Consultores",
+   "n_races": 5,
+   "provisional": false,
+   "score": 0.2,
+   "raw_plus_minus": 0.37,
+   "grade": "BBB",
+   "investment_grade": true,
+   "outlook": "Stable",
+   "mean_abs_err": 11.86,
+   "house_lean": 0.93,
+   "expected_abs_err": 11.19,
+   "first_race": "2019-general",
+   "last_race": "2023-ballotage",
+   "history": [
+    {
+     "race": "2019-general",
+     "label": "General 2019",
+     "err": 13.27,
+     "abs_err": 13.27,
+     "plus_minus": 1.99,
+     "house_lean": 1.49
+    },
+    {
+     "race": "2023-paso",
+     "label": "PASO 2023",
+     "err": -20.06,
+     "abs_err": 20.06,
+     "plus_minus": 1.26,
+     "house_lean": 0.99
+    },
+    {
+     "race": "2023-general",
+     "label": "General 2023",
+     "err": -12.54,
+     "abs_err": 12.54,
+     "plus_minus": 1.43,
+     "house_lean": 0.53
+    },
+    {
+     "race": "2023-caba-general",
+     "label": "CABA jefe de gobierno 2023",
+     "err": 4.04,
+     "abs_err": 4.04,
+     "plus_minus": -1.19,
+     "house_lean": 2.47
+    },
+    {
+     "race": "2023-ballotage",
+     "label": "Runoff 2023",
+     "err": -9.4,
+     "abs_err": 9.4,
+     "plus_minus": -1.63,
+     "house_lean": -0.81
+    }
+   ],
+   "weight": 0.945,
+   "active_2026": true,
+   "last_seen_2026": "2026-10-27"
   },
   {
    "firm": "Zuban Córdoba",
    "n_races": 4,
    "provisional": false,
-   "score": 0.24,
+   "score": 0.25,
    "raw_plus_minus": 0.54,
    "grade": "BBB",
    "investment_grade": true,
    "outlook": "Stable",
    "mean_abs_err": 12.19,
    "house_lean": 0.07,
-   "expected_abs_err": 11.41,
+   "expected_abs_err": 11.24,
    "first_race": "2019-paso",
    "last_race": "2023-ballotage",
    "history": [
@@ -2578,7 +2918,7 @@
      "house_lean": 1.81
     }
    ],
-   "weight": 0.941,
+   "weight": 0.936,
    "active_2026": true,
    "last_seen_2026": "2026-10-19"
   },
@@ -2586,14 +2926,14 @@
    "firm": "Query",
    "n_races": 1,
    "provisional": true,
-   "score": 0.25,
+   "score": 0.27,
    "raw_plus_minus": 1.48,
    "grade": "BBB",
    "investment_grade": true,
    "outlook": null,
    "mean_abs_err": 5.25,
    "house_lean": -0.93,
-   "expected_abs_err": 11.42,
+   "expected_abs_err": 11.26,
    "first_race": "2015-paso",
    "last_race": "2015-paso",
    "history": [
@@ -2606,7 +2946,7 @@
      "house_lean": -0.93
     }
    ],
-   "weight": 0.939,
+   "weight": 0.933,
    "active_2026": false,
    "last_seen_2026": null
   },
@@ -2614,14 +2954,14 @@
    "firm": "Dicen",
    "n_races": 3,
    "provisional": false,
-   "score": 0.31,
+   "score": 0.33,
    "raw_plus_minus": 0.82,
    "grade": "BBB",
    "investment_grade": true,
    "outlook": "Stable",
    "mean_abs_err": 12.29,
    "house_lean": 0.17,
-   "expected_abs_err": 11.48,
+   "expected_abs_err": 11.32,
    "first_race": "2015-general",
    "last_race": "2019-general",
    "history": [
@@ -2650,155 +2990,35 @@
      "house_lean": -1.41
     }
    ],
-   "weight": 0.929,
-   "active_2026": false,
-   "last_seen_2026": null
-  },
-  {
-   "firm": "Proyección Consultores",
-   "n_races": 4,
-   "provisional": false,
-   "score": 0.34,
-   "raw_plus_minus": 0.76,
-   "grade": "BBB-",
-   "investment_grade": true,
-   "outlook": "Stable",
-   "mean_abs_err": 13.82,
-   "house_lean": 0.55,
-   "expected_abs_err": 11.51,
-   "first_race": "2019-general",
-   "last_race": "2023-ballotage",
-   "history": [
-    {
-     "race": "2019-general",
-     "label": "General 2019",
-     "err": 13.27,
-     "abs_err": 13.27,
-     "plus_minus": 1.99,
-     "house_lean": 1.49
-    },
-    {
-     "race": "2023-paso",
-     "label": "PASO 2023",
-     "err": -20.06,
-     "abs_err": 20.06,
-     "plus_minus": 1.26,
-     "house_lean": 0.99
-    },
-    {
-     "race": "2023-general",
-     "label": "General 2023",
-     "err": -12.54,
-     "abs_err": 12.54,
-     "plus_minus": 1.43,
-     "house_lean": 0.53
-    },
-    {
-     "race": "2023-ballotage",
-     "label": "Runoff 2023",
-     "err": -9.4,
-     "abs_err": 9.4,
-     "plus_minus": -1.63,
-     "house_lean": -0.81
-    }
-   ],
    "weight": 0.924,
-   "active_2026": true,
-   "last_seen_2026": "2026-10-27"
-  },
-  {
-   "firm": "Federico González & Asociados",
-   "n_races": 3,
-   "provisional": false,
-   "score": 0.4,
-   "raw_plus_minus": 1.05,
-   "grade": "BBB-",
-   "investment_grade": true,
-   "outlook": "Stable",
-   "mean_abs_err": 15.55,
-   "house_lean": 1.39,
-   "expected_abs_err": 11.57,
-   "first_race": "2019-paso",
-   "last_race": "2023-paso",
-   "history": [
-    {
-     "race": "2019-paso",
-     "label": "PASO 2019",
-     "err": -9.32,
-     "abs_err": 9.32,
-     "plus_minus": -4.42,
-     "house_lean": 3.12
-    },
-    {
-     "race": "2019-general",
-     "label": "General 2019",
-     "err": 15.6,
-     "abs_err": 15.6,
-     "plus_minus": 4.54,
-     "house_lean": 1.99
-    },
-    {
-     "race": "2023-paso",
-     "label": "PASO 2023",
-     "err": -21.72,
-     "abs_err": 21.72,
-     "plus_minus": 3.03,
-     "house_lean": -0.94
-    }
-   ],
-   "weight": 0.916,
    "active_2026": false,
    "last_seen_2026": null
   },
   {
-   "firm": "Circuitos Consultora",
-   "n_races": 4,
-   "provisional": false,
-   "score": 0.44,
-   "raw_plus_minus": 1.0,
+   "firm": "Pulso Research",
+   "n_races": 1,
+   "provisional": true,
+   "score": 0.33,
+   "raw_plus_minus": 1.84,
    "grade": "BBB-",
    "investment_grade": true,
-   "outlook": "Stable",
-   "mean_abs_err": 14.26,
-   "house_lean": 0.87,
-   "expected_abs_err": 11.61,
-   "first_race": "2015-general",
-   "last_race": "2023-general",
+   "outlook": null,
+   "mean_abs_err": 15.31,
+   "house_lean": -0.92,
+   "expected_abs_err": 11.32,
+   "first_race": "2025-pba-legislativa",
+   "last_race": "2025-pba-legislativa",
    "history": [
     {
-     "race": "2015-general",
-     "label": "General 2015",
-     "err": 10.99,
-     "abs_err": 10.99,
-     "plus_minus": 1.37,
-     "house_lean": 1.23
-    },
-    {
-     "race": "2019-paso",
-     "label": "PASO 2019",
-     "err": -12.4,
-     "abs_err": 12.4,
-     "plus_minus": -1.17,
-     "house_lean": -0.52
-    },
-    {
-     "race": "2023-paso",
-     "label": "PASO 2023",
-     "err": -24.25,
-     "abs_err": 24.25,
-     "plus_minus": 5.73,
-     "house_lean": 1.08
-    },
-    {
-     "race": "2023-general",
-     "label": "General 2023",
-     "err": -9.39,
-     "abs_err": 9.39,
-     "plus_minus": -1.94,
-     "house_lean": 1.69
+     "race": "2025-pba-legislativa",
+     "label": "PBA legislativa 2025",
+     "err": -15.31,
+     "abs_err": 15.31,
+     "plus_minus": 1.84,
+     "house_lean": -0.92
     }
    ],
-   "weight": 0.908,
+   "weight": 0.923,
    "active_2026": false,
    "last_seen_2026": null
   },
@@ -2806,14 +3026,14 @@
    "firm": "González y Valladares",
    "n_races": 2,
    "provisional": false,
-   "score": 0.45,
+   "score": 0.48,
    "raw_plus_minus": 1.59,
    "grade": "BBB-",
    "investment_grade": true,
    "outlook": "Negative",
    "mean_abs_err": 9.15,
    "house_lean": -3.45,
-   "expected_abs_err": 11.62,
+   "expected_abs_err": 11.47,
    "first_race": "2015-general",
    "last_race": "2015-ballotage",
    "history": [
@@ -2834,7 +3054,7 @@
      "house_lean": -3.03
     }
    ],
-   "weight": 0.906,
+   "weight": 0.898,
    "active_2026": false,
    "last_seen_2026": null
   },
@@ -2842,14 +3062,14 @@
    "firm": "OPSM",
    "n_races": 3,
    "provisional": false,
-   "score": 0.58,
+   "score": 0.61,
    "raw_plus_minus": 1.54,
    "grade": "BBB-",
    "investment_grade": true,
    "outlook": "Negative",
    "mean_abs_err": 12.28,
    "house_lean": -0.37,
-   "expected_abs_err": 11.75,
+   "expected_abs_err": 11.6,
    "first_race": "2015-paso",
    "last_race": "2023-paso",
    "history": [
@@ -2878,63 +3098,7 @@
      "house_lean": 0.16
     }
    ],
-   "weight": 0.887,
-   "active_2026": false,
-   "last_seen_2026": null
-  },
-  {
-   "firm": "Polldata",
-   "n_races": 1,
-   "provisional": true,
-   "score": 0.63,
-   "raw_plus_minus": 3.74,
-   "grade": "BBB-",
-   "investment_grade": true,
-   "outlook": null,
-   "mean_abs_err": 9.1,
-   "house_lean": -2.62,
-   "expected_abs_err": 11.8,
-   "first_race": "2015-ballotage",
-   "last_race": "2015-ballotage",
-   "history": [
-    {
-     "race": "2015-ballotage",
-     "label": "Runoff 2015",
-     "err": 9.1,
-     "abs_err": 9.1,
-     "plus_minus": 3.74,
-     "house_lean": -2.62
-    }
-   ],
-   "weight": 0.88,
-   "active_2026": false,
-   "last_seen_2026": null
-  },
-  {
-   "firm": "Real Time Data",
-   "n_races": 1,
-   "provisional": true,
-   "score": 0.63,
-   "raw_plus_minus": 3.76,
-   "grade": "BBB-",
-   "investment_grade": true,
-   "outlook": null,
-   "mean_abs_err": 17.09,
-   "house_lean": -2.96,
-   "expected_abs_err": 11.8,
-   "first_race": "2019-paso",
-   "last_race": "2019-paso",
-   "history": [
-    {
-     "race": "2019-paso",
-     "label": "PASO 2019",
-     "err": -17.09,
-     "abs_err": 17.09,
-     "plus_minus": 3.76,
-     "house_lean": -2.96
-    }
-   ],
-   "weight": 0.88,
+   "weight": 0.879,
    "active_2026": false,
    "last_seen_2026": null
   },
@@ -2942,14 +3106,14 @@
    "firm": "CIGP",
    "n_races": 5,
    "provisional": false,
-   "score": 0.64,
+   "score": 0.67,
    "raw_plus_minus": 1.28,
    "grade": "BBB-",
    "investment_grade": true,
    "outlook": "Stable",
    "mean_abs_err": 14.42,
    "house_lean": 0.45,
-   "expected_abs_err": 11.81,
+   "expected_abs_err": 11.66,
    "first_race": "2019-paso",
    "last_race": "2023-ballotage",
    "history": [
@@ -2994,50 +3158,78 @@
      "house_lean": -0.81
     }
    ],
-   "weight": 0.878,
+   "weight": 0.87,
    "active_2026": false,
    "last_seen_2026": null
   },
   {
-   "firm": "Analogías",
+   "firm": "Polldata",
    "n_races": 1,
    "provisional": true,
-   "score": 0.74,
-   "raw_plus_minus": 4.42,
+   "score": 0.68,
+   "raw_plus_minus": 3.74,
    "grade": "BBB-",
    "investment_grade": true,
    "outlook": null,
-   "mean_abs_err": 14.69,
-   "house_lean": 2.21,
-   "expected_abs_err": 11.91,
-   "first_race": "2023-ballotage",
-   "last_race": "2023-ballotage",
+   "mean_abs_err": 9.1,
+   "house_lean": -2.62,
+   "expected_abs_err": 11.67,
+   "first_race": "2015-ballotage",
+   "last_race": "2015-ballotage",
    "history": [
     {
-     "race": "2023-ballotage",
-     "label": "Runoff 2023",
-     "err": -14.69,
-     "abs_err": 14.69,
-     "plus_minus": 4.42,
-     "house_lean": 2.21
+     "race": "2015-ballotage",
+     "label": "Runoff 2015",
+     "err": 9.1,
+     "abs_err": 9.1,
+     "plus_minus": 3.74,
+     "house_lean": -2.62
     }
    ],
-   "weight": 0.863,
-   "active_2026": true,
-   "last_seen_2026": "2026-10-14"
+   "weight": 0.869,
+   "active_2026": false,
+   "last_seen_2026": null
+  },
+  {
+   "firm": "Real Time Data",
+   "n_races": 1,
+   "provisional": true,
+   "score": 0.68,
+   "raw_plus_minus": 3.76,
+   "grade": "BBB-",
+   "investment_grade": true,
+   "outlook": null,
+   "mean_abs_err": 17.09,
+   "house_lean": -2.96,
+   "expected_abs_err": 11.67,
+   "first_race": "2019-paso",
+   "last_race": "2019-paso",
+   "history": [
+    {
+     "race": "2019-paso",
+     "label": "PASO 2019",
+     "err": -17.09,
+     "abs_err": 17.09,
+     "plus_minus": 3.76,
+     "house_lean": -2.96
+    }
+   ],
+   "weight": 0.869,
+   "active_2026": false,
+   "last_seen_2026": null
   },
   {
    "firm": "Management & Fit",
    "n_races": 5,
    "provisional": false,
-   "score": 0.75,
+   "score": 0.78,
    "raw_plus_minus": 1.5,
    "grade": "BBB-",
    "investment_grade": true,
    "outlook": "Stable",
    "mean_abs_err": 11.74,
    "house_lean": -0.5,
-   "expected_abs_err": 11.92,
+   "expected_abs_err": 11.77,
    "first_race": "2015-paso",
    "last_race": "2023-paso",
    "history": [
@@ -3082,22 +3274,118 @@
      "house_lean": 2.27
     }
    ],
-   "weight": 0.862,
+   "weight": 0.853,
    "active_2026": true,
    "last_seen_2026": "2026-10-12"
+  },
+  {
+   "firm": "Analogías",
+   "n_races": 1,
+   "provisional": true,
+   "score": 0.8,
+   "raw_plus_minus": 4.42,
+   "grade": "BBB-",
+   "investment_grade": true,
+   "outlook": null,
+   "mean_abs_err": 14.69,
+   "house_lean": 2.21,
+   "expected_abs_err": 11.79,
+   "first_race": "2023-ballotage",
+   "last_race": "2023-ballotage",
+   "history": [
+    {
+     "race": "2023-ballotage",
+     "label": "Runoff 2023",
+     "err": -14.69,
+     "abs_err": 14.69,
+     "plus_minus": 4.42,
+     "house_lean": 2.21
+    }
+   ],
+   "weight": 0.851,
+   "active_2026": true,
+   "last_seen_2026": "2026-10-14"
+  },
+  {
+   "firm": "Circuitos Consultora",
+   "n_races": 6,
+   "provisional": false,
+   "score": 0.9,
+   "raw_plus_minus": 1.58,
+   "grade": "BBB-",
+   "investment_grade": true,
+   "outlook": "Stable",
+   "mean_abs_err": 12.0,
+   "house_lean": 0.57,
+   "expected_abs_err": 11.89,
+   "first_race": "2015-general",
+   "last_race": "2023-caba-general",
+   "history": [
+    {
+     "race": "2015-general",
+     "label": "General 2015",
+     "err": 10.99,
+     "abs_err": 10.99,
+     "plus_minus": 1.37,
+     "house_lean": 1.23
+    },
+    {
+     "race": "2019-paso",
+     "label": "PASO 2019",
+     "err": -12.4,
+     "abs_err": 12.4,
+     "plus_minus": -1.17,
+     "house_lean": -0.52
+    },
+    {
+     "race": "2023-paso",
+     "label": "PASO 2023",
+     "err": -24.25,
+     "abs_err": 24.25,
+     "plus_minus": 5.73,
+     "house_lean": 1.08
+    },
+    {
+     "race": "2023-general",
+     "label": "General 2023",
+     "err": -9.39,
+     "abs_err": 9.39,
+     "plus_minus": -1.94,
+     "house_lean": 1.69
+    },
+    {
+     "race": "2023-pba-general",
+     "label": "PBA gobernador 2023",
+     "err": -9.22,
+     "abs_err": 9.22,
+     "plus_minus": 4.4,
+     "house_lean": 1.06
+    },
+    {
+     "race": "2023-caba-general",
+     "label": "CABA jefe de gobierno 2023",
+     "err": 5.73,
+     "abs_err": 5.73,
+     "plus_minus": 1.06,
+     "house_lean": -1.15
+    }
+   ],
+   "weight": 0.837,
+   "active_2026": false,
+   "last_seen_2026": null
   },
   {
    "firm": "Giacobbe & Asociados",
    "n_races": 5,
    "provisional": false,
-   "score": 0.87,
+   "score": 0.91,
    "raw_plus_minus": 1.73,
    "grade": "BBB-",
    "investment_grade": true,
    "outlook": "Stable",
    "mean_abs_err": 13.43,
    "house_lean": 0.01,
-   "expected_abs_err": 12.04,
+   "expected_abs_err": 11.9,
    "first_race": "2015-general",
    "last_race": "2023-general",
    "history": [
@@ -3142,7 +3430,7 @@
      "house_lean": -2.0
     }
    ],
-   "weight": 0.845,
+   "weight": 0.835,
    "active_2026": false,
    "last_seen_2026": null
   },
@@ -3150,14 +3438,14 @@
    "firm": "Fixer",
    "n_races": 1,
    "provisional": true,
-   "score": 1.03,
+   "score": 1.11,
    "raw_plus_minus": 6.17,
    "grade": "BB",
    "investment_grade": false,
    "outlook": null,
    "mean_abs_err": 16.96,
    "house_lean": -3.83,
-   "expected_abs_err": 12.2,
+   "expected_abs_err": 12.1,
    "first_race": "2023-general",
    "last_race": "2023-general",
    "history": [
@@ -3170,7 +3458,7 @@
      "house_lean": -3.83
     }
    ],
-   "weight": 0.822,
+   "weight": 0.807,
    "active_2026": false,
    "last_seen_2026": null
   },
@@ -3178,14 +3466,14 @@
    "firm": "Ipsos",
    "n_races": 3,
    "provisional": false,
-   "score": 1.16,
+   "score": 1.23,
    "raw_plus_minus": 3.09,
    "grade": "BB",
    "investment_grade": false,
    "outlook": "Stable",
    "mean_abs_err": 9.25,
    "house_lean": -1.48,
-   "expected_abs_err": 12.33,
+   "expected_abs_err": 12.22,
    "first_race": "2015-paso",
    "last_race": "2015-ballotage",
    "history": [
@@ -3214,7 +3502,7 @@
      "house_lean": -2.96
     }
    ],
-   "weight": 0.805,
+   "weight": 0.792,
    "active_2026": false,
    "last_seen_2026": null
   },
@@ -3222,14 +3510,14 @@
    "firm": "DC Consultores",
    "n_races": 1,
    "provisional": true,
-   "score": 1.18,
+   "score": 1.27,
    "raw_plus_minus": 7.04,
    "grade": "BB",
    "investment_grade": false,
    "outlook": null,
    "mean_abs_err": 17.77,
    "house_lean": -5.47,
-   "expected_abs_err": 12.35,
+   "expected_abs_err": 12.26,
    "first_race": "2023-general",
    "last_race": "2023-general",
    "history": [
@@ -3242,7 +3530,7 @@
      "house_lean": -5.47
     }
    ],
-   "weight": 0.803,
+   "weight": 0.787,
    "active_2026": true,
    "last_seen_2026": "2026-11-01"
   },
@@ -3250,14 +3538,14 @@
    "firm": "Ideia Big Data",
    "n_races": 1,
    "provisional": true,
-   "score": 1.47,
+   "score": 1.58,
    "raw_plus_minus": 8.77,
    "grade": "BB",
    "investment_grade": false,
    "outlook": null,
    "mean_abs_err": 21.85,
    "house_lean": -3.22,
-   "expected_abs_err": 12.64,
+   "expected_abs_err": 12.57,
    "first_race": "2019-paso",
    "last_race": "2019-paso",
    "history": [
@@ -3270,7 +3558,7 @@
      "house_lean": -3.22
     }
    ],
-   "weight": 0.767,
+   "weight": 0.748,
    "active_2026": false,
    "last_seen_2026": null
   },
@@ -3278,14 +3566,14 @@
    "firm": "Reale Dalla Torre",
    "n_races": 2,
    "provisional": false,
-   "score": 1.95,
+   "score": 2.08,
    "raw_plus_minus": 6.81,
-   "grade": "BB",
+   "grade": "B",
    "investment_grade": false,
    "outlook": "Negative",
    "mean_abs_err": 18.74,
    "house_lean": -3.29,
-   "expected_abs_err": 13.12,
+   "expected_abs_err": 13.07,
    "first_race": "2019-paso",
    "last_race": "2023-general",
    "history": [
@@ -3306,55 +3594,56 @@
      "house_lean": -4.42
     }
    ],
-   "weight": 0.711,
+   "weight": 0.692,
    "active_2026": false,
    "last_seen_2026": null
   }
  ],
  "weights": {
   "AtlasIntel": 1.6,
-  "Hugo Haime & Asociados": 1.237,
-  "Políticos en Redes": 1.221,
-  "Fundación para la Dignificación del Hombre en el Trabajo": 1.167,
-  "Consultora Tendencias": 1.164,
-  "Trespuntozero": 1.134,
-  "Quorus": 1.128,
-  "Nueva Comunicación": 1.107,
-  "ESPOP (UdeSA)": 1.091,
-  "Raúl Aragón & Asociados": 1.083,
-  "CEOP": 1.083,
-  "CELAG": 1.084,
-  "Ricardo Rouvier & Asociados": 1.056,
-  "Opina Argentina": 1.053,
-  "CB Consultora": 1.05,
-  "Oh Panel!": 1.042,
-  "Aresco": 1.023,
+  "Hugo Haime & Asociados": 1.258,
+  "Políticos en Redes": 1.246,
+  "Consultora Tendencias": 1.203,
+  "Fundación para la Dignificación del Hombre en el Trabajo": 1.185,
+  "Trespuntozero": 1.146,
+  "CB Consultora": 1.144,
+  "Quorus": 1.141,
+  "Nueva Comunicación": 1.118,
+  "ESPOP (UdeSA)": 1.098,
+  "CELAG": 1.09,
+  "Raúl Aragón & Asociados": 1.088,
+  "CEOP": 1.089,
+  "Ricardo Rouvier & Asociados": 1.06,
+  "Oh Panel!": 1.045,
   "Poliarquía": 1.017,
   "Opinaia": 1.016,
-  "Clivajes Consultores": 0.987,
-  "Marketing & Estadística": 0.986,
-  "Inteligencia Analítica": 0.97,
-  "Universidad Nacional de San Martín": 0.968,
-  "Elypsis": 0.963,
-  "Zuban Córdoba": 0.941,
-  "Query": 0.939,
-  "Dicen": 0.929,
-  "Proyección Consultores": 0.924,
-  "Federico González & Asociados": 0.916,
-  "Circuitos Consultora": 0.908,
-  "González y Valladares": 0.906,
-  "OPSM": 0.887,
-  "Polldata": 0.88,
-  "Real Time Data": 0.88,
-  "CIGP": 0.878,
-  "Analogías": 0.863,
-  "Management & Fit": 0.862,
-  "Giacobbe & Asociados": 0.845,
-  "Fixer": 0.822,
-  "Ipsos": 0.805,
-  "DC Consultores": 0.803,
-  "Ideia Big Data": 0.767,
-  "Reale Dalla Torre": 0.711
+  "Aresco": 0.998,
+  "Clivajes Consultores": 0.985,
+  "Marketing & Estadística": 0.985,
+  "Federico González & Asociados": 0.979,
+  "Inteligencia Analítica": 0.967,
+  "Opina Argentina": 0.965,
+  "Universidad Nacional de San Martín": 0.965,
+  "Elypsis": 0.96,
+  "Proyección Consultores": 0.945,
+  "Zuban Córdoba": 0.936,
+  "Query": 0.933,
+  "Dicen": 0.924,
+  "Pulso Research": 0.923,
+  "González y Valladares": 0.898,
+  "OPSM": 0.879,
+  "CIGP": 0.87,
+  "Polldata": 0.869,
+  "Real Time Data": 0.869,
+  "Management & Fit": 0.853,
+  "Analogías": 0.851,
+  "Circuitos Consultora": 0.837,
+  "Giacobbe & Asociados": 0.835,
+  "Fixer": 0.807,
+  "Ipsos": 0.792,
+  "DC Consultores": 0.787,
+  "Ideia Big Data": 0.748,
+  "Reale Dalla Torre": 0.692
  },
  "aliases": {
   "atlas intel": "AtlasIntel",
@@ -3414,7 +3703,17 @@
   "consultora delfos": "Delfos",
   "analogias": "Analogías",
   "inteligencia analitica": "Inteligencia Analítica",
-  "d&#39;alessio irol y berensztein": "D'Alessio IROL y Berensztein"
+  "d&#39;alessio irol y berensztein": "D'Alessio IROL y Berensztein",
+  "consultora de imagen y gestión política": "CIGP",
+  "cigp consultora": "CIGP",
+  "centro de estudios de opinión pública": "CEOP",
+  "solmoraigo": "Solmoirago",
+  "oh! panel": "Oh Panel!",
+  "aragón y asociados": "Raúl Aragón & Asociados",
+  "m&r asociados / query argentina": "Query",
+  "query argentina - m&r asociados": "Query",
+  "universidad nacional de la matanza": "UNLaM",
+  "nueva comunicación consultora": "Nueva Comunicación"
  },
  "unrated_active_2026": [
   "Afiches AC",
@@ -3432,5 +3731,1861 @@
   "Synopsis",
   "Trends",
   "ZX Consultora"
- ]
+ ],
+ "scorecard": [
+  {
+   "firm": "CB Consultora",
+   "performance": 53.7,
+   "adjusted": 51.6,
+   "n_contests": 6,
+   "polls_10y": 28,
+   "influence": 80.6,
+   "points": 43.3,
+   "eligible": true,
+   "contests": [
+    {
+     "race": "2019-general",
+     "label": "General 2019",
+     "kind": "general",
+     "ema": 5.9,
+     "objective": 23.7,
+     "comparative": 12.7,
+     "score": 18.2,
+     "weight": 0.542
+    },
+    {
+     "race": "2023-ballotage",
+     "label": "Runoff 2023",
+     "kind": "ballotage",
+     "ema": 3.91,
+     "objective": 39.8,
+     "comparative": 90.1,
+     "score": 64.9,
+     "weight": 0.77
+    },
+    {
+     "race": "2023-general",
+     "label": "General 2023",
+     "kind": "general",
+     "ema": 3.01,
+     "objective": 47.1,
+     "comparative": 81.9,
+     "score": 64.5,
+     "weight": 0.765
+    },
+    {
+     "race": "2023-paso",
+     "label": "PASO 2023",
+     "kind": "paso",
+     "ema": 7.23,
+     "objective": 30.1,
+     "comparative": 60.6,
+     "score": 45.3,
+     "weight": 0.602
+    },
+    {
+     "race": "2023-pba-general",
+     "label": "PBA gobernador 2023",
+     "kind": "provincial",
+     "ema": 1.39,
+     "objective": 70.6,
+     "comparative": 98.3,
+     "score": 84.5,
+     "weight": 0.459
+    },
+    {
+     "race": "2025-pba-legislativa",
+     "label": "PBA legislativa 2025",
+     "kind": "provincial",
+     "ema": 7.01,
+     "objective": 29.8,
+     "comparative": 52.2,
+     "score": 41.0,
+     "weight": 0.54
+    }
+   ],
+   "z": 1.49,
+   "grade": "A",
+   "rank": 1
+  },
+  {
+   "firm": "Proyección Consultores",
+   "performance": 46.3,
+   "adjusted": 48.6,
+   "n_contests": 5,
+   "polls_10y": 23,
+   "influence": 78.9,
+   "points": 36.5,
+   "eligible": true,
+   "contests": [
+    {
+     "race": "2019-general",
+     "label": "General 2019",
+     "kind": "general",
+     "ema": 4.71,
+     "objective": 31.7,
+     "comparative": 43.2,
+     "score": 37.4,
+     "weight": 0.542
+    },
+    {
+     "race": "2023-ballotage",
+     "label": "Runoff 2023",
+     "kind": "ballotage",
+     "ema": 4.7,
+     "objective": 33.0,
+     "comparative": 72.9,
+     "score": 53.0,
+     "weight": 0.77
+    },
+    {
+     "race": "2023-caba-general",
+     "label": "CABA jefe de gobierno 2023",
+     "kind": "provincial",
+     "ema": 4.22,
+     "objective": 44.5,
+     "comparative": 97.9,
+     "score": 71.2,
+     "weight": 0.459
+    },
+    {
+     "race": "2023-general",
+     "label": "General 2023",
+     "kind": "general",
+     "ema": 4.33,
+     "objective": 33.9,
+     "comparative": 52.2,
+     "score": 43.0,
+     "weight": 0.765
+    },
+    {
+     "race": "2023-paso",
+     "label": "PASO 2023",
+     "kind": "paso",
+     "ema": 8.33,
+     "objective": 25.0,
+     "comparative": 37.1,
+     "score": 31.0,
+     "weight": 0.602
+    }
+   ],
+   "z": 0.42,
+   "grade": "B",
+   "rank": 2
+  },
+  {
+   "firm": "CIGP",
+   "performance": 45.6,
+   "adjusted": 48.3,
+   "n_contests": 5,
+   "polls_10y": 11,
+   "influence": 43.4,
+   "points": 19.8,
+   "eligible": true,
+   "contests": [
+    {
+     "race": "2019-general",
+     "label": "General 2019",
+     "kind": "general",
+     "ema": 3.46,
+     "objective": 43.0,
+     "comparative": 80.2,
+     "score": 61.6,
+     "weight": 0.542
+    },
+    {
+     "race": "2019-paso",
+     "label": "PASO 2019",
+     "kind": "paso",
+     "ema": 6.31,
+     "objective": 20.6,
+     "comparative": 17.0,
+     "score": 18.8,
+     "weight": 0.426
+    },
+    {
+     "race": "2023-ballotage",
+     "label": "Runoff 2023",
+     "kind": "ballotage",
+     "ema": 4.7,
+     "objective": 33.0,
+     "comparative": 72.9,
+     "score": 53.0,
+     "weight": 0.77
+    },
+    {
+     "race": "2023-general",
+     "label": "General 2023",
+     "kind": "general",
+     "ema": 2.44,
+     "objective": 54.3,
+     "comparative": 90.0,
+     "score": 72.2,
+     "weight": 0.765
+    },
+    {
+     "race": "2023-paso",
+     "label": "PASO 2023",
+     "kind": "paso",
+     "ema": 12.11,
+     "objective": 13.4,
+     "comparative": 0.8,
+     "score": 7.1,
+     "weight": 0.602
+    }
+   ],
+   "z": 0.31,
+   "grade": "B-",
+   "rank": 3
+  },
+  {
+   "firm": "Management & Fit",
+   "performance": 34.3,
+   "adjusted": 44.0,
+   "n_contests": 5,
+   "polls_10y": 26,
+   "influence": 78.3,
+   "points": 26.9,
+   "eligible": true,
+   "contests": [
+    {
+     "race": "2015-ballotage",
+     "label": "Runoff 2015",
+     "kind": "ballotage",
+     "ema": 3.0,
+     "objective": 47.2,
+     "comparative": 45.2,
+     "score": 46.2,
+     "weight": 0.385
+    },
+    {
+     "race": "2015-general",
+     "label": "General 2015",
+     "kind": "general",
+     "ema": 2.58,
+     "objective": 52.5,
+     "comparative": 90.5,
+     "score": 71.5,
+     "weight": 0.383
+    },
+    {
+     "race": "2015-paso",
+     "label": "PASO 2015",
+     "kind": "paso",
+     "ema": 2.9,
+     "objective": 48.4,
+     "comparative": 7.9,
+     "score": 28.1,
+     "weight": 0.301
+    },
+    {
+     "race": "2019-paso",
+     "label": "PASO 2019",
+     "kind": "paso",
+     "ema": 6.2,
+     "objective": 21.2,
+     "comparative": 19.3,
+     "score": 20.3,
+     "weight": 0.426
+    },
+    {
+     "race": "2023-paso",
+     "label": "PASO 2023",
+     "kind": "paso",
+     "ema": 9.81,
+     "objective": 19.6,
+     "comparative": 12.8,
+     "score": 16.2,
+     "weight": 0.602
+    }
+   ],
+   "z": -1.22,
+   "grade": "D",
+   "rank": 4
+  },
+  {
+   "firm": "Circuitos Consultora",
+   "performance": 37.5,
+   "adjusted": 44.6,
+   "n_contests": 6,
+   "polls_10y": 27,
+   "influence": 69.6,
+   "points": 26.1,
+   "eligible": true,
+   "contests": [
+    {
+     "race": "2015-general",
+     "label": "General 2015",
+     "kind": "general",
+     "ema": 3.78,
+     "objective": 38.9,
+     "comparative": 50.0,
+     "score": 44.4,
+     "weight": 0.383
+    },
+    {
+     "race": "2019-paso",
+     "label": "PASO 2019",
+     "kind": "paso",
+     "ema": 4.89,
+     "objective": 29.4,
+     "comparative": 57.1,
+     "score": 43.3,
+     "weight": 0.426
+    },
+    {
+     "race": "2023-caba-general",
+     "label": "CABA jefe de gobierno 2023",
+     "kind": "provincial",
+     "ema": 6.72,
+     "objective": 27.6,
+     "comparative": 25.1,
+     "score": 26.3,
+     "weight": 0.459
+    },
+    {
+     "race": "2023-general",
+     "label": "General 2023",
+     "kind": "general",
+     "ema": 3.31,
+     "objective": 43.7,
+     "comparative": 76.3,
+     "score": 60.0,
+     "weight": 0.765
+    },
+    {
+     "race": "2023-paso",
+     "label": "PASO 2023",
+     "kind": "paso",
+     "ema": 9.76,
+     "objective": 19.7,
+     "comparative": 13.4,
+     "score": 16.6,
+     "weight": 0.602
+    },
+    {
+     "race": "2023-pba-general",
+     "label": "PBA gobernador 2023",
+     "kind": "provincial",
+     "ema": 4.01,
+     "objective": 36.7,
+     "comparative": 18.4,
+     "score": 27.5,
+     "weight": 0.459
+    }
+   ],
+   "z": -1.01,
+   "grade": "D",
+   "rank": 5
+  },
+  {
+   "firm": "AtlasIntel",
+   "performance": 70.6,
+   "adjusted": 56.9,
+   "n_contests": 4,
+   "polls_10y": 17,
+   "influence": 68.5,
+   "points": 48.4,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2019-general",
+     "label": "General 2019",
+     "kind": "general",
+     "ema": 0.81,
+     "objective": 82.1,
+     "comparative": 99.9,
+     "score": 91.0,
+     "weight": 0.542
+    },
+    {
+     "race": "2023-ballotage",
+     "label": "Runoff 2023",
+     "kind": "ballotage",
+     "ema": 3.55,
+     "objective": 43.3,
+     "comparative": 94.5,
+     "score": 68.9,
+     "weight": 0.77
+    },
+    {
+     "race": "2023-general",
+     "label": "General 2023",
+     "kind": "general",
+     "ema": 2.33,
+     "objective": 55.9,
+     "comparative": 91.2,
+     "score": 73.5,
+     "weight": 0.765
+    },
+    {
+     "race": "2023-paso",
+     "label": "PASO 2023",
+     "kind": "paso",
+     "ema": 6.79,
+     "objective": 32.3,
+     "comparative": 69.4,
+     "score": 50.9,
+     "weight": 0.602
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 6
+  },
+  {
+   "firm": "Opinaia",
+   "performance": 47.6,
+   "adjusted": 49.2,
+   "n_contests": 4,
+   "polls_10y": 40,
+   "influence": 90.0,
+   "points": 42.8,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2019-general",
+     "label": "General 2019",
+     "kind": "general",
+     "ema": 4.84,
+     "objective": 30.7,
+     "comparative": 39.1,
+     "score": 34.9,
+     "weight": 0.542
+    },
+    {
+     "race": "2019-paso",
+     "label": "PASO 2019",
+     "kind": "paso",
+     "ema": 5.93,
+     "objective": 22.7,
+     "comparative": 25.7,
+     "score": 24.2,
+     "weight": 0.426
+    },
+    {
+     "race": "2023-general",
+     "label": "General 2023",
+     "kind": "general",
+     "ema": 3.73,
+     "objective": 39.4,
+     "comparative": 67.2,
+     "score": 53.3,
+     "weight": 0.765
+    },
+    {
+     "race": "2023-paso",
+     "label": "PASO 2023",
+     "kind": "paso",
+     "ema": 5.0,
+     "objective": 43.5,
+     "comparative": 93.1,
+     "score": 68.3,
+     "weight": 0.602
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 7
+  },
+  {
+   "firm": "Consultora Tendencias",
+   "performance": 61.1,
+   "adjusted": 53.0,
+   "n_contests": 3,
+   "polls_10y": 16,
+   "influence": 56.5,
+   "points": 34.6,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2019-paso",
+     "label": "PASO 2019",
+     "kind": "paso",
+     "ema": 3.68,
+     "objective": 39.9,
+     "comparative": 87.4,
+     "score": 63.6,
+     "weight": 0.426
+    },
+    {
+     "race": "2023-general",
+     "label": "General 2023",
+     "kind": "general",
+     "ema": 3.12,
+     "objective": 45.8,
+     "comparative": 80.0,
+     "score": 62.9,
+     "weight": 0.765
+    },
+    {
+     "race": "2025-pba-legislativa",
+     "label": "PBA legislativa 2025",
+     "kind": "provincial",
+     "ema": 6.47,
+     "objective": 32.7,
+     "comparative": 80.6,
+     "score": 56.7,
+     "weight": 0.54
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 8
+  },
+  {
+   "firm": "Opina Argentina",
+   "performance": 45.6,
+   "adjusted": 48.8,
+   "n_contests": 3,
+   "polls_10y": 25,
+   "influence": 75.2,
+   "points": 34.3,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2019-paso",
+     "label": "PASO 2019",
+     "kind": "paso",
+     "ema": 4.61,
+     "objective": 31.6,
+     "comparative": 65.7,
+     "score": 48.6,
+     "weight": 0.426
+    },
+    {
+     "race": "2023-caba-general",
+     "label": "CABA jefe de gobierno 2023",
+     "kind": "provincial",
+     "ema": 5.91,
+     "objective": 32.2,
+     "comparative": 58.2,
+     "score": 45.2,
+     "weight": 0.459
+    },
+    {
+     "race": "2023-paso",
+     "label": "PASO 2023",
+     "kind": "paso",
+     "ema": 7.34,
+     "objective": 29.5,
+     "comparative": 58.2,
+     "score": 43.9,
+     "weight": 0.602
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 9
+  },
+  {
+   "firm": "ESPOP (UdeSA)",
+   "performance": 46.9,
+   "adjusted": 49.1,
+   "n_contests": 3,
+   "polls_10y": 17,
+   "influence": 67.4,
+   "points": 31.6,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2019-paso",
+     "label": "PASO 2019",
+     "kind": "paso",
+     "ema": 4.09,
+     "objective": 36.0,
+     "comparative": 79.3,
+     "score": 57.7,
+     "weight": 0.426
+    },
+    {
+     "race": "2023-general",
+     "label": "General 2023",
+     "kind": "general",
+     "ema": 5.17,
+     "objective": 27.5,
+     "comparative": 31.1,
+     "score": 29.3,
+     "weight": 0.765
+    },
+    {
+     "race": "2023-paso",
+     "label": "PASO 2023",
+     "kind": "paso",
+     "ema": 5.82,
+     "objective": 38.0,
+     "comparative": 85.0,
+     "score": 61.5,
+     "weight": 0.602
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 10
+  },
+  {
+   "firm": "Ricardo Rouvier & Asociados",
+   "performance": 51.3,
+   "adjusted": 50.3,
+   "n_contests": 3,
+   "polls_10y": 14,
+   "influence": 53.2,
+   "points": 27.3,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2015-general",
+     "label": "General 2015",
+     "kind": "general",
+     "ema": 3.17,
+     "objective": 45.3,
+     "comparative": 74.7,
+     "score": 60.0,
+     "weight": 0.383
+    },
+    {
+     "race": "2019-general",
+     "label": "General 2019",
+     "kind": "general",
+     "ema": 4.09,
+     "objective": 36.9,
+     "comparative": 63.1,
+     "score": 50.0,
+     "weight": 0.542
+    },
+    {
+     "race": "2019-paso",
+     "label": "PASO 2019",
+     "kind": "paso",
+     "ema": 4.8,
+     "objective": 30.1,
+     "comparative": 59.9,
+     "score": 45.0,
+     "weight": 0.426
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 11
+  },
+  {
+   "firm": "Raúl Aragón & Asociados",
+   "performance": 57.1,
+   "adjusted": 52.4,
+   "n_contests": 4,
+   "polls_10y": 10,
+   "influence": 47.0,
+   "points": 26.8,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2015-ballotage",
+     "label": "Runoff 2015",
+     "kind": "ballotage",
+     "ema": 2.66,
+     "objective": 51.4,
+     "comparative": 55.2,
+     "score": 53.3,
+     "weight": 0.385
+    },
+    {
+     "race": "2015-general",
+     "label": "General 2015",
+     "kind": "general",
+     "ema": 3.75,
+     "objective": 39.2,
+     "comparative": 51.3,
+     "score": 45.2,
+     "weight": 0.383
+    },
+    {
+     "race": "2015-paso",
+     "label": "PASO 2015",
+     "kind": "paso",
+     "ema": 1.07,
+     "objective": 76.5,
+     "comparative": 75.1,
+     "score": 75.8,
+     "weight": 0.301
+    },
+    {
+     "race": "2019-paso",
+     "label": "PASO 2019",
+     "kind": "paso",
+     "ema": 4.07,
+     "objective": 36.1,
+     "comparative": 79.8,
+     "score": 58.0,
+     "weight": 0.426
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 12
+  },
+  {
+   "firm": "Federico González & Asociados",
+   "performance": 30.9,
+   "adjusted": 43.6,
+   "n_contests": 4,
+   "polls_10y": 38,
+   "influence": 80.8,
+   "points": 25.0,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2019-general",
+     "label": "General 2019",
+     "kind": "general",
+     "ema": 5.96,
+     "objective": 23.4,
+     "comparative": 11.7,
+     "score": 17.5,
+     "weight": 0.542
+    },
+    {
+     "race": "2019-paso",
+     "label": "PASO 2019",
+     "kind": "paso",
+     "ema": 3.63,
+     "objective": 40.4,
+     "comparative": 88.2,
+     "score": 64.3,
+     "weight": 0.426
+    },
+    {
+     "race": "2023-caba-general",
+     "label": "CABA jefe de gobierno 2023",
+     "kind": "provincial",
+     "ema": 7.55,
+     "objective": 23.5,
+     "comparative": 5.8,
+     "score": 14.7,
+     "weight": 0.459
+    },
+    {
+     "race": "2023-paso",
+     "label": "PASO 2023",
+     "kind": "paso",
+     "ema": 8.28,
+     "objective": 25.2,
+     "comparative": 38.1,
+     "score": 31.7,
+     "weight": 0.602
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 13
+  },
+  {
+   "firm": "Zuban Córdoba",
+   "performance": 32.3,
+   "adjusted": 44.1,
+   "n_contests": 4,
+   "polls_10y": 25,
+   "influence": 77.2,
+   "points": 24.9,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2019-general",
+     "label": "General 2019",
+     "kind": "general",
+     "ema": 5.15,
+     "objective": 28.5,
+     "comparative": 29.8,
+     "score": 29.1,
+     "weight": 0.542
+    },
+    {
+     "race": "2019-paso",
+     "label": "PASO 2019",
+     "kind": "paso",
+     "ema": 6.0,
+     "objective": 22.3,
+     "comparative": 24.0,
+     "score": 23.1,
+     "weight": 0.426
+    },
+    {
+     "race": "2023-ballotage",
+     "label": "Runoff 2023",
+     "kind": "ballotage",
+     "ema": 7.0,
+     "objective": 19.2,
+     "comparative": 8.6,
+     "score": 13.9,
+     "weight": 0.77
+    },
+    {
+     "race": "2023-general",
+     "label": "General 2023",
+     "kind": "general",
+     "ema": 3.43,
+     "objective": 42.4,
+     "comparative": 73.9,
+     "score": 58.1,
+     "weight": 0.765
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 14
+  },
+  {
+   "firm": "Aresco",
+   "performance": 42.9,
+   "adjusted": 48.1,
+   "n_contests": 3,
+   "polls_10y": 12,
+   "influence": 49.6,
+   "points": 21.3,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2015-general",
+     "label": "General 2015",
+     "kind": "general",
+     "ema": 3.35,
+     "objective": 43.3,
+     "comparative": 68.0,
+     "score": 55.6,
+     "weight": 0.383
+    },
+    {
+     "race": "2023-general",
+     "label": "General 2023",
+     "kind": "general",
+     "ema": 4.01,
+     "objective": 36.7,
+     "comparative": 60.3,
+     "score": 48.5,
+     "weight": 0.765
+    },
+    {
+     "race": "2023-pba-general",
+     "label": "PBA gobernador 2023",
+     "kind": "provincial",
+     "ema": 4.28,
+     "objective": 34.3,
+     "comparative": 11.3,
+     "score": 22.8,
+     "weight": 0.459
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 15
+  },
+  {
+   "firm": "CEOP",
+   "performance": 54.1,
+   "adjusted": 51.1,
+   "n_contests": 3,
+   "polls_10y": 8,
+   "influence": 36.2,
+   "points": 19.6,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2015-general",
+     "label": "General 2015",
+     "kind": "general",
+     "ema": 3.88,
+     "objective": 37.9,
+     "comparative": 45.6,
+     "score": 41.8,
+     "weight": 0.383
+    },
+    {
+     "race": "2015-paso",
+     "label": "PASO 2015",
+     "kind": "paso",
+     "ema": 0.8,
+     "objective": 81.9,
+     "comparative": 83.8,
+     "score": 82.8,
+     "weight": 0.301
+    },
+    {
+     "race": "2023-paso",
+     "label": "PASO 2023",
+     "kind": "paso",
+     "ema": 7.06,
+     "objective": 30.9,
+     "comparative": 64.1,
+     "score": 47.5,
+     "weight": 0.602
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 16
+  },
+  {
+   "firm": "Hugo Haime & Asociados",
+   "performance": 67.5,
+   "adjusted": 54.8,
+   "n_contests": 3,
+   "polls_10y": 5,
+   "influence": 27.8,
+   "points": 18.8,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2015-ballotage",
+     "label": "Runoff 2015",
+     "kind": "ballotage",
+     "ema": 0.91,
+     "objective": 79.7,
+     "comparative": 92.1,
+     "score": 85.9,
+     "weight": 0.385
+    },
+    {
+     "race": "2015-paso",
+     "label": "PASO 2015",
+     "kind": "paso",
+     "ema": 1.29,
+     "objective": 72.4,
+     "comparative": 66.5,
+     "score": 69.5,
+     "weight": 0.301
+    },
+    {
+     "race": "2023-paso",
+     "label": "PASO 2023",
+     "kind": "paso",
+     "ema": 6.47,
+     "objective": 34.1,
+     "comparative": 75.2,
+     "score": 54.7,
+     "weight": 0.602
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 17
+  },
+  {
+   "firm": "Poliarquía",
+   "performance": 53.0,
+   "adjusted": 50.8,
+   "n_contests": 3,
+   "polls_10y": 3,
+   "influence": 27.8,
+   "points": 14.7,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2015-ballotage",
+     "label": "Runoff 2015",
+     "kind": "ballotage",
+     "ema": 3.44,
+     "objective": 42.3,
+     "comparative": 32.9,
+     "score": 37.6,
+     "weight": 0.385
+    },
+    {
+     "race": "2015-general",
+     "label": "General 2015",
+     "kind": "general",
+     "ema": 3.64,
+     "objective": 40.3,
+     "comparative": 56.0,
+     "score": 48.1,
+     "weight": 0.383
+    },
+    {
+     "race": "2015-paso",
+     "label": "PASO 2015",
+     "kind": "paso",
+     "ema": 0.96,
+     "objective": 78.7,
+     "comparative": 78.9,
+     "score": 78.8,
+     "weight": 0.301
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 18
+  },
+  {
+   "firm": "Query",
+   "performance": 52.5,
+   "adjusted": 50.3,
+   "n_contests": 1,
+   "polls_10y": 7,
+   "influence": 26.9,
+   "points": 14.1,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2015-paso",
+     "label": "PASO 2015",
+     "kind": "paso",
+     "ema": 1.84,
+     "objective": 63.1,
+     "comparative": 42.0,
+     "score": 52.5,
+     "weight": 0.301
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 19
+  },
+  {
+   "firm": "Giacobbe & Asociados",
+   "performance": 30.3,
+   "adjusted": 42.4,
+   "n_contests": 5,
+   "polls_10y": 9,
+   "influence": 44.0,
+   "points": 13.3,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2015-ballotage",
+     "label": "Runoff 2015",
+     "kind": "ballotage",
+     "ema": 2.45,
+     "objective": 54.2,
+     "comparative": 61.2,
+     "score": 57.7,
+     "weight": 0.385
+    },
+    {
+     "race": "2015-general",
+     "label": "General 2015",
+     "kind": "general",
+     "ema": 3.46,
+     "objective": 42.1,
+     "comparative": 63.6,
+     "score": 52.9,
+     "weight": 0.383
+    },
+    {
+     "race": "2019-paso",
+     "label": "PASO 2019",
+     "kind": "paso",
+     "ema": 6.99,
+     "objective": 17.4,
+     "comparative": 6.7,
+     "score": 12.1,
+     "weight": 0.426
+    },
+    {
+     "race": "2023-general",
+     "label": "General 2023",
+     "kind": "general",
+     "ema": 5.6,
+     "objective": 24.7,
+     "comparative": 22.0,
+     "score": 23.3,
+     "weight": 0.765
+    },
+    {
+     "race": "2023-paso",
+     "label": "PASO 2023",
+     "kind": "paso",
+     "ema": 9.32,
+     "objective": 21.2,
+     "comparative": 19.2,
+     "score": 20.2,
+     "weight": 0.602
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 20
+  },
+  {
+   "firm": "Trespuntozero",
+   "performance": 60.3,
+   "adjusted": 52.1,
+   "n_contests": 2,
+   "polls_10y": 4,
+   "influence": 17.0,
+   "points": 10.2,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2019-general",
+     "label": "General 2019",
+     "kind": "general",
+     "ema": 3.66,
+     "objective": 40.9,
+     "comparative": 75.3,
+     "score": 58.1,
+     "weight": 0.542
+    },
+    {
+     "race": "2019-paso",
+     "label": "PASO 2019",
+     "kind": "paso",
+     "ema": 3.72,
+     "objective": 39.5,
+     "comparative": 86.7,
+     "score": 63.1,
+     "weight": 0.426
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 21
+  },
+  {
+   "firm": "CELAG",
+   "performance": 38.7,
+   "adjusted": 47.7,
+   "n_contests": 2,
+   "polls_10y": 5,
+   "influence": 23.7,
+   "points": 9.2,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2019-paso",
+     "label": "PASO 2019",
+     "kind": "paso",
+     "ema": 2.79,
+     "objective": 49.8,
+     "comparative": 96.8,
+     "score": 73.3,
+     "weight": 0.426
+    },
+    {
+     "race": "2023-ballotage",
+     "label": "Runoff 2023",
+     "kind": "ballotage",
+     "ema": 6.5,
+     "objective": 21.6,
+     "comparative": 17.5,
+     "score": 19.5,
+     "weight": 0.77
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 22
+  },
+  {
+   "firm": "Clivajes Consultores",
+   "performance": 40.0,
+   "adjusted": 48.0,
+   "n_contests": 2,
+   "polls_10y": 4,
+   "influence": 21.2,
+   "points": 8.5,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2019-general",
+     "label": "General 2019",
+     "kind": "general",
+     "ema": 5.09,
+     "objective": 28.9,
+     "comparative": 31.5,
+     "score": 30.2,
+     "weight": 0.542
+    },
+    {
+     "race": "2023-general",
+     "label": "General 2023",
+     "kind": "general",
+     "ema": 4.1,
+     "objective": 35.9,
+     "comparative": 58.1,
+     "score": 47.0,
+     "weight": 0.765
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 23
+  },
+  {
+   "firm": "Políticos en Redes",
+   "performance": 73.7,
+   "adjusted": 52.6,
+   "n_contests": 1,
+   "polls_10y": 2,
+   "influence": 9.7,
+   "points": 7.1,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2023-paso",
+     "label": "PASO 2023",
+     "kind": "paso",
+     "ema": 4.17,
+     "objective": 50.0,
+     "comparative": 97.3,
+     "score": 73.7,
+     "weight": 0.602
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 24
+  },
+  {
+   "firm": "OPSM",
+   "performance": 42.1,
+   "adjusted": 47.8,
+   "n_contests": 3,
+   "polls_10y": 2,
+   "influence": 16.5,
+   "points": 6.9,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2015-general",
+     "label": "General 2015",
+     "kind": "general",
+     "ema": 2.69,
+     "objective": 51.0,
+     "comparative": 88.3,
+     "score": 69.7,
+     "weight": 0.383
+    },
+    {
+     "race": "2015-paso",
+     "label": "PASO 2015",
+     "kind": "paso",
+     "ema": 1.89,
+     "objective": 62.3,
+     "comparative": 39.7,
+     "score": 51.0,
+     "weight": 0.301
+    },
+    {
+     "race": "2023-paso",
+     "label": "PASO 2023",
+     "kind": "paso",
+     "ema": 9.34,
+     "objective": 21.2,
+     "comparative": 18.9,
+     "score": 20.1,
+     "weight": 0.602
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 25
+  },
+  {
+   "firm": "Nueva Comunicación",
+   "performance": 51.6,
+   "adjusted": 50.2,
+   "n_contests": 1,
+   "polls_10y": 3,
+   "influence": 13.4,
+   "points": 6.9,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2023-paso",
+     "label": "PASO 2023",
+     "kind": "paso",
+     "ema": 6.73,
+     "objective": 32.7,
+     "comparative": 70.5,
+     "score": 51.6,
+     "weight": 0.602
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 26
+  },
+  {
+   "firm": "Dicen",
+   "performance": 33.8,
+   "adjusted": 45.6,
+   "n_contests": 3,
+   "polls_10y": 3,
+   "influence": 17.7,
+   "points": 6.0,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2015-general",
+     "label": "General 2015",
+     "kind": "general",
+     "ema": 5.47,
+     "objective": 25.5,
+     "comparative": 3.3,
+     "score": 14.4,
+     "weight": 0.383
+    },
+    {
+     "race": "2019-general",
+     "label": "General 2019",
+     "kind": "general",
+     "ema": 5.12,
+     "objective": 28.7,
+     "comparative": 30.7,
+     "score": 29.7,
+     "weight": 0.542
+    },
+    {
+     "race": "2019-paso",
+     "label": "PASO 2019",
+     "kind": "paso",
+     "ema": 4.17,
+     "objective": 35.3,
+     "comparative": 77.5,
+     "score": 56.4,
+     "weight": 0.426
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 27
+  },
+  {
+   "firm": "Reale Dalla Torre",
+   "performance": 15.3,
+   "adjusted": 43.1,
+   "n_contests": 2,
+   "polls_10y": 8,
+   "influence": 39.1,
+   "points": 6.0,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2019-paso",
+     "label": "PASO 2019",
+     "kind": "paso",
+     "ema": 5.93,
+     "objective": 22.7,
+     "comparative": 25.7,
+     "score": 24.2,
+     "weight": 0.426
+    },
+    {
+     "race": "2023-general",
+     "label": "General 2023",
+     "kind": "general",
+     "ema": 7.11,
+     "objective": 16.9,
+     "comparative": 4.0,
+     "score": 10.4,
+     "weight": 0.765
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 28
+  },
+  {
+   "firm": "Inteligencia Analítica",
+   "performance": 35.5,
+   "adjusted": 48.4,
+   "n_contests": 1,
+   "polls_10y": 3,
+   "influence": 16.4,
+   "points": 5.8,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2023-ballotage",
+     "label": "Runoff 2023",
+     "kind": "ballotage",
+     "ema": 5.58,
+     "objective": 26.8,
+     "comparative": 44.2,
+     "score": 35.5,
+     "weight": 0.77
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 29
+  },
+  {
+   "firm": "Analogías",
+   "performance": 11.3,
+   "adjusted": 45.7,
+   "n_contests": 1,
+   "polls_10y": 11,
+   "influence": 48.4,
+   "points": 5.5,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2023-ballotage",
+     "label": "Runoff 2023",
+     "kind": "ballotage",
+     "ema": 7.34,
+     "objective": 17.7,
+     "comparative": 4.9,
+     "score": 11.3,
+     "weight": 0.77
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 30
+  },
+  {
+   "firm": "Fixer",
+   "performance": 12.5,
+   "adjusted": 45.8,
+   "n_contests": 1,
+   "polls_10y": 6,
+   "influence": 30.1,
+   "points": 3.8,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2023-general",
+     "label": "General 2023",
+     "kind": "general",
+     "ema": 6.74,
+     "objective": 18.5,
+     "comparative": 6.5,
+     "score": 12.5,
+     "weight": 0.765
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 31
+  },
+  {
+   "firm": "Oh Panel!",
+   "performance": 40.6,
+   "adjusted": 48.1,
+   "n_contests": 2,
+   "polls_10y": 2,
+   "influence": 8.1,
+   "points": 3.3,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2019-general",
+     "label": "General 2019",
+     "kind": "general",
+     "ema": 5.21,
+     "objective": 28.1,
+     "comparative": 28.1,
+     "score": 28.1,
+     "weight": 0.542
+    },
+    {
+     "race": "2019-paso",
+     "label": "PASO 2019",
+     "kind": "paso",
+     "ema": 4.16,
+     "objective": 35.3,
+     "comparative": 77.7,
+     "score": 56.5,
+     "weight": 0.426
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 32
+  },
+  {
+   "firm": "DC Consultores",
+   "performance": 7.9,
+   "adjusted": 45.3,
+   "n_contests": 1,
+   "polls_10y": 7,
+   "influence": 39.0,
+   "points": 3.1,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2023-general",
+     "label": "General 2023",
+     "kind": "general",
+     "ema": 7.77,
+     "objective": 14.3,
+     "comparative": 1.5,
+     "score": 7.9,
+     "weight": 0.765
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 33
+  },
+  {
+   "firm": "Fundación para la Dignificación del Hombre en el Trabajo",
+   "performance": 94.8,
+   "adjusted": 55.0,
+   "n_contests": 1,
+   "polls_10y": 0,
+   "influence": 3.0,
+   "points": 2.9,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2015-ballotage",
+     "label": "Runoff 2015",
+     "kind": "ballotage",
+     "ema": 0.3,
+     "objective": 92.8,
+     "comparative": 96.9,
+     "score": 94.8,
+     "weight": 0.385
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 34
+  },
+  {
+   "firm": "Quorus",
+   "performance": 87.9,
+   "adjusted": 54.2,
+   "n_contests": 1,
+   "polls_10y": 0,
+   "influence": 3.0,
+   "points": 2.7,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2015-ballotage",
+     "label": "Runoff 2015",
+     "kind": "ballotage",
+     "ema": 0.78,
+     "objective": 82.3,
+     "comparative": 93.5,
+     "score": 87.9,
+     "weight": 0.385
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 35
+  },
+  {
+   "firm": "Real Time Data",
+   "performance": 17.4,
+   "adjusted": 46.4,
+   "n_contests": 1,
+   "polls_10y": 3,
+   "influence": 13.8,
+   "points": 2.4,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2019-paso",
+     "label": "PASO 2019",
+     "kind": "paso",
+     "ema": 6.43,
+     "objective": 20.0,
+     "comparative": 14.7,
+     "score": 17.4,
+     "weight": 0.426
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 36
+  },
+  {
+   "firm": "Ipsos",
+   "performance": 26.7,
+   "adjusted": 43.7,
+   "n_contests": 3,
+   "polls_10y": 0,
+   "influence": 8.7,
+   "points": 2.3,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2015-ballotage",
+     "label": "Runoff 2015",
+     "kind": "ballotage",
+     "ema": 4.86,
+     "objective": 29.7,
+     "comparative": 6.9,
+     "score": 18.3,
+     "weight": 0.385
+    },
+    {
+     "race": "2015-general",
+     "label": "General 2015",
+     "kind": "general",
+     "ema": 4.39,
+     "objective": 33.4,
+     "comparative": 25.3,
+     "score": 29.3,
+     "weight": 0.383
+    },
+    {
+     "race": "2015-paso",
+     "label": "PASO 2015",
+     "kind": "paso",
+     "ema": 2.55,
+     "objective": 52.9,
+     "comparative": 15.5,
+     "score": 34.2,
+     "weight": 0.301
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 37
+  },
+  {
+   "firm": "Universidad Nacional de San Martín",
+   "performance": 45.4,
+   "adjusted": 49.5,
+   "n_contests": 1,
+   "polls_10y": 0,
+   "influence": 3.0,
+   "points": 1.4,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2015-ballotage",
+     "label": "Runoff 2015",
+     "kind": "ballotage",
+     "ema": 3.04,
+     "objective": 46.8,
+     "comparative": 44.1,
+     "score": 45.4,
+     "weight": 0.385
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 38
+  },
+  {
+   "firm": "Elypsis",
+   "performance": 43.8,
+   "adjusted": 49.3,
+   "n_contests": 1,
+   "polls_10y": 0,
+   "influence": 3.0,
+   "points": 1.3,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2015-ballotage",
+     "label": "Runoff 2015",
+     "kind": "ballotage",
+     "ema": 3.12,
+     "objective": 45.8,
+     "comparative": 41.8,
+     "score": 43.8,
+     "weight": 0.385
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 39
+  },
+  {
+   "firm": "Pulso Research",
+   "performance": 22.2,
+   "adjusted": 46.9,
+   "n_contests": 1,
+   "polls_10y": 1,
+   "influence": 4.9,
+   "points": 1.1,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2025-pba-legislativa",
+     "label": "PBA legislativa 2025",
+     "kind": "provincial",
+     "ema": 7.66,
+     "objective": 26.6,
+     "comparative": 17.9,
+     "score": 22.2,
+     "weight": 0.54
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 40
+  },
+  {
+   "firm": "González y Valladares",
+   "performance": 17.3,
+   "adjusted": 43.5,
+   "n_contests": 2,
+   "polls_10y": 0,
+   "influence": 5.9,
+   "points": 1.0,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2015-ballotage",
+     "label": "Runoff 2015",
+     "kind": "ballotage",
+     "ema": 4.93,
+     "objective": 29.2,
+     "comparative": 6.2,
+     "score": 17.7,
+     "weight": 0.385
+    },
+    {
+     "race": "2015-general",
+     "label": "General 2015",
+     "kind": "general",
+     "ema": 5.19,
+     "objective": 27.3,
+     "comparative": 6.2,
+     "score": 16.8,
+     "weight": 0.383
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 41
+  },
+  {
+   "firm": "Polldata",
+   "performance": 21.2,
+   "adjusted": 46.8,
+   "n_contests": 1,
+   "polls_10y": 0,
+   "influence": 3.0,
+   "points": 0.6,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2015-ballotage",
+     "label": "Runoff 2015",
+     "kind": "ballotage",
+     "ema": 4.55,
+     "objective": 32.1,
+     "comparative": 10.4,
+     "score": 21.2,
+     "weight": 0.385
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 42
+  },
+  {
+   "firm": "Marketing & Estadística",
+   "performance": 24.4,
+   "adjusted": 47.2,
+   "n_contests": 1,
+   "polls_10y": 0,
+   "influence": 0.0,
+   "points": 0.0,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2019-paso",
+     "label": "PASO 2019",
+     "kind": "paso",
+     "ema": 5.92,
+     "objective": 22.8,
+     "comparative": 26.0,
+     "score": 24.4,
+     "weight": 0.426
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 43
+  },
+  {
+   "firm": "Ideia Big Data",
+   "performance": 7.4,
+   "adjusted": 45.3,
+   "n_contests": 1,
+   "polls_10y": 0,
+   "influence": 0.0,
+   "points": 0.0,
+   "eligible": false,
+   "contests": [
+    {
+     "race": "2019-paso",
+     "label": "PASO 2019",
+     "kind": "paso",
+     "ema": 7.97,
+     "objective": 13.6,
+     "comparative": 1.1,
+     "score": 7.4,
+     "weight": 0.426
+    }
+   ],
+   "z": null,
+   "grade": null,
+   "rank": 44
+  }
+ ],
+ "scorecard_method": {
+  "cohort_size": 5,
+  "cohort_mean": 47.42,
+  "cohort_sd": 2.8,
+  "min_polls_10y": 10,
+  "min_contests": 5,
+  "shrink_n": 8,
+  "half_life_years": 8.0,
+  "type_weights": {
+   "general": 1.0,
+   "ballotage": 1.0,
+   "paso": 0.8,
+   "provincial": 0.6
+  },
+  "bands": [
+   [
+    1.65,
+    "A+"
+   ],
+   [
+    1.33,
+    "A"
+   ],
+   [
+    1.0,
+    "A-"
+   ],
+   [
+    0.67,
+    "B+"
+   ],
+   [
+    0.33,
+    "B"
+   ],
+   [
+    0.0,
+    "B-"
+   ],
+   [
+    -0.33,
+    "C+"
+   ],
+   [
+    -0.67,
+    "C"
+   ],
+   [
+    -1.0,
+    "C-"
+   ],
+   [
+    -1.65,
+    "D"
+   ],
+   [
+    null,
+    "F"
+   ]
+  ],
+  "median_contest_ema": 4.84,
+  "ema_scale": 4.0,
+  "reach_r0": 25.0
+ }
 }
