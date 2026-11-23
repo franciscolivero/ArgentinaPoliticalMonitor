@@ -3,7 +3,7 @@
 fetch_encuestar.py — snapshot the Milei-vs-Kicillof ballotage poll series from EncuestAR.
 
 Runs server-side (e.g. from a GitHub Action), so it is NOT subject to browser CORS.
-It reads the public poll-aggregator table at encuestar.netlify.app/encuestas/, keeps the
+It reads the public poll-aggregator table at encuestas-argentinas.com/encuestas/, keeps the
 "Ballotage hipotético: Milei vs. Kicillof" rows, builds a per-poll series plus a smoothed
 poll-average, and writes encuestas_history.json at the repo root. The dashboard reads that
 file (same-origin, no CORS) to draw chart 2 ("Milei vs. Kicillof — runoff voting intention").
@@ -22,7 +22,7 @@ Usage:
 
 import re, sys, json, datetime, pathlib
 
-SRC_URL = "https://encuestar.netlify.app/encuestas/"
+SRC_URL = "https://encuestas-argentinas.com/encuestas/"
 OUT = "encuestas_history.json"
 
 # Which race to keep. The row's "Carrera" cell must match this (case-insensitive).
@@ -172,7 +172,7 @@ def build(polls):
         "updated": datetime.datetime.utcnow().isoformat() + "Z",
         "source": SRC_URL,
         "race": "Ballotage hipotético: Milei vs. Kicillof",
-        "attribution": "Poll aggregation by EncuestAR (encuestar.netlify.app); "
+        "attribution": "Poll aggregation by EncuestAR (encuestas-argentinas.com); "
                        "each poll © the firm that ran it.",
         "polls": uniq,
         "avg": smoothed_average(uniq),

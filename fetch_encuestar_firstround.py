@@ -9,7 +9,7 @@ forecast model (forecast.html / update_forecast.py) expects first-round shares â
 "other" bucket as 100 - Milei - Kicillof and models the runoff transfer itself. Feeding runoff
 numbers into it would double-count, so the two series are kept separate on purpose.
 
-It reads the public aggregator table at encuestar.netlify.app/encuestas/, keeps the first-round
+It reads the public aggregator table at encuestas-argentinas.com/encuestas/, keeps the first-round
 Milei-vs-Kicillof rows (EXCLUDING any ballotage/segunda-vuelta rows), builds a per-poll series
 plus a smoothed poll-average, and rewrites data.json -> headToHead2026 {polls, avg}. Everything
 else in data.json is left untouched. Nothing is ever invented: if the fetch or the parse fails,
@@ -36,7 +36,7 @@ Usage:
 import re, sys, json, datetime, pathlib
 from collections import Counter
 
-SRC_URL = "https://encuestar.netlify.app/encuestas/"
+SRC_URL = "https://encuestas-argentinas.com/encuestas/"
 OUT = "data.json"
 HEAD_KEY = "headToHead2026"          # the block inside data.json the forecast reads
 

@@ -6,7 +6,7 @@ charts.
 
 Sibling of fetch_encuestar.py (ballotage) and fetch_encuestar_firstround.py. Those scrape the
 head-to-head rows; this one reads the per-space race at
-    https://encuestar.netlify.app/carrera/voto-nacional-espacio/
+    https://encuestas-argentinas.com/carrera/voto-nacional-espacio/
 where every poll is already normalised by the aggregator to seven canonical spaces plus the
 "Alianza LLA+PRO" line (which is the day-by-day SUM of the LLA and PRO averages — a sum, not a
 measured coalition). We consume that normalised series rather than re-deriving it from each
@@ -34,7 +34,7 @@ Usage:
 import re, sys, json, datetime, pathlib
 from collections import Counter, defaultdict
 
-SRC_URL = "https://encuestar.netlify.app/carrera/voto-nacional-espacio/"
+SRC_URL = "https://encuestas-argentinas.com/carrera/voto-nacional-espacio/"
 OUT = "espacio_history.json"
 
 # The seven canonical spaces the aggregator normalises to. "Alianza LLA+PRO" is its day-by-day

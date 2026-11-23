@@ -4,7 +4,7 @@ fetch_approval.py — pull new presidential-approval polls from EncuestAR and me
 approval_polls.csv, which build_approval.py turns into the Chart 04 average.
 
 Sibling of fetch_encuestar.py / fetch_encuestar_firstround.py: it reads the same public table at
-encuestar.netlify.app/encuestas/ (Consultora | Carrera | ... | n | ... | Resultados | link), keeps
+encuestas-argentinas.com/encuestas/ (Consultora | Carrera | ... | n | ... | Resultados | link), keeps
 the rows whose "Carrera" is approval of the national government's gestión, and parses the
 approve / disapprove shares out of the Resultados cell.
 
@@ -109,7 +109,7 @@ def make_poll(consultora, carrera, n_cell, resultados, url, known):
         n = None
     return {"firm": canonical_firm(firm_name(consultora), known), "end_date": date,
             "approve": ap, "disapprove": dp, "n": n, "date_approx": 0,
-            "source": url or "https://encuestar.netlify.app/encuestas/", "origin": "encuestar"}
+            "source": url or "https://encuestas-argentinas.com/encuestas/", "origin": "encuestar"}
 
 
 # ---------------------------------------------------------------- CSV merge
