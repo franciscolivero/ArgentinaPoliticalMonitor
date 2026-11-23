@@ -14,6 +14,7 @@ on:
       - "pollster_elections.csv"
       - "pollster_polls.csv"
       - "pollster_aliases.csv"
+      - "pollster_volume.csv"
       - "build_pollster_ratings.py"
   workflow_dispatch:
 
