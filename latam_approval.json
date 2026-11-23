@@ -1703,6 +1703,42 @@
      "origin": "news"
     },
     {
+     "date": "2026-11-18",
+     "firm": "Criteria",
+     "approve": 28.0,
+     "disapprove": null,
+     "approx": true,
+     "origin": "news",
+     "source": "https://www.adnradio.cl/2026/11/23/presidente-kast-por-baja-aprobacion-nuestro-gobierno-no-se-define-por-el-buen-o-mal-resultado-de-una-encuesta/"
+    },
+    {
+     "date": "2026-11-19",
+     "firm": "Cadem",
+     "approve": 69.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNaFZJQ3JXdTdycmhiV2ViSzVuWUJGMXNFMjhRSTU3STNkZl9jaUp0RFJVQ19lc2Jia3Y1ZVZBZzA3X29YYzdnWU1aUjBqalVUUUs5ejY5dlRQYVcyT2NQTFNCMXFCTGdsMThUUnU4RlFMM3kxaE9JWTkzcGNmYUU5RmFrY2c3SDBJdGxEOG40ZXd1Y2xmTFFUdG1pdkZvUkFkQ0RYTExCbkFTY3o2Y0JSb3F3Y0Z6UG5tcE54Y3NnMGo3Wk0?oc=5",
+     "origin": "news"
+    },
+    {
+     "date": "2026-11-19",
+     "firm": "Cadem",
+     "approve": 24.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOS3lmMzlFaU51RGZaNThQcGlEYmtsVkFMeXpyQjFZY1Q1UExGRFZ5a0ZIWjVmOE02WFVVYnQ0ZEhCeXVUcUN6NFhJOWdmcnBqS2lna0VmVklxMm50NkNwSUtVQTZMZWdRSmlILW1NMzBPMHFXMDJaZlY5cWhqV0N0S1V0djRmZV92VDBlQTJ6c3k2dHE2YlZHeUV5Vy1vN3JkeEdobXhnTFBGcUJrbk5xQ1FCVQ?oc=5",
+     "origin": "news"
+    },
+    {
+     "date": "2026-11-20",
+     "firm": "Cadem",
+     "approve": 28.0,
+     "disapprove": 69.0,
+     "approx": false,
+     "source": "https://cadem.cl/wp-content/uploads/2026/11/Track-PP-705-Noviembre-S3-M1-VF.pdf",
+     "origin": "pollster"
+    },
+    {
      "date": "2026-11-21",
      "firm": "Criteria",
      "approve": 23.0,
@@ -1788,14 +1824,14 @@
       39.1,
       38.0,
       37.0,
-      36.3,
-      35.7,
-      35.3,
+      36.1,
+      35.5,
+      35.1,
+      34.9,
+      34.9,
+      35.0,
       35.2,
-      35.2,
-      35.3,
-      35.6,
-      35.7
+      35.3
      ]
     },
     "disapprove": {
@@ -1872,12 +1908,12 @@
       60.6,
       61.8,
       62.9,
-      63.8,
-      64.5,
+      63.9,
+      64.6,
       65.1,
-      65.4,
-      65.7,
-      65.8
+      65.5,
+      65.8,
+      66.0
      ]
     }
    }
@@ -2561,6 +2597,24 @@
      "approx": false,
      "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
      "origin": "manual"
+    },
+    {
+     "date": "2026-11-18",
+     "firm": "Datum",
+     "approve": 55.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQaGotZWxoWVF6MVpnQklkU2MtRUNLS2dXNlBJdFRYSzhRNDZaMkVXOEZtN3ZWSUk0TEdOMHRFdHQtMm5ycW9oYU5fT3k4T3VSdUI5S3BVSXVVSldMQVRDUmpnQXBvU3RoQWpJaXBLY3BhZ2xkanU2OV9RcW85cndYcm03YlVpOHBvV3N3a2s3bFVKelRwWmdqazA0bm5wS1hMS19WR0hMMFI5R2ZzMFNHUjZ6eTY3SFVVOGVWQg?oc=5",
+     "origin": "news"
+    },
+    {
+     "date": "2026-11-20",
+     "firm": "Datum",
+     "approve": 38.0,
+     "disapprove": 55.0,
+     "approx": false,
+     "origin": "news",
+     "source": "https://diariocorreo.pe/politica/keiko-fujimori-sobre-encuesta-datum-hay-que-tomar-las-cosas-con-serenidad-noticia/"
     }
    ],
    "country": "Peru",
@@ -2583,7 +2637,9 @@
       "2026-10-21",
       "2026-10-28",
       "2026-11-04",
-      "2026-11-09"
+      "2026-11-11",
+      "2026-11-18",
+      "2026-11-20"
      ],
      "values": [
       53.9,
@@ -2594,13 +2650,15 @@
       46.4,
       45.0,
       43.8,
-      42.6,
-      41.5,
-      40.4,
-      39.6,
-      39.0,
-      38.7,
-      38.6
+      42.7,
+      41.6,
+      40.7,
+      40.1,
+      39.8,
+      39.9,
+      40.1,
+      40.5,
+      40.6
      ]
     },
     "disapprove": {
@@ -2619,7 +2677,8 @@
       "2026-10-23",
       "2026-10-30",
       "2026-11-06",
-      "2026-11-09"
+      "2026-11-13",
+      "2026-11-20"
      ],
      "values": [
       34.4,
@@ -2628,15 +2687,16 @@
       41.1,
       43.7,
       45.9,
-      47.6,
-      49.0,
-      50.1,
-      50.9,
-      51.6,
-      52.1,
-      52.5,
+      47.7,
+      49.1,
+      50.2,
+      51.0,
+      51.8,
+      52.3,
       52.8,
-      52.9
+      53.2,
+      53.5,
+      53.7
      ]
     }
    }
@@ -4657,6 +4717,15 @@
      "origin": "manual"
     },
     {
+     "date": "2026-05-16",
+     "firm": "Pollster not named (press)",
+     "approve": 45.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQUWhzNEV3dDJZTVd1M3MxbkJSTDh3Y3B0MnU4ZkFuRlN3Mk9nYmJrT3BzakdTLVpsVXc4RDdBTzBIeXVOdDh0T29kWGwtbktCTHVvYURnc3lSZURURGR2b2lRNzdPMl9fMlNLSDU4Q0R0S0dHd0pJZm5VVEhNU3JVNzlYLVFHUTMzNG1mRUpGbEFsNTVsSmd4S1QyVWNuWFkzYXA3cw?oc=5",
+     "origin": "news"
+    },
+    {
      "date": "2026-05-18",
      "firm": "CB Consultora (imagen positiva)",
      "approve": 39.4,
@@ -4930,25 +4999,25 @@
       37.2,
       36.1,
       35.4,
+      35.0,
       34.9,
-      34.7,
-      34.8,
-      35.1,
-      35.5,
-      35.8,
-      36.0,
-      35.9,
       35.3,
-      34.5,
-      33.6,
-      33.1,
-      33.0,
-      33.3,
-      33.9,
-      34.7,
-      35.5,
+      35.9,
+      36.9,
+      37.8,
+      38.5,
+      38.7,
+      38.3,
+      37.4,
+      36.2,
+      35.0,
+      34.2,
+      34.0,
+      34.2,
+      34.8,
+      35.6,
       36.4,
-      37.1,
+      37.2,
       38.0,
       39.0,
       40.2,
@@ -10209,6 +10278,15 @@
      "approx": false,
      "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
      "origin": "manual"
+    },
+    {
+     "date": "2026-11-19",
+     "firm": "Pollster not named (press)",
+     "approve": 54.6,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPajV2UDI4M3NkYWxkTURzRUJTMzkwVExNNTN2ZHcwMHhqSFFBbW13WHhKYnNuQU9rV28wRzd0TzJMdzlva3A2dFk3RG8wYUVxbWJoMExUUE5GMXZmMFBSWXdWc3MybmJxeTcwNG95Y3BzTlJjV3JoZFZoWTFKTXpMV0ZfWEJJc0Jvb1JySU5ENThObC1BNHBsWmY3R1g4MmFVWVFYMXFocE9zNHd2R1F2QllSd21CejRudXZkbGtiZG1WT2FNcDZlUFdQTl9vZ1RmSGJrc3VWT2pDbjRuNUFwZTE0MkFJejZQZDdFQkNFVGxNNXFhOENz?oc=5",
+     "origin": "news"
     }
    ],
    "country": "Dominican Republic",
@@ -10308,7 +10386,8 @@
       "2026-10-24",
       "2026-10-31",
       "2026-11-07",
-      "2026-11-09"
+      "2026-11-14",
+      "2026-11-19"
      ],
      "values": [
       66.8,
@@ -10397,12 +10476,13 @@
       52.3,
       52.3,
       52.3,
+      52.4,
+      52.4,
       52.3,
-      52.2,
-      52.1,
-      51.9,
-      51.7,
-      51.7
+      52.3,
+      52.3,
+      52.4,
+      52.4
      ]
     },
     "disapprove": {
@@ -10494,6 +10574,6 @@
    }
   }
  },
- "updated": "2026-11-22T18:29:33Z",
+ "updated": "2026-11-23T22:35:59Z",
  "method": "Pollster releases, Wikipedia poll tables, press articles (headlines and full text) and regional rankings (CB Consultora, Mitofsky, CID Gallup, AtlasIntel); Gaussian-kernel average, 21-day bandwidth, firm-crowding weights."
 }

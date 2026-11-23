@@ -1,12 +1,12 @@
-run 2026-11-22 18:29 UTC · 5 new poll(s)
+run 2026-11-23 22:35 UTC · 9 new poll(s)
 
-CL Chile        189 polls  manual 12, news 65, pollster 13, wikipedia 99
+CL Chile        193 polls  manual 12, news 68, pollster 14, wikipedia 99
 BO Bolivia       25 polls  manual 13, news 12
-PE Peru          23 polls  manual 13, news 10
+PE Peru          25 polls  manual 13, news 12
 CO Colombia      11 polls  manual 8, news 3
 VE Venezuela     15 polls  manual 13, news 2
 MX Mexico       101 polls  manual 20, news 35, news-ranking 1, wikipedia 45
-EC Ecuador       35 polls  manual 11, news 10, wikipedia 14
+EC Ecuador       36 polls  manual 11, news 11, wikipedia 14
 SV El Salvador   31 polls  manual 17, news 7, pollster 1, wikipedia 6
 PA Panama        14 polls  manual 14
 GT Guatemala     15 polls  manual 13, wikipedia 2
@@ -15,36 +15,14 @@ HN Honduras       9 polls  manual 9
 UY Uruguay       52 polls  manual 9, news 13, wikipedia 30
 PY Paraguay      12 polls  manual 12
 CR Costa Rica    13 polls  manual 11, news 1, pollster 1
-DO Dominican Republic  19 polls  manual 14, news 4, pollster 1
+DO Dominican Republic  20 polls  manual 14, news 5, pollster 1
 
 log:
   · CL Wikipedia (es) Anexo:Encuestas_de_aprobación_del_gobierno_de_José_Antonio_Kast: 142 rows
-  · CL Cadem: 5 new wave(s) from 5 unread PDF(s)
-  · CL Criteria: no validated figure in Agenda_Criteria_15_Marzo_2026.pdf
-  · CL Criteria: no validated figure in Agenda_Criteria_22_Marzo_2026.pdf
-  · CL Criteria: no validated figure in Agenda_Criteria_29_Marzo_2026.pdf
-  · CL Criteria: no validated figure in Agenda_Criteria_5_Abril_2026_x7br4.pdf
-  · CL Criteria: no validated figure in Agenda_Criteria_12_Abril_2026_7h6fy.pdf
-  · CL Criteria: no validated figure in Agenda_Criteria_19_Abril_2026_3fTdf.pdf
-  · CL Criteria: no validated figure in Agenda_Criteria_26_Abril_2026_4eFsq.pdf
-  · CL Criteria: no validated figure in Agenda_Criteria_3_Mayo_2026_5fGqV.pdf
-  · CL Criteria: no validated figure in Agenda_Criteria_10_Mayo_2026_6HvRc.pdf
-  · CL Criteria: no validated figure in Agenda_Criteria_17_Mayo_2026_5M3vh.pdf
-  · CL Criteria: no validated figure in Agenda_Criteria_24_Mayo_2026_5M4bN.pdf
-  · CL Criteria: no validated figure in Agenda_Criteria_31_Mayo_2026_5M5eP.pdf
-  · CL Criteria: no validated figure in Agenda_Criteria_07_Junio_2026_6K9vC.pdf
-  · CL Criteria: no validated figure in Agenda_Criteria_14_Junio_2026_6LVnZ.pdf
-  · CL Criteria: no validated figure in Agenda_Criteria_21_Junio_2026_6Mb3r.pdf
-  · CL Criteria: no validated figure in Agenda_Criteria_28_Junio_2026_6Lg4h.pdf
-  · CL Criteria: no validated figure in Agenda_Criteria_5_Julio_2026_7by3L.pdf
-  · CL Criteria: no validated figure in Agenda_Criteria_12_Julio_2026_7cF8h.pdf
-  · CL Criteria: no validated figure in Agenda_Criteria_19_Julio_2026_7dGbR.pdf
-  · CL Criteria: no validated figure in Agenda_Criteria_26_Julio_2026_7eHcP.pdf
-  · CL Criteria: no validated figure in Agenda_Criteria_2_Agosto_2026_8cLMx.pdf
-  · CL Criteria: no validated figure in Agenda_Criteria_13_Septiembre_2026_9dGv2.pdf
-  · CL Criteria: no validated figure in Agenda_Criteria_20_Septiembre_2026_9eBc3.pdf
-  · CL Criteria: 7 new wave(s) from 30 unread PDF(s)
-  + CL Criteria ≈2026-11-21: 23.0/68.0 [pollster]
+  · CL Cadem: 2 new wave(s) from 2 unread PDF(s)
+  · CL Criteria: listing failed (401 Client Error: Unauthorized for url: https://www.criteria.cl/wp-json/wp/v2/media?search=Agenda_Criteria&per_page=100&page=1&mime_type=application%2Fpdf&after=2026-03-11T00%3A00%3A00)
+  · CL Criteria: 0 new wave(s) from 0 unread PDF(s)
+  + CL Cadem ≈2026-11-20: 28.0/69.0 [pollster]
   · MX Wikipedia Opinion_polling_on_the_Sheinbaum_presidency: 52 rows
   · EC Wikipedia (es) Segundo_gobierno_de_Daniel_Noboa: 14 rows
   · SV Wikipedia Opinion_polling_on_the_Nayib_Bukele_presidency: 25 rows
@@ -52,16 +30,20 @@ log:
   · UY Wikipedia (es) Gobierno_de_Yamandú_Orsi: 30 rows
   · CID Gallup SV 2026-10-27: 94.0%
   · CID Gallup CR 2026-08-17: 74.0%
-  · CB Global Data listing failed (Expecting value: line 1 column 1 (char 0))
-  · Google News: 2072 unique articles read
-  · articles VE: 1 read, 0 poll reading(s)
-  · articles SV: 1 read, 0 poll reading(s)
-  · articles MX: 2 read, 1 poll reading(s)
-  · articles BR: 5 read, 3 poll reading(s)
-  · articles CL: 6 read, 5 poll reading(s)
-  · articles: 13 articles read in 30s
-  + BR Quaest ≈2026-01-10: 49.0/49.0 [news]
-  + BR CNT/MDA ≈2026-04-10: 49.6/49.6 [news]
+  · Google News: 2655 unique articles read
+  · articles DO: 6 read, 0 poll reading(s)
+  · articles PE: 4 read, 3 poll reading(s)
+  · articles UY: 1 read, 1 poll reading(s)
+  · articles MX: 3 read, 0 poll reading(s)
+  · articles BR: 3 read, 2 poll reading(s)
+  · articles CL: 6 read, 4 poll reading(s)
+  · articles: 21 articles read in 31s
+  + PE Datum ≈2026-11-20: 38.0/55.0 [news]
+  + CL Criteria ≈2026-11-18: 28.0/None [news]
+  + EC Pollster not named (press) ≈2026-05-16: 45.0/None [news]
   + EC Pollster not named (press) ≈2026-11-06: 49.0/None [news]
-  + CL Criteria ≈2026-11-18: 68.0/None [news]
+  + PE Datum ≈2026-11-18: 55.0/None [news]
+  + CL Cadem ≈2026-11-19: 69.0/None [news]
+  + CL Cadem ≈2026-11-19: 24.0/None [news]
+  + DO Pollster not named (press) ≈2026-11-19: 54.6/None [news]
   · Google News queries failed: 0
