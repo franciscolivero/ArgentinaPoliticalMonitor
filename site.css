@@ -101,3 +101,18 @@ main{padding:0 clamp(16px,5vw,64px) 80px; max-width:1040px}
 .fc-stats b{color:var(--ink); font-weight:600}
 .sources h3{color:var(--ink); font-size:15.5px; font-weight:650; margin:18px 0 6px}
 .sources p{margin:0 0 12px}
+
+/* ---------- newsletter button ---------- */
+.subscribe{
+  display:inline-flex; align-items:center; gap:8px; align-self:flex-start;
+  padding:9px 14px; border-radius:999px; background:var(--celeste-deep); color:#fff;
+  font-size:14px; font-weight:600; text-decoration:none; line-height:1.2; white-space:nowrap;
+}
+.subscribe:hover{filter:brightness(1.08); color:#fff}
+.subscribe svg{flex:0 0 auto}
+.subscribe-note{display:block; margin-top:6px; font-size:12.5px; color:var(--muted); line-height:1.4; white-space:normal}
+.hero .subscribe{margin-top:22px; padding:11px 18px; font-size:15px}
+@media (max-width:900px){
+  .rail .subscribe{order:9; padding:6px 12px; font-size:13px}
+  .rail .subscribe-note{display:none}
+}

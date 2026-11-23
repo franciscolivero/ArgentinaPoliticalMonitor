@@ -28,6 +28,8 @@
   nav.tabs{position:sticky; top:0; z-index:20; background:rgba(244,245,242,.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
   .tabs-inner{max-width:1060px; margin:0 auto; padding:0 16px; display:flex; gap:2px; overflow-x:auto;}
   .tabs a{flex:0 0 auto; padding:13px 14px; font-size:13px; font-weight:500; color:var(--muted); text-decoration:none; border-bottom:2px solid transparent; white-space:nowrap;}
+  .tabs a.nl{margin-left:auto; color:#fff; background:var(--celeste); border-radius:999px; padding:7px 14px; margin-top:6px; margin-bottom:6px; display:inline-flex; align-items:center; gap:7px; font-weight:600}
+  .tabs a.nl:hover{color:#fff; filter:brightness(1.08)}
   .tabs a:hover{color:var(--ink)} .tabs a.home{color:var(--celeste)}
   main{max-width:1060px; margin:0 auto; padding:26px 16px 40px;}
   .card{background:var(--panel); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow); overflow:hidden; margin-bottom:20px;}
@@ -85,6 +87,7 @@
 <nav class="tabs">
   <div class="tabs-inner">
     <a href="index.html" class="home">← Back to monitor</a>
+    <a class="nl" href="https://lagentepide.substack.com/subscribe" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Weekly newsletter</a>
   </div>
 </nav>
 
