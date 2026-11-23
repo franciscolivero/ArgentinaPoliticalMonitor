@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T21:14:02Z",
+ "updated": "2026-11-23T22:46:09Z",
  "model": {
   "n": 78,
   "base_rate": 0.449,
@@ -85,15 +85,15 @@
    "iso": "DO",
    "country": "Dominican Republic",
    "president": "Luis Abinader",
-   "approval": 51.7,
-   "approval_asof": "2026-11-09",
+   "approval": 52.4,
+   "approval_asof": "2026-11-19",
    "next_election": "2028-05-21",
    "date_precision": "approx",
    "president_running": 0,
    "years_to_election": 1.5,
-   "p_model": 0.452,
+   "p_model": 0.461,
    "weight_model": 0.91,
-   "p": 0.451
+   "p": 0.46
   },
   {
    "iso": "CO",
@@ -152,6 +152,20 @@
    "p": 0.399
   },
   {
+   "iso": "PE",
+   "country": "Peru",
+   "president": "Keiko Fujimori",
+   "approval": 40.6,
+   "approval_asof": "2026-11-20",
+   "next_election": "2031-04-13",
+   "date_precision": "approx",
+   "president_running": 0,
+   "years_to_election": 4.4,
+   "p_model": 0.309,
+   "weight_model": 0.37,
+   "p": 0.398
+  },
+  {
    "iso": "EC",
    "country": "Ecuador",
    "president": "Daniel Noboa",
@@ -166,32 +180,18 @@
    "p": 0.398
   },
   {
-   "iso": "PE",
-   "country": "Peru",
-   "president": "Keiko Fujimori",
-   "approval": 38.6,
-   "approval_asof": "2026-11-09",
-   "next_election": "2031-04-13",
-   "date_precision": "approx",
-   "president_running": 0,
-   "years_to_election": 4.4,
-   "p_model": 0.286,
-   "weight_model": 0.37,
-   "p": 0.389
-  },
-  {
    "iso": "CL",
    "country": "Chile",
    "president": "José Antonio Kast",
-   "approval": 35.7,
+   "approval": 35.3,
    "approval_asof": "2026-11-21",
    "next_election": "2029-11-18",
    "date_precision": "approx",
    "president_running": 0,
    "years_to_election": 3.0,
-   "p_model": 0.254,
+   "p_model": 0.25,
    "weight_model": 0.63,
-   "p": 0.327
+   "p": 0.324
   },
   {
    "iso": "PA",
