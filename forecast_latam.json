@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T22:46:09Z",
+ "updated": "2026-11-24T17:39:52Z",
  "model": {
   "n": 78,
   "base_rate": 0.449,
@@ -65,7 +65,7 @@
    "years_to_election": 3.2,
    "p_model": 0.552,
    "weight_model": 0.59,
-   "p": 0.509
+   "p": 0.51
   },
   {
    "iso": "AR",
@@ -202,10 +202,10 @@
    "next_election": "2029-05-06",
    "date_precision": "approx",
    "president_running": 0,
-   "years_to_election": 2.5,
+   "years_to_election": 2.4,
    "p_model": 0.248,
    "weight_model": 0.73,
-   "p": 0.303
+   "p": 0.302
   },
   {
    "iso": "UY",
@@ -219,7 +219,7 @@
    "years_to_election": 2.9,
    "p_model": 0.181,
    "weight_model": 0.64,
-   "p": 0.278
+   "p": 0.277
   },
   {
    "iso": "GT",
