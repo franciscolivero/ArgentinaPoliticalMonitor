@@ -1,10 +1,10 @@
-run 2026-11-23 22:35 UTC · 9 new poll(s)
+run 2026-11-24 21:08 UTC · 6 new poll(s)
 
-CL Chile        193 polls  manual 12, news 68, pollster 14, wikipedia 99
+CL Chile        195 polls  manual 12, news 70, pollster 14, wikipedia 99
 BO Bolivia       25 polls  manual 13, news 12
-PE Peru          25 polls  manual 13, news 12
-CO Colombia      11 polls  manual 8, news 3
-VE Venezuela     15 polls  manual 13, news 2
+PE Peru          26 polls  manual 13, news 13
+CO Colombia      12 polls  manual 8, news 4
+VE Venezuela     16 polls  manual 13, news 3
 MX Mexico       101 polls  manual 20, news 35, news-ranking 1, wikipedia 45
 EC Ecuador       36 polls  manual 11, news 11, wikipedia 14
 SV El Salvador   31 polls  manual 17, news 7, pollster 1, wikipedia 6
@@ -19,10 +19,9 @@ DO Dominican Republic  20 polls  manual 14, news 5, pollster 1
 
 log:
   · CL Wikipedia (es) Anexo:Encuestas_de_aprobación_del_gobierno_de_José_Antonio_Kast: 142 rows
-  · CL Cadem: 2 new wave(s) from 2 unread PDF(s)
+  · CL Cadem: 1 new wave(s) from 1 unread PDF(s)
   · CL Criteria: listing failed (401 Client Error: Unauthorized for url: https://www.criteria.cl/wp-json/wp/v2/media?search=Agenda_Criteria&per_page=100&page=1&mime_type=application%2Fpdf&after=2026-03-11T00%3A00%3A00)
   · CL Criteria: 0 new wave(s) from 0 unread PDF(s)
-  + CL Cadem ≈2026-11-20: 28.0/69.0 [pollster]
   · MX Wikipedia Opinion_polling_on_the_Sheinbaum_presidency: 52 rows
   · EC Wikipedia (es) Segundo_gobierno_de_Daniel_Noboa: 14 rows
   · SV Wikipedia Opinion_polling_on_the_Nayib_Bukele_presidency: 25 rows
@@ -30,20 +29,22 @@ log:
   · UY Wikipedia (es) Gobierno_de_Yamandú_Orsi: 30 rows
   · CID Gallup SV 2026-10-27: 94.0%
   · CID Gallup CR 2026-08-17: 74.0%
-  · Google News: 2655 unique articles read
-  · articles DO: 6 read, 0 poll reading(s)
-  · articles PE: 4 read, 3 poll reading(s)
+  · Google News: 2844 unique articles read
+  · articles CO: 11 read, 0 poll reading(s)
+  · articles PY: 2 read, 0 poll reading(s)
+  · articles VE: 3 read, 1 poll reading(s)
+  · articles DO: 3 read, 0 poll reading(s)
+  · articles PE: 3 read, 2 poll reading(s)
   · articles UY: 1 read, 1 poll reading(s)
-  · articles MX: 3 read, 0 poll reading(s)
-  · articles BR: 3 read, 2 poll reading(s)
-  · articles CL: 6 read, 4 poll reading(s)
-  · articles: 21 articles read in 31s
-  + PE Datum ≈2026-11-20: 38.0/55.0 [news]
-  + CL Criteria ≈2026-11-18: 28.0/None [news]
-  + EC Pollster not named (press) ≈2026-05-16: 45.0/None [news]
+  · articles MX: 1 read, 0 poll reading(s)
+  · articles BR: 1 read, 0 poll reading(s)
+  · articles CL: skipped Criteria 68.0% (far from recent median 36.0)
+  · articles CL: 6 read, 2 poll reading(s)
+  · articles: 30 articles read in 36s
+  + VE AtlasIntel ≈2026-11-09: 18.5/44.3 [news]
+  + PE Datum ≈2026-11-18: 60.0/None [news]
+  + CL Cadem ≈2026-10-16: 69.0/None [news]
+  + CL Cadem ≈2026-11-06: 32.0/None [news]
   + EC Pollster not named (press) ≈2026-11-06: 49.0/None [news]
-  + PE Datum ≈2026-11-18: 55.0/None [news]
-  + CL Cadem ≈2026-11-19: 69.0/None [news]
-  + CL Cadem ≈2026-11-19: 24.0/None [news]
-  + DO Pollster not named (press) ≈2026-11-19: 54.6/None [news]
+  + CO Pollster not named (press) ≈2026-11-20: 51.5/None [news]
   · Google News queries failed: 0
