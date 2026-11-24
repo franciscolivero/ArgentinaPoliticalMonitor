@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T20:06:48Z",
+ "updated": "2026-11-24T21:23:45Z",
  "model": {
   "n": 78,
   "base_rate": 0.449,
@@ -99,15 +99,15 @@
    "iso": "CO",
    "country": "Colombia",
    "president": "Abelardo de la Espriella",
-   "approval": 48.6,
-   "approval_asof": "2026-11-09",
+   "approval": 48.7,
+   "approval_asof": "2026-11-20",
    "next_election": "2030-05-26",
    "date_precision": "approx",
    "president_running": 0,
    "years_to_election": 3.5,
-   "p_model": 0.41,
+   "p_model": 0.411,
    "weight_model": 0.53,
-   "p": 0.428
+   "p": 0.429
   },
   {
    "iso": "BR",
@@ -138,6 +138,20 @@
    "p": 0.421
   },
   {
+   "iso": "PE",
+   "country": "Peru",
+   "president": "Keiko Fujimori",
+   "approval": 41.7,
+   "approval_asof": "2026-11-20",
+   "next_election": "2031-04-13",
+   "date_precision": "approx",
+   "president_running": 0,
+   "years_to_election": 4.4,
+   "p_model": 0.322,
+   "weight_model": 0.37,
+   "p": 0.402
+  },
+  {
    "iso": "HN",
    "country": "Honduras",
    "president": "Nasry Asfura",
@@ -150,20 +164,6 @@
    "p_model": 0.369,
    "weight_model": 0.62,
    "p": 0.399
-  },
-  {
-   "iso": "PE",
-   "country": "Peru",
-   "president": "Keiko Fujimori",
-   "approval": 40.6,
-   "approval_asof": "2026-11-20",
-   "next_election": "2031-04-13",
-   "date_precision": "approx",
-   "president_running": 0,
-   "years_to_election": 4.4,
-   "p_model": 0.309,
-   "weight_model": 0.37,
-   "p": 0.398
   },
   {
    "iso": "EC",
@@ -183,15 +183,15 @@
    "iso": "CL",
    "country": "Chile",
    "president": "José Antonio Kast",
-   "approval": 35.3,
+   "approval": 35.2,
    "approval_asof": "2026-11-21",
    "next_election": "2029-11-18",
    "date_precision": "approx",
    "president_running": 0,
    "years_to_election": 3.0,
-   "p_model": 0.25,
+   "p_model": 0.249,
    "weight_model": 0.63,
-   "p": 0.324
+   "p": 0.323
   },
   {
    "iso": "PA",
