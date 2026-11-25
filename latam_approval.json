@@ -1468,15 +1468,6 @@
      "origin": "manual"
     },
     {
-     "date": "2026-10-16",
-     "firm": "Cadem",
-     "approve": 69.0,
-     "disapprove": null,
-     "approx": true,
-     "source": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPUDVrYUJyRzZUT1ZneTVqaEt6TlI3RjZsYjcwQlRWb3RMSDhoSDdsbGtLNUxIN045Y0ZHMks5UFA1T2IxYm9EdlhqTGlMVUxmbXpJMW80UmFvZTgySWluRG5KV3FTR0JPQkZXemNPNVZqMGxfVEtwXzNUd1ZxZWhOQXpvdWc4V1RFeXN4cjd0cFdCdjJWRk50N19qc3dkYWpxOFMwa2hIVmhuMlR0SjBfdWFIaW1ZZWM4OWZzTlk4MFd0a2JEdVZj?oc=5",
-     "origin": "news"
-    },
-    {
      "date": "2026-10-19",
      "firm": "Data Influye",
      "approve": 25.0,
@@ -1764,6 +1755,15 @@
      "approx": true,
      "source": "https://www.criteria.cl/site/wp-content/uploads/2026/11/Agenda_Criteria_22_Noviembre_2026_S4gPk.pdf",
      "origin": "pollster"
+    },
+    {
+     "date": "2026-11-23",
+     "firm": "Data Influye",
+     "approve": 20.0,
+     "disapprove": 70.0,
+     "approx": false,
+     "origin": "wikipedia",
+     "source": "https://es.wikipedia.org/wiki/Anexo:Encuestas_de_aprobación_del_gobierno_de_José_Antonio_Kast"
     }
    ],
    "country": "Chile",
@@ -1809,7 +1809,7 @@
       "2026-11-04",
       "2026-11-11",
       "2026-11-18",
-      "2026-11-21"
+      "2026-11-23"
      ],
      "values": [
       46.9,
@@ -1840,16 +1840,16 @@
       41.4,
       40.3,
       39.1,
-      38.0,
-      37.1,
-      36.3,
-      35.6,
+      37.9,
+      36.9,
+      35.9,
       35.2,
-      34.9,
-      34.9,
-      34.9,
-      35.1,
-      35.2
+      34.5,
+      34.0,
+      33.6,
+      33.2,
+      32.9,
+      32.6
      ]
     },
     "disapprove": {
@@ -1891,7 +1891,7 @@
       "2026-11-04",
       "2026-11-11",
       "2026-11-18",
-      "2026-11-21"
+      "2026-11-23"
      ],
      "values": [
       41.7,
@@ -1924,14 +1924,14 @@
       58.3,
       59.4,
       60.6,
-      61.8,
-      62.9,
-      63.9,
-      64.6,
-      65.1,
-      65.5,
-      65.8,
-      66.0
+      61.9,
+      63.1,
+      64.1,
+      64.9,
+      65.6,
+      66.1,
+      66.6,
+      66.9
      ]
     }
    }
@@ -3061,6 +3061,15 @@
     },
     {
      "date": "2026-11-09",
+     "firm": "AtlasIntel",
+     "approve": 18.5,
+     "disapprove": 44.3,
+     "approx": false,
+     "origin": "news",
+     "source": "https://www.elnacional.com/2026/11/desaprobacion-delcy-rodriguez-68-maria-corina-machado-55-atlasintel-bloomberg/"
+    },
+    {
+     "date": "2026-11-09",
      "firm": "CB Consultora (imagen positiva)",
      "approve": 35.6,
      "disapprove": 59.3,
@@ -3068,15 +3077,6 @@
      "approx": false,
      "source": "https://cbglobaldata.com/noviembre-2026-ranking-presidentes-de-latinoamerica/",
      "origin": "manual"
-    },
-    {
-     "date": "2026-11-09",
-     "firm": "AtlasIntel",
-     "approve": 18.5,
-     "disapprove": 44.3,
-     "approx": false,
-     "origin": "news",
-     "source": "https://www.elnacional.com/2026/11/desaprobacion-delcy-rodriguez-68-maria-corina-machado-55-atlasintel-bloomberg/"
     }
    ],
    "country": "Venezuela",
@@ -10623,6 +10623,6 @@
    }
   }
  },
- "updated": "2026-11-24T21:08:22Z",
+ "updated": "2026-11-25T20:28:15Z",
  "method": "Pollster releases, Wikipedia poll tables, press articles (headlines and full text) and regional rankings (CB Consultora, Mitofsky, CID Gallup, AtlasIntel); Gaussian-kernel average, 21-day bandwidth, firm-crowding weights."
 }
