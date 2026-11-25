@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T19:08:46Z",
+ "updated": "2026-11-25T20:31:53Z",
  "model": {
   "n": 78,
   "base_rate": 0.449,
@@ -183,15 +183,15 @@
    "iso": "CL",
    "country": "Chile",
    "president": "José Antonio Kast",
-   "approval": 35.2,
-   "approval_asof": "2026-11-21",
+   "approval": 32.6,
+   "approval_asof": "2026-11-23",
    "next_election": "2029-11-18",
    "date_precision": "approx",
    "president_running": 0,
    "years_to_election": 3.0,
-   "p_model": 0.249,
+   "p_model": 0.223,
    "weight_model": 0.63,
-   "p": 0.323
+   "p": 0.307
   },
   {
    "iso": "PA",
