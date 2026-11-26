@@ -1,16 +1,12 @@
-run 2026-11-26 23:15 UTC · 35 new poll(s)
+run 2026-11-26 23:23 UTC · 4 new poll(s)
 
 GB United Kingdom   91 polls  manual 4, wikipedia 87
-FR France          196 polls  manual 14, news 5, wikipedia 177
-DE Germany          54 polls  manual 27, news 26, pollster 1
+FR France          197 polls  manual 14, news 6, wikipedia 177
+DE Germany          57 polls  manual 27, news 29, pollster 1
 IT Italy           167 polls  manual 14, news 6, wikipedia 147
 ES Spain            79 polls  manual 14, news 4, wikipedia 61
 PL Poland           49 polls  manual 1, wikipedia 48
 PT Portugal         41 polls  news 1, wikipedia 40
-CZ Czechia           4 polls  manual 2, news 2
-BE Belgium           2 polls  manual 1, news 1
-AT Austria           2 polls  manual 1, news 1
-GR Greece            2 polls  news 2
 NO Norway            1 polls  manual 1
 FI Finland           1 polls  manual 1
 IS Iceland           0 polls  
@@ -25,51 +21,16 @@ log:
   · ES Wikipedia Leadership_opinion_polling_for_the_2026_Spanish_general_election: 78 rows
   · PL Wikipedia Opinion_polling_on_the_incumbent_Tusk_government: 48 rows
   · PT Wikipedia Opinion_polling_for_the_next_Portuguese_legislative_election: 40 rows
-  · DeutschlandTrend: 3 new readings
-  + DE Infratest dimap ≈2026-03-31: 21.0/None [pollster]
-  · backfill Google News DE: 370 new headlines since 2025-05-06
-  · backfill Google News CZ: 38 new headlines since 2025-12-09
-  · backfill Google News BE: 70 new headlines since 2025-02-03
-  · backfill Google News AT: 70 new headlines since 2025-03-03
-  · backfill Google News GR: 69 new headlines since 2024-11-26
-  · backfill Google News NO: 86 new headlines since 2024-11-26
-  · backfill Google News FI: 19 new headlines since 2024-11-26
+  · DeutschlandTrend: 2 new readings
+  · backfill Google News DE: 352 new headlines since 2025-05-06
+  · backfill Google News NO: 83 new headlines since 2024-11-26
+  · backfill Google News FI: 10 new headlines since 2024-11-26
   · backfill Google News IS: 1 new headlines since 2024-12-21
-  · backfill Google News CH: 23 new headlines since 2026-01-01
-  · backfill Google News SK: 61 new headlines since 2024-11-26
+  · backfill Google News CH: 25 new headlines since 2026-01-01
+  · backfill Google News SK: 49 new headlines since 2024-11-26
   · backfill Google News HR: 0 new headlines since 2024-11-26
-  · Google News: 4073 unique articles read
-  + DE INSA ≈2025-07-22: None/56.0 [news]
-  + DE Pollster not named (press) ≈2025-08-06: None/60.0 [news]
-  + DE Pollster not named (press) ≈2025-09-19: None/70.0 [news]
-  + DE Pollster not named (press) ≈2025-11-22: None/75.0 [news]
-  + DE Pollster not named (press) ≈2025-11-24: None/55.0 [news]
-  + DE INSA ≈2025-12-03: None/68.0 [news]
-  + DE Pollster not named (press) ≈2026-01-20: None/71.0 [news]
-  + DE Infratest dimap ≈2026-03-28: None/84.0 [news]
-  + DE Pollster not named (press) ≈2026-04-25: 15.0/None [news]
-  + DE INSA ≈2026-04-30: None/76.0 [news]
-  + DE Forsa ≈2026-05-08: 13.0/None [news]
-  + DE Pollster not named (press) ≈2026-05-08: None/87.0 [news]
-  + DE Pollster not named (press) ≈2026-05-31: None/87.0 [news]
-  + DE Pollster not named (press) ≈2026-06-03: None/21.0 [news]
-  + DE Pollster not named (press) ≈2026-07-10: None/82.0 [news]
-  + DE Pollster not named (press) ≈2026-07-11: None/85.0 [news]
-  + IT Pollster not named (press) ≈2026-07-29: 52.7/None [news]
-  + DE Forschungsgruppe Wahlen ≈2026-07-30: None/70.0 [news]
-  + DE Pollster not named (press) ≈2026-08-02: None/84.0 [news]
-  + IT Pollster not named (press) ≈2026-08-31: None/53.0 [news]
-  + ES Pollster not named (press) ≈2026-08-31: None/60.0 [news]
-  + DE Pollster not named (press) ≈2026-09-01: None/77.0 [news]
-  + ES GAD3 ≈2026-09-02: None/76.0 [news]
-  + ES Pollster not named (press) ≈2026-09-03: None/63.0 [news]
-  + FR Pollster not named (press) ≈2026-09-25: None/82.0 [news]
-  + AT Pollster not named (press) ≈2026-10-03: None/65.0 [news]
-  + ES Pollster not named (press) ≈2026-10-08: None/56.0 [news]
-  + FR Pollster not named (press) ≈2026-10-25: None/90.0 [news]
-  + DE Pollster not named (press) ≈2026-10-30: None/87.0 [news]
-  + DE Pollster not named (press) ≈2026-11-03: None/82.0 [news]
-  + GR MARC ≈2026-11-09: None/63.5 [news]
-  + GR Metron Analysis ≈2026-11-15: None/69.0 [news]
-  + DE Forsa ≈2026-11-20: None/88.0 [news]
-  + PT Pollster not named (press) ≈2026-11-20: None/67.0 [news]
+  · Google News: 3261 unique articles read
+  + DE Pollster not named (press) ≈2026-07-08: None/75.0 [news]
+  + DE Pollster not named (press) ≈2026-08-31: None/56.0 [news]
+  + DE Pollster not named (press) ≈2026-10-16: None/87.0 [news]
+  + FR Pollster not named (press) ≈2026-11-06: 15.0/None [news]

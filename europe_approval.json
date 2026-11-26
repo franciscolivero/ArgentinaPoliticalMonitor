@@ -2682,6 +2682,15 @@
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMipgJBVV95cUxQRGJlNnZwSzJEN3ZqRVVsQ3ZxeGhHWHpwaEVzZTJyTUN6Q2cwZzdmTXJoRWdRRGo5LV9DeTBMLXVDTWx5VEhEeFJILWZadUxPSlBuSnh1bTloQ3o3d0c0Z2k4bW9tTUs1NTNKOGF4c3d4dDhfQzRtVE9mRElSa0RibEhDd2paUHhHQktoeFJ6c0hpOXNTNnlSZXU1TDczeDZOMzNZN0R6dFJvQ2RxZ3o5OC1uWWNXcU1YdHhCZFRteml1UUFodmV1N25TQlBLQ0VpaWprcGVwLTNzRkdnS1RVQ3cxcmdjLTdaMWxIbDlsbllqaTNpMjdDRjRFMlJYbmhnaG1nNVBzTXotQzUtdHVMM052V09kQzRMaHIwcHNqdTdFOF9DR1E?oc=5",
      "origin": "news"
+    },
+    {
+     "date": "2026-11-06",
+     "firm": "Pollster not named (press)",
+     "approve": 15.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNZkJXYmd4dXBGUkNFRWxKbFdhYXlTaGFkc1pDZG1yUHhRNHZtcWpwcEpjRUQzcEY3NldRNlYxenVIR184MmlwMzJFcm9aVVBZcjc2Wkd3bGZ6NXd6aGdSMWlXa0dncHBxeHhhSHFHcXBtNlN2emdoUUtZSHJIdE15S2hmMlZUU0FqZXFWVDR5Ylg0VHZxY0RtQ2F3RGpiQk9ybXpValpaaFRMUC1LeUkyU1pCSG9YMmREX3NnNEhvZ3BYMEJEZDJJ?oc=5",
+     "origin": "news"
     }
    ],
    "country": "France",
@@ -2924,7 +2933,8 @@
       "2026-10-15",
       "2026-10-22",
       "2026-10-29",
-      "2026-11-02"
+      "2026-11-05",
+      "2026-11-06"
      ],
      "values": [
       41.6,
@@ -3149,16 +3159,17 @@
       19.7,
       19.6,
       19.5,
-      19.2,
+      19.3,
       18.9,
       18.5,
-      17.9,
-      17.2,
+      18.0,
+      17.3,
       16.5,
       15.7,
       15.0,
       14.5,
       14.1,
+      13.9,
       13.8,
       13.7
      ]
@@ -3704,21 +3715,21 @@
     },
     {
      "date": "2025-11-24",
-     "firm": "YouGov EuroTrack (favourability)",
-     "approve": 27,
-     "disapprove": 67,
-     "approx": true,
-     "source": "https://yougov.com/en-gb/articles/53597-how-popular-are-national-leaders-in-europe-november-2025",
-     "origin": "manual"
-    },
-    {
-     "date": "2025-11-24",
      "firm": "Pollster not named (press)",
      "approve": null,
      "disapprove": 55.0,
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPSG41d0xFYTZtbnNDemJxLVdURWNhRGhra2dqTW5rU25ZVzFQelZST0I4NU9rT19xcGwwWGhqazlOT2pubS1FbW5PUndZeTJSMjZCUGswV1lvUnk2X2ZWMmNMTjRmaVNOSWZLMDQ2cnBCTTFSeFJ0dWp6eVBKTEtHTmp6WTJYSm1qVV92S3luM1dvX0Nmc25GWThRZ003dTgtVll0NW1Hb0dZcTVMM0RzONIBtgFBVV95cUxNaGNrZVdHZXczZkJYSHl4emNCeWZLMzJfU21oVFRvZDB2Rk9ubkpSZnhmeUcyaWQtOHduaGVWMGNwZHhkZmk5NGhRUi05N3BZaElQWlUzaFBqZmp3ZXBpWUVEcGVfeGdzeDRPd0lydzFMYnZ0U2d2UjNtcnRBRnR5VGNGbk5CVkVzNWpyY1doS1lCQV9QM1VQRllDQWV1QXlRanpCcXJmX1lpUDNEcVFucWRLaS0ydw?oc=5",
      "origin": "news"
+    },
+    {
+     "date": "2025-11-24",
+     "firm": "YouGov EuroTrack (favourability)",
+     "approve": 27,
+     "disapprove": 67,
+     "approx": true,
+     "source": "https://yougov.com/en-gb/articles/53597-how-popular-are-national-leaders-in-europe-november-2025",
+     "origin": "manual"
     },
     {
      "date": "2025-12-03",
@@ -3928,6 +3939,15 @@
      "origin": "news"
     },
     {
+     "date": "2026-07-08",
+     "firm": "Pollster not named (press)",
+     "approve": null,
+     "disapprove": 75.0,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMickFVX3lxTE0yQ0RXWm5kVFNJdTJDQ3FzeW1YOGZtWmZHZ2RPVnJyVnJVb2Ntcmp5b3Nuck80OURVeDN6TUZ6dVl3Tm55bU5kVF91SGlaRVRTVFozX1UxVnhBWmh6V04xX0ZJT2U4RlBhd1o2dWhHMmJXdw?oc=5",
+     "origin": "news"
+    },
+    {
      "date": "2026-07-10",
      "firm": "Pollster not named (press)",
      "approve": null,
@@ -4018,6 +4038,15 @@
      "origin": "manual"
     },
     {
+     "date": "2026-08-31",
+     "firm": "Pollster not named (press)",
+     "approve": null,
+     "disapprove": 56.0,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9UUVRNeThsVkJNYUVJOFN4dFY4cHdXM2RFRWc3Y2wwckNZMDZWU2FMOTdibjlnUTBmWUhYODh3SUxSTGRVQ2xzVEktUHRwUHROa1lZY0dxcFZFa3Y2bXJrZUdZX1JxTzZNSk9pWUo3cHNveWpoZVZMbFFfMGFLQdIBgwFBVV95cUxNbXFia1FfZkxjanRjN0JZdHhHME1ReDBRa21acVVEb2MtdmVXWTk5VThDSFA4SmMtQ1N2MllXSDQ4M3NpeUUwOEwzY3NwR29fQ2s4X3VUV2FhRjlDZkdRdm9nTm5TalJaTWtuR0NqbVQxZzFxXzZBRjg5aHFKVkVnTktjYw?oc=5",
+     "origin": "news"
+    },
+    {
      "date": "2026-09-01",
      "firm": "Pollster not named (press)",
      "approve": null,
@@ -4060,6 +4089,15 @@
      "disapprove": null,
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOYWNuYkk2MmFCT3V1aDQxRkZtb0NhNTdNREdQQ1A2dW5MTlVxMUJmcjd1RUh2TmhrSkpIRUwzcWtsOFZOWDM4NGlzNkEtSjluZlc0Q1hkQ3pzYjZFLUxrV0lRWE5qNTkwTU9IbWJHN3d3VmotNTZyb2NXM2RmSDZHbUxyaDZDWlpKWkliNWVSLWl6Q3NUUXc?oc=5",
+     "origin": "news"
+    },
+    {
+     "date": "2026-10-16",
+     "firm": "Pollster not named (press)",
+     "approve": null,
+     "disapprove": 87.0,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNQjFNdl9lUW9mNFRzTmh1WDJqZWZ6NjFPRkcyNkdvc3FFR3N4WFE0RWNkZHNqcE5SX1JLRFR4MllqN09CSzI0OENtYjdzSVVUTTdVZlB6S25yUDZsU05Xdy1KYXRrUmRKVGNVXzdpYVBSVlE2b0pMTDE0OEI4NlpCNUM5N1RSZWdxRDV5MXN1MA?oc=5",
      "origin": "news"
     },
     {
@@ -4428,31 +4466,31 @@
       74.4,
       74.1,
       73.8,
-      73.7,
-      74.1,
-      75.0,
-      76.2,
-      77.3,
+      73.6,
+      73.9,
+      74.7,
+      75.8,
+      76.7,
+      77.4,
+      77.7,
       78.0,
       78.3,
-      78.6,
-      79.0,
-      79.4,
-      80.0,
-      80.6,
-      81.2,
-      81.7,
-      82.2,
-      82.8,
-      83.3,
-      83.8,
-      84.4,
+      78.7,
+      79.2,
+      79.7,
+      80.3,
+      80.8,
+      81.4,
+      82.0,
+      82.7,
+      83.5,
+      84.2,
       84.8,
-      85.1,
-      85.4,
-      85.6,
-      85.8,
-      86.1
+      85.2,
+      85.5,
+      85.7,
+      85.9,
+      86.2
      ]
     }
    }
@@ -5552,7 +5590,7 @@
      "date": "2026-07-07",
      "firm": "Pollster not named (press)",
      "approve": 34.0,
-     "disapprove": null,
+     "disapprove": 65.0,
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPLWpfMEdVdUxvQVVtY2VPcnNlU2IyektIUXlNM1prbjVQYkpEUzlrSzYzdHpYOXBHQ2NUTlhxbklEZ2VuTG1EUWNtNEQ0VWtVTENFVlZmS3R1ZXBjeWVWcmJxcmo2OXFHMjR5c1hrQ01GbkNfWkM4cGpqMklIYjdXTWlCVjcyR0hubHYzZlpCb0RXRldVZEpRejZucVB6Z2FEbkJOZTNuM1BTOXM?oc=5",
      "origin": "news"
@@ -6369,20 +6407,20 @@
       58.6,
       58.5,
       58.6,
-      58.6,
+      58.7,
       58.8,
-      59.0,
-      59.2,
+      59.1,
       59.4,
-      59.5,
       59.6,
-      59.8,
       59.9,
+      60.1,
+      60.3,
+      60.4,
+      60.5,
+      60.4,
+      60.2,
       60.0,
-      60.0,
-      59.9,
-      59.8,
-      59.6,
+      59.7,
       59.5,
       59.4,
       59.4,
@@ -9495,326 +9533,6 @@
     }
    }
   },
-  "CZ": {
-   "polls": [
-    {
-     "date": "2026-04-07",
-     "firm": "Morning Consult",
-     "approve": 55,
-     "disapprove": 35,
-     "approx": false,
-     "source": "https://pro.morningconsult.com/trackers/global-leader-approval",
-     "origin": "manual"
-    },
-    {
-     "date": "2026-04-08",
-     "firm": "CVVM",
-     "approve": 25,
-     "disapprove": 46,
-     "approx": false,
-     "source": "https://www.ceskenoviny.cz/zpravy/2819111",
-     "origin": "manual"
-    },
-    {
-     "date": "2026-04-30",
-     "firm": "Pollster not named (press)",
-     "approve": 25.0,
-     "disapprove": null,
-     "approx": true,
-     "source": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQRy1fVy1iOTNSYmgwWXFmRDNha0g0dTUtdjJSbmJzcHRUcFdVcXRYV25ZTkZFQWVsTkJ2T0J6OW9TMlV4d2didi1aeVZrSEt6MUM3T2c3aGpUMlc3MWlqX0QxVlRfNkx2a1UtN0V6X0Z1MENtazFWNl9rS0RLQjhKMmhuRHA4SVNXakh3WXpVTHl1U3ZQSW5TWVdPS1EtZ2lDQWtxanpuSGFGQ2V5cUg4eFd5eFM4NmtwZ0JHMlNzMTIzQktsY01IV2dFRGU2N0kyZ0xScXNaUTFkazEweWt6Nzg1NA?oc=5",
-     "origin": "news"
-    },
-    {
-     "date": "2026-10-29",
-     "firm": "Pollster not named (press)",
-     "approve": 37.0,
-     "disapprove": null,
-     "approx": true,
-     "source": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOUGJDUGlUZTFwc0U4dUpRaXhyMlpHbHl5NW9uMkNFOXFRX0xGX1RpMXdobUMtREMxVmY1SHktWld0YUltU0c2a3h5TkZUQWU3MDlHelhEYXpjakFTTWxHd1BTYldGcjNsdmZ2bDc4alhsUElSRE5PZzVVbUJJVWlwRlNLcTVyVVlmSmxKQWhaVm9uaTR3UmNUblBCc200LUxQdjNkU25iZ0pPMFR5MTVWWFBrUEhnQUh2dWdZaVFYTGJOWW1WZmtSNDlqNXYxaFpSQ2d2eGlocmlXaGVLWTcyRTdDZ3pYTzBDVEZnV3NqSUs4c1dG?oc=5",
-     "origin": "news"
-    }
-   ],
-   "country": "Czechia",
-   "leader": "Andrej Babiš",
-   "office": "Prime minister",
-   "since": "2025-12-09",
-   "avg": {
-    "approve": {
-     "dates": [
-      "2026-04-07",
-      "2026-04-14",
-      "2026-04-21",
-      "2026-04-28",
-      "2026-05-05",
-      "2026-05-12",
-      "2026-05-19",
-      "2026-05-26",
-      "2026-06-02",
-      "2026-06-09",
-      "2026-06-16",
-      "2026-06-23",
-      "2026-06-30",
-      "2026-07-07",
-      "2026-07-14",
-      "2026-07-21",
-      "2026-07-28",
-      "2026-08-04",
-      "2026-08-11",
-      "2026-08-18",
-      "2026-08-25",
-      "2026-09-01",
-      "2026-09-08",
-      "2026-09-15",
-      "2026-09-22",
-      "2026-09-29",
-      "2026-10-06",
-      "2026-10-13",
-      "2026-10-20",
-      "2026-10-27",
-      "2026-10-29"
-     ],
-     "values": [
-      38.2,
-      37.4,
-      36.5,
-      35.5,
-      34.2,
-      32.9,
-      31.6,
-      30.3,
-      29.2,
-      28.2,
-      27.4,
-      26.7,
-      26.2,
-      25.9,
-      25.6,
-      25.7,
-      28.8,
-      35.7,
-      36.9,
-      37.0,
-      37.0,
-      37.0,
-      37.0,
-      37.0,
-      37.0,
-      37.0,
-      37.0,
-      37.0,
-      37.0,
-      37.0,
-      37.0
-     ]
-    },
-    "disapprove": {
-     "dates": [
-      "2026-04-07",
-      "2026-04-08"
-     ],
-     "values": [
-      40.5,
-      40.5
-     ]
-    }
-   }
-  },
-  "BE": {
-   "polls": [
-    {
-     "date": "2026-04-07",
-     "firm": "Morning Consult",
-     "approve": 35,
-     "disapprove": 54,
-     "approx": false,
-     "source": "https://pro.morningconsult.com/trackers/global-leader-approval",
-     "origin": "manual"
-    },
-    {
-     "date": "2026-05-26",
-     "firm": "Pollster not named (press)",
-     "approve": 30.0,
-     "disapprove": null,
-     "approx": true,
-     "source": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxONkxGSnNNWnlLT0pYUEhJc0VNc0p5MTJ5THVpbEtrc2dUQVdBaXViYjN0aHlqeC01Ui1PNHZvYjlMUjFZOXdxSUhfMllaSkw0RGZvTHFoQUZrNjZkdTBubGFIelVMSkdmY0hzVy1JNHZQVFY4OGE4UHZfSFM0akk4ZzYxWGVnOGxHNElzWGQtcTNJMHNjQi1INGlOU0drVDg4SzVBRkx6b2c4eGlfbjEyQ0tBbGRpMW10d1RIeE5ERndxc3d2R2g2RDhWNHZSRG51NmJTMg?oc=5",
-     "origin": "news"
-    }
-   ],
-   "country": "Belgium",
-   "leader": "Bart De Wever",
-   "office": "Prime minister",
-   "since": "2025-02-03",
-   "avg": {
-    "approve": {
-     "dates": [
-      "2026-04-07",
-      "2026-04-14",
-      "2026-04-21",
-      "2026-04-28",
-      "2026-05-05",
-      "2026-05-12",
-      "2026-05-19",
-      "2026-05-26"
-     ],
-     "values": [
-      34.8,
-      34.7,
-      34.3,
-      33.7,
-      32.9,
-      31.9,
-      31.1,
-      30.6
-     ]
-    },
-    "disapprove": {
-     "dates": [
-      "2026-04-07"
-     ],
-     "values": [
-      54
-     ]
-    }
-   }
-  },
-  "AT": {
-   "polls": [
-    {
-     "date": "2026-04-07",
-     "firm": "Morning Consult",
-     "approve": 29,
-     "disapprove": 58,
-     "approx": false,
-     "source": "https://pro.morningconsult.com/trackers/global-leader-approval",
-     "origin": "manual"
-    },
-    {
-     "date": "2026-10-03",
-     "firm": "Pollster not named (press)",
-     "approve": null,
-     "disapprove": 65.0,
-     "approx": true,
-     "source": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQWkFCWEZheno3aWxuYWdVdlM2Z254VFcwM2Rud1FXV2dESHdBTkxNOWdpR3lQcjlwQ3U0SGdaaEFWak1ualQycnFKMGwtbUlYWUZFUVV2dWhKZjVjeXZSZWhHbnQ4WlVUWUFjVVdKY3U5R0RUSlZkN0tzMmpmTm5QUmMycVc3dDlTQ1F5dQ?oc=5",
-     "origin": "news"
-    }
-   ],
-   "country": "Austria",
-   "leader": "Christian Stocker",
-   "office": "Chancellor",
-   "since": "2025-03-03",
-   "avg": {
-    "approve": {
-     "dates": [
-      "2026-04-07"
-     ],
-     "values": [
-      29
-     ]
-    },
-    "disapprove": {
-     "dates": [
-      "2026-04-07",
-      "2026-04-14",
-      "2026-04-21",
-      "2026-04-28",
-      "2026-05-05",
-      "2026-05-12",
-      "2026-05-19",
-      "2026-05-26",
-      "2026-06-02",
-      "2026-06-09",
-      "2026-06-16",
-      "2026-06-23",
-      "2026-06-30",
-      "2026-07-07",
-      "2026-07-14",
-      "2026-07-21",
-      "2026-07-28",
-      "2026-08-04",
-      "2026-08-11",
-      "2026-08-18",
-      "2026-08-25",
-      "2026-09-01",
-      "2026-09-08",
-      "2026-09-15",
-      "2026-09-22",
-      "2026-09-29",
-      "2026-10-03"
-     ],
-     "values": [
-      58.0,
-      58.0,
-      58.0,
-      58.0,
-      58.0,
-      58.0,
-      58.0,
-      58.0,
-      58.0,
-      58.0,
-      58.0,
-      58.0,
-      58.4,
-      61.4,
-      64.6,
-      65.0,
-      65.0,
-      65.0,
-      65.0,
-      65.0,
-      65.0,
-      65.0,
-      65.0,
-      65.0,
-      65.0,
-      65.0,
-      65.0
-     ]
-    }
-   }
-  },
-  "GR": {
-   "polls": [
-    {
-     "date": "2026-11-09",
-     "firm": "MARC",
-     "approve": null,
-     "disapprove": 63.5,
-     "approx": true,
-     "source": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQeEhOMFZUdVo2bXhhM2RSWlZkcUo5cG5iZXp1TEFSZ0hIekp2dUJ4WUhEcUxHN2ZfUC1PRzdQVGJtLTl6ODNiRVB1RUdzZWIxb0dKZ1R2alhXMUxvOEs2SDJ4MC1yWVExVDNrNHRzSkV1NlEyWDZYMHlVRHNMeUlERmpvTUUzTWI3Xy1JdjhtZEFDeTkzNi13UUZPVzFEd0YtaE43M1RHLXN1Sk5pZHFz0gG0AUFVX3lxTFAzX1VXVjVhOG5xYTNiZHFuOFhCREZIQXRpVHV3UkZCeVc4dDFxcFE0cGNjVGVPUkRRZHcweHdZNmZiZEdidlAtUnh6RFcweVJZRF9VT0xlRW5CcTlZaTVsLVZuSGpUMjA3Vm9HQ1NkVDRCV09HQnN3NVU4RUJMZlp0aFZVQm16b3VyMmFvN3Z4Sm5pcFE2NDAyQ3lsTXVBNDJUOGV3UENXNnFvWEw5Zjc5REtqVQ?oc=5",
-     "origin": "news"
-    },
-    {
-     "date": "2026-11-15",
-     "firm": "Metron Analysis",
-     "approve": null,
-     "disapprove": 69.0,
-     "approx": true,
-     "source": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOX19HeVFGbjBCajUtSllXV0lsVXVWQ2dMMjFQbDFOVkJfamhhdENKOFZUSUpfXzhZc0laX0VvdXhZSDJ6Z3R2a2xyYldBLW5Yd1JOSWVrUVFkUXdPMzlraDNRaW5IS0ExcXBKOVlZYzdxcFJLcUZ2OW5wcHBkNWdINjA5WlJPQWMzUklOdVFEa2Z6TGNPdDRNNEkxY1M2cWNHYjJjejNjZ1pWcUg0T0pBYVJMdGFXSnFHTzlKclZhTEFPempzMEFNU25HcUlndldI?oc=5",
-     "origin": "news"
-    }
-   ],
-   "country": "Greece",
-   "leader": "Kyriakos Mitsotakis",
-   "office": "Prime minister",
-   "since": "2023-06-26",
-   "avg": {
-    "approve": {
-     "dates": [],
-     "values": []
-    },
-    "disapprove": {
-     "dates": [
-      "2026-11-09",
-      "2026-11-15"
-     ],
-     "values": [
-      66.2,
-      66.3
-     ]
-    }
-   }
-  },
   "NO": {
    "polls": [
     {
@@ -9990,6 +9708,6 @@
    }
   }
  },
- "updated": "2026-11-26T23:15:41Z",
+ "updated": "2026-11-26T23:23:51Z",
  "method": "Wikipedia poll tables, pollster releases (ARD-DeutschlandTrend, YouGov EuroTrack), press articles in each country's language and multi-country rankings (Morning Consult, YouGov); Gaussian-kernel average, 21-day bandwidth, firm-crowding weights."
 }
