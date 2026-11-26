@@ -38,7 +38,7 @@ from email.utils import parsedate_to_datetime
 from xml.etree import ElementTree as ET
 
 import latam_sources as ls
-from fetch_latam_approval import key, average, is_dup, add, UNNAMED
+from fetch_latam_approval import key, average, add as _add_latam, UNNAMED
 
 HERE = pathlib.Path(__file__).parent
 OUT = HERE / "europe_approval.json"
@@ -56,7 +56,8 @@ LEADERS = {
             "cluster17", "yougov", "kantar", "odoxa backbone"]),
     "DE": ("Germany", "Friedrich Merz", "Chancellor", ["merz"], "2025-05-06", "de-DE",
            ["infratest dimap", "infratest", "deutschlandtrend", "forschungsgruppe wahlen", "politbarometer",
-            "forsa", "insa", "allensbach", "yougov", "civey", "gms", "verian", "ipsos"]),
+            "forsa", "trendbarometer", "insa", "allensbach", "yougov", "civey", "gms", "verian", "ipsos",
+            "spiegel ipsos", "politikmonitor"]),
     "IT": ("Italy", "Giorgia Meloni", "Prime minister", ["meloni"], "2022-10-22", "it-IT",
            ["swg", "ipsos", "demos", "termometro politico", "quorum", "youtrend", "emg", "tecne", "bidimedia",
             "ixe", "euromedia", "noto", "piepoli", "demopolis", "only numbers", "yougov"]),
@@ -66,33 +67,21 @@ LEADERS = {
     "PL": ("Poland", "Donald Tusk", "Prime minister", ["tusk"], "2023-12-13", "pl-PL",
            ["cbos", "ibris", "united surveys", "opinia24", "ogb", "sw research", "ipsos", "pollster", "ucE research",
             "kantar", "estymator", "research partner"]),
-    "NL": ("Netherlands", "Rob Jetten", "Prime minister", ["jetten"], "2026-02-23", "nl-NL",
-           ["ipsos i&o", "i&o research", "ipsos", "peil.nl", "maurice de hond", "eenvandaag", "verian",
-            "kantar", "scp"]),
     "PT": ("Portugal", "Luís Montenegro", "Prime minister", ["montenegro"], "2025-06-05", "pt-PT",
            ["aximage", "intercampus", "cesop", "catolica", "pitagorica", "ics iscte", "iscte", "consulmark2",
             "duplimetria"]),
-    "HU": ("Hungary", "Péter Magyar", "Prime minister", ["magyar peter", "peter magyar", "magyar"], "2026-05-09",
-           "hu-HU", ["median", "medián", "republikon", "21 kutatokozpont", "21 kutatóközpont", "publicus",
-                     "zavecz", "zavecz research", "idea", "nezopont", "nézőpont", "partizan", "tarki", "závecz"]),
     "CZ": ("Czechia", "Andrej Babiš", "Prime minister", ["babis"], "2025-12-09", "cs-CZ",
            ["stem", "cvvm", "median", "kantar", "nms", "ipsos", "data collect"]),
-    "DK": ("Denmark", "Mette Frederiksen", "Prime minister", ["frederiksen"], "2022-12-15", "da-DK",
-           ["voxmeter", "epinion", "megafon", "verian", "yougov", "gallup"]),
     "BE": ("Belgium", "Bart De Wever", "Prime minister", ["de wever"], "2025-02-03", "nl-BE",
            ["ipsos", "kantar", "dedicated", "het grote ongenoegen"]),
     "AT": ("Austria", "Christian Stocker", "Chancellor", ["stocker"], "2025-03-03", "de-AT",
            ["ogm", "market", "unique research", "peter hajek", "hajek", "ifdd", "lazarsfeld", "spectra", "ogm",
             "market institut", "foresight"]),
-    "IE": ("Ireland", "Micheál Martin", "Taoiseach", ["micheal martin", "taoiseach"], "2025-01-23", "en-IE",
-           ["red c", "ireland thinks", "ipsos b&a", "ipsos", "amarach", "behaviour & attitudes"]),
     "GR": ("Greece", "Kyriakos Mitsotakis", "Prime minister", ["mitsotakis", "μητσοτακη"], "2023-06-26", "el-GR",
            ["pulse", "metron analysis", "mrb", "gpo", "marc", "alco", "interview", "opinion poll", "prorata",
             "real polls", "palmos analysis"]),
     "NO": ("Norway", "Jonas Gahr Støre", "Prime minister", ["støre", "store", "gahr støre"], "2021-10-14", "no-NO",
            ["norstat", "opinion", "respons", "verian", "ipsos", "infact", "nettavisen"]),
-    "SE": ("Sweden", "Ulf Kristersson", "Prime minister (caretaker)", ["kristersson"], "2022-10-18", "sv-SE",
-           ["novus", "verian", "demoskop", "ipsos", "indikator", "sifo"]),
     "FI": ("Finland", "Petteri Orpo", "Prime minister", ["orpo"], "2023-06-20", "fi-FI",
            ["taloustutkimus", "verian", "kantar agri", "hs gallup", "maaseudun tulevaisuus", "ilta sanomat"]),
     "IS": ("Iceland", "Kristrún Frostadóttir", "Prime minister", ["frostadottir", "kristrun"], "2024-12-21", "is-IS",
@@ -101,12 +90,8 @@ LEADERS = {
            "2026-01-01", "de-CH", ["gfs.bern", "gfs bern", "sotomo", "leewas", "tamedia", "yougov", "srg"]),
     "SK": ("Slovakia", "Robert Fico", "Prime minister", ["fico"], "2023-10-25", "sk-SK",
            ["ako", "focus", "median", "ipsos", "nms"]),
-    "SI": ("Slovenia", "Janez Janša", "Prime minister", ["jansa", "janša"], "2026-06-05", "sl-SI",
-           ["mediana", "ninamedia", "parsifal", "valicon", "episcenter"]),
     "HR": ("Croatia", "Andrej Plenković", "Prime minister", ["plenkovic"], "2024-05-17", "hr-HR",
            ["crobarometar", "ipsos", "promocija plus", "2x1 komunikacije", "hrejting"]),
-    "UA": ("Ukraine", "Volodymyr Zelensky", "President", ["zelensky", "zelenskyy", "zelenskiy", "зеленськ", "зеленск"],
-           "2019-05-20", "uk-UA", ["kiis", "кміс", "рейтинг", "rating", "razumkov", "разумков", "active group", "socis"]),
 }
 REGIONAL = ["morning consult", "yougov", "ipsos", "eurobarometer", "ecfr", "gallup"]
 
@@ -117,7 +102,8 @@ A_WORDS = {
     "en": r"approv\w*|favou?rab\w*|popular\w*|positive\w*|doing (?:a )?(?:good|well)|satisf\w*|trust\w*",
     "fr": r"approuv\w*|satisfait\w*|popularit\w*|confiance|bonne opinion|opinions? (?:positives?|favorables?)|"
           r"favorables?|jug\w* favorable\w*|[ée]valu\w* positivement|bon pr[ée]sident|cote",
-    "de": r"zufrieden\w*|zustimmung|befürwort\w*|beliebt\w*|positiv\w*|vertrauen",
+    "de": r"zufrieden\w*|zustimmung|befürwort\w*|beliebt\w*|positiv\w*|vertrauen|eher gut|gute arbeit|"
+          r"(?:arbeit|sache|job)\s+(?:als\s+\w+\s+)?(?:eher\s+)?gut",
     "it": r"gradimento|approv\w*|fiducia|favorevol\w*|consenso|promoss\w*",
     "es": r"aprob\w*|aprueb\w*|valoraci[oó]n positiva|buena opini[oó]n|confianza|favorab\w*",
     "pl": r"popier\w*|aprob\w*|dobrze ocen\w*|pozytywn\w*|zadowolen\w*|zaufan\w*|ocen\w* dobrze",
@@ -140,7 +126,7 @@ D_WORDS = {
     "en": r"disapprov\w*|unfavou?rab\w*|unpopular\w*|negative\w*|dissatisf\w*|distrust\w*|doing (?:a )?(?:bad|badly|poor)",
     "fr": r"impopularit\w*|désapprouv\w*|desapprouv\w*|insatisfait\w*|mécontent\w*|mecontent\w*|opinions? défavorables?|"
           r"défavorables?|mauvaise opinion|défiance|mauvais pr[ée]sident|jug\w* n[ée]gativement",
-    "de": r"unzufrieden\w*|ablehn\w*|negativ\w*|misstrau\w*",
+    "de": r"unzufrieden\w*|ablehn\w*|negativ\w*|misstrau\w*|eher schlecht|schlecht\w*",
     "it": r"disapprov\w*|sfiducia|contrari\w*|bocciat\w*|bocci\w*|insoddisf\w*",
     "es": r"desaprob\w*|desaprueb\w*|suspend\w*|valoraci[oó]n negativa|mala opini[oó]n|rechazo|desconfianza",
     "pl": r"nie popier\w*|źle ocen\w*|negatywn\w*|niezadowol\w*|nieufn\w*|krytyczn\w*|ocen\w* źle",
@@ -226,6 +212,28 @@ STOPPERS = ["trump", "modi", "sheinbaum", "milei", "lula", "carney", "albanese",
             "putin", "xi jinping", "starmer", "andersson", "orban", "schoof", "nawrocki", "lecornu", "bayrou", "albares", "feijoo", "farage", "badenoch",
             "weidel", "schlein", "le pen", "bardella", "ventura", "parmelin", "bolojan", "dan", "golob"]
 BACKFILL_MIN = 6
+BACKFILL_ALWAYS = {"DE"}      # many German pollsters, few in Wikipedia: read the whole term every day
+
+
+def add(code, p, store, log):
+    """The Latin America merge rules, extended to polls that report only the disapproval share."""
+    if p.get("approve") is not None and all(q.get("approve") is not None for q in store[code]):
+        return _add_latam(code, p, store, log)
+    t = datetime.date.fromisoformat(p["date"])
+    for q in store[code]:
+        near = abs((datetime.date.fromisoformat(q["date"]) - t).days) <= (12 if p.get("approx") or q.get("approx") else 4)
+        if not near or (q["firm"] != p["firm"] and UNNAMED not in (q["firm"], p["firm"])):
+            continue
+        same = any(p.get(k) is not None and q.get(k) is not None and abs(p[k] - q[k]) <= 1.5
+                   for k in ("approve", "disapprove"))
+        if same:
+            for k in ("approve", "disapprove"):
+                if q.get(k) is None and p.get(k) is not None:
+                    q[k] = p[k]
+            return 0
+    store[code].append(p)
+    log.append(f"  + {code} {p['firm']} ≈{p['date']}: {p.get('approve')}/{p.get('disapprove')} [{p.get('origin')}]")
+    return 1
 
 
 def lang(code):
@@ -272,6 +280,11 @@ def queries(code, window, firms=True):
     qs = QUERIES[lang(code)]
     if code == "AT":
         qs = ["{s} Zufriedenheit Umfrage", "{s} zufrieden Prozent Umfrage", "Kanzler {s} Umfrage Vertrauen"]
+    if code == "DE":                     # Germany: every pollster that asks about the Chancellor
+        qs = ["{s} Zufriedenheit Umfrage", "{s} zufrieden Prozent Umfrage", "{s} DeutschlandTrend zufrieden",
+              "Politbarometer {s} Arbeit gut", "Forsa {s} zufrieden", "Trendbarometer {s} zufrieden",
+              "YouGov {s} Arbeit gut", "Ipsos {s} zufrieden", "INSA {s} zufrieden", "Allensbach {s}",
+              "Civey {s} zufrieden", "Bundesregierung zufrieden Prozent Umfrage"]
     if code == "CH":
         qs = ["Bundesrat Vertrauen Umfrage Prozent", "{s} Umfrage Prozent", "gfs.bern Bundesrat Vertrauen"]
     urls = [rss_url(q.format(s=s), window, hl) for q in qs]
@@ -330,7 +343,7 @@ def nice_firm(f):
              "bva": "BVA", "verian": "Verian", "harris interactive": "Toluna Harris Interactive",
              "toluna": "Toluna Harris Interactive", "opinionway": "OpinionWay", "infratest dimap": "Infratest dimap",
              "infratest": "Infratest dimap", "deutschlandtrend": "Infratest dimap", "politbarometer":
-             "Forschungsgruppe Wahlen", "forschungsgruppe wahlen": "Forschungsgruppe Wahlen", "insa": "INSA",
+             "Forschungsgruppe Wahlen", "trendbarometer": "Forsa", "spiegel ipsos": "Ipsos", "politikmonitor": "Ipsos", "forschungsgruppe wahlen": "Forschungsgruppe Wahlen", "insa": "INSA",
              "forsa": "Forsa", "swg": "SWG", "emg": "EMG", "tecne": "Tecnè", "bidimedia": "BiDiMedia", "ixe": "Ixè",
              "cis": "CIS", "40db": "40dB", "gad3": "GAD3", "dym": "DYM", "imop": "IMOP", "cbos": "CBOS", "ibris": "IBRiS",
              "ogb": "OGB", "sw research": "SW Research", "ipsos i&o": "Ipsos I&O", "i&o research": "Ipsos I&O",
@@ -432,10 +445,16 @@ def parse_item(item, code):
     if ap is None:
         ap2, dp2 = readings(text, lang(code))
         ap, dp = ap2, (dp if dp is not None else dp2)
-    if ap is None or not 3 <= ap <= 97:
-        return None
-    if dp is not None and (ap + dp > 101.5 or not 2 <= dp <= 97):
+    if dp is not None and not 2 <= dp <= 97:
         dp = None
+    if ap is not None and not 3 <= ap <= 97:
+        ap = None
+    if ap is None and dp is None:
+        return None
+    if ap is not None and dp is not None and ap + dp > 101.5:
+        dp = None
+    # a headline that only gives the dissatisfied share ("88 Prozent unzufrieden mit Merz") is kept for the
+    # disapproval line; it never enters the approval average or the ranking
     end = item["pub"] - datetime.timedelta(days=4)
     if end.isoformat() < since:
         return None
@@ -484,9 +503,7 @@ WIKI = {
     "PL": [("Opinion_polling_on_the_incumbent_Tusk_government", r"^Prime Minister Donald Tusk")],
     "IT": [("Opinion_polling_for_the_next_Italian_general_election", r"^Government approval rating$")],
     "PT": [("Opinion_polling_for_the_next_Portuguese_legislative_election", r"^Cabinet approval")],
-    "SI": [("Opinion_polling_for_the_next_Slovenian_parliamentary_election", "leader")],
     "ES": [("Leadership_opinion_polling_for_the_2026_Spanish_general_election", "leader")],
-    "SE": [("Opinion_polling_for_the_2026_Swedish_general_election", r"^Government approval")],
 }
 EN_MON = {m: i + 1 for i, m in enumerate("jan feb mar apr may jun jul aug sep oct nov dec".split())}
 
@@ -596,42 +613,49 @@ DE_MON_TXT = {"januar": 1, "februar": 2, "märz": 3, "maerz": 3, "april": 4, "ma
               "august": 8, "september": 9, "oktober": 10, "november": 11, "dezember": 12}
 
 
+def _deutschlandtrend_page(url, d, since):
+    """One ARD-DeutschlandTrend page -> [poll] (empty when the page is missing or has no Chancellor figure)."""
+    try:
+        from bs4 import BeautifulSoup
+        txt = BeautifulSoup(ls._get(url), "lxml").get_text(" ", strip=True)
+    except Exception:
+        return []
+    m = re.search(r"(?:Leistungen|Arbeit) (?:des|von) (?:Bundes)?[Kk]anzlers?(?: Merz| Friedrich Merz)?[^.]{0,40}?"
+                  r"(\d{1,2}) Prozent", txt) or \
+        re.search(r"Bundeskanzler(?:s)?(?: Friedrich)? Merz[^.]{0,80}?(\d{1,2}) Prozent[^.]{0,30}zufrieden", txt) or \
+        re.search(r"(\d{1,2}) Prozent[^.%]{0,60}(?:Merz|Kanzler)[^.%]{0,40}zufrieden", txt) or \
+        re.search(r"zufrieden[^.%]{0,40}(?:Merz|Bundeskanzler)[^.%]{0,60}?(\d{1,2}) Prozent", txt) or \
+        re.search(r"(?:Kanzler|Bundeskanzler) Friedrich Merz\s*\((\d{1,2}) Prozent", txt)    # politician list
+    if not m:
+        return []
+    f = re.search(r"(\d{1,2})\.\s*(?:[A-Za-zä]+\s+)?bis\s+(\d{1,2})\.\s*([A-Za-zä]+)\s+(\d{4})", txt)
+    end = d.replace(day=15)
+    if f and f.group(3).lower() in DE_MON_TXT:
+        try:
+            end = datetime.date(int(f.group(4)), DE_MON_TXT[f.group(3).lower()], int(f.group(2)))
+        except ValueError:
+            pass
+    a = float(m.group(1))
+    if not ls._ok(a, None) or end.isoformat() < since:
+        return []
+    return [{"date": end.isoformat(), "firm": "Infratest dimap", "approve": a, "disapprove": None,
+             "approx": not bool(f), "source": url, "origin": "pollster"}]
+
+
 def src_deutschlandtrend(since, have, log):
-    """ARD-DeutschlandTrend monthly pages (infratest dimap): share satisfied with the Chancellor."""
+    """ARD-DeutschlandTrend pages (infratest dimap): share satisfied with the Chancellor. Reads the monthly
+    page and the mid-month 'extra' edition of every month since the Chancellor took office."""
     out = []
     d = datetime.date.fromisoformat(since).replace(day=1)
     today = datetime.date.today()
     while d <= today:
-        url = f"https://www.infratest-dimap.de/umfragen-analysen/bundesweit/ard-deutschlandtrend/{d.year}/{DE_MON[d.month - 1]}/"
-        nxt = (d + datetime.timedelta(days=32)).replace(day=1)
-        if url in have:
-            d = nxt
-            continue
-        try:
-            from bs4 import BeautifulSoup
-            txt = BeautifulSoup(ls._get(url), "lxml").get_text(" ", strip=True)
-        except Exception as e:
-            log.append(f"  · DeutschlandTrend {d:%Y-%m}: {e}")
-            d = nxt
-            continue
-        m = re.search(r"(?:Leistungen|Arbeit) (?:des|von) (?:Bundes)?[Kk]anzlers?(?: Merz| Friedrich Merz)?[^.]{0,40}?"
-                      r"(\d{1,2}) Prozent", txt) or \
-            re.search(r"Bundeskanzler(?:s)?(?: Friedrich)? Merz[^.]{0,80}?(\d{1,2}) Prozent[^.]{0,30}zufrieden", txt)
-        f = re.search(r"(\d{1,2})\.\s*(?:[A-Za-zä]+\s+)?bis\s+(\d{1,2})\.\s*([A-Za-zä]+)\s+(\d{4})", txt)
-        if m:
-            end = d.replace(day=15)
-            if f and f.group(3).lower() in DE_MON_TXT:
-                try:
-                    end = datetime.date(int(f.group(4)), DE_MON_TXT[f.group(3).lower()], int(f.group(2)))
-                except ValueError:
-                    pass
-            a = float(m.group(1))
-            if ls._ok(a, None) and end.isoformat() >= since:
-                out.append({"date": end.isoformat(), "firm": "Infratest dimap", "approve": a, "disapprove": None,
-                            "approx": not bool(f), "source": url, "origin": "pollster"})
-        d = nxt
-        time.sleep(0.3)
-    log.append(f"  · DeutschlandTrend: {len(out)} new monthly readings")
+        base = f"https://www.infratest-dimap.de/umfragen-analysen/bundesweit/ard-deutschlandtrend/{d.year}/{DE_MON[d.month - 1]}"
+        for url in (base + "/", base + "-extra/"):
+            if url not in have:
+                out += _deutschlandtrend_page(url, d, since)
+                time.sleep(0.3)
+        d = (d + datetime.timedelta(days=32)).replace(day=1)
+    log.append(f"  · DeutschlandTrend: {len(out)} new readings")
     return out
 
 
@@ -681,7 +705,7 @@ def src_novus(since, have, log):
 
 
 YG_COUNTRY = {"united kingdom": "GB", "britain": "GB", "france": "FR", "germany": "DE", "italy": "IT",
-              "spain": "ES", "denmark": "DK"}
+              "spain": "ES"}
 
 
 def src_eurotrack(have, log):
@@ -760,6 +784,7 @@ def main():
                 t = datetime.date.fromisoformat(p["date"])
                 store[code] = [q for q in store[code] if q.get("origin") == "manual" or not (
                     (q["firm"] == UNNAMED or re.sub(r"[^a-z0-9]", "", key(q["firm"])) == fk) and
+                    q.get("approve") is not None and p.get("approve") is not None and
                     abs(q["approve"] - p["approve"]) <= 1.5 and
                     abs((datetime.date.fromisoformat(q["date"]) - t).days) <= 14)]
                 store[code].append(dict(p, origin="manual"))
@@ -773,8 +798,6 @@ def main():
                     added += add(code, p, store, log)
         for p in _safe(src_deutschlandtrend, "DeutschlandTrend", log, LEADERS["DE"][4], have, log):
             added += add("DE", p, store, log)
-        for p in _safe(src_novus, "Novus", log, LEADERS["SE"][4], have, log):
-            added += add("SE", p, store, log)
         for code, p in _safe(src_eurotrack, "EuroTrack", log, have, log):
             added += add(code, p, store, log)
 
@@ -792,7 +815,7 @@ def main():
         take(read_many(urls))
         # thin country (fewer than BACKFILL_MIN polls): read two years, two months at a time, every run
         for code in LEADERS:
-            if len(store[code]) >= BACKFILL_MIN:
+            if len(store[code]) >= BACKFILL_MIN and code not in BACKFILL_ALWAYS:
                 continue
             start = max(datetime.date.fromisoformat(LEADERS[code][4]), today - datetime.timedelta(days=730))
             slices, a = [], start

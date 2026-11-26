@@ -372,6 +372,8 @@ def europe():
     out = []
     for code, k in E["countries"].items():
         polls = k.get("polls", [])
+        if not any(p.get("approve") is not None for p in polls):
+            continue
         av = (k.get("avg") or {}).get("approve") or {}
         dv = (k.get("avg") or {}).get("disapprove") or {}
         if len(polls) < MIN_POLLS or not av.get("values"):
@@ -384,7 +386,8 @@ def europe():
                     "disapprove": dv["values"][-1] if dv.get("values") else None,
                     "approve_30": at(av["dates"], av["values"], ago(30)),
                     "n": len(polls), "n_30": sum(1 for p in polls if p["date"] >= ago(30)),
-                    "last": max(polls, key=lambda p: p["date"]), "avg": av, "davg": dv, "polls": polls})
+                    "last": max((p for p in polls if p.get("approve") is not None), key=lambda p: p["date"]),
+                    "avg": av, "davg": dv, "polls": polls})
     out.sort(key=lambda r: -r["approve"])
     return out
 
