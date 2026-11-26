@@ -1,0 +1,53 @@
+name: Update Europe approval
+
+# Daily: reads Wikipedia poll tables, ARD-DeutschlandTrend, YouGov EuroTrack and Google News coverage
+# of approval polls for sixteen European heads of government (fetch_europe_approval.py), merges new
+# polls into europe_approval.json and rebuilds each country's average. europe.html reads the JSON.
+# The Latin America modules are imported for the shared average and table parsing.
+
+on:
+  schedule:
+    - cron: "37 11 * * *"     # daily, 11:37 UTC
+  push:
+    paths:
+      - "fetch_europe_approval.py"
+      - "europe_seed.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: europe-approval
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests numpy beautifulsoup4 lxml
+
+      - name: Read pollsters, Wikipedia and Google News; rebuild averages
+        run: python fetch_europe_approval.py
+
+      - name: Show run report
+        if: always()
+        run: cat europe_log.txt || true
+
+      - name: Commit (if changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain europe_approval.json europe_log.txt)" ]; then
+            git add europe_approval.json europe_log.txt
+            git commit -m "Update Europe approval ($(date -u +%Y-%m-%d))"
+            git pull --rebase
+            git push
+          else
+            echo "No change"
+          fi
