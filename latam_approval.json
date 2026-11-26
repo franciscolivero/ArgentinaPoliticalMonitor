@@ -1468,6 +1468,15 @@
      "origin": "manual"
     },
     {
+     "date": "2026-10-16",
+     "firm": "Cadem",
+     "approve": 69.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPUDVrYUJyRzZUT1ZneTVqaEt6TlI3RjZsYjcwQlRWb3RMSDhoSDdsbGtLNUxIN045Y0ZHMks5UFA1T2IxYm9EdlhqTGlMVUxmbXpJMW80UmFvZTgySWluRG5KV3FTR0JPQkZXemNPNVZqMGxfVEtwXzNUd1ZxZWhOQXpvdWc4V1RFeXN4cjd0cFdCdjJWRk50N19qc3dkYWpxOFMwa2hIVmhuMlR0SjBfdWFIaW1ZZWM4OWZzTlk4MFd0a2JEdVZj?oc=5",
+     "origin": "news"
+    },
+    {
      "date": "2026-10-19",
      "firm": "Data Influye",
      "approve": 25.0,
@@ -1840,14 +1849,14 @@
       41.4,
       40.3,
       39.1,
-      37.9,
-      36.9,
-      35.9,
-      35.2,
-      34.5,
-      34.0,
-      33.6,
-      33.2,
+      38.0,
+      37.0,
+      36.1,
+      35.3,
+      34.7,
+      34.1,
+      33.7,
+      33.3,
       32.9,
       32.6
      ]
@@ -10632,6 +10641,6 @@
    }
   }
  },
- "updated": "2026-11-26T20:07:46Z",
+ "updated": "2026-11-26T22:51:00Z",
  "method": "Pollster releases, Wikipedia poll tables, press articles (headlines and full text) and regional rankings (CB Consultora, Mitofsky, CID Gallup, AtlasIntel); Gaussian-kernel average, 21-day bandwidth, firm-crowding weights."
 }
