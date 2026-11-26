@@ -668,26 +668,6 @@
     "origin": "manual"
    }
   ],
-  "CZ": [
-   {
-    "date": "2026-04-07",
-    "firm": "Morning Consult",
-    "approve": 55,
-    "disapprove": 35,
-    "approx": false,
-    "source": "https://pro.morningconsult.com/trackers/global-leader-approval",
-    "origin": "manual"
-   },
-   {
-    "date": "2026-04-08",
-    "firm": "CVVM",
-    "approve": 25,
-    "disapprove": 46,
-    "approx": false,
-    "source": "https://www.ceskenoviny.cz/zpravy/2819111",
-    "origin": "manual"
-   }
-  ],
   "CH": [
    {
     "date": "2026-04-07",
@@ -710,34 +690,12 @@
     "origin": "manual"
    }
   ],
-  "BE": [
-   {
-    "date": "2026-04-07",
-    "firm": "Morning Consult",
-    "approve": 35,
-    "disapprove": 54,
-    "approx": false,
-    "source": "https://pro.morningconsult.com/trackers/global-leader-approval",
-    "origin": "manual"
-   }
-  ],
   "NO": [
    {
     "date": "2026-04-07",
     "firm": "Morning Consult",
     "approve": 31,
     "disapprove": 63,
-    "approx": false,
-    "source": "https://pro.morningconsult.com/trackers/global-leader-approval",
-    "origin": "manual"
-   }
-  ],
-  "AT": [
-   {
-    "date": "2026-04-07",
-    "firm": "Morning Consult",
-    "approve": 29,
-    "disapprove": 58,
     "approx": false,
     "source": "https://pro.morningconsult.com/trackers/global-leader-approval",
     "origin": "manual"
