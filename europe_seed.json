@@ -1,0 +1,727 @@
+{
+ "note": "Hand-verified polls, merged on every run by fetch_europe_approval.py. YouGov EuroTrack rows are the monthly tracker (favourable / unfavourable opinion of the leader), dated the 24th of the fieldwork month.",
+ "countries": {
+  "GB": [
+   {
+    "date": "2026-07-27",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 39,
+    "disapprove": 34,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55362-how-popular-are-national-leaders-in-europe-july-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-08-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 43,
+    "disapprove": 38,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55573-how-popular-are-national-leaders-in-europe-august-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 45,
+    "disapprove": 39,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55676-how-popular-are-national-leaders-in-europe-september-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-10-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 46,
+    "disapprove": 41,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55904-how-popular-are-national-leaders-in-europe-october-2026",
+    "origin": "manual"
+   }
+  ],
+  "FR": [
+   {
+    "date": "2025-10-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 15,
+    "disapprove": 79,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/53361-how-popular-are-national-leaders-in-europe-october-2025",
+    "origin": "manual"
+   },
+   {
+    "date": "2025-11-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 15,
+    "disapprove": 82,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/53597-how-popular-are-national-leaders-in-europe-november-2025",
+    "origin": "manual"
+   },
+   {
+    "date": "2025-12-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 16,
+    "disapprove": 79,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/53805-how-popular-are-national-leaders-in-europe-december-2025",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-01-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 16,
+    "disapprove": 79,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/54020-how-popular-are-national-leaders-in-europe-january-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-02-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 19,
+    "disapprove": 76,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/54177-how-popular-are-national-leaders-in-europe-february-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-03-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 19,
+    "disapprove": 76,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/54488-how-popular-are-national-leaders-in-europe-march-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-04-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 23,
+    "disapprove": 72,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/54665-how-popular-are-national-leaders-in-europe-april-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-05-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 18,
+    "disapprove": 78,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/54920-how-popular-are-national-leaders-in-europe-may-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-06-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 19,
+    "disapprove": 75,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55068-how-popular-are-national-leaders-in-europe-june-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-07-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 20,
+    "disapprove": 75,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55362-how-popular-are-national-leaders-in-europe-july-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-08-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 20,
+    "disapprove": 74,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55573-how-popular-are-national-leaders-in-europe-august-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 17,
+    "disapprove": 77,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55676-how-popular-are-national-leaders-in-europe-september-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-10-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 14,
+    "disapprove": 82,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55904-how-popular-are-national-leaders-in-europe-october-2026",
+    "origin": "manual"
+   }
+  ],
+  "DE": [
+   {
+    "date": "2025-10-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 31,
+    "disapprove": 65,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/53361-how-popular-are-national-leaders-in-europe-october-2025",
+    "origin": "manual"
+   },
+   {
+    "date": "2025-11-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 27,
+    "disapprove": 67,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/53597-how-popular-are-national-leaders-in-europe-november-2025",
+    "origin": "manual"
+   },
+   {
+    "date": "2025-12-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 25,
+    "disapprove": 69,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/53805-how-popular-are-national-leaders-in-europe-december-2025",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-01-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 26,
+    "disapprove": 69,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/54020-how-popular-are-national-leaders-in-europe-january-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-02-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 23,
+    "disapprove": 71,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/54177-how-popular-are-national-leaders-in-europe-february-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-03-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 26,
+    "disapprove": 69,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/54488-how-popular-are-national-leaders-in-europe-march-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-04-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 22,
+    "disapprove": 74,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/54665-how-popular-are-national-leaders-in-europe-april-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-05-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 16,
+    "disapprove": 80,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/54920-how-popular-are-national-leaders-in-europe-may-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-06-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 15,
+    "disapprove": 79,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55068-how-popular-are-national-leaders-in-europe-june-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-07-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 16,
+    "disapprove": 81,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55362-how-popular-are-national-leaders-in-europe-july-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-08-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 15,
+    "disapprove": 81,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55573-how-popular-are-national-leaders-in-europe-august-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-08-31",
+    "firm": "Ipsos",
+    "approve": 17,
+    "disapprove": null,
+    "approx": false,
+    "source": "https://www.ipsos.com/de-de/meinungsumfragen/node/1022821",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 12,
+    "disapprove": 85,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55676-how-popular-are-national-leaders-in-europe-september-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-10-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 11,
+    "disapprove": 84,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55904-how-popular-are-national-leaders-in-europe-october-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-11-04",
+    "firm": "Infratest dimap",
+    "approve": 12,
+    "disapprove": null,
+    "approx": false,
+    "source": "https://www.infratest-dimap.de/umfragen-analysen/bundesweit/ard-deutschlandtrend/2026/november/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-11-08",
+    "firm": "Ipsos",
+    "approve": 15,
+    "disapprove": 85,
+    "approx": false,
+    "source": "https://www.ipsos.com/de-de/meinungsumfragen/node/1022821",
+    "origin": "manual"
+   }
+  ],
+  "IT": [
+   {
+    "date": "2025-10-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 39,
+    "disapprove": 54,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/53361-how-popular-are-national-leaders-in-europe-october-2025",
+    "origin": "manual"
+   },
+   {
+    "date": "2025-11-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 36,
+    "disapprove": 56,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/53597-how-popular-are-national-leaders-in-europe-november-2025",
+    "origin": "manual"
+   },
+   {
+    "date": "2025-12-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 35,
+    "disapprove": 56,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/53805-how-popular-are-national-leaders-in-europe-december-2025",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-01-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 35,
+    "disapprove": 57,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/54020-how-popular-are-national-leaders-in-europe-january-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-02-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 35,
+    "disapprove": 56,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/54177-how-popular-are-national-leaders-in-europe-february-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-03-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 34,
+    "disapprove": 57,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/54488-how-popular-are-national-leaders-in-europe-march-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-04-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 35,
+    "disapprove": 57,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/54665-how-popular-are-national-leaders-in-europe-april-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-05-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 38,
+    "disapprove": 55,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/54920-how-popular-are-national-leaders-in-europe-may-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-06-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 38,
+    "disapprove": 52,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55068-how-popular-are-national-leaders-in-europe-june-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-07-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 37,
+    "disapprove": 56,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55362-how-popular-are-national-leaders-in-europe-july-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-08-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 37,
+    "disapprove": 55,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55573-how-popular-are-national-leaders-in-europe-august-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 35,
+    "disapprove": 57,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55676-how-popular-are-national-leaders-in-europe-september-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-10-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 35,
+    "disapprove": 58,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55904-how-popular-are-national-leaders-in-europe-october-2026",
+    "origin": "manual"
+   }
+  ],
+  "ES": [
+   {
+    "date": "2025-10-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 35,
+    "disapprove": 62,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/53361-how-popular-are-national-leaders-in-europe-october-2025",
+    "origin": "manual"
+   },
+   {
+    "date": "2025-11-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 35,
+    "disapprove": 62,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/53597-how-popular-are-national-leaders-in-europe-november-2025",
+    "origin": "manual"
+   },
+   {
+    "date": "2025-12-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 30,
+    "disapprove": 66,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/53805-how-popular-are-national-leaders-in-europe-december-2025",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-01-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 34,
+    "disapprove": 65,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/54020-how-popular-are-national-leaders-in-europe-january-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-02-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 32,
+    "disapprove": 66,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/54177-how-popular-are-national-leaders-in-europe-february-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-03-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 35,
+    "disapprove": 61,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/54488-how-popular-are-national-leaders-in-europe-march-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-04-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 38,
+    "disapprove": 59,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/54665-how-popular-are-national-leaders-in-europe-april-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-05-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 38,
+    "disapprove": 60,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/54920-how-popular-are-national-leaders-in-europe-may-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-06-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 33,
+    "disapprove": 63,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55068-how-popular-are-national-leaders-in-europe-june-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-07-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 34,
+    "disapprove": 65,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55362-how-popular-are-national-leaders-in-europe-july-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-08-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 33,
+    "disapprove": 66,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55573-how-popular-are-national-leaders-in-europe-august-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 31,
+    "disapprove": 66,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55676-how-popular-are-national-leaders-in-europe-september-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-10-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 33,
+    "disapprove": 64,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55904-how-popular-are-national-leaders-in-europe-october-2026",
+    "origin": "manual"
+   }
+  ],
+  "DK": [
+   {
+    "date": "2025-10-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 36,
+    "disapprove": 59,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/53361-how-popular-are-national-leaders-in-europe-october-2025",
+    "origin": "manual"
+   },
+   {
+    "date": "2025-11-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 38,
+    "disapprove": 58,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/53597-how-popular-are-national-leaders-in-europe-november-2025",
+    "origin": "manual"
+   },
+   {
+    "date": "2025-12-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 34,
+    "disapprove": 63,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/53805-how-popular-are-national-leaders-in-europe-december-2025",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-01-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 44,
+    "disapprove": 52,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/54020-how-popular-are-national-leaders-in-europe-january-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-02-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 43,
+    "disapprove": 53,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/54177-how-popular-are-national-leaders-in-europe-february-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-03-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 43,
+    "disapprove": 53,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/54488-how-popular-are-national-leaders-in-europe-march-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-04-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 47,
+    "disapprove": 49,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/54665-how-popular-are-national-leaders-in-europe-april-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-05-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 43,
+    "disapprove": 53,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/54920-how-popular-are-national-leaders-in-europe-may-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-06-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 44,
+    "disapprove": 53,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55068-how-popular-are-national-leaders-in-europe-june-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-07-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 43,
+    "disapprove": 53,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55362-how-popular-are-national-leaders-in-europe-july-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-08-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 46,
+    "disapprove": 50,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55573-how-popular-are-national-leaders-in-europe-august-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 44,
+    "disapprove": 50,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55676-how-popular-are-national-leaders-in-europe-september-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-10-24",
+    "firm": "YouGov EuroTrack (favourability)",
+    "approve": 45,
+    "disapprove": 52,
+    "approx": true,
+    "source": "https://yougov.com/en-gb/articles/55904-how-popular-are-national-leaders-in-europe-october-2026",
+    "origin": "manual"
+   }
+  ],
+  "NL": [
+   {
+    "date": "2026-05-11",
+    "firm": "Ipsos I&O",
+    "approve": 24,
+    "disapprove": 64,
+    "approx": false,
+    "source": "https://www.binnenlandsbestuur.nl/bestuur-en-organisatie/ipsos-ieno/tevredenheid-kabinet-jetten-lager-dan-bij-kabinet-schoof",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-06-15",
+    "firm": "Ipsos I&O",
+    "approve": 19,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://www.binnenlandsbestuur.nl/bestuur-en-organisatie/ipsos-ieno/lichtpuntjes-voor-kabinet-jetten-plusje-d66",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-07-13",
+    "firm": "Ipsos I&O",
+    "approve": 26,
+    "disapprove": 63,
+    "approx": false,
+    "source": "https://www.binnenlandsbestuur.nl/bestuur-en-organisatie/ipsos-ieno/lichtpuntjes-voor-kabinet-jetten-plusje-d66",
+    "origin": "manual"
+   }
+  ],
+  "HU": [
+   {
+    "date": "2026-06-17",
+    "firm": "IDEA Intézet",
+    "approve": 62,
+    "disapprove": null,
+    "approx": false,
+    "source": "https://hvg.hu/itthon/20260710_magyar-peter-kormany-elegedettseg-kozvelemeny-kutatas-idea-intezet",
+    "origin": "manual"
+   }
+  ],
+  "CZ": [
+   {
+    "date": "2026-04-08",
+    "firm": "CVVM",
+    "approve": 25,
+    "disapprove": 46,
+    "approx": false,
+    "source": "https://www.ceskenoviny.cz/zpravy/2819111",
+    "origin": "manual"
+   }
+  ],
+  "IE": [
+   {
+    "date": "2025-10-14",
+    "firm": "Ipsos B&A",
+    "approve": 33,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://www.echolive.ie/nationalnews/arid-41726370.html",
+    "origin": "manual"
+   }
+  ]
+ }
+}
