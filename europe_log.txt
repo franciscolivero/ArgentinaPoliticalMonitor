@@ -1,0 +1,49 @@
+run 2026-11-26 22:19 UTC · 11 new poll(s)
+
+GB United Kingdom    4 polls  manual 4
+FR France           15 polls  manual 13, news 2
+DE Germany          20 polls  manual 16, news 2, pollster 2
+IT Italy            17 polls  manual 13, news 4
+ES Spain            13 polls  manual 13
+PL Poland            0 polls  
+NL Netherlands       4 polls  manual 3, news 1
+PT Portugal          0 polls  
+HU Hungary           1 polls  manual 1
+CZ Czechia           1 polls  manual 1
+DK Denmark          13 polls  manual 13
+BE Belgium           0 polls  
+AT Austria           0 polls  
+IE Ireland           1 polls  manual 1
+GR Greece            0 polls  
+NO Norway            0 polls  
+
+log:
+  · GB Wikipedia Leadership_approval_opinion_polling_for_the_next_United_Kingdom_general_election: 429 Client Error: We suspect this request is automated: if so, please respect our robot policy. If you think you were incorrectly blocked, please contact noc@wikimedia.org reporting this message (01f0bde) for url: https://en.wikipedia.org/w/api.php?action=parse&page=Leadership_approval_opinion_polling_for_the_next_United_Kingdom_general_election&prop=text&format=json&formatversion=2&redirects=1
+  · FR Wikipedia Opinion_polling_on_the_Emmanuel_Macron_presidency: 429 Client Error: We suspect this request is automated: if so, please respect our robot policy. If you think you were incorrectly blocked, please contact noc@wikimedia.org reporting this message (01f0bde) for url: https://en.wikipedia.org/w/api.php?action=parse&page=Opinion_polling_on_the_Emmanuel_Macron_presidency&prop=text&format=json&formatversion=2&redirects=1
+  · IT Wikipedia Opinion_polling_for_the_next_Italian_general_election: 429 Client Error: We suspect this request is automated: if so, please respect our robot policy. If you think you were incorrectly blocked, please contact noc@wikimedia.org reporting this message (01f0bde) for url: https://en.wikipedia.org/w/api.php?action=parse&page=Opinion_polling_for_the_next_Italian_general_election&prop=text&format=json&formatversion=2&redirects=1
+  · PL Wikipedia Opinion_polling_on_the_incumbent_Tusk_government: 429 Client Error: We suspect this request is automated: if so, please respect our robot policy. If you think you were incorrectly blocked, please contact noc@wikimedia.org reporting this message (01f0bde) for url: https://en.wikipedia.org/w/api.php?action=parse&page=Opinion_polling_on_the_incumbent_Tusk_government&prop=text&format=json&formatversion=2&redirects=1
+  · PT Wikipedia Opinion_polling_for_the_next_Portuguese_legislative_election: 429 Client Error: We suspect this request is automated: if so, please respect our robot policy. If you think you were incorrectly blocked, please contact noc@wikimedia.org reporting this message (01f0bde) for url: https://en.wikipedia.org/w/api.php?action=parse&page=Opinion_polling_for_the_next_Portuguese_legislative_election&prop=text&format=json&formatversion=2&redirects=1
+  · DeutschlandTrend: 2 new monthly readings
+  + DE Infratest dimap ≈2026-08-05: 14.0/None [pollster]
+  + DE Infratest dimap ≈2026-09-02: 13.0/None [pollster]
+  · backfill Google News GB: 262 new headlines since 2026-07-20
+  · backfill Google News PL: 878 new headlines since 2024-11-26
+  · backfill Google News NL: 79 new headlines since 2026-02-23
+  · backfill Google News PT: 280 new headlines since 2025-06-05
+  · backfill Google News HU: 250 new headlines since 2026-05-09
+  · backfill Google News CZ: 131 new headlines since 2025-12-09
+  · backfill Google News BE: 67 new headlines since 2025-02-03
+  · backfill Google News AT: 108 new headlines since 2025-03-03
+  · backfill Google News IE: 408 new headlines since 2025-01-23
+  · backfill Google News GR: 338 new headlines since 2024-11-26
+  · backfill Google News NO: 303 new headlines since 2024-11-26
+  · Google News: 6429 unique articles read
+  + NL EenVandaag ≈2026-05-30: 22.0/None [news]
+  + IT Pollster not named (press) ≈2026-07-07: 34.0/None [news]
+  + DE Pollster not named (press) ≈2026-07-08: 18.0/None [news]
+  + IT YouTrend ≈2026-09-20: 33.0/None [news]
+  + DE Infratest dimap ≈2026-09-27: 10.0/None [news]
+  + FR Pollster not named (press) ≈2026-10-07: 15.0/None [news]
+  + IT SWG ≈2026-10-22: 41.0/None [news]
+  + IT Pollster not named (press) ≈2026-10-22: 8.0/None [news]
+  + FR Elabe ≈2026-11-02: 13.0/None [news]
