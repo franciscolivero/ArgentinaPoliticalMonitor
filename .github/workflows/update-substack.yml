@@ -1,7 +1,7 @@
 name: Substack charts and drafts
 
 # Weekly: refreshes the Datawrapper charts embedded in the Substack posts (publish_datawrapper.py)
-# and writes the two drafts for the week (draft_posts.py) into posts/. Charts Datawrapper cannot
+# and writes the three drafts for the week (Argentina, Latin America, Europe; draft_posts.py) into posts/. Charts Datawrapper cannot
 # draw (the province small multiples) are drawn as PNGs into post_images/ (make_post_images.py). Needs the repository secret
 # DATAWRAPPER_TOKEN; without it, only the CSVs and the drafts are produced.
 # The charts also refresh daily, so embeds in already-published posts stay current.
