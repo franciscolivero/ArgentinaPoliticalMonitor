@@ -2642,6 +2642,15 @@
      "approx": false,
      "origin": "news",
      "source": "https://diariocorreo.pe/politica/keiko-fujimori-sobre-encuesta-datum-hay-que-tomar-las-cosas-con-serenidad-noticia/"
+    },
+    {
+     "date": "2026-11-22",
+     "firm": "Ipsos",
+     "approve": 66.0,
+     "disapprove": null,
+     "approx": true,
+     "source": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOWV9xN213cUZmTkRFajVSeUZ4c1BCcnpKWXFnNmZROU8xVEYyajBLLVlPZEhpaG12dUQ1eWJ3THZSVFRPU0Jybkk0VG9FNnRienVIQjJUMHhGQng4UW5UVjJfVGF1dkFCY0xDS1l4UVFVekcwSmZ6SzNwdWtPc0NPNE1JdEhGdEpQQTI3cUl4enZiQkhXYkhNaHl2R01PQXRDWFRtWmpqYjcxbXE1RDVIeEZfX3lCeHBCVkZ6U29KM1dfNFk0bEk2QXhSblRZU3FMaVlWWjJiVGhDWktreHFYVzdrOUd2RmFLUzlCS2ZRdk5LYmM?oc=5",
+     "origin": "news"
     }
    ],
    "country": "Peru",
@@ -2666,26 +2675,26 @@
       "2026-11-04",
       "2026-11-11",
       "2026-11-18",
-      "2026-11-20"
+      "2026-11-22"
      ],
      "values": [
       53.9,
       52.6,
       51.1,
       49.4,
-      47.8,
+      47.9,
       46.4,
       45.1,
-      43.8,
-      42.7,
-      41.7,
-      40.9,
-      40.4,
-      40.3,
-      40.5,
-      41.0,
+      43.9,
+      42.8,
+      41.9,
+      41.3,
+      41.2,
       41.5,
-      41.7
+      42.2,
+      43.2,
+      44.3,
+      45.0
      ]
     },
     "disapprove": {
@@ -10623,6 +10632,6 @@
    }
   }
  },
- "updated": "2026-11-25T20:28:15Z",
+ "updated": "2026-11-26T20:07:46Z",
  "method": "Pollster releases, Wikipedia poll tables, press articles (headlines and full text) and regional rankings (CB Consultora, Mitofsky, CID Gallup, AtlasIntel); Gaussian-kernel average, 21-day bandwidth, firm-crowding weights."
 }

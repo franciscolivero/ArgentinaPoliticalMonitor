@@ -1,8 +1,8 @@
-run 2026-11-25 20:28 UTC · 2 new poll(s)
+run 2026-11-26 20:07 UTC · 2 new poll(s)
 
 CL Chile        195 polls  manual 12, news 69, pollster 14, wikipedia 100
 BO Bolivia       25 polls  manual 13, news 12
-PE Peru          26 polls  manual 13, news 13
+PE Peru          27 polls  manual 13, news 14
 CO Colombia      12 polls  manual 8, news 4
 VE Venezuela     16 polls  manual 13, news 3
 MX Mexico       101 polls  manual 20, news 35, news-ranking 1, wikipedia 45
@@ -18,25 +18,23 @@ CR Costa Rica    13 polls  manual 11, news 1, pollster 1
 DO Dominican Republic  20 polls  manual 14, news 5, pollster 1
 
 log:
-  · CL Wikipedia (es) Anexo:Encuestas_de_aprobación_del_gobierno_de_José_Antonio_Kast: 145 rows
+  · CL Wikipedia (es) Anexo:Encuestas_de_aprobación_del_gobierno_de_José_Antonio_Kast: 429 Client Error: We suspect this request is automated: if so, please respect our robot policy. If you think you were incorrectly blocked, please contact noc@wikimedia.org reporting this message (01f0bde) for url: https://es.wikipedia.org/w/api.php?action=parse&page=Anexo%3AEncuestas_de_aprobaci%C3%B3n_del_gobierno_de_Jos%C3%A9_Antonio_Kast&prop=text&format=json&formatversion=2&redirects=1
   · CL Cadem: 1 new wave(s) from 1 unread PDF(s)
   · CL Criteria: listing failed (401 Client Error: Unauthorized for url: https://www.criteria.cl/wp-json/wp/v2/media?search=Agenda_Criteria&per_page=100&page=1&mime_type=application%2Fpdf&after=2026-03-11T00%3A00%3A00)
   · CL Criteria: 0 new wave(s) from 0 unread PDF(s)
-  + CL Data Influye ≈2026-11-23: 20.0/70.0 [wikipedia]
-  · MX Wikipedia Opinion_polling_on_the_Sheinbaum_presidency: 52 rows
-  · EC Wikipedia (es) Segundo_gobierno_de_Daniel_Noboa: 14 rows
-  · SV Wikipedia Opinion_polling_on_the_Nayib_Bukele_presidency: 25 rows
-  · GT Wikipedia (es) Bernardo_Arévalo: 3 rows
-  · UY Wikipedia (es) Gobierno_de_Yamandú_Orsi: 30 rows
+  · MX Wikipedia Opinion_polling_on_the_Sheinbaum_presidency: 429 Client Error: We suspect this request is automated: if so, please respect our robot policy. If you think you were incorrectly blocked, please contact noc@wikimedia.org reporting this message (01f0bde) for url: https://en.wikipedia.org/w/api.php?action=parse&page=Opinion_polling_on_the_Sheinbaum_presidency&prop=text&format=json&formatversion=2&redirects=1
+  · EC Wikipedia (es) Segundo_gobierno_de_Daniel_Noboa: 429 Client Error: We suspect this request is automated: if so, please respect our robot policy. If you think you were incorrectly blocked, please contact noc@wikimedia.org reporting this message (01f0bde) for url: https://es.wikipedia.org/w/api.php?action=parse&page=Segundo_gobierno_de_Daniel_Noboa&prop=text&format=json&formatversion=2&redirects=1
+  · SV Wikipedia Opinion_polling_on_the_Nayib_Bukele_presidency: 429 Client Error: We suspect this request is automated: if so, please respect our robot policy. If you think you were incorrectly blocked, please contact noc@wikimedia.org reporting this message (01f0bde) for url: https://en.wikipedia.org/w/api.php?action=parse&page=Opinion_polling_on_the_Nayib_Bukele_presidency&prop=text&format=json&formatversion=2&redirects=1
+  · GT Wikipedia (es) Bernardo_Arévalo: 429 Client Error: We suspect this request is automated: if so, please respect our robot policy. If you think you were incorrectly blocked, please contact noc@wikimedia.org reporting this message (01f0bde) for url: https://es.wikipedia.org/w/api.php?action=parse&page=Bernardo_Ar%C3%A9valo&prop=text&format=json&formatversion=2&redirects=1
+  · UY Wikipedia (es) Gobierno_de_Yamandú_Orsi: 429 Client Error: We suspect this request is automated: if so, please respect our robot policy. If you think you were incorrectly blocked, please contact noc@wikimedia.org reporting this message (01f0bde) for url: https://es.wikipedia.org/w/api.php?action=parse&page=Gobierno_de_Yamand%C3%BA_Orsi&prop=text&format=json&formatversion=2&redirects=1
   · CID Gallup SV 2026-10-27: 94.0%
   · CID Gallup CR 2026-08-17: 74.0%
-  · Google News: 2696 unique articles read
-  · articles CO: 2 read, 0 poll reading(s)
-  · articles CR: 3 read, 0 poll reading(s)
-  · articles VE: 6 read, 1 poll reading(s)
-  · articles DO: 2 read, 0 poll reading(s)
-  · articles MX: 1 read, 0 poll reading(s)
-  · articles CL: 6 read, 6 poll reading(s)
-  · articles: 19 articles read in 27s
+  · CB Global Data listing failed (Expecting value: line 1 column 1 (char 0))
+  · Google News: 2614 unique articles read
+  · articles CR: 2 read, 0 poll reading(s)
+  · articles VE: 1 read, 0 poll reading(s)
+  · articles BR: 2 read, 1 poll reading(s)
+  · articles: 5 articles read in 16s
   + EC Pollster not named (press) ≈2026-11-06: 49.0/None [news]
+  + PE Ipsos ≈2026-11-22: 66.0/None [news]
   · Google News queries failed: 0
