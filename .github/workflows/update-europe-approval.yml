@@ -1,7 +1,7 @@
 name: Update Europe approval
 
 # Daily: reads Wikipedia poll tables, ARD-DeutschlandTrend, YouGov EuroTrack and Google News coverage
-# of approval polls for sixteen European heads of government (fetch_europe_approval.py), merges new
+# of approval polls for European heads of government (fetch_europe_approval.py), merges new
 # polls into europe_approval.json and rebuilds each country's average. europe.html reads the JSON.
 # The Latin America modules are imported for the shared average and table parsing.
 
@@ -12,6 +12,7 @@ on:
     paths:
       - "fetch_europe_approval.py"
       - "europe_seed.json"
+      - "latam_sources.py"
   workflow_dispatch:
 
 permissions:
@@ -30,7 +31,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install requests numpy beautifulsoup4 lxml
+      - run: pip install requests numpy beautifulsoup4 lxml pypdf
 
       - name: Read pollsters, Wikipedia and Google News; rebuild averages
         run: python fetch_europe_approval.py
