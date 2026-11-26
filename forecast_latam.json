@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T18:39:56Z",
+ "updated": "2026-11-26T18:40:30Z",
  "model": {
   "n": 78,
   "base_rate": 0.449,
@@ -72,7 +72,7 @@
    "country": "Argentina",
    "president": "Javier Milei",
    "approval": 35.4,
-   "approval_asof": "2026-11-25",
+   "approval_asof": "2026-11-26",
    "next_election": "2027-10-24",
    "date_precision": "exact",
    "president_running": 1,
