@@ -66,7 +66,7 @@ def lines_meta(colors, suffix="%", y_range=None, dots=True):
 
 
 def build_specs():
-    """[(key, title, type, csv, metadata, post)] — post is 'ar' or 'latam'."""
+    """[(key, title, type, csv, metadata, post)] — post is 'ar', 'latam' or 'europe'."""
     specs = []
     t, _ = P.runoff()
     specs.append(("ar-runoff", "Milei vs. Kicillof: intención de voto en un ballotage", "d3-lines", t,
@@ -152,6 +152,18 @@ def build_specs():
         specs.append((f"latam-{r['code'].lower()}", f"{r['country']}: aprobación de {r['president']}", "d3-lines",
                       P.latam_country_table(r),
                       lines_meta({"Aprueba": C["pos"], "Desaprueba": C["neg"]}, y_range=["0", "100"]), "latam"))
+    # Europe: ranking + one line chart per country (no forecast)
+    erows = P.europe()
+    if erows:
+        specs.append(("europe-ranking", "Aprobación de los jefes de gobierno en Europa", "d3-bars",
+                      P.europe_ranking_table(erows),
+                      {"visualize": {"custom-colors": {f"{r['president']} ({r['country']})": C["celeste"] for r in erows},
+                                     "show-values": True, "sort-bars": True},
+                       "describe": {"source-name": SOURCE, "number-append": "%", "number-format": "0"}}, "europe"))
+    for r in erows:
+        specs.append((f"europe-{r['code'].lower()}", f"{r['country']}: aprobación de {r['president']}", "d3-lines",
+                      P.latam_country_table(r),
+                      lines_meta({"Aprueba": C["pos"], "Desaprueba": C["neg"]}, y_range=["0", "100"]), "europe"))
     return specs
 
 

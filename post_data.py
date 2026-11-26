@@ -351,6 +351,46 @@ def latam_country_table(r):
                       (dot_label("Desaprueba"), [(p["date"], p.get("disapprove")) for p in polls])])
 
 
+# ------------------------------------------------------------------------------------- Europe
+EUROPE_ES = {"United Kingdom": "Reino Unido", "France": "Francia", "Germany": "Alemania", "Italy": "Italia",
+             "Spain": "España", "Poland": "Polonia", "Netherlands": "Países Bajos", "Portugal": "Portugal",
+             "Hungary": "Hungría", "Czechia": "Chequia", "Denmark": "Dinamarca", "Belgium": "Bélgica",
+             "Austria": "Austria", "Ireland": "Irlanda", "Greece": "Grecia", "Norway": "Noruega",
+             "Sweden": "Suecia"}
+OFFICE_ES = {"Prime minister": "primer ministro", "President": "presidente", "Chancellor": "canciller",
+             "Taoiseach": "taoiseach"}
+FEMALE = {"Giorgia Meloni", "Mette Frederiksen"}
+
+
+def europe():
+    """Rows for every European leader with at least MIN_POLLS polls, highest approval first.
+    Same shape as latam(), with 'president' holding the leader's name so the chart tables are shared."""
+    E = load("europe_approval.json") or {"countries": {}}
+    out = []
+    for code, k in E["countries"].items():
+        polls = k.get("polls", [])
+        av = (k.get("avg") or {}).get("approve") or {}
+        dv = (k.get("avg") or {}).get("disapprove") or {}
+        if len(polls) < MIN_POLLS or not av.get("values"):
+            continue
+        office = OFFICE_ES.get(k.get("office", ""), (k.get("office") or "").lower())
+        if k["leader"] in FEMALE and office == "primer ministro":
+            office = "primera ministra"
+        out.append({"code": code, "country": EUROPE_ES.get(k["country"], k["country"]),
+                    "president": k["leader"], "office": office, "approve": av["values"][-1],
+                    "disapprove": dv["values"][-1] if dv.get("values") else None,
+                    "approve_30": at(av["dates"], av["values"], ago(30)),
+                    "n": len(polls), "n_30": sum(1 for p in polls if p["date"] >= ago(30)),
+                    "last": max(polls, key=lambda p: p["date"]), "avg": av, "davg": dv, "polls": polls})
+    out.sort(key=lambda r: -r["approve"])
+    return out
+
+
+def europe_ranking_table(rows):
+    return table(["Jefe de gobierno", "Aprobación"],
+                 [(f"{r['president']} ({r['country']})", round(r["approve"], 1)) for r in rows])
+
+
 # ------------------------------------------------------------------------------- forecasts
 def forecast_ar():
     """Both Argentina models on one table: Simulation (forecast_sim.json), Blend (forecast_ar.json)

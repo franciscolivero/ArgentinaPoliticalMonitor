@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
-draft_posts.py — writes this week's two Substack drafts from the monitor's data:
+draft_posts.py — writes this week's three Substack drafts from the monitor's data:
 
     posts/AAAA-MM-DD-argentina.md   every indicator in the monitor, governors included
     posts/AAAA-MM-DD-latam.md       presidential ranking, then one chart + paragraph per country
+    posts/AAAA-MM-DD-europa.md      ranking of European heads of government, then one chart + paragraph per country
 
 Every number and every week-on-week / month-on-month change is filled in from the repo. Each chart
 line is the Datawrapper address from datawrapper_charts.json: in Substack, paste it on its own line
@@ -39,6 +40,7 @@ def trend_word(d, small=1.0):
 PAGES = "https://franciscolivero.github.io/ArgentinaPoliticalMonitor/"
 MONITOR_AR = PAGES + "index.html"
 MONITOR_LATAM = "https://franciscolivero.github.io/ArgentinaPoliticalMonitor/latam.html"
+MONITOR_EUROPE = PAGES + "europe.html"
 
 # House style (from the author's edits to the first edition):
 #   * plain title, no date in it and no "Actualizado…" line; the date goes in the sign-off
@@ -363,6 +365,51 @@ def latam(today, state):
     return "\n".join(L)
 
 
+def europe(today, state):
+    rows = P.europe()
+    L = []
+    w = L.append
+    w("# Monitor de Aprobación de Gobiernos en Europa")
+    w("")
+    if not rows:
+        w("Todavía no hay datos de Europa en el repositorio (europe_approval.json). "
+          "Corré la acción “Update Europe approval” y volvé a generar el borrador.")
+        return "\n".join(L)
+    w("## El ranking")
+    w("")
+    w(embed("europe-ranking", state))
+    w("")
+    best, worst = rows[0], rows[-1]
+    w(f"{best['president']} encabeza el ranking con {P.pct(best['approve'])} y {worst['president']} lo "
+      f"cierra con {P.pct(worst['approve'])}.")
+    w("")
+    w("## País por país")
+    w("")
+    for r in rows:
+        lp = r["last"]
+        fav = "favourability" in lp["firm"]
+        firm = lp["firm"].replace(" (favourability)", "")
+        w(f"### {r['country']}")
+        w("")
+        w(embed(f"europe-{r['code'].lower()}", state))
+        w("")
+        yes, no = ("tiene imagen favorable", "desfavorable") if fav else ("aprueba", "desaprueba")
+        txt = (f"{r['president']} ({r['office']}) promedia {P.pct(r['approve'])} de aprobación"
+               + (f" y {P.pct(r['disapprove'])} de desaprobación" if r["disapprove"] is not None else "")
+               + (f" ({P.delta(r['approve'], r['approve_30'])} en 30 días)" if r["approve_30"] is not None else "")
+               + f". La última medición es de {firm} ({P.fdate(lp['date'])}): {P.pct(lp['approve'])} {yes}"
+               + (f" y {P.pct(lp['disapprove'])} {no}" if lp.get("disapprove") is not None else "")
+               + ".")
+        if r["n_30"] == 0:
+            txt += " No hubo encuestas nuevas en los últimos 30 días."
+        w(txt)
+        w("")
+    w(f"Los datos completos, con cada encuesta y su fuente, están en [el monitor]({MONITOR_EUROPE}).")
+    w("")
+    w(f"F.M.O., {P.fdate(today.isoformat())} de {today.year}")
+    return "\n".join(L)
+
+
 def main():
     args = sys.argv[1:]
     today = (datetime.date.fromisoformat(args[args.index("--date") + 1]) if "--date" in args
@@ -370,7 +417,7 @@ def main():
     state = json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() else {}
     out = HERE / "posts"
     out.mkdir(exist_ok=True)
-    for name, fn in (("argentina", argentina), ("latam", latam)):
+    for name, fn in (("argentina", argentina), ("latam", latam), ("europa", europe)):
         p = out / f"{today.isoformat()}-{name}.md"
         p.write_text(fn(today, state) + "\n", encoding="utf-8")
         print(f"wrote {p.relative_to(HERE)}")
