@@ -89,8 +89,24 @@ LEADERS = {
     "GR": ("Greece", "Kyriakos Mitsotakis", "Prime minister", ["mitsotakis", "μητσοτακη"], "2023-06-26", "el-GR",
            ["pulse", "metron analysis", "mrb", "gpo", "marc", "alco", "interview", "opinion poll", "prorata",
             "real polls", "palmos analysis"]),
-    "NO": ("Norway", "Jonas Gahr Støre", "Prime minister", ["store", "gahr store"], "2021-10-14", "no-NO",
+    "NO": ("Norway", "Jonas Gahr Støre", "Prime minister", ["støre", "store", "gahr støre"], "2021-10-14", "no-NO",
            ["norstat", "opinion", "respons", "verian", "ipsos", "infact", "nettavisen"]),
+    "SE": ("Sweden", "Ulf Kristersson", "Prime minister (caretaker)", ["kristersson"], "2022-10-18", "sv-SE",
+           ["novus", "verian", "demoskop", "ipsos", "indikator", "sifo"]),
+    "FI": ("Finland", "Petteri Orpo", "Prime minister", ["orpo"], "2023-06-20", "fi-FI",
+           ["taloustutkimus", "verian", "kantar agri", "hs gallup", "maaseudun tulevaisuus", "ilta sanomat"]),
+    "IS": ("Iceland", "Kristrún Frostadóttir", "Prime minister", ["frostadottir", "kristrun"], "2024-12-21", "is-IS",
+           ["gallup", "maskina", "maskína", "prosent", "prósent"]),
+    "CH": ("Switzerland", "Guy Parmelin", "President of the Confederation", ["parmelin", "bundesrat", "conseil federal"],
+           "2026-01-01", "de-CH", ["gfs.bern", "gfs bern", "sotomo", "leewas", "tamedia", "yougov", "srg"]),
+    "SK": ("Slovakia", "Robert Fico", "Prime minister", ["fico"], "2023-10-25", "sk-SK",
+           ["ako", "focus", "median", "ipsos", "nms"]),
+    "SI": ("Slovenia", "Janez Janša", "Prime minister", ["jansa", "janša"], "2026-06-05", "sl-SI",
+           ["mediana", "ninamedia", "parsifal", "valicon", "episcenter"]),
+    "HR": ("Croatia", "Andrej Plenković", "Prime minister", ["plenkovic"], "2024-05-17", "hr-HR",
+           ["crobarometar", "ipsos", "promocija plus", "2x1 komunikacije", "hrejting"]),
+    "UA": ("Ukraine", "Volodymyr Zelensky", "President", ["zelensky", "zelenskyy", "zelenskiy", "зеленськ", "зеленск"],
+           "2019-05-20", "uk-UA", ["kiis", "кміс", "рейтинг", "rating", "razumkov", "разумков", "active group", "socis"]),
 }
 REGIONAL = ["morning consult", "yougov", "ipsos", "eurobarometer", "ecfr", "gallup"]
 
@@ -112,10 +128,17 @@ A_WORDS = {
     "da": r"tilfreds\w*|godkend\w*|tillid|positiv\w*|populær\w*",
     "el": r"ικανοποι\w*|θετικ\w*|δημοφιλ\w*|εμπιστ\w*",
     "no": r"fornøyd\w*|tillit\w*|godkjen\w*|positiv\w*|populær\w*",
+    "sv": r"högt förtroende|förtroende|nöjd\w*|godkänn\w*|positiv\w*|stöd\w*",
+    "fi": r"luottamus\w*|luottaa|luottavat|tyytyväi\w*|kannatta\w*",
+    "is": r"stuðning\w*|styðja|styður|ánægð\w*|traust\w*",
+    "sk": r"dôver\w*|dôveryhodn\w*|spokojn\w*|podpor\w*",
+    "sl": r"podpor\w*|zaupanj\w*|zaupa\w*|zadovoljn\w*|pozitivn\w*",
+    "hr": r"pozitivn\w*|zadovolj\w*|povjerenj\w*|podršk\w*|podrška",
+    "uk": r"довіря\w*|довір\w*|підтриму\w*|схвалю\w*|trust\w*",
 }
 D_WORDS = {
     "en": r"disapprov\w*|unfavou?rab\w*|unpopular\w*|negative\w*|dissatisf\w*|distrust\w*|doing (?:a )?(?:bad|badly|poor)",
-    "fr": r"désapprouv\w*|desapprouv\w*|insatisfait\w*|mécontent\w*|mecontent\w*|opinions? défavorables?|"
+    "fr": r"impopularit\w*|désapprouv\w*|desapprouv\w*|insatisfait\w*|mécontent\w*|mecontent\w*|opinions? défavorables?|"
           r"défavorables?|mauvaise opinion|défiance|mauvais pr[ée]sident|jug\w* n[ée]gativement",
     "de": r"unzufrieden\w*|ablehn\w*|negativ\w*|misstrau\w*",
     "it": r"disapprov\w*|sfiducia|contrari\w*|bocciat\w*|bocci\w*|insoddisf\w*",
@@ -128,11 +151,20 @@ D_WORDS = {
     "da": r"utilfreds\w*|mistillid|negativ\w*|upopulær\w*",
     "el": r"δυσαρεστ\w*|αρνητικ\w*|δυσπιστ\w*",
     "no": r"misfornøyd\w*|mistillit\w*|negativ\w*|upopulær\w*",
+    "sv": r"lågt förtroende|missnöjd\w*|negativ\w*|misstro\w*",
+    "fi": r"tyytymätön\w*|tyytymättöm\w*|epäluottamus\w*|ei luota",
+    "is": r"óánægð\w*|vantraust\w*|andvíg\w*",
+    "sk": r"nedôver\w*|nespokojn\w*",
+    "sl": r"nezadovoljn\w*|nezaupanj\w*|ne zaupa\w*|negativn\w*",
+    "hr": r"negativn\w*|nezadovolj\w*|nepovjerenj\w*",
+    "uk": r"не довіря\w*|недовір\w*|не підтриму\w*|distrust\w*",
 }
 POLL_WORDS = (r"poll|survey|tracker|sondage|barom[eè]tre|enqu[eê]te|umfrage|deutschlandtrend|politbarometer|"
               r"sondaggio|sondaggi|encuesta|bar[oó]metro|sonda[zż]|badanie|peiling|onderzoek|sondagem|inqu[eé]rito|"
               r"felmérés|közvélemény|kutatás|průzkum|pruzkum|måling|undersøgelse|δημοσκόπηση|meningsmåling|"
-              r"undersøkelse|morning consult|yougov|ipsos")
+              r"undersøkelse|morning consult|yougov|ipsos|undersökning|opinionsmätning|mätning|kysely|könnun|"
+              r"prieskum|anketa|raziskav\w*|javnomnenj\w*|crobarometar|istraživanj\w*|опитуван\w*|соцопитуван\w*|"
+              r"кміс|kiis|novus|demoskop|taloustutkimus|maskína|gallup|mediana|ninamedia|hrejting")
 OFF_TOPIC = re.compile(
     r"voting intention|vote intention|seat projection|\bseats\b|leadership (?:race|contest|election)|"
     r"intention de vote|intentions de vote|1er tour|premier tour|second tour|"
@@ -140,19 +172,28 @@ OFF_TOPIC = re.compile(
     r"intenzion[ei] di voto|intención de voto|estimaci[oó]n de voto|esca[ñn]os|"
     r"intencj[ae] g[łl]osowania|mandat[oó]w|zetels|zetelpeiling|inten[cç][aã]o de voto|deputados|"
     r"mandátů|mandát|pártpreferencia|mandátum|mandater|stortingsvalg|folketingsvalg|πρόθεση ψήφου|"
-    r"campo largo|centrodestra|centrosinistra|beszéd|speech|"
-    r"trump|biden|putin|zelensk|ukrain(?:e|ian) president", re.I)
+    r"campo largo|centrodestra|centrosinistra|beszéd|speech|euróz\w*|eurozone|euro area|referend\w*|\bnato\b|"
+    r"väljarbarometer|partisympati|puoluekannatus|kannatusmittaus|fylgi flokka|preferenci\w* strán|volebn\w*|"
+    r"stranačk\w*|rejting stranak|рейтинг партій|партійн\w*|"
+    r"trump|biden|putin", re.I)
 PCT = re.compile(r"(\d{1,2}(?:[.,]\d{1,2})?)\s*(?:%|per ?cent|prozent|pour ?cent|por ?ciento|procent|prosent|"
-                 r"százalék|procent\w*|τοις εκατό|percent)", re.I)
+                 r"százalék|procent\w*|τοις εκατό|percent\w*|posto|odstot\w*|відсот\w*|prósent\w*|prosent\w*)", re.I)
 NEG = re.compile(r"(?:\bne\b|\bn'|\bpas\b|\bnicht\b|\bkein\w*|\bnot\b|\bno\b|\bnon\b|\bnie\b|\bniet\b|\bnão\b|"
-                 r"\bikke\b|\bnem\b|\bδεν\b)[^.;,]{0,18}$", re.I)
+                 r"\bikke\b|\bnem\b|\bδεν\b|\binte\b|\bei\b|\bekki\b|\bне\b)[^.;,]{0,18}$", re.I)
 CHANGE = re.compile(r"(?:verliert|verloren|gewinnt|loses|lost|gains?|gained|drops?|dropped|fell|falls|rose|rises|"
-                    r"\bup\b|\bdown\b|\bby\b|\bum\b|minus|plus|perde|guadagna|pierde|gana|perd|gagne)\s*$", re.I)
+                    r"\bup\b|\bdown\b|\bby\b|\bum\b|minus|plus|perde|guadagna|pierde|gana|perd|gagne|"
+                    r"\bна(?:\s+понад)?|зросла|знизилас\w*|впала)\s*$", re.I)
 AFTER_CHANGE = re.compile(r"^\s*(?:points?|pts|percentage|punkte|prozentpunkte|punti|puntos|pontos|points de|"
                           r"százalékpont|procentpunt|punkt\w*|behind|ahead|lead|more|less|weniger|mehr)", re.I)
 SUBGROUP = re.compile(r"\bmembers\b|\bvoters of\b|among (?:labour|tory|conservative|reform)|electores del|votantes del|"
                       r"anhänger|wähler der|unionswähler|szavazó|tiszás|elettori d|militants|sympathisants|"
                       r"j[oó]venes|young people|junge|jeunes|iscritti", re.I)
+VAGUE = re.compile(r"(?:понад|більше|менше|майже|близько|nearly|almost|about|around|près de|presque|knapp|rund|etwa|"
+                   r"über|unter|circa|oltre|quasi|casi|cerca de|ponad|prawie|około|bijna|ruim|quase|közel|több mint|"
+                   r"téměř|přes|nästan|över|lähes|yli|nær|skoro|više od|preko|manj kot|več kot|skoraj|menej ako|"
+                   r"viac ako|takmer)\s*(?:de|del|di|von|than|the)?\s*$", re.I)
+NEG_AFTER = re.compile(r"^\W*(?:\w+\W+){0,2}?(?:nicht|not|pas|niet|ikke|inte|ei|nem|ne)\b", re.I)
+FROM_TO_NEXT = re.compile(r"\s*(?:до|to|a|à|al|auf|na|till|tot|på|até|->|→|–|-)\s*\d", re.I)
 BOUND = re.compile(r"[;!?]|\.\s|\s[–—-]\s|\|")     # clause boundaries (a decimal point is not one)
 
 RSS = "https://news.google.com/rss/search?q={q}+{w}&hl={hl}&gl={gl}&ceid={gl}:{cl}"
@@ -170,13 +211,19 @@ QUERIES = {
     "da": ["{s} tilfredshed måling", "{s} meningsmåling populær", "{s} Voxmeter tilfreds"],
     "el": ["Μητσοτάκης δημοσκόπηση θετική γνώμη", "Μητσοτάκης δημοσκόπηση ικανοποίηση"],
     "no": ["{s} måling fornøyd", "{s} tillit måling", "regjeringen {s} fornøyd måling"],
+    "sv": ["förtroende {s} Novus", "{s} förtroende procent mätning", "regeringen {s} stöd mätning"],
+    "fi": ["{s} hallitus tyytyväisyys kysely", "{s} luottamus kysely", "Orpon hallitus kysely tyytyväisiä"],
+    "is": ["stuðningur við ríkisstjórnina Gallup", "stuðningur ríkisstjórn könnun", "{s} ríkisstjórn könnun prósent"],
+    "sk": ["dôvera {s} prieskum", "{s} dôveryhodnosť prieskum", "vláda {s} prieskum spokojnosť"],
+    "sl": ["{s} vlada podpora anketa", "podpora vladi Janša Mediana", "Janševa vlada javnomnenjska raziskava"],
+    "hr": ["Crobarometar Vlada Plenković", "{s} rejting istraživanje", "rad Vlade ocjena istraživanje"],
+    "uk": ["довіра Зеленському КМІС", "довіряють Зеленському опитування", "KIIS trust Zelensky poll"],
 }
 RANK_QUERIES = [("Morning Consult approval European leaders", "en-GB"), ("Morning Consult leader approval Meloni", "en-GB"),
                 ("Morning Consult Merz approval", "en-GB"), ("most popular leader Europe Morning Consult", "en-US"),
                 ("YouGov how popular are national leaders in Europe", "en-GB")]
 STOPPERS = ["trump", "modi", "sheinbaum", "milei", "lula", "carney", "albanese", "takaichi", "lee jae", "erdogan",
-            "putin", "zelensky", "xi jinping", "starmer", "kristersson", "andersson", "orban", "schoof", "fico",
-            "plenkovic", "orpo", "nawrocki", "lecornu", "bayrou", "albares", "feijoo", "farage", "badenoch",
+            "putin", "xi jinping", "starmer", "andersson", "orban", "schoof", "nawrocki", "lecornu", "bayrou", "albares", "feijoo", "farage", "badenoch",
             "weidel", "schlein", "le pen", "bardella", "ventura", "parmelin", "bolojan", "dan", "golob"]
 BACKFILL_MIN = 6
 
@@ -186,7 +233,8 @@ def lang(code):
 
 
 def surname(code):
-    return {"HU": "Magyar Péter", "IE": "Micheál Martin", "BE": "De Wever", "GR": "Μητσοτάκης",
+    return {"HU": "Magyar Péter", "IE": "Micheál Martin", "BE": "De Wever", "GR": "Μητσοτάκης", "UA": "Зеленський",
+            "IS": "Kristrún", "SI": "Janša", "HR": "Plenković", "SK": "Fico",
             "NO": "Støre", "ES": "Sánchez", "CZ": "Babiš"}.get(code, LEADERS[code][1].split()[-1])
 
 
@@ -218,32 +266,60 @@ def read_rss(url):
     return items
 
 
-def fetch(code, window="when:365d"):
-    hl = LEADERS[code][5]
-    s = surname(code)
-    items = []
+def queries(code, window, firms=True):
+    """The Google News addresses read for one country and time window."""
+    hl, s = LEADERS[code][5], surname(code)
     qs = QUERIES[lang(code)]
     if code == "AT":
         qs = ["{s} Zufriedenheit Umfrage", "{s} zufrieden Prozent Umfrage", "Kanzler {s} Umfrage Vertrauen"]
-    for q in qs:
-        items += read_rss(rss_url(q.format(s=s), window, hl))
-        time.sleep(0.2)
-    for firm in LEADERS[code][6][:4]:
-        items += read_rss(rss_url(f"{firm} {s}", window, hl))
-        time.sleep(0.2)
-    return items
+    if code == "CH":
+        qs = ["Bundesrat Vertrauen Umfrage Prozent", "{s} Umfrage Prozent", "gfs.bern Bundesrat Vertrauen"]
+    urls = [rss_url(q.format(s=s), window, hl) for q in qs]
+    if firms:
+        urls += [rss_url(f"{f} {s}", window, hl) for f in LEADERS[code][6][:4]]
+    return urls
+
+
+def read_many(pairs, workers=8):
+    """Read many RSS feeds in parallel; pairs = [(country code or None, url)]. Each item remembers the
+    country whose edition it came from, so a headline about 'the government' can be credited to it."""
+    from concurrent.futures import ThreadPoolExecutor
+    out = []
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        for (code, _), items in zip(pairs, ex.map(read_rss, [u for _, u in pairs])):
+            for it in items:
+                it["code"] = code
+            out += items
+    return out
+
+
+def fetch(code, window="when:365d"):
+    return read_many([(code, u) for u in queries(code, window)])
 
 
 # --------------------------------------------------------------------------------- headline parser
-def has_name(text, toks):
-    t = " " + key(text) + " "
-    return any(f" {key(x)} " in t for x in toks)
+def norm(s):
+    """Lower-case, accent-free, punctuation-free copy that KEEPS non-Latin letters (key() from the Latin
+    America tracker drops them, so Greek and Ukrainian names never matched)."""
+    import unicodedata
+    s = "".join(c for c in unicodedata.normalize("NFKD", s) if not unicodedata.combining(c)).lower()
+    return re.sub(r"\s+", " ", re.sub(r"[^\w]+", " ", s)).strip()
+
+
+# languages that inflect surnames ("Ficova vláda", "Зеленському", "Μητσοτάκη"): match the stem
+INFLECTED = {"sk", "sl", "hr", "uk", "el", "cs", "pl", "hu", "fi", "is"}
+
+
+def has_name(text, toks, code=None):
+    t = " " + norm(text) + " "
+    end = "" if code and lang(code) in INFLECTED else r"(?!\w)"
+    return any(re.search(r"(?<!\w)" + re.escape(norm(x)) + end, t) for x in toks if norm(x))
 
 
 def find_firm(text, firms):
-    t = " " + key(text) + " "
+    t = " " + norm(text) + " "
     for f in sorted(firms, key=len, reverse=True):
-        if f" {key(f)} " in t:
+        if norm(f) and f" {norm(f)} " in t:
             return nice_firm(f)
     return None
 
@@ -272,7 +348,13 @@ def nice_firm(f):
              "youtrend": "YouTrend", "demos": "Demos & Pi", "sigma dos": "Sigma Dos", "aximage": "Aximage",
              "intercampus": "Intercampus", "republikon": "Republikon", "publicus": "Publicus", "united surveys":
              "United Surveys", "opinia24": "Opinia24", "kantar": "Kantar", "savanta": "Savanta", "techne": "Techne",
-             "survation": "Survation", "find out now": "Find Out Now", "allensbach": "Allensbach", "civey": "Civey"}
+             "survation": "Survation", "find out now": "Find Out Now", "allensbach": "Allensbach", "civey": "Civey",
+             "novus": "Novus", "demoskop": "Demoskop", "indikator": "Indikator", "taloustutkimus": "Taloustutkimus",
+             "maskina": "Maskína", "maskína": "Maskína", "gfs.bern": "gfs.bern", "gfs bern": "gfs.bern",
+             "sotomo": "Sotomo", "leewas": "Leewas", "ako": "AKO", "focus": "Focus", "mediana": "Mediana",
+             "ninamedia": "Ninamedia", "valicon": "Valicon", "crobarometar": "Ipsos (Crobarometar)",
+             "promocija plus": "Promocija plus", "kiis": "KIIS", "кміс": "KIIS", "razumkov": "Razumkov",
+             "разумков": "Razumkov", "рейтинг": "Rating", "rating": "Rating", "active group": "Active Group"}
     return names.get(f, f.title())
 
 
@@ -285,17 +367,20 @@ def readings(text, lg):
         words.append((m.start(), m.end(), "d"))
     for m in a_re.finditer(text):
         if not any(s <= m.start() < e for s, e, _ in words):
-            neg = NEG.search(text[max(0, m.start() - 22):m.start()])     # "ne font pas confiance", "nicht zufrieden"
+            neg = NEG.search(text[max(0, m.start() - 22):m.start()]) or \
+                NEG_AFTER.search(text[m.end():m.end() + 30])           # "nicht zufrieden", "vertrauen ... nicht mehr"
             words.append((m.start(), m.end(), "d" if neg else "a"))
     got = {}
     for m in PCT.finditer(text):
         before = text[max(0, m.start() - 25):m.start()].lower()
         if re.search(r"(?:less|more|under|over|below|above|moins|plus|weniger|mehr|meno|più|menos|más|ponad|poniżej|"
                       r"minder|meer|mais|menos|alatt|felett|méně|více|under|over)\s+(?:than|de|als|di|del|que|niż|dan|"
-                      r"mint|než|end|enn)?\s*$", before):
+                      r"mint|než|end|enn)?\s*$", before) or VAGUE.search(before):
             continue
         if CHANGE.search(text[max(0, m.start() - 20):m.start()]) or AFTER_CHANGE.search(text[m.end():m.end() + 25]):
             continue
+        if FROM_TO_NEXT.match(text[m.end():m.end() + 12]):
+            continue                       # "з 43% до 57%", "from 43% to 57%": the first figure is the old one
         best = None
         for s, e, k in words:
             gap = text[e:m.start()] if e <= m.start() else text[m.end():s]
@@ -308,22 +393,41 @@ def readings(text, lg):
     return got.get("a"), got.get("d")
 
 
+# "the government" in each language: a headline from a country's own edition that rates its government
+# ("Vládě důvěřuje 25 procent lidí", "65 Prozent vertrauen Regierung nicht mehr") counts for that country
+GOV = {"en": r"government|cabinet|coalition", "fr": r"gouvernement|exécutif", "de": r"regierung|koalition|bundesrat|kabinett",
+       "it": r"governo|esecutivo", "es": r"gobierno|ejecutivo", "pl": r"rząd\w*|rzad\w*|gabinet\w*",
+       "nl": r"kabinet\w*|regering\w*|coalitie", "pt": r"governo|executivo", "hu": r"kormány\w*",
+       "cs": r"vlád\w*|vlad[aě]\w*|kabinet\w*", "da": r"regering\w*", "el": r"κυβέρνηση|κυβέρνησ\w*",
+       "no": r"regjering\w*", "sv": r"regering\w*", "fi": r"hallitu\w*|hallituks\w*", "is": r"ríkisstjórn\w*",
+       "sk": r"vlád\w*|vlada\w*", "sl": r"vlad\w*", "hr": r"vlad\w*", "uk": r"уряд\w*|влад\w*"}
+# other politicians who share poll headlines with the leader ("Залужному довіряють 68%")
+RIVALS = {"UA": ["залужн", "буданов", "федоров", "порошенк", "тимошенк", "кличк", "zaluzh", "budanov"],
+          "GR": ["καρυστιαν", "τσιπρ", "ανδρουλακ", "σαμαρ"], "HU": ["orbán", "orban"],
+          "SK": ["šimečk", "simeck", "pellegrin"], "HR": ["milanovi"], "CZ": ["pavel", "prezident"],
+          "ES": ["feijóo", "feijoo", "abascal"], "FR": ["lecornu", "bardella", "le pen", "philippe"],
+          "AT": ["kickl", "babler"], "DE": ["weidel", "klingbeil", "söder"]}
+
+
 def parse_item(item, code):
     country, leader, office, toks, since, hl, firms = LEADERS[code]
     title = re.sub(r"\s+-\s+[^-]{2,60}$", "", item["title"])
-    if not has_name(title, toks):
+    named = has_name(title, toks, code)
+    gov = (not named and item.get("code") == code and
+           re.search(r"(?<!\w)(?:" + GOV[lang(code)] + r")", title, re.I))
+    if not (named or gov):
         return None
-    if any(has_name(title, v[3]) for c, v in LEADERS.items() if c != code) or OFF_TOPIC.search(title) \
+    if any(has_name(title, v[3], c) for c, v in LEADERS.items() if c != code) or OFF_TOPIC.search(title) \
             or SUBGROUP.search(title):
+        return None
+    if any(r in title.lower() for r in RIVALS.get(code, [])):
         return None
     if is_multi(item):
         return None
     text = f"{title}. {item['desc']}"
     firm = find_firm(text, firms + REGIONAL)
     if not firm:
-        if not re.search(POLL_WORDS, title, re.I):
-            return None
-        firm = UNNAMED
+        firm = UNNAMED                     # counted at half weight; the approval word next to the % is the test
     ap, dp = readings(title, lang(code))
     if ap is None:
         ap2, dp2 = readings(text, lang(code))
@@ -340,7 +444,7 @@ def parse_item(item, code):
 
 
 def tracked_in(text):
-    return {c for c, v in LEADERS.items() if has_name(text, v[3])}
+    return {c for c, v in LEADERS.items() if has_name(text, v[3], c)}
 
 
 def is_multi(item):
@@ -380,6 +484,8 @@ WIKI = {
     "PL": [("Opinion_polling_on_the_incumbent_Tusk_government", r"^Prime Minister Donald Tusk")],
     "IT": [("Opinion_polling_for_the_next_Italian_general_election", r"^Government approval rating$")],
     "PT": [("Opinion_polling_for_the_next_Portuguese_legislative_election", r"^Cabinet approval")],
+    "SI": [("Opinion_polling_for_the_next_Slovenian_parliamentary_election", "leader")],
+    "SE": [("Opinion_polling_for_the_2026_Swedish_general_election", r"^Government approval")],
 }
 EN_MON = {m: i + 1 for i, m in enumerate("jan feb mar apr may jun jul aug sep oct nov dec".split())}
 
@@ -528,6 +634,51 @@ def src_deutschlandtrend(since, have, log):
     return out
 
 
+SV_MON = ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober",
+          "november", "december"]
+
+
+def src_novus(since, have, log):
+    """Novus 'Partiledarförtroende' (Sweden, roughly monthly PDF): share with high confidence in the
+    prime minister (approve) and low confidence (disapprove). Reads the last six months."""
+    out = []
+    today = datetime.date.today()
+    d = (today.replace(day=1) - datetime.timedelta(days=150)).replace(day=1)
+    while d <= today:
+        mon = SV_MON[d.month - 1]
+        found = False
+        for folder in (d, (d + datetime.timedelta(days=32)).replace(day=1)):
+            for name in (mon, mon[:3]):
+                url = (f"https://novus.se/wp-content/uploads/{folder.year}/{folder.month:02d}/"
+                       f"novuspartiledarfortroende{name}{d.year}.pdf")
+                if url in have:
+                    found = True
+                    break
+                try:
+                    import io
+                    from pypdf import PdfReader
+                    txt = " ".join(pg.extract_text() or "" for pg in PdfReader(io.BytesIO(ls._get(url, binary=True))).pages[:6])
+                except Exception:
+                    continue
+                found = True
+                txt = re.sub(r"\s+", " ", txt)
+                for m in re.finditer(r"Kristersson", txt):
+                    nums = re.findall(r"(\d{1,2})\s*%", txt[m.end():m.end() + 140])
+                    if len(nums) >= 2:
+                        a, dd = float(nums[0]), float(nums[1])
+                        if ls._ok(a, dd):
+                            end = d.replace(day=19)
+                            out.append({"date": end.isoformat(), "firm": "Novus", "approve": a, "disapprove": dd,
+                                        "approx": True, "source": url, "origin": "pollster"})
+                            break
+                break
+            if found:
+                break
+        d = (d + datetime.timedelta(days=32)).replace(day=1)
+    log.append(f"  · Novus: {len(out)} new readings")
+    return out
+
+
 YG_COUNTRY = {"united kingdom": "GB", "britain": "GB", "france": "FR", "germany": "DE", "italy": "IT",
               "spain": "ES", "denmark": "DK"}
 
@@ -621,6 +772,8 @@ def main():
                     added += add(code, p, store, log)
         for p in _safe(src_deutschlandtrend, "DeutschlandTrend", log, LEADERS["DE"][4], have, log):
             added += add("DE", p, store, log)
+        for p in _safe(src_novus, "Novus", log, LEADERS["SE"][4], have, log):
+            added += add("SE", p, store, log)
         for code, p in _safe(src_eurotrack, "EuroTrack", log, have, log):
             added += add(code, p, store, log)
 
@@ -633,18 +786,22 @@ def main():
                     seen.add(k)
                     pool.append(it)
         today = datetime.date.today()
+        urls = [(code, u) for code in LEADERS for u in queries(code, "when:365d")]
+        urls += [(None, rss_url(q, "when:365d", hl)) for q, hl in RANK_QUERIES]
+        take(read_many(urls))
+        # thin country (fewer than BACKFILL_MIN polls): read two years, two months at a time, every run
         for code in LEADERS:
-            take(fetch(code))
-            if len(store[code]) < BACKFILL_MIN:       # thin country: read two years, two months at a time
-                start = max(datetime.date.fromisoformat(LEADERS[code][4]), today - datetime.timedelta(days=730))
-                a, n0 = start, len(pool)
-                while a < today:
-                    b = min(a + datetime.timedelta(days=61), today + datetime.timedelta(days=1))
-                    take(fetch(code, f"after:{a.isoformat()}+before:{b.isoformat()}"))
-                    a = b
-                log.append(f"  · backfill Google News {code}: {len(pool) - n0} new headlines since {start}")
-        for q, hl in RANK_QUERIES:
-            take(read_rss(rss_url(q, "when:365d", hl)))
+            if len(store[code]) >= BACKFILL_MIN:
+                continue
+            start = max(datetime.date.fromisoformat(LEADERS[code][4]), today - datetime.timedelta(days=730))
+            slices, a = [], start
+            while a < today:
+                b = min(a + datetime.timedelta(days=61), today + datetime.timedelta(days=1))
+                slices += [(code, u) for u in queries(code, f"after:{a.isoformat()}+before:{b.isoformat()}", firms=False)]
+                a = b
+            n0 = len(pool)
+            take(read_many(slices))
+            log.append(f"  · backfill Google News {code}: {len(pool) - n0} new headlines since {start}")
         log.append(f"  · Google News: {len(pool)} unique articles read")
         for it in sorted(pool, key=lambda x: x["pub"]):
             if is_multi(it):

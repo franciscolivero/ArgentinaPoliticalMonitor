@@ -70,12 +70,24 @@ ES_ABBR = {"ene": 1, "feb": 2, "mar": 3, "abr": 4, "may": 5, "jun": 6, "jul": 7,
 DAY_MON_YEAR = re.compile(r"(\d{1,2})\s*([A-Za-z]{3})[a-z]*\.?\s*(\d{4})?")
 
 
+# Wikimedia rejects browser-imitating user agents from cloud machines with 429 ("We suspect this
+# request is automated"). Its policy asks bots for a descriptive agent with a contact address.
+WIKI_UA = {"User-Agent": "ArgentinaPoliticalMonitor/1.0 (https://github.com/franciscolivero/ArgentinaPoliticalMonitor; "
+                         "https://franciscolivero.github.io/ArgentinaPoliticalMonitor/) python-requests",
+           "Api-User-Agent": "ArgentinaPoliticalMonitor/1.0 (https://github.com/franciscolivero/ArgentinaPoliticalMonitor)"}
+
+
 def _wiki_html(page, lang="en"):
-    import json
-    raw = _get(f"https://{lang}.wikipedia.org/w/api.php",
-               params={"action": "parse", "page": page, "prop": "text", "format": "json",
-                       "formatversion": "2", "redirects": "1"})
-    return json.loads(raw)["parse"]["text"]
+    import json, time, requests
+    for attempt in range(4):
+        r = requests.get(f"https://{lang}.wikipedia.org/w/api.php", headers=WIKI_UA, timeout=60,
+                         params={"action": "parse", "page": page, "prop": "text", "format": "json",
+                                 "formatversion": "2", "redirects": "1", "maxlag": "5"})
+        if r.status_code in (429, 503) and attempt < 3:
+            time.sleep(int(r.headers.get("Retry-After", 0) or 0) or 5 * (attempt + 1))
+            continue
+        r.raise_for_status()
+        return json.loads(r.text)["parse"]["text"]
 
 
 def parse_wiki_tables(html_text, today=None):

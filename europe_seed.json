@@ -1,5 +1,5 @@
 {
- "note": "Hand-verified polls, merged on every run by fetch_europe_approval.py. YouGov EuroTrack rows are the monthly tracker (favourable / unfavourable opinion of the leader), dated the 24th of the fieldwork month.",
+ "note": "Hand-verified polls, merged on every run by fetch_europe_approval.py. YouGov EuroTrack rows are favourability, dated the 24th of the fieldwork month; Morning Consult rows are its 1–7 April 2026 tracker; Novus rows are the share with high confidence in the prime minister.",
  "countries": {
   "GB": [
    {
@@ -92,6 +92,15 @@
     "disapprove": 76,
     "approx": true,
     "source": "https://yougov.com/en-gb/articles/54488-how-popular-are-national-leaders-in-europe-march-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-04-07",
+    "firm": "Morning Consult",
+    "approve": 18,
+    "disapprove": 75,
+    "approx": false,
+    "source": "https://pro.morningconsult.com/trackers/global-leader-approval",
     "origin": "manual"
    },
    {
@@ -211,6 +220,15 @@
     "disapprove": 69,
     "approx": true,
     "source": "https://yougov.com/en-gb/articles/54488-how-popular-are-national-leaders-in-europe-march-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-04-07",
+    "firm": "Morning Consult",
+    "approve": 19,
+    "disapprove": 76,
+    "approx": false,
+    "source": "https://pro.morningconsult.com/trackers/global-leader-approval",
     "origin": "manual"
    },
    {
@@ -360,6 +378,15 @@
     "origin": "manual"
    },
    {
+    "date": "2026-04-07",
+    "firm": "Morning Consult",
+    "approve": 39,
+    "disapprove": 55,
+    "approx": false,
+    "source": "https://pro.morningconsult.com/trackers/global-leader-approval",
+    "origin": "manual"
+   },
+   {
     "date": "2026-04-24",
     "firm": "YouGov EuroTrack (favourability)",
     "approve": 35,
@@ -476,6 +503,15 @@
     "disapprove": 61,
     "approx": true,
     "source": "https://yougov.com/en-gb/articles/54488-how-popular-are-national-leaders-in-europe-march-2026",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-04-07",
+    "firm": "Morning Consult",
+    "approve": 38,
+    "disapprove": 57,
+    "approx": false,
+    "source": "https://pro.morningconsult.com/trackers/global-leader-approval",
     "origin": "manual"
    },
    {
@@ -663,6 +699,15 @@
   ],
   "NL": [
    {
+    "date": "2026-04-07",
+    "firm": "Morning Consult",
+    "approve": 28,
+    "disapprove": 55,
+    "approx": false,
+    "source": "https://pro.morningconsult.com/trackers/global-leader-approval",
+    "origin": "manual"
+   },
+   {
     "date": "2026-05-11",
     "firm": "Ipsos I&O",
     "approve": 24,
@@ -703,6 +748,15 @@
   ],
   "CZ": [
    {
+    "date": "2026-04-07",
+    "firm": "Morning Consult",
+    "approve": 55,
+    "disapprove": 35,
+    "approx": false,
+    "source": "https://pro.morningconsult.com/trackers/global-leader-approval",
+    "origin": "manual"
+   },
+   {
     "date": "2026-04-08",
     "firm": "CVVM",
     "approve": 25,
@@ -720,6 +774,348 @@
     "disapprove": null,
     "approx": true,
     "source": "https://www.echolive.ie/nationalnews/arid-41726370.html",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-02-02",
+    "firm": "Ipsos B&A",
+    "approve": 37,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://www.irishtimes.com/politics/2026/09/24/poll-indicates-irish-political-landscape-continuing-to-fragment/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-22",
+    "firm": "Ipsos B&A",
+    "approve": 34,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://www.irishtimes.com/politics/2026/09/24/poll-indicates-irish-political-landscape-continuing-to-fragment/",
+    "origin": "manual"
+   }
+  ],
+  "CH": [
+   {
+    "date": "2026-04-07",
+    "firm": "Morning Consult",
+    "approve": 47,
+    "disapprove": 24,
+    "approx": false,
+    "source": "https://pro.morningconsult.com/trackers/global-leader-approval",
+    "origin": "manual"
+   }
+  ],
+  "PL": [
+   {
+    "date": "2026-04-07",
+    "firm": "Morning Consult",
+    "approve": 43,
+    "disapprove": 45,
+    "approx": false,
+    "source": "https://pro.morningconsult.com/trackers/global-leader-approval",
+    "origin": "manual"
+   }
+  ],
+  "SE": [
+   {
+    "date": "2023-01-15",
+    "firm": "Novus",
+    "approve": 29,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://novus.se/wp-content/uploads/2026/08/novuspartiledarfortroendeaugusti2026.pdf",
+    "origin": "manual"
+   },
+   {
+    "date": "2023-06-15",
+    "firm": "Novus",
+    "approve": 33,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://novus.se/wp-content/uploads/2026/08/novuspartiledarfortroendeaugusti2026.pdf",
+    "origin": "manual"
+   },
+   {
+    "date": "2023-09-15",
+    "firm": "Novus",
+    "approve": 29,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://novus.se/wp-content/uploads/2026/08/novuspartiledarfortroendeaugusti2026.pdf",
+    "origin": "manual"
+   },
+   {
+    "date": "2023-11-15",
+    "firm": "Novus",
+    "approve": 29,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://novus.se/wp-content/uploads/2026/08/novuspartiledarfortroendeaugusti2026.pdf",
+    "origin": "manual"
+   },
+   {
+    "date": "2024-01-15",
+    "firm": "Novus",
+    "approve": 29,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://novus.se/wp-content/uploads/2026/08/novuspartiledarfortroendeaugusti2026.pdf",
+    "origin": "manual"
+   },
+   {
+    "date": "2024-03-15",
+    "firm": "Novus",
+    "approve": 38,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://novus.se/wp-content/uploads/2026/08/novuspartiledarfortroendeaugusti2026.pdf",
+    "origin": "manual"
+   },
+   {
+    "date": "2024-06-15",
+    "firm": "Novus",
+    "approve": 38,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://novus.se/wp-content/uploads/2026/08/novuspartiledarfortroendeaugusti2026.pdf",
+    "origin": "manual"
+   },
+   {
+    "date": "2024-08-15",
+    "firm": "Novus",
+    "approve": 36,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://novus.se/wp-content/uploads/2026/08/novuspartiledarfortroendeaugusti2026.pdf",
+    "origin": "manual"
+   },
+   {
+    "date": "2024-09-15",
+    "firm": "Novus",
+    "approve": 34,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://novus.se/wp-content/uploads/2026/08/novuspartiledarfortroendeaugusti2026.pdf",
+    "origin": "manual"
+   },
+   {
+    "date": "2024-10-15",
+    "firm": "Novus",
+    "approve": 34,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://novus.se/wp-content/uploads/2026/08/novuspartiledarfortroendeaugusti2026.pdf",
+    "origin": "manual"
+   },
+   {
+    "date": "2025-01-15",
+    "firm": "Novus",
+    "approve": 36,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://novus.se/wp-content/uploads/2026/08/novuspartiledarfortroendeaugusti2026.pdf",
+    "origin": "manual"
+   },
+   {
+    "date": "2025-04-15",
+    "firm": "Novus",
+    "approve": 37,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://novus.se/wp-content/uploads/2026/08/novuspartiledarfortroendeaugusti2026.pdf",
+    "origin": "manual"
+   },
+   {
+    "date": "2025-05-15",
+    "firm": "Novus",
+    "approve": 38,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://novus.se/wp-content/uploads/2026/08/novuspartiledarfortroendeaugusti2026.pdf",
+    "origin": "manual"
+   },
+   {
+    "date": "2025-06-15",
+    "firm": "Novus",
+    "approve": 35,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://novus.se/wp-content/uploads/2026/08/novuspartiledarfortroendeaugusti2026.pdf",
+    "origin": "manual"
+   },
+   {
+    "date": "2025-08-15",
+    "firm": "Novus",
+    "approve": 31,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://novus.se/wp-content/uploads/2026/08/novuspartiledarfortroendeaugusti2026.pdf",
+    "origin": "manual"
+   },
+   {
+    "date": "2025-10-15",
+    "firm": "Novus",
+    "approve": 30,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://novus.se/wp-content/uploads/2026/08/novuspartiledarfortroendeaugusti2026.pdf",
+    "origin": "manual"
+   },
+   {
+    "date": "2025-11-15",
+    "firm": "Novus",
+    "approve": 31,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://novus.se/wp-content/uploads/2026/08/novuspartiledarfortroendeaugusti2026.pdf",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-01-15",
+    "firm": "Novus",
+    "approve": 33,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://novus.se/wp-content/uploads/2026/08/novuspartiledarfortroendeaugusti2026.pdf",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-02-15",
+    "firm": "Novus",
+    "approve": 36,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://novus.se/wp-content/uploads/2026/08/novuspartiledarfortroendeaugusti2026.pdf",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-03-15",
+    "firm": "Novus",
+    "approve": 37,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://novus.se/wp-content/uploads/2026/08/novuspartiledarfortroendeaugusti2026.pdf",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-04-07",
+    "firm": "Morning Consult",
+    "approve": 38,
+    "disapprove": 54,
+    "approx": false,
+    "source": "https://pro.morningconsult.com/trackers/global-leader-approval",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-04-15",
+    "firm": "Novus",
+    "approve": 36,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://novus.se/wp-content/uploads/2026/08/novuspartiledarfortroendeaugusti2026.pdf",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-06-15",
+    "firm": "Novus",
+    "approve": 33,
+    "disapprove": null,
+    "approx": true,
+    "source": "https://novus.se/wp-content/uploads/2026/08/novuspartiledarfortroendeaugusti2026.pdf",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-08-19",
+    "firm": "Novus",
+    "approve": 35,
+    "disapprove": 45,
+    "approx": false,
+    "source": "https://novus.se/wp-content/uploads/2026/08/novuspartiledarfortroendeaugusti2026.pdf",
+    "origin": "manual"
+   }
+  ],
+  "BE": [
+   {
+    "date": "2026-04-07",
+    "firm": "Morning Consult",
+    "approve": 35,
+    "disapprove": 54,
+    "approx": false,
+    "source": "https://pro.morningconsult.com/trackers/global-leader-approval",
+    "origin": "manual"
+   }
+  ],
+  "NO": [
+   {
+    "date": "2026-04-07",
+    "firm": "Morning Consult",
+    "approve": 31,
+    "disapprove": 63,
+    "approx": false,
+    "source": "https://pro.morningconsult.com/trackers/global-leader-approval",
+    "origin": "manual"
+   }
+  ],
+  "AT": [
+   {
+    "date": "2026-04-07",
+    "firm": "Morning Consult",
+    "approve": 29,
+    "disapprove": 58,
+    "approx": false,
+    "source": "https://pro.morningconsult.com/trackers/global-leader-approval",
+    "origin": "manual"
+   }
+  ],
+  "UA": [
+   {
+    "date": "2026-06-03",
+    "firm": "KIIS",
+    "approve": 61,
+    "disapprove": 34,
+    "approx": false,
+    "source": "https://www.pravda.com.ua/eng/news/2026/06/10/8038613/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-07-25",
+    "firm": "KIIS",
+    "approve": 55,
+    "disapprove": 40,
+    "approx": true,
+    "source": "https://kyivindependent.com/poll-tracks-zelenskys-trust-rating-amid-corruption-investigation/",
+    "origin": "manual"
+   },
+   {
+    "date": "2026-09-10",
+    "firm": "KIIS",
+    "approve": 54,
+    "disapprove": 41,
+    "approx": false,
+    "source": "https://www.pravda.com.ua/eng/news/2026/09/17/8053875/",
+    "origin": "manual"
+   }
+  ],
+  "HR": [
+   {
+    "date": "2026-07-25",
+    "firm": "Ipsos (Crobarometar)",
+    "approve": 39,
+    "disapprove": 55,
+    "approx": true,
+    "source": "https://www.tportal.hr/vijesti/clanak/hdz-i-dalje-vodeca-stranka-ali-vlada-bi-trebala-obratiti-pozornost-na-to-sto-najvise-muci-gradane-20260731",
+    "origin": "manual"
+   }
+  ],
+  "FI": [
+   {
+    "date": "2026-05-20",
+    "firm": "Iro Research",
+    "approve": 25,
+    "disapprove": 71,
+    "approx": true,
+    "source": "https://www.mtvuutiset.fi/artikkeli/usu-tyytymattomyys-orpon-hallitukseen-kasvanut/9350926",
     "origin": "manual"
    }
   ]

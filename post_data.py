@@ -356,10 +356,13 @@ EUROPE_ES = {"United Kingdom": "Reino Unido", "France": "Francia", "Germany": "A
              "Spain": "España", "Poland": "Polonia", "Netherlands": "Países Bajos", "Portugal": "Portugal",
              "Hungary": "Hungría", "Czechia": "Chequia", "Denmark": "Dinamarca", "Belgium": "Bélgica",
              "Austria": "Austria", "Ireland": "Irlanda", "Greece": "Grecia", "Norway": "Noruega",
-             "Sweden": "Suecia"}
+             "Sweden": "Suecia", "Finland": "Finlandia", "Iceland": "Islandia", "Switzerland": "Suiza",
+             "Slovakia": "Eslovaquia", "Slovenia": "Eslovenia", "Croatia": "Croacia", "Ukraine": "Ucrania",
+             "Serbia": "Serbia"}
 OFFICE_ES = {"Prime minister": "primer ministro", "President": "presidente", "Chancellor": "canciller",
-             "Taoiseach": "taoiseach"}
-FEMALE = {"Giorgia Meloni", "Mette Frederiksen"}
+             "Taoiseach": "taoiseach", "Prime minister (caretaker)": "primer ministro en funciones",
+             "President of the Confederation": "presidente de la Confederación"}
+FEMALE = {"Giorgia Meloni", "Mette Frederiksen", "Kristrún Frostadóttir"}
 
 
 def europe():
