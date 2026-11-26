@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T18:57:29Z",
+ "updated": "2026-11-26T20:19:27Z",
  "model": {
   "n": 78,
   "base_rate": 0.449,
@@ -141,15 +141,15 @@
    "iso": "PE",
    "country": "Peru",
    "president": "Keiko Fujimori",
-   "approval": 41.7,
-   "approval_asof": "2026-11-20",
+   "approval": 45.0,
+   "approval_asof": "2026-11-22",
    "next_election": "2031-04-13",
    "date_precision": "approx",
    "president_running": 0,
    "years_to_election": 4.4,
-   "p_model": 0.322,
+   "p_model": 0.363,
    "weight_model": 0.37,
-   "p": 0.402
+   "p": 0.417
   },
   {
    "iso": "HN",
