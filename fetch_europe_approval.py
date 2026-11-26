@@ -485,6 +485,7 @@ WIKI = {
     "IT": [("Opinion_polling_for_the_next_Italian_general_election", r"^Government approval rating$")],
     "PT": [("Opinion_polling_for_the_next_Portuguese_legislative_election", r"^Cabinet approval")],
     "SI": [("Opinion_polling_for_the_next_Slovenian_parliamentary_election", "leader")],
+    "ES": [("Leadership_opinion_polling_for_the_2026_Spanish_general_election", "leader")],
     "SE": [("Opinion_polling_for_the_2026_Swedish_general_election", r"^Government approval")],
 }
 EN_MON = {m: i + 1 for i, m in enumerate("jan feb mar apr may jun jul aug sep oct nov dec".split())}
@@ -543,8 +544,8 @@ def parse_wiki(html_text, leader, how, today=None):
         need = sur if how == "leader" else None
         if how == "leader" and not any(sur in l for l in labels):
             continue
-        ia = col(r"\bpos\b|\bapprove", need, r"disapprove")
-        idis = col(r"\bneg\b|disapprove", need)
+        ia = col(r"\bpos\b|\bapprove|(?:^|\s)y\s*$", need, r"disapprove")     # Spain's tables: Y / N / ?
+        idis = col(r"\bneg\b|disapprove|(?:^|\s)n\s*$", need)
         ifirm = col(r"pollster|polling firm")
         idate = col(r"date|fieldwork")
         if None in (ia, ifirm, idate):
