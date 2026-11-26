@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T20:31:53Z",
+ "updated": "2026-11-26T16:51:19Z",
  "model": {
   "n": 78,
   "base_rate": 0.449,
@@ -51,7 +51,7 @@
    "years_to_election": 3.5,
    "p_model": 0.647,
    "weight_model": 0.53,
-   "p": 0.553
+   "p": 0.554
   },
   {
    "iso": "CR",
@@ -162,7 +162,7 @@
    "president_running": 0,
    "years_to_election": 3.0,
    "p_model": 0.369,
-   "weight_model": 0.62,
+   "weight_model": 0.63,
    "p": 0.399
   },
   {
@@ -247,7 +247,7 @@
    "years_to_election": 1.4,
    "p_model": 0.177,
    "weight_model": 0.92,
-   "p": 0.198
+   "p": 0.197
   }
  ]
 }
