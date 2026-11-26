@@ -1,115 +1,75 @@
-run 2026-11-26 22:59 UTC · 63 new poll(s)
+run 2026-11-26 23:15 UTC · 35 new poll(s)
 
 GB United Kingdom   91 polls  manual 4, wikipedia 87
-FR France          195 polls  manual 14, news 4, wikipedia 177
-DE Germany          24 polls  manual 17, news 5, pollster 2
-IT Italy           165 polls  manual 14, news 4, wikipedia 147
-ES Spain            75 polls  manual 14, wikipedia 61
+FR France          196 polls  manual 14, news 5, wikipedia 177
+DE Germany          54 polls  manual 27, news 26, pollster 1
+IT Italy           167 polls  manual 14, news 6, wikipedia 147
+ES Spain            79 polls  manual 14, news 4, wikipedia 61
 PL Poland           49 polls  manual 1, wikipedia 48
-NL Netherlands       8 polls  manual 4, news 4
-PT Portugal         40 polls  wikipedia 40
-HU Hungary           2 polls  manual 1, news 1
+PT Portugal         41 polls  news 1, wikipedia 40
 CZ Czechia           4 polls  manual 2, news 2
-DK Denmark          13 polls  manual 13
 BE Belgium           2 polls  manual 1, news 1
-AT Austria           1 polls  manual 1
-IE Ireland           3 polls  manual 3
-GR Greece            0 polls  
+AT Austria           2 polls  manual 1, news 1
+GR Greece            2 polls  news 2
 NO Norway            1 polls  manual 1
-SE Sweden           28 polls  manual 24, wikipedia 4
 FI Finland           1 polls  manual 1
 IS Iceland           0 polls  
 CH Switzerland       1 polls  manual 1
 SK Slovakia          0 polls  
-SI Slovenia          3 polls  wikipedia 3
 HR Croatia           1 polls  manual 1
-UA Ukraine          10 polls  manual 3, news 7
 
 log:
   · GB Wikipedia Leadership_approval_opinion_polling_for_the_next_United_Kingdom_general_election: 159 rows
   · FR Wikipedia Opinion_polling_on_the_Emmanuel_Macron_presidency: 673 rows
   · IT Wikipedia Opinion_polling_for_the_next_Italian_general_election: 148 rows
   · ES Wikipedia Leadership_opinion_polling_for_the_2026_Spanish_general_election: 78 rows
-  + ES SocioMétrica ≈2026-11-22: 29.1/66.4 [wikipedia]
-  + ES SW Demoscopia ≈2026-11-21: 46.6/None [wikipedia]
-  + ES Ateneo del Dato ≈2026-11-20: 41.0/57.2 [wikipedia]
-  + ES Ipsos ≈2026-11-20: 38.0/58.0 [wikipedia]
-  + ES SW Demoscopia ≈2026-11-16: 45.7/None [wikipedia]
-  + ES SocioMétrica ≈2026-11-15: 27.5/67.7 [wikipedia]
-  + ES SW Demoscopia ≈2026-11-11: 45.2/None [wikipedia]
-  + ES SocioMétrica ≈2026-11-08: 27.1/68.0 [wikipedia]
-  + ES SW Demoscopia ≈2026-11-06: 45.5/None [wikipedia]
-  + ES Ateneo del Dato ≈2026-11-05: 41.0/58.0 [wikipedia]
-  + ES SocioMétrica ≈2026-11-01: 26.7/68.3 [wikipedia]
-  + ES Ateneo del Dato ≈2026-10-22: 39.9/57.7 [wikipedia]
-  + ES SocioMétrica ≈2026-10-03: 26.9/67.4 [wikipedia]
-  + ES Winston ≈2026-10-01: 31.0/62.0 [wikipedia]
-  + ES SocioMétrica ≈2026-09-26: 26.8/67.3 [wikipedia]
-  + ES SocioMétrica ≈2026-08-06: 26.7/None [wikipedia]
-  + ES SocioMétrica ≈2026-07-04: 28.5/None [wikipedia]
-  + ES Ipsos ≈2026-06-29: 37.0/59.0 [wikipedia]
-  + ES SocioMétrica ≈2026-05-30: 30.0/None [wikipedia]
-  + ES SocioMétrica ≈2026-04-18: 28.4/None [wikipedia]
-  + ES Ipsos ≈2026-04-08: 42.0/54.0 [wikipedia]
-  + ES YouGov ≈2026-03-23: 35.0/61.0 [wikipedia]
-  + ES SocioMétrica ≈2026-03-21: 26.2/66.8 [wikipedia]
-  + ES YouGov ≈2026-02-19: 32.0/66.0 [wikipedia]
-  + ES SocioMétrica ≈2026-02-13: 25.5/None [wikipedia]
-  + ES SocioMétrica ≈2026-01-10: 24.9/None [wikipedia]
-  + ES SocioMétrica ≈2025-12-07: 25.7/69.6 [wikipedia]
-  + ES SocioMétrica ≈2025-11-08: 25.1/68.1 [wikipedia]
-  + ES SocioMétrica ≈2025-10-10: 25.4/None [wikipedia]
-  + ES SocioMétrica ≈2025-08-29: 24.3/71.9 [wikipedia]
-  + ES SocioMétrica ≈2025-07-24: 23.3/None [wikipedia]
-  + ES SocioMétrica ≈2025-06-21: 27.2/None [wikipedia]
-  + ES SocioMétrica ≈2025-05-22: 30.4/None [wikipedia]
-  + ES Ipsos ≈2025-05-21: 36.0/58.0 [wikipedia]
-  + ES SocioMétrica ≈2025-04-25: 30.1/None [wikipedia]
-  + ES SocioMétrica ≈2025-03-21: 28.2/None [wikipedia]
-  + ES SocioMétrica ≈2025-02-14: 27.4/None [wikipedia]
-  + ES SocioMétrica ≈2024-12-30: 26.2/None [wikipedia]
-  + ES Target Point ≈2024-12-30: 36.2/None [wikipedia]
-  + ES SocioMétrica ≈2024-11-24: 26.5/None [wikipedia]
-  + ES Ipsos ≈2024-11-22: 31.0/66.0 [wikipedia]
-  + ES SocioMétrica ≈2024-10-18: 28.3/None [wikipedia]
-  + ES Simple Lógica ≈2024-09-13: 33.8/63.9 [wikipedia]
-  + ES SocioMétrica ≈2024-08-31: 27.9/None [wikipedia]
-  + ES Simple Lógica ≈2024-08-09: 31.6/66.2 [wikipedia]
-  + ES SocioMétrica ≈2024-07-20: 29.1/None [wikipedia]
-  + ES Simple Lógica ≈2024-07-10: 37.2/59.8 [wikipedia]
-  + ES Simple Lógica ≈2024-06-11: 36.4/61.3 [wikipedia]
-  + ES SocioMétrica ≈2024-05-19: 32.3/None [wikipedia]
-  + ES Simple Lógica ≈2024-05-09: 35.0/61.1 [wikipedia]
-  + ES SocioMétrica ≈2024-05-04: 31.1/None [wikipedia]
-  + ES SocioMétrica ≈2024-04-12: 32.6/None [wikipedia]
-  + ES Simple Lógica ≈2024-04-09: 33.8/63.2 [wikipedia]
-  + ES SocioMétrica ≈2024-03-09: 33.8/None [wikipedia]
-  + ES Simple Lógica ≈2024-03-08: 35.3/60.0 [wikipedia]
-  + ES SocioMétrica ≈2024-02-09: 35.7/None [wikipedia]
-  + ES Simple Lógica ≈2024-02-09: 34.4/61.7 [wikipedia]
-  + ES Simple Lógica ≈2024-01-09: 35.0/61.4 [wikipedia]
-  + ES SocioMétrica ≈2023-12-31: 38.8/None [wikipedia]
-  + ES Simple Lógica ≈2023-12-11: 37.8/59.1 [wikipedia]
-  + ES SocioMétrica ≈2023-11-24: 40.0/None [wikipedia]
   · PL Wikipedia Opinion_polling_on_the_incumbent_Tusk_government: 48 rows
   · PT Wikipedia Opinion_polling_for_the_next_Portuguese_legislative_election: 40 rows
-  · SE Wikipedia Opinion_polling_for_the_2026_Swedish_general_election: 4 rows
-  · SI Wikipedia Opinion_polling_for_the_next_Slovenian_parliamentary_election: 3 rows
-  · DeutschlandTrend: 0 new monthly readings
-  · Novus: 1 new readings
-  · backfill Google News HU: 138 new headlines since 2026-05-09
-  · backfill Google News CZ: 42 new headlines since 2025-12-09
-  · backfill Google News BE: 75 new headlines since 2025-02-03
-  · backfill Google News AT: 47 new headlines since 2025-03-03
-  · backfill Google News IE: 51 new headlines since 2025-01-23
-  · backfill Google News GR: 64 new headlines since 2024-11-26
-  · backfill Google News NO: 87 new headlines since 2024-11-26
-  · backfill Google News FI: 11 new headlines since 2024-11-26
+  · DeutschlandTrend: 3 new readings
+  + DE Infratest dimap ≈2026-03-31: 21.0/None [pollster]
+  · backfill Google News DE: 370 new headlines since 2025-05-06
+  · backfill Google News CZ: 38 new headlines since 2025-12-09
+  · backfill Google News BE: 70 new headlines since 2025-02-03
+  · backfill Google News AT: 70 new headlines since 2025-03-03
+  · backfill Google News GR: 69 new headlines since 2024-11-26
+  · backfill Google News NO: 86 new headlines since 2024-11-26
+  · backfill Google News FI: 19 new headlines since 2024-11-26
   · backfill Google News IS: 1 new headlines since 2024-12-21
-  · backfill Google News CH: 29 new headlines since 2026-01-01
-  · backfill Google News SK: 34 new headlines since 2024-11-26
-  · backfill Google News SI: 10 new headlines since 2026-06-05
+  · backfill Google News CH: 23 new headlines since 2026-01-01
+  · backfill Google News SK: 61 new headlines since 2024-11-26
   · backfill Google News HR: 0 new headlines since 2024-11-26
-  · Google News: 4488 unique articles read
-  + UA Pollster not named (press) ≈2026-07-27: 60.0/None [news]
-  + FR Pollster not named (press) ≈2026-11-06: 15.0/None [news]
+  · Google News: 4073 unique articles read
+  + DE INSA ≈2025-07-22: None/56.0 [news]
+  + DE Pollster not named (press) ≈2025-08-06: None/60.0 [news]
+  + DE Pollster not named (press) ≈2025-09-19: None/70.0 [news]
+  + DE Pollster not named (press) ≈2025-11-22: None/75.0 [news]
+  + DE Pollster not named (press) ≈2025-11-24: None/55.0 [news]
+  + DE INSA ≈2025-12-03: None/68.0 [news]
+  + DE Pollster not named (press) ≈2026-01-20: None/71.0 [news]
+  + DE Infratest dimap ≈2026-03-28: None/84.0 [news]
+  + DE Pollster not named (press) ≈2026-04-25: 15.0/None [news]
+  + DE INSA ≈2026-04-30: None/76.0 [news]
+  + DE Forsa ≈2026-05-08: 13.0/None [news]
+  + DE Pollster not named (press) ≈2026-05-08: None/87.0 [news]
+  + DE Pollster not named (press) ≈2026-05-31: None/87.0 [news]
+  + DE Pollster not named (press) ≈2026-06-03: None/21.0 [news]
+  + DE Pollster not named (press) ≈2026-07-10: None/82.0 [news]
+  + DE Pollster not named (press) ≈2026-07-11: None/85.0 [news]
+  + IT Pollster not named (press) ≈2026-07-29: 52.7/None [news]
+  + DE Forschungsgruppe Wahlen ≈2026-07-30: None/70.0 [news]
+  + DE Pollster not named (press) ≈2026-08-02: None/84.0 [news]
+  + IT Pollster not named (press) ≈2026-08-31: None/53.0 [news]
+  + ES Pollster not named (press) ≈2026-08-31: None/60.0 [news]
+  + DE Pollster not named (press) ≈2026-09-01: None/77.0 [news]
+  + ES GAD3 ≈2026-09-02: None/76.0 [news]
+  + ES Pollster not named (press) ≈2026-09-03: None/63.0 [news]
+  + FR Pollster not named (press) ≈2026-09-25: None/82.0 [news]
+  + AT Pollster not named (press) ≈2026-10-03: None/65.0 [news]
+  + ES Pollster not named (press) ≈2026-10-08: None/56.0 [news]
+  + FR Pollster not named (press) ≈2026-10-25: None/90.0 [news]
+  + DE Pollster not named (press) ≈2026-10-30: None/87.0 [news]
+  + DE Pollster not named (press) ≈2026-11-03: None/82.0 [news]
+  + GR MARC ≈2026-11-09: None/63.5 [news]
+  + GR Metron Analysis ≈2026-11-15: None/69.0 [news]
+  + DE Forsa ≈2026-11-20: None/88.0 [news]
+  + PT Pollster not named (press) ≈2026-11-20: None/67.0 [news]
