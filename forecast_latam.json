@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T18:29:13Z",
+ "updated": "2026-11-27T18:30:13Z",
  "model": {
   "n": 78,
   "base_rate": 0.449,
@@ -71,15 +71,15 @@
    "iso": "AR",
    "country": "Argentina",
    "president": "Javier Milei",
-   "approval": 35.4,
-   "approval_asof": "2026-11-26",
+   "approval": 35.5,
+   "approval_asof": "2026-11-27",
    "next_election": "2027-10-24",
    "date_precision": "exact",
    "president_running": 1,
    "years_to_election": 0.9,
-   "p_model": 0.47,
+   "p_model": 0.474,
    "weight_model": 1.0,
-   "p": 0.47
+   "p": 0.474
   },
   {
    "iso": "DO",
