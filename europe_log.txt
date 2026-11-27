@@ -1,9 +1,9 @@
-run 2026-11-26 23:23 UTC · 4 new poll(s)
+run 2026-11-27 20:16 UTC · 3 new poll(s)
 
-GB United Kingdom   91 polls  manual 4, wikipedia 87
-FR France          197 polls  manual 14, news 6, wikipedia 177
+GB United Kingdom   93 polls  manual 4, wikipedia 89
+FR France          196 polls  manual 14, news 5, wikipedia 177
 DE Germany          57 polls  manual 27, news 29, pollster 1
-IT Italy           167 polls  manual 14, news 6, wikipedia 147
+IT Italy           168 polls  manual 14, news 6, wikipedia 148
 ES Spain            79 polls  manual 14, news 4, wikipedia 61
 PL Poland           49 polls  manual 1, wikipedia 48
 PT Portugal         41 polls  news 1, wikipedia 40
@@ -15,22 +15,21 @@ SK Slovakia          0 polls
 HR Croatia           1 polls  manual 1
 
 log:
-  · GB Wikipedia Leadership_approval_opinion_polling_for_the_next_United_Kingdom_general_election: 159 rows
+  · GB Wikipedia Leadership_approval_opinion_polling_for_the_next_United_Kingdom_general_election: 161 rows
+  + GB Deltapoll ≈2026-11-23: 48.0/42.0 [wikipedia]
+  + GB More in Common ≈2026-11-23: 39.0/33.0 [wikipedia]
   · FR Wikipedia Opinion_polling_on_the_Emmanuel_Macron_presidency: 673 rows
-  · IT Wikipedia Opinion_polling_for_the_next_Italian_general_election: 148 rows
+  · IT Wikipedia Opinion_polling_for_the_next_Italian_general_election: 149 rows
+  + IT Termometro Politico ≈2026-11-26: 39.5/60.1 [wikipedia]
   · ES Wikipedia Leadership_opinion_polling_for_the_2026_Spanish_general_election: 78 rows
   · PL Wikipedia Opinion_polling_on_the_incumbent_Tusk_government: 48 rows
   · PT Wikipedia Opinion_polling_for_the_next_Portuguese_legislative_election: 40 rows
   · DeutschlandTrend: 2 new readings
-  · backfill Google News DE: 352 new headlines since 2025-05-06
-  · backfill Google News NO: 83 new headlines since 2024-11-26
-  · backfill Google News FI: 10 new headlines since 2024-11-26
+  · backfill Google News DE: 350 new headlines since 2025-05-06
+  · backfill Google News NO: 76 new headlines since 2024-11-27
+  · backfill Google News FI: 18 new headlines since 2024-11-27
   · backfill Google News IS: 1 new headlines since 2024-12-21
-  · backfill Google News CH: 25 new headlines since 2026-01-01
-  · backfill Google News SK: 49 new headlines since 2024-11-26
-  · backfill Google News HR: 0 new headlines since 2024-11-26
-  · Google News: 3261 unique articles read
-  + DE Pollster not named (press) ≈2026-07-08: None/75.0 [news]
-  + DE Pollster not named (press) ≈2026-08-31: None/56.0 [news]
-  + DE Pollster not named (press) ≈2026-10-16: None/87.0 [news]
-  + FR Pollster not named (press) ≈2026-11-06: 15.0/None [news]
+  · backfill Google News CH: 49 new headlines since 2026-01-01
+  · backfill Google News SK: 65 new headlines since 2024-11-27
+  · backfill Google News HR: 0 new headlines since 2024-11-27
+  · Google News: 2691 unique articles read

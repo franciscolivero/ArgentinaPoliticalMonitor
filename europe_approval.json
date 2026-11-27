@@ -820,6 +820,24 @@
      "approx": false,
      "origin": "wikipedia",
      "source": "https://en.wikipedia.org/wiki/Leadership_approval_opinion_polling_for_the_next_United_Kingdom_general_election"
+    },
+    {
+     "date": "2026-11-23",
+     "firm": "Deltapoll",
+     "approve": 48.0,
+     "disapprove": 42.0,
+     "approx": false,
+     "origin": "wikipedia",
+     "source": "https://en.wikipedia.org/wiki/Leadership_approval_opinion_polling_for_the_next_United_Kingdom_general_election"
+    },
+    {
+     "date": "2026-11-23",
+     "firm": "More in Common",
+     "approve": 39.0,
+     "disapprove": 33.0,
+     "approx": false,
+     "origin": "wikipedia",
+     "source": "https://en.wikipedia.org/wiki/Leadership_approval_opinion_polling_for_the_next_United_Kingdom_general_election"
     }
    ],
    "country": "United Kingdom",
@@ -847,7 +865,7 @@
       "2026-11-02",
       "2026-11-09",
       "2026-11-16",
-      "2026-11-20"
+      "2026-11-23"
      ],
      "values": [
       37.6,
@@ -862,13 +880,13 @@
       42.6,
       43.0,
       43.2,
+      43.3,
       43.4,
       43.6,
       43.7,
       43.9,
       44.1,
-      44.3,
-      44.4
+      44.2
      ]
     },
     "disapprove": {
@@ -891,7 +909,7 @@
       "2026-11-02",
       "2026-11-09",
       "2026-11-16",
-      "2026-11-20"
+      "2026-11-23"
      ],
      "values": [
       26.8,
@@ -904,15 +922,15 @@
       30.7,
       31.4,
       32.1,
-      32.7,
+      32.6,
       33.2,
       33.6,
       33.9,
       34.2,
-      34.3,
       34.4,
       34.5,
-      34.5
+      34.6,
+      34.8
      ]
     }
    }
@@ -2682,15 +2700,6 @@
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMipgJBVV95cUxQRGJlNnZwSzJEN3ZqRVVsQ3ZxeGhHWHpwaEVzZTJyTUN6Q2cwZzdmTXJoRWdRRGo5LV9DeTBMLXVDTWx5VEhEeFJILWZadUxPSlBuSnh1bTloQ3o3d0c0Z2k4bW9tTUs1NTNKOGF4c3d4dDhfQzRtVE9mRElSa0RibEhDd2paUHhHQktoeFJ6c0hpOXNTNnlSZXU1TDczeDZOMzNZN0R6dFJvQ2RxZ3o5OC1uWWNXcU1YdHhCZFRteml1UUFodmV1N25TQlBLQ0VpaWprcGVwLTNzRkdnS1RVQ3cxcmdjLTdaMWxIbDlsbllqaTNpMjdDRjRFMlJYbmhnaG1nNVBzTXotQzUtdHVMM052V09kQzRMaHIwcHNqdTdFOF9DR1E?oc=5",
      "origin": "news"
-    },
-    {
-     "date": "2026-11-06",
-     "firm": "Pollster not named (press)",
-     "approve": 15.0,
-     "disapprove": null,
-     "approx": true,
-     "source": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNZkJXYmd4dXBGUkNFRWxKbFdhYXlTaGFkc1pDZG1yUHhRNHZtcWpwcEpjRUQzcEY3NldRNlYxenVIR184MmlwMzJFcm9aVVBZcjc2Wkd3bGZ6NXd6aGdSMWlXa0dncHBxeHhhSHFHcXBtNlN2emdoUUtZSHJIdE15S2hmMlZUU0FqZXFWVDR5Ylg0VHZxY0RtQ2F3RGpiQk9ybXpValpaaFRMUC1LeUkyU1pCSG9YMmREX3NnNEhvZ3BYMEJEZDJJ?oc=5",
-     "origin": "news"
     }
    ],
    "country": "France",
@@ -2933,8 +2942,7 @@
       "2026-10-15",
       "2026-10-22",
       "2026-10-29",
-      "2026-11-05",
-      "2026-11-06"
+      "2026-11-02"
      ],
      "values": [
       41.6,
@@ -3159,17 +3167,16 @@
       19.7,
       19.6,
       19.5,
-      19.3,
+      19.2,
       18.9,
       18.5,
-      18.0,
-      17.3,
+      17.9,
+      17.2,
       16.5,
       15.7,
       15.0,
       14.5,
       14.1,
-      13.9,
       13.8,
       13.7
      ]
@@ -4030,21 +4037,21 @@
     },
     {
      "date": "2026-08-31",
-     "firm": "Ipsos",
-     "approve": 17,
-     "disapprove": 83,
-     "approx": false,
-     "source": "https://www.stuttgarter-zeitung.de/politik/aktuelle-umfragewerte-so-steht-es-um-die-beliebtheit-von-kanzler-merz-79470163.html",
-     "origin": "manual"
-    },
-    {
-     "date": "2026-08-31",
      "firm": "Pollster not named (press)",
      "approve": null,
      "disapprove": 56.0,
      "approx": true,
      "source": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9UUVRNeThsVkJNYUVJOFN4dFY4cHdXM2RFRWc3Y2wwckNZMDZWU2FMOTdibjlnUTBmWUhYODh3SUxSTGRVQ2xzVEktUHRwUHROa1lZY0dxcFZFa3Y2bXJrZUdZX1JxTzZNSk9pWUo3cHNveWpoZVZMbFFfMGFLQdIBgwFBVV95cUxNbXFia1FfZkxjanRjN0JZdHhHME1ReDBRa21acVVEb2MtdmVXWTk5VThDSFA4SmMtQ1N2MllXSDQ4M3NpeUUwOEwzY3NwR29fQ2s4X3VUV2FhRjlDZkdRdm9nTm5TalJaTWtuR0NqbVQxZzFxXzZBRjg5aHFKVkVnTktjYw?oc=5",
      "origin": "news"
+    },
+    {
+     "date": "2026-08-31",
+     "firm": "Ipsos",
+     "approve": 17,
+     "disapprove": 83,
+     "approx": false,
+     "source": "https://www.stuttgarter-zeitung.de/politik/aktuelle-umfragewerte-so-steht-es-um-die-beliebtheit-von-kanzler-merz-79470163.html",
+     "origin": "manual"
     },
     {
      "date": "2026-09-01",
@@ -5999,6 +6006,15 @@
      "approx": false,
      "origin": "wikipedia",
      "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_next_Italian_general_election"
+    },
+    {
+     "date": "2026-11-26",
+     "firm": "Termometro Politico",
+     "approve": 39.5,
+     "disapprove": 60.1,
+     "approx": false,
+     "origin": "wikipedia",
+     "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_next_Italian_general_election"
     }
    ],
    "country": "Italy",
@@ -6112,7 +6128,7 @@
       "2026-11-06",
       "2026-11-13",
       "2026-11-20",
-      "2026-11-23"
+      "2026-11-26"
      ],
      "values": [
       39.8,
@@ -6217,9 +6233,9 @@
       36.4,
       36.4,
       36.4,
-      36.3,
-      36.3,
-      36.3
+      36.4,
+      36.4,
+      36.4
      ]
     },
     "disapprove": {
@@ -6328,7 +6344,7 @@
       "2026-11-06",
       "2026-11-13",
       "2026-11-20",
-      "2026-11-23"
+      "2026-11-26"
      ],
      "values": [
       53.9,
@@ -6433,9 +6449,9 @@
       60.8,
       61.0,
       61.1,
+      61.2,
       61.3,
-      61.3,
-      61.4
+      61.3
      ]
     }
    }
@@ -9708,6 +9724,6 @@
    }
   }
  },
- "updated": "2026-11-26T23:23:51Z",
+ "updated": "2026-11-27T20:16:57Z",
  "method": "Wikipedia poll tables, pollster releases (ARD-DeutschlandTrend, YouGov EuroTrack), press articles in each country's language and multi-country rankings (Morning Consult, YouGov); Gaussian-kernel average, 21-day bandwidth, firm-crowding weights."
 }
