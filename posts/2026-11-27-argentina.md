@@ -2,7 +2,7 @@
 
 ## La foto en seis números
 
-- Aprobación de Milei: 35,4% (−0,2 pp en 30 días); desaprobación 60,1%.
+- Aprobación de Milei: 35,5% (−0,2 pp en 30 días); desaprobación 60,1%.
 - Ballotage Milei–Kicillof: 41,2% a 40,6% en el promedio de encuestas.
 - Primera vuelta por espacio: LLA 30,8%, peronismo 30,4%, indecisos 20,4%.
 - Confianza en el gobierno (UTDT): 2,04 en noviembre de 2026 (+0,09 contra el mes anterior).
@@ -11,7 +11,7 @@
 
 ## El pronóstico
 
-El modelo de simulación le asigna a Milei un 57% de chances de ganar (+3 pp en 30 días). Simula 40.000 veces la elección con sus dos vueltas: Milei gana en primera vuelta en el 25% de los casos y hay ballotage en el 57%, que gana en el 57% de esos casos. Si LLA y el PRO compitieran juntos, su chance subiría a 70%.
+El modelo de simulación le asigna a Milei un 57% de chances de ganar (+3 pp en 30 días). Simula 40.000 veces la elección con sus dos vueltas: Milei gana en primera vuelta en el 25% de los casos y hay ballotage en el 57%, que gana en el 58% de esos casos. Si LLA y el PRO compitieran juntos, su chance subiría a 71%.
 
 El modelo combinado, que promedia encuestas, fundamentales y mercado, le da 48%. Las encuestas del ballotage le dan 52%; los fundamentales, un modelo de machine learning entrenado con 78 elecciones presidenciales latinoamericanas, 47%; Polymarket, 46%.
 
@@ -19,11 +19,11 @@ https://datawrapper.dwcdn.net/aXRSz/
 
 ## La aprobación de Milei
 
-El promedio ubica la aprobación de la gestión en 35,4% y la desaprobación en 60,1%, un saldo neto de −24,7 puntos. Hace un mes la aprobación era 35,6%: la serie está estable.
+El promedio ubica la aprobación de la gestión en 35,5% y la desaprobación en 60,1%, un saldo neto de −24,6 puntos. Hace un mes la aprobación era 35,7%: la serie está estable.
 
 https://datawrapper.dwcdn.net/KF748/
 
-Entró 1 encuesta en los últimos 30 días: AtlasIntel (36%/61%).
+Entraron 2 encuestas en los últimos 30 días: AtlasIntel (36%/61%); Management & Fit (38%/58%).
 
 ## Milei contra Kicillof
 
@@ -55,13 +55,13 @@ Comparado con sus antecesores en el mismo mes de gestión (el 35), Milei está e
 
 https://datawrapper.dwcdn.net/W9JHs/
 
-¿Cuánto vale ese número en votos? Desde 2005, el ICG del mes de la elección multiplicado por 20 anticipa razonablemente el voto del oficialismo (r = 0,63 en once elecciones). Con el ICG actual, el voto implícito es 40,8% y la recta de ajuste lo lleva a 40,1%. Por encima de lo que muestran el agregado LLA+PRO (32,8%) y la aprobación presidencial (35,4%).
+¿Cuánto vale ese número en votos? Desde 2005, el ICG del mes de la elección multiplicado por 20 anticipa razonablemente el voto del oficialismo (r = 0,63 en once elecciones). Con el ICG actual, el voto implícito es 40,8% y la recta de ajuste lo lleva a 40,1%. Por encima de lo que muestran el agregado LLA+PRO (32,8%) y la aprobación presidencial (35,5%).
 
 https://datawrapper.dwcdn.net/b2IuX/
 
 ## Lo que dicen los mercados
 
-En Polymarket: Javier Milei 46% (−1 pp); Axel Kicillof 28% (−2 pp); Sergio Massa 14% (+4 pp); Patricia Bullrich 4% (−2 pp). Es un mercado chico, así que los saltos de un día dicen poco; importa la tendencia.
+En Polymarket: Javier Milei 46% (−1 pp); Axel Kicillof 26% (−3 pp); Sergio Massa 15% (+5 pp); Patricia Bullrich 6% (−1 pp). Es un mercado chico, así que los saltos de un día dicen poco; importa la tendencia.
 
 https://datawrapper.dwcdn.net/9p7Rn/
 
