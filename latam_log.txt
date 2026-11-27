@@ -1,6 +1,6 @@
-run 2026-11-26 22:51 UTC · 2 new poll(s)
+run 2026-11-27 19:55 UTC · 1 new poll(s)
 
-CL Chile        196 polls  manual 12, news 70, pollster 14, wikipedia 100
+CL Chile        195 polls  manual 12, news 69, pollster 14, wikipedia 100
 BO Bolivia       25 polls  manual 13, news 12
 PE Peru          27 polls  manual 13, news 14
 CO Colombia      12 polls  manual 8, news 4
@@ -29,9 +29,12 @@ log:
   · UY Wikipedia (es) Gobierno_de_Yamandú_Orsi: 30 rows
   · CID Gallup SV 2026-10-27: 94.0%
   · CID Gallup CR 2026-08-17: 74.0%
-  · Google News: 2370 unique articles read
-  · articles CO: 1 read, 0 poll reading(s)
-  · articles: 1 articles read in 14s
-  + CL Cadem ≈2026-10-16: 69.0/None [news]
+  · CB Global Data listing failed (Expecting value: line 1 column 1 (char 0))
+  · Google News: 2504 unique articles read
+  · articles DO: 1 read, 0 poll reading(s)
+  · articles SV: 2 read, 0 poll reading(s)
+  · articles BR: 6 read, 0 poll reading(s)
+  · articles CL: 2 read, 0 poll reading(s)
+  · articles: 8 articles read in 18s
   + EC Pollster not named (press) ≈2026-11-06: 49.0/None [news]
   · Google News queries failed: 0
